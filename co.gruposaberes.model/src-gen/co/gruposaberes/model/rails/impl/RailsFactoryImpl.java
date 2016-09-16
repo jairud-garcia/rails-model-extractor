@@ -69,9 +69,8 @@ public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
       case RailsPackage.RELATIONSHIP: return createRelationship();
       case RailsPackage.HAS_MANY: return createHasMany();
       case RailsPackage.HAS_AND_BELONGS_TO_MANY: return createHasAndBelongsToMany();
-      case RailsPackage.ESTRING: return createEString();
-      case RailsPackage.HASH_KEY_VALUE: return createHashKeyValue();
       case RailsPackage.BELONGS_TO: return createBelongsTo();
+      case RailsPackage.HASH_KEY_VALUE: return createHashKeyValue();
       case RailsPackage.RUBY_METHOD: return createRubyMethod();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -138,10 +137,10 @@ public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public EString createEString()
+  public BelongsTo createBelongsTo()
   {
-    EStringImpl eString = new EStringImpl();
-    return eString;
+    BelongsToImpl belongsTo = new BelongsToImpl();
+    return belongsTo;
   }
 
   /**
@@ -153,17 +152,6 @@ public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
   {
     HashKeyValueImpl hashKeyValue = new HashKeyValueImpl();
     return hashKeyValue;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BelongsTo createBelongsTo()
-  {
-    BelongsToImpl belongsTo = new BelongsToImpl();
-    return belongsTo;
   }
 
   /**

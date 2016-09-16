@@ -315,11 +315,16 @@ ruleHasMany returns [EObject current=null]
     { 
     newLeafNode(this_HAS_MANY_WORD_0, grammarAccess.getHasManyAccess().getHAS_MANY_WORDTerminalRuleCall_0()); 
     }
+(	otherlv_1=' ' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getHasManyAccess().getSpaceKeyword_1());
+    }
+)*(
 (
 (
-		lv_name_1_0=RULE_STRING
+		lv_name_2_1=RULE_SYMBOL
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getHasManyAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_2_1, grammarAccess.getHasManyAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -328,12 +333,51 @@ ruleHasMany returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_2_1, 
+        		"SYMBOL");
+	    }
+
+    |		lv_name_2_2=RULE_STRING
+		{
+			newLeafNode(lv_name_2_2, grammarAccess.getHasManyAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getHasManyRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_2_2, 
         		"STRING");
 	    }
 
 )
-))
+
+)
+)(	otherlv_3=' ' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getHasManyAccess().getSpaceKeyword_3());
+    }
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getHasManyAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
+	    }
+		lv_options_4_0=ruleHashKeyValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getHasManyRule());
+	        }
+       		add(
+       			$current, 
+       			"options",
+        		lv_options_4_0, 
+        		"HashKeyValue");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*)
 ;
 
 
@@ -358,11 +402,16 @@ ruleHasAndBelongsToMany returns [EObject current=null]
     { 
     newLeafNode(this_HAS_AND_BELONGS_TO_MANY_WORD_0, grammarAccess.getHasAndBelongsToManyAccess().getHAS_AND_BELONGS_TO_MANY_WORDTerminalRuleCall_0()); 
     }
+(	otherlv_1=' ' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_1());
+    }
+)*(
 (
 (
-		lv_name_1_0=RULE_STRING
+		lv_name_2_1=RULE_SYMBOL
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getHasAndBelongsToManyAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_2_1, grammarAccess.getHasAndBelongsToManyAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -371,17 +420,139 @@ ruleHasAndBelongsToMany returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_2_1, 
+        		"SYMBOL");
+	    }
+
+    |		lv_name_2_2=RULE_STRING
+		{
+			newLeafNode(lv_name_2_2, grammarAccess.getHasAndBelongsToManyAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getHasAndBelongsToManyRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_2_2, 
         		"STRING");
 	    }
 
 )
-))
+
+)
+)(	otherlv_3=' ' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_3());
+    }
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getHasAndBelongsToManyAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
+	    }
+		lv_options_4_0=ruleHashKeyValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getHasAndBelongsToManyRule());
+	        }
+       		add(
+       			$current, 
+       			"options",
+        		lv_options_4_0, 
+        		"HashKeyValue");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*)
 ;
 
 
 
 
+
+// Entry rule entryRuleBelongsTo
+entryRuleBelongsTo returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getBelongsToRule()); }
+	 iv_ruleBelongsTo=ruleBelongsTo 
+	 { $current=$iv_ruleBelongsTo.current; } 
+	 EOF 
+;
+
+// Rule BelongsTo
+ruleBelongsTo returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(this_BELONGS_TO_WORD_0=RULE_BELONGS_TO_WORD
+    { 
+    newLeafNode(this_BELONGS_TO_WORD_0, grammarAccess.getBelongsToAccess().getBELONGS_TO_WORDTerminalRuleCall_0()); 
+    }
+(	otherlv_1=' ' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getBelongsToAccess().getSpaceKeyword_1());
+    }
+)*(
+(
+(
+		lv_name_2_1=RULE_SYMBOL
+		{
+			newLeafNode(lv_name_2_1, grammarAccess.getBelongsToAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBelongsToRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_2_1, 
+        		"SYMBOL");
+	    }
+
+    |		lv_name_2_2=RULE_STRING
+		{
+			newLeafNode(lv_name_2_2, grammarAccess.getBelongsToAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBelongsToRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_2_2, 
+        		"STRING");
+	    }
+
+)
+
+)
+)(	otherlv_3=' ' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getBelongsToAccess().getSpaceKeyword_3());
+    }
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBelongsToAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
+	    }
+		lv_options_4_0=ruleHashKeyValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBelongsToRule());
+	        }
+       		add(
+       			$current, 
+       			"options",
+        		lv_options_4_0, 
+        		"HashKeyValue");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*)
+;
 
 
 
@@ -517,93 +688,6 @@ ruleHashKeyValue returns [EObject current=null]
 
 )
 ))
-;
-
-
-
-
-
-// Entry rule entryRuleBelongsTo
-entryRuleBelongsTo returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getBelongsToRule()); }
-	 iv_ruleBelongsTo=ruleBelongsTo 
-	 { $current=$iv_ruleBelongsTo.current; } 
-	 EOF 
-;
-
-// Rule BelongsTo
-ruleBelongsTo returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(this_BELONGS_TO_WORD_0=RULE_BELONGS_TO_WORD
-    { 
-    newLeafNode(this_BELONGS_TO_WORD_0, grammarAccess.getBelongsToAccess().getBELONGS_TO_WORDTerminalRuleCall_0()); 
-    }
-(	otherlv_1=' ' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getBelongsToAccess().getSpaceKeyword_1());
-    }
-)*(
-(
-(
-		lv_name_2_1=RULE_SYMBOL
-		{
-			newLeafNode(lv_name_2_1, grammarAccess.getBelongsToAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getBelongsToRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_1, 
-        		"SYMBOL");
-	    }
-
-    |		lv_name_2_2=RULE_STRING
-		{
-			newLeafNode(lv_name_2_2, grammarAccess.getBelongsToAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getBelongsToRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_2, 
-        		"STRING");
-	    }
-
-)
-
-)
-)(	otherlv_3=' ' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getBelongsToAccess().getSpaceKeyword_3());
-    }
-)*(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getBelongsToAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
-	    }
-		lv_options_4_0=ruleHashKeyValue		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getBelongsToRule());
-	        }
-       		add(
-       			$current, 
-       			"options",
-        		lv_options_4_0, 
-        		"HashKeyValue");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)*)
 ;
 
 

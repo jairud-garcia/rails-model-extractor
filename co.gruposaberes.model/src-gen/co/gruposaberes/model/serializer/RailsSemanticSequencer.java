@@ -1,7 +1,6 @@
 package co.gruposaberes.model.serializer;
 
 import co.gruposaberes.model.rails.BelongsTo;
-import co.gruposaberes.model.rails.EString;
 import co.gruposaberes.model.rails.HasAndBelongsToMany;
 import co.gruposaberes.model.rails.HasMany;
 import co.gruposaberes.model.rails.HashKeyValue;
@@ -36,16 +35,6 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				   context == grammarAccess.getClassElementRule() ||
 				   context == grammarAccess.getRelationshipRule()) {
 					sequence_BelongsTo(context, (BelongsTo) semanticObject); 
-					return; 
-				}
-				else break;
-			case RailsPackage.ESTRING:
-				if(context == grammarAccess.getClassNameRule()) {
-					sequence_ClassName(context, (EString) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getDependentRule()) {
-					sequence_Dependent(context, (EString) semanticObject); 
 					return; 
 				}
 				else break;
@@ -99,15 +88,6 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     class_name=STRING
-	 */
-	protected void sequence_ClassName(EObject context, EString semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (name=NamespacedModuleName superType=NamespacedModuleName? classElements+=ClassElement*)
 	 */
 	protected void sequence_Class(EObject context, RubyClass semanticObject) {
@@ -117,42 +97,19 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (dependent=SYMBOL | dependent=STRING)
+	 *     ((name=SYMBOL | name=STRING) options+=HashKeyValue*)
 	 */
-	protected void sequence_Dependent(EObject context, EString semanticObject) {
+	protected void sequence_HasAndBelongsToMany(EObject context, HasAndBelongsToMany semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     name=STRING
-	 */
-	protected void sequence_HasAndBelongsToMany(EObject context, HasAndBelongsToMany semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RailsPackage.Literals.CLASS_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RailsPackage.Literals.CLASS_ELEMENT__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getHasAndBelongsToManyAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     name=STRING
+	 *     ((name=SYMBOL | name=STRING) options+=HashKeyValue*)
 	 */
 	protected void sequence_HasMany(EObject context, HasMany semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, RailsPackage.Literals.CLASS_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RailsPackage.Literals.CLASS_ELEMENT__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getHasManyAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

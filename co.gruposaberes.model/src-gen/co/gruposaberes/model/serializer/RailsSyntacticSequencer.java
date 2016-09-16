@@ -8,8 +8,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -21,16 +19,14 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected RailsGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_BelongsTo_SpaceKeyword_1_a;
 	protected AbstractElementAlias match_BelongsTo_SpaceKeyword_3_a;
-	protected AbstractElementAlias match_ClassName_SpaceKeyword_1_a;
-	protected AbstractElementAlias match_ClassName_SpaceKeyword_3_a;
-	protected AbstractElementAlias match_ClassName___Class_nameKeyword_2_0_or_Class_nameKeyword_2_1___or___Class_nameKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__;
 	protected AbstractElementAlias match_Class_SpaceKeyword_1_a;
 	protected AbstractElementAlias match_Class_SpaceKeyword_3_0_a;
 	protected AbstractElementAlias match_Class_SpaceKeyword_3_2_a;
 	protected AbstractElementAlias match_Class_SpaceKeyword_4_a;
-	protected AbstractElementAlias match_Dependent_SpaceKeyword_1_a;
-	protected AbstractElementAlias match_Dependent_SpaceKeyword_3_a;
-	protected AbstractElementAlias match_Dependent___DependentKeyword_2_0_or_DependentKeyword_2_1___or___DependentKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__;
+	protected AbstractElementAlias match_HasAndBelongsToMany_SpaceKeyword_1_a;
+	protected AbstractElementAlias match_HasAndBelongsToMany_SpaceKeyword_3_a;
+	protected AbstractElementAlias match_HasMany_SpaceKeyword_1_a;
+	protected AbstractElementAlias match_HasMany_SpaceKeyword_3_a;
 	protected AbstractElementAlias match_HashKeyValue_SpaceKeyword_1_a;
 	protected AbstractElementAlias match_HashKeyValue_SpaceKeyword_2_1_1_a;
 	protected AbstractElementAlias match_HashKeyValue_SpaceKeyword_3_a;
@@ -40,16 +36,14 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		grammarAccess = (RailsGrammarAccess) access;
 		match_BelongsTo_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getBelongsToAccess().getSpaceKeyword_1());
 		match_BelongsTo_SpaceKeyword_3_a = new TokenAlias(true, true, grammarAccess.getBelongsToAccess().getSpaceKeyword_3());
-		match_ClassName_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getClassNameAccess().getSpaceKeyword_1());
-		match_ClassName_SpaceKeyword_3_a = new TokenAlias(true, true, grammarAccess.getClassNameAccess().getSpaceKeyword_3());
-		match_ClassName___Class_nameKeyword_2_0_or_Class_nameKeyword_2_1___or___Class_nameKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__ = new AlternativeAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getClassNameAccess().getClass_nameKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getClassNameAccess().getClass_nameKeyword_2_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getClassNameAccess().getClass_nameKeyword_2_2_0()), new TokenAlias(true, true, grammarAccess.getClassNameAccess().getSpaceKeyword_2_2_1()), new TokenAlias(false, false, grammarAccess.getClassNameAccess().getEqualsSignGreaterThanSignKeyword_2_2_2())));
 		match_Class_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSpaceKeyword_1());
 		match_Class_SpaceKeyword_3_0_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSpaceKeyword_3_0());
 		match_Class_SpaceKeyword_3_2_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSpaceKeyword_3_2());
 		match_Class_SpaceKeyword_4_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSpaceKeyword_4());
-		match_Dependent_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getDependentAccess().getSpaceKeyword_1());
-		match_Dependent_SpaceKeyword_3_a = new TokenAlias(true, true, grammarAccess.getDependentAccess().getSpaceKeyword_3());
-		match_Dependent___DependentKeyword_2_0_or_DependentKeyword_2_1___or___DependentKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__ = new AlternativeAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDependentAccess().getDependentKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getDependentAccess().getDependentKeyword_2_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getDependentAccess().getDependentKeyword_2_2_0()), new TokenAlias(true, true, grammarAccess.getDependentAccess().getSpaceKeyword_2_2_1()), new TokenAlias(false, false, grammarAccess.getDependentAccess().getEqualsSignGreaterThanSignKeyword_2_2_2())));
+		match_HasAndBelongsToMany_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_1());
+		match_HasAndBelongsToMany_SpaceKeyword_3_a = new TokenAlias(true, true, grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_3());
+		match_HasMany_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getHasManyAccess().getSpaceKeyword_1());
+		match_HasMany_SpaceKeyword_3_a = new TokenAlias(true, true, grammarAccess.getHasManyAccess().getSpaceKeyword_3());
 		match_HashKeyValue_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSpaceKeyword_1());
 		match_HashKeyValue_SpaceKeyword_2_1_1_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSpaceKeyword_2_1_1());
 		match_HashKeyValue_SpaceKeyword_3_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSpaceKeyword_3());
@@ -136,12 +130,6 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_BelongsTo_SpaceKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_BelongsTo_SpaceKeyword_3_a.equals(syntax))
 				emit_BelongsTo_SpaceKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ClassName_SpaceKeyword_1_a.equals(syntax))
-				emit_ClassName_SpaceKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ClassName_SpaceKeyword_3_a.equals(syntax))
-				emit_ClassName_SpaceKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ClassName___Class_nameKeyword_2_0_or_Class_nameKeyword_2_1___or___Class_nameKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__.equals(syntax))
-				emit_ClassName___Class_nameKeyword_2_0_or_Class_nameKeyword_2_1___or___Class_nameKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Class_SpaceKeyword_1_a.equals(syntax))
 				emit_Class_SpaceKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Class_SpaceKeyword_3_0_a.equals(syntax))
@@ -150,12 +138,14 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Class_SpaceKeyword_3_2_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Class_SpaceKeyword_4_a.equals(syntax))
 				emit_Class_SpaceKeyword_4_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Dependent_SpaceKeyword_1_a.equals(syntax))
-				emit_Dependent_SpaceKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Dependent_SpaceKeyword_3_a.equals(syntax))
-				emit_Dependent_SpaceKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Dependent___DependentKeyword_2_0_or_DependentKeyword_2_1___or___DependentKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__.equals(syntax))
-				emit_Dependent___DependentKeyword_2_0_or_DependentKeyword_2_1___or___DependentKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_HasAndBelongsToMany_SpaceKeyword_1_a.equals(syntax))
+				emit_HasAndBelongsToMany_SpaceKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_HasAndBelongsToMany_SpaceKeyword_3_a.equals(syntax))
+				emit_HasAndBelongsToMany_SpaceKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_HasMany_SpaceKeyword_1_a.equals(syntax))
+				emit_HasMany_SpaceKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_HasMany_SpaceKeyword_3_a.equals(syntax))
+				emit_HasMany_SpaceKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_HashKeyValue_SpaceKeyword_1_a.equals(syntax))
 				emit_HashKeyValue_SpaceKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_HashKeyValue_SpaceKeyword_2_1_1_a.equals(syntax))
@@ -179,30 +169,6 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ' '*
 	 */
 	protected void emit_BelongsTo_SpaceKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ' '*
-	 */
-	protected void emit_ClassName_SpaceKeyword_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ' '*
-	 */
-	protected void emit_ClassName_SpaceKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     (':class_name' ' '* '=>') | ('class_name:' | ':class_name=>')
-	 */
-	protected void emit_ClassName___Class_nameKeyword_2_0_or_Class_nameKeyword_2_1___or___Class_nameKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -242,7 +208,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ' '*
 	 */
-	protected void emit_Dependent_SpaceKeyword_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_HasAndBelongsToMany_SpaceKeyword_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -250,15 +216,23 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ' '*
 	 */
-	protected void emit_Dependent_SpaceKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_HasAndBelongsToMany_SpaceKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Syntax:
-	 *     (':dependent' ' '* '=>') | ('dependent:' | ':dependent=>')
+	 *     ' '*
 	 */
-	protected void emit_Dependent___DependentKeyword_2_0_or_DependentKeyword_2_1___or___DependentKeyword_2_2_0_SpaceKeyword_2_2_1_a_EqualsSignGreaterThanSignKeyword_2_2_2__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_HasMany_SpaceKeyword_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ' '*
+	 */
+	protected void emit_HasMany_SpaceKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

@@ -112,10 +112,12 @@ public class RailsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RailsPackage.ESTRING:
+      case RailsPackage.BELONGS_TO:
       {
-        EString eString = (EString)theEObject;
-        T result = caseEString(eString);
+        BelongsTo belongsTo = (BelongsTo)theEObject;
+        T result = caseBelongsTo(belongsTo);
+        if (result == null) result = caseRelationship(belongsTo);
+        if (result == null) result = caseClassElement(belongsTo);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -123,15 +125,6 @@ public class RailsSwitch<T> extends Switch<T>
       {
         HashKeyValue hashKeyValue = (HashKeyValue)theEObject;
         T result = caseHashKeyValue(hashKeyValue);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case RailsPackage.BELONGS_TO:
-      {
-        BelongsTo belongsTo = (BelongsTo)theEObject;
-        T result = caseBelongsTo(belongsTo);
-        if (result == null) result = caseRelationship(belongsTo);
-        if (result == null) result = caseClassElement(belongsTo);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -228,17 +221,17 @@ public class RailsSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>EString</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Belongs To</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>EString</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Belongs To</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEString(EString object)
+  public T caseBelongsTo(BelongsTo object)
   {
     return null;
   }
@@ -255,22 +248,6 @@ public class RailsSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseHashKeyValue(HashKeyValue object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Belongs To</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Belongs To</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBelongsTo(BelongsTo object)
   {
     return null;
   }

@@ -4,7 +4,6 @@ package co.gruposaberes.model.rails.impl;
 
 import co.gruposaberes.model.rails.BelongsTo;
 import co.gruposaberes.model.rails.ClassElement;
-import co.gruposaberes.model.rails.EString;
 import co.gruposaberes.model.rails.HasAndBelongsToMany;
 import co.gruposaberes.model.rails.HasMany;
 import co.gruposaberes.model.rails.HashKeyValue;
@@ -69,7 +68,7 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass eStringEClass = null;
+  private EClass belongsToEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -77,13 +76,6 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
    * @generated
    */
   private EClass hashKeyValueEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass belongsToEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -230,6 +222,16 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRelationship_Options()
+  {
+    return (EReference)relationshipEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getHasMany()
   {
     return hasManyEClass;
@@ -250,29 +252,9 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getEString()
+  public EClass getBelongsTo()
   {
-    return eStringEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getEString_Class_name()
-  {
-    return (EAttribute)eStringEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getEString_Dependent()
-  {
-    return (EAttribute)eStringEClass.getEStructuralFeatures().get(1);
+    return belongsToEClass;
   }
 
   /**
@@ -303,26 +285,6 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
   public EAttribute getHashKeyValue_Value()
   {
     return (EAttribute)hashKeyValueEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getBelongsTo()
-  {
-    return belongsToEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBelongsTo_Options()
-  {
-    return (EReference)belongsToEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -374,21 +336,17 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
     createEAttribute(classElementEClass, CLASS_ELEMENT__NAME);
 
     relationshipEClass = createEClass(RELATIONSHIP);
+    createEReference(relationshipEClass, RELATIONSHIP__OPTIONS);
 
     hasManyEClass = createEClass(HAS_MANY);
 
     hasAndBelongsToManyEClass = createEClass(HAS_AND_BELONGS_TO_MANY);
 
-    eStringEClass = createEClass(ESTRING);
-    createEAttribute(eStringEClass, ESTRING__CLASS_NAME);
-    createEAttribute(eStringEClass, ESTRING__DEPENDENT);
+    belongsToEClass = createEClass(BELONGS_TO);
 
     hashKeyValueEClass = createEClass(HASH_KEY_VALUE);
     createEAttribute(hashKeyValueEClass, HASH_KEY_VALUE__KEY);
     createEAttribute(hashKeyValueEClass, HASH_KEY_VALUE__VALUE);
-
-    belongsToEClass = createEClass(BELONGS_TO);
-    createEReference(belongsToEClass, BELONGS_TO__OPTIONS);
 
     rubyMethodEClass = createEClass(RUBY_METHOD);
   }
@@ -438,21 +396,17 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
     initEAttribute(getClassElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ClassElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRelationship_Options(), this.getHashKeyValue(), null, "options", null, 0, -1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(hasManyEClass, HasMany.class, "HasMany", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(hasAndBelongsToManyEClass, HasAndBelongsToMany.class, "HasAndBelongsToMany", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(eStringEClass, EString.class, "EString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEString_Class_name(), ecorePackage.getEString(), "class_name", null, 0, 1, EString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEString_Dependent(), ecorePackage.getEString(), "dependent", null, 0, 1, EString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(belongsToEClass, BelongsTo.class, "BelongsTo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(hashKeyValueEClass, HashKeyValue.class, "HashKeyValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getHashKeyValue_Key(), ecorePackage.getEString(), "key", null, 0, 1, HashKeyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHashKeyValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, HashKeyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(belongsToEClass, BelongsTo.class, "BelongsTo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBelongsTo_Options(), this.getHashKeyValue(), null, "options", null, 0, -1, BelongsTo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rubyMethodEClass, RubyMethod.class, "RubyMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

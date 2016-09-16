@@ -15,19 +15,15 @@
     <genClasses ecoreClass="Rails.ecore#//ClassElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//ClassElement/name"/>
     </genClasses>
-    <genClasses ecoreClass="Rails.ecore#//Relationship"/>
+    <genClasses ecoreClass="Rails.ecore#//Relationship">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//Relationship/options"/>
+    </genClasses>
     <genClasses ecoreClass="Rails.ecore#//HasMany"/>
     <genClasses ecoreClass="Rails.ecore#//HasAndBelongsToMany"/>
-    <genClasses ecoreClass="Rails.ecore#//EString">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//EString/class_name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//EString/dependent"/>
-    </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//BelongsTo"/>
     <genClasses ecoreClass="Rails.ecore#//HashKeyValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HashKeyValue/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HashKeyValue/value"/>
-    </genClasses>
-    <genClasses ecoreClass="Rails.ecore#//BelongsTo">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//BelongsTo/options"/>
     </genClasses>
     <genClasses ecoreClass="Rails.ecore#//RubyMethod"/>
   </genPackages>

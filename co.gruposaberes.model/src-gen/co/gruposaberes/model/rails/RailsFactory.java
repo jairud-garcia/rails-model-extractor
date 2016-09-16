@@ -68,13 +68,13 @@ public interface RailsFactory extends EFactory
   HasAndBelongsToMany createHasAndBelongsToMany();
 
   /**
-   * Returns a new object of class '<em>EString</em>'.
+   * Returns a new object of class '<em>Belongs To</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>EString</em>'.
+   * @return a new object of class '<em>Belongs To</em>'.
    * @generated
    */
-  EString createEString();
+  BelongsTo createBelongsTo();
 
   /**
    * Returns a new object of class '<em>Hash Key Value</em>'.
@@ -84,15 +84,6 @@ public interface RailsFactory extends EFactory
    * @generated
    */
   HashKeyValue createHashKeyValue();
-
-  /**
-   * Returns a new object of class '<em>Belongs To</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Belongs To</em>'.
-   * @generated
-   */
-  BelongsTo createBelongsTo();
 
   /**
    * Returns a new object of class '<em>Ruby Method</em>'.

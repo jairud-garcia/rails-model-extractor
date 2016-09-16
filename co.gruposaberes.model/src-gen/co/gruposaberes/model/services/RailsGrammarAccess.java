@@ -163,176 +163,144 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HasMany");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cHAS_MANY_WORDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSpaceKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cNameAlternatives_2_0 = (Alternatives)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cNameSYMBOLTerminalRuleCall_2_0_0 = (RuleCall)cNameAlternatives_2_0.eContents().get(0);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cNameAlternatives_2_0.eContents().get(1);
+		private final Keyword cSpaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cOptionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOptionsHashKeyValueParserRuleCall_4_0 = (RuleCall)cOptionsAssignment_4.eContents().get(0);
 		
 		//HasMany:
-		//	HAS_MANY_WORD name=STRING;
+		//	HAS_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
 		public ParserRule getRule() { return rule; }
 
-		//HAS_MANY_WORD name=STRING
+		//HAS_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*
 		public Group getGroup() { return cGroup; }
 
 		//HAS_MANY_WORD
 		public RuleCall getHAS_MANY_WORDTerminalRuleCall_0() { return cHAS_MANY_WORDTerminalRuleCall_0; }
 
-		//name=STRING
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//" "*
+		public Keyword getSpaceKeyword_1() { return cSpaceKeyword_1; }
+
+		//name=(SYMBOL | STRING)
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+
+		//SYMBOL | STRING
+		public Alternatives getNameAlternatives_2_0() { return cNameAlternatives_2_0; }
+
+		//SYMBOL
+		public RuleCall getNameSYMBOLTerminalRuleCall_2_0_0() { return cNameSYMBOLTerminalRuleCall_2_0_0; }
 
 		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0_1() { return cNameSTRINGTerminalRuleCall_2_0_1; }
+
+		//" "*
+		public Keyword getSpaceKeyword_3() { return cSpaceKeyword_3; }
+
+		//options+=HashKeyValue*
+		public Assignment getOptionsAssignment_4() { return cOptionsAssignment_4; }
+
+		//HashKeyValue
+		public RuleCall getOptionsHashKeyValueParserRuleCall_4_0() { return cOptionsHashKeyValueParserRuleCall_4_0; }
 	}
 
 	public class HasAndBelongsToManyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HasAndBelongsToMany");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cHAS_AND_BELONGS_TO_MANY_WORDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSpaceKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cNameAlternatives_2_0 = (Alternatives)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cNameSYMBOLTerminalRuleCall_2_0_0 = (RuleCall)cNameAlternatives_2_0.eContents().get(0);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cNameAlternatives_2_0.eContents().get(1);
+		private final Keyword cSpaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cOptionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOptionsHashKeyValueParserRuleCall_4_0 = (RuleCall)cOptionsAssignment_4.eContents().get(0);
 		
 		//HasAndBelongsToMany:
-		//	HAS_AND_BELONGS_TO_MANY_WORD name=STRING;
+		//	HAS_AND_BELONGS_TO_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
 		public ParserRule getRule() { return rule; }
 
-		//HAS_AND_BELONGS_TO_MANY_WORD name=STRING
+		//HAS_AND_BELONGS_TO_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*
 		public Group getGroup() { return cGroup; }
 
 		//HAS_AND_BELONGS_TO_MANY_WORD
 		public RuleCall getHAS_AND_BELONGS_TO_MANY_WORDTerminalRuleCall_0() { return cHAS_AND_BELONGS_TO_MANY_WORDTerminalRuleCall_0; }
 
-		//name=STRING
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
-	}
-
-	public class ClassNameElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ClassName");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCommaKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cSpaceKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Keyword cClass_nameKeyword_2_0 = (Keyword)cAlternatives_2.eContents().get(0);
-		private final Keyword cClass_nameKeyword_2_1 = (Keyword)cAlternatives_2.eContents().get(1);
-		private final Group cGroup_2_2 = (Group)cAlternatives_2.eContents().get(2);
-		private final Keyword cClass_nameKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
-		private final Keyword cSpaceKeyword_2_2_1 = (Keyword)cGroup_2_2.eContents().get(1);
-		private final Keyword cEqualsSignGreaterThanSignKeyword_2_2_2 = (Keyword)cGroup_2_2.eContents().get(2);
-		private final Keyword cSpaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cClass_nameAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cClass_nameSTRINGTerminalRuleCall_4_0 = (RuleCall)cClass_nameAssignment_4.eContents().get(0);
-		
-		//ClassName returns EString:
-		//	"," " "* ("class_name:" | ":class_name=>" | ":class_name" " "* "=>") " "* class_name=STRING;
-		public ParserRule getRule() { return rule; }
-
-		//"," " "* ("class_name:" | ":class_name=>" | ":class_name" " "* "=>") " "* class_name=STRING
-		public Group getGroup() { return cGroup; }
-
-		//","
-		public Keyword getCommaKeyword_0() { return cCommaKeyword_0; }
-
 		//" "*
 		public Keyword getSpaceKeyword_1() { return cSpaceKeyword_1; }
 
-		//"class_name:" | ":class_name=>" | ":class_name" " "* "=>"
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
-
-		//"class_name:"
-		public Keyword getClass_nameKeyword_2_0() { return cClass_nameKeyword_2_0; }
-
-		//":class_name=>"
-		public Keyword getClass_nameKeyword_2_1() { return cClass_nameKeyword_2_1; }
-
-		//":class_name" " "* "=>"
-		public Group getGroup_2_2() { return cGroup_2_2; }
-
-		//":class_name"
-		public Keyword getClass_nameKeyword_2_2_0() { return cClass_nameKeyword_2_2_0; }
-
-		//" "*
-		public Keyword getSpaceKeyword_2_2_1() { return cSpaceKeyword_2_2_1; }
-
-		//"=>"
-		public Keyword getEqualsSignGreaterThanSignKeyword_2_2_2() { return cEqualsSignGreaterThanSignKeyword_2_2_2; }
-
-		//" "*
-		public Keyword getSpaceKeyword_3() { return cSpaceKeyword_3; }
-
-		//class_name=STRING
-		public Assignment getClass_nameAssignment_4() { return cClass_nameAssignment_4; }
-
-		//STRING
-		public RuleCall getClass_nameSTRINGTerminalRuleCall_4_0() { return cClass_nameSTRINGTerminalRuleCall_4_0; }
-	}
-
-	public class DependentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Dependent");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCommaKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cSpaceKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Keyword cDependentKeyword_2_0 = (Keyword)cAlternatives_2.eContents().get(0);
-		private final Keyword cDependentKeyword_2_1 = (Keyword)cAlternatives_2.eContents().get(1);
-		private final Group cGroup_2_2 = (Group)cAlternatives_2.eContents().get(2);
-		private final Keyword cDependentKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
-		private final Keyword cSpaceKeyword_2_2_1 = (Keyword)cGroup_2_2.eContents().get(1);
-		private final Keyword cEqualsSignGreaterThanSignKeyword_2_2_2 = (Keyword)cGroup_2_2.eContents().get(2);
-		private final Keyword cSpaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cDependentAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final Alternatives cDependentAlternatives_4_0 = (Alternatives)cDependentAssignment_4.eContents().get(0);
-		private final RuleCall cDependentSYMBOLTerminalRuleCall_4_0_0 = (RuleCall)cDependentAlternatives_4_0.eContents().get(0);
-		private final RuleCall cDependentSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cDependentAlternatives_4_0.eContents().get(1);
-		
-		//Dependent returns EString:
-		//	"," " "* ("dependent:" | ":dependent=>" | ":dependent" " "* "=>") " "* dependent=(SYMBOL | STRING);
-		public ParserRule getRule() { return rule; }
-
-		//"," " "* ("dependent:" | ":dependent=>" | ":dependent" " "* "=>") " "* dependent=(SYMBOL | STRING)
-		public Group getGroup() { return cGroup; }
-
-		//","
-		public Keyword getCommaKeyword_0() { return cCommaKeyword_0; }
-
-		//" "*
-		public Keyword getSpaceKeyword_1() { return cSpaceKeyword_1; }
-
-		//"dependent:" | ":dependent=>" | ":dependent" " "* "=>"
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
-
-		//"dependent:"
-		public Keyword getDependentKeyword_2_0() { return cDependentKeyword_2_0; }
-
-		//":dependent=>"
-		public Keyword getDependentKeyword_2_1() { return cDependentKeyword_2_1; }
-
-		//":dependent" " "* "=>"
-		public Group getGroup_2_2() { return cGroup_2_2; }
-
-		//":dependent"
-		public Keyword getDependentKeyword_2_2_0() { return cDependentKeyword_2_2_0; }
-
-		//" "*
-		public Keyword getSpaceKeyword_2_2_1() { return cSpaceKeyword_2_2_1; }
-
-		//"=>"
-		public Keyword getEqualsSignGreaterThanSignKeyword_2_2_2() { return cEqualsSignGreaterThanSignKeyword_2_2_2; }
-
-		//" "*
-		public Keyword getSpaceKeyword_3() { return cSpaceKeyword_3; }
-
-		//dependent=(SYMBOL | STRING)
-		public Assignment getDependentAssignment_4() { return cDependentAssignment_4; }
+		//name=(SYMBOL | STRING)
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
 		//SYMBOL | STRING
-		public Alternatives getDependentAlternatives_4_0() { return cDependentAlternatives_4_0; }
+		public Alternatives getNameAlternatives_2_0() { return cNameAlternatives_2_0; }
 
 		//SYMBOL
-		public RuleCall getDependentSYMBOLTerminalRuleCall_4_0_0() { return cDependentSYMBOLTerminalRuleCall_4_0_0; }
+		public RuleCall getNameSYMBOLTerminalRuleCall_2_0_0() { return cNameSYMBOLTerminalRuleCall_2_0_0; }
 
 		//STRING
-		public RuleCall getDependentSTRINGTerminalRuleCall_4_0_1() { return cDependentSTRINGTerminalRuleCall_4_0_1; }
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0_1() { return cNameSTRINGTerminalRuleCall_2_0_1; }
+
+		//" "*
+		public Keyword getSpaceKeyword_3() { return cSpaceKeyword_3; }
+
+		//options+=HashKeyValue*
+		public Assignment getOptionsAssignment_4() { return cOptionsAssignment_4; }
+
+		//HashKeyValue
+		public RuleCall getOptionsHashKeyValueParserRuleCall_4_0() { return cOptionsHashKeyValueParserRuleCall_4_0; }
+	}
+
+	public class BelongsToElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BelongsTo");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cBELONGS_TO_WORDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cSpaceKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cNameAlternatives_2_0 = (Alternatives)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cNameSYMBOLTerminalRuleCall_2_0_0 = (RuleCall)cNameAlternatives_2_0.eContents().get(0);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cNameAlternatives_2_0.eContents().get(1);
+		private final Keyword cSpaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cOptionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOptionsHashKeyValueParserRuleCall_4_0 = (RuleCall)cOptionsAssignment_4.eContents().get(0);
+		
+		//BelongsTo:
+		//	BELONGS_TO_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
+		public ParserRule getRule() { return rule; }
+
+		//BELONGS_TO_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*
+		public Group getGroup() { return cGroup; }
+
+		//BELONGS_TO_WORD
+		public RuleCall getBELONGS_TO_WORDTerminalRuleCall_0() { return cBELONGS_TO_WORDTerminalRuleCall_0; }
+
+		//" "*
+		public Keyword getSpaceKeyword_1() { return cSpaceKeyword_1; }
+
+		//name=(SYMBOL | STRING)
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+
+		//SYMBOL | STRING
+		public Alternatives getNameAlternatives_2_0() { return cNameAlternatives_2_0; }
+
+		//SYMBOL
+		public RuleCall getNameSYMBOLTerminalRuleCall_2_0_0() { return cNameSYMBOLTerminalRuleCall_2_0_0; }
+
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0_1() { return cNameSTRINGTerminalRuleCall_2_0_1; }
+
+		//" "*
+		public Keyword getSpaceKeyword_3() { return cSpaceKeyword_3; }
+
+		//options+=HashKeyValue*
+		public Assignment getOptionsAssignment_4() { return cOptionsAssignment_4; }
+
+		//HashKeyValue
+		public RuleCall getOptionsHashKeyValueParserRuleCall_4_0() { return cOptionsHashKeyValueParserRuleCall_4_0; }
 	}
 
 	public class HashKeyValueElements extends AbstractParserRuleElementFinder {
@@ -423,56 +391,6 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getValueSTRINGTerminalRuleCall_4_0_1() { return cValueSTRINGTerminalRuleCall_4_0_1; }
 	}
 
-	public class BelongsToElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BelongsTo");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cBELONGS_TO_WORDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Keyword cSpaceKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Alternatives cNameAlternatives_2_0 = (Alternatives)cNameAssignment_2.eContents().get(0);
-		private final RuleCall cNameSYMBOLTerminalRuleCall_2_0_0 = (RuleCall)cNameAlternatives_2_0.eContents().get(0);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cNameAlternatives_2_0.eContents().get(1);
-		private final Keyword cSpaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cOptionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOptionsHashKeyValueParserRuleCall_4_0 = (RuleCall)cOptionsAssignment_4.eContents().get(0);
-		
-		////(','WS* ('class_name:'|':class_name'' '*'=>')' '*class_name=STRING   )? & 
-		////(','WS* ('select:'|':select' '=>') STRING )? ('\r'? '\n')
-		//BelongsTo:
-		//	BELONGS_TO_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
-		public ParserRule getRule() { return rule; }
-
-		//BELONGS_TO_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*
-		public Group getGroup() { return cGroup; }
-
-		//BELONGS_TO_WORD
-		public RuleCall getBELONGS_TO_WORDTerminalRuleCall_0() { return cBELONGS_TO_WORDTerminalRuleCall_0; }
-
-		//" "*
-		public Keyword getSpaceKeyword_1() { return cSpaceKeyword_1; }
-
-		//name=(SYMBOL | STRING)
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-
-		//SYMBOL | STRING
-		public Alternatives getNameAlternatives_2_0() { return cNameAlternatives_2_0; }
-
-		//SYMBOL
-		public RuleCall getNameSYMBOLTerminalRuleCall_2_0_0() { return cNameSYMBOLTerminalRuleCall_2_0_0; }
-
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0_1() { return cNameSTRINGTerminalRuleCall_2_0_1; }
-
-		//" "*
-		public Keyword getSpaceKeyword_3() { return cSpaceKeyword_3; }
-
-		//options+=HashKeyValue*
-		public Assignment getOptionsAssignment_4() { return cOptionsAssignment_4; }
-
-		//HashKeyValue
-		public RuleCall getOptionsHashKeyValueParserRuleCall_4_0() { return cOptionsHashKeyValueParserRuleCall_4_0; }
-	}
-
 	public class MethodElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Method");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -532,10 +450,8 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	private final RelationshipElements pRelationship;
 	private final HasManyElements pHasMany;
 	private final HasAndBelongsToManyElements pHasAndBelongsToMany;
-	private final ClassNameElements pClassName;
-	private final DependentElements pDependent;
-	private final HashKeyValueElements pHashKeyValue;
 	private final BelongsToElements pBelongsTo;
+	private final HashKeyValueElements pHashKeyValue;
 	private final MethodElements pMethod;
 	private final MethodNameElements pMethodName;
 	private final TerminalRule tBELONGS_TO_WORD;
@@ -565,10 +481,8 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRelationship = new RelationshipElements();
 		this.pHasMany = new HasManyElements();
 		this.pHasAndBelongsToMany = new HasAndBelongsToManyElements();
-		this.pClassName = new ClassNameElements();
-		this.pDependent = new DependentElements();
-		this.pHashKeyValue = new HashKeyValueElements();
 		this.pBelongsTo = new BelongsToElements();
+		this.pHashKeyValue = new HashKeyValueElements();
 		this.pMethod = new MethodElements();
 		this.pMethodName = new MethodNameElements();
 		this.tBELONGS_TO_WORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BELONGS_TO_WORD");
@@ -653,7 +567,7 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HasMany:
-	//	HAS_MANY_WORD name=STRING;
+	//	HAS_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
 	public HasManyElements getHasManyAccess() {
 		return pHasMany;
 	}
@@ -663,7 +577,7 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HasAndBelongsToMany:
-	//	HAS_AND_BELONGS_TO_MANY_WORD name=STRING;
+	//	HAS_AND_BELONGS_TO_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
 	public HasAndBelongsToManyElements getHasAndBelongsToManyAccess() {
 		return pHasAndBelongsToMany;
 	}
@@ -672,24 +586,14 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		return getHasAndBelongsToManyAccess().getRule();
 	}
 
-	//ClassName returns EString:
-	//	"," " "* ("class_name:" | ":class_name=>" | ":class_name" " "* "=>") " "* class_name=STRING;
-	public ClassNameElements getClassNameAccess() {
-		return pClassName;
+	//BelongsTo:
+	//	BELONGS_TO_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
+	public BelongsToElements getBelongsToAccess() {
+		return pBelongsTo;
 	}
 	
-	public ParserRule getClassNameRule() {
-		return getClassNameAccess().getRule();
-	}
-
-	//Dependent returns EString:
-	//	"," " "* ("dependent:" | ":dependent=>" | ":dependent" " "* "=>") " "* dependent=(SYMBOL | STRING);
-	public DependentElements getDependentAccess() {
-		return pDependent;
-	}
-	
-	public ParserRule getDependentRule() {
-		return getDependentAccess().getRule();
+	public ParserRule getBelongsToRule() {
+		return getBelongsToAccess().getRule();
 	}
 
 	//HashKeyValue:
@@ -700,18 +604,6 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getHashKeyValueRule() {
 		return getHashKeyValueAccess().getRule();
-	}
-
-	////(','WS* ('class_name:'|':class_name'' '*'=>')' '*class_name=STRING   )? & 
-	////(','WS* ('select:'|':select' '=>') STRING )? ('\r'? '\n')
-	//BelongsTo:
-	//	BELONGS_TO_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
-	public BelongsToElements getBelongsToAccess() {
-		return pBelongsTo;
-	}
-	
-	public ParserRule getBelongsToRule() {
-		return getBelongsToAccess().getRule();
 	}
 
 	//Method returns RubyMethod:

@@ -100,19 +100,14 @@ public class RailsAdapterFactory extends AdapterFactoryImpl
         return createHasAndBelongsToManyAdapter();
       }
       @Override
-      public Adapter caseEString(EString object)
+      public Adapter caseBelongsTo(BelongsTo object)
       {
-        return createEStringAdapter();
+        return createBelongsToAdapter();
       }
       @Override
       public Adapter caseHashKeyValue(HashKeyValue object)
       {
         return createHashKeyValueAdapter();
-      }
-      @Override
-      public Adapter caseBelongsTo(BelongsTo object)
-      {
-        return createBelongsToAdapter();
       }
       @Override
       public Adapter caseRubyMethod(RubyMethod object)
@@ -217,16 +212,16 @@ public class RailsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link co.gruposaberes.model.rails.EString <em>EString</em>}'.
+   * Creates a new adapter for an object of class '{@link co.gruposaberes.model.rails.BelongsTo <em>Belongs To</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see co.gruposaberes.model.rails.EString
+   * @see co.gruposaberes.model.rails.BelongsTo
    * @generated
    */
-  public Adapter createEStringAdapter()
+  public Adapter createBelongsToAdapter()
   {
     return null;
   }
@@ -242,21 +237,6 @@ public class RailsAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createHashKeyValueAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.gruposaberes.model.rails.BelongsTo <em>Belongs To</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.gruposaberes.model.rails.BelongsTo
-   * @generated
-   */
-  public Adapter createBelongsToAdapter()
   {
     return null;
   }

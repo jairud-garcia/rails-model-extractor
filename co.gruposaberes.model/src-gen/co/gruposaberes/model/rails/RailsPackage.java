@@ -150,13 +150,22 @@ public interface RailsPackage extends EPackage
   int RELATIONSHIP__NAME = CLASS_ELEMENT__NAME;
 
   /**
+   * The feature id for the '<em><b>Options</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RELATIONSHIP__OPTIONS = CLASS_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Relationship</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RELATIONSHIP_FEATURE_COUNT = CLASS_ELEMENT_FEATURE_COUNT + 0;
+  int RELATIONSHIP_FEATURE_COUNT = CLASS_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link co.gruposaberes.model.rails.impl.HasManyImpl <em>Has Many</em>}' class.
@@ -176,6 +185,15 @@ public interface RailsPackage extends EPackage
    * @ordered
    */
   int HAS_MANY__NAME = RELATIONSHIP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Options</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAS_MANY__OPTIONS = RELATIONSHIP__OPTIONS;
 
   /**
    * The number of structural features of the '<em>Has Many</em>' class.
@@ -206,6 +224,15 @@ public interface RailsPackage extends EPackage
   int HAS_AND_BELONGS_TO_MANY__NAME = RELATIONSHIP__NAME;
 
   /**
+   * The feature id for the '<em><b>Options</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAS_AND_BELONGS_TO_MANY__OPTIONS = RELATIONSHIP__OPTIONS;
+
+  /**
    * The number of structural features of the '<em>Has And Belongs To Many</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -215,41 +242,41 @@ public interface RailsPackage extends EPackage
   int HAS_AND_BELONGS_TO_MANY_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link co.gruposaberes.model.rails.impl.EStringImpl <em>EString</em>}' class.
+   * The meta object id for the '{@link co.gruposaberes.model.rails.impl.BelongsToImpl <em>Belongs To</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see co.gruposaberes.model.rails.impl.EStringImpl
-   * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getEString()
+   * @see co.gruposaberes.model.rails.impl.BelongsToImpl
+   * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getBelongsTo()
    * @generated
    */
-  int ESTRING = 5;
+  int BELONGS_TO = 5;
 
   /**
-   * The feature id for the '<em><b>Class name</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ESTRING__CLASS_NAME = 0;
+  int BELONGS_TO__NAME = RELATIONSHIP__NAME;
 
   /**
-   * The feature id for the '<em><b>Dependent</b></em>' attribute.
+   * The feature id for the '<em><b>Options</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ESTRING__DEPENDENT = 1;
+  int BELONGS_TO__OPTIONS = RELATIONSHIP__OPTIONS;
 
   /**
-   * The number of structural features of the '<em>EString</em>' class.
+   * The number of structural features of the '<em>Belongs To</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ESTRING_FEATURE_COUNT = 2;
+  int BELONGS_TO_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link co.gruposaberes.model.rails.impl.HashKeyValueImpl <em>Hash Key Value</em>}' class.
@@ -289,43 +316,6 @@ public interface RailsPackage extends EPackage
   int HASH_KEY_VALUE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link co.gruposaberes.model.rails.impl.BelongsToImpl <em>Belongs To</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.gruposaberes.model.rails.impl.BelongsToImpl
-   * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getBelongsTo()
-   * @generated
-   */
-  int BELONGS_TO = 7;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BELONGS_TO__NAME = RELATIONSHIP__NAME;
-
-  /**
-   * The feature id for the '<em><b>Options</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BELONGS_TO__OPTIONS = RELATIONSHIP_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Belongs To</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BELONGS_TO_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link co.gruposaberes.model.rails.impl.RubyMethodImpl <em>Ruby Method</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -333,7 +323,7 @@ public interface RailsPackage extends EPackage
    * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getRubyMethod()
    * @generated
    */
-  int RUBY_METHOD = 8;
+  int RUBY_METHOD = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -429,6 +419,17 @@ public interface RailsPackage extends EPackage
   EClass getRelationship();
 
   /**
+   * Returns the meta object for the containment reference list '{@link co.gruposaberes.model.rails.Relationship#getOptions <em>Options</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Options</em>'.
+   * @see co.gruposaberes.model.rails.Relationship#getOptions()
+   * @see #getRelationship()
+   * @generated
+   */
+  EReference getRelationship_Options();
+
+  /**
    * Returns the meta object for class '{@link co.gruposaberes.model.rails.HasMany <em>Has Many</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -449,36 +450,14 @@ public interface RailsPackage extends EPackage
   EClass getHasAndBelongsToMany();
 
   /**
-   * Returns the meta object for class '{@link co.gruposaberes.model.rails.EString <em>EString</em>}'.
+   * Returns the meta object for class '{@link co.gruposaberes.model.rails.BelongsTo <em>Belongs To</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>EString</em>'.
-   * @see co.gruposaberes.model.rails.EString
+   * @return the meta object for class '<em>Belongs To</em>'.
+   * @see co.gruposaberes.model.rails.BelongsTo
    * @generated
    */
-  EClass getEString();
-
-  /**
-   * Returns the meta object for the attribute '{@link co.gruposaberes.model.rails.EString#getClass_name <em>Class name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Class name</em>'.
-   * @see co.gruposaberes.model.rails.EString#getClass_name()
-   * @see #getEString()
-   * @generated
-   */
-  EAttribute getEString_Class_name();
-
-  /**
-   * Returns the meta object for the attribute '{@link co.gruposaberes.model.rails.EString#getDependent <em>Dependent</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Dependent</em>'.
-   * @see co.gruposaberes.model.rails.EString#getDependent()
-   * @see #getEString()
-   * @generated
-   */
-  EAttribute getEString_Dependent();
+  EClass getBelongsTo();
 
   /**
    * Returns the meta object for class '{@link co.gruposaberes.model.rails.HashKeyValue <em>Hash Key Value</em>}'.
@@ -511,27 +490,6 @@ public interface RailsPackage extends EPackage
    * @generated
    */
   EAttribute getHashKeyValue_Value();
-
-  /**
-   * Returns the meta object for class '{@link co.gruposaberes.model.rails.BelongsTo <em>Belongs To</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Belongs To</em>'.
-   * @see co.gruposaberes.model.rails.BelongsTo
-   * @generated
-   */
-  EClass getBelongsTo();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link co.gruposaberes.model.rails.BelongsTo#getOptions <em>Options</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Options</em>'.
-   * @see co.gruposaberes.model.rails.BelongsTo#getOptions()
-   * @see #getBelongsTo()
-   * @generated
-   */
-  EReference getBelongsTo_Options();
 
   /**
    * Returns the meta object for class '{@link co.gruposaberes.model.rails.RubyMethod <em>Ruby Method</em>}'.
@@ -629,6 +587,14 @@ public interface RailsPackage extends EPackage
     EClass RELATIONSHIP = eINSTANCE.getRelationship();
 
     /**
+     * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RELATIONSHIP__OPTIONS = eINSTANCE.getRelationship_Options();
+
+    /**
      * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.HasManyImpl <em>Has Many</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -649,30 +615,14 @@ public interface RailsPackage extends EPackage
     EClass HAS_AND_BELONGS_TO_MANY = eINSTANCE.getHasAndBelongsToMany();
 
     /**
-     * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.EStringImpl <em>EString</em>}' class.
+     * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.BelongsToImpl <em>Belongs To</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see co.gruposaberes.model.rails.impl.EStringImpl
-     * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getEString()
+     * @see co.gruposaberes.model.rails.impl.BelongsToImpl
+     * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getBelongsTo()
      * @generated
      */
-    EClass ESTRING = eINSTANCE.getEString();
-
-    /**
-     * The meta object literal for the '<em><b>Class name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ESTRING__CLASS_NAME = eINSTANCE.getEString_Class_name();
-
-    /**
-     * The meta object literal for the '<em><b>Dependent</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ESTRING__DEPENDENT = eINSTANCE.getEString_Dependent();
+    EClass BELONGS_TO = eINSTANCE.getBelongsTo();
 
     /**
      * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.HashKeyValueImpl <em>Hash Key Value</em>}' class.
@@ -699,24 +649,6 @@ public interface RailsPackage extends EPackage
      * @generated
      */
     EAttribute HASH_KEY_VALUE__VALUE = eINSTANCE.getHashKeyValue_Value();
-
-    /**
-     * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.BelongsToImpl <em>Belongs To</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.gruposaberes.model.rails.impl.BelongsToImpl
-     * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getBelongsTo()
-     * @generated
-     */
-    EClass BELONGS_TO = eINSTANCE.getBelongsTo();
-
-    /**
-     * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BELONGS_TO__OPTIONS = eINSTANCE.getBelongsTo_Options();
 
     /**
      * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.RubyMethodImpl <em>Ruby Method</em>}' class.

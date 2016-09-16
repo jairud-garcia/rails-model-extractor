@@ -2,85 +2,52 @@ grammar co.gruposaberes.model.Rails hidden(WS, ML_COMMENT, SL_COMMENT)
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
-
-
 generate rails "http://www.gruposaberes.co/model/Rails"
 
 
 
 Class returns RubyClass:
-
   CLASS_WORD " "* name=NamespacedModuleName (" "* '<' " "* superType=NamespacedModuleName)?" "*
-
     classElements+=ClassElement*
-
   END_WORD
-
 ;
 
-
-
 NamespacedModuleName :
-
 (ID'::')*ID
-
 ;
 
 ClassElement returns ClassElement:
-
   Method |Relationship
-
 ;
 
 
 
 Relationship returns Relationship:
-
   HasMany | HasAndBelongsToMany | BelongsTo
-
 ;
-
-
 
 HasMany returns HasMany:
-
-  HAS_MANY_WORD name=STRING
-
+  HAS_MANY_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue*
 ;
-
-
 
 HasAndBelongsToMany returns HasAndBelongsToMany:
-  HAS_AND_BELONGS_TO_MANY_WORD name=STRING
+  HAS_AND_BELONGS_TO_MANY_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue*
 ;
 
-ClassName returns EString:
-  ',' " "* ('class_name:'|':class_name=>'|':class_name'" "*'=>' ) " "* class_name=STRING
+BelongsTo returns BelongsTo:
+  BELONGS_TO_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue*
 ;
-Dependent returns EString:
-  ',' " "* ('dependent:'|':dependent=>'|':dependent'" "*'=>' ) " "* dependent=(SYMBOL|STRING)
-;
+
+
+
+
 
 HashKeyValue:
   ',' " "* (key=ID':'|key=(SYMBOL|STRING)" "*'=>') " "* value=(SYMBOL|STRING)
 ;
-	
-BelongsTo returns BelongsTo:
-
-  BELONGS_TO_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue*
-
-  //(','WS* ('class_name:'|':class_name'' '*'=>')' '*class_name=STRING   )? & 
-
-  //(','WS* ('select:'|':select' '=>') STRING )? ('\r'? '\n')
-
-;
-
-
 
 Method returns RubyMethod:
-
   DEF_WORD name=MethodName
-
 ;
 
 
