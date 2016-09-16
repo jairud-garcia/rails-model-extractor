@@ -1,0 +1,128 @@
+grammar co.gruposaberes.model.Rails hidden(WS, ML_COMMENT, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+
+
+generate rails "http://www.gruposaberes.co/model/Rails"
+
+
+
+Class returns RubyClass:
+
+  CLASS_WORD " "* name=NamespacedModuleName (" "* '<' " "* superType=NamespacedModuleName)?" "*
+
+    classElements+=ClassElement*
+
+  END_WORD
+
+;
+
+
+
+NamespacedModuleName :
+
+(ID'::')*ID
+
+;
+
+ClassElement returns ClassElement:
+
+  Method |Relationship
+
+;
+
+
+
+Relationship returns Relationship:
+
+  HasMany | HasAndBelongsToMany | BelongsTo
+
+;
+
+
+
+HasMany returns HasMany:
+
+  HAS_MANY_WORD name=STRING
+
+;
+
+
+
+HasAndBelongsToMany returns HasAndBelongsToMany:
+  HAS_AND_BELONGS_TO_MANY_WORD name=STRING
+;
+
+ClassName returns EString:
+  ',' " "* ('class_name:'|':class_name=>'|':class_name'" "*'=>' ) " "* class_name=STRING
+;
+Dependent returns EString:
+  ',' " "* ('dependent:'|':dependent=>'|':dependent'" "*'=>' ) " "* dependent=(SYMBOL|STRING)
+;
+
+HashKeyValue:
+  ',' " "* (key=ID':'|key=(SYMBOL|STRING)" "*'=>') " "* value=(SYMBOL|STRING)
+;
+	
+BelongsTo returns BelongsTo:
+
+  BELONGS_TO_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue*
+
+  //(','WS* ('class_name:'|':class_name'' '*'=>')' '*class_name=STRING   )? & 
+
+  //(','WS* ('select:'|':select' '=>') STRING )? ('\r'? '\n')
+
+;
+
+
+
+Method returns RubyMethod:
+
+  DEF_WORD name=MethodName
+
+;
+
+
+
+MethodName:
+ID('?'|'=')?
+;
+
+
+
+
+
+terminal BELONGS_TO_WORD: 'belongs_to';
+
+terminal HAS_MANY_WORD: 'has_many';
+
+terminal HAS_AND_BELONGS_TO_MANY_WORD: 'has_and_belongs_to_many';
+
+terminal CLASS_WORD: 'class';
+
+terminal MODULE_WORD: 'module';
+
+terminal DEF_WORD: 'def';
+
+terminal END_WORD: 'end';
+
+
+
+
+
+terminal SYMBOL:':'ID;
+
+terminal ID: ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+
+terminal STRING: '"'->'"' | "'"->"'";
+
+terminal ML_COMMENT	: '=begin' -> '=end';
+
+terminal SL_COMMENT : '#' !('\n'|'\r')* ('\r'? '\n')?;
+
+terminal WS	: (' '|'\t'|'\r'|'\n')+;
+
+terminal INT returns ecore::EInt: ('0'..'9')+;
+
+terminal ANY_OTHER: .;

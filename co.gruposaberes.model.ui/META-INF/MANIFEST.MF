@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: co.gruposaberes.model.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: co.gruposaberes.model.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: co.gruposaberes.model;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types.ui,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.compare
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: co.gruposaberes.model.ui.quickfix,
+ co.gruposaberes.model.ui.contentassist,
+ co.gruposaberes.model.ui.contentassist.antlr,
+ co.gruposaberes.model.ui.internal
+Bundle-Activator: co.gruposaberes.model.ui.internal.RailsActivator

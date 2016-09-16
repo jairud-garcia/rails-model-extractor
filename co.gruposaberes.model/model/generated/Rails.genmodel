@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/co.gruposaberes.model/src-gen" editDirectory="/co.gruposaberes.model.edit/src"
+    editorDirectory="/co.gruposaberes.model.editor/src" modelPluginID="co.gruposaberes.model"
+    forceOverwrite="true" modelName="Rails" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="co.gruposaberes.model.edit"
+    editorPluginID="co.gruposaberes.model.editor" runtimeVersion="2.10">
+  <genPackages prefix="Rails" basePackage="co.gruposaberes.model" disposableProviderFactory="true"
+      fileExtensions="rb" ecorePackage="Rails.ecore#/">
+    <genClasses ecoreClass="Rails.ecore#//RubyClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//RubyClass/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//RubyClass/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//RubyClass/classElements"/>
+    </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//ClassElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//ClassElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//Relationship"/>
+    <genClasses ecoreClass="Rails.ecore#//HasMany"/>
+    <genClasses ecoreClass="Rails.ecore#//HasAndBelongsToMany"/>
+    <genClasses ecoreClass="Rails.ecore#//EString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//EString/class_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//EString/dependent"/>
+    </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//HashKeyValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HashKeyValue/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HashKeyValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//BelongsTo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//BelongsTo/options"/>
+    </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//RubyMethod"/>
+  </genPackages>
+</genmodel:GenModel>
