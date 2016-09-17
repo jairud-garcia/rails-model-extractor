@@ -22,5 +22,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: co.gruposaberes.model.ui.quickfix,
  co.gruposaberes.model.ui.contentassist,
  co.gruposaberes.model.ui.contentassist.antlr,
- co.gruposaberes.model.ui.internal
+ co.gruposaberes.model.ui.internal,
+ co.gruposaberes.model.ui.contentassist.antlr.internal
 Bundle-Activator: co.gruposaberes.model.ui.internal.RailsActivator

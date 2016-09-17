@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link co.gruposaberes.model.rails.Relationship#getOptions <em>Options</em>}</li>
  * </ul>
- * </p>
  *
  * @see co.gruposaberes.model.rails.RailsPackage#getRelationship()
  * @model

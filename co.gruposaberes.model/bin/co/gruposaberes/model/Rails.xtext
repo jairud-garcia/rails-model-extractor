@@ -7,7 +7,7 @@ generate rails "http://www.gruposaberes.co/model/Rails"
 
 
 Class returns RubyClass:
-  CLASS_WORD " "* name=NamespacedModuleName (" "* '<' " "* superType=NamespacedModuleName)?" "*
+  CLASS_WORD SPACE* name=NamespacedModuleName (SPACE* '<' SPACE* superType=NamespacedModuleName)?SPACE*
     classElements+=ClassElement*
   END_WORD
 ;
@@ -21,7 +21,7 @@ MethodChainCall:
 ;
 
 ClassElement returns ClassElement:
-  Method |Relationship
+  Method|Relationship
 ;
 
 Relationship returns Relationship:
@@ -29,19 +29,19 @@ Relationship returns Relationship:
 ;
 
 HasMany returns HasMany:
-  HAS_MANY_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue* SL_COMMENT?
+  HAS_MANY_WORD SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue* SL_COMMENT?
 ;
 
 HasAndBelongsToMany returns HasAndBelongsToMany:
-  HAS_AND_BELONGS_TO_MANY_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue*
+  HAS_AND_BELONGS_TO_MANY_WORD SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue*
 ;
 
 BelongsTo returns BelongsTo:
-  BELONGS_TO_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue*
+  BELONGS_TO_WORD SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue*
 ;
 
 HashKeyValue:
-  ',' " "* (key=ID':'|key=(SYMBOL|STRING)" "*'=>') " "* value=(SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|MethodChainCall)
+  ',' SPACE* (key=ID':'|key=(SYMBOL|STRING) SPACE*'=>') SPACE* value=(SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|MethodChainCall) SPACE*
 ;
 
 Method returns RubyMethod:
@@ -52,7 +52,7 @@ MethodName:
 ID('?'|'=')?
 ;
 
-
+terminal SPACE: ' ';
 
 terminal BRACKET_BLOCK: '{'->'}';
 

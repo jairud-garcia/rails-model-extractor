@@ -12,33 +12,33 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalRailsLexer extends Lexer {
-    public static final int RULE_HAS_MANY_WORD=11;
+    public static final int RULE_HAS_MANY_WORD=12;
     public static final int RULE_CLASS_WORD=8;
     public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=12;
-    public static final int RULE_HAS_AND_BELONGS_TO_MANY_WORD=13;
+    public static final int RULE_SL_COMMENT=13;
+    public static final int RULE_HAS_AND_BELONGS_TO_MANY_WORD=14;
+    public static final int RULE_SPACE=9;
     public static final int EOF=-1;
     public static final int RULE_ARRAY_BLOCK=7;
-    public static final int RULE_ID=10;
-    public static final int RULE_WS=18;
-    public static final int RULE_ANY_OTHER=20;
-    public static final int RULE_MODULE_WORD=16;
+    public static final int RULE_ID=11;
+    public static final int RULE_WS=19;
+    public static final int RULE_ANY_OTHER=21;
+    public static final int RULE_MODULE_WORD=17;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=19;
+    public static final int RULE_INT=20;
     public static final int T__29=29;
     public static final int RULE_BRACKET_BLOCK=6;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=17;
+    public static final int RULE_ML_COMMENT=18;
     public static final int T__23=23;
     public static final int RULE_SYMBOL=4;
-    public static final int RULE_DEF_WORD=15;
+    public static final int RULE_DEF_WORD=16;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int RULE_END_WORD=9;
-    public static final int RULE_BELONGS_TO_WORD=14;
-    public static final int T__21=21;
+    public static final int RULE_END_WORD=10;
+    public static final int RULE_BELONGS_TO_WORD=15;
 
     // delegates
     // delegators
@@ -51,37 +51,17 @@ public class InternalRailsLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g"; }
-
-    // $ANTLR start "T__21"
-    public final void mT__21() throws RecognitionException {
-        try {
-            int _type = T__21;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:11:7: ( '?' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:11:9: '?'
-            {
-            match('?'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__21"
+    public String getGrammarFileName() { return "InternalRails.g"; }
 
     // $ANTLR start "T__22"
     public final void mT__22() throws RecognitionException {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:12:7: ( '=' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:12:9: '='
+            // InternalRails.g:11:7: ( '?' )
+            // InternalRails.g:11:9: '?'
             {
-            match('='); 
+            match('?'); 
 
             }
 
@@ -98,10 +78,10 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:13:7: ( ' ' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:13:9: ' '
+            // InternalRails.g:12:7: ( '=' )
+            // InternalRails.g:12:9: '='
             {
-            match(' '); 
+            match('='); 
 
             }
 
@@ -118,8 +98,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:14:7: ( '<' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:14:9: '<'
+            // InternalRails.g:13:7: ( '<' )
+            // InternalRails.g:13:9: '<'
             {
             match('<'); 
 
@@ -138,8 +118,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:15:7: ( '::' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:15:9: '::'
+            // InternalRails.g:14:7: ( '::' )
+            // InternalRails.g:14:9: '::'
             {
             match("::"); 
 
@@ -159,8 +139,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:16:7: ( '.' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:16:9: '.'
+            // InternalRails.g:15:7: ( '.' )
+            // InternalRails.g:15:9: '.'
             {
             match('.'); 
 
@@ -179,8 +159,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:17:7: ( ',' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:17:9: ','
+            // InternalRails.g:16:7: ( ',' )
+            // InternalRails.g:16:9: ','
             {
             match(','); 
 
@@ -199,8 +179,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:18:7: ( ':' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:18:9: ':'
+            // InternalRails.g:17:7: ( ':' )
+            // InternalRails.g:17:9: ':'
             {
             match(':'); 
 
@@ -219,8 +199,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:19:7: ( '=>' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:19:9: '=>'
+            // InternalRails.g:18:7: ( '=>' )
+            // InternalRails.g:18:9: '=>'
             {
             match("=>"); 
 
@@ -235,16 +215,36 @@ public class InternalRailsLexer extends Lexer {
     }
     // $ANTLR end "T__29"
 
+    // $ANTLR start "RULE_SPACE"
+    public final void mRULE_SPACE() throws RecognitionException {
+        try {
+            int _type = RULE_SPACE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalRails.g:2346:12: ( ' ' )
+            // InternalRails.g:2346:14: ' '
+            {
+            match(' '); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_SPACE"
+
     // $ANTLR start "RULE_BRACKET_BLOCK"
     public final void mRULE_BRACKET_BLOCK() throws RecognitionException {
         try {
             int _type = RULE_BRACKET_BLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2341:20: ( '{' ( options {greedy=false; } : . )* '}' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2341:22: '{' ( options {greedy=false; } : . )* '}'
+            // InternalRails.g:2348:20: ( '{' ( options {greedy=false; } : . )* '}' )
+            // InternalRails.g:2348:22: '{' ( options {greedy=false; } : . )* '}'
             {
             match('{'); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2341:26: ( options {greedy=false; } : . )*
+            // InternalRails.g:2348:26: ( options {greedy=false; } : . )*
             loop1:
             do {
                 int alt1=2;
@@ -260,7 +260,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2341:54: .
+            	    // InternalRails.g:2348:54: .
             	    {
             	    matchAny(); 
 
@@ -289,11 +289,11 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_ARRAY_BLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2343:18: ( '[' ( options {greedy=false; } : . )* ']' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2343:20: '[' ( options {greedy=false; } : . )* ']'
+            // InternalRails.g:2350:18: ( '[' ( options {greedy=false; } : . )* ']' )
+            // InternalRails.g:2350:20: '[' ( options {greedy=false; } : . )* ']'
             {
             match('['); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2343:24: ( options {greedy=false; } : . )*
+            // InternalRails.g:2350:24: ( options {greedy=false; } : . )*
             loop2:
             do {
                 int alt2=2;
@@ -309,7 +309,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2343:52: .
+            	    // InternalRails.g:2350:52: .
             	    {
             	    matchAny(); 
 
@@ -338,8 +338,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_BELONGS_TO_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2345:22: ( 'belongs_to' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2345:24: 'belongs_to'
+            // InternalRails.g:2352:22: ( 'belongs_to' )
+            // InternalRails.g:2352:24: 'belongs_to'
             {
             match("belongs_to"); 
 
@@ -359,8 +359,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_HAS_MANY_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2347:20: ( 'has_many' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2347:22: 'has_many'
+            // InternalRails.g:2354:20: ( 'has_many' )
+            // InternalRails.g:2354:22: 'has_many'
             {
             match("has_many"); 
 
@@ -380,8 +380,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_HAS_AND_BELONGS_TO_MANY_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2349:35: ( 'has_and_belongs_to_many' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2349:37: 'has_and_belongs_to_many'
+            // InternalRails.g:2356:35: ( 'has_and_belongs_to_many' )
+            // InternalRails.g:2356:37: 'has_and_belongs_to_many'
             {
             match("has_and_belongs_to_many"); 
 
@@ -401,8 +401,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_CLASS_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2351:17: ( 'class' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2351:19: 'class'
+            // InternalRails.g:2358:17: ( 'class' )
+            // InternalRails.g:2358:19: 'class'
             {
             match("class"); 
 
@@ -422,8 +422,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_MODULE_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2353:18: ( 'module' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2353:20: 'module'
+            // InternalRails.g:2360:18: ( 'module' )
+            // InternalRails.g:2360:20: 'module'
             {
             match("module"); 
 
@@ -443,8 +443,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_DEF_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2355:15: ( 'def' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2355:17: 'def'
+            // InternalRails.g:2362:15: ( 'def' )
+            // InternalRails.g:2362:17: 'def'
             {
             match("def"); 
 
@@ -464,8 +464,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_END_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2357:15: ( 'end' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2357:17: 'end'
+            // InternalRails.g:2364:15: ( 'end' )
+            // InternalRails.g:2364:17: 'end'
             {
             match("end"); 
 
@@ -485,8 +485,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_SYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2359:13: ( ':' RULE_ID )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2359:15: ':' RULE_ID
+            // InternalRails.g:2366:13: ( ':' RULE_ID )
+            // InternalRails.g:2366:15: ':' RULE_ID
             {
             match(':'); 
             mRULE_ID(); 
@@ -506,8 +506,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2361:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2361:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalRails.g:2368:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalRails.g:2368:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -518,7 +518,7 @@ public class InternalRailsLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2361:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalRails.g:2368:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -531,7 +531,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:
+            	    // InternalRails.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -567,10 +567,10 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2363:13: ( ( '\"' ( options {greedy=false; } : . )* '\"' | '\\'' ( options {greedy=false; } : . )* '\\'' ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2363:15: ( '\"' ( options {greedy=false; } : . )* '\"' | '\\'' ( options {greedy=false; } : . )* '\\'' )
+            // InternalRails.g:2370:13: ( ( '\"' ( options {greedy=false; } : . )* '\"' | '\\'' ( options {greedy=false; } : . )* '\\'' ) )
+            // InternalRails.g:2370:15: ( '\"' ( options {greedy=false; } : . )* '\"' | '\\'' ( options {greedy=false; } : . )* '\\'' )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2363:15: ( '\"' ( options {greedy=false; } : . )* '\"' | '\\'' ( options {greedy=false; } : . )* '\\'' )
+            // InternalRails.g:2370:15: ( '\"' ( options {greedy=false; } : . )* '\"' | '\\'' ( options {greedy=false; } : . )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -588,10 +588,10 @@ public class InternalRailsLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2363:16: '\"' ( options {greedy=false; } : . )* '\"'
+                    // InternalRails.g:2370:16: '\"' ( options {greedy=false; } : . )* '\"'
                     {
                     match('\"'); 
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2363:20: ( options {greedy=false; } : . )*
+                    // InternalRails.g:2370:20: ( options {greedy=false; } : . )*
                     loop4:
                     do {
                         int alt4=2;
@@ -607,7 +607,7 @@ public class InternalRailsLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2363:48: .
+                    	    // InternalRails.g:2370:48: .
                     	    {
                     	    matchAny(); 
 
@@ -624,10 +624,10 @@ public class InternalRailsLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2363:56: '\\'' ( options {greedy=false; } : . )* '\\''
+                    // InternalRails.g:2370:56: '\\'' ( options {greedy=false; } : . )* '\\''
                     {
                     match('\''); 
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2363:61: ( options {greedy=false; } : . )*
+                    // InternalRails.g:2370:61: ( options {greedy=false; } : . )*
                     loop5:
                     do {
                         int alt5=2;
@@ -643,7 +643,7 @@ public class InternalRailsLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2363:89: .
+                    	    // InternalRails.g:2370:89: .
                     	    {
                     	    matchAny(); 
 
@@ -678,12 +678,12 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2365:17: ( '=begin' ( options {greedy=false; } : . )* '=end' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2365:19: '=begin' ( options {greedy=false; } : . )* '=end'
+            // InternalRails.g:2372:17: ( '=begin' ( options {greedy=false; } : . )* '=end' )
+            // InternalRails.g:2372:19: '=begin' ( options {greedy=false; } : . )* '=end'
             {
             match("=begin"); 
 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2365:28: ( options {greedy=false; } : . )*
+            // InternalRails.g:2372:28: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -726,7 +726,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2365:56: .
+            	    // InternalRails.g:2372:56: .
             	    {
             	    matchAny(); 
 
@@ -756,11 +756,11 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2367:17: ( '#' ( options {greedy=false; } : . )* '\\n' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2367:19: '#' ( options {greedy=false; } : . )* '\\n'
+            // InternalRails.g:2374:17: ( '#' ( options {greedy=false; } : . )* '\\n' )
+            // InternalRails.g:2374:19: '#' ( options {greedy=false; } : . )* '\\n'
             {
             match('#'); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2367:23: ( options {greedy=false; } : . )*
+            // InternalRails.g:2374:23: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -776,7 +776,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2367:51: .
+            	    // InternalRails.g:2374:51: .
             	    {
             	    matchAny(); 
 
@@ -805,10 +805,10 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2369:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2369:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalRails.g:2376:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalRails.g:2376:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2369:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalRails.g:2376:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt9=0;
             loop9:
             do {
@@ -822,7 +822,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:
+            	    // InternalRails.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -862,10 +862,10 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2371:10: ( ( '0' .. '9' )+ )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2371:12: ( '0' .. '9' )+
+            // InternalRails.g:2378:10: ( ( '0' .. '9' )+ )
+            // InternalRails.g:2378:12: ( '0' .. '9' )+
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2371:12: ( '0' .. '9' )+
+            // InternalRails.g:2378:12: ( '0' .. '9' )+
             int cnt10=0;
             loop10:
             do {
@@ -879,7 +879,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2371:13: '0' .. '9'
+            	    // InternalRails.g:2378:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -911,8 +911,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2373:16: ( . )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2373:18: .
+            // InternalRails.g:2380:16: ( . )
+            // InternalRails.g:2380:18: .
             {
             matchAny(); 
 
@@ -927,187 +927,187 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:8: ( T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_BRACKET_BLOCK | RULE_ARRAY_BLOCK | RULE_BELONGS_TO_WORD | RULE_HAS_MANY_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_CLASS_WORD | RULE_MODULE_WORD | RULE_DEF_WORD | RULE_END_WORD | RULE_SYMBOL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_INT | RULE_ANY_OTHER )
+        // InternalRails.g:1:8: ( T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_SPACE | RULE_BRACKET_BLOCK | RULE_ARRAY_BLOCK | RULE_BELONGS_TO_WORD | RULE_HAS_MANY_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_CLASS_WORD | RULE_MODULE_WORD | RULE_DEF_WORD | RULE_END_WORD | RULE_SYMBOL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_INT | RULE_ANY_OTHER )
         int alt11=26;
         alt11 = dfa11.predict(input);
         switch (alt11) {
             case 1 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:10: T__21
-                {
-                mT__21(); 
-
-                }
-                break;
-            case 2 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:16: T__22
+                // InternalRails.g:1:10: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
-            case 3 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:22: T__23
+            case 2 :
+                // InternalRails.g:1:16: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
-            case 4 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:28: T__24
+            case 3 :
+                // InternalRails.g:1:22: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
-            case 5 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:34: T__25
+            case 4 :
+                // InternalRails.g:1:28: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
-            case 6 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:40: T__26
+            case 5 :
+                // InternalRails.g:1:34: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
-            case 7 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:46: T__27
+            case 6 :
+                // InternalRails.g:1:40: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
-            case 8 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:52: T__28
+            case 7 :
+                // InternalRails.g:1:46: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
-            case 9 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:58: T__29
+            case 8 :
+                // InternalRails.g:1:52: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
+            case 9 :
+                // InternalRails.g:1:58: RULE_SPACE
+                {
+                mRULE_SPACE(); 
+
+                }
+                break;
             case 10 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:64: RULE_BRACKET_BLOCK
+                // InternalRails.g:1:69: RULE_BRACKET_BLOCK
                 {
                 mRULE_BRACKET_BLOCK(); 
 
                 }
                 break;
             case 11 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:83: RULE_ARRAY_BLOCK
+                // InternalRails.g:1:88: RULE_ARRAY_BLOCK
                 {
                 mRULE_ARRAY_BLOCK(); 
 
                 }
                 break;
             case 12 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:100: RULE_BELONGS_TO_WORD
+                // InternalRails.g:1:105: RULE_BELONGS_TO_WORD
                 {
                 mRULE_BELONGS_TO_WORD(); 
 
                 }
                 break;
             case 13 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:121: RULE_HAS_MANY_WORD
+                // InternalRails.g:1:126: RULE_HAS_MANY_WORD
                 {
                 mRULE_HAS_MANY_WORD(); 
 
                 }
                 break;
             case 14 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:140: RULE_HAS_AND_BELONGS_TO_MANY_WORD
+                // InternalRails.g:1:145: RULE_HAS_AND_BELONGS_TO_MANY_WORD
                 {
                 mRULE_HAS_AND_BELONGS_TO_MANY_WORD(); 
 
                 }
                 break;
             case 15 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:174: RULE_CLASS_WORD
+                // InternalRails.g:1:179: RULE_CLASS_WORD
                 {
                 mRULE_CLASS_WORD(); 
 
                 }
                 break;
             case 16 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:190: RULE_MODULE_WORD
+                // InternalRails.g:1:195: RULE_MODULE_WORD
                 {
                 mRULE_MODULE_WORD(); 
 
                 }
                 break;
             case 17 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:207: RULE_DEF_WORD
+                // InternalRails.g:1:212: RULE_DEF_WORD
                 {
                 mRULE_DEF_WORD(); 
 
                 }
                 break;
             case 18 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:221: RULE_END_WORD
+                // InternalRails.g:1:226: RULE_END_WORD
                 {
                 mRULE_END_WORD(); 
 
                 }
                 break;
             case 19 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:235: RULE_SYMBOL
+                // InternalRails.g:1:240: RULE_SYMBOL
                 {
                 mRULE_SYMBOL(); 
 
                 }
                 break;
             case 20 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:247: RULE_ID
+                // InternalRails.g:1:252: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 21 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:255: RULE_STRING
+                // InternalRails.g:1:260: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 22 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:267: RULE_ML_COMMENT
+                // InternalRails.g:1:272: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 23 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:283: RULE_SL_COMMENT
+                // InternalRails.g:1:288: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 24 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:299: RULE_WS
+                // InternalRails.g:1:304: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 25 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:307: RULE_INT
+                // InternalRails.g:1:312: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 26 :
-                // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1:316: RULE_ANY_OTHER
+                // InternalRails.g:1:321: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1121,26 +1121,26 @@ public class InternalRailsLexer extends Lexer {
 
     protected DFA11 dfa11 = new DFA11(this);
     static final String DFA11_eotS =
-        "\2\uffff\1\32\1\33\1\uffff\1\37\2\uffff\2\26\6\46\1\uffff\3\26\21\uffff\1\46\1\uffff\5\46\3\uffff\4\46\1\71\1\72\4\46\2\uffff\3\46\1\103\4\46\1\uffff\1\110\3\46\1\uffff\1\46\1\115\2\46\1\uffff\1\46\1\121\1\46\1\uffff\14\46\1\137\1\uffff";
+        "\2\uffff\1\32\1\uffff\1\35\2\uffff\1\41\2\26\6\46\1\uffff\3\26\21\uffff\1\46\1\uffff\5\46\3\uffff\4\46\1\71\1\72\4\46\2\uffff\3\46\1\103\4\46\1\uffff\1\110\3\46\1\uffff\1\46\1\115\2\46\1\uffff\1\46\1\121\1\46\1\uffff\14\46\1\137\1\uffff";
     static final String DFA11_eofS =
         "\140\uffff";
     static final String DFA11_minS =
-        "\1\0\1\uffff\1\76\1\11\1\uffff\1\72\2\uffff\2\0\1\145\1\141\1\154\1\157\1\145\1\156\1\uffff\3\0\21\uffff\1\154\1\uffff\1\163\1\141\1\144\1\146\1\144\3\uffff\1\157\1\137\1\163\1\165\2\60\1\156\1\141\1\163\1\154\2\uffff\1\147\1\141\1\156\1\60\1\145\1\163\1\156\1\144\1\uffff\1\60\1\137\1\171\1\137\1\uffff\1\164\1\60\1\142\1\157\1\uffff\1\145\1\60\1\154\1\uffff\1\157\1\156\1\147\1\163\1\137\1\164\1\157\1\137\1\155\1\141\1\156\1\171\1\60\1\uffff";
+        "\1\0\1\uffff\1\76\1\uffff\1\72\2\uffff\1\11\2\0\1\145\1\141\1\154\1\157\1\145\1\156\1\uffff\3\0\21\uffff\1\154\1\uffff\1\163\1\141\1\144\1\146\1\144\3\uffff\1\157\1\137\1\163\1\165\2\60\1\156\1\141\1\163\1\154\2\uffff\1\147\1\141\1\156\1\60\1\145\1\163\1\156\1\144\1\uffff\1\60\1\137\1\171\1\137\1\uffff\1\164\1\60\1\142\1\157\1\uffff\1\145\1\60\1\154\1\uffff\1\157\1\156\1\147\1\163\1\137\1\164\1\157\1\137\1\155\1\141\1\156\1\171\1\60\1\uffff";
     static final String DFA11_maxS =
-        "\1\uffff\1\uffff\1\142\1\40\1\uffff\1\172\2\uffff\2\uffff\1\145\1\141\1\154\1\157\1\145\1\156\1\uffff\3\uffff\21\uffff\1\154\1\uffff\1\163\1\141\1\144\1\146\1\144\3\uffff\1\157\1\137\1\163\1\165\2\172\1\156\1\155\1\163\1\154\2\uffff\1\147\1\141\1\156\1\172\1\145\1\163\1\156\1\144\1\uffff\1\172\1\137\1\171\1\137\1\uffff\1\164\1\172\1\142\1\157\1\uffff\1\145\1\172\1\154\1\uffff\1\157\1\156\1\147\1\163\1\137\1\164\1\157\1\137\1\155\1\141\1\156\1\171\1\172\1\uffff";
+        "\1\uffff\1\uffff\1\142\1\uffff\1\172\2\uffff\1\40\2\uffff\1\145\1\141\1\154\1\157\1\145\1\156\1\uffff\3\uffff\21\uffff\1\154\1\uffff\1\163\1\141\1\144\1\146\1\144\3\uffff\1\157\1\137\1\163\1\165\2\172\1\156\1\155\1\163\1\154\2\uffff\1\147\1\141\1\156\1\172\1\145\1\163\1\156\1\144\1\uffff\1\172\1\137\1\171\1\137\1\uffff\1\164\1\172\1\142\1\157\1\uffff\1\145\1\172\1\154\1\uffff\1\157\1\156\1\147\1\163\1\137\1\164\1\157\1\137\1\155\1\141\1\156\1\171\1\172\1\uffff";
     static final String DFA11_acceptS =
-        "\1\uffff\1\1\2\uffff\1\4\1\uffff\1\6\1\7\10\uffff\1\24\3\uffff\1\30\1\31\1\32\1\1\1\11\1\26\1\2\1\3\1\30\1\4\1\5\1\10\1\23\1\6\1\7\1\12\1\13\1\uffff\1\24\5\uffff\1\25\1\27\1\31\12\uffff\1\21\1\22\10\uffff\1\17\4\uffff\1\20\4\uffff\1\15\3\uffff\1\14\15\uffff\1\16";
+        "\1\uffff\1\1\1\uffff\1\3\1\uffff\1\5\1\6\11\uffff\1\24\3\uffff\1\30\1\31\1\32\1\1\1\10\1\26\1\2\1\3\1\4\1\7\1\23\1\5\1\6\1\11\1\30\1\12\1\13\1\uffff\1\24\5\uffff\1\25\1\27\1\31\12\uffff\1\21\1\22\10\uffff\1\17\4\uffff\1\20\4\uffff\1\15\3\uffff\1\14\15\uffff\1\16";
     static final String DFA11_specialS =
         "\1\0\7\uffff\1\3\1\5\7\uffff\1\1\1\4\1\2\114\uffff}>";
     static final String[] DFA11_transitionS = {
-            "\11\26\2\24\2\26\1\24\22\26\1\3\1\26\1\21\1\23\3\26\1\22\4\26\1\7\1\26\1\6\1\26\12\25\1\5\1\26\1\4\1\2\1\26\1\1\1\26\32\20\1\11\3\26\1\20\1\26\1\20\1\12\1\14\1\16\1\17\2\20\1\13\4\20\1\15\15\20\1\10\uff84\26",
+            "\11\26\2\24\2\26\1\24\22\26\1\7\1\26\1\21\1\23\3\26\1\22\4\26\1\6\1\26\1\5\1\26\12\25\1\4\1\26\1\3\1\2\1\26\1\1\1\26\32\20\1\11\3\26\1\20\1\26\1\20\1\12\1\14\1\16\1\17\2\20\1\13\4\20\1\15\15\20\1\10\uff84\26",
             "",
             "\1\30\43\uffff\1\31",
-            "\2\34\2\uffff\1\34\22\uffff\1\34",
             "",
-            "\1\36\6\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\34\6\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
             "",
             "",
+            "\2\42\2\uffff\1\42\22\uffff\1\42",
             "\0\43",
             "\0\44",
             "\1\45",
@@ -1261,7 +1261,7 @@ public class InternalRailsLexer extends Lexer {
             this.transition = DFA11_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_BRACKET_BLOCK | RULE_ARRAY_BLOCK | RULE_BELONGS_TO_WORD | RULE_HAS_MANY_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_CLASS_WORD | RULE_MODULE_WORD | RULE_DEF_WORD | RULE_END_WORD | RULE_SYMBOL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_INT | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_SPACE | RULE_BRACKET_BLOCK | RULE_ARRAY_BLOCK | RULE_BELONGS_TO_WORD | RULE_HAS_MANY_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_CLASS_WORD | RULE_MODULE_WORD | RULE_DEF_WORD | RULE_END_WORD | RULE_SYMBOL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_INT | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -1275,15 +1275,15 @@ public class InternalRailsLexer extends Lexer {
 
                         else if ( (LA11_0=='=') ) {s = 2;}
 
-                        else if ( (LA11_0==' ') ) {s = 3;}
+                        else if ( (LA11_0=='<') ) {s = 3;}
 
-                        else if ( (LA11_0=='<') ) {s = 4;}
+                        else if ( (LA11_0==':') ) {s = 4;}
 
-                        else if ( (LA11_0==':') ) {s = 5;}
+                        else if ( (LA11_0=='.') ) {s = 5;}
 
-                        else if ( (LA11_0=='.') ) {s = 6;}
+                        else if ( (LA11_0==',') ) {s = 6;}
 
-                        else if ( (LA11_0==',') ) {s = 7;}
+                        else if ( (LA11_0==' ') ) {s = 7;}
 
                         else if ( (LA11_0=='{') ) {s = 8;}
 

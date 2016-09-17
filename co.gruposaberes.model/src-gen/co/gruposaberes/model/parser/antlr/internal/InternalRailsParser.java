@@ -21,35 +21,35 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRailsParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_CLASS_WORD", "RULE_END_WORD", "RULE_ID", "RULE_HAS_MANY_WORD", "RULE_SYMBOL", "RULE_STRING", "RULE_SL_COMMENT", "RULE_HAS_AND_BELONGS_TO_MANY_WORD", "RULE_BELONGS_TO_WORD", "RULE_BRACKET_BLOCK", "RULE_ARRAY_BLOCK", "RULE_DEF_WORD", "RULE_MODULE_WORD", "RULE_ML_COMMENT", "RULE_WS", "RULE_INT", "RULE_ANY_OTHER", "' '", "'<'", "'::'", "'.'", "','", "':'", "'=>'", "'?'", "'='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_CLASS_WORD", "RULE_SPACE", "RULE_END_WORD", "RULE_ID", "RULE_HAS_MANY_WORD", "RULE_SYMBOL", "RULE_STRING", "RULE_SL_COMMENT", "RULE_HAS_AND_BELONGS_TO_MANY_WORD", "RULE_BELONGS_TO_WORD", "RULE_BRACKET_BLOCK", "RULE_ARRAY_BLOCK", "RULE_DEF_WORD", "RULE_MODULE_WORD", "RULE_ML_COMMENT", "RULE_WS", "RULE_INT", "RULE_ANY_OTHER", "'<'", "'::'", "'.'", "','", "':'", "'=>'", "'?'", "'='"
     };
-    public static final int RULE_HAS_MANY_WORD=7;
+    public static final int RULE_HAS_MANY_WORD=8;
     public static final int RULE_CLASS_WORD=4;
-    public static final int RULE_STRING=9;
-    public static final int RULE_SL_COMMENT=10;
-    public static final int RULE_HAS_AND_BELONGS_TO_MANY_WORD=11;
+    public static final int RULE_STRING=10;
+    public static final int RULE_SL_COMMENT=11;
+    public static final int RULE_HAS_AND_BELONGS_TO_MANY_WORD=12;
+    public static final int RULE_SPACE=5;
     public static final int EOF=-1;
-    public static final int RULE_ARRAY_BLOCK=14;
-    public static final int RULE_ID=6;
-    public static final int RULE_WS=18;
-    public static final int RULE_ANY_OTHER=20;
-    public static final int RULE_MODULE_WORD=16;
+    public static final int RULE_ARRAY_BLOCK=15;
+    public static final int RULE_ID=7;
+    public static final int RULE_WS=19;
+    public static final int RULE_ANY_OTHER=21;
+    public static final int RULE_MODULE_WORD=17;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=19;
+    public static final int RULE_INT=20;
     public static final int T__29=29;
-    public static final int RULE_BRACKET_BLOCK=13;
+    public static final int RULE_BRACKET_BLOCK=14;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=17;
+    public static final int RULE_ML_COMMENT=18;
     public static final int T__23=23;
-    public static final int RULE_SYMBOL=8;
-    public static final int RULE_DEF_WORD=15;
+    public static final int RULE_SYMBOL=9;
+    public static final int RULE_DEF_WORD=16;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int RULE_END_WORD=5;
-    public static final int RULE_BELONGS_TO_WORD=12;
-    public static final int T__21=21;
+    public static final int RULE_END_WORD=6;
+    public static final int RULE_BELONGS_TO_WORD=13;
 
     // delegates
     // delegators
@@ -65,7 +65,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
         
 
     public String[] getTokenNames() { return InternalRailsParser.tokenNames; }
-    public String getGrammarFileName() { return "../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g"; }
+    public String getGrammarFileName() { return "InternalRails.g"; }
 
 
 
@@ -90,7 +90,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleClass"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:67:1: entryRuleClass returns [EObject current=null] : iv_ruleClass= ruleClass EOF ;
+    // InternalRails.g:67:1: entryRuleClass returns [EObject current=null] : iv_ruleClass= ruleClass EOF ;
     public final EObject entryRuleClass() throws RecognitionException {
         EObject current = null;
 
@@ -98,17 +98,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:68:2: (iv_ruleClass= ruleClass EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:69:2: iv_ruleClass= ruleClass EOF
+            // InternalRails.g:68:2: (iv_ruleClass= ruleClass EOF )
+            // InternalRails.g:69:2: iv_ruleClass= ruleClass EOF
             {
              newCompositeNode(grammarAccess.getClassRule()); 
-            pushFollow(FOLLOW_ruleClass_in_entryRuleClass75);
+            pushFollow(FOLLOW_1);
             iv_ruleClass=ruleClass();
 
             state._fsp--;
 
              current =iv_ruleClass; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleClass85); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -126,16 +126,16 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClass"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:76:1: ruleClass returns [EObject current=null] : (this_CLASS_WORD_0= RULE_CLASS_WORD (otherlv_1= ' ' )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (otherlv_3= ' ' )* otherlv_4= '<' (otherlv_5= ' ' )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (otherlv_7= ' ' )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD ) ;
+    // InternalRails.g:76:1: ruleClass returns [EObject current=null] : (this_CLASS_WORD_0= RULE_CLASS_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (this_SPACE_3= RULE_SPACE )* otherlv_4= '<' (this_SPACE_5= RULE_SPACE )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (this_SPACE_7= RULE_SPACE )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD ) ;
     public final EObject ruleClass() throws RecognitionException {
         EObject current = null;
 
         Token this_CLASS_WORD_0=null;
-        Token otherlv_1=null;
-        Token otherlv_3=null;
+        Token this_SPACE_1=null;
+        Token this_SPACE_3=null;
         Token otherlv_4=null;
-        Token otherlv_5=null;
-        Token otherlv_7=null;
+        Token this_SPACE_5=null;
+        Token this_SPACE_7=null;
         Token this_END_WORD_9=null;
         AntlrDatatypeRuleToken lv_name_2_0 = null;
 
@@ -147,34 +147,34 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:79:28: ( (this_CLASS_WORD_0= RULE_CLASS_WORD (otherlv_1= ' ' )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (otherlv_3= ' ' )* otherlv_4= '<' (otherlv_5= ' ' )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (otherlv_7= ' ' )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:80:1: (this_CLASS_WORD_0= RULE_CLASS_WORD (otherlv_1= ' ' )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (otherlv_3= ' ' )* otherlv_4= '<' (otherlv_5= ' ' )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (otherlv_7= ' ' )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD )
+            // InternalRails.g:79:28: ( (this_CLASS_WORD_0= RULE_CLASS_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (this_SPACE_3= RULE_SPACE )* otherlv_4= '<' (this_SPACE_5= RULE_SPACE )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (this_SPACE_7= RULE_SPACE )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD ) )
+            // InternalRails.g:80:1: (this_CLASS_WORD_0= RULE_CLASS_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (this_SPACE_3= RULE_SPACE )* otherlv_4= '<' (this_SPACE_5= RULE_SPACE )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (this_SPACE_7= RULE_SPACE )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:80:1: (this_CLASS_WORD_0= RULE_CLASS_WORD (otherlv_1= ' ' )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (otherlv_3= ' ' )* otherlv_4= '<' (otherlv_5= ' ' )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (otherlv_7= ' ' )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:80:2: this_CLASS_WORD_0= RULE_CLASS_WORD (otherlv_1= ' ' )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (otherlv_3= ' ' )* otherlv_4= '<' (otherlv_5= ' ' )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (otherlv_7= ' ' )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD
+            // InternalRails.g:80:1: (this_CLASS_WORD_0= RULE_CLASS_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (this_SPACE_3= RULE_SPACE )* otherlv_4= '<' (this_SPACE_5= RULE_SPACE )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (this_SPACE_7= RULE_SPACE )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD )
+            // InternalRails.g:80:2: this_CLASS_WORD_0= RULE_CLASS_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleNamespacedModuleName ) ) ( (this_SPACE_3= RULE_SPACE )* otherlv_4= '<' (this_SPACE_5= RULE_SPACE )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )? (this_SPACE_7= RULE_SPACE )* ( (lv_classElements_8_0= ruleClassElement ) )* this_END_WORD_9= RULE_END_WORD
             {
-            this_CLASS_WORD_0=(Token)match(input,RULE_CLASS_WORD,FOLLOW_RULE_CLASS_WORD_in_ruleClass121); 
+            this_CLASS_WORD_0=(Token)match(input,RULE_CLASS_WORD,FOLLOW_3); 
              
                 newLeafNode(this_CLASS_WORD_0, grammarAccess.getClassAccess().getCLASS_WORDTerminalRuleCall_0()); 
                 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:84:1: (otherlv_1= ' ' )*
+            // InternalRails.g:84:1: (this_SPACE_1= RULE_SPACE )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==21) ) {
+                if ( (LA1_0==RULE_SPACE) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:84:3: otherlv_1= ' '
+            	    // InternalRails.g:84:2: this_SPACE_1= RULE_SPACE
             	    {
-            	    otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleClass133); 
-
-            	        	newLeafNode(otherlv_1, grammarAccess.getClassAccess().getSpaceKeyword_1());
+            	    this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_3); 
+            	     
+            	        newLeafNode(this_SPACE_1, grammarAccess.getClassAccess().getSPACETerminalRuleCall_1()); 
             	        
 
             	    }
@@ -185,16 +185,16 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:88:3: ( (lv_name_2_0= ruleNamespacedModuleName ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:89:1: (lv_name_2_0= ruleNamespacedModuleName )
+            // InternalRails.g:88:3: ( (lv_name_2_0= ruleNamespacedModuleName ) )
+            // InternalRails.g:89:1: (lv_name_2_0= ruleNamespacedModuleName )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:89:1: (lv_name_2_0= ruleNamespacedModuleName )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:90:3: lv_name_2_0= ruleNamespacedModuleName
+            // InternalRails.g:89:1: (lv_name_2_0= ruleNamespacedModuleName )
+            // InternalRails.g:90:3: lv_name_2_0= ruleNamespacedModuleName
             {
              
             	        newCompositeNode(grammarAccess.getClassAccess().getNameNamespacedModuleNameParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleNamespacedModuleName_in_ruleClass156);
+            pushFollow(FOLLOW_4);
             lv_name_2_0=ruleNamespacedModuleName();
 
             state._fsp--;
@@ -207,7 +207,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_2_0, 
-                    		"NamespacedModuleName");
+                    		"co.gruposaberes.model.Rails.NamespacedModuleName");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -216,31 +216,31 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:106:2: ( (otherlv_3= ' ' )* otherlv_4= '<' (otherlv_5= ' ' )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )?
+            // InternalRails.g:106:2: ( (this_SPACE_3= RULE_SPACE )* otherlv_4= '<' (this_SPACE_5= RULE_SPACE )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )?
             int alt4=2;
             alt4 = dfa4.predict(input);
             switch (alt4) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:106:3: (otherlv_3= ' ' )* otherlv_4= '<' (otherlv_5= ' ' )* ( (lv_superType_6_0= ruleNamespacedModuleName ) )
+                    // InternalRails.g:106:3: (this_SPACE_3= RULE_SPACE )* otherlv_4= '<' (this_SPACE_5= RULE_SPACE )* ( (lv_superType_6_0= ruleNamespacedModuleName ) )
                     {
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:106:3: (otherlv_3= ' ' )*
+                    // InternalRails.g:106:3: (this_SPACE_3= RULE_SPACE )*
                     loop2:
                     do {
                         int alt2=2;
                         int LA2_0 = input.LA(1);
 
-                        if ( (LA2_0==21) ) {
+                        if ( (LA2_0==RULE_SPACE) ) {
                             alt2=1;
                         }
 
 
                         switch (alt2) {
                     	case 1 :
-                    	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:106:5: otherlv_3= ' '
+                    	    // InternalRails.g:106:4: this_SPACE_3= RULE_SPACE
                     	    {
-                    	    otherlv_3=(Token)match(input,21,FOLLOW_21_in_ruleClass170); 
-
-                    	        	newLeafNode(otherlv_3, grammarAccess.getClassAccess().getSpaceKeyword_3_0());
+                    	    this_SPACE_3=(Token)match(input,RULE_SPACE,FOLLOW_5); 
+                    	     
+                    	        newLeafNode(this_SPACE_3, grammarAccess.getClassAccess().getSPACETerminalRuleCall_3_0()); 
                     	        
 
                     	    }
@@ -251,28 +251,28 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_4=(Token)match(input,22,FOLLOW_22_in_ruleClass184); 
+                    otherlv_4=(Token)match(input,22,FOLLOW_3); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getClassAccess().getLessThanSignKeyword_3_1());
                         
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:114:1: (otherlv_5= ' ' )*
+                    // InternalRails.g:114:1: (this_SPACE_5= RULE_SPACE )*
                     loop3:
                     do {
                         int alt3=2;
                         int LA3_0 = input.LA(1);
 
-                        if ( (LA3_0==21) ) {
+                        if ( (LA3_0==RULE_SPACE) ) {
                             alt3=1;
                         }
 
 
                         switch (alt3) {
                     	case 1 :
-                    	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:114:3: otherlv_5= ' '
+                    	    // InternalRails.g:114:2: this_SPACE_5= RULE_SPACE
                     	    {
-                    	    otherlv_5=(Token)match(input,21,FOLLOW_21_in_ruleClass197); 
-
-                    	        	newLeafNode(otherlv_5, grammarAccess.getClassAccess().getSpaceKeyword_3_2());
+                    	    this_SPACE_5=(Token)match(input,RULE_SPACE,FOLLOW_3); 
+                    	     
+                    	        newLeafNode(this_SPACE_5, grammarAccess.getClassAccess().getSPACETerminalRuleCall_3_2()); 
                     	        
 
                     	    }
@@ -283,16 +283,16 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:118:3: ( (lv_superType_6_0= ruleNamespacedModuleName ) )
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:119:1: (lv_superType_6_0= ruleNamespacedModuleName )
+                    // InternalRails.g:118:3: ( (lv_superType_6_0= ruleNamespacedModuleName ) )
+                    // InternalRails.g:119:1: (lv_superType_6_0= ruleNamespacedModuleName )
                     {
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:119:1: (lv_superType_6_0= ruleNamespacedModuleName )
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:120:3: lv_superType_6_0= ruleNamespacedModuleName
+                    // InternalRails.g:119:1: (lv_superType_6_0= ruleNamespacedModuleName )
+                    // InternalRails.g:120:3: lv_superType_6_0= ruleNamespacedModuleName
                     {
                      
                     	        newCompositeNode(grammarAccess.getClassAccess().getSuperTypeNamespacedModuleNameParserRuleCall_3_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleNamespacedModuleName_in_ruleClass220);
+                    pushFollow(FOLLOW_6);
                     lv_superType_6_0=ruleNamespacedModuleName();
 
                     state._fsp--;
@@ -305,7 +305,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"superType",
                             		lv_superType_6_0, 
-                            		"NamespacedModuleName");
+                            		"co.gruposaberes.model.Rails.NamespacedModuleName");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -320,24 +320,24 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:136:4: (otherlv_7= ' ' )*
+            // InternalRails.g:136:4: (this_SPACE_7= RULE_SPACE )*
             loop5:
             do {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( (LA5_0==21) ) {
+                if ( (LA5_0==RULE_SPACE) ) {
                     alt5=1;
                 }
 
 
                 switch (alt5) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:136:6: otherlv_7= ' '
+            	    // InternalRails.g:136:5: this_SPACE_7= RULE_SPACE
             	    {
-            	    otherlv_7=(Token)match(input,21,FOLLOW_21_in_ruleClass235); 
-
-            	        	newLeafNode(otherlv_7, grammarAccess.getClassAccess().getSpaceKeyword_4());
+            	    this_SPACE_7=(Token)match(input,RULE_SPACE,FOLLOW_6); 
+            	     
+            	        newLeafNode(this_SPACE_7, grammarAccess.getClassAccess().getSPACETerminalRuleCall_4()); 
             	        
 
             	    }
@@ -348,7 +348,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:140:3: ( (lv_classElements_8_0= ruleClassElement ) )*
+            // InternalRails.g:140:3: ( (lv_classElements_8_0= ruleClassElement ) )*
             loop6:
             do {
                 int alt6=2;
@@ -361,15 +361,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:141:1: (lv_classElements_8_0= ruleClassElement )
+            	    // InternalRails.g:141:1: (lv_classElements_8_0= ruleClassElement )
             	    {
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:141:1: (lv_classElements_8_0= ruleClassElement )
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:142:3: lv_classElements_8_0= ruleClassElement
+            	    // InternalRails.g:141:1: (lv_classElements_8_0= ruleClassElement )
+            	    // InternalRails.g:142:3: lv_classElements_8_0= ruleClassElement
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getClassAccess().getClassElementsClassElementParserRuleCall_5_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleClassElement_in_ruleClass258);
+            	    pushFollow(FOLLOW_7);
             	    lv_classElements_8_0=ruleClassElement();
 
             	    state._fsp--;
@@ -382,7 +382,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"classElements",
             	            		lv_classElements_8_0, 
-            	            		"ClassElement");
+            	            		"co.gruposaberes.model.Rails.ClassElement");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -397,7 +397,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            this_END_WORD_9=(Token)match(input,RULE_END_WORD,FOLLOW_RULE_END_WORD_in_ruleClass270); 
+            this_END_WORD_9=(Token)match(input,RULE_END_WORD,FOLLOW_2); 
              
                 newLeafNode(this_END_WORD_9, grammarAccess.getClassAccess().getEND_WORDTerminalRuleCall_6()); 
                 
@@ -422,7 +422,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNamespacedModuleName"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:170:1: entryRuleNamespacedModuleName returns [String current=null] : iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF ;
+    // InternalRails.g:170:1: entryRuleNamespacedModuleName returns [String current=null] : iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF ;
     public final String entryRuleNamespacedModuleName() throws RecognitionException {
         String current = null;
 
@@ -430,17 +430,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:171:2: (iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:172:2: iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF
+            // InternalRails.g:171:2: (iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF )
+            // InternalRails.g:172:2: iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF
             {
              newCompositeNode(grammarAccess.getNamespacedModuleNameRule()); 
-            pushFollow(FOLLOW_ruleNamespacedModuleName_in_entryRuleNamespacedModuleName306);
+            pushFollow(FOLLOW_1);
             iv_ruleNamespacedModuleName=ruleNamespacedModuleName();
 
             state._fsp--;
 
              current =iv_ruleNamespacedModuleName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNamespacedModuleName317); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -458,7 +458,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNamespacedModuleName"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:179:1: ruleNamespacedModuleName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID ) ;
+    // InternalRails.g:179:1: ruleNamespacedModuleName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleNamespacedModuleName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -469,13 +469,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:182:28: ( ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:183:1: ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID )
+            // InternalRails.g:182:28: ( ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID ) )
+            // InternalRails.g:183:1: ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:183:1: ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:183:2: (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID
+            // InternalRails.g:183:1: ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID )
+            // InternalRails.g:183:2: (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:183:2: (this_ID_0= RULE_ID kw= '::' )*
+            // InternalRails.g:183:2: (this_ID_0= RULE_ID kw= '::' )*
             loop7:
             do {
                 int alt7=2;
@@ -494,16 +494,16 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:183:7: this_ID_0= RULE_ID kw= '::'
+            	    // InternalRails.g:183:7: this_ID_0= RULE_ID kw= '::'
             	    {
-            	    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNamespacedModuleName358); 
+            	    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_8); 
 
             	    		current.merge(this_ID_0);
             	        
             	     
             	        newLeafNode(this_ID_0, grammarAccess.getNamespacedModuleNameAccess().getIDTerminalRuleCall_0_0()); 
             	        
-            	    kw=(Token)match(input,23,FOLLOW_23_in_ruleNamespacedModuleName376); 
+            	    kw=(Token)match(input,23,FOLLOW_9); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getNamespacedModuleNameAccess().getColonColonKeyword_0_1()); 
@@ -517,7 +517,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNamespacedModuleName393); 
+            this_ID_2=(Token)match(input,RULE_ID,FOLLOW_2); 
 
             		current.merge(this_ID_2);
                 
@@ -545,7 +545,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMethodChainCall"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:211:1: entryRuleMethodChainCall returns [String current=null] : iv_ruleMethodChainCall= ruleMethodChainCall EOF ;
+    // InternalRails.g:211:1: entryRuleMethodChainCall returns [String current=null] : iv_ruleMethodChainCall= ruleMethodChainCall EOF ;
     public final String entryRuleMethodChainCall() throws RecognitionException {
         String current = null;
 
@@ -553,17 +553,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:212:2: (iv_ruleMethodChainCall= ruleMethodChainCall EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:213:2: iv_ruleMethodChainCall= ruleMethodChainCall EOF
+            // InternalRails.g:212:2: (iv_ruleMethodChainCall= ruleMethodChainCall EOF )
+            // InternalRails.g:213:2: iv_ruleMethodChainCall= ruleMethodChainCall EOF
             {
              newCompositeNode(grammarAccess.getMethodChainCallRule()); 
-            pushFollow(FOLLOW_ruleMethodChainCall_in_entryRuleMethodChainCall439);
+            pushFollow(FOLLOW_1);
             iv_ruleMethodChainCall=ruleMethodChainCall();
 
             state._fsp--;
 
              current =iv_ruleMethodChainCall.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMethodChainCall450); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -581,7 +581,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethodChainCall"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:220:1: ruleMethodChainCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalRails.g:220:1: ruleMethodChainCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleMethodChainCall() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -593,16 +593,16 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:223:28: ( (this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )* ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:224:1: (this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalRails.g:223:28: ( (this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalRails.g:224:1: (this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:224:1: (this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )* )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:225:5: this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )*
+            // InternalRails.g:224:1: (this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalRails.g:225:5: this_NamespacedModuleName_0= ruleNamespacedModuleName (kw= '.' this_ID_2= RULE_ID )*
             {
              
                     newCompositeNode(grammarAccess.getMethodChainCallAccess().getNamespacedModuleNameParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleNamespacedModuleName_in_ruleMethodChainCall497);
+            pushFollow(FOLLOW_10);
             this_NamespacedModuleName_0=ruleNamespacedModuleName();
 
             state._fsp--;
@@ -613,7 +613,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:235:1: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalRails.g:235:1: (kw= '.' this_ID_2= RULE_ID )*
             loop8:
             do {
                 int alt8=2;
@@ -626,14 +626,14 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:236:2: kw= '.' this_ID_2= RULE_ID
+            	    // InternalRails.g:236:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,24,FOLLOW_24_in_ruleMethodChainCall516); 
+            	    kw=(Token)match(input,24,FOLLOW_9); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getMethodChainCallAccess().getFullStopKeyword_1_0()); 
             	        
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMethodChainCall531); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_10); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -670,7 +670,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleClassElement"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:256:1: entryRuleClassElement returns [EObject current=null] : iv_ruleClassElement= ruleClassElement EOF ;
+    // InternalRails.g:256:1: entryRuleClassElement returns [EObject current=null] : iv_ruleClassElement= ruleClassElement EOF ;
     public final EObject entryRuleClassElement() throws RecognitionException {
         EObject current = null;
 
@@ -678,17 +678,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:257:2: (iv_ruleClassElement= ruleClassElement EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:258:2: iv_ruleClassElement= ruleClassElement EOF
+            // InternalRails.g:257:2: (iv_ruleClassElement= ruleClassElement EOF )
+            // InternalRails.g:258:2: iv_ruleClassElement= ruleClassElement EOF
             {
              newCompositeNode(grammarAccess.getClassElementRule()); 
-            pushFollow(FOLLOW_ruleClassElement_in_entryRuleClassElement578);
+            pushFollow(FOLLOW_1);
             iv_ruleClassElement=ruleClassElement();
 
             state._fsp--;
 
              current =iv_ruleClassElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleClassElement588); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -706,7 +706,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClassElement"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:265:1: ruleClassElement returns [EObject current=null] : (this_Method_0= ruleMethod | this_Relationship_1= ruleRelationship ) ;
+    // InternalRails.g:265:1: ruleClassElement returns [EObject current=null] : (this_Method_0= ruleMethod | this_Relationship_1= ruleRelationship ) ;
     public final EObject ruleClassElement() throws RecognitionException {
         EObject current = null;
 
@@ -718,10 +718,10 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:268:28: ( (this_Method_0= ruleMethod | this_Relationship_1= ruleRelationship ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:269:1: (this_Method_0= ruleMethod | this_Relationship_1= ruleRelationship )
+            // InternalRails.g:268:28: ( (this_Method_0= ruleMethod | this_Relationship_1= ruleRelationship ) )
+            // InternalRails.g:269:1: (this_Method_0= ruleMethod | this_Relationship_1= ruleRelationship )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:269:1: (this_Method_0= ruleMethod | this_Relationship_1= ruleRelationship )
+            // InternalRails.g:269:1: (this_Method_0= ruleMethod | this_Relationship_1= ruleRelationship )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -739,12 +739,12 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:270:5: this_Method_0= ruleMethod
+                    // InternalRails.g:270:5: this_Method_0= ruleMethod
                     {
                      
                             newCompositeNode(grammarAccess.getClassElementAccess().getMethodParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleMethod_in_ruleClassElement635);
+                    pushFollow(FOLLOW_2);
                     this_Method_0=ruleMethod();
 
                     state._fsp--;
@@ -757,12 +757,12 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:280:5: this_Relationship_1= ruleRelationship
+                    // InternalRails.g:280:5: this_Relationship_1= ruleRelationship
                     {
                      
                             newCompositeNode(grammarAccess.getClassElementAccess().getRelationshipParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleRelationship_in_ruleClassElement662);
+                    pushFollow(FOLLOW_2);
                     this_Relationship_1=ruleRelationship();
 
                     state._fsp--;
@@ -795,7 +795,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRelationship"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:296:1: entryRuleRelationship returns [EObject current=null] : iv_ruleRelationship= ruleRelationship EOF ;
+    // InternalRails.g:296:1: entryRuleRelationship returns [EObject current=null] : iv_ruleRelationship= ruleRelationship EOF ;
     public final EObject entryRuleRelationship() throws RecognitionException {
         EObject current = null;
 
@@ -803,17 +803,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:297:2: (iv_ruleRelationship= ruleRelationship EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:298:2: iv_ruleRelationship= ruleRelationship EOF
+            // InternalRails.g:297:2: (iv_ruleRelationship= ruleRelationship EOF )
+            // InternalRails.g:298:2: iv_ruleRelationship= ruleRelationship EOF
             {
              newCompositeNode(grammarAccess.getRelationshipRule()); 
-            pushFollow(FOLLOW_ruleRelationship_in_entryRuleRelationship697);
+            pushFollow(FOLLOW_1);
             iv_ruleRelationship=ruleRelationship();
 
             state._fsp--;
 
              current =iv_ruleRelationship; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRelationship707); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -831,7 +831,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRelationship"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:305:1: ruleRelationship returns [EObject current=null] : (this_HasMany_0= ruleHasMany | this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany | this_BelongsTo_2= ruleBelongsTo ) ;
+    // InternalRails.g:305:1: ruleRelationship returns [EObject current=null] : (this_HasMany_0= ruleHasMany | this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany | this_BelongsTo_2= ruleBelongsTo ) ;
     public final EObject ruleRelationship() throws RecognitionException {
         EObject current = null;
 
@@ -845,10 +845,10 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:308:28: ( (this_HasMany_0= ruleHasMany | this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany | this_BelongsTo_2= ruleBelongsTo ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:309:1: (this_HasMany_0= ruleHasMany | this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany | this_BelongsTo_2= ruleBelongsTo )
+            // InternalRails.g:308:28: ( (this_HasMany_0= ruleHasMany | this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany | this_BelongsTo_2= ruleBelongsTo ) )
+            // InternalRails.g:309:1: (this_HasMany_0= ruleHasMany | this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany | this_BelongsTo_2= ruleBelongsTo )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:309:1: (this_HasMany_0= ruleHasMany | this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany | this_BelongsTo_2= ruleBelongsTo )
+            // InternalRails.g:309:1: (this_HasMany_0= ruleHasMany | this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany | this_BelongsTo_2= ruleBelongsTo )
             int alt10=3;
             switch ( input.LA(1) ) {
             case RULE_HAS_MANY_WORD:
@@ -875,12 +875,12 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             switch (alt10) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:310:5: this_HasMany_0= ruleHasMany
+                    // InternalRails.g:310:5: this_HasMany_0= ruleHasMany
                     {
                      
                             newCompositeNode(grammarAccess.getRelationshipAccess().getHasManyParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleHasMany_in_ruleRelationship754);
+                    pushFollow(FOLLOW_2);
                     this_HasMany_0=ruleHasMany();
 
                     state._fsp--;
@@ -893,12 +893,12 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:320:5: this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany
+                    // InternalRails.g:320:5: this_HasAndBelongsToMany_1= ruleHasAndBelongsToMany
                     {
                      
                             newCompositeNode(grammarAccess.getRelationshipAccess().getHasAndBelongsToManyParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleHasAndBelongsToMany_in_ruleRelationship781);
+                    pushFollow(FOLLOW_2);
                     this_HasAndBelongsToMany_1=ruleHasAndBelongsToMany();
 
                     state._fsp--;
@@ -911,12 +911,12 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:330:5: this_BelongsTo_2= ruleBelongsTo
+                    // InternalRails.g:330:5: this_BelongsTo_2= ruleBelongsTo
                     {
                      
                             newCompositeNode(grammarAccess.getRelationshipAccess().getBelongsToParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleBelongsTo_in_ruleRelationship808);
+                    pushFollow(FOLLOW_2);
                     this_BelongsTo_2=ruleBelongsTo();
 
                     state._fsp--;
@@ -949,7 +949,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHasMany"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:346:1: entryRuleHasMany returns [EObject current=null] : iv_ruleHasMany= ruleHasMany EOF ;
+    // InternalRails.g:346:1: entryRuleHasMany returns [EObject current=null] : iv_ruleHasMany= ruleHasMany EOF ;
     public final EObject entryRuleHasMany() throws RecognitionException {
         EObject current = null;
 
@@ -957,17 +957,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:347:2: (iv_ruleHasMany= ruleHasMany EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:348:2: iv_ruleHasMany= ruleHasMany EOF
+            // InternalRails.g:347:2: (iv_ruleHasMany= ruleHasMany EOF )
+            // InternalRails.g:348:2: iv_ruleHasMany= ruleHasMany EOF
             {
              newCompositeNode(grammarAccess.getHasManyRule()); 
-            pushFollow(FOLLOW_ruleHasMany_in_entryRuleHasMany843);
+            pushFollow(FOLLOW_1);
             iv_ruleHasMany=ruleHasMany();
 
             state._fsp--;
 
              current =iv_ruleHasMany; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHasMany853); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -985,15 +985,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHasMany"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:355:1: ruleHasMany returns [EObject current=null] : (this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )? ) ;
+    // InternalRails.g:355:1: ruleHasMany returns [EObject current=null] : (this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )? ) ;
     public final EObject ruleHasMany() throws RecognitionException {
         EObject current = null;
 
         Token this_HAS_MANY_WORD_0=null;
-        Token otherlv_1=null;
+        Token this_SPACE_1=null;
         Token lv_name_2_1=null;
         Token lv_name_2_2=null;
-        Token otherlv_3=null;
+        Token this_SPACE_3=null;
         Token this_SL_COMMENT_5=null;
         EObject lv_options_4_0 = null;
 
@@ -1001,34 +1001,34 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:358:28: ( (this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )? ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:359:1: (this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )? )
+            // InternalRails.g:358:28: ( (this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )? ) )
+            // InternalRails.g:359:1: (this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )? )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:359:1: (this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )? )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:359:2: this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )?
+            // InternalRails.g:359:1: (this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )? )
+            // InternalRails.g:359:2: this_HAS_MANY_WORD_0= RULE_HAS_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* (this_SL_COMMENT_5= RULE_SL_COMMENT )?
             {
-            this_HAS_MANY_WORD_0=(Token)match(input,RULE_HAS_MANY_WORD,FOLLOW_RULE_HAS_MANY_WORD_in_ruleHasMany889); 
+            this_HAS_MANY_WORD_0=(Token)match(input,RULE_HAS_MANY_WORD,FOLLOW_11); 
              
                 newLeafNode(this_HAS_MANY_WORD_0, grammarAccess.getHasManyAccess().getHAS_MANY_WORDTerminalRuleCall_0()); 
                 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:363:1: (otherlv_1= ' ' )*
+            // InternalRails.g:363:1: (this_SPACE_1= RULE_SPACE )*
             loop11:
             do {
                 int alt11=2;
                 int LA11_0 = input.LA(1);
 
-                if ( (LA11_0==21) ) {
+                if ( (LA11_0==RULE_SPACE) ) {
                     alt11=1;
                 }
 
 
                 switch (alt11) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:363:3: otherlv_1= ' '
+            	    // InternalRails.g:363:2: this_SPACE_1= RULE_SPACE
             	    {
-            	    otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleHasMany901); 
-
-            	        	newLeafNode(otherlv_1, grammarAccess.getHasManyAccess().getSpaceKeyword_1());
+            	    this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_11); 
+            	     
+            	        newLeafNode(this_SPACE_1, grammarAccess.getHasManyAccess().getSPACETerminalRuleCall_1()); 
             	        
 
             	    }
@@ -1039,13 +1039,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:367:3: ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:368:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
+            // InternalRails.g:367:3: ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) )
+            // InternalRails.g:368:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:368:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:369:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
+            // InternalRails.g:368:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
+            // InternalRails.g:369:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:369:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
+            // InternalRails.g:369:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1063,9 +1063,9 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:370:3: lv_name_2_1= RULE_SYMBOL
+                    // InternalRails.g:370:3: lv_name_2_1= RULE_SYMBOL
                     {
-                    lv_name_2_1=(Token)match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_ruleHasMany922); 
+                    lv_name_2_1=(Token)match(input,RULE_SYMBOL,FOLLOW_12); 
 
                     			newLeafNode(lv_name_2_1, grammarAccess.getHasManyAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
                     		
@@ -1077,15 +1077,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"name",
                             		lv_name_2_1, 
-                            		"SYMBOL");
+                            		"co.gruposaberes.model.Rails.SYMBOL");
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:385:8: lv_name_2_2= RULE_STRING
+                    // InternalRails.g:385:8: lv_name_2_2= RULE_STRING
                     {
-                    lv_name_2_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleHasMany942); 
+                    lv_name_2_2=(Token)match(input,RULE_STRING,FOLLOW_12); 
 
                     			newLeafNode(lv_name_2_2, grammarAccess.getHasManyAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
                     		
@@ -1097,7 +1097,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"name",
                             		lv_name_2_2, 
-                            		"STRING");
+                            		"co.gruposaberes.model.Rails.STRING");
                     	    
 
                     }
@@ -1111,24 +1111,24 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:403:2: (otherlv_3= ' ' )*
+            // InternalRails.g:403:2: (this_SPACE_3= RULE_SPACE )*
             loop13:
             do {
                 int alt13=2;
                 int LA13_0 = input.LA(1);
 
-                if ( (LA13_0==21) ) {
+                if ( (LA13_0==RULE_SPACE) ) {
                     alt13=1;
                 }
 
 
                 switch (alt13) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:403:4: otherlv_3= ' '
+            	    // InternalRails.g:403:3: this_SPACE_3= RULE_SPACE
             	    {
-            	    otherlv_3=(Token)match(input,21,FOLLOW_21_in_ruleHasMany963); 
-
-            	        	newLeafNode(otherlv_3, grammarAccess.getHasManyAccess().getSpaceKeyword_3());
+            	    this_SPACE_3=(Token)match(input,RULE_SPACE,FOLLOW_12); 
+            	     
+            	        newLeafNode(this_SPACE_3, grammarAccess.getHasManyAccess().getSPACETerminalRuleCall_3()); 
             	        
 
             	    }
@@ -1139,7 +1139,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:407:3: ( (lv_options_4_0= ruleHashKeyValue ) )*
+            // InternalRails.g:407:3: ( (lv_options_4_0= ruleHashKeyValue ) )*
             loop14:
             do {
                 int alt14=2;
@@ -1152,15 +1152,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt14) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:408:1: (lv_options_4_0= ruleHashKeyValue )
+            	    // InternalRails.g:408:1: (lv_options_4_0= ruleHashKeyValue )
             	    {
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:408:1: (lv_options_4_0= ruleHashKeyValue )
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:409:3: lv_options_4_0= ruleHashKeyValue
+            	    // InternalRails.g:408:1: (lv_options_4_0= ruleHashKeyValue )
+            	    // InternalRails.g:409:3: lv_options_4_0= ruleHashKeyValue
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getHasManyAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleHashKeyValue_in_ruleHasMany986);
+            	    pushFollow(FOLLOW_13);
             	    lv_options_4_0=ruleHashKeyValue();
 
             	    state._fsp--;
@@ -1173,7 +1173,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"options",
             	            		lv_options_4_0, 
-            	            		"HashKeyValue");
+            	            		"co.gruposaberes.model.Rails.HashKeyValue");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -1188,7 +1188,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:425:3: (this_SL_COMMENT_5= RULE_SL_COMMENT )?
+            // InternalRails.g:425:3: (this_SL_COMMENT_5= RULE_SL_COMMENT )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1197,9 +1197,9 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt15) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:425:4: this_SL_COMMENT_5= RULE_SL_COMMENT
+                    // InternalRails.g:425:4: this_SL_COMMENT_5= RULE_SL_COMMENT
                     {
-                    this_SL_COMMENT_5=(Token)match(input,RULE_SL_COMMENT,FOLLOW_RULE_SL_COMMENT_in_ruleHasMany999); 
+                    this_SL_COMMENT_5=(Token)match(input,RULE_SL_COMMENT,FOLLOW_2); 
                      
                         newLeafNode(this_SL_COMMENT_5, grammarAccess.getHasManyAccess().getSL_COMMENTTerminalRuleCall_5()); 
                         
@@ -1230,7 +1230,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHasAndBelongsToMany"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:437:1: entryRuleHasAndBelongsToMany returns [EObject current=null] : iv_ruleHasAndBelongsToMany= ruleHasAndBelongsToMany EOF ;
+    // InternalRails.g:437:1: entryRuleHasAndBelongsToMany returns [EObject current=null] : iv_ruleHasAndBelongsToMany= ruleHasAndBelongsToMany EOF ;
     public final EObject entryRuleHasAndBelongsToMany() throws RecognitionException {
         EObject current = null;
 
@@ -1238,17 +1238,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:438:2: (iv_ruleHasAndBelongsToMany= ruleHasAndBelongsToMany EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:439:2: iv_ruleHasAndBelongsToMany= ruleHasAndBelongsToMany EOF
+            // InternalRails.g:438:2: (iv_ruleHasAndBelongsToMany= ruleHasAndBelongsToMany EOF )
+            // InternalRails.g:439:2: iv_ruleHasAndBelongsToMany= ruleHasAndBelongsToMany EOF
             {
              newCompositeNode(grammarAccess.getHasAndBelongsToManyRule()); 
-            pushFollow(FOLLOW_ruleHasAndBelongsToMany_in_entryRuleHasAndBelongsToMany1036);
+            pushFollow(FOLLOW_1);
             iv_ruleHasAndBelongsToMany=ruleHasAndBelongsToMany();
 
             state._fsp--;
 
              current =iv_ruleHasAndBelongsToMany; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHasAndBelongsToMany1046); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1266,49 +1266,49 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHasAndBelongsToMany"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:446:1: ruleHasAndBelongsToMany returns [EObject current=null] : (this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) ;
+    // InternalRails.g:446:1: ruleHasAndBelongsToMany returns [EObject current=null] : (this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) ;
     public final EObject ruleHasAndBelongsToMany() throws RecognitionException {
         EObject current = null;
 
         Token this_HAS_AND_BELONGS_TO_MANY_WORD_0=null;
-        Token otherlv_1=null;
+        Token this_SPACE_1=null;
         Token lv_name_2_1=null;
         Token lv_name_2_2=null;
-        Token otherlv_3=null;
+        Token this_SPACE_3=null;
         EObject lv_options_4_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:449:28: ( (this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:450:1: (this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
+            // InternalRails.g:449:28: ( (this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) )
+            // InternalRails.g:450:1: (this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:450:1: (this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:450:2: this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )*
+            // InternalRails.g:450:1: (this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
+            // InternalRails.g:450:2: this_HAS_AND_BELONGS_TO_MANY_WORD_0= RULE_HAS_AND_BELONGS_TO_MANY_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )*
             {
-            this_HAS_AND_BELONGS_TO_MANY_WORD_0=(Token)match(input,RULE_HAS_AND_BELONGS_TO_MANY_WORD,FOLLOW_RULE_HAS_AND_BELONGS_TO_MANY_WORD_in_ruleHasAndBelongsToMany1082); 
+            this_HAS_AND_BELONGS_TO_MANY_WORD_0=(Token)match(input,RULE_HAS_AND_BELONGS_TO_MANY_WORD,FOLLOW_11); 
              
                 newLeafNode(this_HAS_AND_BELONGS_TO_MANY_WORD_0, grammarAccess.getHasAndBelongsToManyAccess().getHAS_AND_BELONGS_TO_MANY_WORDTerminalRuleCall_0()); 
                 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:454:1: (otherlv_1= ' ' )*
+            // InternalRails.g:454:1: (this_SPACE_1= RULE_SPACE )*
             loop16:
             do {
                 int alt16=2;
                 int LA16_0 = input.LA(1);
 
-                if ( (LA16_0==21) ) {
+                if ( (LA16_0==RULE_SPACE) ) {
                     alt16=1;
                 }
 
 
                 switch (alt16) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:454:3: otherlv_1= ' '
+            	    // InternalRails.g:454:2: this_SPACE_1= RULE_SPACE
             	    {
-            	    otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleHasAndBelongsToMany1094); 
-
-            	        	newLeafNode(otherlv_1, grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_1());
+            	    this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_11); 
+            	     
+            	        newLeafNode(this_SPACE_1, grammarAccess.getHasAndBelongsToManyAccess().getSPACETerminalRuleCall_1()); 
             	        
 
             	    }
@@ -1319,13 +1319,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:458:3: ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:459:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
+            // InternalRails.g:458:3: ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) )
+            // InternalRails.g:459:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:459:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:460:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
+            // InternalRails.g:459:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
+            // InternalRails.g:460:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:460:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
+            // InternalRails.g:460:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1343,9 +1343,9 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:461:3: lv_name_2_1= RULE_SYMBOL
+                    // InternalRails.g:461:3: lv_name_2_1= RULE_SYMBOL
                     {
-                    lv_name_2_1=(Token)match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_ruleHasAndBelongsToMany1115); 
+                    lv_name_2_1=(Token)match(input,RULE_SYMBOL,FOLLOW_14); 
 
                     			newLeafNode(lv_name_2_1, grammarAccess.getHasAndBelongsToManyAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
                     		
@@ -1357,15 +1357,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"name",
                             		lv_name_2_1, 
-                            		"SYMBOL");
+                            		"co.gruposaberes.model.Rails.SYMBOL");
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:476:8: lv_name_2_2= RULE_STRING
+                    // InternalRails.g:476:8: lv_name_2_2= RULE_STRING
                     {
-                    lv_name_2_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleHasAndBelongsToMany1135); 
+                    lv_name_2_2=(Token)match(input,RULE_STRING,FOLLOW_14); 
 
                     			newLeafNode(lv_name_2_2, grammarAccess.getHasAndBelongsToManyAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
                     		
@@ -1377,7 +1377,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"name",
                             		lv_name_2_2, 
-                            		"STRING");
+                            		"co.gruposaberes.model.Rails.STRING");
                     	    
 
                     }
@@ -1391,24 +1391,24 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:494:2: (otherlv_3= ' ' )*
+            // InternalRails.g:494:2: (this_SPACE_3= RULE_SPACE )*
             loop18:
             do {
                 int alt18=2;
                 int LA18_0 = input.LA(1);
 
-                if ( (LA18_0==21) ) {
+                if ( (LA18_0==RULE_SPACE) ) {
                     alt18=1;
                 }
 
 
                 switch (alt18) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:494:4: otherlv_3= ' '
+            	    // InternalRails.g:494:3: this_SPACE_3= RULE_SPACE
             	    {
-            	    otherlv_3=(Token)match(input,21,FOLLOW_21_in_ruleHasAndBelongsToMany1156); 
-
-            	        	newLeafNode(otherlv_3, grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_3());
+            	    this_SPACE_3=(Token)match(input,RULE_SPACE,FOLLOW_14); 
+            	     
+            	        newLeafNode(this_SPACE_3, grammarAccess.getHasAndBelongsToManyAccess().getSPACETerminalRuleCall_3()); 
             	        
 
             	    }
@@ -1419,7 +1419,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:498:3: ( (lv_options_4_0= ruleHashKeyValue ) )*
+            // InternalRails.g:498:3: ( (lv_options_4_0= ruleHashKeyValue ) )*
             loop19:
             do {
                 int alt19=2;
@@ -1432,15 +1432,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt19) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:499:1: (lv_options_4_0= ruleHashKeyValue )
+            	    // InternalRails.g:499:1: (lv_options_4_0= ruleHashKeyValue )
             	    {
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:499:1: (lv_options_4_0= ruleHashKeyValue )
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:500:3: lv_options_4_0= ruleHashKeyValue
+            	    // InternalRails.g:499:1: (lv_options_4_0= ruleHashKeyValue )
+            	    // InternalRails.g:500:3: lv_options_4_0= ruleHashKeyValue
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getHasAndBelongsToManyAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleHashKeyValue_in_ruleHasAndBelongsToMany1179);
+            	    pushFollow(FOLLOW_15);
             	    lv_options_4_0=ruleHashKeyValue();
 
             	    state._fsp--;
@@ -1453,7 +1453,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"options",
             	            		lv_options_4_0, 
-            	            		"HashKeyValue");
+            	            		"co.gruposaberes.model.Rails.HashKeyValue");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -1489,7 +1489,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBelongsTo"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:524:1: entryRuleBelongsTo returns [EObject current=null] : iv_ruleBelongsTo= ruleBelongsTo EOF ;
+    // InternalRails.g:524:1: entryRuleBelongsTo returns [EObject current=null] : iv_ruleBelongsTo= ruleBelongsTo EOF ;
     public final EObject entryRuleBelongsTo() throws RecognitionException {
         EObject current = null;
 
@@ -1497,17 +1497,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:525:2: (iv_ruleBelongsTo= ruleBelongsTo EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:526:2: iv_ruleBelongsTo= ruleBelongsTo EOF
+            // InternalRails.g:525:2: (iv_ruleBelongsTo= ruleBelongsTo EOF )
+            // InternalRails.g:526:2: iv_ruleBelongsTo= ruleBelongsTo EOF
             {
              newCompositeNode(grammarAccess.getBelongsToRule()); 
-            pushFollow(FOLLOW_ruleBelongsTo_in_entryRuleBelongsTo1216);
+            pushFollow(FOLLOW_1);
             iv_ruleBelongsTo=ruleBelongsTo();
 
             state._fsp--;
 
              current =iv_ruleBelongsTo; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBelongsTo1226); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1525,49 +1525,49 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBelongsTo"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:533:1: ruleBelongsTo returns [EObject current=null] : (this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) ;
+    // InternalRails.g:533:1: ruleBelongsTo returns [EObject current=null] : (this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) ;
     public final EObject ruleBelongsTo() throws RecognitionException {
         EObject current = null;
 
         Token this_BELONGS_TO_WORD_0=null;
-        Token otherlv_1=null;
+        Token this_SPACE_1=null;
         Token lv_name_2_1=null;
         Token lv_name_2_2=null;
-        Token otherlv_3=null;
+        Token this_SPACE_3=null;
         EObject lv_options_4_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:536:28: ( (this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:537:1: (this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
+            // InternalRails.g:536:28: ( (this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) )
+            // InternalRails.g:537:1: (this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:537:1: (this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:537:2: this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (otherlv_1= ' ' )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (otherlv_3= ' ' )* ( (lv_options_4_0= ruleHashKeyValue ) )*
+            // InternalRails.g:537:1: (this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
+            // InternalRails.g:537:2: this_BELONGS_TO_WORD_0= RULE_BELONGS_TO_WORD (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )*
             {
-            this_BELONGS_TO_WORD_0=(Token)match(input,RULE_BELONGS_TO_WORD,FOLLOW_RULE_BELONGS_TO_WORD_in_ruleBelongsTo1262); 
+            this_BELONGS_TO_WORD_0=(Token)match(input,RULE_BELONGS_TO_WORD,FOLLOW_11); 
              
                 newLeafNode(this_BELONGS_TO_WORD_0, grammarAccess.getBelongsToAccess().getBELONGS_TO_WORDTerminalRuleCall_0()); 
                 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:541:1: (otherlv_1= ' ' )*
+            // InternalRails.g:541:1: (this_SPACE_1= RULE_SPACE )*
             loop20:
             do {
                 int alt20=2;
                 int LA20_0 = input.LA(1);
 
-                if ( (LA20_0==21) ) {
+                if ( (LA20_0==RULE_SPACE) ) {
                     alt20=1;
                 }
 
 
                 switch (alt20) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:541:3: otherlv_1= ' '
+            	    // InternalRails.g:541:2: this_SPACE_1= RULE_SPACE
             	    {
-            	    otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleBelongsTo1274); 
-
-            	        	newLeafNode(otherlv_1, grammarAccess.getBelongsToAccess().getSpaceKeyword_1());
+            	    this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_11); 
+            	     
+            	        newLeafNode(this_SPACE_1, grammarAccess.getBelongsToAccess().getSPACETerminalRuleCall_1()); 
             	        
 
             	    }
@@ -1578,13 +1578,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:545:3: ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:546:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
+            // InternalRails.g:545:3: ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) )
+            // InternalRails.g:546:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:546:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:547:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
+            // InternalRails.g:546:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
+            // InternalRails.g:547:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:547:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
+            // InternalRails.g:547:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -1602,9 +1602,9 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt21) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:548:3: lv_name_2_1= RULE_SYMBOL
+                    // InternalRails.g:548:3: lv_name_2_1= RULE_SYMBOL
                     {
-                    lv_name_2_1=(Token)match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_ruleBelongsTo1295); 
+                    lv_name_2_1=(Token)match(input,RULE_SYMBOL,FOLLOW_14); 
 
                     			newLeafNode(lv_name_2_1, grammarAccess.getBelongsToAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
                     		
@@ -1616,15 +1616,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"name",
                             		lv_name_2_1, 
-                            		"SYMBOL");
+                            		"co.gruposaberes.model.Rails.SYMBOL");
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:563:8: lv_name_2_2= RULE_STRING
+                    // InternalRails.g:563:8: lv_name_2_2= RULE_STRING
                     {
-                    lv_name_2_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBelongsTo1315); 
+                    lv_name_2_2=(Token)match(input,RULE_STRING,FOLLOW_14); 
 
                     			newLeafNode(lv_name_2_2, grammarAccess.getBelongsToAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
                     		
@@ -1636,7 +1636,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"name",
                             		lv_name_2_2, 
-                            		"STRING");
+                            		"co.gruposaberes.model.Rails.STRING");
                     	    
 
                     }
@@ -1650,24 +1650,24 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:581:2: (otherlv_3= ' ' )*
+            // InternalRails.g:581:2: (this_SPACE_3= RULE_SPACE )*
             loop22:
             do {
                 int alt22=2;
                 int LA22_0 = input.LA(1);
 
-                if ( (LA22_0==21) ) {
+                if ( (LA22_0==RULE_SPACE) ) {
                     alt22=1;
                 }
 
 
                 switch (alt22) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:581:4: otherlv_3= ' '
+            	    // InternalRails.g:581:3: this_SPACE_3= RULE_SPACE
             	    {
-            	    otherlv_3=(Token)match(input,21,FOLLOW_21_in_ruleBelongsTo1336); 
-
-            	        	newLeafNode(otherlv_3, grammarAccess.getBelongsToAccess().getSpaceKeyword_3());
+            	    this_SPACE_3=(Token)match(input,RULE_SPACE,FOLLOW_14); 
+            	     
+            	        newLeafNode(this_SPACE_3, grammarAccess.getBelongsToAccess().getSPACETerminalRuleCall_3()); 
             	        
 
             	    }
@@ -1678,7 +1678,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:585:3: ( (lv_options_4_0= ruleHashKeyValue ) )*
+            // InternalRails.g:585:3: ( (lv_options_4_0= ruleHashKeyValue ) )*
             loop23:
             do {
                 int alt23=2;
@@ -1691,15 +1691,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt23) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:586:1: (lv_options_4_0= ruleHashKeyValue )
+            	    // InternalRails.g:586:1: (lv_options_4_0= ruleHashKeyValue )
             	    {
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:586:1: (lv_options_4_0= ruleHashKeyValue )
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:587:3: lv_options_4_0= ruleHashKeyValue
+            	    // InternalRails.g:586:1: (lv_options_4_0= ruleHashKeyValue )
+            	    // InternalRails.g:587:3: lv_options_4_0= ruleHashKeyValue
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBelongsToAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleHashKeyValue_in_ruleBelongsTo1359);
+            	    pushFollow(FOLLOW_15);
             	    lv_options_4_0=ruleHashKeyValue();
 
             	    state._fsp--;
@@ -1712,7 +1712,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"options",
             	            		lv_options_4_0, 
-            	            		"HashKeyValue");
+            	            		"co.gruposaberes.model.Rails.HashKeyValue");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -1748,7 +1748,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHashKeyValue"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:611:1: entryRuleHashKeyValue returns [EObject current=null] : iv_ruleHashKeyValue= ruleHashKeyValue EOF ;
+    // InternalRails.g:611:1: entryRuleHashKeyValue returns [EObject current=null] : iv_ruleHashKeyValue= ruleHashKeyValue EOF ;
     public final EObject entryRuleHashKeyValue() throws RecognitionException {
         EObject current = null;
 
@@ -1756,17 +1756,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:612:2: (iv_ruleHashKeyValue= ruleHashKeyValue EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:613:2: iv_ruleHashKeyValue= ruleHashKeyValue EOF
+            // InternalRails.g:612:2: (iv_ruleHashKeyValue= ruleHashKeyValue EOF )
+            // InternalRails.g:613:2: iv_ruleHashKeyValue= ruleHashKeyValue EOF
             {
              newCompositeNode(grammarAccess.getHashKeyValueRule()); 
-            pushFollow(FOLLOW_ruleHashKeyValue_in_entryRuleHashKeyValue1396);
+            pushFollow(FOLLOW_1);
             iv_ruleHashKeyValue=ruleHashKeyValue();
 
             state._fsp--;
 
              current =iv_ruleHashKeyValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHashKeyValue1406); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1784,57 +1784,58 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHashKeyValue"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:620:1: ruleHashKeyValue returns [EObject current=null] : (otherlv_0= ',' (otherlv_1= ' ' )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (otherlv_5= ' ' )* otherlv_6= '=>' ) ) (otherlv_7= ' ' )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) ) ) ;
+    // InternalRails.g:620:1: ruleHashKeyValue returns [EObject current=null] : (otherlv_0= ',' (this_SPACE_1= RULE_SPACE )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (this_SPACE_5= RULE_SPACE )* otherlv_6= '=>' ) ) (this_SPACE_7= RULE_SPACE )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) ) (this_SPACE_9= RULE_SPACE )* ) ;
     public final EObject ruleHashKeyValue() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token otherlv_1=null;
+        Token this_SPACE_1=null;
         Token lv_key_2_0=null;
         Token otherlv_3=null;
         Token lv_key_4_1=null;
         Token lv_key_4_2=null;
-        Token otherlv_5=null;
+        Token this_SPACE_5=null;
         Token otherlv_6=null;
-        Token otherlv_7=null;
+        Token this_SPACE_7=null;
         Token lv_value_8_1=null;
         Token lv_value_8_2=null;
         Token lv_value_8_3=null;
         Token lv_value_8_4=null;
+        Token this_SPACE_9=null;
         AntlrDatatypeRuleToken lv_value_8_5 = null;
 
 
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:623:28: ( (otherlv_0= ',' (otherlv_1= ' ' )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (otherlv_5= ' ' )* otherlv_6= '=>' ) ) (otherlv_7= ' ' )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) ) ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:624:1: (otherlv_0= ',' (otherlv_1= ' ' )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (otherlv_5= ' ' )* otherlv_6= '=>' ) ) (otherlv_7= ' ' )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) ) )
+            // InternalRails.g:623:28: ( (otherlv_0= ',' (this_SPACE_1= RULE_SPACE )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (this_SPACE_5= RULE_SPACE )* otherlv_6= '=>' ) ) (this_SPACE_7= RULE_SPACE )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) ) (this_SPACE_9= RULE_SPACE )* ) )
+            // InternalRails.g:624:1: (otherlv_0= ',' (this_SPACE_1= RULE_SPACE )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (this_SPACE_5= RULE_SPACE )* otherlv_6= '=>' ) ) (this_SPACE_7= RULE_SPACE )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) ) (this_SPACE_9= RULE_SPACE )* )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:624:1: (otherlv_0= ',' (otherlv_1= ' ' )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (otherlv_5= ' ' )* otherlv_6= '=>' ) ) (otherlv_7= ' ' )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:624:3: otherlv_0= ',' (otherlv_1= ' ' )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (otherlv_5= ' ' )* otherlv_6= '=>' ) ) (otherlv_7= ' ' )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) )
+            // InternalRails.g:624:1: (otherlv_0= ',' (this_SPACE_1= RULE_SPACE )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (this_SPACE_5= RULE_SPACE )* otherlv_6= '=>' ) ) (this_SPACE_7= RULE_SPACE )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) ) (this_SPACE_9= RULE_SPACE )* )
+            // InternalRails.g:624:3: otherlv_0= ',' (this_SPACE_1= RULE_SPACE )* ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (this_SPACE_5= RULE_SPACE )* otherlv_6= '=>' ) ) (this_SPACE_7= RULE_SPACE )* ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) ) (this_SPACE_9= RULE_SPACE )*
             {
-            otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleHashKeyValue1443); 
+            otherlv_0=(Token)match(input,25,FOLLOW_16); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getHashKeyValueAccess().getCommaKeyword_0());
                 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:628:1: (otherlv_1= ' ' )*
+            // InternalRails.g:628:1: (this_SPACE_1= RULE_SPACE )*
             loop24:
             do {
                 int alt24=2;
                 int LA24_0 = input.LA(1);
 
-                if ( (LA24_0==21) ) {
+                if ( (LA24_0==RULE_SPACE) ) {
                     alt24=1;
                 }
 
 
                 switch (alt24) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:628:3: otherlv_1= ' '
+            	    // InternalRails.g:628:2: this_SPACE_1= RULE_SPACE
             	    {
-            	    otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleHashKeyValue1456); 
-
-            	        	newLeafNode(otherlv_1, grammarAccess.getHashKeyValueAccess().getSpaceKeyword_1());
+            	    this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_16); 
+            	     
+            	        newLeafNode(this_SPACE_1, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_1()); 
             	        
 
             	    }
@@ -1845,7 +1846,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:632:3: ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (otherlv_5= ' ' )* otherlv_6= '=>' ) )
+            // InternalRails.g:632:3: ( ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' ) | ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (this_SPACE_5= RULE_SPACE )* otherlv_6= '=>' ) )
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -1863,18 +1864,18 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:632:4: ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' )
+                    // InternalRails.g:632:4: ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' )
                     {
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:632:4: ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' )
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:632:5: ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':'
+                    // InternalRails.g:632:4: ( ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':' )
+                    // InternalRails.g:632:5: ( (lv_key_2_0= RULE_ID ) ) otherlv_3= ':'
                     {
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:632:5: ( (lv_key_2_0= RULE_ID ) )
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:633:1: (lv_key_2_0= RULE_ID )
+                    // InternalRails.g:632:5: ( (lv_key_2_0= RULE_ID ) )
+                    // InternalRails.g:633:1: (lv_key_2_0= RULE_ID )
                     {
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:633:1: (lv_key_2_0= RULE_ID )
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:634:3: lv_key_2_0= RULE_ID
+                    // InternalRails.g:633:1: (lv_key_2_0= RULE_ID )
+                    // InternalRails.g:634:3: lv_key_2_0= RULE_ID
                     {
-                    lv_key_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleHashKeyValue1477); 
+                    lv_key_2_0=(Token)match(input,RULE_ID,FOLLOW_17); 
 
                     			newLeafNode(lv_key_2_0, grammarAccess.getHashKeyValueAccess().getKeyIDTerminalRuleCall_2_0_0_0()); 
                     		
@@ -1886,7 +1887,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"key",
                             		lv_key_2_0, 
-                            		"ID");
+                            		"co.gruposaberes.model.Rails.ID");
                     	    
 
                     }
@@ -1894,7 +1895,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,26,FOLLOW_26_in_ruleHashKeyValue1494); 
+                    otherlv_3=(Token)match(input,26,FOLLOW_18); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getHashKeyValueAccess().getColonKeyword_2_0_1());
                         
@@ -1905,18 +1906,18 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:655:6: ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (otherlv_5= ' ' )* otherlv_6= '=>' )
+                    // InternalRails.g:655:6: ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (this_SPACE_5= RULE_SPACE )* otherlv_6= '=>' )
                     {
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:655:6: ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (otherlv_5= ' ' )* otherlv_6= '=>' )
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:655:7: ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (otherlv_5= ' ' )* otherlv_6= '=>'
+                    // InternalRails.g:655:6: ( ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (this_SPACE_5= RULE_SPACE )* otherlv_6= '=>' )
+                    // InternalRails.g:655:7: ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) ) (this_SPACE_5= RULE_SPACE )* otherlv_6= '=>'
                     {
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:655:7: ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) )
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:656:1: ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) )
+                    // InternalRails.g:655:7: ( ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) ) )
+                    // InternalRails.g:656:1: ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) )
                     {
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:656:1: ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) )
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:657:1: (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING )
+                    // InternalRails.g:656:1: ( (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING ) )
+                    // InternalRails.g:657:1: (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING )
                     {
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:657:1: (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING )
+                    // InternalRails.g:657:1: (lv_key_4_1= RULE_SYMBOL | lv_key_4_2= RULE_STRING )
                     int alt25=2;
                     int LA25_0 = input.LA(1);
 
@@ -1934,9 +1935,9 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt25) {
                         case 1 :
-                            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:658:3: lv_key_4_1= RULE_SYMBOL
+                            // InternalRails.g:658:3: lv_key_4_1= RULE_SYMBOL
                             {
-                            lv_key_4_1=(Token)match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_ruleHashKeyValue1521); 
+                            lv_key_4_1=(Token)match(input,RULE_SYMBOL,FOLLOW_19); 
 
                             			newLeafNode(lv_key_4_1, grammarAccess.getHashKeyValueAccess().getKeySYMBOLTerminalRuleCall_2_1_0_0_0()); 
                             		
@@ -1948,15 +1949,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                                    			current, 
                                    			"key",
                                     		lv_key_4_1, 
-                                    		"SYMBOL");
+                                    		"co.gruposaberes.model.Rails.SYMBOL");
                             	    
 
                             }
                             break;
                         case 2 :
-                            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:673:8: lv_key_4_2= RULE_STRING
+                            // InternalRails.g:673:8: lv_key_4_2= RULE_STRING
                             {
-                            lv_key_4_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleHashKeyValue1541); 
+                            lv_key_4_2=(Token)match(input,RULE_STRING,FOLLOW_19); 
 
                             			newLeafNode(lv_key_4_2, grammarAccess.getHashKeyValueAccess().getKeySTRINGTerminalRuleCall_2_1_0_0_1()); 
                             		
@@ -1968,7 +1969,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                                    			current, 
                                    			"key",
                                     		lv_key_4_2, 
-                                    		"STRING");
+                                    		"co.gruposaberes.model.Rails.STRING");
                             	    
 
                             }
@@ -1982,24 +1983,24 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:691:2: (otherlv_5= ' ' )*
+                    // InternalRails.g:691:2: (this_SPACE_5= RULE_SPACE )*
                     loop26:
                     do {
                         int alt26=2;
                         int LA26_0 = input.LA(1);
 
-                        if ( (LA26_0==21) ) {
+                        if ( (LA26_0==RULE_SPACE) ) {
                             alt26=1;
                         }
 
 
                         switch (alt26) {
                     	case 1 :
-                    	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:691:4: otherlv_5= ' '
+                    	    // InternalRails.g:691:3: this_SPACE_5= RULE_SPACE
                     	    {
-                    	    otherlv_5=(Token)match(input,21,FOLLOW_21_in_ruleHashKeyValue1562); 
-
-                    	        	newLeafNode(otherlv_5, grammarAccess.getHashKeyValueAccess().getSpaceKeyword_2_1_1());
+                    	    this_SPACE_5=(Token)match(input,RULE_SPACE,FOLLOW_19); 
+                    	     
+                    	        newLeafNode(this_SPACE_5, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_2_1_1()); 
                     	        
 
                     	    }
@@ -2010,7 +2011,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleHashKeyValue1576); 
+                    otherlv_6=(Token)match(input,27,FOLLOW_18); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getHashKeyValueAccess().getEqualsSignGreaterThanSignKeyword_2_1_2());
                         
@@ -2023,24 +2024,24 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:699:3: (otherlv_7= ' ' )*
+            // InternalRails.g:699:3: (this_SPACE_7= RULE_SPACE )*
             loop28:
             do {
                 int alt28=2;
                 int LA28_0 = input.LA(1);
 
-                if ( (LA28_0==21) ) {
+                if ( (LA28_0==RULE_SPACE) ) {
                     alt28=1;
                 }
 
 
                 switch (alt28) {
             	case 1 :
-            	    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:699:5: otherlv_7= ' '
+            	    // InternalRails.g:699:4: this_SPACE_7= RULE_SPACE
             	    {
-            	    otherlv_7=(Token)match(input,21,FOLLOW_21_in_ruleHashKeyValue1591); 
-
-            	        	newLeafNode(otherlv_7, grammarAccess.getHashKeyValueAccess().getSpaceKeyword_3());
+            	    this_SPACE_7=(Token)match(input,RULE_SPACE,FOLLOW_18); 
+            	     
+            	        newLeafNode(this_SPACE_7, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_3()); 
             	        
 
             	    }
@@ -2051,13 +2052,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:703:3: ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:704:1: ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) )
+            // InternalRails.g:703:3: ( ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) ) )
+            // InternalRails.g:704:1: ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:704:1: ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:705:1: (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall )
+            // InternalRails.g:704:1: ( (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall ) )
+            // InternalRails.g:705:1: (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:705:1: (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall )
+            // InternalRails.g:705:1: (lv_value_8_1= RULE_SYMBOL | lv_value_8_2= RULE_STRING | lv_value_8_3= RULE_BRACKET_BLOCK | lv_value_8_4= RULE_ARRAY_BLOCK | lv_value_8_5= ruleMethodChainCall )
             int alt29=5;
             switch ( input.LA(1) ) {
             case RULE_SYMBOL:
@@ -2094,9 +2095,9 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             switch (alt29) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:706:3: lv_value_8_1= RULE_SYMBOL
+                    // InternalRails.g:706:3: lv_value_8_1= RULE_SYMBOL
                     {
-                    lv_value_8_1=(Token)match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_ruleHashKeyValue1612); 
+                    lv_value_8_1=(Token)match(input,RULE_SYMBOL,FOLLOW_20); 
 
                     			newLeafNode(lv_value_8_1, grammarAccess.getHashKeyValueAccess().getValueSYMBOLTerminalRuleCall_4_0_0()); 
                     		
@@ -2108,15 +2109,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"value",
                             		lv_value_8_1, 
-                            		"SYMBOL");
+                            		"co.gruposaberes.model.Rails.SYMBOL");
                     	    
 
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:721:8: lv_value_8_2= RULE_STRING
+                    // InternalRails.g:721:8: lv_value_8_2= RULE_STRING
                     {
-                    lv_value_8_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleHashKeyValue1632); 
+                    lv_value_8_2=(Token)match(input,RULE_STRING,FOLLOW_20); 
 
                     			newLeafNode(lv_value_8_2, grammarAccess.getHashKeyValueAccess().getValueSTRINGTerminalRuleCall_4_0_1()); 
                     		
@@ -2128,15 +2129,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"value",
                             		lv_value_8_2, 
-                            		"STRING");
+                            		"co.gruposaberes.model.Rails.STRING");
                     	    
 
                     }
                     break;
                 case 3 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:736:8: lv_value_8_3= RULE_BRACKET_BLOCK
+                    // InternalRails.g:736:8: lv_value_8_3= RULE_BRACKET_BLOCK
                     {
-                    lv_value_8_3=(Token)match(input,RULE_BRACKET_BLOCK,FOLLOW_RULE_BRACKET_BLOCK_in_ruleHashKeyValue1652); 
+                    lv_value_8_3=(Token)match(input,RULE_BRACKET_BLOCK,FOLLOW_20); 
 
                     			newLeafNode(lv_value_8_3, grammarAccess.getHashKeyValueAccess().getValueBRACKET_BLOCKTerminalRuleCall_4_0_2()); 
                     		
@@ -2148,15 +2149,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"value",
                             		lv_value_8_3, 
-                            		"BRACKET_BLOCK");
+                            		"co.gruposaberes.model.Rails.BRACKET_BLOCK");
                     	    
 
                     }
                     break;
                 case 4 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:751:8: lv_value_8_4= RULE_ARRAY_BLOCK
+                    // InternalRails.g:751:8: lv_value_8_4= RULE_ARRAY_BLOCK
                     {
-                    lv_value_8_4=(Token)match(input,RULE_ARRAY_BLOCK,FOLLOW_RULE_ARRAY_BLOCK_in_ruleHashKeyValue1672); 
+                    lv_value_8_4=(Token)match(input,RULE_ARRAY_BLOCK,FOLLOW_20); 
 
                     			newLeafNode(lv_value_8_4, grammarAccess.getHashKeyValueAccess().getValueARRAY_BLOCKTerminalRuleCall_4_0_3()); 
                     		
@@ -2168,18 +2169,18 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"value",
                             		lv_value_8_4, 
-                            		"ARRAY_BLOCK");
+                            		"co.gruposaberes.model.Rails.ARRAY_BLOCK");
                     	    
 
                     }
                     break;
                 case 5 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:766:8: lv_value_8_5= ruleMethodChainCall
+                    // InternalRails.g:766:8: lv_value_8_5= ruleMethodChainCall
                     {
                      
                     	        newCompositeNode(grammarAccess.getHashKeyValueAccess().getValueMethodChainCallParserRuleCall_4_0_4()); 
                     	    
-                    pushFollow(FOLLOW_ruleMethodChainCall_in_ruleHashKeyValue1696);
+                    pushFollow(FOLLOW_20);
                     lv_value_8_5=ruleMethodChainCall();
 
                     state._fsp--;
@@ -2192,7 +2193,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"value",
                             		lv_value_8_5, 
-                            		"MethodChainCall");
+                            		"co.gruposaberes.model.Rails.MethodChainCall");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -2206,6 +2207,34 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
             }
+
+            // InternalRails.g:784:2: (this_SPACE_9= RULE_SPACE )*
+            loop30:
+            do {
+                int alt30=2;
+                int LA30_0 = input.LA(1);
+
+                if ( (LA30_0==RULE_SPACE) ) {
+                    alt30=1;
+                }
+
+
+                switch (alt30) {
+            	case 1 :
+            	    // InternalRails.g:784:3: this_SPACE_9= RULE_SPACE
+            	    {
+            	    this_SPACE_9=(Token)match(input,RULE_SPACE,FOLLOW_20); 
+            	     
+            	        newLeafNode(this_SPACE_9, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_5()); 
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop30;
+                }
+            } while (true);
 
 
             }
@@ -2228,7 +2257,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMethod"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:792:1: entryRuleMethod returns [EObject current=null] : iv_ruleMethod= ruleMethod EOF ;
+    // InternalRails.g:796:1: entryRuleMethod returns [EObject current=null] : iv_ruleMethod= ruleMethod EOF ;
     public final EObject entryRuleMethod() throws RecognitionException {
         EObject current = null;
 
@@ -2236,17 +2265,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:793:2: (iv_ruleMethod= ruleMethod EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:794:2: iv_ruleMethod= ruleMethod EOF
+            // InternalRails.g:797:2: (iv_ruleMethod= ruleMethod EOF )
+            // InternalRails.g:798:2: iv_ruleMethod= ruleMethod EOF
             {
              newCompositeNode(grammarAccess.getMethodRule()); 
-            pushFollow(FOLLOW_ruleMethod_in_entryRuleMethod1735);
+            pushFollow(FOLLOW_1);
             iv_ruleMethod=ruleMethod();
 
             state._fsp--;
 
              current =iv_ruleMethod; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMethod1745); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2264,7 +2293,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethod"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:801:1: ruleMethod returns [EObject current=null] : (this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) ) ) ;
+    // InternalRails.g:805:1: ruleMethod returns [EObject current=null] : (this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) ) ) ;
     public final EObject ruleMethod() throws RecognitionException {
         EObject current = null;
 
@@ -2275,26 +2304,26 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:804:28: ( (this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) ) ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:805:1: (this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) ) )
+            // InternalRails.g:808:28: ( (this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) ) ) )
+            // InternalRails.g:809:1: (this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) ) )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:805:1: (this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:805:2: this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) )
+            // InternalRails.g:809:1: (this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) ) )
+            // InternalRails.g:809:2: this_DEF_WORD_0= RULE_DEF_WORD ( (lv_name_1_0= ruleMethodName ) )
             {
-            this_DEF_WORD_0=(Token)match(input,RULE_DEF_WORD,FOLLOW_RULE_DEF_WORD_in_ruleMethod1781); 
+            this_DEF_WORD_0=(Token)match(input,RULE_DEF_WORD,FOLLOW_9); 
              
                 newLeafNode(this_DEF_WORD_0, grammarAccess.getMethodAccess().getDEF_WORDTerminalRuleCall_0()); 
                 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:809:1: ( (lv_name_1_0= ruleMethodName ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:810:1: (lv_name_1_0= ruleMethodName )
+            // InternalRails.g:813:1: ( (lv_name_1_0= ruleMethodName ) )
+            // InternalRails.g:814:1: (lv_name_1_0= ruleMethodName )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:810:1: (lv_name_1_0= ruleMethodName )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:811:3: lv_name_1_0= ruleMethodName
+            // InternalRails.g:814:1: (lv_name_1_0= ruleMethodName )
+            // InternalRails.g:815:3: lv_name_1_0= ruleMethodName
             {
              
             	        newCompositeNode(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleMethodName_in_ruleMethod1801);
+            pushFollow(FOLLOW_2);
             lv_name_1_0=ruleMethodName();
 
             state._fsp--;
@@ -2307,7 +2336,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"MethodName");
+                    		"co.gruposaberes.model.Rails.MethodName");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -2337,7 +2366,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMethodName"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:835:1: entryRuleMethodName returns [String current=null] : iv_ruleMethodName= ruleMethodName EOF ;
+    // InternalRails.g:839:1: entryRuleMethodName returns [String current=null] : iv_ruleMethodName= ruleMethodName EOF ;
     public final String entryRuleMethodName() throws RecognitionException {
         String current = null;
 
@@ -2345,17 +2374,17 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:836:2: (iv_ruleMethodName= ruleMethodName EOF )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:837:2: iv_ruleMethodName= ruleMethodName EOF
+            // InternalRails.g:840:2: (iv_ruleMethodName= ruleMethodName EOF )
+            // InternalRails.g:841:2: iv_ruleMethodName= ruleMethodName EOF
             {
              newCompositeNode(grammarAccess.getMethodNameRule()); 
-            pushFollow(FOLLOW_ruleMethodName_in_entryRuleMethodName1838);
+            pushFollow(FOLLOW_1);
             iv_ruleMethodName=ruleMethodName();
 
             state._fsp--;
 
              current =iv_ruleMethodName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMethodName1849); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2373,7 +2402,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethodName"
-    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:844:1: ruleMethodName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '?' | kw= '=' )? ) ;
+    // InternalRails.g:848:1: ruleMethodName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '?' | kw= '=' )? ) ;
     public final AntlrDatatypeRuleToken ruleMethodName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2383,34 +2412,34 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:847:28: ( (this_ID_0= RULE_ID (kw= '?' | kw= '=' )? ) )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:848:1: (this_ID_0= RULE_ID (kw= '?' | kw= '=' )? )
+            // InternalRails.g:851:28: ( (this_ID_0= RULE_ID (kw= '?' | kw= '=' )? ) )
+            // InternalRails.g:852:1: (this_ID_0= RULE_ID (kw= '?' | kw= '=' )? )
             {
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:848:1: (this_ID_0= RULE_ID (kw= '?' | kw= '=' )? )
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:848:6: this_ID_0= RULE_ID (kw= '?' | kw= '=' )?
+            // InternalRails.g:852:1: (this_ID_0= RULE_ID (kw= '?' | kw= '=' )? )
+            // InternalRails.g:852:6: this_ID_0= RULE_ID (kw= '?' | kw= '=' )?
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMethodName1889); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_21); 
 
             		current.merge(this_ID_0);
                 
              
                 newLeafNode(this_ID_0, grammarAccess.getMethodNameAccess().getIDTerminalRuleCall_0()); 
                 
-            // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:855:1: (kw= '?' | kw= '=' )?
-            int alt30=3;
-            int LA30_0 = input.LA(1);
+            // InternalRails.g:859:1: (kw= '?' | kw= '=' )?
+            int alt31=3;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA30_0==28) ) {
-                alt30=1;
+            if ( (LA31_0==28) ) {
+                alt31=1;
             }
-            else if ( (LA30_0==29) ) {
-                alt30=2;
+            else if ( (LA31_0==29) ) {
+                alt31=2;
             }
-            switch (alt30) {
+            switch (alt31) {
                 case 1 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:856:2: kw= '?'
+                    // InternalRails.g:860:2: kw= '?'
                     {
-                    kw=(Token)match(input,28,FOLLOW_28_in_ruleMethodName1908); 
+                    kw=(Token)match(input,28,FOLLOW_2); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getMethodNameAccess().getQuestionMarkKeyword_1_0()); 
@@ -2419,9 +2448,9 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model/src-gen/co/gruposaberes/model/parser/antlr/internal/InternalRails.g:863:2: kw= '='
+                    // InternalRails.g:867:2: kw= '='
                     {
-                    kw=(Token)match(input,29,FOLLOW_29_in_ruleMethodName1927); 
+                    kw=(Token)match(input,29,FOLLOW_2); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getMethodNameAccess().getEqualsSignKeyword_1_1()); 
@@ -2455,140 +2484,64 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     protected DFA4 dfa4 = new DFA4(this);
-    static final String DFA4_eotS =
-        "\4\uffff";
-    static final String DFA4_eofS =
-        "\4\uffff";
-    static final String DFA4_minS =
-        "\2\5\2\uffff";
-    static final String DFA4_maxS =
-        "\2\26\2\uffff";
-    static final String DFA4_acceptS =
-        "\2\uffff\1\1\1\2";
-    static final String DFA4_specialS =
-        "\4\uffff}>";
-    static final String[] DFA4_transitionS = {
-            "\1\3\1\uffff\1\3\3\uffff\2\3\2\uffff\1\3\5\uffff\1\1\1\2",
-            "\1\3\1\uffff\1\3\3\uffff\2\3\2\uffff\1\3\5\uffff\1\1\1\2",
+    static final String dfa_1s = "\4\uffff";
+    static final String dfa_2s = "\2\5\2\uffff";
+    static final String dfa_3s = "\2\26\2\uffff";
+    static final String dfa_4s = "\2\uffff\1\1\1\2";
+    static final String dfa_5s = "\4\uffff}>";
+    static final String[] dfa_6s = {
+            "\1\1\1\3\1\uffff\1\3\3\uffff\2\3\2\uffff\1\3\5\uffff\1\2",
+            "\1\1\1\3\1\uffff\1\3\3\uffff\2\3\2\uffff\1\3\5\uffff\1\2",
             "",
             ""
     };
 
-    static final short[] DFA4_eot = DFA.unpackEncodedString(DFA4_eotS);
-    static final short[] DFA4_eof = DFA.unpackEncodedString(DFA4_eofS);
-    static final char[] DFA4_min = DFA.unpackEncodedStringToUnsignedChars(DFA4_minS);
-    static final char[] DFA4_max = DFA.unpackEncodedStringToUnsignedChars(DFA4_maxS);
-    static final short[] DFA4_accept = DFA.unpackEncodedString(DFA4_acceptS);
-    static final short[] DFA4_special = DFA.unpackEncodedString(DFA4_specialS);
-    static final short[][] DFA4_transition;
-
-    static {
-        int numStates = DFA4_transitionS.length;
-        DFA4_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA4_transition[i] = DFA.unpackEncodedString(DFA4_transitionS[i]);
-        }
-    }
+    static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
+    static final char[] dfa_2 = DFA.unpackEncodedStringToUnsignedChars(dfa_2s);
+    static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
+    static final short[] dfa_4 = DFA.unpackEncodedString(dfa_4s);
+    static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
+    static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
 
     class DFA4 extends DFA {
 
         public DFA4(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 4;
-            this.eot = DFA4_eot;
-            this.eof = DFA4_eof;
-            this.min = DFA4_min;
-            this.max = DFA4_max;
-            this.accept = DFA4_accept;
-            this.special = DFA4_special;
-            this.transition = DFA4_transition;
+            this.eot = dfa_1;
+            this.eof = dfa_1;
+            this.min = dfa_2;
+            this.max = dfa_3;
+            this.accept = dfa_4;
+            this.special = dfa_5;
+            this.transition = dfa_6;
         }
         public String getDescription() {
-            return "106:2: ( (otherlv_3= ' ' )* otherlv_4= '<' (otherlv_5= ' ' )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )?";
+            return "106:2: ( (this_SPACE_3= RULE_SPACE )* otherlv_4= '<' (this_SPACE_5= RULE_SPACE )* ( (lv_superType_6_0= ruleNamespacedModuleName ) ) )?";
         }
     }
  
 
-    public static final BitSet FOLLOW_ruleClass_in_entryRuleClass75 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleClass85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CLASS_WORD_in_ruleClass121 = new BitSet(new long[]{0x0000000000200040L});
-    public static final BitSet FOLLOW_21_in_ruleClass133 = new BitSet(new long[]{0x0000000000200040L});
-    public static final BitSet FOLLOW_ruleNamespacedModuleName_in_ruleClass156 = new BitSet(new long[]{0x00000000006098A0L});
-    public static final BitSet FOLLOW_21_in_ruleClass170 = new BitSet(new long[]{0x0000000000600000L});
-    public static final BitSet FOLLOW_22_in_ruleClass184 = new BitSet(new long[]{0x0000000000200040L});
-    public static final BitSet FOLLOW_21_in_ruleClass197 = new BitSet(new long[]{0x0000000000200040L});
-    public static final BitSet FOLLOW_ruleNamespacedModuleName_in_ruleClass220 = new BitSet(new long[]{0x00000000002098A0L});
-    public static final BitSet FOLLOW_21_in_ruleClass235 = new BitSet(new long[]{0x00000000002098A0L});
-    public static final BitSet FOLLOW_ruleClassElement_in_ruleClass258 = new BitSet(new long[]{0x00000000000098A0L});
-    public static final BitSet FOLLOW_RULE_END_WORD_in_ruleClass270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNamespacedModuleName_in_entryRuleNamespacedModuleName306 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNamespacedModuleName317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNamespacedModuleName358 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleNamespacedModuleName376 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNamespacedModuleName393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethodChainCall_in_entryRuleMethodChainCall439 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMethodChainCall450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNamespacedModuleName_in_ruleMethodChainCall497 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleMethodChainCall516 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMethodChainCall531 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_ruleClassElement_in_entryRuleClassElement578 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleClassElement588 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethod_in_ruleClassElement635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationship_in_ruleClassElement662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationship_in_entryRuleRelationship697 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRelationship707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHasMany_in_ruleRelationship754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHasAndBelongsToMany_in_ruleRelationship781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBelongsTo_in_ruleRelationship808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHasMany_in_entryRuleHasMany843 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHasMany853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_HAS_MANY_WORD_in_ruleHasMany889 = new BitSet(new long[]{0x0000000000200300L});
-    public static final BitSet FOLLOW_21_in_ruleHasMany901 = new BitSet(new long[]{0x0000000000200300L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_ruleHasMany922 = new BitSet(new long[]{0x0000000002200402L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleHasMany942 = new BitSet(new long[]{0x0000000002200402L});
-    public static final BitSet FOLLOW_21_in_ruleHasMany963 = new BitSet(new long[]{0x0000000002200402L});
-    public static final BitSet FOLLOW_ruleHashKeyValue_in_ruleHasMany986 = new BitSet(new long[]{0x0000000002000402L});
-    public static final BitSet FOLLOW_RULE_SL_COMMENT_in_ruleHasMany999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHasAndBelongsToMany_in_entryRuleHasAndBelongsToMany1036 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHasAndBelongsToMany1046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_HAS_AND_BELONGS_TO_MANY_WORD_in_ruleHasAndBelongsToMany1082 = new BitSet(new long[]{0x0000000000200300L});
-    public static final BitSet FOLLOW_21_in_ruleHasAndBelongsToMany1094 = new BitSet(new long[]{0x0000000000200300L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_ruleHasAndBelongsToMany1115 = new BitSet(new long[]{0x0000000002200002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleHasAndBelongsToMany1135 = new BitSet(new long[]{0x0000000002200002L});
-    public static final BitSet FOLLOW_21_in_ruleHasAndBelongsToMany1156 = new BitSet(new long[]{0x0000000002200002L});
-    public static final BitSet FOLLOW_ruleHashKeyValue_in_ruleHasAndBelongsToMany1179 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_ruleBelongsTo_in_entryRuleBelongsTo1216 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBelongsTo1226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BELONGS_TO_WORD_in_ruleBelongsTo1262 = new BitSet(new long[]{0x0000000000200300L});
-    public static final BitSet FOLLOW_21_in_ruleBelongsTo1274 = new BitSet(new long[]{0x0000000000200300L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_ruleBelongsTo1295 = new BitSet(new long[]{0x0000000002200002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleBelongsTo1315 = new BitSet(new long[]{0x0000000002200002L});
-    public static final BitSet FOLLOW_21_in_ruleBelongsTo1336 = new BitSet(new long[]{0x0000000002200002L});
-    public static final BitSet FOLLOW_ruleHashKeyValue_in_ruleBelongsTo1359 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_ruleHashKeyValue_in_entryRuleHashKeyValue1396 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHashKeyValue1406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleHashKeyValue1443 = new BitSet(new long[]{0x0000000000200340L});
-    public static final BitSet FOLLOW_21_in_ruleHashKeyValue1456 = new BitSet(new long[]{0x0000000000200340L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleHashKeyValue1477 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleHashKeyValue1494 = new BitSet(new long[]{0x0000000000206340L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_ruleHashKeyValue1521 = new BitSet(new long[]{0x0000000008200000L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleHashKeyValue1541 = new BitSet(new long[]{0x0000000008200000L});
-    public static final BitSet FOLLOW_21_in_ruleHashKeyValue1562 = new BitSet(new long[]{0x0000000008200000L});
-    public static final BitSet FOLLOW_27_in_ruleHashKeyValue1576 = new BitSet(new long[]{0x0000000000206340L});
-    public static final BitSet FOLLOW_21_in_ruleHashKeyValue1591 = new BitSet(new long[]{0x0000000000206340L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_ruleHashKeyValue1612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleHashKeyValue1632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BRACKET_BLOCK_in_ruleHashKeyValue1652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ARRAY_BLOCK_in_ruleHashKeyValue1672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethodChainCall_in_ruleHashKeyValue1696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethod_in_entryRuleMethod1735 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMethod1745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DEF_WORD_in_ruleMethod1781 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleMethodName_in_ruleMethod1801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethodName_in_entryRuleMethodName1838 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMethodName1849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMethodName1889 = new BitSet(new long[]{0x0000000030000002L});
-    public static final BitSet FOLLOW_28_in_ruleMethodName1908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleMethodName1927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000413160L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000400020L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000013160L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000013140L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000620L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000002000822L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000002000802L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000002000022L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x00000000000006A0L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x000000000000C6A0L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000008000020L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000030000002L});
 
 }

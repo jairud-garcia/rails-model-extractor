@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link co.gruposaberes.model.rails.RubyClass#getName <em>Name</em>}</li>
  *   <li>{@link co.gruposaberes.model.rails.RubyClass#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link co.gruposaberes.model.rails.RubyClass#getClassElements <em>Class Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @see co.gruposaberes.model.rails.RailsPackage#getRubyClass()
  * @model

@@ -28,12 +28,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link co.gruposaberes.model.rails.impl.RubyClassImpl#getName <em>Name</em>}</li>
  *   <li>{@link co.gruposaberes.model.rails.impl.RubyClassImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link co.gruposaberes.model.rails.impl.RubyClassImpl#getClassElements <em>Class Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
