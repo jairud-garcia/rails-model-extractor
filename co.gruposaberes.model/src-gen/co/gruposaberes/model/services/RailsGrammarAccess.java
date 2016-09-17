@@ -115,6 +115,34 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
 	}
 
+	public class MethodChainCallElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MethodChainCall");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cNamespacedModuleNameParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//MethodChainCall:
+		//	NamespacedModuleName ("." ID)*;
+		public ParserRule getRule() { return rule; }
+
+		//NamespacedModuleName ("." ID)*
+		public Group getGroup() { return cGroup; }
+
+		//NamespacedModuleName
+		public RuleCall getNamespacedModuleNameParserRuleCall_0() { return cNamespacedModuleNameParserRuleCall_0; }
+
+		//("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+	}
+
 	public class ClassElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ClassElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -171,12 +199,13 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSpaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cOptionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cOptionsHashKeyValueParserRuleCall_4_0 = (RuleCall)cOptionsAssignment_4.eContents().get(0);
+		private final RuleCall cSL_COMMENTTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		
 		//HasMany:
-		//	HAS_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
+		//	HAS_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue* SL_COMMENT?;
 		public ParserRule getRule() { return rule; }
 
-		//HAS_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*
+		//HAS_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue* SL_COMMENT?
 		public Group getGroup() { return cGroup; }
 
 		//HAS_MANY_WORD
@@ -205,6 +234,9 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 
 		//HashKeyValue
 		public RuleCall getOptionsHashKeyValueParserRuleCall_4_0() { return cOptionsHashKeyValueParserRuleCall_4_0; }
+
+		//SL_COMMENT?
+		public RuleCall getSL_COMMENTTerminalRuleCall_5() { return cSL_COMMENTTerminalRuleCall_5; }
 	}
 
 	public class HasAndBelongsToManyElements extends AbstractParserRuleElementFinder {
@@ -325,12 +357,17 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cValueAlternatives_4_0 = (Alternatives)cValueAssignment_4.eContents().get(0);
 		private final RuleCall cValueSYMBOLTerminalRuleCall_4_0_0 = (RuleCall)cValueAlternatives_4_0.eContents().get(0);
 		private final RuleCall cValueSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cValueAlternatives_4_0.eContents().get(1);
+		private final RuleCall cValueBRACKET_BLOCKTerminalRuleCall_4_0_2 = (RuleCall)cValueAlternatives_4_0.eContents().get(2);
+		private final RuleCall cValueARRAY_BLOCKTerminalRuleCall_4_0_3 = (RuleCall)cValueAlternatives_4_0.eContents().get(3);
+		private final RuleCall cValueMethodChainCallParserRuleCall_4_0_4 = (RuleCall)cValueAlternatives_4_0.eContents().get(4);
 		
 		//HashKeyValue:
-		//	"," " "* (key=ID ":" | key=(SYMBOL | STRING) " "* "=>") " "* value=(SYMBOL | STRING);
+		//	"," " "* (key=ID ":" | key=(SYMBOL | STRING) " "* "=>") " "* value=(SYMBOL | STRING | BRACKET_BLOCK | ARRAY_BLOCK |
+		//	MethodChainCall);
 		public ParserRule getRule() { return rule; }
 
-		//"," " "* (key=ID ":" | key=(SYMBOL | STRING) " "* "=>") " "* value=(SYMBOL | STRING)
+		//"," " "* (key=ID ":" | key=(SYMBOL | STRING) " "* "=>") " "* value=(SYMBOL | STRING | BRACKET_BLOCK | ARRAY_BLOCK |
+		//MethodChainCall)
 		public Group getGroup() { return cGroup; }
 
 		//","
@@ -378,10 +415,10 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		//" "*
 		public Keyword getSpaceKeyword_3() { return cSpaceKeyword_3; }
 
-		//value=(SYMBOL | STRING)
+		//value=(SYMBOL | STRING | BRACKET_BLOCK | ARRAY_BLOCK | MethodChainCall)
 		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
 
-		//SYMBOL | STRING
+		//SYMBOL | STRING | BRACKET_BLOCK | ARRAY_BLOCK | MethodChainCall
 		public Alternatives getValueAlternatives_4_0() { return cValueAlternatives_4_0; }
 
 		//SYMBOL
@@ -389,6 +426,15 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getValueSTRINGTerminalRuleCall_4_0_1() { return cValueSTRINGTerminalRuleCall_4_0_1; }
+
+		//BRACKET_BLOCK
+		public RuleCall getValueBRACKET_BLOCKTerminalRuleCall_4_0_2() { return cValueBRACKET_BLOCKTerminalRuleCall_4_0_2; }
+
+		//ARRAY_BLOCK
+		public RuleCall getValueARRAY_BLOCKTerminalRuleCall_4_0_3() { return cValueARRAY_BLOCKTerminalRuleCall_4_0_3; }
+
+		//MethodChainCall
+		public RuleCall getValueMethodChainCallParserRuleCall_4_0_4() { return cValueMethodChainCallParserRuleCall_4_0_4; }
 	}
 
 	public class MethodElements extends AbstractParserRuleElementFinder {
@@ -446,6 +492,7 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private final ClassElements pClass;
 	private final NamespacedModuleNameElements pNamespacedModuleName;
+	private final MethodChainCallElements pMethodChainCall;
 	private final ClassElementElements pClassElement;
 	private final RelationshipElements pRelationship;
 	private final HasManyElements pHasMany;
@@ -454,6 +501,8 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	private final HashKeyValueElements pHashKeyValue;
 	private final MethodElements pMethod;
 	private final MethodNameElements pMethodName;
+	private final TerminalRule tBRACKET_BLOCK;
+	private final TerminalRule tARRAY_BLOCK;
 	private final TerminalRule tBELONGS_TO_WORD;
 	private final TerminalRule tHAS_MANY_WORD;
 	private final TerminalRule tHAS_AND_BELONGS_TO_MANY_WORD;
@@ -477,6 +526,7 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.pClass = new ClassElements();
 		this.pNamespacedModuleName = new NamespacedModuleNameElements();
+		this.pMethodChainCall = new MethodChainCallElements();
 		this.pClassElement = new ClassElementElements();
 		this.pRelationship = new RelationshipElements();
 		this.pHasMany = new HasManyElements();
@@ -485,6 +535,8 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		this.pHashKeyValue = new HashKeyValueElements();
 		this.pMethod = new MethodElements();
 		this.pMethodName = new MethodNameElements();
+		this.tBRACKET_BLOCK = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BRACKET_BLOCK");
+		this.tARRAY_BLOCK = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ARRAY_BLOCK");
 		this.tBELONGS_TO_WORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BELONGS_TO_WORD");
 		this.tHAS_MANY_WORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "HAS_MANY_WORD");
 		this.tHAS_AND_BELONGS_TO_MANY_WORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "HAS_AND_BELONGS_TO_MANY_WORD");
@@ -546,6 +598,16 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		return getNamespacedModuleNameAccess().getRule();
 	}
 
+	//MethodChainCall:
+	//	NamespacedModuleName ("." ID)*;
+	public MethodChainCallElements getMethodChainCallAccess() {
+		return pMethodChainCall;
+	}
+	
+	public ParserRule getMethodChainCallRule() {
+		return getMethodChainCallAccess().getRule();
+	}
+
 	//ClassElement:
 	//	Method | Relationship;
 	public ClassElementElements getClassElementAccess() {
@@ -567,7 +629,7 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HasMany:
-	//	HAS_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue*;
+	//	HAS_MANY_WORD " "* name=(SYMBOL | STRING) " "* options+=HashKeyValue* SL_COMMENT?;
 	public HasManyElements getHasManyAccess() {
 		return pHasMany;
 	}
@@ -597,7 +659,8 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HashKeyValue:
-	//	"," " "* (key=ID ":" | key=(SYMBOL | STRING) " "* "=>") " "* value=(SYMBOL | STRING);
+	//	"," " "* (key=ID ":" | key=(SYMBOL | STRING) " "* "=>") " "* value=(SYMBOL | STRING | BRACKET_BLOCK | ARRAY_BLOCK |
+	//	MethodChainCall);
 	public HashKeyValueElements getHashKeyValueAccess() {
 		return pHashKeyValue;
 	}
@@ -625,6 +688,18 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getMethodNameRule() {
 		return getMethodNameAccess().getRule();
 	}
+
+	//terminal BRACKET_BLOCK:
+	//	"{"->"}";
+	public TerminalRule getBRACKET_BLOCKRule() {
+		return tBRACKET_BLOCK;
+	} 
+
+	//terminal ARRAY_BLOCK:
+	//	"["->"]";
+	public TerminalRule getARRAY_BLOCKRule() {
+		return tARRAY_BLOCK;
+	} 
 
 	//terminal BELONGS_TO_WORD:
 	//	"belongs_to";
@@ -693,7 +768,7 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//terminal SL_COMMENT:
-	//	"#" !("\n" | "\r")* ("\r"? "\n")?;
+	//	"#"->"\n";
 	public TerminalRule getSL_COMMENTRule() {
 		return tSL_COMMENT;
 	} 

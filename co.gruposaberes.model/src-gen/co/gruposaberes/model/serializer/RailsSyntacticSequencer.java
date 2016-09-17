@@ -25,6 +25,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Class_SpaceKeyword_4_a;
 	protected AbstractElementAlias match_HasAndBelongsToMany_SpaceKeyword_1_a;
 	protected AbstractElementAlias match_HasAndBelongsToMany_SpaceKeyword_3_a;
+	protected AbstractElementAlias match_HasMany_SL_COMMENTTerminalRuleCall_5_q;
 	protected AbstractElementAlias match_HasMany_SpaceKeyword_1_a;
 	protected AbstractElementAlias match_HasMany_SpaceKeyword_3_a;
 	protected AbstractElementAlias match_HashKeyValue_SpaceKeyword_1_a;
@@ -42,6 +43,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Class_SpaceKeyword_4_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSpaceKeyword_4());
 		match_HasAndBelongsToMany_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_1());
 		match_HasAndBelongsToMany_SpaceKeyword_3_a = new TokenAlias(true, true, grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_3());
+		match_HasMany_SL_COMMENTTerminalRuleCall_5_q = new TokenAlias(false, true, grammarAccess.getHasManyAccess().getSL_COMMENTTerminalRuleCall_5());
 		match_HasMany_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getHasManyAccess().getSpaceKeyword_1());
 		match_HasMany_SpaceKeyword_3_a = new TokenAlias(true, true, grammarAccess.getHasManyAccess().getSpaceKeyword_3());
 		match_HashKeyValue_SpaceKeyword_1_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSpaceKeyword_1());
@@ -63,6 +65,8 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getHAS_AND_BELONGS_TO_MANY_WORDToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getHAS_MANY_WORDRule())
 			return getHAS_MANY_WORDToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getSL_COMMENTRule())
+			return getSL_COMMENTToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -120,6 +124,15 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		return "has_many";
 	}
 	
+	/**
+	 * terminal SL_COMMENT : '#'->'\n';
+	 */
+	protected String getSL_COMMENTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "#";
+	}
+	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
@@ -142,6 +155,8 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_HasAndBelongsToMany_SpaceKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_HasAndBelongsToMany_SpaceKeyword_3_a.equals(syntax))
 				emit_HasAndBelongsToMany_SpaceKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_HasMany_SL_COMMENTTerminalRuleCall_5_q.equals(syntax))
+				emit_HasMany_SL_COMMENTTerminalRuleCall_5_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_HasMany_SpaceKeyword_1_a.equals(syntax))
 				emit_HasMany_SpaceKeyword_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_HasMany_SpaceKeyword_3_a.equals(syntax))
@@ -217,6 +232,14 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ' '*
 	 */
 	protected void emit_HasAndBelongsToMany_SpaceKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     SL_COMMENT?
+	 */
+	protected void emit_HasMany_SL_COMMENTTerminalRuleCall_5_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

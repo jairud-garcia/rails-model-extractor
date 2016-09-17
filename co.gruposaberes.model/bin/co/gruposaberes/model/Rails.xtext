@@ -16,18 +16,20 @@ NamespacedModuleName :
 (ID'::')*ID
 ;
 
+MethodChainCall:
+	NamespacedModuleName('.'ID)*
+;
+
 ClassElement returns ClassElement:
   Method |Relationship
 ;
 
-
-
 Relationship returns Relationship:
-  HasMany | HasAndBelongsToMany | BelongsTo
+  HasMany | HasAndBelongsToMany | BelongsTo 
 ;
 
 HasMany returns HasMany:
-  HAS_MANY_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue*
+  HAS_MANY_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue* SL_COMMENT?
 ;
 
 HasAndBelongsToMany returns HasAndBelongsToMany:
@@ -38,19 +40,13 @@ BelongsTo returns BelongsTo:
   BELONGS_TO_WORD" "* name=(SYMBOL|STRING) " "* options+=HashKeyValue*
 ;
 
-
-
-
-
 HashKeyValue:
-  ',' " "* (key=ID':'|key=(SYMBOL|STRING)" "*'=>') " "* value=(SYMBOL|STRING)
+  ',' " "* (key=ID':'|key=(SYMBOL|STRING)" "*'=>') " "* value=(SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|MethodChainCall)
 ;
 
 Method returns RubyMethod:
   DEF_WORD name=MethodName
 ;
-
-
 
 MethodName:
 ID('?'|'=')?
@@ -58,7 +54,9 @@ ID('?'|'=')?
 
 
 
+terminal BRACKET_BLOCK: '{'->'}';
 
+terminal ARRAY_BLOCK: '['->']';
 
 terminal BELONGS_TO_WORD: 'belongs_to';
 
@@ -86,7 +84,7 @@ terminal STRING: '"'->'"' | "'"->"'";
 
 terminal ML_COMMENT	: '=begin' -> '=end';
 
-terminal SL_COMMENT : '#' !('\n'|'\r')* ('\r'? '\n')?;
+terminal SL_COMMENT : '#'->'\n';
 
 terminal WS	: (' '|'\t'|'\r'|'\n')+;
 

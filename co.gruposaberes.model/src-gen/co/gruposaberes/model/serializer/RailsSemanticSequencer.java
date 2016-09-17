@@ -115,7 +115,7 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     ((key=ID | key=SYMBOL | key=STRING) (value=SYMBOL | value=STRING))
+	 *     ((key=ID | key=SYMBOL | key=STRING) (value=SYMBOL | value=STRING | value=BRACKET_BLOCK | value=ARRAY_BLOCK | value=MethodChainCall))
 	 */
 	protected void sequence_HashKeyValue(EObject context, HashKeyValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

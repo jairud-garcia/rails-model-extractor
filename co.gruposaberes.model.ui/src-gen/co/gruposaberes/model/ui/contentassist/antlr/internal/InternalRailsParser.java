@@ -22,31 +22,34 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRailsParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_SYMBOL", "RULE_STRING", "RULE_CLASS_WORD", "RULE_END_WORD", "RULE_ID", "RULE_HAS_MANY_WORD", "RULE_HAS_AND_BELONGS_TO_MANY_WORD", "RULE_BELONGS_TO_WORD", "RULE_DEF_WORD", "RULE_MODULE_WORD", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_INT", "RULE_ANY_OTHER", "'?'", "'='", "' '", "'<'", "'::'", "','", "':'", "'=>'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_SYMBOL", "RULE_STRING", "RULE_BRACKET_BLOCK", "RULE_ARRAY_BLOCK", "RULE_CLASS_WORD", "RULE_END_WORD", "RULE_ID", "RULE_HAS_MANY_WORD", "RULE_SL_COMMENT", "RULE_HAS_AND_BELONGS_TO_MANY_WORD", "RULE_BELONGS_TO_WORD", "RULE_DEF_WORD", "RULE_MODULE_WORD", "RULE_ML_COMMENT", "RULE_WS", "RULE_INT", "RULE_ANY_OTHER", "'?'", "'='", "' '", "'<'", "'::'", "'.'", "','", "':'", "'=>'"
     };
-    public static final int RULE_HAS_MANY_WORD=9;
-    public static final int RULE_CLASS_WORD=6;
+    public static final int RULE_HAS_MANY_WORD=11;
+    public static final int RULE_CLASS_WORD=8;
     public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=15;
-    public static final int T__19=19;
-    public static final int RULE_HAS_AND_BELONGS_TO_MANY_WORD=10;
+    public static final int RULE_SL_COMMENT=12;
+    public static final int RULE_HAS_AND_BELONGS_TO_MANY_WORD=13;
     public static final int EOF=-1;
-    public static final int RULE_ID=8;
-    public static final int RULE_WS=16;
-    public static final int RULE_ANY_OTHER=18;
-    public static final int RULE_MODULE_WORD=13;
+    public static final int RULE_ARRAY_BLOCK=7;
+    public static final int RULE_ID=10;
+    public static final int RULE_WS=18;
+    public static final int RULE_ANY_OTHER=20;
+    public static final int RULE_MODULE_WORD=16;
     public static final int T__26=26;
-    public static final int RULE_INT=17;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int RULE_INT=19;
+    public static final int T__29=29;
+    public static final int RULE_BRACKET_BLOCK=6;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=14;
+    public static final int RULE_ML_COMMENT=17;
     public static final int T__23=23;
     public static final int RULE_SYMBOL=4;
-    public static final int RULE_DEF_WORD=12;
+    public static final int RULE_DEF_WORD=15;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int RULE_END_WORD=7;
-    public static final int RULE_BELONGS_TO_WORD=11;
-    public static final int T__20=20;
+    public static final int RULE_END_WORD=9;
+    public static final int RULE_BELONGS_TO_WORD=14;
     public static final int T__21=21;
 
     // delegates
@@ -240,21 +243,98 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleNamespacedModuleName"
 
 
+    // $ANTLR start "entryRuleMethodChainCall"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:116:1: entryRuleMethodChainCall : ruleMethodChainCall EOF ;
+    public final void entryRuleMethodChainCall() throws RecognitionException {
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:117:1: ( ruleMethodChainCall EOF )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:118:1: ruleMethodChainCall EOF
+            {
+             before(grammarAccess.getMethodChainCallRule()); 
+            pushFollow(FOLLOW_ruleMethodChainCall_in_entryRuleMethodChainCall181);
+            ruleMethodChainCall();
+
+            state._fsp--;
+
+             after(grammarAccess.getMethodChainCallRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMethodChainCall188); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleMethodChainCall"
+
+
+    // $ANTLR start "ruleMethodChainCall"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:125:1: ruleMethodChainCall : ( ( rule__MethodChainCall__Group__0 ) ) ;
+    public final void ruleMethodChainCall() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:129:2: ( ( ( rule__MethodChainCall__Group__0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:130:1: ( ( rule__MethodChainCall__Group__0 ) )
+            {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:130:1: ( ( rule__MethodChainCall__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:131:1: ( rule__MethodChainCall__Group__0 )
+            {
+             before(grammarAccess.getMethodChainCallAccess().getGroup()); 
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:132:1: ( rule__MethodChainCall__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:132:2: rule__MethodChainCall__Group__0
+            {
+            pushFollow(FOLLOW_rule__MethodChainCall__Group__0_in_ruleMethodChainCall214);
+            rule__MethodChainCall__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getMethodChainCallAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleMethodChainCall"
+
+
     // $ANTLR start "entryRuleClassElement"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:116:1: entryRuleClassElement : ruleClassElement EOF ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:144:1: entryRuleClassElement : ruleClassElement EOF ;
     public final void entryRuleClassElement() throws RecognitionException {
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:117:1: ( ruleClassElement EOF )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:118:1: ruleClassElement EOF
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:145:1: ( ruleClassElement EOF )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:146:1: ruleClassElement EOF
             {
              before(grammarAccess.getClassElementRule()); 
-            pushFollow(FOLLOW_ruleClassElement_in_entryRuleClassElement181);
+            pushFollow(FOLLOW_ruleClassElement_in_entryRuleClassElement241);
             ruleClassElement();
 
             state._fsp--;
 
              after(grammarAccess.getClassElementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleClassElement188); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleClassElement248); 
 
             }
 
@@ -271,23 +351,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleClassElement"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:125:1: ruleClassElement : ( ( rule__ClassElement__Alternatives ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:153:1: ruleClassElement : ( ( rule__ClassElement__Alternatives ) ) ;
     public final void ruleClassElement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:129:2: ( ( ( rule__ClassElement__Alternatives ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:130:1: ( ( rule__ClassElement__Alternatives ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:157:2: ( ( ( rule__ClassElement__Alternatives ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:158:1: ( ( rule__ClassElement__Alternatives ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:130:1: ( ( rule__ClassElement__Alternatives ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:131:1: ( rule__ClassElement__Alternatives )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:158:1: ( ( rule__ClassElement__Alternatives ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:159:1: ( rule__ClassElement__Alternatives )
             {
              before(grammarAccess.getClassElementAccess().getAlternatives()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:132:1: ( rule__ClassElement__Alternatives )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:132:2: rule__ClassElement__Alternatives
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:160:1: ( rule__ClassElement__Alternatives )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:160:2: rule__ClassElement__Alternatives
             {
-            pushFollow(FOLLOW_rule__ClassElement__Alternatives_in_ruleClassElement214);
+            pushFollow(FOLLOW_rule__ClassElement__Alternatives_in_ruleClassElement274);
             rule__ClassElement__Alternatives();
 
             state._fsp--;
@@ -318,20 +398,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleRelationship"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:144:1: entryRuleRelationship : ruleRelationship EOF ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:172:1: entryRuleRelationship : ruleRelationship EOF ;
     public final void entryRuleRelationship() throws RecognitionException {
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:145:1: ( ruleRelationship EOF )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:146:1: ruleRelationship EOF
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:173:1: ( ruleRelationship EOF )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:174:1: ruleRelationship EOF
             {
              before(grammarAccess.getRelationshipRule()); 
-            pushFollow(FOLLOW_ruleRelationship_in_entryRuleRelationship241);
+            pushFollow(FOLLOW_ruleRelationship_in_entryRuleRelationship301);
             ruleRelationship();
 
             state._fsp--;
 
              after(grammarAccess.getRelationshipRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRelationship248); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRelationship308); 
 
             }
 
@@ -348,23 +428,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleRelationship"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:153:1: ruleRelationship : ( ( rule__Relationship__Alternatives ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:181:1: ruleRelationship : ( ( rule__Relationship__Alternatives ) ) ;
     public final void ruleRelationship() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:157:2: ( ( ( rule__Relationship__Alternatives ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:158:1: ( ( rule__Relationship__Alternatives ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:185:2: ( ( ( rule__Relationship__Alternatives ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:186:1: ( ( rule__Relationship__Alternatives ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:158:1: ( ( rule__Relationship__Alternatives ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:159:1: ( rule__Relationship__Alternatives )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:186:1: ( ( rule__Relationship__Alternatives ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:187:1: ( rule__Relationship__Alternatives )
             {
              before(grammarAccess.getRelationshipAccess().getAlternatives()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:160:1: ( rule__Relationship__Alternatives )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:160:2: rule__Relationship__Alternatives
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:188:1: ( rule__Relationship__Alternatives )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:188:2: rule__Relationship__Alternatives
             {
-            pushFollow(FOLLOW_rule__Relationship__Alternatives_in_ruleRelationship274);
+            pushFollow(FOLLOW_rule__Relationship__Alternatives_in_ruleRelationship334);
             rule__Relationship__Alternatives();
 
             state._fsp--;
@@ -395,20 +475,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleHasMany"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:172:1: entryRuleHasMany : ruleHasMany EOF ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:200:1: entryRuleHasMany : ruleHasMany EOF ;
     public final void entryRuleHasMany() throws RecognitionException {
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:173:1: ( ruleHasMany EOF )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:174:1: ruleHasMany EOF
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:201:1: ( ruleHasMany EOF )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:202:1: ruleHasMany EOF
             {
              before(grammarAccess.getHasManyRule()); 
-            pushFollow(FOLLOW_ruleHasMany_in_entryRuleHasMany301);
+            pushFollow(FOLLOW_ruleHasMany_in_entryRuleHasMany361);
             ruleHasMany();
 
             state._fsp--;
 
              after(grammarAccess.getHasManyRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHasMany308); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleHasMany368); 
 
             }
 
@@ -425,23 +505,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleHasMany"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:181:1: ruleHasMany : ( ( rule__HasMany__Group__0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:209:1: ruleHasMany : ( ( rule__HasMany__Group__0 ) ) ;
     public final void ruleHasMany() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:185:2: ( ( ( rule__HasMany__Group__0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:186:1: ( ( rule__HasMany__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:213:2: ( ( ( rule__HasMany__Group__0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:214:1: ( ( rule__HasMany__Group__0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:186:1: ( ( rule__HasMany__Group__0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:187:1: ( rule__HasMany__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:214:1: ( ( rule__HasMany__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:215:1: ( rule__HasMany__Group__0 )
             {
              before(grammarAccess.getHasManyAccess().getGroup()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:188:1: ( rule__HasMany__Group__0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:188:2: rule__HasMany__Group__0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:216:1: ( rule__HasMany__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:216:2: rule__HasMany__Group__0
             {
-            pushFollow(FOLLOW_rule__HasMany__Group__0_in_ruleHasMany334);
+            pushFollow(FOLLOW_rule__HasMany__Group__0_in_ruleHasMany394);
             rule__HasMany__Group__0();
 
             state._fsp--;
@@ -472,20 +552,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleHasAndBelongsToMany"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:200:1: entryRuleHasAndBelongsToMany : ruleHasAndBelongsToMany EOF ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:228:1: entryRuleHasAndBelongsToMany : ruleHasAndBelongsToMany EOF ;
     public final void entryRuleHasAndBelongsToMany() throws RecognitionException {
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:201:1: ( ruleHasAndBelongsToMany EOF )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:202:1: ruleHasAndBelongsToMany EOF
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:229:1: ( ruleHasAndBelongsToMany EOF )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:230:1: ruleHasAndBelongsToMany EOF
             {
              before(grammarAccess.getHasAndBelongsToManyRule()); 
-            pushFollow(FOLLOW_ruleHasAndBelongsToMany_in_entryRuleHasAndBelongsToMany361);
+            pushFollow(FOLLOW_ruleHasAndBelongsToMany_in_entryRuleHasAndBelongsToMany421);
             ruleHasAndBelongsToMany();
 
             state._fsp--;
 
              after(grammarAccess.getHasAndBelongsToManyRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHasAndBelongsToMany368); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleHasAndBelongsToMany428); 
 
             }
 
@@ -502,23 +582,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleHasAndBelongsToMany"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:209:1: ruleHasAndBelongsToMany : ( ( rule__HasAndBelongsToMany__Group__0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:237:1: ruleHasAndBelongsToMany : ( ( rule__HasAndBelongsToMany__Group__0 ) ) ;
     public final void ruleHasAndBelongsToMany() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:213:2: ( ( ( rule__HasAndBelongsToMany__Group__0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:214:1: ( ( rule__HasAndBelongsToMany__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:241:2: ( ( ( rule__HasAndBelongsToMany__Group__0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:242:1: ( ( rule__HasAndBelongsToMany__Group__0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:214:1: ( ( rule__HasAndBelongsToMany__Group__0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:215:1: ( rule__HasAndBelongsToMany__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:242:1: ( ( rule__HasAndBelongsToMany__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:243:1: ( rule__HasAndBelongsToMany__Group__0 )
             {
              before(grammarAccess.getHasAndBelongsToManyAccess().getGroup()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:216:1: ( rule__HasAndBelongsToMany__Group__0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:216:2: rule__HasAndBelongsToMany__Group__0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:244:1: ( rule__HasAndBelongsToMany__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:244:2: rule__HasAndBelongsToMany__Group__0
             {
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__0_in_ruleHasAndBelongsToMany394);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__0_in_ruleHasAndBelongsToMany454);
             rule__HasAndBelongsToMany__Group__0();
 
             state._fsp--;
@@ -549,20 +629,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleBelongsTo"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:228:1: entryRuleBelongsTo : ruleBelongsTo EOF ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:256:1: entryRuleBelongsTo : ruleBelongsTo EOF ;
     public final void entryRuleBelongsTo() throws RecognitionException {
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:229:1: ( ruleBelongsTo EOF )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:230:1: ruleBelongsTo EOF
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:257:1: ( ruleBelongsTo EOF )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:258:1: ruleBelongsTo EOF
             {
              before(grammarAccess.getBelongsToRule()); 
-            pushFollow(FOLLOW_ruleBelongsTo_in_entryRuleBelongsTo421);
+            pushFollow(FOLLOW_ruleBelongsTo_in_entryRuleBelongsTo481);
             ruleBelongsTo();
 
             state._fsp--;
 
              after(grammarAccess.getBelongsToRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBelongsTo428); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBelongsTo488); 
 
             }
 
@@ -579,23 +659,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleBelongsTo"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:237:1: ruleBelongsTo : ( ( rule__BelongsTo__Group__0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:265:1: ruleBelongsTo : ( ( rule__BelongsTo__Group__0 ) ) ;
     public final void ruleBelongsTo() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:241:2: ( ( ( rule__BelongsTo__Group__0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:242:1: ( ( rule__BelongsTo__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:269:2: ( ( ( rule__BelongsTo__Group__0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:270:1: ( ( rule__BelongsTo__Group__0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:242:1: ( ( rule__BelongsTo__Group__0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:243:1: ( rule__BelongsTo__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:270:1: ( ( rule__BelongsTo__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:271:1: ( rule__BelongsTo__Group__0 )
             {
              before(grammarAccess.getBelongsToAccess().getGroup()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:244:1: ( rule__BelongsTo__Group__0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:244:2: rule__BelongsTo__Group__0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:272:1: ( rule__BelongsTo__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:272:2: rule__BelongsTo__Group__0
             {
-            pushFollow(FOLLOW_rule__BelongsTo__Group__0_in_ruleBelongsTo454);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__0_in_ruleBelongsTo514);
             rule__BelongsTo__Group__0();
 
             state._fsp--;
@@ -626,20 +706,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleHashKeyValue"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:256:1: entryRuleHashKeyValue : ruleHashKeyValue EOF ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:284:1: entryRuleHashKeyValue : ruleHashKeyValue EOF ;
     public final void entryRuleHashKeyValue() throws RecognitionException {
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:257:1: ( ruleHashKeyValue EOF )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:258:1: ruleHashKeyValue EOF
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:285:1: ( ruleHashKeyValue EOF )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:286:1: ruleHashKeyValue EOF
             {
              before(grammarAccess.getHashKeyValueRule()); 
-            pushFollow(FOLLOW_ruleHashKeyValue_in_entryRuleHashKeyValue481);
+            pushFollow(FOLLOW_ruleHashKeyValue_in_entryRuleHashKeyValue541);
             ruleHashKeyValue();
 
             state._fsp--;
 
              after(grammarAccess.getHashKeyValueRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHashKeyValue488); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleHashKeyValue548); 
 
             }
 
@@ -656,23 +736,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleHashKeyValue"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:265:1: ruleHashKeyValue : ( ( rule__HashKeyValue__Group__0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:293:1: ruleHashKeyValue : ( ( rule__HashKeyValue__Group__0 ) ) ;
     public final void ruleHashKeyValue() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:269:2: ( ( ( rule__HashKeyValue__Group__0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:270:1: ( ( rule__HashKeyValue__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:297:2: ( ( ( rule__HashKeyValue__Group__0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:298:1: ( ( rule__HashKeyValue__Group__0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:270:1: ( ( rule__HashKeyValue__Group__0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:271:1: ( rule__HashKeyValue__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:298:1: ( ( rule__HashKeyValue__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:299:1: ( rule__HashKeyValue__Group__0 )
             {
              before(grammarAccess.getHashKeyValueAccess().getGroup()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:272:1: ( rule__HashKeyValue__Group__0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:272:2: rule__HashKeyValue__Group__0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:300:1: ( rule__HashKeyValue__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:300:2: rule__HashKeyValue__Group__0
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__0_in_ruleHashKeyValue514);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__0_in_ruleHashKeyValue574);
             rule__HashKeyValue__Group__0();
 
             state._fsp--;
@@ -703,20 +783,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleMethod"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:284:1: entryRuleMethod : ruleMethod EOF ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:312:1: entryRuleMethod : ruleMethod EOF ;
     public final void entryRuleMethod() throws RecognitionException {
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:285:1: ( ruleMethod EOF )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:286:1: ruleMethod EOF
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:313:1: ( ruleMethod EOF )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:314:1: ruleMethod EOF
             {
              before(grammarAccess.getMethodRule()); 
-            pushFollow(FOLLOW_ruleMethod_in_entryRuleMethod541);
+            pushFollow(FOLLOW_ruleMethod_in_entryRuleMethod601);
             ruleMethod();
 
             state._fsp--;
 
              after(grammarAccess.getMethodRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMethod548); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMethod608); 
 
             }
 
@@ -733,23 +813,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMethod"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:293:1: ruleMethod : ( ( rule__Method__Group__0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:321:1: ruleMethod : ( ( rule__Method__Group__0 ) ) ;
     public final void ruleMethod() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:297:2: ( ( ( rule__Method__Group__0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:298:1: ( ( rule__Method__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:325:2: ( ( ( rule__Method__Group__0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:326:1: ( ( rule__Method__Group__0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:298:1: ( ( rule__Method__Group__0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:299:1: ( rule__Method__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:326:1: ( ( rule__Method__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:327:1: ( rule__Method__Group__0 )
             {
              before(grammarAccess.getMethodAccess().getGroup()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:300:1: ( rule__Method__Group__0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:300:2: rule__Method__Group__0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:328:1: ( rule__Method__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:328:2: rule__Method__Group__0
             {
-            pushFollow(FOLLOW_rule__Method__Group__0_in_ruleMethod574);
+            pushFollow(FOLLOW_rule__Method__Group__0_in_ruleMethod634);
             rule__Method__Group__0();
 
             state._fsp--;
@@ -780,20 +860,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleMethodName"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:312:1: entryRuleMethodName : ruleMethodName EOF ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:340:1: entryRuleMethodName : ruleMethodName EOF ;
     public final void entryRuleMethodName() throws RecognitionException {
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:313:1: ( ruleMethodName EOF )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:314:1: ruleMethodName EOF
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:341:1: ( ruleMethodName EOF )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:342:1: ruleMethodName EOF
             {
              before(grammarAccess.getMethodNameRule()); 
-            pushFollow(FOLLOW_ruleMethodName_in_entryRuleMethodName601);
+            pushFollow(FOLLOW_ruleMethodName_in_entryRuleMethodName661);
             ruleMethodName();
 
             state._fsp--;
 
              after(grammarAccess.getMethodNameRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMethodName608); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMethodName668); 
 
             }
 
@@ -810,23 +890,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMethodName"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:321:1: ruleMethodName : ( ( rule__MethodName__Group__0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:349:1: ruleMethodName : ( ( rule__MethodName__Group__0 ) ) ;
     public final void ruleMethodName() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:325:2: ( ( ( rule__MethodName__Group__0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:326:1: ( ( rule__MethodName__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:353:2: ( ( ( rule__MethodName__Group__0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:354:1: ( ( rule__MethodName__Group__0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:326:1: ( ( rule__MethodName__Group__0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:327:1: ( rule__MethodName__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:354:1: ( ( rule__MethodName__Group__0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:355:1: ( rule__MethodName__Group__0 )
             {
              before(grammarAccess.getMethodNameAccess().getGroup()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:328:1: ( rule__MethodName__Group__0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:328:2: rule__MethodName__Group__0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:356:1: ( rule__MethodName__Group__0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:356:2: rule__MethodName__Group__0
             {
-            pushFollow(FOLLOW_rule__MethodName__Group__0_in_ruleMethodName634);
+            pushFollow(FOLLOW_rule__MethodName__Group__0_in_ruleMethodName694);
             rule__MethodName__Group__0();
 
             state._fsp--;
@@ -857,20 +937,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassElement__Alternatives"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:340:1: rule__ClassElement__Alternatives : ( ( ruleMethod ) | ( ruleRelationship ) );
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:368:1: rule__ClassElement__Alternatives : ( ( ruleMethod ) | ( ruleRelationship ) );
     public final void rule__ClassElement__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:344:1: ( ( ruleMethod ) | ( ruleRelationship ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:372:1: ( ( ruleMethod ) | ( ruleRelationship ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
             if ( (LA1_0==RULE_DEF_WORD) ) {
                 alt1=1;
             }
-            else if ( ((LA1_0>=RULE_HAS_MANY_WORD && LA1_0<=RULE_BELONGS_TO_WORD)) ) {
+            else if ( (LA1_0==RULE_HAS_MANY_WORD||(LA1_0>=RULE_HAS_AND_BELONGS_TO_MANY_WORD && LA1_0<=RULE_BELONGS_TO_WORD)) ) {
                 alt1=2;
             }
             else {
@@ -881,13 +961,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:345:1: ( ruleMethod )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:373:1: ( ruleMethod )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:345:1: ( ruleMethod )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:346:1: ruleMethod
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:373:1: ( ruleMethod )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:374:1: ruleMethod
                     {
                      before(grammarAccess.getClassElementAccess().getMethodParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleMethod_in_rule__ClassElement__Alternatives670);
+                    pushFollow(FOLLOW_ruleMethod_in_rule__ClassElement__Alternatives730);
                     ruleMethod();
 
                     state._fsp--;
@@ -900,13 +980,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:351:6: ( ruleRelationship )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:379:6: ( ruleRelationship )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:351:6: ( ruleRelationship )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:352:1: ruleRelationship
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:379:6: ( ruleRelationship )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:380:1: ruleRelationship
                     {
                      before(grammarAccess.getClassElementAccess().getRelationshipParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleRelationship_in_rule__ClassElement__Alternatives687);
+                    pushFollow(FOLLOW_ruleRelationship_in_rule__ClassElement__Alternatives747);
                     ruleRelationship();
 
                     state._fsp--;
@@ -936,13 +1016,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Alternatives"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:362:1: rule__Relationship__Alternatives : ( ( ruleHasMany ) | ( ruleHasAndBelongsToMany ) | ( ruleBelongsTo ) );
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:390:1: rule__Relationship__Alternatives : ( ( ruleHasMany ) | ( ruleHasAndBelongsToMany ) | ( ruleBelongsTo ) );
     public final void rule__Relationship__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:366:1: ( ( ruleHasMany ) | ( ruleHasAndBelongsToMany ) | ( ruleBelongsTo ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:394:1: ( ( ruleHasMany ) | ( ruleHasAndBelongsToMany ) | ( ruleBelongsTo ) )
             int alt2=3;
             switch ( input.LA(1) ) {
             case RULE_HAS_MANY_WORD:
@@ -969,13 +1049,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
             switch (alt2) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:367:1: ( ruleHasMany )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:395:1: ( ruleHasMany )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:367:1: ( ruleHasMany )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:368:1: ruleHasMany
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:395:1: ( ruleHasMany )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:396:1: ruleHasMany
                     {
                      before(grammarAccess.getRelationshipAccess().getHasManyParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleHasMany_in_rule__Relationship__Alternatives719);
+                    pushFollow(FOLLOW_ruleHasMany_in_rule__Relationship__Alternatives779);
                     ruleHasMany();
 
                     state._fsp--;
@@ -988,13 +1068,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:373:6: ( ruleHasAndBelongsToMany )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:401:6: ( ruleHasAndBelongsToMany )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:373:6: ( ruleHasAndBelongsToMany )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:374:1: ruleHasAndBelongsToMany
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:401:6: ( ruleHasAndBelongsToMany )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:402:1: ruleHasAndBelongsToMany
                     {
                      before(grammarAccess.getRelationshipAccess().getHasAndBelongsToManyParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleHasAndBelongsToMany_in_rule__Relationship__Alternatives736);
+                    pushFollow(FOLLOW_ruleHasAndBelongsToMany_in_rule__Relationship__Alternatives796);
                     ruleHasAndBelongsToMany();
 
                     state._fsp--;
@@ -1007,13 +1087,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:379:6: ( ruleBelongsTo )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:407:6: ( ruleBelongsTo )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:379:6: ( ruleBelongsTo )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:380:1: ruleBelongsTo
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:407:6: ( ruleBelongsTo )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:408:1: ruleBelongsTo
                     {
                      before(grammarAccess.getRelationshipAccess().getBelongsToParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleBelongsTo_in_rule__Relationship__Alternatives753);
+                    pushFollow(FOLLOW_ruleBelongsTo_in_rule__Relationship__Alternatives813);
                     ruleBelongsTo();
 
                     state._fsp--;
@@ -1043,13 +1123,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__NameAlternatives_2_0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:390:1: rule__HasMany__NameAlternatives_2_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:418:1: rule__HasMany__NameAlternatives_2_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
     public final void rule__HasMany__NameAlternatives_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:394:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:422:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1067,13 +1147,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:395:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:423:1: ( RULE_SYMBOL )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:395:1: ( RULE_SYMBOL )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:396:1: RULE_SYMBOL
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:423:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:424:1: RULE_SYMBOL
                     {
                      before(grammarAccess.getHasManyAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
-                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__HasMany__NameAlternatives_2_0785); 
+                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__HasMany__NameAlternatives_2_0845); 
                      after(grammarAccess.getHasManyAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
 
                     }
@@ -1082,13 +1162,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:401:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:429:6: ( RULE_STRING )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:401:6: ( RULE_STRING )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:402:1: RULE_STRING
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:429:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:430:1: RULE_STRING
                     {
                      before(grammarAccess.getHasManyAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__HasMany__NameAlternatives_2_0802); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__HasMany__NameAlternatives_2_0862); 
                      after(grammarAccess.getHasManyAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
 
                     }
@@ -1114,13 +1194,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__NameAlternatives_2_0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:412:1: rule__HasAndBelongsToMany__NameAlternatives_2_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:440:1: rule__HasAndBelongsToMany__NameAlternatives_2_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
     public final void rule__HasAndBelongsToMany__NameAlternatives_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:416:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:444:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1138,13 +1218,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:417:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:445:1: ( RULE_SYMBOL )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:417:1: ( RULE_SYMBOL )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:418:1: RULE_SYMBOL
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:445:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:446:1: RULE_SYMBOL
                     {
                      before(grammarAccess.getHasAndBelongsToManyAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
-                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__HasAndBelongsToMany__NameAlternatives_2_0834); 
+                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__HasAndBelongsToMany__NameAlternatives_2_0894); 
                      after(grammarAccess.getHasAndBelongsToManyAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
 
                     }
@@ -1153,13 +1233,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:423:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:451:6: ( RULE_STRING )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:423:6: ( RULE_STRING )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:424:1: RULE_STRING
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:451:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:452:1: RULE_STRING
                     {
                      before(grammarAccess.getHasAndBelongsToManyAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__HasAndBelongsToMany__NameAlternatives_2_0851); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__HasAndBelongsToMany__NameAlternatives_2_0911); 
                      after(grammarAccess.getHasAndBelongsToManyAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
 
                     }
@@ -1185,13 +1265,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__NameAlternatives_2_0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:434:1: rule__BelongsTo__NameAlternatives_2_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:462:1: rule__BelongsTo__NameAlternatives_2_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
     public final void rule__BelongsTo__NameAlternatives_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:438:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:466:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1209,13 +1289,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:439:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:467:1: ( RULE_SYMBOL )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:439:1: ( RULE_SYMBOL )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:440:1: RULE_SYMBOL
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:467:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:468:1: RULE_SYMBOL
                     {
                      before(grammarAccess.getBelongsToAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
-                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__BelongsTo__NameAlternatives_2_0883); 
+                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__BelongsTo__NameAlternatives_2_0943); 
                      after(grammarAccess.getBelongsToAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
 
                     }
@@ -1224,13 +1304,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:445:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:473:6: ( RULE_STRING )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:445:6: ( RULE_STRING )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:446:1: RULE_STRING
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:473:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:474:1: RULE_STRING
                     {
                      before(grammarAccess.getBelongsToAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BelongsTo__NameAlternatives_2_0900); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BelongsTo__NameAlternatives_2_0960); 
                      after(grammarAccess.getBelongsToAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
 
                     }
@@ -1256,13 +1336,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Alternatives_2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:456:1: rule__HashKeyValue__Alternatives_2 : ( ( ( rule__HashKeyValue__Group_2_0__0 ) ) | ( ( rule__HashKeyValue__Group_2_1__0 ) ) );
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:484:1: rule__HashKeyValue__Alternatives_2 : ( ( ( rule__HashKeyValue__Group_2_0__0 ) ) | ( ( rule__HashKeyValue__Group_2_1__0 ) ) );
     public final void rule__HashKeyValue__Alternatives_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:460:1: ( ( ( rule__HashKeyValue__Group_2_0__0 ) ) | ( ( rule__HashKeyValue__Group_2_1__0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:488:1: ( ( ( rule__HashKeyValue__Group_2_0__0 ) ) | ( ( rule__HashKeyValue__Group_2_1__0 ) ) )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1280,16 +1360,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt6) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:461:1: ( ( rule__HashKeyValue__Group_2_0__0 ) )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:489:1: ( ( rule__HashKeyValue__Group_2_0__0 ) )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:461:1: ( ( rule__HashKeyValue__Group_2_0__0 ) )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:462:1: ( rule__HashKeyValue__Group_2_0__0 )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:489:1: ( ( rule__HashKeyValue__Group_2_0__0 ) )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:490:1: ( rule__HashKeyValue__Group_2_0__0 )
                     {
                      before(grammarAccess.getHashKeyValueAccess().getGroup_2_0()); 
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:463:1: ( rule__HashKeyValue__Group_2_0__0 )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:463:2: rule__HashKeyValue__Group_2_0__0
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:491:1: ( rule__HashKeyValue__Group_2_0__0 )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:491:2: rule__HashKeyValue__Group_2_0__0
                     {
-                    pushFollow(FOLLOW_rule__HashKeyValue__Group_2_0__0_in_rule__HashKeyValue__Alternatives_2932);
+                    pushFollow(FOLLOW_rule__HashKeyValue__Group_2_0__0_in_rule__HashKeyValue__Alternatives_2992);
                     rule__HashKeyValue__Group_2_0__0();
 
                     state._fsp--;
@@ -1305,16 +1385,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:467:6: ( ( rule__HashKeyValue__Group_2_1__0 ) )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:495:6: ( ( rule__HashKeyValue__Group_2_1__0 ) )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:467:6: ( ( rule__HashKeyValue__Group_2_1__0 ) )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:468:1: ( rule__HashKeyValue__Group_2_1__0 )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:495:6: ( ( rule__HashKeyValue__Group_2_1__0 ) )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:496:1: ( rule__HashKeyValue__Group_2_1__0 )
                     {
                      before(grammarAccess.getHashKeyValueAccess().getGroup_2_1()); 
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:469:1: ( rule__HashKeyValue__Group_2_1__0 )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:469:2: rule__HashKeyValue__Group_2_1__0
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:497:1: ( rule__HashKeyValue__Group_2_1__0 )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:497:2: rule__HashKeyValue__Group_2_1__0
                     {
-                    pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__0_in_rule__HashKeyValue__Alternatives_2950);
+                    pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__0_in_rule__HashKeyValue__Alternatives_21010);
                     rule__HashKeyValue__Group_2_1__0();
 
                     state._fsp--;
@@ -1347,13 +1427,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__KeyAlternatives_2_1_0_0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:478:1: rule__HashKeyValue__KeyAlternatives_2_1_0_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:506:1: rule__HashKeyValue__KeyAlternatives_2_1_0_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
     public final void rule__HashKeyValue__KeyAlternatives_2_1_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:482:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:510:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1371,13 +1451,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:483:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:511:1: ( RULE_SYMBOL )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:483:1: ( RULE_SYMBOL )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:484:1: RULE_SYMBOL
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:511:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:512:1: RULE_SYMBOL
                     {
                      before(grammarAccess.getHashKeyValueAccess().getKeySYMBOLTerminalRuleCall_2_1_0_0_0()); 
-                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__HashKeyValue__KeyAlternatives_2_1_0_0983); 
+                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__HashKeyValue__KeyAlternatives_2_1_0_01043); 
                      after(grammarAccess.getHashKeyValueAccess().getKeySYMBOLTerminalRuleCall_2_1_0_0_0()); 
 
                     }
@@ -1386,13 +1466,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:489:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:517:6: ( RULE_STRING )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:489:6: ( RULE_STRING )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:490:1: RULE_STRING
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:517:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:518:1: RULE_STRING
                     {
                      before(grammarAccess.getHashKeyValueAccess().getKeySTRINGTerminalRuleCall_2_1_0_0_1()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__HashKeyValue__KeyAlternatives_2_1_0_01000); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__HashKeyValue__KeyAlternatives_2_1_0_01060); 
                      after(grammarAccess.getHashKeyValueAccess().getKeySTRINGTerminalRuleCall_2_1_0_0_1()); 
 
                     }
@@ -1418,37 +1498,56 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__ValueAlternatives_4_0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:500:1: rule__HashKeyValue__ValueAlternatives_4_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:528:1: rule__HashKeyValue__ValueAlternatives_4_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( ruleMethodChainCall ) );
     public final void rule__HashKeyValue__ValueAlternatives_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:504:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0==RULE_SYMBOL) ) {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:532:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( ruleMethodChainCall ) )
+            int alt8=5;
+            switch ( input.LA(1) ) {
+            case RULE_SYMBOL:
+                {
                 alt8=1;
-            }
-            else if ( (LA8_0==RULE_STRING) ) {
+                }
+                break;
+            case RULE_STRING:
+                {
                 alt8=2;
-            }
-            else {
+                }
+                break;
+            case RULE_BRACKET_BLOCK:
+                {
+                alt8=3;
+                }
+                break;
+            case RULE_ARRAY_BLOCK:
+                {
+                alt8=4;
+                }
+                break;
+            case RULE_ID:
+                {
+                alt8=5;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
+
             switch (alt8) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:505:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:533:1: ( RULE_SYMBOL )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:505:1: ( RULE_SYMBOL )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:506:1: RULE_SYMBOL
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:533:1: ( RULE_SYMBOL )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:534:1: RULE_SYMBOL
                     {
                      before(grammarAccess.getHashKeyValueAccess().getValueSYMBOLTerminalRuleCall_4_0_0()); 
-                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__HashKeyValue__ValueAlternatives_4_01032); 
+                    match(input,RULE_SYMBOL,FOLLOW_RULE_SYMBOL_in_rule__HashKeyValue__ValueAlternatives_4_01092); 
                      after(grammarAccess.getHashKeyValueAccess().getValueSYMBOLTerminalRuleCall_4_0_0()); 
 
                     }
@@ -1457,14 +1556,63 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:511:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:539:6: ( RULE_STRING )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:511:6: ( RULE_STRING )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:512:1: RULE_STRING
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:539:6: ( RULE_STRING )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:540:1: RULE_STRING
                     {
                      before(grammarAccess.getHashKeyValueAccess().getValueSTRINGTerminalRuleCall_4_0_1()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__HashKeyValue__ValueAlternatives_4_01049); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__HashKeyValue__ValueAlternatives_4_01109); 
                      after(grammarAccess.getHashKeyValueAccess().getValueSTRINGTerminalRuleCall_4_0_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:545:6: ( RULE_BRACKET_BLOCK )
+                    {
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:545:6: ( RULE_BRACKET_BLOCK )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:546:1: RULE_BRACKET_BLOCK
+                    {
+                     before(grammarAccess.getHashKeyValueAccess().getValueBRACKET_BLOCKTerminalRuleCall_4_0_2()); 
+                    match(input,RULE_BRACKET_BLOCK,FOLLOW_RULE_BRACKET_BLOCK_in_rule__HashKeyValue__ValueAlternatives_4_01126); 
+                     after(grammarAccess.getHashKeyValueAccess().getValueBRACKET_BLOCKTerminalRuleCall_4_0_2()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:551:6: ( RULE_ARRAY_BLOCK )
+                    {
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:551:6: ( RULE_ARRAY_BLOCK )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:552:1: RULE_ARRAY_BLOCK
+                    {
+                     before(grammarAccess.getHashKeyValueAccess().getValueARRAY_BLOCKTerminalRuleCall_4_0_3()); 
+                    match(input,RULE_ARRAY_BLOCK,FOLLOW_RULE_ARRAY_BLOCK_in_rule__HashKeyValue__ValueAlternatives_4_01143); 
+                     after(grammarAccess.getHashKeyValueAccess().getValueARRAY_BLOCKTerminalRuleCall_4_0_3()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:557:6: ( ruleMethodChainCall )
+                    {
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:557:6: ( ruleMethodChainCall )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:558:1: ruleMethodChainCall
+                    {
+                     before(grammarAccess.getHashKeyValueAccess().getValueMethodChainCallParserRuleCall_4_0_4()); 
+                    pushFollow(FOLLOW_ruleMethodChainCall_in_rule__HashKeyValue__ValueAlternatives_4_01160);
+                    ruleMethodChainCall();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getHashKeyValueAccess().getValueMethodChainCallParserRuleCall_4_0_4()); 
 
                     }
 
@@ -1489,20 +1637,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Alternatives_1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:522:1: rule__MethodName__Alternatives_1 : ( ( '?' ) | ( '=' ) );
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:568:1: rule__MethodName__Alternatives_1 : ( ( '?' ) | ( '=' ) );
     public final void rule__MethodName__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:526:1: ( ( '?' ) | ( '=' ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:572:1: ( ( '?' ) | ( '=' ) )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==19) ) {
+            if ( (LA9_0==21) ) {
                 alt9=1;
             }
-            else if ( (LA9_0==20) ) {
+            else if ( (LA9_0==22) ) {
                 alt9=2;
             }
             else {
@@ -1513,13 +1661,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:527:1: ( '?' )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:573:1: ( '?' )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:527:1: ( '?' )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:528:1: '?'
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:573:1: ( '?' )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:574:1: '?'
                     {
                      before(grammarAccess.getMethodNameAccess().getQuestionMarkKeyword_1_0()); 
-                    match(input,19,FOLLOW_19_in_rule__MethodName__Alternatives_11082); 
+                    match(input,21,FOLLOW_21_in_rule__MethodName__Alternatives_11193); 
                      after(grammarAccess.getMethodNameAccess().getQuestionMarkKeyword_1_0()); 
 
                     }
@@ -1528,13 +1676,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:535:6: ( '=' )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:581:6: ( '=' )
                     {
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:535:6: ( '=' )
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:536:1: '='
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:581:6: ( '=' )
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:582:1: '='
                     {
                      before(grammarAccess.getMethodNameAccess().getEqualsSignKeyword_1_1()); 
-                    match(input,20,FOLLOW_20_in_rule__MethodName__Alternatives_11102); 
+                    match(input,22,FOLLOW_22_in_rule__MethodName__Alternatives_11213); 
                      after(grammarAccess.getMethodNameAccess().getEqualsSignKeyword_1_1()); 
 
                     }
@@ -1560,21 +1708,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:550:1: rule__Class__Group__0 : rule__Class__Group__0__Impl rule__Class__Group__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:596:1: rule__Class__Group__0 : rule__Class__Group__0__Impl rule__Class__Group__1 ;
     public final void rule__Class__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:554:1: ( rule__Class__Group__0__Impl rule__Class__Group__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:555:2: rule__Class__Group__0__Impl rule__Class__Group__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:600:1: ( rule__Class__Group__0__Impl rule__Class__Group__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:601:2: rule__Class__Group__0__Impl rule__Class__Group__1
             {
-            pushFollow(FOLLOW_rule__Class__Group__0__Impl_in_rule__Class__Group__01134);
+            pushFollow(FOLLOW_rule__Class__Group__0__Impl_in_rule__Class__Group__01245);
             rule__Class__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Class__Group__1_in_rule__Class__Group__01137);
+            pushFollow(FOLLOW_rule__Class__Group__1_in_rule__Class__Group__01248);
             rule__Class__Group__1();
 
             state._fsp--;
@@ -1598,20 +1746,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:562:1: rule__Class__Group__0__Impl : ( RULE_CLASS_WORD ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:608:1: rule__Class__Group__0__Impl : ( RULE_CLASS_WORD ) ;
     public final void rule__Class__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:566:1: ( ( RULE_CLASS_WORD ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:567:1: ( RULE_CLASS_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:612:1: ( ( RULE_CLASS_WORD ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:613:1: ( RULE_CLASS_WORD )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:567:1: ( RULE_CLASS_WORD )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:568:1: RULE_CLASS_WORD
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:613:1: ( RULE_CLASS_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:614:1: RULE_CLASS_WORD
             {
              before(grammarAccess.getClassAccess().getCLASS_WORDTerminalRuleCall_0()); 
-            match(input,RULE_CLASS_WORD,FOLLOW_RULE_CLASS_WORD_in_rule__Class__Group__0__Impl1164); 
+            match(input,RULE_CLASS_WORD,FOLLOW_RULE_CLASS_WORD_in_rule__Class__Group__0__Impl1275); 
              after(grammarAccess.getClassAccess().getCLASS_WORDTerminalRuleCall_0()); 
 
             }
@@ -1635,21 +1783,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:579:1: rule__Class__Group__1 : rule__Class__Group__1__Impl rule__Class__Group__2 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:625:1: rule__Class__Group__1 : rule__Class__Group__1__Impl rule__Class__Group__2 ;
     public final void rule__Class__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:583:1: ( rule__Class__Group__1__Impl rule__Class__Group__2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:584:2: rule__Class__Group__1__Impl rule__Class__Group__2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:629:1: ( rule__Class__Group__1__Impl rule__Class__Group__2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:630:2: rule__Class__Group__1__Impl rule__Class__Group__2
             {
-            pushFollow(FOLLOW_rule__Class__Group__1__Impl_in_rule__Class__Group__11193);
+            pushFollow(FOLLOW_rule__Class__Group__1__Impl_in_rule__Class__Group__11304);
             rule__Class__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Class__Group__2_in_rule__Class__Group__11196);
+            pushFollow(FOLLOW_rule__Class__Group__2_in_rule__Class__Group__11307);
             rule__Class__Group__2();
 
             state._fsp--;
@@ -1673,35 +1821,35 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:591:1: rule__Class__Group__1__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:637:1: rule__Class__Group__1__Impl : ( ( ' ' )* ) ;
     public final void rule__Class__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:595:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:596:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:641:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:642:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:596:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:597:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:642:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:643:1: ( ' ' )*
             {
              before(grammarAccess.getClassAccess().getSpaceKeyword_1()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:598:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:644:1: ( ' ' )*
             loop10:
             do {
                 int alt10=2;
                 int LA10_0 = input.LA(1);
 
-                if ( (LA10_0==21) ) {
+                if ( (LA10_0==23) ) {
                     alt10=1;
                 }
 
 
                 switch (alt10) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:599:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:645:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__Class__Group__1__Impl1225); 
+            	    match(input,23,FOLLOW_23_in_rule__Class__Group__1__Impl1336); 
 
             	    }
             	    break;
@@ -1734,21 +1882,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:610:1: rule__Class__Group__2 : rule__Class__Group__2__Impl rule__Class__Group__3 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:656:1: rule__Class__Group__2 : rule__Class__Group__2__Impl rule__Class__Group__3 ;
     public final void rule__Class__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:614:1: ( rule__Class__Group__2__Impl rule__Class__Group__3 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:615:2: rule__Class__Group__2__Impl rule__Class__Group__3
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:660:1: ( rule__Class__Group__2__Impl rule__Class__Group__3 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:661:2: rule__Class__Group__2__Impl rule__Class__Group__3
             {
-            pushFollow(FOLLOW_rule__Class__Group__2__Impl_in_rule__Class__Group__21258);
+            pushFollow(FOLLOW_rule__Class__Group__2__Impl_in_rule__Class__Group__21369);
             rule__Class__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Class__Group__3_in_rule__Class__Group__21261);
+            pushFollow(FOLLOW_rule__Class__Group__3_in_rule__Class__Group__21372);
             rule__Class__Group__3();
 
             state._fsp--;
@@ -1772,23 +1920,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__2__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:622:1: rule__Class__Group__2__Impl : ( ( rule__Class__NameAssignment_2 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:668:1: rule__Class__Group__2__Impl : ( ( rule__Class__NameAssignment_2 ) ) ;
     public final void rule__Class__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:626:1: ( ( ( rule__Class__NameAssignment_2 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:627:1: ( ( rule__Class__NameAssignment_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:672:1: ( ( ( rule__Class__NameAssignment_2 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:673:1: ( ( rule__Class__NameAssignment_2 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:627:1: ( ( rule__Class__NameAssignment_2 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:628:1: ( rule__Class__NameAssignment_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:673:1: ( ( rule__Class__NameAssignment_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:674:1: ( rule__Class__NameAssignment_2 )
             {
              before(grammarAccess.getClassAccess().getNameAssignment_2()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:629:1: ( rule__Class__NameAssignment_2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:629:2: rule__Class__NameAssignment_2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:675:1: ( rule__Class__NameAssignment_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:675:2: rule__Class__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Class__NameAssignment_2_in_rule__Class__Group__2__Impl1288);
+            pushFollow(FOLLOW_rule__Class__NameAssignment_2_in_rule__Class__Group__2__Impl1399);
             rule__Class__NameAssignment_2();
 
             state._fsp--;
@@ -1819,21 +1967,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__3"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:639:1: rule__Class__Group__3 : rule__Class__Group__3__Impl rule__Class__Group__4 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:685:1: rule__Class__Group__3 : rule__Class__Group__3__Impl rule__Class__Group__4 ;
     public final void rule__Class__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:643:1: ( rule__Class__Group__3__Impl rule__Class__Group__4 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:644:2: rule__Class__Group__3__Impl rule__Class__Group__4
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:689:1: ( rule__Class__Group__3__Impl rule__Class__Group__4 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:690:2: rule__Class__Group__3__Impl rule__Class__Group__4
             {
-            pushFollow(FOLLOW_rule__Class__Group__3__Impl_in_rule__Class__Group__31318);
+            pushFollow(FOLLOW_rule__Class__Group__3__Impl_in_rule__Class__Group__31429);
             rule__Class__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Class__Group__4_in_rule__Class__Group__31321);
+            pushFollow(FOLLOW_rule__Class__Group__4_in_rule__Class__Group__31432);
             rule__Class__Group__4();
 
             state._fsp--;
@@ -1857,27 +2005,27 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__3__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:651:1: rule__Class__Group__3__Impl : ( ( rule__Class__Group_3__0 )? ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:697:1: rule__Class__Group__3__Impl : ( ( rule__Class__Group_3__0 )? ) ;
     public final void rule__Class__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:655:1: ( ( ( rule__Class__Group_3__0 )? ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:656:1: ( ( rule__Class__Group_3__0 )? )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:701:1: ( ( ( rule__Class__Group_3__0 )? ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:702:1: ( ( rule__Class__Group_3__0 )? )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:656:1: ( ( rule__Class__Group_3__0 )? )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:657:1: ( rule__Class__Group_3__0 )?
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:702:1: ( ( rule__Class__Group_3__0 )? )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:703:1: ( rule__Class__Group_3__0 )?
             {
              before(grammarAccess.getClassAccess().getGroup_3()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:658:1: ( rule__Class__Group_3__0 )?
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:704:1: ( rule__Class__Group_3__0 )?
             int alt11=2;
             alt11 = dfa11.predict(input);
             switch (alt11) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:658:2: rule__Class__Group_3__0
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:704:2: rule__Class__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Class__Group_3__0_in_rule__Class__Group__3__Impl1348);
+                    pushFollow(FOLLOW_rule__Class__Group_3__0_in_rule__Class__Group__3__Impl1459);
                     rule__Class__Group_3__0();
 
                     state._fsp--;
@@ -1911,21 +2059,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__4"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:668:1: rule__Class__Group__4 : rule__Class__Group__4__Impl rule__Class__Group__5 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:714:1: rule__Class__Group__4 : rule__Class__Group__4__Impl rule__Class__Group__5 ;
     public final void rule__Class__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:672:1: ( rule__Class__Group__4__Impl rule__Class__Group__5 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:673:2: rule__Class__Group__4__Impl rule__Class__Group__5
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:718:1: ( rule__Class__Group__4__Impl rule__Class__Group__5 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:719:2: rule__Class__Group__4__Impl rule__Class__Group__5
             {
-            pushFollow(FOLLOW_rule__Class__Group__4__Impl_in_rule__Class__Group__41379);
+            pushFollow(FOLLOW_rule__Class__Group__4__Impl_in_rule__Class__Group__41490);
             rule__Class__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Class__Group__5_in_rule__Class__Group__41382);
+            pushFollow(FOLLOW_rule__Class__Group__5_in_rule__Class__Group__41493);
             rule__Class__Group__5();
 
             state._fsp--;
@@ -1949,35 +2097,35 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__4__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:680:1: rule__Class__Group__4__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:726:1: rule__Class__Group__4__Impl : ( ( ' ' )* ) ;
     public final void rule__Class__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:684:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:685:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:730:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:731:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:685:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:686:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:731:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:732:1: ( ' ' )*
             {
              before(grammarAccess.getClassAccess().getSpaceKeyword_4()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:687:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:733:1: ( ' ' )*
             loop12:
             do {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( (LA12_0==21) ) {
+                if ( (LA12_0==23) ) {
                     alt12=1;
                 }
 
 
                 switch (alt12) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:688:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:734:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__Class__Group__4__Impl1411); 
+            	    match(input,23,FOLLOW_23_in_rule__Class__Group__4__Impl1522); 
 
             	    }
             	    break;
@@ -2010,21 +2158,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__5"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:699:1: rule__Class__Group__5 : rule__Class__Group__5__Impl rule__Class__Group__6 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:745:1: rule__Class__Group__5 : rule__Class__Group__5__Impl rule__Class__Group__6 ;
     public final void rule__Class__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:703:1: ( rule__Class__Group__5__Impl rule__Class__Group__6 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:704:2: rule__Class__Group__5__Impl rule__Class__Group__6
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:749:1: ( rule__Class__Group__5__Impl rule__Class__Group__6 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:750:2: rule__Class__Group__5__Impl rule__Class__Group__6
             {
-            pushFollow(FOLLOW_rule__Class__Group__5__Impl_in_rule__Class__Group__51444);
+            pushFollow(FOLLOW_rule__Class__Group__5__Impl_in_rule__Class__Group__51555);
             rule__Class__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Class__Group__6_in_rule__Class__Group__51447);
+            pushFollow(FOLLOW_rule__Class__Group__6_in_rule__Class__Group__51558);
             rule__Class__Group__6();
 
             state._fsp--;
@@ -2048,35 +2196,35 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__5__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:711:1: rule__Class__Group__5__Impl : ( ( rule__Class__ClassElementsAssignment_5 )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:757:1: rule__Class__Group__5__Impl : ( ( rule__Class__ClassElementsAssignment_5 )* ) ;
     public final void rule__Class__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:715:1: ( ( ( rule__Class__ClassElementsAssignment_5 )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:716:1: ( ( rule__Class__ClassElementsAssignment_5 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:761:1: ( ( ( rule__Class__ClassElementsAssignment_5 )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:762:1: ( ( rule__Class__ClassElementsAssignment_5 )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:716:1: ( ( rule__Class__ClassElementsAssignment_5 )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:717:1: ( rule__Class__ClassElementsAssignment_5 )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:762:1: ( ( rule__Class__ClassElementsAssignment_5 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:763:1: ( rule__Class__ClassElementsAssignment_5 )*
             {
              before(grammarAccess.getClassAccess().getClassElementsAssignment_5()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:718:1: ( rule__Class__ClassElementsAssignment_5 )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:764:1: ( rule__Class__ClassElementsAssignment_5 )*
             loop13:
             do {
                 int alt13=2;
                 int LA13_0 = input.LA(1);
 
-                if ( ((LA13_0>=RULE_HAS_MANY_WORD && LA13_0<=RULE_DEF_WORD)) ) {
+                if ( (LA13_0==RULE_HAS_MANY_WORD||(LA13_0>=RULE_HAS_AND_BELONGS_TO_MANY_WORD && LA13_0<=RULE_DEF_WORD)) ) {
                     alt13=1;
                 }
 
 
                 switch (alt13) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:718:2: rule__Class__ClassElementsAssignment_5
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:764:2: rule__Class__ClassElementsAssignment_5
             	    {
-            	    pushFollow(FOLLOW_rule__Class__ClassElementsAssignment_5_in_rule__Class__Group__5__Impl1474);
+            	    pushFollow(FOLLOW_rule__Class__ClassElementsAssignment_5_in_rule__Class__Group__5__Impl1585);
             	    rule__Class__ClassElementsAssignment_5();
 
             	    state._fsp--;
@@ -2113,16 +2261,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__6"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:728:1: rule__Class__Group__6 : rule__Class__Group__6__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:774:1: rule__Class__Group__6 : rule__Class__Group__6__Impl ;
     public final void rule__Class__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:732:1: ( rule__Class__Group__6__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:733:2: rule__Class__Group__6__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:778:1: ( rule__Class__Group__6__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:779:2: rule__Class__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__Class__Group__6__Impl_in_rule__Class__Group__61505);
+            pushFollow(FOLLOW_rule__Class__Group__6__Impl_in_rule__Class__Group__61616);
             rule__Class__Group__6__Impl();
 
             state._fsp--;
@@ -2146,20 +2294,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__6__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:739:1: rule__Class__Group__6__Impl : ( RULE_END_WORD ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:785:1: rule__Class__Group__6__Impl : ( RULE_END_WORD ) ;
     public final void rule__Class__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:743:1: ( ( RULE_END_WORD ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:744:1: ( RULE_END_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:789:1: ( ( RULE_END_WORD ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:790:1: ( RULE_END_WORD )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:744:1: ( RULE_END_WORD )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:745:1: RULE_END_WORD
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:790:1: ( RULE_END_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:791:1: RULE_END_WORD
             {
              before(grammarAccess.getClassAccess().getEND_WORDTerminalRuleCall_6()); 
-            match(input,RULE_END_WORD,FOLLOW_RULE_END_WORD_in_rule__Class__Group__6__Impl1532); 
+            match(input,RULE_END_WORD,FOLLOW_RULE_END_WORD_in_rule__Class__Group__6__Impl1643); 
              after(grammarAccess.getClassAccess().getEND_WORDTerminalRuleCall_6()); 
 
             }
@@ -2183,21 +2331,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:770:1: rule__Class__Group_3__0 : rule__Class__Group_3__0__Impl rule__Class__Group_3__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:816:1: rule__Class__Group_3__0 : rule__Class__Group_3__0__Impl rule__Class__Group_3__1 ;
     public final void rule__Class__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:774:1: ( rule__Class__Group_3__0__Impl rule__Class__Group_3__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:775:2: rule__Class__Group_3__0__Impl rule__Class__Group_3__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:820:1: ( rule__Class__Group_3__0__Impl rule__Class__Group_3__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:821:2: rule__Class__Group_3__0__Impl rule__Class__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Class__Group_3__0__Impl_in_rule__Class__Group_3__01575);
+            pushFollow(FOLLOW_rule__Class__Group_3__0__Impl_in_rule__Class__Group_3__01686);
             rule__Class__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Class__Group_3__1_in_rule__Class__Group_3__01578);
+            pushFollow(FOLLOW_rule__Class__Group_3__1_in_rule__Class__Group_3__01689);
             rule__Class__Group_3__1();
 
             state._fsp--;
@@ -2221,35 +2369,35 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:782:1: rule__Class__Group_3__0__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:828:1: rule__Class__Group_3__0__Impl : ( ( ' ' )* ) ;
     public final void rule__Class__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:786:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:787:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:832:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:833:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:787:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:788:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:833:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:834:1: ( ' ' )*
             {
              before(grammarAccess.getClassAccess().getSpaceKeyword_3_0()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:789:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:835:1: ( ' ' )*
             loop14:
             do {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( (LA14_0==21) ) {
+                if ( (LA14_0==23) ) {
                     alt14=1;
                 }
 
 
                 switch (alt14) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:790:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:836:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__Class__Group_3__0__Impl1607); 
+            	    match(input,23,FOLLOW_23_in_rule__Class__Group_3__0__Impl1718); 
 
             	    }
             	    break;
@@ -2282,21 +2430,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:801:1: rule__Class__Group_3__1 : rule__Class__Group_3__1__Impl rule__Class__Group_3__2 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:847:1: rule__Class__Group_3__1 : rule__Class__Group_3__1__Impl rule__Class__Group_3__2 ;
     public final void rule__Class__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:805:1: ( rule__Class__Group_3__1__Impl rule__Class__Group_3__2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:806:2: rule__Class__Group_3__1__Impl rule__Class__Group_3__2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:851:1: ( rule__Class__Group_3__1__Impl rule__Class__Group_3__2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:852:2: rule__Class__Group_3__1__Impl rule__Class__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Class__Group_3__1__Impl_in_rule__Class__Group_3__11640);
+            pushFollow(FOLLOW_rule__Class__Group_3__1__Impl_in_rule__Class__Group_3__11751);
             rule__Class__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Class__Group_3__2_in_rule__Class__Group_3__11643);
+            pushFollow(FOLLOW_rule__Class__Group_3__2_in_rule__Class__Group_3__11754);
             rule__Class__Group_3__2();
 
             state._fsp--;
@@ -2320,20 +2468,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:813:1: rule__Class__Group_3__1__Impl : ( '<' ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:859:1: rule__Class__Group_3__1__Impl : ( '<' ) ;
     public final void rule__Class__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:817:1: ( ( '<' ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:818:1: ( '<' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:863:1: ( ( '<' ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:864:1: ( '<' )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:818:1: ( '<' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:819:1: '<'
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:864:1: ( '<' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:865:1: '<'
             {
              before(grammarAccess.getClassAccess().getLessThanSignKeyword_3_1()); 
-            match(input,22,FOLLOW_22_in_rule__Class__Group_3__1__Impl1671); 
+            match(input,24,FOLLOW_24_in_rule__Class__Group_3__1__Impl1782); 
              after(grammarAccess.getClassAccess().getLessThanSignKeyword_3_1()); 
 
             }
@@ -2357,21 +2505,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:832:1: rule__Class__Group_3__2 : rule__Class__Group_3__2__Impl rule__Class__Group_3__3 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:878:1: rule__Class__Group_3__2 : rule__Class__Group_3__2__Impl rule__Class__Group_3__3 ;
     public final void rule__Class__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:836:1: ( rule__Class__Group_3__2__Impl rule__Class__Group_3__3 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:837:2: rule__Class__Group_3__2__Impl rule__Class__Group_3__3
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:882:1: ( rule__Class__Group_3__2__Impl rule__Class__Group_3__3 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:883:2: rule__Class__Group_3__2__Impl rule__Class__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Class__Group_3__2__Impl_in_rule__Class__Group_3__21702);
+            pushFollow(FOLLOW_rule__Class__Group_3__2__Impl_in_rule__Class__Group_3__21813);
             rule__Class__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Class__Group_3__3_in_rule__Class__Group_3__21705);
+            pushFollow(FOLLOW_rule__Class__Group_3__3_in_rule__Class__Group_3__21816);
             rule__Class__Group_3__3();
 
             state._fsp--;
@@ -2395,35 +2543,35 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__2__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:844:1: rule__Class__Group_3__2__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:890:1: rule__Class__Group_3__2__Impl : ( ( ' ' )* ) ;
     public final void rule__Class__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:848:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:849:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:894:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:895:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:849:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:850:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:895:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:896:1: ( ' ' )*
             {
              before(grammarAccess.getClassAccess().getSpaceKeyword_3_2()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:851:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:897:1: ( ' ' )*
             loop15:
             do {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==21) ) {
+                if ( (LA15_0==23) ) {
                     alt15=1;
                 }
 
 
                 switch (alt15) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:852:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:898:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__Class__Group_3__2__Impl1734); 
+            	    match(input,23,FOLLOW_23_in_rule__Class__Group_3__2__Impl1845); 
 
             	    }
             	    break;
@@ -2456,16 +2604,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__3"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:863:1: rule__Class__Group_3__3 : rule__Class__Group_3__3__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:909:1: rule__Class__Group_3__3 : rule__Class__Group_3__3__Impl ;
     public final void rule__Class__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:867:1: ( rule__Class__Group_3__3__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:868:2: rule__Class__Group_3__3__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:913:1: ( rule__Class__Group_3__3__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:914:2: rule__Class__Group_3__3__Impl
             {
-            pushFollow(FOLLOW_rule__Class__Group_3__3__Impl_in_rule__Class__Group_3__31767);
+            pushFollow(FOLLOW_rule__Class__Group_3__3__Impl_in_rule__Class__Group_3__31878);
             rule__Class__Group_3__3__Impl();
 
             state._fsp--;
@@ -2489,23 +2637,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__3__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:874:1: rule__Class__Group_3__3__Impl : ( ( rule__Class__SuperTypeAssignment_3_3 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:920:1: rule__Class__Group_3__3__Impl : ( ( rule__Class__SuperTypeAssignment_3_3 ) ) ;
     public final void rule__Class__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:878:1: ( ( ( rule__Class__SuperTypeAssignment_3_3 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:879:1: ( ( rule__Class__SuperTypeAssignment_3_3 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:924:1: ( ( ( rule__Class__SuperTypeAssignment_3_3 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:925:1: ( ( rule__Class__SuperTypeAssignment_3_3 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:879:1: ( ( rule__Class__SuperTypeAssignment_3_3 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:880:1: ( rule__Class__SuperTypeAssignment_3_3 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:925:1: ( ( rule__Class__SuperTypeAssignment_3_3 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:926:1: ( rule__Class__SuperTypeAssignment_3_3 )
             {
              before(grammarAccess.getClassAccess().getSuperTypeAssignment_3_3()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:881:1: ( rule__Class__SuperTypeAssignment_3_3 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:881:2: rule__Class__SuperTypeAssignment_3_3
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:927:1: ( rule__Class__SuperTypeAssignment_3_3 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:927:2: rule__Class__SuperTypeAssignment_3_3
             {
-            pushFollow(FOLLOW_rule__Class__SuperTypeAssignment_3_3_in_rule__Class__Group_3__3__Impl1794);
+            pushFollow(FOLLOW_rule__Class__SuperTypeAssignment_3_3_in_rule__Class__Group_3__3__Impl1905);
             rule__Class__SuperTypeAssignment_3_3();
 
             state._fsp--;
@@ -2536,21 +2684,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:899:1: rule__NamespacedModuleName__Group__0 : rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:945:1: rule__NamespacedModuleName__Group__0 : rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1 ;
     public final void rule__NamespacedModuleName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:903:1: ( rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:904:2: rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:949:1: ( rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:950:2: rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1
             {
-            pushFollow(FOLLOW_rule__NamespacedModuleName__Group__0__Impl_in_rule__NamespacedModuleName__Group__01832);
+            pushFollow(FOLLOW_rule__NamespacedModuleName__Group__0__Impl_in_rule__NamespacedModuleName__Group__01943);
             rule__NamespacedModuleName__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespacedModuleName__Group__1_in_rule__NamespacedModuleName__Group__01835);
+            pushFollow(FOLLOW_rule__NamespacedModuleName__Group__1_in_rule__NamespacedModuleName__Group__01946);
             rule__NamespacedModuleName__Group__1();
 
             state._fsp--;
@@ -2574,20 +2722,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:911:1: rule__NamespacedModuleName__Group__0__Impl : ( ( rule__NamespacedModuleName__Group_0__0 )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:957:1: rule__NamespacedModuleName__Group__0__Impl : ( ( rule__NamespacedModuleName__Group_0__0 )* ) ;
     public final void rule__NamespacedModuleName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:915:1: ( ( ( rule__NamespacedModuleName__Group_0__0 )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:916:1: ( ( rule__NamespacedModuleName__Group_0__0 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:961:1: ( ( ( rule__NamespacedModuleName__Group_0__0 )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:962:1: ( ( rule__NamespacedModuleName__Group_0__0 )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:916:1: ( ( rule__NamespacedModuleName__Group_0__0 )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:917:1: ( rule__NamespacedModuleName__Group_0__0 )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:962:1: ( ( rule__NamespacedModuleName__Group_0__0 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:963:1: ( rule__NamespacedModuleName__Group_0__0 )*
             {
              before(grammarAccess.getNamespacedModuleNameAccess().getGroup_0()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:918:1: ( rule__NamespacedModuleName__Group_0__0 )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:964:1: ( rule__NamespacedModuleName__Group_0__0 )*
             loop16:
             do {
                 int alt16=2;
@@ -2596,7 +2744,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                 if ( (LA16_0==RULE_ID) ) {
                     int LA16_1 = input.LA(2);
 
-                    if ( (LA16_1==23) ) {
+                    if ( (LA16_1==25) ) {
                         alt16=1;
                     }
 
@@ -2606,9 +2754,9 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:918:2: rule__NamespacedModuleName__Group_0__0
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:964:2: rule__NamespacedModuleName__Group_0__0
             	    {
-            	    pushFollow(FOLLOW_rule__NamespacedModuleName__Group_0__0_in_rule__NamespacedModuleName__Group__0__Impl1862);
+            	    pushFollow(FOLLOW_rule__NamespacedModuleName__Group_0__0_in_rule__NamespacedModuleName__Group__0__Impl1973);
             	    rule__NamespacedModuleName__Group_0__0();
 
             	    state._fsp--;
@@ -2645,16 +2793,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:928:1: rule__NamespacedModuleName__Group__1 : rule__NamespacedModuleName__Group__1__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:974:1: rule__NamespacedModuleName__Group__1 : rule__NamespacedModuleName__Group__1__Impl ;
     public final void rule__NamespacedModuleName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:932:1: ( rule__NamespacedModuleName__Group__1__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:933:2: rule__NamespacedModuleName__Group__1__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:978:1: ( rule__NamespacedModuleName__Group__1__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:979:2: rule__NamespacedModuleName__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__NamespacedModuleName__Group__1__Impl_in_rule__NamespacedModuleName__Group__11893);
+            pushFollow(FOLLOW_rule__NamespacedModuleName__Group__1__Impl_in_rule__NamespacedModuleName__Group__12004);
             rule__NamespacedModuleName__Group__1__Impl();
 
             state._fsp--;
@@ -2678,20 +2826,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:939:1: rule__NamespacedModuleName__Group__1__Impl : ( RULE_ID ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:985:1: rule__NamespacedModuleName__Group__1__Impl : ( RULE_ID ) ;
     public final void rule__NamespacedModuleName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:943:1: ( ( RULE_ID ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:944:1: ( RULE_ID )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:989:1: ( ( RULE_ID ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:990:1: ( RULE_ID )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:944:1: ( RULE_ID )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:945:1: RULE_ID
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:990:1: ( RULE_ID )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:991:1: RULE_ID
             {
              before(grammarAccess.getNamespacedModuleNameAccess().getIDTerminalRuleCall_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NamespacedModuleName__Group__1__Impl1920); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NamespacedModuleName__Group__1__Impl2031); 
              after(grammarAccess.getNamespacedModuleNameAccess().getIDTerminalRuleCall_1()); 
 
             }
@@ -2715,21 +2863,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group_0__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:960:1: rule__NamespacedModuleName__Group_0__0 : rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1006:1: rule__NamespacedModuleName__Group_0__0 : rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1 ;
     public final void rule__NamespacedModuleName__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:964:1: ( rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:965:2: rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1010:1: ( rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1011:2: rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1
             {
-            pushFollow(FOLLOW_rule__NamespacedModuleName__Group_0__0__Impl_in_rule__NamespacedModuleName__Group_0__01953);
+            pushFollow(FOLLOW_rule__NamespacedModuleName__Group_0__0__Impl_in_rule__NamespacedModuleName__Group_0__02064);
             rule__NamespacedModuleName__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamespacedModuleName__Group_0__1_in_rule__NamespacedModuleName__Group_0__01956);
+            pushFollow(FOLLOW_rule__NamespacedModuleName__Group_0__1_in_rule__NamespacedModuleName__Group_0__02067);
             rule__NamespacedModuleName__Group_0__1();
 
             state._fsp--;
@@ -2753,20 +2901,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group_0__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:972:1: rule__NamespacedModuleName__Group_0__0__Impl : ( RULE_ID ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1018:1: rule__NamespacedModuleName__Group_0__0__Impl : ( RULE_ID ) ;
     public final void rule__NamespacedModuleName__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:976:1: ( ( RULE_ID ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:977:1: ( RULE_ID )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1022:1: ( ( RULE_ID ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1023:1: ( RULE_ID )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:977:1: ( RULE_ID )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:978:1: RULE_ID
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1023:1: ( RULE_ID )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1024:1: RULE_ID
             {
              before(grammarAccess.getNamespacedModuleNameAccess().getIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NamespacedModuleName__Group_0__0__Impl1983); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NamespacedModuleName__Group_0__0__Impl2094); 
              after(grammarAccess.getNamespacedModuleNameAccess().getIDTerminalRuleCall_0_0()); 
 
             }
@@ -2790,16 +2938,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group_0__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:989:1: rule__NamespacedModuleName__Group_0__1 : rule__NamespacedModuleName__Group_0__1__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1035:1: rule__NamespacedModuleName__Group_0__1 : rule__NamespacedModuleName__Group_0__1__Impl ;
     public final void rule__NamespacedModuleName__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:993:1: ( rule__NamespacedModuleName__Group_0__1__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:994:2: rule__NamespacedModuleName__Group_0__1__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1039:1: ( rule__NamespacedModuleName__Group_0__1__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1040:2: rule__NamespacedModuleName__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__NamespacedModuleName__Group_0__1__Impl_in_rule__NamespacedModuleName__Group_0__12012);
+            pushFollow(FOLLOW_rule__NamespacedModuleName__Group_0__1__Impl_in_rule__NamespacedModuleName__Group_0__12123);
             rule__NamespacedModuleName__Group_0__1__Impl();
 
             state._fsp--;
@@ -2823,20 +2971,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group_0__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1000:1: rule__NamespacedModuleName__Group_0__1__Impl : ( '::' ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1046:1: rule__NamespacedModuleName__Group_0__1__Impl : ( '::' ) ;
     public final void rule__NamespacedModuleName__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1004:1: ( ( '::' ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1005:1: ( '::' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1050:1: ( ( '::' ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1051:1: ( '::' )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1005:1: ( '::' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1006:1: '::'
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1051:1: ( '::' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1052:1: '::'
             {
              before(grammarAccess.getNamespacedModuleNameAccess().getColonColonKeyword_0_1()); 
-            match(input,23,FOLLOW_23_in_rule__NamespacedModuleName__Group_0__1__Impl2040); 
+            match(input,25,FOLLOW_25_in_rule__NamespacedModuleName__Group_0__1__Impl2151); 
              after(grammarAccess.getNamespacedModuleNameAccess().getColonColonKeyword_0_1()); 
 
             }
@@ -2859,22 +3007,344 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__NamespacedModuleName__Group_0__1__Impl"
 
 
+    // $ANTLR start "rule__MethodChainCall__Group__0"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1069:1: rule__MethodChainCall__Group__0 : rule__MethodChainCall__Group__0__Impl rule__MethodChainCall__Group__1 ;
+    public final void rule__MethodChainCall__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1073:1: ( rule__MethodChainCall__Group__0__Impl rule__MethodChainCall__Group__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1074:2: rule__MethodChainCall__Group__0__Impl rule__MethodChainCall__Group__1
+            {
+            pushFollow(FOLLOW_rule__MethodChainCall__Group__0__Impl_in_rule__MethodChainCall__Group__02186);
+            rule__MethodChainCall__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__MethodChainCall__Group__1_in_rule__MethodChainCall__Group__02189);
+            rule__MethodChainCall__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodChainCall__Group__0"
+
+
+    // $ANTLR start "rule__MethodChainCall__Group__0__Impl"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1081:1: rule__MethodChainCall__Group__0__Impl : ( ruleNamespacedModuleName ) ;
+    public final void rule__MethodChainCall__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1085:1: ( ( ruleNamespacedModuleName ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1086:1: ( ruleNamespacedModuleName )
+            {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1086:1: ( ruleNamespacedModuleName )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1087:1: ruleNamespacedModuleName
+            {
+             before(grammarAccess.getMethodChainCallAccess().getNamespacedModuleNameParserRuleCall_0()); 
+            pushFollow(FOLLOW_ruleNamespacedModuleName_in_rule__MethodChainCall__Group__0__Impl2216);
+            ruleNamespacedModuleName();
+
+            state._fsp--;
+
+             after(grammarAccess.getMethodChainCallAccess().getNamespacedModuleNameParserRuleCall_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodChainCall__Group__0__Impl"
+
+
+    // $ANTLR start "rule__MethodChainCall__Group__1"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1098:1: rule__MethodChainCall__Group__1 : rule__MethodChainCall__Group__1__Impl ;
+    public final void rule__MethodChainCall__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1102:1: ( rule__MethodChainCall__Group__1__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1103:2: rule__MethodChainCall__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__MethodChainCall__Group__1__Impl_in_rule__MethodChainCall__Group__12245);
+            rule__MethodChainCall__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodChainCall__Group__1"
+
+
+    // $ANTLR start "rule__MethodChainCall__Group__1__Impl"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1109:1: rule__MethodChainCall__Group__1__Impl : ( ( rule__MethodChainCall__Group_1__0 )* ) ;
+    public final void rule__MethodChainCall__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1113:1: ( ( ( rule__MethodChainCall__Group_1__0 )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1114:1: ( ( rule__MethodChainCall__Group_1__0 )* )
+            {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1114:1: ( ( rule__MethodChainCall__Group_1__0 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1115:1: ( rule__MethodChainCall__Group_1__0 )*
+            {
+             before(grammarAccess.getMethodChainCallAccess().getGroup_1()); 
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1116:1: ( rule__MethodChainCall__Group_1__0 )*
+            loop17:
+            do {
+                int alt17=2;
+                int LA17_0 = input.LA(1);
+
+                if ( (LA17_0==26) ) {
+                    alt17=1;
+                }
+
+
+                switch (alt17) {
+            	case 1 :
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1116:2: rule__MethodChainCall__Group_1__0
+            	    {
+            	    pushFollow(FOLLOW_rule__MethodChainCall__Group_1__0_in_rule__MethodChainCall__Group__1__Impl2272);
+            	    rule__MethodChainCall__Group_1__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop17;
+                }
+            } while (true);
+
+             after(grammarAccess.getMethodChainCallAccess().getGroup_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodChainCall__Group__1__Impl"
+
+
+    // $ANTLR start "rule__MethodChainCall__Group_1__0"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1130:1: rule__MethodChainCall__Group_1__0 : rule__MethodChainCall__Group_1__0__Impl rule__MethodChainCall__Group_1__1 ;
+    public final void rule__MethodChainCall__Group_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1134:1: ( rule__MethodChainCall__Group_1__0__Impl rule__MethodChainCall__Group_1__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1135:2: rule__MethodChainCall__Group_1__0__Impl rule__MethodChainCall__Group_1__1
+            {
+            pushFollow(FOLLOW_rule__MethodChainCall__Group_1__0__Impl_in_rule__MethodChainCall__Group_1__02307);
+            rule__MethodChainCall__Group_1__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__MethodChainCall__Group_1__1_in_rule__MethodChainCall__Group_1__02310);
+            rule__MethodChainCall__Group_1__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodChainCall__Group_1__0"
+
+
+    // $ANTLR start "rule__MethodChainCall__Group_1__0__Impl"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1142:1: rule__MethodChainCall__Group_1__0__Impl : ( '.' ) ;
+    public final void rule__MethodChainCall__Group_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1146:1: ( ( '.' ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1147:1: ( '.' )
+            {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1147:1: ( '.' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1148:1: '.'
+            {
+             before(grammarAccess.getMethodChainCallAccess().getFullStopKeyword_1_0()); 
+            match(input,26,FOLLOW_26_in_rule__MethodChainCall__Group_1__0__Impl2338); 
+             after(grammarAccess.getMethodChainCallAccess().getFullStopKeyword_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodChainCall__Group_1__0__Impl"
+
+
+    // $ANTLR start "rule__MethodChainCall__Group_1__1"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1161:1: rule__MethodChainCall__Group_1__1 : rule__MethodChainCall__Group_1__1__Impl ;
+    public final void rule__MethodChainCall__Group_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1165:1: ( rule__MethodChainCall__Group_1__1__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1166:2: rule__MethodChainCall__Group_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__MethodChainCall__Group_1__1__Impl_in_rule__MethodChainCall__Group_1__12369);
+            rule__MethodChainCall__Group_1__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodChainCall__Group_1__1"
+
+
+    // $ANTLR start "rule__MethodChainCall__Group_1__1__Impl"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1172:1: rule__MethodChainCall__Group_1__1__Impl : ( RULE_ID ) ;
+    public final void rule__MethodChainCall__Group_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1176:1: ( ( RULE_ID ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1177:1: ( RULE_ID )
+            {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1177:1: ( RULE_ID )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1178:1: RULE_ID
+            {
+             before(grammarAccess.getMethodChainCallAccess().getIDTerminalRuleCall_1_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MethodChainCall__Group_1__1__Impl2396); 
+             after(grammarAccess.getMethodChainCallAccess().getIDTerminalRuleCall_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MethodChainCall__Group_1__1__Impl"
+
+
     // $ANTLR start "rule__HasMany__Group__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1023:1: rule__HasMany__Group__0 : rule__HasMany__Group__0__Impl rule__HasMany__Group__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1193:1: rule__HasMany__Group__0 : rule__HasMany__Group__0__Impl rule__HasMany__Group__1 ;
     public final void rule__HasMany__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1027:1: ( rule__HasMany__Group__0__Impl rule__HasMany__Group__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1028:2: rule__HasMany__Group__0__Impl rule__HasMany__Group__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1197:1: ( rule__HasMany__Group__0__Impl rule__HasMany__Group__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1198:2: rule__HasMany__Group__0__Impl rule__HasMany__Group__1
             {
-            pushFollow(FOLLOW_rule__HasMany__Group__0__Impl_in_rule__HasMany__Group__02075);
+            pushFollow(FOLLOW_rule__HasMany__Group__0__Impl_in_rule__HasMany__Group__02429);
             rule__HasMany__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HasMany__Group__1_in_rule__HasMany__Group__02078);
+            pushFollow(FOLLOW_rule__HasMany__Group__1_in_rule__HasMany__Group__02432);
             rule__HasMany__Group__1();
 
             state._fsp--;
@@ -2898,20 +3368,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__Group__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1035:1: rule__HasMany__Group__0__Impl : ( RULE_HAS_MANY_WORD ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1205:1: rule__HasMany__Group__0__Impl : ( RULE_HAS_MANY_WORD ) ;
     public final void rule__HasMany__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1039:1: ( ( RULE_HAS_MANY_WORD ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1040:1: ( RULE_HAS_MANY_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1209:1: ( ( RULE_HAS_MANY_WORD ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1210:1: ( RULE_HAS_MANY_WORD )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1040:1: ( RULE_HAS_MANY_WORD )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1041:1: RULE_HAS_MANY_WORD
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1210:1: ( RULE_HAS_MANY_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1211:1: RULE_HAS_MANY_WORD
             {
              before(grammarAccess.getHasManyAccess().getHAS_MANY_WORDTerminalRuleCall_0()); 
-            match(input,RULE_HAS_MANY_WORD,FOLLOW_RULE_HAS_MANY_WORD_in_rule__HasMany__Group__0__Impl2105); 
+            match(input,RULE_HAS_MANY_WORD,FOLLOW_RULE_HAS_MANY_WORD_in_rule__HasMany__Group__0__Impl2459); 
              after(grammarAccess.getHasManyAccess().getHAS_MANY_WORDTerminalRuleCall_0()); 
 
             }
@@ -2935,21 +3405,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__Group__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1052:1: rule__HasMany__Group__1 : rule__HasMany__Group__1__Impl rule__HasMany__Group__2 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1222:1: rule__HasMany__Group__1 : rule__HasMany__Group__1__Impl rule__HasMany__Group__2 ;
     public final void rule__HasMany__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1056:1: ( rule__HasMany__Group__1__Impl rule__HasMany__Group__2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1057:2: rule__HasMany__Group__1__Impl rule__HasMany__Group__2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1226:1: ( rule__HasMany__Group__1__Impl rule__HasMany__Group__2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1227:2: rule__HasMany__Group__1__Impl rule__HasMany__Group__2
             {
-            pushFollow(FOLLOW_rule__HasMany__Group__1__Impl_in_rule__HasMany__Group__12134);
+            pushFollow(FOLLOW_rule__HasMany__Group__1__Impl_in_rule__HasMany__Group__12488);
             rule__HasMany__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HasMany__Group__2_in_rule__HasMany__Group__12137);
+            pushFollow(FOLLOW_rule__HasMany__Group__2_in_rule__HasMany__Group__12491);
             rule__HasMany__Group__2();
 
             state._fsp--;
@@ -2973,41 +3443,41 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__Group__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1064:1: rule__HasMany__Group__1__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1234:1: rule__HasMany__Group__1__Impl : ( ( ' ' )* ) ;
     public final void rule__HasMany__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1068:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1069:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1238:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1239:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1069:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1070:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1239:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1240:1: ( ' ' )*
             {
              before(grammarAccess.getHasManyAccess().getSpaceKeyword_1()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1071:1: ( ' ' )*
-            loop17:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1241:1: ( ' ' )*
+            loop18:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA17_0==21) ) {
-                    alt17=1;
+                if ( (LA18_0==23) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1072:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1242:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__HasMany__Group__1__Impl2166); 
+            	    match(input,23,FOLLOW_23_in_rule__HasMany__Group__1__Impl2520); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop18;
                 }
             } while (true);
 
@@ -3034,21 +3504,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__Group__2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1083:1: rule__HasMany__Group__2 : rule__HasMany__Group__2__Impl rule__HasMany__Group__3 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1253:1: rule__HasMany__Group__2 : rule__HasMany__Group__2__Impl rule__HasMany__Group__3 ;
     public final void rule__HasMany__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1087:1: ( rule__HasMany__Group__2__Impl rule__HasMany__Group__3 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1088:2: rule__HasMany__Group__2__Impl rule__HasMany__Group__3
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1257:1: ( rule__HasMany__Group__2__Impl rule__HasMany__Group__3 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1258:2: rule__HasMany__Group__2__Impl rule__HasMany__Group__3
             {
-            pushFollow(FOLLOW_rule__HasMany__Group__2__Impl_in_rule__HasMany__Group__22199);
+            pushFollow(FOLLOW_rule__HasMany__Group__2__Impl_in_rule__HasMany__Group__22553);
             rule__HasMany__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HasMany__Group__3_in_rule__HasMany__Group__22202);
+            pushFollow(FOLLOW_rule__HasMany__Group__3_in_rule__HasMany__Group__22556);
             rule__HasMany__Group__3();
 
             state._fsp--;
@@ -3072,23 +3542,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__Group__2__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1095:1: rule__HasMany__Group__2__Impl : ( ( rule__HasMany__NameAssignment_2 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1265:1: rule__HasMany__Group__2__Impl : ( ( rule__HasMany__NameAssignment_2 ) ) ;
     public final void rule__HasMany__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1099:1: ( ( ( rule__HasMany__NameAssignment_2 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1100:1: ( ( rule__HasMany__NameAssignment_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1269:1: ( ( ( rule__HasMany__NameAssignment_2 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1270:1: ( ( rule__HasMany__NameAssignment_2 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1100:1: ( ( rule__HasMany__NameAssignment_2 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1101:1: ( rule__HasMany__NameAssignment_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1270:1: ( ( rule__HasMany__NameAssignment_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1271:1: ( rule__HasMany__NameAssignment_2 )
             {
              before(grammarAccess.getHasManyAccess().getNameAssignment_2()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1102:1: ( rule__HasMany__NameAssignment_2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1102:2: rule__HasMany__NameAssignment_2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1272:1: ( rule__HasMany__NameAssignment_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1272:2: rule__HasMany__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__HasMany__NameAssignment_2_in_rule__HasMany__Group__2__Impl2229);
+            pushFollow(FOLLOW_rule__HasMany__NameAssignment_2_in_rule__HasMany__Group__2__Impl2583);
             rule__HasMany__NameAssignment_2();
 
             state._fsp--;
@@ -3119,21 +3589,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__Group__3"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1112:1: rule__HasMany__Group__3 : rule__HasMany__Group__3__Impl rule__HasMany__Group__4 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1282:1: rule__HasMany__Group__3 : rule__HasMany__Group__3__Impl rule__HasMany__Group__4 ;
     public final void rule__HasMany__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1116:1: ( rule__HasMany__Group__3__Impl rule__HasMany__Group__4 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1117:2: rule__HasMany__Group__3__Impl rule__HasMany__Group__4
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1286:1: ( rule__HasMany__Group__3__Impl rule__HasMany__Group__4 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1287:2: rule__HasMany__Group__3__Impl rule__HasMany__Group__4
             {
-            pushFollow(FOLLOW_rule__HasMany__Group__3__Impl_in_rule__HasMany__Group__32259);
+            pushFollow(FOLLOW_rule__HasMany__Group__3__Impl_in_rule__HasMany__Group__32613);
             rule__HasMany__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HasMany__Group__4_in_rule__HasMany__Group__32262);
+            pushFollow(FOLLOW_rule__HasMany__Group__4_in_rule__HasMany__Group__32616);
             rule__HasMany__Group__4();
 
             state._fsp--;
@@ -3157,41 +3627,41 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__Group__3__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1124:1: rule__HasMany__Group__3__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1294:1: rule__HasMany__Group__3__Impl : ( ( ' ' )* ) ;
     public final void rule__HasMany__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1128:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1129:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1298:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1299:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1129:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1130:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1299:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1300:1: ( ' ' )*
             {
              before(grammarAccess.getHasManyAccess().getSpaceKeyword_3()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1131:1: ( ' ' )*
-            loop18:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1301:1: ( ' ' )*
+            loop19:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA18_0==21) ) {
-                    alt18=1;
+                if ( (LA19_0==23) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt19) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1132:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1302:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__HasMany__Group__3__Impl2291); 
+            	    match(input,23,FOLLOW_23_in_rule__HasMany__Group__3__Impl2645); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop18;
+            	    break loop19;
                 }
             } while (true);
 
@@ -3218,17 +3688,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__Group__4"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1143:1: rule__HasMany__Group__4 : rule__HasMany__Group__4__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1313:1: rule__HasMany__Group__4 : rule__HasMany__Group__4__Impl rule__HasMany__Group__5 ;
     public final void rule__HasMany__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1147:1: ( rule__HasMany__Group__4__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1148:2: rule__HasMany__Group__4__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1317:1: ( rule__HasMany__Group__4__Impl rule__HasMany__Group__5 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1318:2: rule__HasMany__Group__4__Impl rule__HasMany__Group__5
             {
-            pushFollow(FOLLOW_rule__HasMany__Group__4__Impl_in_rule__HasMany__Group__42324);
+            pushFollow(FOLLOW_rule__HasMany__Group__4__Impl_in_rule__HasMany__Group__42678);
             rule__HasMany__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__HasMany__Group__5_in_rule__HasMany__Group__42681);
+            rule__HasMany__Group__5();
 
             state._fsp--;
 
@@ -3251,35 +3726,35 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__Group__4__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1154:1: rule__HasMany__Group__4__Impl : ( ( rule__HasMany__OptionsAssignment_4 )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1325:1: rule__HasMany__Group__4__Impl : ( ( rule__HasMany__OptionsAssignment_4 )* ) ;
     public final void rule__HasMany__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1158:1: ( ( ( rule__HasMany__OptionsAssignment_4 )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1159:1: ( ( rule__HasMany__OptionsAssignment_4 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1329:1: ( ( ( rule__HasMany__OptionsAssignment_4 )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1330:1: ( ( rule__HasMany__OptionsAssignment_4 )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1159:1: ( ( rule__HasMany__OptionsAssignment_4 )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1160:1: ( rule__HasMany__OptionsAssignment_4 )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1330:1: ( ( rule__HasMany__OptionsAssignment_4 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1331:1: ( rule__HasMany__OptionsAssignment_4 )*
             {
              before(grammarAccess.getHasManyAccess().getOptionsAssignment_4()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1161:1: ( rule__HasMany__OptionsAssignment_4 )*
-            loop19:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1332:1: ( rule__HasMany__OptionsAssignment_4 )*
+            loop20:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA19_0==24) ) {
-                    alt19=1;
+                if ( (LA20_0==27) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt20) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1161:2: rule__HasMany__OptionsAssignment_4
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1332:2: rule__HasMany__OptionsAssignment_4
             	    {
-            	    pushFollow(FOLLOW_rule__HasMany__OptionsAssignment_4_in_rule__HasMany__Group__4__Impl2351);
+            	    pushFollow(FOLLOW_rule__HasMany__OptionsAssignment_4_in_rule__HasMany__Group__4__Impl2708);
             	    rule__HasMany__OptionsAssignment_4();
 
             	    state._fsp--;
@@ -3289,7 +3764,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop20;
                 }
             } while (true);
 
@@ -3315,22 +3790,109 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__HasMany__Group__4__Impl"
 
 
+    // $ANTLR start "rule__HasMany__Group__5"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1342:1: rule__HasMany__Group__5 : rule__HasMany__Group__5__Impl ;
+    public final void rule__HasMany__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1346:1: ( rule__HasMany__Group__5__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1347:2: rule__HasMany__Group__5__Impl
+            {
+            pushFollow(FOLLOW_rule__HasMany__Group__5__Impl_in_rule__HasMany__Group__52739);
+            rule__HasMany__Group__5__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HasMany__Group__5"
+
+
+    // $ANTLR start "rule__HasMany__Group__5__Impl"
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1353:1: rule__HasMany__Group__5__Impl : ( ( RULE_SL_COMMENT )? ) ;
+    public final void rule__HasMany__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1357:1: ( ( ( RULE_SL_COMMENT )? ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1358:1: ( ( RULE_SL_COMMENT )? )
+            {
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1358:1: ( ( RULE_SL_COMMENT )? )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1359:1: ( RULE_SL_COMMENT )?
+            {
+             before(grammarAccess.getHasManyAccess().getSL_COMMENTTerminalRuleCall_5()); 
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1360:1: ( RULE_SL_COMMENT )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
+
+            if ( (LA21_0==RULE_SL_COMMENT) ) {
+                alt21=1;
+            }
+            switch (alt21) {
+                case 1 :
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1360:3: RULE_SL_COMMENT
+                    {
+                    match(input,RULE_SL_COMMENT,FOLLOW_RULE_SL_COMMENT_in_rule__HasMany__Group__5__Impl2767); 
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getHasManyAccess().getSL_COMMENTTerminalRuleCall_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HasMany__Group__5__Impl"
+
+
     // $ANTLR start "rule__HasAndBelongsToMany__Group__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1181:1: rule__HasAndBelongsToMany__Group__0 : rule__HasAndBelongsToMany__Group__0__Impl rule__HasAndBelongsToMany__Group__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1382:1: rule__HasAndBelongsToMany__Group__0 : rule__HasAndBelongsToMany__Group__0__Impl rule__HasAndBelongsToMany__Group__1 ;
     public final void rule__HasAndBelongsToMany__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1185:1: ( rule__HasAndBelongsToMany__Group__0__Impl rule__HasAndBelongsToMany__Group__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1186:2: rule__HasAndBelongsToMany__Group__0__Impl rule__HasAndBelongsToMany__Group__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1386:1: ( rule__HasAndBelongsToMany__Group__0__Impl rule__HasAndBelongsToMany__Group__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1387:2: rule__HasAndBelongsToMany__Group__0__Impl rule__HasAndBelongsToMany__Group__1
             {
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__0__Impl_in_rule__HasAndBelongsToMany__Group__02392);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__0__Impl_in_rule__HasAndBelongsToMany__Group__02810);
             rule__HasAndBelongsToMany__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__1_in_rule__HasAndBelongsToMany__Group__02395);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__1_in_rule__HasAndBelongsToMany__Group__02813);
             rule__HasAndBelongsToMany__Group__1();
 
             state._fsp--;
@@ -3354,20 +3916,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__Group__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1193:1: rule__HasAndBelongsToMany__Group__0__Impl : ( RULE_HAS_AND_BELONGS_TO_MANY_WORD ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1394:1: rule__HasAndBelongsToMany__Group__0__Impl : ( RULE_HAS_AND_BELONGS_TO_MANY_WORD ) ;
     public final void rule__HasAndBelongsToMany__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1197:1: ( ( RULE_HAS_AND_BELONGS_TO_MANY_WORD ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1198:1: ( RULE_HAS_AND_BELONGS_TO_MANY_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1398:1: ( ( RULE_HAS_AND_BELONGS_TO_MANY_WORD ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1399:1: ( RULE_HAS_AND_BELONGS_TO_MANY_WORD )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1198:1: ( RULE_HAS_AND_BELONGS_TO_MANY_WORD )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1199:1: RULE_HAS_AND_BELONGS_TO_MANY_WORD
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1399:1: ( RULE_HAS_AND_BELONGS_TO_MANY_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1400:1: RULE_HAS_AND_BELONGS_TO_MANY_WORD
             {
              before(grammarAccess.getHasAndBelongsToManyAccess().getHAS_AND_BELONGS_TO_MANY_WORDTerminalRuleCall_0()); 
-            match(input,RULE_HAS_AND_BELONGS_TO_MANY_WORD,FOLLOW_RULE_HAS_AND_BELONGS_TO_MANY_WORD_in_rule__HasAndBelongsToMany__Group__0__Impl2422); 
+            match(input,RULE_HAS_AND_BELONGS_TO_MANY_WORD,FOLLOW_RULE_HAS_AND_BELONGS_TO_MANY_WORD_in_rule__HasAndBelongsToMany__Group__0__Impl2840); 
              after(grammarAccess.getHasAndBelongsToManyAccess().getHAS_AND_BELONGS_TO_MANY_WORDTerminalRuleCall_0()); 
 
             }
@@ -3391,21 +3953,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__Group__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1210:1: rule__HasAndBelongsToMany__Group__1 : rule__HasAndBelongsToMany__Group__1__Impl rule__HasAndBelongsToMany__Group__2 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1411:1: rule__HasAndBelongsToMany__Group__1 : rule__HasAndBelongsToMany__Group__1__Impl rule__HasAndBelongsToMany__Group__2 ;
     public final void rule__HasAndBelongsToMany__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1214:1: ( rule__HasAndBelongsToMany__Group__1__Impl rule__HasAndBelongsToMany__Group__2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1215:2: rule__HasAndBelongsToMany__Group__1__Impl rule__HasAndBelongsToMany__Group__2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1415:1: ( rule__HasAndBelongsToMany__Group__1__Impl rule__HasAndBelongsToMany__Group__2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1416:2: rule__HasAndBelongsToMany__Group__1__Impl rule__HasAndBelongsToMany__Group__2
             {
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__1__Impl_in_rule__HasAndBelongsToMany__Group__12451);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__1__Impl_in_rule__HasAndBelongsToMany__Group__12869);
             rule__HasAndBelongsToMany__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__2_in_rule__HasAndBelongsToMany__Group__12454);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__2_in_rule__HasAndBelongsToMany__Group__12872);
             rule__HasAndBelongsToMany__Group__2();
 
             state._fsp--;
@@ -3429,41 +3991,41 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__Group__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1222:1: rule__HasAndBelongsToMany__Group__1__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1423:1: rule__HasAndBelongsToMany__Group__1__Impl : ( ( ' ' )* ) ;
     public final void rule__HasAndBelongsToMany__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1226:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1227:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1427:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1428:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1227:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1228:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1428:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1429:1: ( ' ' )*
             {
              before(grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_1()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1229:1: ( ' ' )*
-            loop20:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1430:1: ( ' ' )*
+            loop22:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA20_0==21) ) {
-                    alt20=1;
+                if ( (LA22_0==23) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt22) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1230:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1431:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__HasAndBelongsToMany__Group__1__Impl2483); 
+            	    match(input,23,FOLLOW_23_in_rule__HasAndBelongsToMany__Group__1__Impl2901); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop22;
                 }
             } while (true);
 
@@ -3490,21 +4052,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__Group__2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1241:1: rule__HasAndBelongsToMany__Group__2 : rule__HasAndBelongsToMany__Group__2__Impl rule__HasAndBelongsToMany__Group__3 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1442:1: rule__HasAndBelongsToMany__Group__2 : rule__HasAndBelongsToMany__Group__2__Impl rule__HasAndBelongsToMany__Group__3 ;
     public final void rule__HasAndBelongsToMany__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1245:1: ( rule__HasAndBelongsToMany__Group__2__Impl rule__HasAndBelongsToMany__Group__3 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1246:2: rule__HasAndBelongsToMany__Group__2__Impl rule__HasAndBelongsToMany__Group__3
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1446:1: ( rule__HasAndBelongsToMany__Group__2__Impl rule__HasAndBelongsToMany__Group__3 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1447:2: rule__HasAndBelongsToMany__Group__2__Impl rule__HasAndBelongsToMany__Group__3
             {
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__2__Impl_in_rule__HasAndBelongsToMany__Group__22516);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__2__Impl_in_rule__HasAndBelongsToMany__Group__22934);
             rule__HasAndBelongsToMany__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__3_in_rule__HasAndBelongsToMany__Group__22519);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__3_in_rule__HasAndBelongsToMany__Group__22937);
             rule__HasAndBelongsToMany__Group__3();
 
             state._fsp--;
@@ -3528,23 +4090,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__Group__2__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1253:1: rule__HasAndBelongsToMany__Group__2__Impl : ( ( rule__HasAndBelongsToMany__NameAssignment_2 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1454:1: rule__HasAndBelongsToMany__Group__2__Impl : ( ( rule__HasAndBelongsToMany__NameAssignment_2 ) ) ;
     public final void rule__HasAndBelongsToMany__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1257:1: ( ( ( rule__HasAndBelongsToMany__NameAssignment_2 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1258:1: ( ( rule__HasAndBelongsToMany__NameAssignment_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1458:1: ( ( ( rule__HasAndBelongsToMany__NameAssignment_2 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1459:1: ( ( rule__HasAndBelongsToMany__NameAssignment_2 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1258:1: ( ( rule__HasAndBelongsToMany__NameAssignment_2 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1259:1: ( rule__HasAndBelongsToMany__NameAssignment_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1459:1: ( ( rule__HasAndBelongsToMany__NameAssignment_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1460:1: ( rule__HasAndBelongsToMany__NameAssignment_2 )
             {
              before(grammarAccess.getHasAndBelongsToManyAccess().getNameAssignment_2()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1260:1: ( rule__HasAndBelongsToMany__NameAssignment_2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1260:2: rule__HasAndBelongsToMany__NameAssignment_2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1461:1: ( rule__HasAndBelongsToMany__NameAssignment_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1461:2: rule__HasAndBelongsToMany__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__NameAssignment_2_in_rule__HasAndBelongsToMany__Group__2__Impl2546);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__NameAssignment_2_in_rule__HasAndBelongsToMany__Group__2__Impl2964);
             rule__HasAndBelongsToMany__NameAssignment_2();
 
             state._fsp--;
@@ -3575,21 +4137,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__Group__3"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1270:1: rule__HasAndBelongsToMany__Group__3 : rule__HasAndBelongsToMany__Group__3__Impl rule__HasAndBelongsToMany__Group__4 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1471:1: rule__HasAndBelongsToMany__Group__3 : rule__HasAndBelongsToMany__Group__3__Impl rule__HasAndBelongsToMany__Group__4 ;
     public final void rule__HasAndBelongsToMany__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1274:1: ( rule__HasAndBelongsToMany__Group__3__Impl rule__HasAndBelongsToMany__Group__4 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1275:2: rule__HasAndBelongsToMany__Group__3__Impl rule__HasAndBelongsToMany__Group__4
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1475:1: ( rule__HasAndBelongsToMany__Group__3__Impl rule__HasAndBelongsToMany__Group__4 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1476:2: rule__HasAndBelongsToMany__Group__3__Impl rule__HasAndBelongsToMany__Group__4
             {
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__3__Impl_in_rule__HasAndBelongsToMany__Group__32576);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__3__Impl_in_rule__HasAndBelongsToMany__Group__32994);
             rule__HasAndBelongsToMany__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__4_in_rule__HasAndBelongsToMany__Group__32579);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__4_in_rule__HasAndBelongsToMany__Group__32997);
             rule__HasAndBelongsToMany__Group__4();
 
             state._fsp--;
@@ -3613,41 +4175,41 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__Group__3__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1282:1: rule__HasAndBelongsToMany__Group__3__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1483:1: rule__HasAndBelongsToMany__Group__3__Impl : ( ( ' ' )* ) ;
     public final void rule__HasAndBelongsToMany__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1286:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1287:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1487:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1488:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1287:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1288:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1488:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1489:1: ( ' ' )*
             {
              before(grammarAccess.getHasAndBelongsToManyAccess().getSpaceKeyword_3()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1289:1: ( ' ' )*
-            loop21:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1490:1: ( ' ' )*
+            loop23:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA21_0==21) ) {
-                    alt21=1;
+                if ( (LA23_0==23) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt23) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1290:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1491:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__HasAndBelongsToMany__Group__3__Impl2608); 
+            	    match(input,23,FOLLOW_23_in_rule__HasAndBelongsToMany__Group__3__Impl3026); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop23;
                 }
             } while (true);
 
@@ -3674,16 +4236,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__Group__4"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1301:1: rule__HasAndBelongsToMany__Group__4 : rule__HasAndBelongsToMany__Group__4__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1502:1: rule__HasAndBelongsToMany__Group__4 : rule__HasAndBelongsToMany__Group__4__Impl ;
     public final void rule__HasAndBelongsToMany__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1305:1: ( rule__HasAndBelongsToMany__Group__4__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1306:2: rule__HasAndBelongsToMany__Group__4__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1506:1: ( rule__HasAndBelongsToMany__Group__4__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1507:2: rule__HasAndBelongsToMany__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__4__Impl_in_rule__HasAndBelongsToMany__Group__42641);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__Group__4__Impl_in_rule__HasAndBelongsToMany__Group__43059);
             rule__HasAndBelongsToMany__Group__4__Impl();
 
             state._fsp--;
@@ -3707,35 +4269,35 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__Group__4__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1312:1: rule__HasAndBelongsToMany__Group__4__Impl : ( ( rule__HasAndBelongsToMany__OptionsAssignment_4 )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1513:1: rule__HasAndBelongsToMany__Group__4__Impl : ( ( rule__HasAndBelongsToMany__OptionsAssignment_4 )* ) ;
     public final void rule__HasAndBelongsToMany__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1316:1: ( ( ( rule__HasAndBelongsToMany__OptionsAssignment_4 )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1317:1: ( ( rule__HasAndBelongsToMany__OptionsAssignment_4 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1517:1: ( ( ( rule__HasAndBelongsToMany__OptionsAssignment_4 )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1518:1: ( ( rule__HasAndBelongsToMany__OptionsAssignment_4 )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1317:1: ( ( rule__HasAndBelongsToMany__OptionsAssignment_4 )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1318:1: ( rule__HasAndBelongsToMany__OptionsAssignment_4 )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1518:1: ( ( rule__HasAndBelongsToMany__OptionsAssignment_4 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1519:1: ( rule__HasAndBelongsToMany__OptionsAssignment_4 )*
             {
              before(grammarAccess.getHasAndBelongsToManyAccess().getOptionsAssignment_4()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1319:1: ( rule__HasAndBelongsToMany__OptionsAssignment_4 )*
-            loop22:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1520:1: ( rule__HasAndBelongsToMany__OptionsAssignment_4 )*
+            loop24:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA22_0==24) ) {
-                    alt22=1;
+                if ( (LA24_0==27) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt24) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1319:2: rule__HasAndBelongsToMany__OptionsAssignment_4
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1520:2: rule__HasAndBelongsToMany__OptionsAssignment_4
             	    {
-            	    pushFollow(FOLLOW_rule__HasAndBelongsToMany__OptionsAssignment_4_in_rule__HasAndBelongsToMany__Group__4__Impl2668);
+            	    pushFollow(FOLLOW_rule__HasAndBelongsToMany__OptionsAssignment_4_in_rule__HasAndBelongsToMany__Group__4__Impl3086);
             	    rule__HasAndBelongsToMany__OptionsAssignment_4();
 
             	    state._fsp--;
@@ -3745,7 +4307,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop24;
                 }
             } while (true);
 
@@ -3772,21 +4334,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1339:1: rule__BelongsTo__Group__0 : rule__BelongsTo__Group__0__Impl rule__BelongsTo__Group__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1540:1: rule__BelongsTo__Group__0 : rule__BelongsTo__Group__0__Impl rule__BelongsTo__Group__1 ;
     public final void rule__BelongsTo__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1343:1: ( rule__BelongsTo__Group__0__Impl rule__BelongsTo__Group__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1344:2: rule__BelongsTo__Group__0__Impl rule__BelongsTo__Group__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1544:1: ( rule__BelongsTo__Group__0__Impl rule__BelongsTo__Group__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1545:2: rule__BelongsTo__Group__0__Impl rule__BelongsTo__Group__1
             {
-            pushFollow(FOLLOW_rule__BelongsTo__Group__0__Impl_in_rule__BelongsTo__Group__02709);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__0__Impl_in_rule__BelongsTo__Group__03127);
             rule__BelongsTo__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BelongsTo__Group__1_in_rule__BelongsTo__Group__02712);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__1_in_rule__BelongsTo__Group__03130);
             rule__BelongsTo__Group__1();
 
             state._fsp--;
@@ -3810,20 +4372,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1351:1: rule__BelongsTo__Group__0__Impl : ( RULE_BELONGS_TO_WORD ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1552:1: rule__BelongsTo__Group__0__Impl : ( RULE_BELONGS_TO_WORD ) ;
     public final void rule__BelongsTo__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1355:1: ( ( RULE_BELONGS_TO_WORD ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1356:1: ( RULE_BELONGS_TO_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1556:1: ( ( RULE_BELONGS_TO_WORD ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1557:1: ( RULE_BELONGS_TO_WORD )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1356:1: ( RULE_BELONGS_TO_WORD )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1357:1: RULE_BELONGS_TO_WORD
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1557:1: ( RULE_BELONGS_TO_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1558:1: RULE_BELONGS_TO_WORD
             {
              before(grammarAccess.getBelongsToAccess().getBELONGS_TO_WORDTerminalRuleCall_0()); 
-            match(input,RULE_BELONGS_TO_WORD,FOLLOW_RULE_BELONGS_TO_WORD_in_rule__BelongsTo__Group__0__Impl2739); 
+            match(input,RULE_BELONGS_TO_WORD,FOLLOW_RULE_BELONGS_TO_WORD_in_rule__BelongsTo__Group__0__Impl3157); 
              after(grammarAccess.getBelongsToAccess().getBELONGS_TO_WORDTerminalRuleCall_0()); 
 
             }
@@ -3847,21 +4409,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1368:1: rule__BelongsTo__Group__1 : rule__BelongsTo__Group__1__Impl rule__BelongsTo__Group__2 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1569:1: rule__BelongsTo__Group__1 : rule__BelongsTo__Group__1__Impl rule__BelongsTo__Group__2 ;
     public final void rule__BelongsTo__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1372:1: ( rule__BelongsTo__Group__1__Impl rule__BelongsTo__Group__2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1373:2: rule__BelongsTo__Group__1__Impl rule__BelongsTo__Group__2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1573:1: ( rule__BelongsTo__Group__1__Impl rule__BelongsTo__Group__2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1574:2: rule__BelongsTo__Group__1__Impl rule__BelongsTo__Group__2
             {
-            pushFollow(FOLLOW_rule__BelongsTo__Group__1__Impl_in_rule__BelongsTo__Group__12768);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__1__Impl_in_rule__BelongsTo__Group__13186);
             rule__BelongsTo__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BelongsTo__Group__2_in_rule__BelongsTo__Group__12771);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__2_in_rule__BelongsTo__Group__13189);
             rule__BelongsTo__Group__2();
 
             state._fsp--;
@@ -3885,41 +4447,41 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1380:1: rule__BelongsTo__Group__1__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1581:1: rule__BelongsTo__Group__1__Impl : ( ( ' ' )* ) ;
     public final void rule__BelongsTo__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1384:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1385:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1585:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1586:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1385:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1386:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1586:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1587:1: ( ' ' )*
             {
              before(grammarAccess.getBelongsToAccess().getSpaceKeyword_1()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1387:1: ( ' ' )*
-            loop23:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1588:1: ( ' ' )*
+            loop25:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA23_0==21) ) {
-                    alt23=1;
+                if ( (LA25_0==23) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt25) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1388:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1589:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__BelongsTo__Group__1__Impl2800); 
+            	    match(input,23,FOLLOW_23_in_rule__BelongsTo__Group__1__Impl3218); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop25;
                 }
             } while (true);
 
@@ -3946,21 +4508,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1399:1: rule__BelongsTo__Group__2 : rule__BelongsTo__Group__2__Impl rule__BelongsTo__Group__3 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1600:1: rule__BelongsTo__Group__2 : rule__BelongsTo__Group__2__Impl rule__BelongsTo__Group__3 ;
     public final void rule__BelongsTo__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1403:1: ( rule__BelongsTo__Group__2__Impl rule__BelongsTo__Group__3 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1404:2: rule__BelongsTo__Group__2__Impl rule__BelongsTo__Group__3
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1604:1: ( rule__BelongsTo__Group__2__Impl rule__BelongsTo__Group__3 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1605:2: rule__BelongsTo__Group__2__Impl rule__BelongsTo__Group__3
             {
-            pushFollow(FOLLOW_rule__BelongsTo__Group__2__Impl_in_rule__BelongsTo__Group__22833);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__2__Impl_in_rule__BelongsTo__Group__23251);
             rule__BelongsTo__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BelongsTo__Group__3_in_rule__BelongsTo__Group__22836);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__3_in_rule__BelongsTo__Group__23254);
             rule__BelongsTo__Group__3();
 
             state._fsp--;
@@ -3984,23 +4546,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__2__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1411:1: rule__BelongsTo__Group__2__Impl : ( ( rule__BelongsTo__NameAssignment_2 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1612:1: rule__BelongsTo__Group__2__Impl : ( ( rule__BelongsTo__NameAssignment_2 ) ) ;
     public final void rule__BelongsTo__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1415:1: ( ( ( rule__BelongsTo__NameAssignment_2 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1416:1: ( ( rule__BelongsTo__NameAssignment_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1616:1: ( ( ( rule__BelongsTo__NameAssignment_2 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1617:1: ( ( rule__BelongsTo__NameAssignment_2 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1416:1: ( ( rule__BelongsTo__NameAssignment_2 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1417:1: ( rule__BelongsTo__NameAssignment_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1617:1: ( ( rule__BelongsTo__NameAssignment_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1618:1: ( rule__BelongsTo__NameAssignment_2 )
             {
              before(grammarAccess.getBelongsToAccess().getNameAssignment_2()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1418:1: ( rule__BelongsTo__NameAssignment_2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1418:2: rule__BelongsTo__NameAssignment_2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1619:1: ( rule__BelongsTo__NameAssignment_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1619:2: rule__BelongsTo__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__BelongsTo__NameAssignment_2_in_rule__BelongsTo__Group__2__Impl2863);
+            pushFollow(FOLLOW_rule__BelongsTo__NameAssignment_2_in_rule__BelongsTo__Group__2__Impl3281);
             rule__BelongsTo__NameAssignment_2();
 
             state._fsp--;
@@ -4031,21 +4593,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__3"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1428:1: rule__BelongsTo__Group__3 : rule__BelongsTo__Group__3__Impl rule__BelongsTo__Group__4 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1629:1: rule__BelongsTo__Group__3 : rule__BelongsTo__Group__3__Impl rule__BelongsTo__Group__4 ;
     public final void rule__BelongsTo__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1432:1: ( rule__BelongsTo__Group__3__Impl rule__BelongsTo__Group__4 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1433:2: rule__BelongsTo__Group__3__Impl rule__BelongsTo__Group__4
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1633:1: ( rule__BelongsTo__Group__3__Impl rule__BelongsTo__Group__4 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1634:2: rule__BelongsTo__Group__3__Impl rule__BelongsTo__Group__4
             {
-            pushFollow(FOLLOW_rule__BelongsTo__Group__3__Impl_in_rule__BelongsTo__Group__32893);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__3__Impl_in_rule__BelongsTo__Group__33311);
             rule__BelongsTo__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BelongsTo__Group__4_in_rule__BelongsTo__Group__32896);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__4_in_rule__BelongsTo__Group__33314);
             rule__BelongsTo__Group__4();
 
             state._fsp--;
@@ -4069,41 +4631,41 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__3__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1440:1: rule__BelongsTo__Group__3__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1641:1: rule__BelongsTo__Group__3__Impl : ( ( ' ' )* ) ;
     public final void rule__BelongsTo__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1444:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1445:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1645:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1646:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1445:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1446:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1646:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1647:1: ( ' ' )*
             {
              before(grammarAccess.getBelongsToAccess().getSpaceKeyword_3()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1447:1: ( ' ' )*
-            loop24:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1648:1: ( ' ' )*
+            loop26:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt26=2;
+                int LA26_0 = input.LA(1);
 
-                if ( (LA24_0==21) ) {
-                    alt24=1;
+                if ( (LA26_0==23) ) {
+                    alt26=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt26) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1448:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1649:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__BelongsTo__Group__3__Impl2925); 
+            	    match(input,23,FOLLOW_23_in_rule__BelongsTo__Group__3__Impl3343); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop26;
                 }
             } while (true);
 
@@ -4130,16 +4692,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__4"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1459:1: rule__BelongsTo__Group__4 : rule__BelongsTo__Group__4__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1660:1: rule__BelongsTo__Group__4 : rule__BelongsTo__Group__4__Impl ;
     public final void rule__BelongsTo__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1463:1: ( rule__BelongsTo__Group__4__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1464:2: rule__BelongsTo__Group__4__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1664:1: ( rule__BelongsTo__Group__4__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1665:2: rule__BelongsTo__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__BelongsTo__Group__4__Impl_in_rule__BelongsTo__Group__42958);
+            pushFollow(FOLLOW_rule__BelongsTo__Group__4__Impl_in_rule__BelongsTo__Group__43376);
             rule__BelongsTo__Group__4__Impl();
 
             state._fsp--;
@@ -4163,35 +4725,35 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__Group__4__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1470:1: rule__BelongsTo__Group__4__Impl : ( ( rule__BelongsTo__OptionsAssignment_4 )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1671:1: rule__BelongsTo__Group__4__Impl : ( ( rule__BelongsTo__OptionsAssignment_4 )* ) ;
     public final void rule__BelongsTo__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1474:1: ( ( ( rule__BelongsTo__OptionsAssignment_4 )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1475:1: ( ( rule__BelongsTo__OptionsAssignment_4 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1675:1: ( ( ( rule__BelongsTo__OptionsAssignment_4 )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1676:1: ( ( rule__BelongsTo__OptionsAssignment_4 )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1475:1: ( ( rule__BelongsTo__OptionsAssignment_4 )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1476:1: ( rule__BelongsTo__OptionsAssignment_4 )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1676:1: ( ( rule__BelongsTo__OptionsAssignment_4 )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1677:1: ( rule__BelongsTo__OptionsAssignment_4 )*
             {
              before(grammarAccess.getBelongsToAccess().getOptionsAssignment_4()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1477:1: ( rule__BelongsTo__OptionsAssignment_4 )*
-            loop25:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1678:1: ( rule__BelongsTo__OptionsAssignment_4 )*
+            loop27:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( (LA25_0==24) ) {
-                    alt25=1;
+                if ( (LA27_0==27) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt27) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1477:2: rule__BelongsTo__OptionsAssignment_4
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1678:2: rule__BelongsTo__OptionsAssignment_4
             	    {
-            	    pushFollow(FOLLOW_rule__BelongsTo__OptionsAssignment_4_in_rule__BelongsTo__Group__4__Impl2985);
+            	    pushFollow(FOLLOW_rule__BelongsTo__OptionsAssignment_4_in_rule__BelongsTo__Group__4__Impl3403);
             	    rule__BelongsTo__OptionsAssignment_4();
 
             	    state._fsp--;
@@ -4201,7 +4763,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop27;
                 }
             } while (true);
 
@@ -4228,21 +4790,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1497:1: rule__HashKeyValue__Group__0 : rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1698:1: rule__HashKeyValue__Group__0 : rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1 ;
     public final void rule__HashKeyValue__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1501:1: ( rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1502:2: rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1702:1: ( rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1703:2: rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__0__Impl_in_rule__HashKeyValue__Group__03026);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__0__Impl_in_rule__HashKeyValue__Group__03444);
             rule__HashKeyValue__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__1_in_rule__HashKeyValue__Group__03029);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__1_in_rule__HashKeyValue__Group__03447);
             rule__HashKeyValue__Group__1();
 
             state._fsp--;
@@ -4266,20 +4828,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1509:1: rule__HashKeyValue__Group__0__Impl : ( ',' ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1710:1: rule__HashKeyValue__Group__0__Impl : ( ',' ) ;
     public final void rule__HashKeyValue__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1513:1: ( ( ',' ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1514:1: ( ',' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1714:1: ( ( ',' ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1715:1: ( ',' )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1514:1: ( ',' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1515:1: ','
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1715:1: ( ',' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1716:1: ','
             {
              before(grammarAccess.getHashKeyValueAccess().getCommaKeyword_0()); 
-            match(input,24,FOLLOW_24_in_rule__HashKeyValue__Group__0__Impl3057); 
+            match(input,27,FOLLOW_27_in_rule__HashKeyValue__Group__0__Impl3475); 
              after(grammarAccess.getHashKeyValueAccess().getCommaKeyword_0()); 
 
             }
@@ -4303,21 +4865,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1528:1: rule__HashKeyValue__Group__1 : rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1729:1: rule__HashKeyValue__Group__1 : rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2 ;
     public final void rule__HashKeyValue__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1532:1: ( rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1533:2: rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1733:1: ( rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1734:2: rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__1__Impl_in_rule__HashKeyValue__Group__13088);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__1__Impl_in_rule__HashKeyValue__Group__13506);
             rule__HashKeyValue__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__2_in_rule__HashKeyValue__Group__13091);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__2_in_rule__HashKeyValue__Group__13509);
             rule__HashKeyValue__Group__2();
 
             state._fsp--;
@@ -4341,41 +4903,41 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1540:1: rule__HashKeyValue__Group__1__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1741:1: rule__HashKeyValue__Group__1__Impl : ( ( ' ' )* ) ;
     public final void rule__HashKeyValue__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1544:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1545:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1745:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1746:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1545:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1546:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1746:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1747:1: ( ' ' )*
             {
              before(grammarAccess.getHashKeyValueAccess().getSpaceKeyword_1()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1547:1: ( ' ' )*
-            loop26:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1748:1: ( ' ' )*
+            loop28:
             do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
+                int alt28=2;
+                int LA28_0 = input.LA(1);
 
-                if ( (LA26_0==21) ) {
-                    alt26=1;
+                if ( (LA28_0==23) ) {
+                    alt28=1;
                 }
 
 
-                switch (alt26) {
+                switch (alt28) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1548:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1749:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__HashKeyValue__Group__1__Impl3120); 
+            	    match(input,23,FOLLOW_23_in_rule__HashKeyValue__Group__1__Impl3538); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop28;
                 }
             } while (true);
 
@@ -4402,21 +4964,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1559:1: rule__HashKeyValue__Group__2 : rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1760:1: rule__HashKeyValue__Group__2 : rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3 ;
     public final void rule__HashKeyValue__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1563:1: ( rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1564:2: rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1764:1: ( rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1765:2: rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__2__Impl_in_rule__HashKeyValue__Group__23153);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__2__Impl_in_rule__HashKeyValue__Group__23571);
             rule__HashKeyValue__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__3_in_rule__HashKeyValue__Group__23156);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__3_in_rule__HashKeyValue__Group__23574);
             rule__HashKeyValue__Group__3();
 
             state._fsp--;
@@ -4440,23 +5002,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__2__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1571:1: rule__HashKeyValue__Group__2__Impl : ( ( rule__HashKeyValue__Alternatives_2 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1772:1: rule__HashKeyValue__Group__2__Impl : ( ( rule__HashKeyValue__Alternatives_2 ) ) ;
     public final void rule__HashKeyValue__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1575:1: ( ( ( rule__HashKeyValue__Alternatives_2 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1576:1: ( ( rule__HashKeyValue__Alternatives_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1776:1: ( ( ( rule__HashKeyValue__Alternatives_2 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1777:1: ( ( rule__HashKeyValue__Alternatives_2 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1576:1: ( ( rule__HashKeyValue__Alternatives_2 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1577:1: ( rule__HashKeyValue__Alternatives_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1777:1: ( ( rule__HashKeyValue__Alternatives_2 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1778:1: ( rule__HashKeyValue__Alternatives_2 )
             {
              before(grammarAccess.getHashKeyValueAccess().getAlternatives_2()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1578:1: ( rule__HashKeyValue__Alternatives_2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1578:2: rule__HashKeyValue__Alternatives_2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1779:1: ( rule__HashKeyValue__Alternatives_2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1779:2: rule__HashKeyValue__Alternatives_2
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Alternatives_2_in_rule__HashKeyValue__Group__2__Impl3183);
+            pushFollow(FOLLOW_rule__HashKeyValue__Alternatives_2_in_rule__HashKeyValue__Group__2__Impl3601);
             rule__HashKeyValue__Alternatives_2();
 
             state._fsp--;
@@ -4487,21 +5049,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__3"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1588:1: rule__HashKeyValue__Group__3 : rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1789:1: rule__HashKeyValue__Group__3 : rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4 ;
     public final void rule__HashKeyValue__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1592:1: ( rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1593:2: rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1793:1: ( rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1794:2: rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__3__Impl_in_rule__HashKeyValue__Group__33213);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__3__Impl_in_rule__HashKeyValue__Group__33631);
             rule__HashKeyValue__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__4_in_rule__HashKeyValue__Group__33216);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__4_in_rule__HashKeyValue__Group__33634);
             rule__HashKeyValue__Group__4();
 
             state._fsp--;
@@ -4525,41 +5087,41 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__3__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1600:1: rule__HashKeyValue__Group__3__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1801:1: rule__HashKeyValue__Group__3__Impl : ( ( ' ' )* ) ;
     public final void rule__HashKeyValue__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1604:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1605:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1805:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1806:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1605:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1606:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1806:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1807:1: ( ' ' )*
             {
              before(grammarAccess.getHashKeyValueAccess().getSpaceKeyword_3()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1607:1: ( ' ' )*
-            loop27:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1808:1: ( ' ' )*
+            loop29:
             do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( (LA27_0==21) ) {
-                    alt27=1;
+                if ( (LA29_0==23) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt27) {
+                switch (alt29) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1608:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1809:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__HashKeyValue__Group__3__Impl3245); 
+            	    match(input,23,FOLLOW_23_in_rule__HashKeyValue__Group__3__Impl3663); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop27;
+            	    break loop29;
                 }
             } while (true);
 
@@ -4586,16 +5148,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__4"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1619:1: rule__HashKeyValue__Group__4 : rule__HashKeyValue__Group__4__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1820:1: rule__HashKeyValue__Group__4 : rule__HashKeyValue__Group__4__Impl ;
     public final void rule__HashKeyValue__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1623:1: ( rule__HashKeyValue__Group__4__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1624:2: rule__HashKeyValue__Group__4__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1824:1: ( rule__HashKeyValue__Group__4__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1825:2: rule__HashKeyValue__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group__4__Impl_in_rule__HashKeyValue__Group__43278);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group__4__Impl_in_rule__HashKeyValue__Group__43696);
             rule__HashKeyValue__Group__4__Impl();
 
             state._fsp--;
@@ -4619,23 +5181,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__4__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1630:1: rule__HashKeyValue__Group__4__Impl : ( ( rule__HashKeyValue__ValueAssignment_4 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1831:1: rule__HashKeyValue__Group__4__Impl : ( ( rule__HashKeyValue__ValueAssignment_4 ) ) ;
     public final void rule__HashKeyValue__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1634:1: ( ( ( rule__HashKeyValue__ValueAssignment_4 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1635:1: ( ( rule__HashKeyValue__ValueAssignment_4 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1835:1: ( ( ( rule__HashKeyValue__ValueAssignment_4 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1836:1: ( ( rule__HashKeyValue__ValueAssignment_4 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1635:1: ( ( rule__HashKeyValue__ValueAssignment_4 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1636:1: ( rule__HashKeyValue__ValueAssignment_4 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1836:1: ( ( rule__HashKeyValue__ValueAssignment_4 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1837:1: ( rule__HashKeyValue__ValueAssignment_4 )
             {
              before(grammarAccess.getHashKeyValueAccess().getValueAssignment_4()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1637:1: ( rule__HashKeyValue__ValueAssignment_4 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1637:2: rule__HashKeyValue__ValueAssignment_4
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1838:1: ( rule__HashKeyValue__ValueAssignment_4 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1838:2: rule__HashKeyValue__ValueAssignment_4
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__ValueAssignment_4_in_rule__HashKeyValue__Group__4__Impl3305);
+            pushFollow(FOLLOW_rule__HashKeyValue__ValueAssignment_4_in_rule__HashKeyValue__Group__4__Impl3723);
             rule__HashKeyValue__ValueAssignment_4();
 
             state._fsp--;
@@ -4666,21 +5228,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_0__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1657:1: rule__HashKeyValue__Group_2_0__0 : rule__HashKeyValue__Group_2_0__0__Impl rule__HashKeyValue__Group_2_0__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1858:1: rule__HashKeyValue__Group_2_0__0 : rule__HashKeyValue__Group_2_0__0__Impl rule__HashKeyValue__Group_2_0__1 ;
     public final void rule__HashKeyValue__Group_2_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1661:1: ( rule__HashKeyValue__Group_2_0__0__Impl rule__HashKeyValue__Group_2_0__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1662:2: rule__HashKeyValue__Group_2_0__0__Impl rule__HashKeyValue__Group_2_0__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1862:1: ( rule__HashKeyValue__Group_2_0__0__Impl rule__HashKeyValue__Group_2_0__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1863:2: rule__HashKeyValue__Group_2_0__0__Impl rule__HashKeyValue__Group_2_0__1
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_0__0__Impl_in_rule__HashKeyValue__Group_2_0__03345);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_0__0__Impl_in_rule__HashKeyValue__Group_2_0__03763);
             rule__HashKeyValue__Group_2_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_0__1_in_rule__HashKeyValue__Group_2_0__03348);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_0__1_in_rule__HashKeyValue__Group_2_0__03766);
             rule__HashKeyValue__Group_2_0__1();
 
             state._fsp--;
@@ -4704,23 +5266,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_0__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1669:1: rule__HashKeyValue__Group_2_0__0__Impl : ( ( rule__HashKeyValue__KeyAssignment_2_0_0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1870:1: rule__HashKeyValue__Group_2_0__0__Impl : ( ( rule__HashKeyValue__KeyAssignment_2_0_0 ) ) ;
     public final void rule__HashKeyValue__Group_2_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1673:1: ( ( ( rule__HashKeyValue__KeyAssignment_2_0_0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1674:1: ( ( rule__HashKeyValue__KeyAssignment_2_0_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1874:1: ( ( ( rule__HashKeyValue__KeyAssignment_2_0_0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1875:1: ( ( rule__HashKeyValue__KeyAssignment_2_0_0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1674:1: ( ( rule__HashKeyValue__KeyAssignment_2_0_0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1675:1: ( rule__HashKeyValue__KeyAssignment_2_0_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1875:1: ( ( rule__HashKeyValue__KeyAssignment_2_0_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1876:1: ( rule__HashKeyValue__KeyAssignment_2_0_0 )
             {
              before(grammarAccess.getHashKeyValueAccess().getKeyAssignment_2_0_0()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1676:1: ( rule__HashKeyValue__KeyAssignment_2_0_0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1676:2: rule__HashKeyValue__KeyAssignment_2_0_0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1877:1: ( rule__HashKeyValue__KeyAssignment_2_0_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1877:2: rule__HashKeyValue__KeyAssignment_2_0_0
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__KeyAssignment_2_0_0_in_rule__HashKeyValue__Group_2_0__0__Impl3375);
+            pushFollow(FOLLOW_rule__HashKeyValue__KeyAssignment_2_0_0_in_rule__HashKeyValue__Group_2_0__0__Impl3793);
             rule__HashKeyValue__KeyAssignment_2_0_0();
 
             state._fsp--;
@@ -4751,16 +5313,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_0__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1686:1: rule__HashKeyValue__Group_2_0__1 : rule__HashKeyValue__Group_2_0__1__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1887:1: rule__HashKeyValue__Group_2_0__1 : rule__HashKeyValue__Group_2_0__1__Impl ;
     public final void rule__HashKeyValue__Group_2_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1690:1: ( rule__HashKeyValue__Group_2_0__1__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1691:2: rule__HashKeyValue__Group_2_0__1__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1891:1: ( rule__HashKeyValue__Group_2_0__1__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1892:2: rule__HashKeyValue__Group_2_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_0__1__Impl_in_rule__HashKeyValue__Group_2_0__13405);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_0__1__Impl_in_rule__HashKeyValue__Group_2_0__13823);
             rule__HashKeyValue__Group_2_0__1__Impl();
 
             state._fsp--;
@@ -4784,20 +5346,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_0__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1697:1: rule__HashKeyValue__Group_2_0__1__Impl : ( ':' ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1898:1: rule__HashKeyValue__Group_2_0__1__Impl : ( ':' ) ;
     public final void rule__HashKeyValue__Group_2_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1701:1: ( ( ':' ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1702:1: ( ':' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1902:1: ( ( ':' ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1903:1: ( ':' )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1702:1: ( ':' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1703:1: ':'
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1903:1: ( ':' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1904:1: ':'
             {
              before(grammarAccess.getHashKeyValueAccess().getColonKeyword_2_0_1()); 
-            match(input,25,FOLLOW_25_in_rule__HashKeyValue__Group_2_0__1__Impl3433); 
+            match(input,28,FOLLOW_28_in_rule__HashKeyValue__Group_2_0__1__Impl3851); 
              after(grammarAccess.getHashKeyValueAccess().getColonKeyword_2_0_1()); 
 
             }
@@ -4821,21 +5383,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_1__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1720:1: rule__HashKeyValue__Group_2_1__0 : rule__HashKeyValue__Group_2_1__0__Impl rule__HashKeyValue__Group_2_1__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1921:1: rule__HashKeyValue__Group_2_1__0 : rule__HashKeyValue__Group_2_1__0__Impl rule__HashKeyValue__Group_2_1__1 ;
     public final void rule__HashKeyValue__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1724:1: ( rule__HashKeyValue__Group_2_1__0__Impl rule__HashKeyValue__Group_2_1__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1725:2: rule__HashKeyValue__Group_2_1__0__Impl rule__HashKeyValue__Group_2_1__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1925:1: ( rule__HashKeyValue__Group_2_1__0__Impl rule__HashKeyValue__Group_2_1__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1926:2: rule__HashKeyValue__Group_2_1__0__Impl rule__HashKeyValue__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__0__Impl_in_rule__HashKeyValue__Group_2_1__03468);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__0__Impl_in_rule__HashKeyValue__Group_2_1__03886);
             rule__HashKeyValue__Group_2_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__1_in_rule__HashKeyValue__Group_2_1__03471);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__1_in_rule__HashKeyValue__Group_2_1__03889);
             rule__HashKeyValue__Group_2_1__1();
 
             state._fsp--;
@@ -4859,23 +5421,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_1__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1732:1: rule__HashKeyValue__Group_2_1__0__Impl : ( ( rule__HashKeyValue__KeyAssignment_2_1_0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1933:1: rule__HashKeyValue__Group_2_1__0__Impl : ( ( rule__HashKeyValue__KeyAssignment_2_1_0 ) ) ;
     public final void rule__HashKeyValue__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1736:1: ( ( ( rule__HashKeyValue__KeyAssignment_2_1_0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1737:1: ( ( rule__HashKeyValue__KeyAssignment_2_1_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1937:1: ( ( ( rule__HashKeyValue__KeyAssignment_2_1_0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1938:1: ( ( rule__HashKeyValue__KeyAssignment_2_1_0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1737:1: ( ( rule__HashKeyValue__KeyAssignment_2_1_0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1738:1: ( rule__HashKeyValue__KeyAssignment_2_1_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1938:1: ( ( rule__HashKeyValue__KeyAssignment_2_1_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1939:1: ( rule__HashKeyValue__KeyAssignment_2_1_0 )
             {
              before(grammarAccess.getHashKeyValueAccess().getKeyAssignment_2_1_0()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1739:1: ( rule__HashKeyValue__KeyAssignment_2_1_0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1739:2: rule__HashKeyValue__KeyAssignment_2_1_0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1940:1: ( rule__HashKeyValue__KeyAssignment_2_1_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1940:2: rule__HashKeyValue__KeyAssignment_2_1_0
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__KeyAssignment_2_1_0_in_rule__HashKeyValue__Group_2_1__0__Impl3498);
+            pushFollow(FOLLOW_rule__HashKeyValue__KeyAssignment_2_1_0_in_rule__HashKeyValue__Group_2_1__0__Impl3916);
             rule__HashKeyValue__KeyAssignment_2_1_0();
 
             state._fsp--;
@@ -4906,21 +5468,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_1__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1749:1: rule__HashKeyValue__Group_2_1__1 : rule__HashKeyValue__Group_2_1__1__Impl rule__HashKeyValue__Group_2_1__2 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1950:1: rule__HashKeyValue__Group_2_1__1 : rule__HashKeyValue__Group_2_1__1__Impl rule__HashKeyValue__Group_2_1__2 ;
     public final void rule__HashKeyValue__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1753:1: ( rule__HashKeyValue__Group_2_1__1__Impl rule__HashKeyValue__Group_2_1__2 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1754:2: rule__HashKeyValue__Group_2_1__1__Impl rule__HashKeyValue__Group_2_1__2
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1954:1: ( rule__HashKeyValue__Group_2_1__1__Impl rule__HashKeyValue__Group_2_1__2 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1955:2: rule__HashKeyValue__Group_2_1__1__Impl rule__HashKeyValue__Group_2_1__2
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__1__Impl_in_rule__HashKeyValue__Group_2_1__13528);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__1__Impl_in_rule__HashKeyValue__Group_2_1__13946);
             rule__HashKeyValue__Group_2_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__2_in_rule__HashKeyValue__Group_2_1__13531);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__2_in_rule__HashKeyValue__Group_2_1__13949);
             rule__HashKeyValue__Group_2_1__2();
 
             state._fsp--;
@@ -4944,41 +5506,41 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_1__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1761:1: rule__HashKeyValue__Group_2_1__1__Impl : ( ( ' ' )* ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1962:1: rule__HashKeyValue__Group_2_1__1__Impl : ( ( ' ' )* ) ;
     public final void rule__HashKeyValue__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1765:1: ( ( ( ' ' )* ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1766:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1966:1: ( ( ( ' ' )* ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1967:1: ( ( ' ' )* )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1766:1: ( ( ' ' )* )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1767:1: ( ' ' )*
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1967:1: ( ( ' ' )* )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1968:1: ( ' ' )*
             {
              before(grammarAccess.getHashKeyValueAccess().getSpaceKeyword_2_1_1()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1768:1: ( ' ' )*
-            loop28:
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1969:1: ( ' ' )*
+            loop30:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA28_0==21) ) {
-                    alt28=1;
+                if ( (LA30_0==23) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt30) {
             	case 1 :
-            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1769:2: ' '
+            	    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1970:2: ' '
             	    {
-            	    match(input,21,FOLLOW_21_in_rule__HashKeyValue__Group_2_1__1__Impl3560); 
+            	    match(input,23,FOLLOW_23_in_rule__HashKeyValue__Group_2_1__1__Impl3978); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop30;
                 }
             } while (true);
 
@@ -5005,16 +5567,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_1__2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1780:1: rule__HashKeyValue__Group_2_1__2 : rule__HashKeyValue__Group_2_1__2__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1981:1: rule__HashKeyValue__Group_2_1__2 : rule__HashKeyValue__Group_2_1__2__Impl ;
     public final void rule__HashKeyValue__Group_2_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1784:1: ( rule__HashKeyValue__Group_2_1__2__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1785:2: rule__HashKeyValue__Group_2_1__2__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1985:1: ( rule__HashKeyValue__Group_2_1__2__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1986:2: rule__HashKeyValue__Group_2_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__2__Impl_in_rule__HashKeyValue__Group_2_1__23593);
+            pushFollow(FOLLOW_rule__HashKeyValue__Group_2_1__2__Impl_in_rule__HashKeyValue__Group_2_1__24011);
             rule__HashKeyValue__Group_2_1__2__Impl();
 
             state._fsp--;
@@ -5038,20 +5600,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2_1__2__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1791:1: rule__HashKeyValue__Group_2_1__2__Impl : ( '=>' ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1992:1: rule__HashKeyValue__Group_2_1__2__Impl : ( '=>' ) ;
     public final void rule__HashKeyValue__Group_2_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1795:1: ( ( '=>' ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1796:1: ( '=>' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1996:1: ( ( '=>' ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1997:1: ( '=>' )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1796:1: ( '=>' )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1797:1: '=>'
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1997:1: ( '=>' )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1998:1: '=>'
             {
              before(grammarAccess.getHashKeyValueAccess().getEqualsSignGreaterThanSignKeyword_2_1_2()); 
-            match(input,26,FOLLOW_26_in_rule__HashKeyValue__Group_2_1__2__Impl3621); 
+            match(input,29,FOLLOW_29_in_rule__HashKeyValue__Group_2_1__2__Impl4039); 
              after(grammarAccess.getHashKeyValueAccess().getEqualsSignGreaterThanSignKeyword_2_1_2()); 
 
             }
@@ -5075,21 +5637,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1816:1: rule__Method__Group__0 : rule__Method__Group__0__Impl rule__Method__Group__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2017:1: rule__Method__Group__0 : rule__Method__Group__0__Impl rule__Method__Group__1 ;
     public final void rule__Method__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1820:1: ( rule__Method__Group__0__Impl rule__Method__Group__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1821:2: rule__Method__Group__0__Impl rule__Method__Group__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2021:1: ( rule__Method__Group__0__Impl rule__Method__Group__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2022:2: rule__Method__Group__0__Impl rule__Method__Group__1
             {
-            pushFollow(FOLLOW_rule__Method__Group__0__Impl_in_rule__Method__Group__03658);
+            pushFollow(FOLLOW_rule__Method__Group__0__Impl_in_rule__Method__Group__04076);
             rule__Method__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Method__Group__1_in_rule__Method__Group__03661);
+            pushFollow(FOLLOW_rule__Method__Group__1_in_rule__Method__Group__04079);
             rule__Method__Group__1();
 
             state._fsp--;
@@ -5113,20 +5675,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1828:1: rule__Method__Group__0__Impl : ( RULE_DEF_WORD ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2029:1: rule__Method__Group__0__Impl : ( RULE_DEF_WORD ) ;
     public final void rule__Method__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1832:1: ( ( RULE_DEF_WORD ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1833:1: ( RULE_DEF_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2033:1: ( ( RULE_DEF_WORD ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2034:1: ( RULE_DEF_WORD )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1833:1: ( RULE_DEF_WORD )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1834:1: RULE_DEF_WORD
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2034:1: ( RULE_DEF_WORD )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2035:1: RULE_DEF_WORD
             {
              before(grammarAccess.getMethodAccess().getDEF_WORDTerminalRuleCall_0()); 
-            match(input,RULE_DEF_WORD,FOLLOW_RULE_DEF_WORD_in_rule__Method__Group__0__Impl3688); 
+            match(input,RULE_DEF_WORD,FOLLOW_RULE_DEF_WORD_in_rule__Method__Group__0__Impl4106); 
              after(grammarAccess.getMethodAccess().getDEF_WORDTerminalRuleCall_0()); 
 
             }
@@ -5150,16 +5712,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1845:1: rule__Method__Group__1 : rule__Method__Group__1__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2046:1: rule__Method__Group__1 : rule__Method__Group__1__Impl ;
     public final void rule__Method__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1849:1: ( rule__Method__Group__1__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1850:2: rule__Method__Group__1__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2050:1: ( rule__Method__Group__1__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2051:2: rule__Method__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Method__Group__1__Impl_in_rule__Method__Group__13717);
+            pushFollow(FOLLOW_rule__Method__Group__1__Impl_in_rule__Method__Group__14135);
             rule__Method__Group__1__Impl();
 
             state._fsp--;
@@ -5183,23 +5745,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1856:1: rule__Method__Group__1__Impl : ( ( rule__Method__NameAssignment_1 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2057:1: rule__Method__Group__1__Impl : ( ( rule__Method__NameAssignment_1 ) ) ;
     public final void rule__Method__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1860:1: ( ( ( rule__Method__NameAssignment_1 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1861:1: ( ( rule__Method__NameAssignment_1 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2061:1: ( ( ( rule__Method__NameAssignment_1 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2062:1: ( ( rule__Method__NameAssignment_1 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1861:1: ( ( rule__Method__NameAssignment_1 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1862:1: ( rule__Method__NameAssignment_1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2062:1: ( ( rule__Method__NameAssignment_1 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2063:1: ( rule__Method__NameAssignment_1 )
             {
              before(grammarAccess.getMethodAccess().getNameAssignment_1()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1863:1: ( rule__Method__NameAssignment_1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1863:2: rule__Method__NameAssignment_1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2064:1: ( rule__Method__NameAssignment_1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2064:2: rule__Method__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Method__NameAssignment_1_in_rule__Method__Group__1__Impl3744);
+            pushFollow(FOLLOW_rule__Method__NameAssignment_1_in_rule__Method__Group__1__Impl4162);
             rule__Method__NameAssignment_1();
 
             state._fsp--;
@@ -5230,21 +5792,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1877:1: rule__MethodName__Group__0 : rule__MethodName__Group__0__Impl rule__MethodName__Group__1 ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2078:1: rule__MethodName__Group__0 : rule__MethodName__Group__0__Impl rule__MethodName__Group__1 ;
     public final void rule__MethodName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1881:1: ( rule__MethodName__Group__0__Impl rule__MethodName__Group__1 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1882:2: rule__MethodName__Group__0__Impl rule__MethodName__Group__1
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2082:1: ( rule__MethodName__Group__0__Impl rule__MethodName__Group__1 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2083:2: rule__MethodName__Group__0__Impl rule__MethodName__Group__1
             {
-            pushFollow(FOLLOW_rule__MethodName__Group__0__Impl_in_rule__MethodName__Group__03778);
+            pushFollow(FOLLOW_rule__MethodName__Group__0__Impl_in_rule__MethodName__Group__04196);
             rule__MethodName__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MethodName__Group__1_in_rule__MethodName__Group__03781);
+            pushFollow(FOLLOW_rule__MethodName__Group__1_in_rule__MethodName__Group__04199);
             rule__MethodName__Group__1();
 
             state._fsp--;
@@ -5268,20 +5830,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__0__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1889:1: rule__MethodName__Group__0__Impl : ( RULE_ID ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2090:1: rule__MethodName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__MethodName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1893:1: ( ( RULE_ID ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1894:1: ( RULE_ID )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2094:1: ( ( RULE_ID ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2095:1: ( RULE_ID )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1894:1: ( RULE_ID )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1895:1: RULE_ID
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2095:1: ( RULE_ID )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2096:1: RULE_ID
             {
              before(grammarAccess.getMethodNameAccess().getIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MethodName__Group__0__Impl3808); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MethodName__Group__0__Impl4226); 
              after(grammarAccess.getMethodNameAccess().getIDTerminalRuleCall_0()); 
 
             }
@@ -5305,16 +5867,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1906:1: rule__MethodName__Group__1 : rule__MethodName__Group__1__Impl ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2107:1: rule__MethodName__Group__1 : rule__MethodName__Group__1__Impl ;
     public final void rule__MethodName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1910:1: ( rule__MethodName__Group__1__Impl )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1911:2: rule__MethodName__Group__1__Impl
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2111:1: ( rule__MethodName__Group__1__Impl )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2112:2: rule__MethodName__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MethodName__Group__1__Impl_in_rule__MethodName__Group__13837);
+            pushFollow(FOLLOW_rule__MethodName__Group__1__Impl_in_rule__MethodName__Group__14255);
             rule__MethodName__Group__1__Impl();
 
             state._fsp--;
@@ -5338,31 +5900,31 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__1__Impl"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1917:1: rule__MethodName__Group__1__Impl : ( ( rule__MethodName__Alternatives_1 )? ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2118:1: rule__MethodName__Group__1__Impl : ( ( rule__MethodName__Alternatives_1 )? ) ;
     public final void rule__MethodName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1921:1: ( ( ( rule__MethodName__Alternatives_1 )? ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1922:1: ( ( rule__MethodName__Alternatives_1 )? )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2122:1: ( ( ( rule__MethodName__Alternatives_1 )? ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2123:1: ( ( rule__MethodName__Alternatives_1 )? )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1922:1: ( ( rule__MethodName__Alternatives_1 )? )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1923:1: ( rule__MethodName__Alternatives_1 )?
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2123:1: ( ( rule__MethodName__Alternatives_1 )? )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2124:1: ( rule__MethodName__Alternatives_1 )?
             {
              before(grammarAccess.getMethodNameAccess().getAlternatives_1()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1924:1: ( rule__MethodName__Alternatives_1 )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2125:1: ( rule__MethodName__Alternatives_1 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( ((LA29_0>=19 && LA29_0<=20)) ) {
-                alt29=1;
+            if ( ((LA31_0>=21 && LA31_0<=22)) ) {
+                alt31=1;
             }
-            switch (alt29) {
+            switch (alt31) {
                 case 1 :
-                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1924:2: rule__MethodName__Alternatives_1
+                    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2125:2: rule__MethodName__Alternatives_1
                     {
-                    pushFollow(FOLLOW_rule__MethodName__Alternatives_1_in_rule__MethodName__Group__1__Impl3864);
+                    pushFollow(FOLLOW_rule__MethodName__Alternatives_1_in_rule__MethodName__Group__1__Impl4282);
                     rule__MethodName__Alternatives_1();
 
                     state._fsp--;
@@ -5396,20 +5958,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__NameAssignment_2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1939:1: rule__Class__NameAssignment_2 : ( ruleNamespacedModuleName ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2140:1: rule__Class__NameAssignment_2 : ( ruleNamespacedModuleName ) ;
     public final void rule__Class__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1943:1: ( ( ruleNamespacedModuleName ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1944:1: ( ruleNamespacedModuleName )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2144:1: ( ( ruleNamespacedModuleName ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2145:1: ( ruleNamespacedModuleName )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1944:1: ( ruleNamespacedModuleName )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1945:1: ruleNamespacedModuleName
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2145:1: ( ruleNamespacedModuleName )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2146:1: ruleNamespacedModuleName
             {
              before(grammarAccess.getClassAccess().getNameNamespacedModuleNameParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleNamespacedModuleName_in_rule__Class__NameAssignment_23904);
+            pushFollow(FOLLOW_ruleNamespacedModuleName_in_rule__Class__NameAssignment_24322);
             ruleNamespacedModuleName();
 
             state._fsp--;
@@ -5437,20 +5999,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__SuperTypeAssignment_3_3"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1954:1: rule__Class__SuperTypeAssignment_3_3 : ( ruleNamespacedModuleName ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2155:1: rule__Class__SuperTypeAssignment_3_3 : ( ruleNamespacedModuleName ) ;
     public final void rule__Class__SuperTypeAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1958:1: ( ( ruleNamespacedModuleName ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1959:1: ( ruleNamespacedModuleName )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2159:1: ( ( ruleNamespacedModuleName ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2160:1: ( ruleNamespacedModuleName )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1959:1: ( ruleNamespacedModuleName )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1960:1: ruleNamespacedModuleName
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2160:1: ( ruleNamespacedModuleName )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2161:1: ruleNamespacedModuleName
             {
              before(grammarAccess.getClassAccess().getSuperTypeNamespacedModuleNameParserRuleCall_3_3_0()); 
-            pushFollow(FOLLOW_ruleNamespacedModuleName_in_rule__Class__SuperTypeAssignment_3_33935);
+            pushFollow(FOLLOW_ruleNamespacedModuleName_in_rule__Class__SuperTypeAssignment_3_34353);
             ruleNamespacedModuleName();
 
             state._fsp--;
@@ -5478,20 +6040,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__ClassElementsAssignment_5"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1969:1: rule__Class__ClassElementsAssignment_5 : ( ruleClassElement ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2170:1: rule__Class__ClassElementsAssignment_5 : ( ruleClassElement ) ;
     public final void rule__Class__ClassElementsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1973:1: ( ( ruleClassElement ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1974:1: ( ruleClassElement )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2174:1: ( ( ruleClassElement ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2175:1: ( ruleClassElement )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1974:1: ( ruleClassElement )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1975:1: ruleClassElement
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2175:1: ( ruleClassElement )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2176:1: ruleClassElement
             {
              before(grammarAccess.getClassAccess().getClassElementsClassElementParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleClassElement_in_rule__Class__ClassElementsAssignment_53966);
+            pushFollow(FOLLOW_ruleClassElement_in_rule__Class__ClassElementsAssignment_54384);
             ruleClassElement();
 
             state._fsp--;
@@ -5519,23 +6081,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__NameAssignment_2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1984:1: rule__HasMany__NameAssignment_2 : ( ( rule__HasMany__NameAlternatives_2_0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2185:1: rule__HasMany__NameAssignment_2 : ( ( rule__HasMany__NameAlternatives_2_0 ) ) ;
     public final void rule__HasMany__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1988:1: ( ( ( rule__HasMany__NameAlternatives_2_0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1989:1: ( ( rule__HasMany__NameAlternatives_2_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2189:1: ( ( ( rule__HasMany__NameAlternatives_2_0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2190:1: ( ( rule__HasMany__NameAlternatives_2_0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1989:1: ( ( rule__HasMany__NameAlternatives_2_0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1990:1: ( rule__HasMany__NameAlternatives_2_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2190:1: ( ( rule__HasMany__NameAlternatives_2_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2191:1: ( rule__HasMany__NameAlternatives_2_0 )
             {
              before(grammarAccess.getHasManyAccess().getNameAlternatives_2_0()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1991:1: ( rule__HasMany__NameAlternatives_2_0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:1991:2: rule__HasMany__NameAlternatives_2_0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2192:1: ( rule__HasMany__NameAlternatives_2_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2192:2: rule__HasMany__NameAlternatives_2_0
             {
-            pushFollow(FOLLOW_rule__HasMany__NameAlternatives_2_0_in_rule__HasMany__NameAssignment_23997);
+            pushFollow(FOLLOW_rule__HasMany__NameAlternatives_2_0_in_rule__HasMany__NameAssignment_24415);
             rule__HasMany__NameAlternatives_2_0();
 
             state._fsp--;
@@ -5566,20 +6128,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasMany__OptionsAssignment_4"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2000:1: rule__HasMany__OptionsAssignment_4 : ( ruleHashKeyValue ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2201:1: rule__HasMany__OptionsAssignment_4 : ( ruleHashKeyValue ) ;
     public final void rule__HasMany__OptionsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2004:1: ( ( ruleHashKeyValue ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2005:1: ( ruleHashKeyValue )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2205:1: ( ( ruleHashKeyValue ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2206:1: ( ruleHashKeyValue )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2005:1: ( ruleHashKeyValue )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2006:1: ruleHashKeyValue
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2206:1: ( ruleHashKeyValue )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2207:1: ruleHashKeyValue
             {
              before(grammarAccess.getHasManyAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleHashKeyValue_in_rule__HasMany__OptionsAssignment_44030);
+            pushFollow(FOLLOW_ruleHashKeyValue_in_rule__HasMany__OptionsAssignment_44448);
             ruleHashKeyValue();
 
             state._fsp--;
@@ -5607,23 +6169,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__NameAssignment_2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2015:1: rule__HasAndBelongsToMany__NameAssignment_2 : ( ( rule__HasAndBelongsToMany__NameAlternatives_2_0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2216:1: rule__HasAndBelongsToMany__NameAssignment_2 : ( ( rule__HasAndBelongsToMany__NameAlternatives_2_0 ) ) ;
     public final void rule__HasAndBelongsToMany__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2019:1: ( ( ( rule__HasAndBelongsToMany__NameAlternatives_2_0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2020:1: ( ( rule__HasAndBelongsToMany__NameAlternatives_2_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2220:1: ( ( ( rule__HasAndBelongsToMany__NameAlternatives_2_0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2221:1: ( ( rule__HasAndBelongsToMany__NameAlternatives_2_0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2020:1: ( ( rule__HasAndBelongsToMany__NameAlternatives_2_0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2021:1: ( rule__HasAndBelongsToMany__NameAlternatives_2_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2221:1: ( ( rule__HasAndBelongsToMany__NameAlternatives_2_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2222:1: ( rule__HasAndBelongsToMany__NameAlternatives_2_0 )
             {
              before(grammarAccess.getHasAndBelongsToManyAccess().getNameAlternatives_2_0()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2022:1: ( rule__HasAndBelongsToMany__NameAlternatives_2_0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2022:2: rule__HasAndBelongsToMany__NameAlternatives_2_0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2223:1: ( rule__HasAndBelongsToMany__NameAlternatives_2_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2223:2: rule__HasAndBelongsToMany__NameAlternatives_2_0
             {
-            pushFollow(FOLLOW_rule__HasAndBelongsToMany__NameAlternatives_2_0_in_rule__HasAndBelongsToMany__NameAssignment_24061);
+            pushFollow(FOLLOW_rule__HasAndBelongsToMany__NameAlternatives_2_0_in_rule__HasAndBelongsToMany__NameAssignment_24479);
             rule__HasAndBelongsToMany__NameAlternatives_2_0();
 
             state._fsp--;
@@ -5654,20 +6216,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HasAndBelongsToMany__OptionsAssignment_4"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2031:1: rule__HasAndBelongsToMany__OptionsAssignment_4 : ( ruleHashKeyValue ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2232:1: rule__HasAndBelongsToMany__OptionsAssignment_4 : ( ruleHashKeyValue ) ;
     public final void rule__HasAndBelongsToMany__OptionsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2035:1: ( ( ruleHashKeyValue ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2036:1: ( ruleHashKeyValue )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2236:1: ( ( ruleHashKeyValue ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2237:1: ( ruleHashKeyValue )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2036:1: ( ruleHashKeyValue )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2037:1: ruleHashKeyValue
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2237:1: ( ruleHashKeyValue )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2238:1: ruleHashKeyValue
             {
              before(grammarAccess.getHasAndBelongsToManyAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleHashKeyValue_in_rule__HasAndBelongsToMany__OptionsAssignment_44094);
+            pushFollow(FOLLOW_ruleHashKeyValue_in_rule__HasAndBelongsToMany__OptionsAssignment_44512);
             ruleHashKeyValue();
 
             state._fsp--;
@@ -5695,23 +6257,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__NameAssignment_2"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2046:1: rule__BelongsTo__NameAssignment_2 : ( ( rule__BelongsTo__NameAlternatives_2_0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2247:1: rule__BelongsTo__NameAssignment_2 : ( ( rule__BelongsTo__NameAlternatives_2_0 ) ) ;
     public final void rule__BelongsTo__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2050:1: ( ( ( rule__BelongsTo__NameAlternatives_2_0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2051:1: ( ( rule__BelongsTo__NameAlternatives_2_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2251:1: ( ( ( rule__BelongsTo__NameAlternatives_2_0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2252:1: ( ( rule__BelongsTo__NameAlternatives_2_0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2051:1: ( ( rule__BelongsTo__NameAlternatives_2_0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2052:1: ( rule__BelongsTo__NameAlternatives_2_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2252:1: ( ( rule__BelongsTo__NameAlternatives_2_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2253:1: ( rule__BelongsTo__NameAlternatives_2_0 )
             {
              before(grammarAccess.getBelongsToAccess().getNameAlternatives_2_0()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2053:1: ( rule__BelongsTo__NameAlternatives_2_0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2053:2: rule__BelongsTo__NameAlternatives_2_0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2254:1: ( rule__BelongsTo__NameAlternatives_2_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2254:2: rule__BelongsTo__NameAlternatives_2_0
             {
-            pushFollow(FOLLOW_rule__BelongsTo__NameAlternatives_2_0_in_rule__BelongsTo__NameAssignment_24125);
+            pushFollow(FOLLOW_rule__BelongsTo__NameAlternatives_2_0_in_rule__BelongsTo__NameAssignment_24543);
             rule__BelongsTo__NameAlternatives_2_0();
 
             state._fsp--;
@@ -5742,20 +6304,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BelongsTo__OptionsAssignment_4"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2062:1: rule__BelongsTo__OptionsAssignment_4 : ( ruleHashKeyValue ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2263:1: rule__BelongsTo__OptionsAssignment_4 : ( ruleHashKeyValue ) ;
     public final void rule__BelongsTo__OptionsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2066:1: ( ( ruleHashKeyValue ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2067:1: ( ruleHashKeyValue )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2267:1: ( ( ruleHashKeyValue ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2268:1: ( ruleHashKeyValue )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2067:1: ( ruleHashKeyValue )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2068:1: ruleHashKeyValue
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2268:1: ( ruleHashKeyValue )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2269:1: ruleHashKeyValue
             {
              before(grammarAccess.getBelongsToAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleHashKeyValue_in_rule__BelongsTo__OptionsAssignment_44158);
+            pushFollow(FOLLOW_ruleHashKeyValue_in_rule__BelongsTo__OptionsAssignment_44576);
             ruleHashKeyValue();
 
             state._fsp--;
@@ -5783,20 +6345,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__KeyAssignment_2_0_0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2077:1: rule__HashKeyValue__KeyAssignment_2_0_0 : ( RULE_ID ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2278:1: rule__HashKeyValue__KeyAssignment_2_0_0 : ( RULE_ID ) ;
     public final void rule__HashKeyValue__KeyAssignment_2_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2081:1: ( ( RULE_ID ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2082:1: ( RULE_ID )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2282:1: ( ( RULE_ID ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2283:1: ( RULE_ID )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2082:1: ( RULE_ID )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2083:1: RULE_ID
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2283:1: ( RULE_ID )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2284:1: RULE_ID
             {
              before(grammarAccess.getHashKeyValueAccess().getKeyIDTerminalRuleCall_2_0_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__HashKeyValue__KeyAssignment_2_0_04189); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__HashKeyValue__KeyAssignment_2_0_04607); 
              after(grammarAccess.getHashKeyValueAccess().getKeyIDTerminalRuleCall_2_0_0_0()); 
 
             }
@@ -5820,23 +6382,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__KeyAssignment_2_1_0"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2092:1: rule__HashKeyValue__KeyAssignment_2_1_0 : ( ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2293:1: rule__HashKeyValue__KeyAssignment_2_1_0 : ( ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 ) ) ;
     public final void rule__HashKeyValue__KeyAssignment_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2096:1: ( ( ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2097:1: ( ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2297:1: ( ( ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2298:1: ( ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2097:1: ( ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2098:1: ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2298:1: ( ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2299:1: ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 )
             {
              before(grammarAccess.getHashKeyValueAccess().getKeyAlternatives_2_1_0_0()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2099:1: ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2099:2: rule__HashKeyValue__KeyAlternatives_2_1_0_0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2300:1: ( rule__HashKeyValue__KeyAlternatives_2_1_0_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2300:2: rule__HashKeyValue__KeyAlternatives_2_1_0_0
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__KeyAlternatives_2_1_0_0_in_rule__HashKeyValue__KeyAssignment_2_1_04220);
+            pushFollow(FOLLOW_rule__HashKeyValue__KeyAlternatives_2_1_0_0_in_rule__HashKeyValue__KeyAssignment_2_1_04638);
             rule__HashKeyValue__KeyAlternatives_2_1_0_0();
 
             state._fsp--;
@@ -5867,23 +6429,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__ValueAssignment_4"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2108:1: rule__HashKeyValue__ValueAssignment_4 : ( ( rule__HashKeyValue__ValueAlternatives_4_0 ) ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2309:1: rule__HashKeyValue__ValueAssignment_4 : ( ( rule__HashKeyValue__ValueAlternatives_4_0 ) ) ;
     public final void rule__HashKeyValue__ValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2112:1: ( ( ( rule__HashKeyValue__ValueAlternatives_4_0 ) ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2113:1: ( ( rule__HashKeyValue__ValueAlternatives_4_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2313:1: ( ( ( rule__HashKeyValue__ValueAlternatives_4_0 ) ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2314:1: ( ( rule__HashKeyValue__ValueAlternatives_4_0 ) )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2113:1: ( ( rule__HashKeyValue__ValueAlternatives_4_0 ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2114:1: ( rule__HashKeyValue__ValueAlternatives_4_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2314:1: ( ( rule__HashKeyValue__ValueAlternatives_4_0 ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2315:1: ( rule__HashKeyValue__ValueAlternatives_4_0 )
             {
              before(grammarAccess.getHashKeyValueAccess().getValueAlternatives_4_0()); 
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2115:1: ( rule__HashKeyValue__ValueAlternatives_4_0 )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2115:2: rule__HashKeyValue__ValueAlternatives_4_0
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2316:1: ( rule__HashKeyValue__ValueAlternatives_4_0 )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2316:2: rule__HashKeyValue__ValueAlternatives_4_0
             {
-            pushFollow(FOLLOW_rule__HashKeyValue__ValueAlternatives_4_0_in_rule__HashKeyValue__ValueAssignment_44253);
+            pushFollow(FOLLOW_rule__HashKeyValue__ValueAlternatives_4_0_in_rule__HashKeyValue__ValueAssignment_44671);
             rule__HashKeyValue__ValueAlternatives_4_0();
 
             state._fsp--;
@@ -5914,20 +6476,20 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__NameAssignment_1"
-    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2124:1: rule__Method__NameAssignment_1 : ( ruleMethodName ) ;
+    // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2325:1: rule__Method__NameAssignment_1 : ( ruleMethodName ) ;
     public final void rule__Method__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2128:1: ( ( ruleMethodName ) )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2129:1: ( ruleMethodName )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2329:1: ( ( ruleMethodName ) )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2330:1: ( ruleMethodName )
             {
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2129:1: ( ruleMethodName )
-            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2130:1: ruleMethodName
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2330:1: ( ruleMethodName )
+            // ../co.gruposaberes.model.ui/src-gen/co/gruposaberes/model/ui/contentassist/antlr/internal/InternalRails.g:2331:1: ruleMethodName
             {
              before(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleMethodName_in_rule__Method__NameAssignment_14286);
+            pushFollow(FOLLOW_ruleMethodName_in_rule__Method__NameAssignment_14704);
             ruleMethodName();
 
             state._fsp--;
@@ -5962,16 +6524,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
     static final String DFA11_eofS =
         "\4\uffff";
     static final String DFA11_minS =
-        "\2\7\2\uffff";
+        "\2\11\2\uffff";
     static final String DFA11_maxS =
-        "\2\26\2\uffff";
+        "\2\30\2\uffff";
     static final String DFA11_acceptS =
         "\2\uffff\1\1\1\2";
     static final String DFA11_specialS =
         "\4\uffff}>";
     static final String[] DFA11_transitionS = {
-            "\1\3\1\uffff\4\3\10\uffff\1\1\1\2",
-            "\1\3\1\uffff\4\3\10\uffff\1\1\1\2",
+            "\1\3\1\uffff\1\3\1\uffff\3\3\7\uffff\1\1\1\2",
+            "\1\3\1\uffff\1\3\1\uffff\3\3\7\uffff\1\1\1\2",
             "",
             ""
     };
@@ -6006,7 +6568,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             this.transition = DFA11_transition;
         }
         public String getDescription() {
-            return "658:1: ( rule__Class__Group_3__0 )?";
+            return "704:1: ( rule__Class__Group_3__0 )?";
         }
     }
  
@@ -6017,181 +6579,200 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleNamespacedModuleName_in_entryRuleNamespacedModuleName121 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNamespacedModuleName128 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__NamespacedModuleName__Group__0_in_ruleNamespacedModuleName154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClassElement_in_entryRuleClassElement181 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleClassElement188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassElement__Alternatives_in_ruleClassElement214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationship_in_entryRuleRelationship241 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRelationship248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Relationship__Alternatives_in_ruleRelationship274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHasMany_in_entryRuleHasMany301 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHasMany308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__0_in_ruleHasMany334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHasAndBelongsToMany_in_entryRuleHasAndBelongsToMany361 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHasAndBelongsToMany368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__0_in_ruleHasAndBelongsToMany394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBelongsTo_in_entryRuleBelongsTo421 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBelongsTo428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__0_in_ruleBelongsTo454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHashKeyValue_in_entryRuleHashKeyValue481 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHashKeyValue488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__0_in_ruleHashKeyValue514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethod_in_entryRuleMethod541 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMethod548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Method__Group__0_in_ruleMethod574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethodName_in_entryRuleMethodName601 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMethodName608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodName__Group__0_in_ruleMethodName634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethod_in_rule__ClassElement__Alternatives670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationship_in_rule__ClassElement__Alternatives687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHasMany_in_rule__Relationship__Alternatives719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHasAndBelongsToMany_in_rule__Relationship__Alternatives736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBelongsTo_in_rule__Relationship__Alternatives753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__HasMany__NameAlternatives_2_0785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__HasMany__NameAlternatives_2_0802 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__HasAndBelongsToMany__NameAlternatives_2_0834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__HasAndBelongsToMany__NameAlternatives_2_0851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__BelongsTo__NameAlternatives_2_0883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__BelongsTo__NameAlternatives_2_0900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_0__0_in_rule__HashKeyValue__Alternatives_2932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__0_in_rule__HashKeyValue__Alternatives_2950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__HashKeyValue__KeyAlternatives_2_1_0_0983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__HashKeyValue__KeyAlternatives_2_1_0_01000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__HashKeyValue__ValueAlternatives_4_01032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__HashKeyValue__ValueAlternatives_4_01049 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__MethodName__Alternatives_11082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__MethodName__Alternatives_11102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__Group__0__Impl_in_rule__Class__Group__01134 = new BitSet(new long[]{0x0000000000200100L});
-    public static final BitSet FOLLOW_rule__Class__Group__1_in_rule__Class__Group__01137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CLASS_WORD_in_rule__Class__Group__0__Impl1164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__Group__1__Impl_in_rule__Class__Group__11193 = new BitSet(new long[]{0x0000000000200100L});
-    public static final BitSet FOLLOW_rule__Class__Group__2_in_rule__Class__Group__11196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Class__Group__1__Impl1225 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Class__Group__2__Impl_in_rule__Class__Group__21258 = new BitSet(new long[]{0x0000000000601E80L});
-    public static final BitSet FOLLOW_rule__Class__Group__3_in_rule__Class__Group__21261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__NameAssignment_2_in_rule__Class__Group__2__Impl1288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__Group__3__Impl_in_rule__Class__Group__31318 = new BitSet(new long[]{0x0000000000601E80L});
-    public static final BitSet FOLLOW_rule__Class__Group__4_in_rule__Class__Group__31321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__Group_3__0_in_rule__Class__Group__3__Impl1348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__Group__4__Impl_in_rule__Class__Group__41379 = new BitSet(new long[]{0x0000000000601E80L});
-    public static final BitSet FOLLOW_rule__Class__Group__5_in_rule__Class__Group__41382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Class__Group__4__Impl1411 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Class__Group__5__Impl_in_rule__Class__Group__51444 = new BitSet(new long[]{0x0000000000601E80L});
-    public static final BitSet FOLLOW_rule__Class__Group__6_in_rule__Class__Group__51447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__ClassElementsAssignment_5_in_rule__Class__Group__5__Impl1474 = new BitSet(new long[]{0x0000000000001E02L});
-    public static final BitSet FOLLOW_rule__Class__Group__6__Impl_in_rule__Class__Group__61505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_END_WORD_in_rule__Class__Group__6__Impl1532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__Group_3__0__Impl_in_rule__Class__Group_3__01575 = new BitSet(new long[]{0x0000000000600000L});
-    public static final BitSet FOLLOW_rule__Class__Group_3__1_in_rule__Class__Group_3__01578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Class__Group_3__0__Impl1607 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Class__Group_3__1__Impl_in_rule__Class__Group_3__11640 = new BitSet(new long[]{0x0000000000200100L});
-    public static final BitSet FOLLOW_rule__Class__Group_3__2_in_rule__Class__Group_3__11643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Class__Group_3__1__Impl1671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__Group_3__2__Impl_in_rule__Class__Group_3__21702 = new BitSet(new long[]{0x0000000000200100L});
-    public static final BitSet FOLLOW_rule__Class__Group_3__3_in_rule__Class__Group_3__21705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Class__Group_3__2__Impl1734 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Class__Group_3__3__Impl_in_rule__Class__Group_3__31767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Class__SuperTypeAssignment_3_3_in_rule__Class__Group_3__3__Impl1794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group__0__Impl_in_rule__NamespacedModuleName__Group__01832 = new BitSet(new long[]{0x0000000000200100L});
-    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group__1_in_rule__NamespacedModuleName__Group__01835 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group_0__0_in_rule__NamespacedModuleName__Group__0__Impl1862 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group__1__Impl_in_rule__NamespacedModuleName__Group__11893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NamespacedModuleName__Group__1__Impl1920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group_0__0__Impl_in_rule__NamespacedModuleName__Group_0__01953 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group_0__1_in_rule__NamespacedModuleName__Group_0__01956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NamespacedModuleName__Group_0__0__Impl1983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group_0__1__Impl_in_rule__NamespacedModuleName__Group_0__12012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__NamespacedModuleName__Group_0__1__Impl2040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__0__Impl_in_rule__HasMany__Group__02075 = new BitSet(new long[]{0x0000000000200030L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__1_in_rule__HasMany__Group__02078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_HAS_MANY_WORD_in_rule__HasMany__Group__0__Impl2105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__1__Impl_in_rule__HasMany__Group__12134 = new BitSet(new long[]{0x0000000000200030L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__2_in_rule__HasMany__Group__12137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__HasMany__Group__1__Impl2166 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__2__Impl_in_rule__HasMany__Group__22199 = new BitSet(new long[]{0x0000000001200000L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__3_in_rule__HasMany__Group__22202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasMany__NameAssignment_2_in_rule__HasMany__Group__2__Impl2229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__3__Impl_in_rule__HasMany__Group__32259 = new BitSet(new long[]{0x0000000001200000L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__4_in_rule__HasMany__Group__32262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__HasMany__Group__3__Impl2291 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__HasMany__Group__4__Impl_in_rule__HasMany__Group__42324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasMany__OptionsAssignment_4_in_rule__HasMany__Group__4__Impl2351 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__0__Impl_in_rule__HasAndBelongsToMany__Group__02392 = new BitSet(new long[]{0x0000000000200030L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__1_in_rule__HasAndBelongsToMany__Group__02395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_HAS_AND_BELONGS_TO_MANY_WORD_in_rule__HasAndBelongsToMany__Group__0__Impl2422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__1__Impl_in_rule__HasAndBelongsToMany__Group__12451 = new BitSet(new long[]{0x0000000000200030L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__2_in_rule__HasAndBelongsToMany__Group__12454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__HasAndBelongsToMany__Group__1__Impl2483 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__2__Impl_in_rule__HasAndBelongsToMany__Group__22516 = new BitSet(new long[]{0x0000000001200000L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__3_in_rule__HasAndBelongsToMany__Group__22519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__NameAssignment_2_in_rule__HasAndBelongsToMany__Group__2__Impl2546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__3__Impl_in_rule__HasAndBelongsToMany__Group__32576 = new BitSet(new long[]{0x0000000001200000L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__4_in_rule__HasAndBelongsToMany__Group__32579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__HasAndBelongsToMany__Group__3__Impl2608 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__4__Impl_in_rule__HasAndBelongsToMany__Group__42641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__OptionsAssignment_4_in_rule__HasAndBelongsToMany__Group__4__Impl2668 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__0__Impl_in_rule__BelongsTo__Group__02709 = new BitSet(new long[]{0x0000000000200030L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__1_in_rule__BelongsTo__Group__02712 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BELONGS_TO_WORD_in_rule__BelongsTo__Group__0__Impl2739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__1__Impl_in_rule__BelongsTo__Group__12768 = new BitSet(new long[]{0x0000000000200030L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__2_in_rule__BelongsTo__Group__12771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__BelongsTo__Group__1__Impl2800 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__2__Impl_in_rule__BelongsTo__Group__22833 = new BitSet(new long[]{0x0000000001200000L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__3_in_rule__BelongsTo__Group__22836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BelongsTo__NameAssignment_2_in_rule__BelongsTo__Group__2__Impl2863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__3__Impl_in_rule__BelongsTo__Group__32893 = new BitSet(new long[]{0x0000000001200000L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__4_in_rule__BelongsTo__Group__32896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__BelongsTo__Group__3__Impl2925 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__BelongsTo__Group__4__Impl_in_rule__BelongsTo__Group__42958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BelongsTo__OptionsAssignment_4_in_rule__BelongsTo__Group__4__Impl2985 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__0__Impl_in_rule__HashKeyValue__Group__03026 = new BitSet(new long[]{0x0000000000200130L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__1_in_rule__HashKeyValue__Group__03029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__HashKeyValue__Group__0__Impl3057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__1__Impl_in_rule__HashKeyValue__Group__13088 = new BitSet(new long[]{0x0000000000200130L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__2_in_rule__HashKeyValue__Group__13091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__HashKeyValue__Group__1__Impl3120 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__2__Impl_in_rule__HashKeyValue__Group__23153 = new BitSet(new long[]{0x0000000000200030L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__3_in_rule__HashKeyValue__Group__23156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Alternatives_2_in_rule__HashKeyValue__Group__2__Impl3183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__3__Impl_in_rule__HashKeyValue__Group__33213 = new BitSet(new long[]{0x0000000000200030L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__4_in_rule__HashKeyValue__Group__33216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__HashKeyValue__Group__3__Impl3245 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group__4__Impl_in_rule__HashKeyValue__Group__43278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__ValueAssignment_4_in_rule__HashKeyValue__Group__4__Impl3305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_0__0__Impl_in_rule__HashKeyValue__Group_2_0__03345 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_0__1_in_rule__HashKeyValue__Group_2_0__03348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__KeyAssignment_2_0_0_in_rule__HashKeyValue__Group_2_0__0__Impl3375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_0__1__Impl_in_rule__HashKeyValue__Group_2_0__13405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__HashKeyValue__Group_2_0__1__Impl3433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__0__Impl_in_rule__HashKeyValue__Group_2_1__03468 = new BitSet(new long[]{0x0000000004200000L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__1_in_rule__HashKeyValue__Group_2_1__03471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__KeyAssignment_2_1_0_in_rule__HashKeyValue__Group_2_1__0__Impl3498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__1__Impl_in_rule__HashKeyValue__Group_2_1__13528 = new BitSet(new long[]{0x0000000004200000L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__2_in_rule__HashKeyValue__Group_2_1__13531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__HashKeyValue__Group_2_1__1__Impl3560 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__2__Impl_in_rule__HashKeyValue__Group_2_1__23593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__HashKeyValue__Group_2_1__2__Impl3621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Method__Group__0__Impl_in_rule__Method__Group__03658 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__Method__Group__1_in_rule__Method__Group__03661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DEF_WORD_in_rule__Method__Group__0__Impl3688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Method__Group__1__Impl_in_rule__Method__Group__13717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Method__NameAssignment_1_in_rule__Method__Group__1__Impl3744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodName__Group__0__Impl_in_rule__MethodName__Group__03778 = new BitSet(new long[]{0x0000000000180000L});
-    public static final BitSet FOLLOW_rule__MethodName__Group__1_in_rule__MethodName__Group__03781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__MethodName__Group__0__Impl3808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodName__Group__1__Impl_in_rule__MethodName__Group__13837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodName__Alternatives_1_in_rule__MethodName__Group__1__Impl3864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNamespacedModuleName_in_rule__Class__NameAssignment_23904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNamespacedModuleName_in_rule__Class__SuperTypeAssignment_3_33935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClassElement_in_rule__Class__ClassElementsAssignment_53966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasMany__NameAlternatives_2_0_in_rule__HasMany__NameAssignment_23997 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHashKeyValue_in_rule__HasMany__OptionsAssignment_44030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__NameAlternatives_2_0_in_rule__HasAndBelongsToMany__NameAssignment_24061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHashKeyValue_in_rule__HasAndBelongsToMany__OptionsAssignment_44094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BelongsTo__NameAlternatives_2_0_in_rule__BelongsTo__NameAssignment_24125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHashKeyValue_in_rule__BelongsTo__OptionsAssignment_44158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__HashKeyValue__KeyAssignment_2_0_04189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__KeyAlternatives_2_1_0_0_in_rule__HashKeyValue__KeyAssignment_2_1_04220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HashKeyValue__ValueAlternatives_4_0_in_rule__HashKeyValue__ValueAssignment_44253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethodName_in_rule__Method__NameAssignment_14286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethodChainCall_in_entryRuleMethodChainCall181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMethodChainCall188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodChainCall__Group__0_in_ruleMethodChainCall214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClassElement_in_entryRuleClassElement241 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleClassElement248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassElement__Alternatives_in_ruleClassElement274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelationship_in_entryRuleRelationship301 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRelationship308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Relationship__Alternatives_in_ruleRelationship334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHasMany_in_entryRuleHasMany361 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleHasMany368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__0_in_ruleHasMany394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHasAndBelongsToMany_in_entryRuleHasAndBelongsToMany421 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleHasAndBelongsToMany428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__0_in_ruleHasAndBelongsToMany454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBelongsTo_in_entryRuleBelongsTo481 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBelongsTo488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__0_in_ruleBelongsTo514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHashKeyValue_in_entryRuleHashKeyValue541 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleHashKeyValue548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__0_in_ruleHashKeyValue574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethod_in_entryRuleMethod601 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMethod608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Method__Group__0_in_ruleMethod634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethodName_in_entryRuleMethodName661 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMethodName668 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodName__Group__0_in_ruleMethodName694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethod_in_rule__ClassElement__Alternatives730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelationship_in_rule__ClassElement__Alternatives747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHasMany_in_rule__Relationship__Alternatives779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHasAndBelongsToMany_in_rule__Relationship__Alternatives796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBelongsTo_in_rule__Relationship__Alternatives813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__HasMany__NameAlternatives_2_0845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__HasMany__NameAlternatives_2_0862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__HasAndBelongsToMany__NameAlternatives_2_0894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__HasAndBelongsToMany__NameAlternatives_2_0911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__BelongsTo__NameAlternatives_2_0943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__BelongsTo__NameAlternatives_2_0960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_0__0_in_rule__HashKeyValue__Alternatives_2992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__0_in_rule__HashKeyValue__Alternatives_21010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__HashKeyValue__KeyAlternatives_2_1_0_01043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__HashKeyValue__KeyAlternatives_2_1_0_01060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SYMBOL_in_rule__HashKeyValue__ValueAlternatives_4_01092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__HashKeyValue__ValueAlternatives_4_01109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BRACKET_BLOCK_in_rule__HashKeyValue__ValueAlternatives_4_01126 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ARRAY_BLOCK_in_rule__HashKeyValue__ValueAlternatives_4_01143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethodChainCall_in_rule__HashKeyValue__ValueAlternatives_4_01160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__MethodName__Alternatives_11193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__MethodName__Alternatives_11213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__Group__0__Impl_in_rule__Class__Group__01245 = new BitSet(new long[]{0x0000000000800400L});
+    public static final BitSet FOLLOW_rule__Class__Group__1_in_rule__Class__Group__01248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CLASS_WORD_in_rule__Class__Group__0__Impl1275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__Group__1__Impl_in_rule__Class__Group__11304 = new BitSet(new long[]{0x0000000000800400L});
+    public static final BitSet FOLLOW_rule__Class__Group__2_in_rule__Class__Group__11307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Class__Group__1__Impl1336 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__Class__Group__2__Impl_in_rule__Class__Group__21369 = new BitSet(new long[]{0x000000000180EA00L});
+    public static final BitSet FOLLOW_rule__Class__Group__3_in_rule__Class__Group__21372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__NameAssignment_2_in_rule__Class__Group__2__Impl1399 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__Group__3__Impl_in_rule__Class__Group__31429 = new BitSet(new long[]{0x000000000180EA00L});
+    public static final BitSet FOLLOW_rule__Class__Group__4_in_rule__Class__Group__31432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__Group_3__0_in_rule__Class__Group__3__Impl1459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__Group__4__Impl_in_rule__Class__Group__41490 = new BitSet(new long[]{0x000000000180EA00L});
+    public static final BitSet FOLLOW_rule__Class__Group__5_in_rule__Class__Group__41493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Class__Group__4__Impl1522 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__Class__Group__5__Impl_in_rule__Class__Group__51555 = new BitSet(new long[]{0x000000000180EA00L});
+    public static final BitSet FOLLOW_rule__Class__Group__6_in_rule__Class__Group__51558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__ClassElementsAssignment_5_in_rule__Class__Group__5__Impl1585 = new BitSet(new long[]{0x000000000000E802L});
+    public static final BitSet FOLLOW_rule__Class__Group__6__Impl_in_rule__Class__Group__61616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_END_WORD_in_rule__Class__Group__6__Impl1643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__Group_3__0__Impl_in_rule__Class__Group_3__01686 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_rule__Class__Group_3__1_in_rule__Class__Group_3__01689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Class__Group_3__0__Impl1718 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__Class__Group_3__1__Impl_in_rule__Class__Group_3__11751 = new BitSet(new long[]{0x0000000000800400L});
+    public static final BitSet FOLLOW_rule__Class__Group_3__2_in_rule__Class__Group_3__11754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Class__Group_3__1__Impl1782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__Group_3__2__Impl_in_rule__Class__Group_3__21813 = new BitSet(new long[]{0x0000000000800400L});
+    public static final BitSet FOLLOW_rule__Class__Group_3__3_in_rule__Class__Group_3__21816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Class__Group_3__2__Impl1845 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__Class__Group_3__3__Impl_in_rule__Class__Group_3__31878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Class__SuperTypeAssignment_3_3_in_rule__Class__Group_3__3__Impl1905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group__0__Impl_in_rule__NamespacedModuleName__Group__01943 = new BitSet(new long[]{0x0000000000800400L});
+    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group__1_in_rule__NamespacedModuleName__Group__01946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group_0__0_in_rule__NamespacedModuleName__Group__0__Impl1973 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group__1__Impl_in_rule__NamespacedModuleName__Group__12004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NamespacedModuleName__Group__1__Impl2031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group_0__0__Impl_in_rule__NamespacedModuleName__Group_0__02064 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group_0__1_in_rule__NamespacedModuleName__Group_0__02067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NamespacedModuleName__Group_0__0__Impl2094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamespacedModuleName__Group_0__1__Impl_in_rule__NamespacedModuleName__Group_0__12123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__NamespacedModuleName__Group_0__1__Impl2151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodChainCall__Group__0__Impl_in_rule__MethodChainCall__Group__02186 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__MethodChainCall__Group__1_in_rule__MethodChainCall__Group__02189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNamespacedModuleName_in_rule__MethodChainCall__Group__0__Impl2216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodChainCall__Group__1__Impl_in_rule__MethodChainCall__Group__12245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodChainCall__Group_1__0_in_rule__MethodChainCall__Group__1__Impl2272 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__MethodChainCall__Group_1__0__Impl_in_rule__MethodChainCall__Group_1__02307 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_rule__MethodChainCall__Group_1__1_in_rule__MethodChainCall__Group_1__02310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__MethodChainCall__Group_1__0__Impl2338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodChainCall__Group_1__1__Impl_in_rule__MethodChainCall__Group_1__12369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__MethodChainCall__Group_1__1__Impl2396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__0__Impl_in_rule__HasMany__Group__02429 = new BitSet(new long[]{0x0000000000800030L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__1_in_rule__HasMany__Group__02432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_HAS_MANY_WORD_in_rule__HasMany__Group__0__Impl2459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__1__Impl_in_rule__HasMany__Group__12488 = new BitSet(new long[]{0x0000000000800030L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__2_in_rule__HasMany__Group__12491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__HasMany__Group__1__Impl2520 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__2__Impl_in_rule__HasMany__Group__22553 = new BitSet(new long[]{0x0000000008801000L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__3_in_rule__HasMany__Group__22556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasMany__NameAssignment_2_in_rule__HasMany__Group__2__Impl2583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__3__Impl_in_rule__HasMany__Group__32613 = new BitSet(new long[]{0x0000000008801000L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__4_in_rule__HasMany__Group__32616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__HasMany__Group__3__Impl2645 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__4__Impl_in_rule__HasMany__Group__42678 = new BitSet(new long[]{0x0000000008801000L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__5_in_rule__HasMany__Group__42681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasMany__OptionsAssignment_4_in_rule__HasMany__Group__4__Impl2708 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__HasMany__Group__5__Impl_in_rule__HasMany__Group__52739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SL_COMMENT_in_rule__HasMany__Group__5__Impl2767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__0__Impl_in_rule__HasAndBelongsToMany__Group__02810 = new BitSet(new long[]{0x0000000000800030L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__1_in_rule__HasAndBelongsToMany__Group__02813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_HAS_AND_BELONGS_TO_MANY_WORD_in_rule__HasAndBelongsToMany__Group__0__Impl2840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__1__Impl_in_rule__HasAndBelongsToMany__Group__12869 = new BitSet(new long[]{0x0000000000800030L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__2_in_rule__HasAndBelongsToMany__Group__12872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__HasAndBelongsToMany__Group__1__Impl2901 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__2__Impl_in_rule__HasAndBelongsToMany__Group__22934 = new BitSet(new long[]{0x0000000008800000L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__3_in_rule__HasAndBelongsToMany__Group__22937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__NameAssignment_2_in_rule__HasAndBelongsToMany__Group__2__Impl2964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__3__Impl_in_rule__HasAndBelongsToMany__Group__32994 = new BitSet(new long[]{0x0000000008800000L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__4_in_rule__HasAndBelongsToMany__Group__32997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__HasAndBelongsToMany__Group__3__Impl3026 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__Group__4__Impl_in_rule__HasAndBelongsToMany__Group__43059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__OptionsAssignment_4_in_rule__HasAndBelongsToMany__Group__4__Impl3086 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__0__Impl_in_rule__BelongsTo__Group__03127 = new BitSet(new long[]{0x0000000000800030L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__1_in_rule__BelongsTo__Group__03130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BELONGS_TO_WORD_in_rule__BelongsTo__Group__0__Impl3157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__1__Impl_in_rule__BelongsTo__Group__13186 = new BitSet(new long[]{0x0000000000800030L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__2_in_rule__BelongsTo__Group__13189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__BelongsTo__Group__1__Impl3218 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__2__Impl_in_rule__BelongsTo__Group__23251 = new BitSet(new long[]{0x0000000008800000L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__3_in_rule__BelongsTo__Group__23254 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BelongsTo__NameAssignment_2_in_rule__BelongsTo__Group__2__Impl3281 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__3__Impl_in_rule__BelongsTo__Group__33311 = new BitSet(new long[]{0x0000000008800000L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__4_in_rule__BelongsTo__Group__33314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__BelongsTo__Group__3__Impl3343 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__BelongsTo__Group__4__Impl_in_rule__BelongsTo__Group__43376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BelongsTo__OptionsAssignment_4_in_rule__BelongsTo__Group__4__Impl3403 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__0__Impl_in_rule__HashKeyValue__Group__03444 = new BitSet(new long[]{0x0000000000800430L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__1_in_rule__HashKeyValue__Group__03447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__HashKeyValue__Group__0__Impl3475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__1__Impl_in_rule__HashKeyValue__Group__13506 = new BitSet(new long[]{0x0000000000800430L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__2_in_rule__HashKeyValue__Group__13509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__HashKeyValue__Group__1__Impl3538 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__2__Impl_in_rule__HashKeyValue__Group__23571 = new BitSet(new long[]{0x00000000008004F0L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__3_in_rule__HashKeyValue__Group__23574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Alternatives_2_in_rule__HashKeyValue__Group__2__Impl3601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__3__Impl_in_rule__HashKeyValue__Group__33631 = new BitSet(new long[]{0x00000000008004F0L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__4_in_rule__HashKeyValue__Group__33634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__HashKeyValue__Group__3__Impl3663 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group__4__Impl_in_rule__HashKeyValue__Group__43696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__ValueAssignment_4_in_rule__HashKeyValue__Group__4__Impl3723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_0__0__Impl_in_rule__HashKeyValue__Group_2_0__03763 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_0__1_in_rule__HashKeyValue__Group_2_0__03766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__KeyAssignment_2_0_0_in_rule__HashKeyValue__Group_2_0__0__Impl3793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_0__1__Impl_in_rule__HashKeyValue__Group_2_0__13823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__HashKeyValue__Group_2_0__1__Impl3851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__0__Impl_in_rule__HashKeyValue__Group_2_1__03886 = new BitSet(new long[]{0x0000000020800000L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__1_in_rule__HashKeyValue__Group_2_1__03889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__KeyAssignment_2_1_0_in_rule__HashKeyValue__Group_2_1__0__Impl3916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__1__Impl_in_rule__HashKeyValue__Group_2_1__13946 = new BitSet(new long[]{0x0000000020800000L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__2_in_rule__HashKeyValue__Group_2_1__13949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__HashKeyValue__Group_2_1__1__Impl3978 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__Group_2_1__2__Impl_in_rule__HashKeyValue__Group_2_1__24011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__HashKeyValue__Group_2_1__2__Impl4039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Method__Group__0__Impl_in_rule__Method__Group__04076 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_rule__Method__Group__1_in_rule__Method__Group__04079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DEF_WORD_in_rule__Method__Group__0__Impl4106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Method__Group__1__Impl_in_rule__Method__Group__14135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Method__NameAssignment_1_in_rule__Method__Group__1__Impl4162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodName__Group__0__Impl_in_rule__MethodName__Group__04196 = new BitSet(new long[]{0x0000000000600000L});
+    public static final BitSet FOLLOW_rule__MethodName__Group__1_in_rule__MethodName__Group__04199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__MethodName__Group__0__Impl4226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodName__Group__1__Impl_in_rule__MethodName__Group__14255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodName__Alternatives_1_in_rule__MethodName__Group__1__Impl4282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNamespacedModuleName_in_rule__Class__NameAssignment_24322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNamespacedModuleName_in_rule__Class__SuperTypeAssignment_3_34353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClassElement_in_rule__Class__ClassElementsAssignment_54384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasMany__NameAlternatives_2_0_in_rule__HasMany__NameAssignment_24415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHashKeyValue_in_rule__HasMany__OptionsAssignment_44448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HasAndBelongsToMany__NameAlternatives_2_0_in_rule__HasAndBelongsToMany__NameAssignment_24479 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHashKeyValue_in_rule__HasAndBelongsToMany__OptionsAssignment_44512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BelongsTo__NameAlternatives_2_0_in_rule__BelongsTo__NameAssignment_24543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHashKeyValue_in_rule__BelongsTo__OptionsAssignment_44576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__HashKeyValue__KeyAssignment_2_0_04607 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__KeyAlternatives_2_1_0_0_in_rule__HashKeyValue__KeyAssignment_2_1_04638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HashKeyValue__ValueAlternatives_4_0_in_rule__HashKeyValue__ValueAssignment_44671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethodName_in_rule__Method__NameAssignment_14704 = new BitSet(new long[]{0x0000000000000002L});
 
 }

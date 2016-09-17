@@ -207,6 +207,51 @@ ruleNamespacedModuleName returns [AntlrDatatypeRuleToken current=new AntlrDataty
 
 
 
+// Entry rule entryRuleMethodChainCall
+entryRuleMethodChainCall returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getMethodChainCallRule()); } 
+	 iv_ruleMethodChainCall=ruleMethodChainCall 
+	 { $current=$iv_ruleMethodChainCall.current.getText(); }  
+	 EOF 
+;
+
+// Rule MethodChainCall
+ruleMethodChainCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getMethodChainCallAccess().getNamespacedModuleNameParserRuleCall_0()); 
+    }
+    this_NamespacedModuleName_0=ruleNamespacedModuleName    {
+		$current.merge(this_NamespacedModuleName_0);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+(
+	kw='.' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getMethodChainCallAccess().getFullStopKeyword_1_0()); 
+    }
+    this_ID_2=RULE_ID    {
+		$current.merge(this_ID_2);
+    }
+
+    { 
+    newLeafNode(this_ID_2, grammarAccess.getMethodChainCallAccess().getIDTerminalRuleCall_1_1()); 
+    }
+)*)
+    ;
+
+
+
+
+
 // Entry rule entryRuleClassElement
 entryRuleClassElement returns [EObject current=null] 
 	:
@@ -377,7 +422,11 @@ ruleHasMany returns [EObject current=null]
 	    }
 
 )
-)*)
+)*(this_SL_COMMENT_5=RULE_SL_COMMENT
+    { 
+    newLeafNode(this_SL_COMMENT_5, grammarAccess.getHasManyAccess().getSL_COMMENTTerminalRuleCall_5()); 
+    }
+)?)
 ;
 
 
@@ -684,6 +733,51 @@ ruleHashKeyValue returns [EObject current=null]
         		"STRING");
 	    }
 
+    |		lv_value_8_3=RULE_BRACKET_BLOCK
+		{
+			newLeafNode(lv_value_8_3, grammarAccess.getHashKeyValueAccess().getValueBRACKET_BLOCKTerminalRuleCall_4_0_2()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getHashKeyValueRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"value",
+        		lv_value_8_3, 
+        		"BRACKET_BLOCK");
+	    }
+
+    |		lv_value_8_4=RULE_ARRAY_BLOCK
+		{
+			newLeafNode(lv_value_8_4, grammarAccess.getHashKeyValueAccess().getValueARRAY_BLOCKTerminalRuleCall_4_0_3()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getHashKeyValueRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"value",
+        		lv_value_8_4, 
+        		"ARRAY_BLOCK");
+	    }
+
+    |		{ 
+	        newCompositeNode(grammarAccess.getHashKeyValueAccess().getValueMethodChainCallParserRuleCall_4_0_4()); 
+	    }
+		lv_value_8_5=ruleMethodChainCall		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getHashKeyValueRule());
+	        }
+       		set(
+       			$current, 
+       			"value",
+        		lv_value_8_5, 
+        		"MethodChainCall");
+	        afterParserOrEnumRuleCall();
+	    }
+
 )
 
 )
@@ -778,6 +872,10 @@ ruleMethodName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
 
 
 
+RULE_BRACKET_BLOCK : '{' ( options {greedy=false;} : . )*'}';
+
+RULE_ARRAY_BLOCK : '[' ( options {greedy=false;} : . )*']';
+
 RULE_BELONGS_TO_WORD : 'belongs_to';
 
 RULE_HAS_MANY_WORD : 'has_many';
@@ -800,7 +898,7 @@ RULE_STRING : ('"' ( options {greedy=false;} : . )*'"'|'\'' ( options {greedy=fa
 
 RULE_ML_COMMENT : '=begin' ( options {greedy=false;} : . )*'=end';
 
-RULE_SL_COMMENT : '#' ~(('\n'|'\r'))* ('\r'? '\n')?;
+RULE_SL_COMMENT : '#' ( options {greedy=false;} : . )*'\n';
 
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 

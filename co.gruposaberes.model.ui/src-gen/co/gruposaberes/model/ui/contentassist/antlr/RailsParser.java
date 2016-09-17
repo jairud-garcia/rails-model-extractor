@@ -50,6 +50,8 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassAccess().getGroup_3(), "rule__Class__Group_3__0");
 					put(grammarAccess.getNamespacedModuleNameAccess().getGroup(), "rule__NamespacedModuleName__Group__0");
 					put(grammarAccess.getNamespacedModuleNameAccess().getGroup_0(), "rule__NamespacedModuleName__Group_0__0");
+					put(grammarAccess.getMethodChainCallAccess().getGroup(), "rule__MethodChainCall__Group__0");
+					put(grammarAccess.getMethodChainCallAccess().getGroup_1(), "rule__MethodChainCall__Group_1__0");
 					put(grammarAccess.getHasManyAccess().getGroup(), "rule__HasMany__Group__0");
 					put(grammarAccess.getHasAndBelongsToManyAccess().getGroup(), "rule__HasAndBelongsToMany__Group__0");
 					put(grammarAccess.getBelongsToAccess().getGroup(), "rule__BelongsTo__Group__0");
