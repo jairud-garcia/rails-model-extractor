@@ -245,7 +245,35 @@ ruleMethodChainCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRul
     { 
     newLeafNode(this_ID_2, grammarAccess.getMethodChainCallAccess().getIDTerminalRuleCall_1_1()); 
     }
-)*)
+)*(( RULE_SPACE)=>    this_SPACE_3=RULE_SPACE    {
+		$current.merge(this_SPACE_3);
+    }
+
+    { 
+    newLeafNode(this_SPACE_3, grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_2()); 
+    }
+)*(    this_PARENTHESIS_BLOCK_4=RULE_PARENTHESIS_BLOCK    {
+		$current.merge(this_PARENTHESIS_BLOCK_4);
+    }
+
+    { 
+    newLeafNode(this_PARENTHESIS_BLOCK_4, grammarAccess.getMethodChainCallAccess().getPARENTHESIS_BLOCKTerminalRuleCall_3()); 
+    }
+)?(( RULE_SPACE)=>    this_SPACE_5=RULE_SPACE    {
+		$current.merge(this_SPACE_5);
+    }
+
+    { 
+    newLeafNode(this_SPACE_5, grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_4()); 
+    }
+)*(    this_BRACKET_BLOCK_6=RULE_BRACKET_BLOCK    {
+		$current.merge(this_BRACKET_BLOCK_6);
+    }
+
+    { 
+    newLeafNode(this_BRACKET_BLOCK_6, grammarAccess.getMethodChainCallAccess().getBRACKET_BLOCKTerminalRuleCall_5()); 
+    }
+)?)
     ;
 
 
@@ -810,24 +838,40 @@ ruleMethod returns [EObject current=null]
     { 
     newLeafNode(this_DEF_WORD_0, grammarAccess.getMethodAccess().getDEF_WORDTerminalRuleCall_0()); 
     }
-(
+(this_SPACE_1=RULE_SPACE
+    { 
+    newLeafNode(this_SPACE_1, grammarAccess.getMethodAccess().getSPACETerminalRuleCall_1()); 
+    }
+)*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_2_0()); 
 	    }
-		lv_name_1_0=ruleMethodName		{
+		lv_name_2_0=ruleMethodName		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMethodRule());
 	        }
        		set(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_2_0, 
         		"co.gruposaberes.model.Rails.MethodName");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
+)(this_SPACE_3=RULE_SPACE
+    { 
+    newLeafNode(this_SPACE_3, grammarAccess.getMethodAccess().getSPACETerminalRuleCall_3()); 
+    }
+)*(this_PARENTHESIS_BLOCK_4=RULE_PARENTHESIS_BLOCK
+    { 
+    newLeafNode(this_PARENTHESIS_BLOCK_4, grammarAccess.getMethodAccess().getPARENTHESIS_BLOCKTerminalRuleCall_4()); 
+    }
+)?((	RULE_UNTIL_END)=>this_UNTIL_END_5=RULE_UNTIL_END
+    { 
+    newLeafNode(this_UNTIL_END_5, grammarAccess.getMethodAccess().getUNTIL_ENDTerminalRuleCall_5()); 
+    }
 ))
 ;
 
@@ -878,9 +922,13 @@ ruleMethodName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
 
 RULE_SPACE : ' ';
 
+RULE_UNTIL_END : ( options {greedy=false;} : . )*RULE_END_WORD;
+
 RULE_BRACKET_BLOCK : '{' ( options {greedy=false;} : . )*'}';
 
 RULE_ARRAY_BLOCK : '[' ( options {greedy=false;} : . )*']';
+
+RULE_PARENTHESIS_BLOCK : '(' ( options {greedy=false;} : . )*')';
 
 RULE_BELONGS_TO_WORD : 'belongs_to';
 

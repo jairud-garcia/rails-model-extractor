@@ -140,7 +140,7 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RailsPackage.Literals.CLASS_ELEMENT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

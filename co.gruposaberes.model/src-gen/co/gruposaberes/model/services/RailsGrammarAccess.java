@@ -123,14 +123,20 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final RuleCall cSPACETerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final RuleCall cPARENTHESIS_BLOCKTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final RuleCall cSPACETerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final RuleCall cBRACKET_BLOCKTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		
 		//MethodChainCall:
-		//	NamespacedModuleName ('.' ID)*;
+		//	NamespacedModuleName ('.' ID)* => SPACE* PARENTHESIS_BLOCK? => SPACE* BRACKET_BLOCK?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//NamespacedModuleName ('.' ID)*
+		////SPACE* Causes alternatives warning 
+		//NamespacedModuleName ('.' ID)* => SPACE* PARENTHESIS_BLOCK? => SPACE* BRACKET_BLOCK?
 		public Group getGroup() { return cGroup; }
 
+		////SPACE* Causes alternatives warning 
 		//NamespacedModuleName
 		public RuleCall getNamespacedModuleNameParserRuleCall_0() { return cNamespacedModuleNameParserRuleCall_0; }
 
@@ -142,6 +148,18 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+
+		//=> SPACE*
+		public RuleCall getSPACETerminalRuleCall_2() { return cSPACETerminalRuleCall_2; }
+
+		//PARENTHESIS_BLOCK?
+		public RuleCall getPARENTHESIS_BLOCKTerminalRuleCall_3() { return cPARENTHESIS_BLOCKTerminalRuleCall_3; }
+
+		//=> SPACE*
+		public RuleCall getSPACETerminalRuleCall_4() { return cSPACETerminalRuleCall_4; }
+
+		//BRACKET_BLOCK?
+		public RuleCall getBRACKET_BLOCKTerminalRuleCall_5() { return cBRACKET_BLOCKTerminalRuleCall_5; }
 	}
 
 	public class ClassElementElements extends AbstractParserRuleElementFinder {
@@ -446,24 +464,40 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.Method");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cDEF_WORDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameMethodNameParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cSPACETerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameMethodNameParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cSPACETerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final RuleCall cPARENTHESIS_BLOCKTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final RuleCall cUNTIL_ENDTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		
 		//Method RubyMethod:
-		//	DEF_WORD name=MethodName
+		//	DEF_WORD SPACE* name=MethodName SPACE* PARENTHESIS_BLOCK? => UNTIL_END
 		@Override public ParserRule getRule() { return rule; }
 
-		//DEF_WORD name=MethodName
+		//DEF_WORD SPACE* name=MethodName SPACE* PARENTHESIS_BLOCK? => UNTIL_END
 		public Group getGroup() { return cGroup; }
 
 		//DEF_WORD
 		public RuleCall getDEF_WORDTerminalRuleCall_0() { return cDEF_WORDTerminalRuleCall_0; }
 
+		//SPACE*
+		public RuleCall getSPACETerminalRuleCall_1() { return cSPACETerminalRuleCall_1; }
+
 		//name=MethodName
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
 		//MethodName
-		public RuleCall getNameMethodNameParserRuleCall_1_0() { return cNameMethodNameParserRuleCall_1_0; }
+		public RuleCall getNameMethodNameParserRuleCall_2_0() { return cNameMethodNameParserRuleCall_2_0; }
+
+		//SPACE*
+		public RuleCall getSPACETerminalRuleCall_3() { return cSPACETerminalRuleCall_3; }
+
+		//PARENTHESIS_BLOCK?
+		public RuleCall getPARENTHESIS_BLOCKTerminalRuleCall_4() { return cPARENTHESIS_BLOCKTerminalRuleCall_4; }
+
+		//=> UNTIL_END
+		public RuleCall getUNTIL_ENDTerminalRuleCall_5() { return cUNTIL_ENDTerminalRuleCall_5; }
 	}
 
 	public class MethodNameElements extends AbstractParserRuleElementFinder {
@@ -507,8 +541,10 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	private final MethodElements pMethod;
 	private final MethodNameElements pMethodName;
 	private final TerminalRule tSPACE;
+	private final TerminalRule tUNTIL_END;
 	private final TerminalRule tBRACKET_BLOCK;
 	private final TerminalRule tARRAY_BLOCK;
+	private final TerminalRule tPARENTHESIS_BLOCK;
 	private final TerminalRule tBELONGS_TO_WORD;
 	private final TerminalRule tHAS_MANY_WORD;
 	private final TerminalRule tHAS_AND_BELONGS_TO_MANY_WORD;
@@ -542,8 +578,10 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		this.pMethod = new MethodElements();
 		this.pMethodName = new MethodNameElements();
 		this.tSPACE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.SPACE");
+		this.tUNTIL_END = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.UNTIL_END");
 		this.tBRACKET_BLOCK = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.BRACKET_BLOCK");
 		this.tARRAY_BLOCK = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.ARRAY_BLOCK");
+		this.tPARENTHESIS_BLOCK = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.PARENTHESIS_BLOCK");
 		this.tBELONGS_TO_WORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.BELONGS_TO_WORD");
 		this.tHAS_MANY_WORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.HAS_MANY_WORD");
 		this.tHAS_AND_BELONGS_TO_MANY_WORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.HAS_AND_BELONGS_TO_MANY_WORD");
@@ -607,7 +645,7 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MethodChainCall:
-	//	NamespacedModuleName ('.' ID)*;
+	//	NamespacedModuleName ('.' ID)* => SPACE* PARENTHESIS_BLOCK? => SPACE* BRACKET_BLOCK?;
 	public MethodChainCallElements getMethodChainCallAccess() {
 		return pMethodChainCall;
 	}
@@ -678,7 +716,7 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Method RubyMethod:
-	//	DEF_WORD name=MethodName
+	//	DEF_WORD SPACE* name=MethodName SPACE* PARENTHESIS_BLOCK? => UNTIL_END
 	public MethodElements getMethodAccess() {
 		return pMethod;
 	}
@@ -703,6 +741,11 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 		return tSPACE;
 	} 
 
+	//terminal UNTIL_END:->END_WORD;
+	public TerminalRule getUNTIL_ENDRule() {
+		return tUNTIL_END;
+	} 
+
 	//terminal BRACKET_BLOCK:
 	//	'{'->'}';
 	public TerminalRule getBRACKET_BLOCKRule() {
@@ -713,6 +756,12 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	//	'['->']';
 	public TerminalRule getARRAY_BLOCKRule() {
 		return tARRAY_BLOCK;
+	} 
+
+	//terminal PARENTHESIS_BLOCK:
+	//	'('->')';
+	public TerminalRule getPARENTHESIS_BLOCKRule() {
+		return tPARENTHESIS_BLOCK;
 	} 
 
 	//terminal BELONGS_TO_WORD:

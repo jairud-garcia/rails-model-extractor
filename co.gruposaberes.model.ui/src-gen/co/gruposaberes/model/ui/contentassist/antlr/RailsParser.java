@@ -72,7 +72,7 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHashKeyValueAccess().getKeyAssignment_2_0_0(), "rule__HashKeyValue__KeyAssignment_2_0_0");
 					put(grammarAccess.getHashKeyValueAccess().getKeyAssignment_2_1_0(), "rule__HashKeyValue__KeyAssignment_2_1_0");
 					put(grammarAccess.getHashKeyValueAccess().getValueAssignment_4(), "rule__HashKeyValue__ValueAssignment_4");
-					put(grammarAccess.getMethodAccess().getNameAssignment_1(), "rule__Method__NameAssignment_1");
+					put(grammarAccess.getMethodAccess().getNameAssignment_2(), "rule__Method__NameAssignment_2");
 				}
 			};
 		}

@@ -5,6 +5,7 @@ grammar InternalRails;
 
 options {
 	superClass=AbstractInternalContentAssistParser;
+	backtrack=true;
 	
 }
 
@@ -1093,6 +1094,7 @@ rule__MethodChainCall__Group__1
     }
 :
 	rule__MethodChainCall__Group__1__Impl
+	rule__MethodChainCall__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1113,6 +1115,129 @@ rule__MethodChainCall__Group__1__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__MethodChainCall__Group__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__MethodChainCall__Group__2__Impl
+	rule__MethodChainCall__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MethodChainCall__Group__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_2()); }
+(	RULE_SPACE)*
+{ after(grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MethodChainCall__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__MethodChainCall__Group__3__Impl
+	rule__MethodChainCall__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MethodChainCall__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMethodChainCallAccess().getPARENTHESIS_BLOCKTerminalRuleCall_3()); }
+(	RULE_PARENTHESIS_BLOCK)?
+{ after(grammarAccess.getMethodChainCallAccess().getPARENTHESIS_BLOCKTerminalRuleCall_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MethodChainCall__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__MethodChainCall__Group__4__Impl
+	rule__MethodChainCall__Group__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MethodChainCall__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_4()); }
+(	RULE_SPACE)*
+{ after(grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MethodChainCall__Group__5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__MethodChainCall__Group__5__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MethodChainCall__Group__5__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMethodChainCallAccess().getBRACKET_BLOCKTerminalRuleCall_5()); }
+(	RULE_BRACKET_BLOCK)?
+{ after(grammarAccess.getMethodChainCallAccess().getBRACKET_BLOCKTerminalRuleCall_5()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -2054,6 +2179,7 @@ rule__Method__Group__1
     }
 :
 	rule__Method__Group__1__Impl
+	rule__Method__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2065,15 +2191,138 @@ rule__Method__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getMethodAccess().getNameAssignment_1()); }
-(rule__Method__NameAssignment_1)
-{ after(grammarAccess.getMethodAccess().getNameAssignment_1()); }
+{ before(grammarAccess.getMethodAccess().getSPACETerminalRuleCall_1()); }
+(	RULE_SPACE)*
+{ after(grammarAccess.getMethodAccess().getSPACETerminalRuleCall_1()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__Method__Group__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Method__Group__2__Impl
+	rule__Method__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Method__Group__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMethodAccess().getNameAssignment_2()); }
+(rule__Method__NameAssignment_2)
+{ after(grammarAccess.getMethodAccess().getNameAssignment_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Method__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Method__Group__3__Impl
+	rule__Method__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Method__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMethodAccess().getSPACETerminalRuleCall_3()); }
+(	RULE_SPACE)*
+{ after(grammarAccess.getMethodAccess().getSPACETerminalRuleCall_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Method__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Method__Group__4__Impl
+	rule__Method__Group__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Method__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMethodAccess().getPARENTHESIS_BLOCKTerminalRuleCall_4()); }
+(	RULE_PARENTHESIS_BLOCK)?
+{ after(grammarAccess.getMethodAccess().getPARENTHESIS_BLOCKTerminalRuleCall_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Method__Group__5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Method__Group__5__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Method__Group__5__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMethodAccess().getUNTIL_ENDTerminalRuleCall_5()); }
+(	RULE_UNTIL_END)
+{ after(grammarAccess.getMethodAccess().getUNTIL_ENDTerminalRuleCall_5()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -2327,14 +2576,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Method__NameAssignment_1
+rule__Method__NameAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_1_0()); }
-	ruleMethodName{ after(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_1_0()); }
+{ before(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_2_0()); }
+	ruleMethodName{ after(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_2_0()); }
 )
 
 ;
@@ -2345,9 +2594,13 @@ finally {
 
 RULE_SPACE : ' ';
 
+RULE_UNTIL_END : ( options {greedy=false;} : . )*RULE_END_WORD;
+
 RULE_BRACKET_BLOCK : '{' ( options {greedy=false;} : . )*'}';
 
 RULE_ARRAY_BLOCK : '[' ( options {greedy=false;} : . )*']';
+
+RULE_PARENTHESIS_BLOCK : '(' ( options {greedy=false;} : . )*')';
 
 RULE_BELONGS_TO_WORD : 'belongs_to';
 
