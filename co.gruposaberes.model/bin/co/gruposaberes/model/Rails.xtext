@@ -45,7 +45,7 @@ HashKeyValue:
 ;
 
 Method returns RubyMethod:
-  DEF_WORD SPACE* name=MethodName SPACE* PARENTHESIS_BLOCK? => UNTIL_END
+  DEF_WORD SPACE* name=MethodName SPACE* PARENTHESIS_BLOCK? 
 ;
 
 MethodName:
@@ -53,8 +53,6 @@ ID('?'|'=')?
 ;
 
 terminal SPACE: ' ';
-
-terminal UNTIL_END: -> END_WORD;
 
 terminal BRACKET_BLOCK: '{'->'}';
 
