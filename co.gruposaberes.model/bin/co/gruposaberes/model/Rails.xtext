@@ -1,4 +1,4 @@
-grammar co.gruposaberes.model.Rails hidden(WS, ML_COMMENT, SL_COMMENT)
+grammar co.gruposaberes.model.Rails hidden(BS,SPACE, ML_COMMENT, SL_COMMENT)
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
@@ -7,8 +7,12 @@ generate rails "http://www.gruposaberes.co/model/Rails"
 Class returns RubyClass:
   CLASS_WORD SPACE* name=NamespacedModuleName (SPACE* '<' SPACE* superType=NamespacedModuleName)? SPACE*
     classElements+=ClassElement*
-  END_WORD
 ;
+
+ClassElement returns ClassElement:
+  Method|Relationship|OtherLOC
+;
+
 
 NamespacedModuleName :
 (ID'::')*ID
@@ -16,15 +20,38 @@ NamespacedModuleName :
 
 MethodChainCall:
 	//SPACE* Causes alternatives warning 
-	NamespacedModuleName('.'ID)* =>SPACE* PARENTHESIS_BLOCK? => SPACE* BRACKET_BLOCK?
+	NamespacedModuleName('.'ID)* SPACE* MethodCallParameters?  => SPACE* BRACKET_BLOCK?
+;
+
+MethodCallParameters:
+	(PARENTHESIS_BLOCK|MethodParamsWithoutParenthesis)
+;
+
+MethodParamsWithoutParenthesis:
+	ExpressionsSeparatedByCommas
+;
+
+ExpressionsSeparatedByCommas:
+	ExpressionWithOutBracket ( SPACE* COMMA SPACE* Expression)*
+	// => SPACE* BS
+;
+
+ExpressionWithOutBracket:
+	(SYMBOL|STRING|ARRAY_BLOCK|PARENTHESIS_BLOCK|DECIMAL|INT|REGEXP|MethodChainCall|IgnoredHashKeyValue)
 ;
 
 
-ClassElement returns ClassElement:
-  Method|Relationship
+Expression:
+	ExpressionWithOutBracket|BRACKET_BLOCK
 ;
 
-Relationship returns Relationship:
+
+OtherLOC returns OtherLOC:
+	{OtherLOC} MethodChainCall
+;
+
+
+Relationship :
   HasMany | HasAndBelongsToMany | BelongsTo 
 ;
 
@@ -41,7 +68,11 @@ BelongsTo returns BelongsTo:
 ;
 
 HashKeyValue:
-  ',' SPACE* (key=ID':'|key=(SYMBOL|STRING) SPACE*'=>') SPACE* value=(SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|MethodChainCall) SPACE*
+  COMMA SPACE* (key=ID':'|key=(SYMBOL|STRING) SPACE*'=>') SPACE* value=(SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall) SPACE*
+;
+
+IgnoredHashKeyValue:
+	SPACE* (ID':'|(SYMBOL|STRING) SPACE*'=>') SPACE* (SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall|REGEXP) SPACE*
 ;
 
 Method returns RubyMethod:
@@ -52,7 +83,9 @@ MethodName:
 ID('?'|'=')?
 ;
 
-terminal SPACE: ' ';
+terminal COMMA: ',';
+
+terminal SPACE: ' '|'\f';
 
 terminal BRACKET_BLOCK: '{'->'}';
 
@@ -72,7 +105,9 @@ terminal MODULE_WORD: 'module';
 
 terminal DEF_WORD: 'def';
 
-terminal END_WORD: 'end';
+//terminal END_WORD: 'end';
+
+//terminal OTHER_LOC: SPACE* !(BELONGS_TO_WORD | HAS_MANY_WORD | HAS_AND_BELONGS_TO_MANY_WORD | CLASS_WORD | MODULE_WORD | DEF_WORD|BS|SPACE)->BS;
 
 terminal SYMBOL:':'ID;
 
@@ -84,8 +119,16 @@ terminal ML_COMMENT	: '=begin' -> '=end';
 
 terminal SL_COMMENT : '#'->'\n';
 
-terminal WS	: (' '|'\t'|'\r'|'\n')+;
+//terminal WS	: (BS|SPACE)+;
 
-terminal INT returns ecore::EInt: ('0'..'9')+;
+terminal INT: ('0'..'9')+;
 
-terminal ANY_OTHER: .;
+terminal INT_METHOD: ('0'..'9')+'.'ID;
+
+terminal DECIMAL: ('0'..'9')+'.'('0'..'9')+;
+
+terminal REGEXP: '/' ('\\/' | !('\\/'|BS) )* '/'('i'|'o'|'p')?;
+
+terminal BS	: ('\r'|'\n');
+
+//terminal ANY_OTHER: .;
