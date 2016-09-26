@@ -105,12 +105,12 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
-	 * terminal CLASS_WORD: 'class';
+	 * terminal CLASS_WORD: 'class ';
 	 */
 	protected String getCLASS_WORDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "class";
+		return "class ";
 	}
 	
 	/**
@@ -160,17 +160,27 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * OperationsChain:
-	 * 	MethodChainCall ((ASSIGN_OPERATOR|OPERATOR|'=') (SYMBOL|STRING|BracketBlock|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall|REGEXP))*
+	 * 	MethodChainCall (OperatorRule (BRACKET_BLOCK|DECIMAL|MethodChainCall|REGEXP))*
 	 * ;
 	 */
 	protected String getOperationsChainToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "";
+		return ":class ";
 	}
 	
 	/**
-	 * terminal PARENTHESIS_BLOCK: '('!(')')*')';
+	 * terminal PARENTHESIS_BLOCK: 
+	 *   '(' !('('|')')*
+	 *     ('(' !('('|')')* 
+	 *       ('('
+	 *           !('('|')')*
+	 *        ')'!('('|')')*       
+	 *       )*  
+	 *      ')'!('('|')')*
+	 *     )*  
+	 *   ')'
+	 * ;
 	 */
 	protected String getPARENTHESIS_BLOCKToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
@@ -444,7 +454,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     key=STRING (ambiguity) '=>' SPACE* value=ARRAY_BLOCK
-	 *     key=STRING (ambiguity) '=>' SPACE* value=BracketBlock
+	 *     key=STRING (ambiguity) '=>' SPACE* value=BRACKET_BLOCK
 	 *     key=STRING (ambiguity) '=>' SPACE* value=DECIMAL
 	 *     key=STRING (ambiguity) '=>' SPACE* value=INT
 	 *     key=STRING (ambiguity) '=>' SPACE* value=INT_METHOD
@@ -452,7 +462,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     key=STRING (ambiguity) '=>' SPACE* value=STRING
 	 *     key=STRING (ambiguity) '=>' SPACE* value=SYMBOL
 	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=ARRAY_BLOCK
-	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=BracketBlock
+	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=BRACKET_BLOCK
 	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=DECIMAL
 	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=INT
 	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=INT_METHOD
@@ -470,7 +480,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     key=ID ':' (ambiguity) value=ARRAY_BLOCK
-	 *     key=ID ':' (ambiguity) value=BracketBlock
+	 *     key=ID ':' (ambiguity) value=BRACKET_BLOCK
 	 *     key=ID ':' (ambiguity) value=DECIMAL
 	 *     key=ID ':' (ambiguity) value=INT
 	 *     key=ID ':' (ambiguity) value=INT_METHOD
@@ -478,7 +488,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     key=ID ':' (ambiguity) value=STRING
 	 *     key=ID ':' (ambiguity) value=SYMBOL
 	 *     key=STRING SPACE* '=>' (ambiguity) value=ARRAY_BLOCK
-	 *     key=STRING SPACE* '=>' (ambiguity) value=BracketBlock
+	 *     key=STRING SPACE* '=>' (ambiguity) value=BRACKET_BLOCK
 	 *     key=STRING SPACE* '=>' (ambiguity) value=DECIMAL
 	 *     key=STRING SPACE* '=>' (ambiguity) value=INT
 	 *     key=STRING SPACE* '=>' (ambiguity) value=INT_METHOD
@@ -486,7 +496,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     key=STRING SPACE* '=>' (ambiguity) value=STRING
 	 *     key=STRING SPACE* '=>' (ambiguity) value=SYMBOL
 	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=ARRAY_BLOCK
-	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=BracketBlock
+	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=BRACKET_BLOCK
 	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=DECIMAL
 	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=INT
 	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=INT_METHOD
@@ -504,7 +514,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     value=ARRAY_BLOCK (ambiguity) (rule end)
-	 *     value=BracketBlock (ambiguity) (rule end)
+	 *     value=BRACKET_BLOCK (ambiguity) (rule end)
 	 *     value=DECIMAL (ambiguity) (rule end)
 	 *     value=INT (ambiguity) (rule end)
 	 *     value=INT_METHOD (ambiguity) (rule end)

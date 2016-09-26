@@ -142,7 +142,7 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         (
 	 *             value=SYMBOL | 
 	 *             value=STRING | 
-	 *             value=BracketBlock | 
+	 *             value=BRACKET_BLOCK | 
 	 *             value=ARRAY_BLOCK | 
 	 *             value=DECIMAL | 
 	 *             value=INT | 

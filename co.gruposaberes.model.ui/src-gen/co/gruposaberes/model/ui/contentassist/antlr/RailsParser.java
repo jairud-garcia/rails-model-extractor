@@ -38,11 +38,12 @@ public class RailsParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getClassElementAccess().getAlternatives(), "rule__ClassElement__Alternatives");
+					put(grammarAccess.getMethodChainCallAccess().getAlternatives_0(), "rule__MethodChainCall__Alternatives_0");
 					put(grammarAccess.getMethodCallParametersAccess().getAlternatives(), "rule__MethodCallParameters__Alternatives");
 					put(grammarAccess.getExpressionWithOutBracketAccess().getAlternatives(), "rule__ExpressionWithOutBracket__Alternatives");
 					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
-					put(grammarAccess.getOperationsChainAccess().getAlternatives_1_0(), "rule__OperationsChain__Alternatives_1_0");
 					put(grammarAccess.getOperationsChainAccess().getAlternatives_1_1(), "rule__OperationsChain__Alternatives_1_1");
+					put(grammarAccess.getOperatorRuleAccess().getAlternatives_0(), "rule__OperatorRule__Alternatives_0");
 					put(grammarAccess.getRelationshipAccess().getAlternatives(), "rule__Relationship__Alternatives");
 					put(grammarAccess.getHasManyAccess().getNameAlternatives_2_0(), "rule__HasMany__NameAlternatives_2_0");
 					put(grammarAccess.getHasOneAccess().getNameAlternatives_2_0(), "rule__HasOne__NameAlternatives_2_0");
@@ -54,8 +55,7 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_1(), "rule__IgnoredHashKeyValue__Alternatives_1");
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_1_1_0(), "rule__IgnoredHashKeyValue__Alternatives_1_1_0");
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_3(), "rule__IgnoredHashKeyValue__Alternatives_3");
-					put(grammarAccess.getMethodNameAccess().getAlternatives_1(), "rule__MethodName__Alternatives_1");
-					put(grammarAccess.getBracketBlockAccess().getAlternatives(), "rule__BracketBlock__Alternatives");
+					put(grammarAccess.getMethodNameAccess().getAlternatives_2(), "rule__MethodName__Alternatives_2");
 					put(grammarAccess.getClassAccess().getGroup(), "rule__Class__Group__0");
 					put(grammarAccess.getClassAccess().getGroup_3(), "rule__Class__Group_3__0");
 					put(grammarAccess.getNamespacedModuleNameAccess().getGroup(), "rule__NamespacedModuleName__Group__0");
@@ -66,6 +66,7 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpressionsSeparatedByCommasAccess().getGroup_1(), "rule__ExpressionsSeparatedByCommas__Group_1__0");
 					put(grammarAccess.getOperationsChainAccess().getGroup(), "rule__OperationsChain__Group__0");
 					put(grammarAccess.getOperationsChainAccess().getGroup_1(), "rule__OperationsChain__Group_1__0");
+					put(grammarAccess.getOperatorRuleAccess().getGroup(), "rule__OperatorRule__Group__0");
 					put(grammarAccess.getHasManyAccess().getGroup(), "rule__HasMany__Group__0");
 					put(grammarAccess.getHasOneAccess().getGroup(), "rule__HasOne__Group__0");
 					put(grammarAccess.getHasAndBelongsToManyAccess().getGroup(), "rule__HasAndBelongsToMany__Group__0");
@@ -78,7 +79,7 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getGroup_1_1(), "rule__IgnoredHashKeyValue__Group_1_1__0");
 					put(grammarAccess.getMethodAccess().getGroup(), "rule__Method__Group__0");
 					put(grammarAccess.getMethodNameAccess().getGroup(), "rule__MethodName__Group__0");
-					put(grammarAccess.getBracketBlockAccess().getGroup_1(), "rule__BracketBlock__Group_1__0");
+					put(grammarAccess.getMethodNameAccess().getGroup_0(), "rule__MethodName__Group_0__0");
 					put(grammarAccess.getClassAccess().getNameAssignment_2(), "rule__Class__NameAssignment_2");
 					put(grammarAccess.getClassAccess().getSuperTypeAssignment_3_3(), "rule__Class__SuperTypeAssignment_3_3");
 					put(grammarAccess.getClassAccess().getClassElementsAssignment_5(), "rule__Class__ClassElementsAssignment_5");

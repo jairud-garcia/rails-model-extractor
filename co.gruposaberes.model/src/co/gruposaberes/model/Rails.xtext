@@ -19,7 +19,9 @@ NamespacedModuleName :
 
 MethodChainCall:
 	//SPACE* Causes alternatives warning 
-	NamespacedModuleName('.'ID)* SPACE* MethodCallParameters?  => SPACE* BracketBlock?
+	(SYMBOL|STRING|INT|INT_METHOD|PARENTHESIS_BLOCK|ARRAY_BLOCK|NamespacedModuleName)
+		('.'ID PARENTHESIS_BLOCK?)* SPACE* MethodCallParameters?  => SPACE* 
+		BRACKET_BLOCK? => SPACE* DO_BLOCK_PARAMETERS? => SPACE*
 ;
 
 MethodCallParameters:
@@ -36,11 +38,14 @@ ExpressionWithOutBracket:
 ;
 
 Expression:
-	ExpressionWithOutBracket|BracketBlock
+	ExpressionWithOutBracket|BRACKET_BLOCK
 ;
 
 OperationsChain:
-	MethodChainCall ((ASSIGN_OPERATOR|OPERATOR|'=') (SYMBOL|STRING|BracketBlock|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall|REGEXP))*
+	MethodChainCall (OperatorRule (BRACKET_BLOCK|DECIMAL|MethodChainCall|REGEXP))*
+;
+OperatorRule:
+	(': '|'?'|'<'|'+'|'-'|'*'|'/'|'%'|'**'|'='|'~'|'|'|'||'|'&'|'&&'|'=='|'!'|'<<'|'<=>'|'>'|'..'|'...')'='?
 ;
 
 Relationship :
@@ -64,11 +69,11 @@ BelongsTo returns BelongsTo:
 ;
 
 HashKeyValue:
-  COMMA SPACE* (key=ID':'|key=(SYMBOL|STRING) SPACE*'=>') SPACE* value=(SYMBOL|STRING|BracketBlock|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall) SPACE*
+  COMMA SPACE* (key=ID':'|key=(SYMBOL|STRING) SPACE*'=>') SPACE* value=(SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall) SPACE*
 ;
 
 IgnoredHashKeyValue:
-	SPACE* (ID':'|(SYMBOL|STRING) SPACE*'=>') SPACE* (SYMBOL|STRING|BracketBlock|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall|REGEXP) SPACE*
+	SPACE* (ID':'|(SYMBOL|STRING) SPACE*'=>') SPACE* (SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall|REGEXP) SPACE*
 ;
 
 Method returns RubyMethod:
@@ -76,24 +81,52 @@ Method returns RubyMethod:
 ;
 
 MethodName:
-ID('?'|'=')?
-;
-
-BracketBlock:
-	BRACKET_BLOCK_ALONE|('{'(ExpressionsSeparatedByCommas*)'}')
+(NamespacedModuleName'.')? ID('?'|'=')?
 ;
 
 terminal COMMA: ',';
 
 terminal SPACE: ' '|'\f';
+//3 nested levels, looking for a better strategy
+terminal BRACKET_BLOCK: 
+	'{' !('{'|'}')*
+		('{' !('{'|'}')* 
+			('{'
+			 		!('{'|'}')*
+			 '}'!('{'|'}')*				
+			)*	
+		 '}'!('{'|'}')*
+		)*  
+	'}'
+;
 
-terminal BRACKET_BLOCK_ALONE: '{' !('{'|'}')*  '}';
+terminal ARRAY_BLOCK: 
+  '[' !('['|']')*
+    ('[' !('['|']')* 
+      ('['
+          !('['|']')*
+       ']'!('['|']')*       
+      )*  
+     ']'!('['|']')*
+    )*  
+  ']'
+;
 
-terminal ARRAY_BLOCK: '['!(']')*']';
 
-terminal PARENTHESIS_BLOCK: '('!(')')*')';
 
-// terminal PARENTHESIS_BLOCK: '('->')';
+terminal PARENTHESIS_BLOCK: 
+  '(' !('('|')')*
+    ('(' !('('|')')* 
+      ('('
+          !('('|')')*
+       ')'!('('|')')*       
+      )*  
+     ')'!('('|')')*
+    )*  
+  ')'
+;
+
+terminal DO_BLOCK_PARAMETERS: 'do' SPACE* '|'ID SPACE* (COMMA SPACE* ID)*'|';
 
 terminal BELONGS_TO_WORD: 'belongs_to';
 
@@ -103,21 +136,19 @@ terminal HAS_ONE_WORD: 'has_one';
 
 terminal HAS_AND_BELONGS_TO_MANY_WORD: 'has_and_belongs_to_many';
 
-terminal CLASS_WORD: 'class';
-
 terminal MODULE_WORD: 'module';
+
+terminal CLASS_WORD: 'class ';
 
 terminal DEF_WORD: 'def';
 
-//terminal END_WORD: 'end';
-
-//terminal OTHER_LOC: SPACE* !(BELONGS_TO_WORD | HAS_MANY_WORD | HAS_AND_BELONGS_TO_MANY_WORD | CLASS_WORD | MODULE_WORD | DEF_WORD|BS|SPACE)->BS;
-
 terminal SYMBOL:':'ID;
 
-terminal ID: ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal ID: (CLASS_WORD|('a'..'z'|'A'..'Z'|'_'|'$'|'@')('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'!'|'@'|'?')*);
 
-terminal STRING: '"'->'"' | "'"->"'";
+terminal STRING: 
+	'"' ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | ('#'BRACKET_BLOCK) | !('\\'|'"') )* '"' |
+    "'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
 
 terminal ML_COMMENT	: '=begin' -> '=end';
 
@@ -135,8 +166,5 @@ terminal REGEXP: '/' ('\\/' | !('\\/'|BS) )* '/'('i'|'o'|'p')?;
 
 terminal BS	: ('\t'|'\n');
 
-terminal OPERATOR: '+'|'-'|'*'|'/'|'%'|'**'|'='|'~'|'|'|'||'|'&'|'&&'|'=='|'!'|'<<'|'<=>'|'>'|'<'|'..'|'...';
-
-terminal ASSIGN_OPERATOR: OPERATOR'=';
 
 terminal ANY_OTHER: .;
