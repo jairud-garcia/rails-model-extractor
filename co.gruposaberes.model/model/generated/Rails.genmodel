@@ -19,6 +19,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//Relationship/options"/>
     </genClasses>
     <genClasses ecoreClass="Rails.ecore#//HasMany"/>
+    <genClasses ecoreClass="Rails.ecore#//HasOne"/>
     <genClasses ecoreClass="Rails.ecore#//HasAndBelongsToMany"/>
     <genClasses ecoreClass="Rails.ecore#//BelongsTo"/>
     <genClasses ecoreClass="Rails.ecore#//HashKeyValue">

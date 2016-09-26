@@ -6,6 +6,7 @@ package co.gruposaberes.model.serializer;
 import co.gruposaberes.model.rails.BelongsTo;
 import co.gruposaberes.model.rails.HasAndBelongsToMany;
 import co.gruposaberes.model.rails.HasMany;
+import co.gruposaberes.model.rails.HasOne;
 import co.gruposaberes.model.rails.HashKeyValue;
 import co.gruposaberes.model.rails.RailsPackage;
 import co.gruposaberes.model.rails.RubyClass;
@@ -45,6 +46,9 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case RailsPackage.HAS_MANY:
 				sequence_HasMany(context, (HasMany) semanticObject); 
+				return; 
+			case RailsPackage.HAS_ONE:
+				sequence_HasOne(context, (HasOne) semanticObject); 
 				return; 
 			case RailsPackage.HASH_KEY_VALUE:
 				sequence_HashKeyValue(context, (HashKeyValue) semanticObject); 
@@ -116,10 +120,36 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     ClassElement returns HasOne
+	 *     Relationship returns HasOne
+	 *     HasOne returns HasOne
+	 *
+	 * Constraint:
+	 *     ((name=SYMBOL | name=STRING) options+=HashKeyValue*)
+	 */
+	protected void sequence_HasOne(ISerializationContext context, HasOne semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     HashKeyValue returns HashKeyValue
 	 *
 	 * Constraint:
-	 *     ((key=ID | key=SYMBOL | key=STRING) (value=SYMBOL | value=STRING | value=BRACKET_BLOCK | value=ARRAY_BLOCK | value=MethodChainCall))
+	 *     (
+	 *         (key=ID | key=SYMBOL | key=STRING) 
+	 *         (
+	 *             value=SYMBOL | 
+	 *             value=STRING | 
+	 *             value=BracketBlock | 
+	 *             value=ARRAY_BLOCK | 
+	 *             value=DECIMAL | 
+	 *             value=INT | 
+	 *             value=INT_METHOD | 
+	 *             value=MethodChainCall
+	 *         )
+	 *     )
 	 */
 	protected void sequence_HashKeyValue(ISerializationContext context, HashKeyValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

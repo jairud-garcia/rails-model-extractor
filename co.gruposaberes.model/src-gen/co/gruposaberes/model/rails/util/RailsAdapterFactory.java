@@ -95,6 +95,11 @@ public class RailsAdapterFactory extends AdapterFactoryImpl
         return createHasManyAdapter();
       }
       @Override
+      public Adapter caseHasOne(HasOne object)
+      {
+        return createHasOneAdapter();
+      }
+      @Override
       public Adapter caseHasAndBelongsToMany(HasAndBelongsToMany object)
       {
         return createHasAndBelongsToManyAdapter();
@@ -192,6 +197,21 @@ public class RailsAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createHasManyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link co.gruposaberes.model.rails.HasOne <em>Has One</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.gruposaberes.model.rails.HasOne
+   * @generated
+   */
+  public Adapter createHasOneAdapter()
   {
     return null;
   }

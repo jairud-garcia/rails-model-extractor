@@ -59,6 +59,15 @@ public interface RailsFactory extends EFactory
   HasMany createHasMany();
 
   /**
+   * Returns a new object of class '<em>Has One</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Has One</em>'.
+   * @generated
+   */
+  HasOne createHasOne();
+
+  /**
    * Returns a new object of class '<em>Has And Belongs To Many</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

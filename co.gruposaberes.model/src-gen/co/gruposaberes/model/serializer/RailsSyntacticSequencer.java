@@ -31,6 +31,9 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_HasMany_SL_COMMENTTerminalRuleCall_5_q;
 	protected AbstractElementAlias match_HasMany_SPACETerminalRuleCall_1_a;
 	protected AbstractElementAlias match_HasMany_SPACETerminalRuleCall_3_a;
+	protected AbstractElementAlias match_HasOne_SL_COMMENTTerminalRuleCall_5_q;
+	protected AbstractElementAlias match_HasOne_SPACETerminalRuleCall_1_a;
+	protected AbstractElementAlias match_HasOne_SPACETerminalRuleCall_3_a;
 	protected AbstractElementAlias match_HashKeyValue_SPACETerminalRuleCall_1_a;
 	protected AbstractElementAlias match_HashKeyValue_SPACETerminalRuleCall_2_1_1_a;
 	protected AbstractElementAlias match_HashKeyValue_SPACETerminalRuleCall_3_a;
@@ -53,6 +56,9 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_HasMany_SL_COMMENTTerminalRuleCall_5_q = new TokenAlias(false, true, grammarAccess.getHasManyAccess().getSL_COMMENTTerminalRuleCall_5());
 		match_HasMany_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getHasManyAccess().getSPACETerminalRuleCall_1());
 		match_HasMany_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getHasManyAccess().getSPACETerminalRuleCall_3());
+		match_HasOne_SL_COMMENTTerminalRuleCall_5_q = new TokenAlias(false, true, grammarAccess.getHasOneAccess().getSL_COMMENTTerminalRuleCall_5());
+		match_HasOne_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getHasOneAccess().getSPACETerminalRuleCall_1());
+		match_HasOne_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getHasOneAccess().getSPACETerminalRuleCall_3());
 		match_HashKeyValue_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_1());
 		match_HashKeyValue_SPACETerminalRuleCall_2_1_1_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_2_1_1());
 		match_HashKeyValue_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_3());
@@ -68,22 +74,24 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getBELONGS_TO_WORDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getCLASS_WORDRule())
 			return getCLASS_WORDToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getCOMMARule())
+			return getCOMMAToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getDEF_WORDRule())
 			return getDEF_WORDToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getEND_WORDRule())
-			return getEND_WORDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getHAS_AND_BELONGS_TO_MANY_WORDRule())
 			return getHAS_AND_BELONGS_TO_MANY_WORDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getHAS_MANY_WORDRule())
 			return getHAS_MANY_WORDToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getHAS_ONE_WORDRule())
+			return getHAS_ONE_WORDToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getOperationsChainRule())
+			return getOperationsChainToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPARENTHESIS_BLOCKRule())
 			return getPARENTHESIS_BLOCKToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSL_COMMENTRule())
 			return getSL_COMMENTToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSPACERule())
 			return getSPACEToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getUNTIL_ENDRule())
-			return getUNTIL_ENDToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -106,21 +114,21 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
+	 * terminal COMMA: ',';
+	 */
+	protected String getCOMMAToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return ",";
+	}
+	
+	/**
 	 * terminal DEF_WORD: 'def';
 	 */
 	protected String getDEF_WORDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
 		return "def";
-	}
-	
-	/**
-	 * terminal END_WORD: 'end';
-	 */
-	protected String getEND_WORDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "end";
 	}
 	
 	/**
@@ -142,12 +150,32 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
-	 * terminal PARENTHESIS_BLOCK: '('->')';
+	 * terminal HAS_ONE_WORD: 'has_one';
+	 */
+	protected String getHAS_ONE_WORDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "has_one";
+	}
+	
+	/**
+	 * OperationsChain:
+	 * 	MethodChainCall ((ASSIGN_OPERATOR|OPERATOR|'=') (SYMBOL|STRING|BracketBlock|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall|REGEXP))*
+	 * ;
+	 */
+	protected String getOperationsChainToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "";
+	}
+	
+	/**
+	 * terminal PARENTHESIS_BLOCK: '('!(')')*')';
 	 */
 	protected String getPARENTHESIS_BLOCKToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "(";
+		return "()";
 	}
 	
 	/**
@@ -160,21 +188,12 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
-	 * terminal SPACE: ' ';
+	 * terminal SPACE: ' '|'\f';
 	 */
 	protected String getSPACEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
 		return " ";
-	}
-	
-	/**
-	 * terminal UNTIL_END: -> END_WORD;
-	 */
-	protected String getUNTIL_ENDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "";
 	}
 	
 	@Override
@@ -205,6 +224,12 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_HasMany_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_HasMany_SPACETerminalRuleCall_3_a.equals(syntax))
 				emit_HasMany_SPACETerminalRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_HasOne_SL_COMMENTTerminalRuleCall_5_q.equals(syntax))
+				emit_HasOne_SL_COMMENTTerminalRuleCall_5_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_HasOne_SPACETerminalRuleCall_1_a.equals(syntax))
+				emit_HasOne_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_HasOne_SPACETerminalRuleCall_3_a.equals(syntax))
+				emit_HasOne_SPACETerminalRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_HashKeyValue_SPACETerminalRuleCall_1_a.equals(syntax))
 				emit_HashKeyValue_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_HashKeyValue_SPACETerminalRuleCall_2_1_1_a.equals(syntax))
@@ -287,9 +312,9 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     SPACE*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=NamespacedModuleName (ambiguity) END_WORD (rule end)
+	 *     name=NamespacedModuleName (ambiguity) (rule end)
 	 *     name=NamespacedModuleName (ambiguity) classElements+=ClassElement
-	 *     superType=NamespacedModuleName (ambiguity) END_WORD (rule end)
+	 *     superType=NamespacedModuleName (ambiguity) (rule end)
 	 *     superType=NamespacedModuleName (ambiguity) classElements+=ClassElement
 	 */
 	protected void emit_Class_SPACETerminalRuleCall_4_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -363,12 +388,51 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
+	 *     SL_COMMENT?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name=STRING SPACE* (ambiguity) (rule end)
+	 *     name=SYMBOL SPACE* (ambiguity) (rule end)
+	 *     options+=HashKeyValue (ambiguity) (rule end)
+	 */
+	protected void emit_HasOne_SL_COMMENTTerminalRuleCall_5_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
 	 *     SPACE*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ',' (ambiguity) key=ID
-	 *     (rule start) ',' (ambiguity) key=STRING
-	 *     (rule start) ',' (ambiguity) key=SYMBOL
+	 *     (rule start) HAS_ONE_WORD (ambiguity) name=STRING
+	 *     (rule start) HAS_ONE_WORD (ambiguity) name=SYMBOL
+	 */
+	protected void emit_HasOne_SPACETerminalRuleCall_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     SPACE*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name=STRING (ambiguity) SL_COMMENT? (rule end)
+	 *     name=STRING (ambiguity) options+=HashKeyValue
+	 *     name=SYMBOL (ambiguity) SL_COMMENT? (rule end)
+	 *     name=SYMBOL (ambiguity) options+=HashKeyValue
+	 */
+	protected void emit_HasOne_SPACETerminalRuleCall_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     SPACE*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) COMMA (ambiguity) key=ID
+	 *     (rule start) COMMA (ambiguity) key=STRING
+	 *     (rule start) COMMA (ambiguity) key=SYMBOL
 	 */
 	protected void emit_HashKeyValue_SPACETerminalRuleCall_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -380,12 +444,18 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     key=STRING (ambiguity) '=>' SPACE* value=ARRAY_BLOCK
-	 *     key=STRING (ambiguity) '=>' SPACE* value=BRACKET_BLOCK
+	 *     key=STRING (ambiguity) '=>' SPACE* value=BracketBlock
+	 *     key=STRING (ambiguity) '=>' SPACE* value=DECIMAL
+	 *     key=STRING (ambiguity) '=>' SPACE* value=INT
+	 *     key=STRING (ambiguity) '=>' SPACE* value=INT_METHOD
 	 *     key=STRING (ambiguity) '=>' SPACE* value=MethodChainCall
 	 *     key=STRING (ambiguity) '=>' SPACE* value=STRING
 	 *     key=STRING (ambiguity) '=>' SPACE* value=SYMBOL
 	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=ARRAY_BLOCK
-	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=BRACKET_BLOCK
+	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=BracketBlock
+	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=DECIMAL
+	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=INT
+	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=INT_METHOD
 	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=MethodChainCall
 	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=STRING
 	 *     key=SYMBOL (ambiguity) '=>' SPACE* value=SYMBOL
@@ -400,17 +470,26 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     key=ID ':' (ambiguity) value=ARRAY_BLOCK
-	 *     key=ID ':' (ambiguity) value=BRACKET_BLOCK
+	 *     key=ID ':' (ambiguity) value=BracketBlock
+	 *     key=ID ':' (ambiguity) value=DECIMAL
+	 *     key=ID ':' (ambiguity) value=INT
+	 *     key=ID ':' (ambiguity) value=INT_METHOD
 	 *     key=ID ':' (ambiguity) value=MethodChainCall
 	 *     key=ID ':' (ambiguity) value=STRING
 	 *     key=ID ':' (ambiguity) value=SYMBOL
 	 *     key=STRING SPACE* '=>' (ambiguity) value=ARRAY_BLOCK
-	 *     key=STRING SPACE* '=>' (ambiguity) value=BRACKET_BLOCK
+	 *     key=STRING SPACE* '=>' (ambiguity) value=BracketBlock
+	 *     key=STRING SPACE* '=>' (ambiguity) value=DECIMAL
+	 *     key=STRING SPACE* '=>' (ambiguity) value=INT
+	 *     key=STRING SPACE* '=>' (ambiguity) value=INT_METHOD
 	 *     key=STRING SPACE* '=>' (ambiguity) value=MethodChainCall
 	 *     key=STRING SPACE* '=>' (ambiguity) value=STRING
 	 *     key=STRING SPACE* '=>' (ambiguity) value=SYMBOL
 	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=ARRAY_BLOCK
-	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=BRACKET_BLOCK
+	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=BracketBlock
+	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=DECIMAL
+	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=INT
+	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=INT_METHOD
 	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=MethodChainCall
 	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=STRING
 	 *     key=SYMBOL SPACE* '=>' (ambiguity) value=SYMBOL
@@ -425,7 +504,10 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     value=ARRAY_BLOCK (ambiguity) (rule end)
-	 *     value=BRACKET_BLOCK (ambiguity) (rule end)
+	 *     value=BracketBlock (ambiguity) (rule end)
+	 *     value=DECIMAL (ambiguity) (rule end)
+	 *     value=INT (ambiguity) (rule end)
+	 *     value=INT_METHOD (ambiguity) (rule end)
 	 *     value=MethodChainCall (ambiguity) (rule end)
 	 *     value=STRING (ambiguity) (rule end)
 	 *     value=SYMBOL (ambiguity) (rule end)
@@ -439,7 +521,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     PARENTHESIS_BLOCK?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=MethodName SPACE* (ambiguity) UNTIL_END (rule end)
+	 *     name=MethodName SPACE* (ambiguity) (rule end)
 	 */
 	protected void emit_Method_PARENTHESIS_BLOCKTerminalRuleCall_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -461,7 +543,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     SPACE*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=MethodName (ambiguity) PARENTHESIS_BLOCK? UNTIL_END (rule end)
+	 *     name=MethodName (ambiguity) PARENTHESIS_BLOCK? (rule end)
 	 */
 	protected void emit_Method_SPACETerminalRuleCall_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

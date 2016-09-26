@@ -205,6 +205,43 @@ public interface RailsPackage extends EPackage
   int HAS_MANY_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link co.gruposaberes.model.rails.impl.HasOneImpl <em>Has One</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see co.gruposaberes.model.rails.impl.HasOneImpl
+   * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHasOne()
+   * @generated
+   */
+  int HAS_ONE = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAS_ONE__NAME = RELATIONSHIP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Options</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAS_ONE__OPTIONS = RELATIONSHIP__OPTIONS;
+
+  /**
+   * The number of structural features of the '<em>Has One</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HAS_ONE_FEATURE_COUNT = RELATIONSHIP_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link co.gruposaberes.model.rails.impl.HasAndBelongsToManyImpl <em>Has And Belongs To Many</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -212,7 +249,7 @@ public interface RailsPackage extends EPackage
    * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHasAndBelongsToMany()
    * @generated
    */
-  int HAS_AND_BELONGS_TO_MANY = 4;
+  int HAS_AND_BELONGS_TO_MANY = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -249,7 +286,7 @@ public interface RailsPackage extends EPackage
    * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getBelongsTo()
    * @generated
    */
-  int BELONGS_TO = 5;
+  int BELONGS_TO = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -286,7 +323,7 @@ public interface RailsPackage extends EPackage
    * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHashKeyValue()
    * @generated
    */
-  int HASH_KEY_VALUE = 6;
+  int HASH_KEY_VALUE = 7;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -323,7 +360,7 @@ public interface RailsPackage extends EPackage
    * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getRubyMethod()
    * @generated
    */
-  int RUBY_METHOD = 7;
+  int RUBY_METHOD = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -438,6 +475,16 @@ public interface RailsPackage extends EPackage
    * @generated
    */
   EClass getHasMany();
+
+  /**
+   * Returns the meta object for class '{@link co.gruposaberes.model.rails.HasOne <em>Has One</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Has One</em>'.
+   * @see co.gruposaberes.model.rails.HasOne
+   * @generated
+   */
+  EClass getHasOne();
 
   /**
    * Returns the meta object for class '{@link co.gruposaberes.model.rails.HasAndBelongsToMany <em>Has And Belongs To Many</em>}'.
@@ -603,6 +650,16 @@ public interface RailsPackage extends EPackage
      * @generated
      */
     EClass HAS_MANY = eINSTANCE.getHasMany();
+
+    /**
+     * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.HasOneImpl <em>Has One</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see co.gruposaberes.model.rails.impl.HasOneImpl
+     * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHasOne()
+     * @generated
+     */
+    EClass HAS_ONE = eINSTANCE.getHasOne();
 
     /**
      * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.HasAndBelongsToManyImpl <em>Has And Belongs To Many</em>}' class.

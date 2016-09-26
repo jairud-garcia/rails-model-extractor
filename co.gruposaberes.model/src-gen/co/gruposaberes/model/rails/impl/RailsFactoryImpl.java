@@ -68,6 +68,7 @@ public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
       case RailsPackage.CLASS_ELEMENT: return createClassElement();
       case RailsPackage.RELATIONSHIP: return createRelationship();
       case RailsPackage.HAS_MANY: return createHasMany();
+      case RailsPackage.HAS_ONE: return createHasOne();
       case RailsPackage.HAS_AND_BELONGS_TO_MANY: return createHasAndBelongsToMany();
       case RailsPackage.BELONGS_TO: return createBelongsTo();
       case RailsPackage.HASH_KEY_VALUE: return createHashKeyValue();
@@ -119,6 +120,17 @@ public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
   {
     HasManyImpl hasMany = new HasManyImpl();
     return hasMany;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public HasOne createHasOne()
+  {
+    HasOneImpl hasOne = new HasOneImpl();
+    return hasOne;
   }
 
   /**

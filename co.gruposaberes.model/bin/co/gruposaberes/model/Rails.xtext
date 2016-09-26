@@ -10,9 +10,8 @@ Class returns RubyClass:
 ;
 
 ClassElement returns ClassElement:
-  Method|Relationship|OtherLOC
+  Method|Relationship|OperationsChain
 ;
-
 
 NamespacedModuleName :
 (ID'::')*ID
@@ -20,15 +19,11 @@ NamespacedModuleName :
 
 MethodChainCall:
 	//SPACE* Causes alternatives warning 
-	NamespacedModuleName('.'ID)* SPACE* MethodCallParameters?  => SPACE* BRACKET_BLOCK?
+	NamespacedModuleName('.'ID)* SPACE* MethodCallParameters?  => SPACE* BracketBlock?
 ;
 
 MethodCallParameters:
-	(PARENTHESIS_BLOCK|MethodParamsWithoutParenthesis)
-;
-
-MethodParamsWithoutParenthesis:
-	ExpressionsSeparatedByCommas
+	(PARENTHESIS_BLOCK|ExpressionsSeparatedByCommas)
 ;
 
 ExpressionsSeparatedByCommas:
@@ -40,23 +35,24 @@ ExpressionWithOutBracket:
 	(SYMBOL|STRING|ARRAY_BLOCK|PARENTHESIS_BLOCK|DECIMAL|INT|REGEXP|MethodChainCall|IgnoredHashKeyValue)
 ;
 
-
 Expression:
-	ExpressionWithOutBracket|BRACKET_BLOCK
+	ExpressionWithOutBracket|BracketBlock
 ;
 
-
-OtherLOC returns OtherLOC:
-	{OtherLOC} MethodChainCall
+OperationsChain:
+	MethodChainCall ((ASSIGN_OPERATOR|OPERATOR|'=') (SYMBOL|STRING|BracketBlock|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall|REGEXP))*
 ;
-
 
 Relationship :
-  HasMany | HasAndBelongsToMany | BelongsTo 
+  HasMany | HasOne| HasAndBelongsToMany | BelongsTo 
 ;
 
 HasMany returns HasMany:
   HAS_MANY_WORD SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue* SL_COMMENT?
+;
+
+HasOne returns HasOne:
+  HAS_ONE_WORD SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue* SL_COMMENT?
 ;
 
 HasAndBelongsToMany returns HasAndBelongsToMany:
@@ -68,11 +64,11 @@ BelongsTo returns BelongsTo:
 ;
 
 HashKeyValue:
-  COMMA SPACE* (key=ID':'|key=(SYMBOL|STRING) SPACE*'=>') SPACE* value=(SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall) SPACE*
+  COMMA SPACE* (key=ID':'|key=(SYMBOL|STRING) SPACE*'=>') SPACE* value=(SYMBOL|STRING|BracketBlock|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall) SPACE*
 ;
 
 IgnoredHashKeyValue:
-	SPACE* (ID':'|(SYMBOL|STRING) SPACE*'=>') SPACE* (SYMBOL|STRING|BRACKET_BLOCK|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall|REGEXP) SPACE*
+	SPACE* (ID':'|(SYMBOL|STRING) SPACE*'=>') SPACE* (SYMBOL|STRING|BracketBlock|ARRAY_BLOCK|DECIMAL|INT|INT_METHOD|MethodChainCall|REGEXP) SPACE*
 ;
 
 Method returns RubyMethod:
@@ -83,19 +79,27 @@ MethodName:
 ID('?'|'=')?
 ;
 
+BracketBlock:
+	BRACKET_BLOCK_ALONE|('{'(ExpressionsSeparatedByCommas*)'}')
+;
+
 terminal COMMA: ',';
 
 terminal SPACE: ' '|'\f';
 
-terminal BRACKET_BLOCK: '{'->'}';
+terminal BRACKET_BLOCK_ALONE: '{' !('{'|'}')*  '}';
 
-terminal ARRAY_BLOCK: '['->']';
+terminal ARRAY_BLOCK: '['!(']')*']';
 
-terminal PARENTHESIS_BLOCK: '('->')';
+terminal PARENTHESIS_BLOCK: '('!(')')*')';
+
+// terminal PARENTHESIS_BLOCK: '('->')';
 
 terminal BELONGS_TO_WORD: 'belongs_to';
 
 terminal HAS_MANY_WORD: 'has_many';
+
+terminal HAS_ONE_WORD: 'has_one';
 
 terminal HAS_AND_BELONGS_TO_MANY_WORD: 'has_and_belongs_to_many';
 
@@ -129,6 +133,10 @@ terminal DECIMAL: ('0'..'9')+'.'('0'..'9')+;
 
 terminal REGEXP: '/' ('\\/' | !('\\/'|BS) )* '/'('i'|'o'|'p')?;
 
-terminal BS	: ('\r'|'\n');
+terminal BS	: ('\t'|'\n');
 
-//terminal ANY_OTHER: .;
+terminal OPERATOR: '+'|'-'|'*'|'/'|'%'|'**'|'='|'~'|'|'|'||'|'&'|'&&'|'=='|'!'|'<<'|'<=>'|'>'|'<'|'..'|'...';
+
+terminal ASSIGN_OPERATOR: OPERATOR'=';
+
+terminal ANY_OTHER: .;

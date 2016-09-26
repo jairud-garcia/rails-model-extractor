@@ -6,6 +6,7 @@ import co.gruposaberes.model.rails.BelongsTo;
 import co.gruposaberes.model.rails.ClassElement;
 import co.gruposaberes.model.rails.HasAndBelongsToMany;
 import co.gruposaberes.model.rails.HasMany;
+import co.gruposaberes.model.rails.HasOne;
 import co.gruposaberes.model.rails.HashKeyValue;
 import co.gruposaberes.model.rails.RailsFactory;
 import co.gruposaberes.model.rails.RailsPackage;
@@ -55,6 +56,13 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
    * @generated
    */
   private EClass hasManyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass hasOneEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -242,6 +250,16 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getHasOne()
+  {
+    return hasOneEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getHasAndBelongsToMany()
   {
     return hasAndBelongsToManyEClass;
@@ -340,6 +358,8 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
 
     hasManyEClass = createEClass(HAS_MANY);
 
+    hasOneEClass = createEClass(HAS_ONE);
+
     hasAndBelongsToManyEClass = createEClass(HAS_AND_BELONGS_TO_MANY);
 
     belongsToEClass = createEClass(BELONGS_TO);
@@ -382,6 +402,7 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
     // Add supertypes to classes
     relationshipEClass.getESuperTypes().add(this.getClassElement());
     hasManyEClass.getESuperTypes().add(this.getRelationship());
+    hasOneEClass.getESuperTypes().add(this.getRelationship());
     hasAndBelongsToManyEClass.getESuperTypes().add(this.getRelationship());
     belongsToEClass.getESuperTypes().add(this.getRelationship());
     rubyMethodEClass.getESuperTypes().add(this.getClassElement());
@@ -399,6 +420,8 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
     initEReference(getRelationship_Options(), this.getHashKeyValue(), null, "options", null, 0, -1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(hasManyEClass, HasMany.class, "HasMany", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(hasOneEClass, HasOne.class, "HasOne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(hasAndBelongsToManyEClass, HasAndBelongsToMany.class, "HasAndBelongsToMany", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

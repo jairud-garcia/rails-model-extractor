@@ -15,6 +15,7 @@
         eType="#//HashKeyValue" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HasMany" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HasOne" eSuperTypes="#//Relationship"/>
   <eClassifiers xsi:type="ecore:EClass" name="HasAndBelongsToMany" eSuperTypes="#//Relationship"/>
   <eClassifiers xsi:type="ecore:EClass" name="BelongsTo" eSuperTypes="#//Relationship"/>
   <eClassifiers xsi:type="ecore:EClass" name="HashKeyValue">
