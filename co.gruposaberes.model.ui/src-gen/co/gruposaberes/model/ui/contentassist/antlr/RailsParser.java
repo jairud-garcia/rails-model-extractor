@@ -114,7 +114,7 @@ public class RailsParser extends AbstractContentAssistParser {
 	
 	@Override
 	protected String[] getInitialHiddenTokens() {
-		return new String[] { "RULE_BS", "RULE_SPACE", "RULE_ML_COMMENT", "RULE_SL_COMMENT" };
+		return new String[] { "RULE_BS", "RULE_SPACE", "RULE_SL_COMMENT", "RULE_ML_COMMENT", "RULE_REQUIRE" };
 	}
 	
 	public RailsGrammarAccess getGrammarAccess() {

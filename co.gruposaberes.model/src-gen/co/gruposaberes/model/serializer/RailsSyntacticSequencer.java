@@ -11,6 +11,7 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -22,6 +23,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected RailsGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_BelongsTo_SPACETerminalRuleCall_1_a;
 	protected AbstractElementAlias match_BelongsTo_SPACETerminalRuleCall_3_a;
+	protected AbstractElementAlias match_ClassElement_OperationsChainParserRuleCall_2_or_SL_COMMENTTerminalRuleCall_3;
 	protected AbstractElementAlias match_Class_SPACETerminalRuleCall_1_a;
 	protected AbstractElementAlias match_Class_SPACETerminalRuleCall_3_0_a;
 	protected AbstractElementAlias match_Class_SPACETerminalRuleCall_3_2_a;
@@ -38,15 +40,18 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_HashKeyValue_SPACETerminalRuleCall_2_1_1_a;
 	protected AbstractElementAlias match_HashKeyValue_SPACETerminalRuleCall_3_a;
 	protected AbstractElementAlias match_HashKeyValue_SPACETerminalRuleCall_5_a;
+	protected AbstractElementAlias match_Method_BSTerminalRuleCall_6_q;
 	protected AbstractElementAlias match_Method_PARENTHESIS_BLOCKTerminalRuleCall_4_q;
 	protected AbstractElementAlias match_Method_SPACETerminalRuleCall_1_a;
 	protected AbstractElementAlias match_Method_SPACETerminalRuleCall_3_a;
+	protected AbstractElementAlias match_Method_SPACETerminalRuleCall_5_a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (RailsGrammarAccess) access;
 		match_BelongsTo_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getBelongsToAccess().getSPACETerminalRuleCall_1());
 		match_BelongsTo_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getBelongsToAccess().getSPACETerminalRuleCall_3());
+		match_ClassElement_OperationsChainParserRuleCall_2_or_SL_COMMENTTerminalRuleCall_3 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getClassElementAccess().getOperationsChainParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getClassElementAccess().getSL_COMMENTTerminalRuleCall_3()));
 		match_Class_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSPACETerminalRuleCall_1());
 		match_Class_SPACETerminalRuleCall_3_0_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSPACETerminalRuleCall_3_0());
 		match_Class_SPACETerminalRuleCall_3_2_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSPACETerminalRuleCall_3_2());
@@ -63,15 +68,19 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_HashKeyValue_SPACETerminalRuleCall_2_1_1_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_2_1_1());
 		match_HashKeyValue_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_3());
 		match_HashKeyValue_SPACETerminalRuleCall_5_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_5());
+		match_Method_BSTerminalRuleCall_6_q = new TokenAlias(false, true, grammarAccess.getMethodAccess().getBSTerminalRuleCall_6());
 		match_Method_PARENTHESIS_BLOCKTerminalRuleCall_4_q = new TokenAlias(false, true, grammarAccess.getMethodAccess().getPARENTHESIS_BLOCKTerminalRuleCall_4());
 		match_Method_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getMethodAccess().getSPACETerminalRuleCall_1());
 		match_Method_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getMethodAccess().getSPACETerminalRuleCall_3());
+		match_Method_SPACETerminalRuleCall_5_a = new TokenAlias(true, true, grammarAccess.getMethodAccess().getSPACETerminalRuleCall_5());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (ruleCall.getRule() == grammarAccess.getBELONGS_TO_WORDRule())
 			return getBELONGS_TO_WORDToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getBSRule())
+			return getBSToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getCLASS_WORDRule())
 			return getCLASS_WORDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getCOMMARule())
@@ -102,6 +111,15 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "belongs_to";
+	}
+	
+	/**
+	 * terminal BS	: ('\t'|'\n');
+	 */
+	protected String getBSToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "\t";
 	}
 	
 	/**
@@ -171,14 +189,16 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * terminal PARENTHESIS_BLOCK: 
-	 *   '(' !('('|')')*
+	 *   '(' 
+	 *   	!('('|')')*
 	 *     ('(' !('('|')')* 
 	 *       ('('
 	 *           !('('|')')*
 	 *        ')'!('('|')')*       
 	 *       )*  
 	 *      ')'!('('|')')*
-	 *     )*  
+	 *     )*
+	 *     !('('|')')*  
 	 *   ')'
 	 * ;
 	 */
@@ -216,6 +236,8 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_BelongsTo_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_BelongsTo_SPACETerminalRuleCall_3_a.equals(syntax))
 				emit_BelongsTo_SPACETerminalRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_ClassElement_OperationsChainParserRuleCall_2_or_SL_COMMENTTerminalRuleCall_3.equals(syntax))
+				emit_ClassElement_OperationsChainParserRuleCall_2_or_SL_COMMENTTerminalRuleCall_3(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Class_SPACETerminalRuleCall_1_a.equals(syntax))
 				emit_Class_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Class_SPACETerminalRuleCall_3_0_a.equals(syntax))
@@ -248,12 +270,16 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_HashKeyValue_SPACETerminalRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_HashKeyValue_SPACETerminalRuleCall_5_a.equals(syntax))
 				emit_HashKeyValue_SPACETerminalRuleCall_5_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Method_BSTerminalRuleCall_6_q.equals(syntax))
+				emit_Method_BSTerminalRuleCall_6_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Method_PARENTHESIS_BLOCKTerminalRuleCall_4_q.equals(syntax))
 				emit_Method_PARENTHESIS_BLOCKTerminalRuleCall_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Method_SPACETerminalRuleCall_1_a.equals(syntax))
 				emit_Method_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Method_SPACETerminalRuleCall_3_a.equals(syntax))
 				emit_Method_SPACETerminalRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Method_SPACETerminalRuleCall_5_a.equals(syntax))
+				emit_Method_SPACETerminalRuleCall_5_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -281,6 +307,17 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     name=SYMBOL (ambiguity) options+=HashKeyValue
 	 */
 	protected void emit_BelongsTo_SPACETerminalRuleCall_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     OperationsChain | SL_COMMENT
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) (rule start)
+	 */
+	protected void emit_ClassElement_OperationsChainParserRuleCall_2_or_SL_COMMENTTerminalRuleCall_3(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -528,10 +565,21 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
+	 *     BS?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name=MethodName SPACE* PARENTHESIS_BLOCK? SPACE* (ambiguity) (rule end)
+	 */
+	protected void emit_Method_BSTerminalRuleCall_6_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
 	 *     PARENTHESIS_BLOCK?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=MethodName SPACE* (ambiguity) (rule end)
+	 *     name=MethodName SPACE* (ambiguity) SPACE* BS? (rule end)
 	 */
 	protected void emit_Method_PARENTHESIS_BLOCKTerminalRuleCall_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -553,9 +601,20 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     SPACE*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=MethodName (ambiguity) PARENTHESIS_BLOCK? (rule end)
+	 *     name=MethodName (ambiguity) PARENTHESIS_BLOCK? SPACE* BS? (rule end)
 	 */
 	protected void emit_Method_SPACETerminalRuleCall_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     SPACE*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name=MethodName SPACE* PARENTHESIS_BLOCK? (ambiguity) BS? (rule end)
+	 */
+	protected void emit_Method_SPACETerminalRuleCall_5_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

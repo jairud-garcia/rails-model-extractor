@@ -1,4 +1,4 @@
-grammar co.gruposaberes.model.Rails hidden(BS,SPACE, ML_COMMENT, SL_COMMENT)
+grammar co.gruposaberes.model.Rails hidden(BS,SPACE,SL_COMMENT,ML_COMMENT,REQUIRE)
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
@@ -10,8 +10,12 @@ Class returns RubyClass:
 ;
 
 ClassElement returns ClassElement:
-  Method|Relationship|OperationsChain
+  Method|Relationship|OperationsChain|SL_COMMENT
 ;
+
+//Require:
+//  REQUIRE_WORD SPACE* STRING SPACE*
+//;
 
 NamespacedModuleName :
 (ID'::')*ID
@@ -21,7 +25,7 @@ MethodChainCall:
 	//SPACE* Causes alternatives warning 
 	(SYMBOL|STRING|INT|INT_METHOD|PARENTHESIS_BLOCK|ARRAY_BLOCK|NamespacedModuleName)
 		('.'ID PARENTHESIS_BLOCK?)* SPACE* MethodCallParameters?  => SPACE* 
-		BRACKET_BLOCK? => SPACE* DO_BLOCK_PARAMETERS? => SPACE*
+		BRACKET_BLOCK? => SPACE* DO_BLOCK_PARAMETERS? => SPACE* => BS?
 ;
 
 MethodCallParameters:
@@ -77,7 +81,7 @@ IgnoredHashKeyValue:
 ;
 
 Method returns RubyMethod:
-  DEF_WORD SPACE* name=MethodName SPACE* PARENTHESIS_BLOCK? 
+  DEF_WORD SPACE* name=MethodName SPACE* PARENTHESIS_BLOCK? SPACE* BS?
 ;
 
 MethodName:
@@ -115,14 +119,16 @@ terminal ARRAY_BLOCK:
 
 
 terminal PARENTHESIS_BLOCK: 
-  '(' !('('|')')*
+  '(' 
+  	!('('|')')*
     ('(' !('('|')')* 
       ('('
           !('('|')')*
        ')'!('('|')')*       
       )*  
      ')'!('('|')')*
-    )*  
+    )*
+    !('('|')')*  
   ')'
 ;
 
@@ -135,6 +141,8 @@ terminal HAS_MANY_WORD: 'has_many';
 terminal HAS_ONE_WORD: 'has_one';
 
 terminal HAS_AND_BELONGS_TO_MANY_WORD: 'has_and_belongs_to_many';
+
+terminal SET_TABLE_NAME: 'set_table_name';
 
 terminal MODULE_WORD: 'module';
 
@@ -166,5 +174,7 @@ terminal REGEXP: '/' ('\\/' | !('\\/'|BS) )* '/'('i'|'o'|'p')?;
 
 terminal BS	: ('\t'|'\n');
 
+
+terminal REQUIRE: 'require' SPACE* STRING;
 
 terminal ANY_OTHER: .;

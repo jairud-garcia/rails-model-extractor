@@ -15,7 +15,7 @@ public class RailsParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrPar
 	
 	@Override
 	protected void setInitialHiddenTokens(XtextTokenStream tokenStream) {
-		tokenStream.setInitialHiddenTokens("RULE_BS", "RULE_SPACE", "RULE_ML_COMMENT", "RULE_SL_COMMENT");
+		tokenStream.setInitialHiddenTokens("RULE_BS", "RULE_SPACE", "RULE_SL_COMMENT", "RULE_ML_COMMENT", "RULE_REQUIRE");
 	}
 	
 	@Override

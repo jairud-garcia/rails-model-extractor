@@ -24,6 +24,7 @@ public class Runner {
 		        return new File(dir, name).isDirectory();
 		    }
 		});
+		int index = 0;
 		for(File projectDirectory : projectDirectories){
 			System.out.println("PROYECT: "+projectDirectory.getName());
 			File f = new File(projectDirectory.getPath()+"/app/models");
@@ -33,13 +34,19 @@ public class Runner {
 			    }
 			});
 			for(File file : matchingFiles){
-				System.out.println("FILE: "+file.getPath());
-				Resource resource = resourceSet.getResource(
-					    URI.createURI("file://"+file.getPath()), true);
-				RubyClass model = (RubyClass) resource.getContents().get(0);
-				System.out.println("Class: "+model.getName()+ " heredada de "+model.getSuperType());
+				index++;
+				//System.out.println("FILE: "+file.getPath());
+				try{
+					Resource resource = resourceSet.getResource(
+						    URI.createURI("file://"+file.getPath()), true);
+					RubyClass model = (RubyClass) resource.getContents().get(0);
+					//System.out.println("Class: "+model.getName()+ " heredada de "+model.getSuperType());
+				}catch(Exception e){
+					System.err.println("FILE: "+file.getPath()+": /"+e.getMessage());
+				}
 			}
 
 		}
+		System.out.println("Processed "+index);
 	}
 }

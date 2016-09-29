@@ -204,6 +204,11 @@ ruleOperationsChain
     { 
         afterParserOrEnumRuleCall();
     }
+
+    |this_SL_COMMENT_3=RULE_SL_COMMENT
+    { 
+    newLeafNode(this_SL_COMMENT_3, grammarAccess.getClassElementAccess().getSL_COMMENTTerminalRuleCall_3()); 
+    }
 )
 ;
 
@@ -398,7 +403,14 @@ ruleMethodChainCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRul
     { 
     newLeafNode(this_SPACE_16, grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_8()); 
     }
-)*)
+)*(( RULE_BS)=>    this_BS_17=RULE_BS    {
+		$current.merge(this_BS_17);
+    }
+
+    { 
+    newLeafNode(this_BS_17, grammarAccess.getMethodChainCallAccess().getBSTerminalRuleCall_9()); 
+    }
+)?)
     ;
 
 
@@ -1760,6 +1772,14 @@ ruleMethod returns [EObject current=null]
     { 
     newLeafNode(this_PARENTHESIS_BLOCK_4, grammarAccess.getMethodAccess().getPARENTHESIS_BLOCKTerminalRuleCall_4()); 
     }
+)?(this_SPACE_5=RULE_SPACE
+    { 
+    newLeafNode(this_SPACE_5, grammarAccess.getMethodAccess().getSPACETerminalRuleCall_5()); 
+    }
+)*(this_BS_6=RULE_BS
+    { 
+    newLeafNode(this_BS_6, grammarAccess.getMethodAccess().getBSTerminalRuleCall_6()); 
+    }
 )?)
 ;
 
@@ -1833,7 +1853,7 @@ RULE_BRACKET_BLOCK : '{' ~(('{'|'}'))* ('{' ~(('{'|'}'))* ('{' ~(('{'|'}'))* '}'
 
 RULE_ARRAY_BLOCK : '[' ~(('['|']'))* ('[' ~(('['|']'))* ('[' ~(('['|']'))* ']' ~(('['|']'))*)* ']' ~(('['|']'))*)* ']';
 
-RULE_PARENTHESIS_BLOCK : '(' ~(('('|')'))* ('(' ~(('('|')'))* ('(' ~(('('|')'))* ')' ~(('('|')'))*)* ')' ~(('('|')'))*)* ')';
+RULE_PARENTHESIS_BLOCK : '(' ~(('('|')'))* ('(' ~(('('|')'))* ('(' ~(('('|')'))* ')' ~(('('|')'))*)* ')' ~(('('|')'))*)* ~(('('|')'))* ')';
 
 RULE_DO_BLOCK_PARAMETERS : 'do' RULE_SPACE* '|' RULE_ID RULE_SPACE* (RULE_COMMA RULE_SPACE* RULE_ID)* '|';
 
@@ -1844,6 +1864,8 @@ RULE_HAS_MANY_WORD : 'has_many';
 RULE_HAS_ONE_WORD : 'has_one';
 
 RULE_HAS_AND_BELONGS_TO_MANY_WORD : 'has_and_belongs_to_many';
+
+RULE_SET_TABLE_NAME : 'set_table_name';
 
 RULE_MODULE_WORD : 'module';
 
@@ -1870,6 +1892,8 @@ RULE_DECIMAL : ('0'..'9')+ '.' ('0'..'9')+;
 RULE_REGEXP : '/' ('\\/'|~(('\\/'|RULE_BS)))* '/' ('i'|'o'|'p')?;
 
 RULE_BS : ('\t'|'\n');
+
+RULE_REQUIRE : 'require' RULE_SPACE* RULE_STRING;
 
 RULE_ANY_OTHER : .;
 
