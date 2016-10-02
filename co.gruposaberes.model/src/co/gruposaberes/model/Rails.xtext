@@ -10,7 +10,7 @@ Class returns RubyClass:
 ;
 
 ClassElement returns ClassElement:
-  Method|Relationship|OperationsChain|SL_COMMENT
+  ->(Method| -> Relationship)|(->  MethodChainCall|OperationsChain)
 ;
 
 //Require:
@@ -45,12 +45,7 @@ Expression:
 	ExpressionWithOutBracket|BRACKET_BLOCK
 ;
 
-OperationsChain:
-	MethodChainCall (OperatorRule (BRACKET_BLOCK|DECIMAL|MethodChainCall|REGEXP))*
-;
-OperatorRule:
-	(': '|'?'|'<'|'+'|'-'|'*'|'/'|'%'|'**'|'='|'~'|'|'|'||'|'&'|'&&'|'=='|'!'|'<<'|'<=>'|'>'|'..'|'...')'='?
-;
+
 
 Relationship :
   HasMany | HasOne| HasAndBelongsToMany | BelongsTo 
@@ -88,9 +83,16 @@ MethodName:
 (NamespacedModuleName'.')? ID('?'|'=')?
 ;
 
+OperationsChain:
+	name=MethodChainCall (operator+=OperatorRule operants+=(BRACKET_BLOCK|DECIMAL|MethodChainCall|REGEXP))+
+;
+OperatorRule:
+	(': '|'?'|'<='|'<'|'+'|'-'|'*'|'/'|'%'|'**'|'='|'~'|'|'|'||'|'&'|'&&'|'=='|'!'|'<<'|'<=>'|'>'|'..'|'...')'='?
+;
+
 terminal COMMA: ',';
 
-terminal SPACE: ' '|'\f';
+terminal SPACE: ' '|'\t';
 //3 nested levels, looking for a better strategy
 terminal BRACKET_BLOCK: 
 	'{' !('{'|'}')*
@@ -116,20 +118,34 @@ terminal ARRAY_BLOCK:
   ']'
 ;
 
+terminal fragment NOT_PARENTHESIS_SEQ:
+	!('('|')')*
+;
+terminal fragment FIRST_LEVEL_PARENTHESIS_BLOCK:
+	'('
+      NOT_PARENTHESIS_SEQ
+    ')'
+    NOT_PARENTHESIS_SEQ
+;
 
+terminal fragment SECOND_LEVEL_PARENTHESIS_BLOCK:
+	'(' NOT_PARENTHESIS_SEQ 
+      	FIRST_LEVEL_PARENTHESIS_BLOCK*  
+     ')'NOT_PARENTHESIS_SEQ
+;
+terminal fragment THIRD_LEVEL_PARENTHESIS_BLOCK:
+	'(' NOT_PARENTHESIS_SEQ 
+      	SECOND_LEVEL_PARENTHESIS_BLOCK*  
+     ')'NOT_PARENTHESIS_SEQ
+;
 
+//4 nested levels, looking for a better strategy
 terminal PARENTHESIS_BLOCK: 
   '(' 
-  	!('('|')')*
-    ('(' !('('|')')* 
-      ('('
-          !('('|')')*
-       ')'!('('|')')*       
-      )*  
-     ')'!('('|')')*
-    )*
-    !('('|')')*  
+  	NOT_PARENTHESIS_SEQ 
+    THIRD_LEVEL_PARENTHESIS_BLOCK*  
   ')'
+  NOT_PARENTHESIS_SEQ
 ;
 
 terminal DO_BLOCK_PARAMETERS: 'do' SPACE* '|'ID SPACE* (COMMA SPACE* ID)*'|';
@@ -161,8 +177,6 @@ terminal STRING:
 terminal ML_COMMENT	: '=begin' -> '=end';
 
 terminal SL_COMMENT : '#'->'\n';
-
-//terminal WS	: (BS|SPACE)+;
 
 terminal INT: ('0'..'9')+;
 
