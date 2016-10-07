@@ -15,17 +15,35 @@
     <genClasses ecoreClass="Rails.ecore#//ClassElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//ClassElement/name"/>
     </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//TableName"/>
     <genClasses ecoreClass="Rails.ecore#//Relationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//Relationship/relationType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//Relationship/options"/>
     </genClasses>
-    <genClasses ecoreClass="Rails.ecore#//HasMany"/>
-    <genClasses ecoreClass="Rails.ecore#//HasOne"/>
-    <genClasses ecoreClass="Rails.ecore#//HasAndBelongsToMany"/>
-    <genClasses ecoreClass="Rails.ecore#//BelongsTo"/>
+    <genClasses ecoreClass="Rails.ecore#//HasMany">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HasMany/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//HasMany/options"/>
+    </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//HasOne">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HasOne/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//HasOne/options"/>
+    </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//HasAndBelongsToMany">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HasAndBelongsToMany/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//HasAndBelongsToMany/options"/>
+    </genClasses>
+    <genClasses ecoreClass="Rails.ecore#//BelongsTo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//BelongsTo/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Rails.ecore#//BelongsTo/options"/>
+    </genClasses>
     <genClasses ecoreClass="Rails.ecore#//HashKeyValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HashKeyValue/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HashKeyValue/value"/>
     </genClasses>
     <genClasses ecoreClass="Rails.ecore#//RubyMethod"/>
+    <genClasses ecoreClass="Rails.ecore#//OperationsChain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//OperationsChain/operators"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//OperationsChain/operants"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

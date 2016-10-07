@@ -10,7 +10,10 @@ import java.io.FilenameFilter;
 import org.eclipse.emf.common.util.URI;
 import com.google.inject.Injector;
 
+import co.gruposaberes.model.rails.ClassElement;
+import co.gruposaberes.model.rails.Relationship;
 import co.gruposaberes.model.rails.RubyClass;
+import co.gruposaberes.model.rails.TableName;
 
 public class Runner {
 
@@ -40,7 +43,11 @@ public class Runner {
 					Resource resource = resourceSet.getResource(
 						    URI.createURI("file://"+file.getPath()), true);
 					RubyClass model = (RubyClass) resource.getContents().get(0);
-					//System.out.println("Class: "+model.getName()+ " heredada de "+model.getSuperType());
+					System.out.println("Class: "+model.getName()+ " heredada de "+model.getSuperType());
+					for(ClassElement classElement : model.getClassElements()){
+					String klassName=classElement.eClass().getClass().getSimpleName();
+					System.out.println(classElement.getName());
+										}
 				}catch(Exception e){
 					System.err.println("FILE: "+file.getPath()+": /"+e.getMessage());
 				}
@@ -50,3 +57,8 @@ public class Runner {
 		System.out.println("Processed "+index);
 	}
 }
+
+//enum CLAZZ {
+//    A,B,C;
+//
+//}

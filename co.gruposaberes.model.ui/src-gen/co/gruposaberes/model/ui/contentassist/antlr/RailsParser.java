@@ -38,51 +38,64 @@ public class RailsParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getClassElementAccess().getAlternatives(), "rule__ClassElement__Alternatives");
+					put(grammarAccess.getClassElementAccess().getAlternatives_0_0(), "rule__ClassElement__Alternatives_0_0");
+					put(grammarAccess.getAssignmentAccess().getAlternatives_2(), "rule__Assignment__Alternatives_2");
 					put(grammarAccess.getMethodChainCallAccess().getAlternatives_0(), "rule__MethodChainCall__Alternatives_0");
 					put(grammarAccess.getMethodCallParametersAccess().getAlternatives(), "rule__MethodCallParameters__Alternatives");
 					put(grammarAccess.getExpressionWithOutBracketAccess().getAlternatives(), "rule__ExpressionWithOutBracket__Alternatives");
 					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
-					put(grammarAccess.getOperationsChainAccess().getAlternatives_1_1(), "rule__OperationsChain__Alternatives_1_1");
-					put(grammarAccess.getOperatorRuleAccess().getAlternatives_0(), "rule__OperatorRule__Alternatives_0");
-					put(grammarAccess.getRelationshipAccess().getAlternatives(), "rule__Relationship__Alternatives");
+					put(grammarAccess.getRelationshipAccess().getRelationTypeAlternatives_0_0(), "rule__Relationship__RelationTypeAlternatives_0_0");
+					put(grammarAccess.getRelationshipAccess().getNameAlternatives_2_0(), "rule__Relationship__NameAlternatives_2_0");
 					put(grammarAccess.getHasManyAccess().getNameAlternatives_2_0(), "rule__HasMany__NameAlternatives_2_0");
 					put(grammarAccess.getHasOneAccess().getNameAlternatives_2_0(), "rule__HasOne__NameAlternatives_2_0");
 					put(grammarAccess.getHasAndBelongsToManyAccess().getNameAlternatives_2_0(), "rule__HasAndBelongsToMany__NameAlternatives_2_0");
 					put(grammarAccess.getBelongsToAccess().getNameAlternatives_2_0(), "rule__BelongsTo__NameAlternatives_2_0");
-					put(grammarAccess.getHashKeyValueAccess().getAlternatives_2(), "rule__HashKeyValue__Alternatives_2");
-					put(grammarAccess.getHashKeyValueAccess().getKeyAlternatives_2_1_0_0(), "rule__HashKeyValue__KeyAlternatives_2_1_0_0");
-					put(grammarAccess.getHashKeyValueAccess().getValueAlternatives_4_0(), "rule__HashKeyValue__ValueAlternatives_4_0");
+					put(grammarAccess.getHashKeyValueAccess().getAlternatives_3(), "rule__HashKeyValue__Alternatives_3");
+					put(grammarAccess.getHashKeyValueAccess().getKeyAlternatives_3_1_0_0(), "rule__HashKeyValue__KeyAlternatives_3_1_0_0");
+					put(grammarAccess.getHashKeyValueAccess().getValueAlternatives_5_0(), "rule__HashKeyValue__ValueAlternatives_5_0");
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_1(), "rule__IgnoredHashKeyValue__Alternatives_1");
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_1_1_0(), "rule__IgnoredHashKeyValue__Alternatives_1_1_0");
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_3(), "rule__IgnoredHashKeyValue__Alternatives_3");
 					put(grammarAccess.getMethodNameAccess().getAlternatives_2(), "rule__MethodName__Alternatives_2");
+					put(grammarAccess.getOperationsChainAccess().getOperantsAlternatives_1_1_0(), "rule__OperationsChain__OperantsAlternatives_1_1_0");
+					put(grammarAccess.getOperatorRuleAccess().getAlternatives_0(), "rule__OperatorRule__Alternatives_0");
 					put(grammarAccess.getClassAccess().getGroup(), "rule__Class__Group__0");
 					put(grammarAccess.getClassAccess().getGroup_3(), "rule__Class__Group_3__0");
+					put(grammarAccess.getClassElementAccess().getGroup_0(), "rule__ClassElement__Group_0__0");
+					put(grammarAccess.getTableNameAccess().getGroup(), "rule__TableName__Group__0");
+					put(grammarAccess.getAssignmentAccess().getGroup(), "rule__Assignment__Group__0");
 					put(grammarAccess.getNamespacedModuleNameAccess().getGroup(), "rule__NamespacedModuleName__Group__0");
 					put(grammarAccess.getNamespacedModuleNameAccess().getGroup_0(), "rule__NamespacedModuleName__Group_0__0");
 					put(grammarAccess.getMethodChainCallAccess().getGroup(), "rule__MethodChainCall__Group__0");
 					put(grammarAccess.getMethodChainCallAccess().getGroup_1(), "rule__MethodChainCall__Group_1__0");
 					put(grammarAccess.getExpressionsSeparatedByCommasAccess().getGroup(), "rule__ExpressionsSeparatedByCommas__Group__0");
 					put(grammarAccess.getExpressionsSeparatedByCommasAccess().getGroup_1(), "rule__ExpressionsSeparatedByCommas__Group_1__0");
-					put(grammarAccess.getOperationsChainAccess().getGroup(), "rule__OperationsChain__Group__0");
-					put(grammarAccess.getOperationsChainAccess().getGroup_1(), "rule__OperationsChain__Group_1__0");
-					put(grammarAccess.getOperatorRuleAccess().getGroup(), "rule__OperatorRule__Group__0");
+					put(grammarAccess.getExpressionsSeparatedByCommasAccess().getGroup_1_2(), "rule__ExpressionsSeparatedByCommas__Group_1_2__0");
+					put(grammarAccess.getRelationshipAccess().getGroup(), "rule__Relationship__Group__0");
 					put(grammarAccess.getHasManyAccess().getGroup(), "rule__HasMany__Group__0");
 					put(grammarAccess.getHasOneAccess().getGroup(), "rule__HasOne__Group__0");
 					put(grammarAccess.getHasAndBelongsToManyAccess().getGroup(), "rule__HasAndBelongsToMany__Group__0");
 					put(grammarAccess.getBelongsToAccess().getGroup(), "rule__BelongsTo__Group__0");
 					put(grammarAccess.getHashKeyValueAccess().getGroup(), "rule__HashKeyValue__Group__0");
-					put(grammarAccess.getHashKeyValueAccess().getGroup_2_0(), "rule__HashKeyValue__Group_2_0__0");
-					put(grammarAccess.getHashKeyValueAccess().getGroup_2_1(), "rule__HashKeyValue__Group_2_1__0");
+					put(grammarAccess.getHashKeyValueAccess().getGroup_2(), "rule__HashKeyValue__Group_2__0");
+					put(grammarAccess.getHashKeyValueAccess().getGroup_3_0(), "rule__HashKeyValue__Group_3_0__0");
+					put(grammarAccess.getHashKeyValueAccess().getGroup_3_1(), "rule__HashKeyValue__Group_3_1__0");
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getGroup(), "rule__IgnoredHashKeyValue__Group__0");
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getGroup_1_0(), "rule__IgnoredHashKeyValue__Group_1_0__0");
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getGroup_1_1(), "rule__IgnoredHashKeyValue__Group_1_1__0");
 					put(grammarAccess.getMethodAccess().getGroup(), "rule__Method__Group__0");
 					put(grammarAccess.getMethodNameAccess().getGroup(), "rule__MethodName__Group__0");
 					put(grammarAccess.getMethodNameAccess().getGroup_0(), "rule__MethodName__Group_0__0");
+					put(grammarAccess.getOperationsChainAccess().getGroup(), "rule__OperationsChain__Group__0");
+					put(grammarAccess.getOperationsChainAccess().getGroup_1(), "rule__OperationsChain__Group_1__0");
+					put(grammarAccess.getOperatorRuleAccess().getGroup(), "rule__OperatorRule__Group__0");
 					put(grammarAccess.getClassAccess().getNameAssignment_2(), "rule__Class__NameAssignment_2");
 					put(grammarAccess.getClassAccess().getSuperTypeAssignment_3_3(), "rule__Class__SuperTypeAssignment_3_3");
 					put(grammarAccess.getClassAccess().getClassElementsAssignment_5(), "rule__Class__ClassElementsAssignment_5");
+					put(grammarAccess.getTableNameAccess().getNameAssignment_1(), "rule__TableName__NameAssignment_1");
+					put(grammarAccess.getRelationshipAccess().getRelationTypeAssignment_0(), "rule__Relationship__RelationTypeAssignment_0");
+					put(grammarAccess.getRelationshipAccess().getNameAssignment_2(), "rule__Relationship__NameAssignment_2");
+					put(grammarAccess.getRelationshipAccess().getOptionsAssignment_4(), "rule__Relationship__OptionsAssignment_4");
 					put(grammarAccess.getHasManyAccess().getNameAssignment_2(), "rule__HasMany__NameAssignment_2");
 					put(grammarAccess.getHasManyAccess().getOptionsAssignment_4(), "rule__HasMany__OptionsAssignment_4");
 					put(grammarAccess.getHasOneAccess().getNameAssignment_2(), "rule__HasOne__NameAssignment_2");
@@ -91,10 +104,13 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHasAndBelongsToManyAccess().getOptionsAssignment_4(), "rule__HasAndBelongsToMany__OptionsAssignment_4");
 					put(grammarAccess.getBelongsToAccess().getNameAssignment_2(), "rule__BelongsTo__NameAssignment_2");
 					put(grammarAccess.getBelongsToAccess().getOptionsAssignment_4(), "rule__BelongsTo__OptionsAssignment_4");
-					put(grammarAccess.getHashKeyValueAccess().getKeyAssignment_2_0_0(), "rule__HashKeyValue__KeyAssignment_2_0_0");
-					put(grammarAccess.getHashKeyValueAccess().getKeyAssignment_2_1_0(), "rule__HashKeyValue__KeyAssignment_2_1_0");
-					put(grammarAccess.getHashKeyValueAccess().getValueAssignment_4(), "rule__HashKeyValue__ValueAssignment_4");
+					put(grammarAccess.getHashKeyValueAccess().getKeyAssignment_3_0_0(), "rule__HashKeyValue__KeyAssignment_3_0_0");
+					put(grammarAccess.getHashKeyValueAccess().getKeyAssignment_3_1_0(), "rule__HashKeyValue__KeyAssignment_3_1_0");
+					put(grammarAccess.getHashKeyValueAccess().getValueAssignment_5(), "rule__HashKeyValue__ValueAssignment_5");
 					put(grammarAccess.getMethodAccess().getNameAssignment_2(), "rule__Method__NameAssignment_2");
+					put(grammarAccess.getOperationsChainAccess().getNameAssignment_0(), "rule__OperationsChain__NameAssignment_0");
+					put(grammarAccess.getOperationsChainAccess().getOperatorsAssignment_1_0(), "rule__OperationsChain__OperatorsAssignment_1_0");
+					put(grammarAccess.getOperationsChainAccess().getOperantsAssignment_1_1(), "rule__OperationsChain__OperantsAssignment_1_1");
 				}
 			};
 		}
@@ -114,7 +130,7 @@ public class RailsParser extends AbstractContentAssistParser {
 	
 	@Override
 	protected String[] getInitialHiddenTokens() {
-		return new String[] { "RULE_BS", "RULE_SPACE", "RULE_SL_COMMENT", "RULE_ML_COMMENT", "RULE_REQUIRE" };
+		return new String[] { "RULE_LF", "RULE_CR", "RULE_SPACE", "RULE_SL_COMMENT", "RULE_ML_COMMENT", "RULE_REQUIRE" };
 	}
 	
 	public RailsGrammarAccess getGrammarAccess() {

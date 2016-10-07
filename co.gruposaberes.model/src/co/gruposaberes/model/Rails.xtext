@@ -21,7 +21,6 @@ Assignment:
 	ID '=' (SYMBOL|STRING|ARRAY_BLOCK|PARENTHESIS_BLOCK|BRACKET_BLOCK|DECIMAL|INT|REGEXP|MethodChainCall)
 ;
 
-
 //Require:
 //  REQUIRE_WORD SPACE* STRING SPACE*
 //;
@@ -54,26 +53,9 @@ Expression:
 	ExpressionWithOutBracket|BRACKET_BLOCK
 ;
 
-
-
 Relationship :
-  HasMany | HasOne| HasAndBelongsToMany | BelongsTo 
-;
-
-HasMany returns HasMany:
-  HAS_MANY_WORD SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue* SL_COMMENT?
-;
-
-HasOne returns HasOne:
-  HAS_ONE_WORD SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue* SL_COMMENT?
-;
-
-HasAndBelongsToMany returns HasAndBelongsToMany:
-  HAS_AND_BELONGS_TO_MANY_WORD SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue*
-;
-
-BelongsTo returns BelongsTo:
-  BELONGS_TO_WORD SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue*
+  relationType=(HAS_MANY_WORD|HAS_ONE_WORD|HAS_AND_BELONGS_TO_MANY_WORD|BELONGS_TO_WORD)
+  SPACE* name=(SYMBOL|STRING) SPACE* options+=HashKeyValue*
 ;
 
 HashKeyValue:
