@@ -7,7 +7,7 @@
     <package 
        uri = "http://www.gruposaberes.co/model/Rails" 
        class = "co.gruposaberes.model.rails.RailsPackage"
-       genModel = "model/generated/Rails.genmodel" /> 
+       genModel = "model/Rails.genmodel" /> 
 	
   </extension>
 

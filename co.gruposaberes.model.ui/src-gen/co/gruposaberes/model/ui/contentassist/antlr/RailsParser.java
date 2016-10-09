@@ -46,10 +46,6 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
 					put(grammarAccess.getRelationshipAccess().getRelationTypeAlternatives_0_0(), "rule__Relationship__RelationTypeAlternatives_0_0");
 					put(grammarAccess.getRelationshipAccess().getNameAlternatives_2_0(), "rule__Relationship__NameAlternatives_2_0");
-					put(grammarAccess.getHasManyAccess().getNameAlternatives_2_0(), "rule__HasMany__NameAlternatives_2_0");
-					put(grammarAccess.getHasOneAccess().getNameAlternatives_2_0(), "rule__HasOne__NameAlternatives_2_0");
-					put(grammarAccess.getHasAndBelongsToManyAccess().getNameAlternatives_2_0(), "rule__HasAndBelongsToMany__NameAlternatives_2_0");
-					put(grammarAccess.getBelongsToAccess().getNameAlternatives_2_0(), "rule__BelongsTo__NameAlternatives_2_0");
 					put(grammarAccess.getHashKeyValueAccess().getAlternatives_3(), "rule__HashKeyValue__Alternatives_3");
 					put(grammarAccess.getHashKeyValueAccess().getKeyAlternatives_3_1_0_0(), "rule__HashKeyValue__KeyAlternatives_3_1_0_0");
 					put(grammarAccess.getHashKeyValueAccess().getValueAlternatives_5_0(), "rule__HashKeyValue__ValueAlternatives_5_0");
@@ -72,10 +68,6 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpressionsSeparatedByCommasAccess().getGroup_1(), "rule__ExpressionsSeparatedByCommas__Group_1__0");
 					put(grammarAccess.getExpressionsSeparatedByCommasAccess().getGroup_1_2(), "rule__ExpressionsSeparatedByCommas__Group_1_2__0");
 					put(grammarAccess.getRelationshipAccess().getGroup(), "rule__Relationship__Group__0");
-					put(grammarAccess.getHasManyAccess().getGroup(), "rule__HasMany__Group__0");
-					put(grammarAccess.getHasOneAccess().getGroup(), "rule__HasOne__Group__0");
-					put(grammarAccess.getHasAndBelongsToManyAccess().getGroup(), "rule__HasAndBelongsToMany__Group__0");
-					put(grammarAccess.getBelongsToAccess().getGroup(), "rule__BelongsTo__Group__0");
 					put(grammarAccess.getHashKeyValueAccess().getGroup(), "rule__HashKeyValue__Group__0");
 					put(grammarAccess.getHashKeyValueAccess().getGroup_2(), "rule__HashKeyValue__Group_2__0");
 					put(grammarAccess.getHashKeyValueAccess().getGroup_3_0(), "rule__HashKeyValue__Group_3_0__0");
@@ -96,14 +88,6 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRelationshipAccess().getRelationTypeAssignment_0(), "rule__Relationship__RelationTypeAssignment_0");
 					put(grammarAccess.getRelationshipAccess().getNameAssignment_2(), "rule__Relationship__NameAssignment_2");
 					put(grammarAccess.getRelationshipAccess().getOptionsAssignment_4(), "rule__Relationship__OptionsAssignment_4");
-					put(grammarAccess.getHasManyAccess().getNameAssignment_2(), "rule__HasMany__NameAssignment_2");
-					put(grammarAccess.getHasManyAccess().getOptionsAssignment_4(), "rule__HasMany__OptionsAssignment_4");
-					put(grammarAccess.getHasOneAccess().getNameAssignment_2(), "rule__HasOne__NameAssignment_2");
-					put(grammarAccess.getHasOneAccess().getOptionsAssignment_4(), "rule__HasOne__OptionsAssignment_4");
-					put(grammarAccess.getHasAndBelongsToManyAccess().getNameAssignment_2(), "rule__HasAndBelongsToMany__NameAssignment_2");
-					put(grammarAccess.getHasAndBelongsToManyAccess().getOptionsAssignment_4(), "rule__HasAndBelongsToMany__OptionsAssignment_4");
-					put(grammarAccess.getBelongsToAccess().getNameAssignment_2(), "rule__BelongsTo__NameAssignment_2");
-					put(grammarAccess.getBelongsToAccess().getOptionsAssignment_4(), "rule__BelongsTo__OptionsAssignment_4");
 					put(grammarAccess.getHashKeyValueAccess().getKeyAssignment_3_0_0(), "rule__HashKeyValue__KeyAssignment_3_0_0");
 					put(grammarAccess.getHashKeyValueAccess().getKeyAssignment_3_1_0(), "rule__HashKeyValue__KeyAssignment_3_1_0");
 					put(grammarAccess.getHashKeyValueAccess().getValueAssignment_5(), "rule__HashKeyValue__ValueAssignment_5");

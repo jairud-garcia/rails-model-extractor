@@ -981,11 +981,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleHashKeyValue"
-    // InternalRails.g:351:1: entryRuleHashKeyValue : ruleHashKeyValue EOF ;
+    // InternalRails.g:343:1: entryRuleHashKeyValue : ruleHashKeyValue EOF ;
     public final void entryRuleHashKeyValue() throws RecognitionException {
         try {
-            // InternalRails.g:352:1: ( ruleHashKeyValue EOF )
-            // InternalRails.g:353:1: ruleHashKeyValue EOF
+            // InternalRails.g:344:1: ( ruleHashKeyValue EOF )
+            // InternalRails.g:345:1: ruleHashKeyValue EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueRule()); 
@@ -1015,23 +1015,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleHashKeyValue"
-    // InternalRails.g:360:1: ruleHashKeyValue : ( ( rule__HashKeyValue__Group__0 ) ) ;
+    // InternalRails.g:352:1: ruleHashKeyValue : ( ( rule__HashKeyValue__Group__0 ) ) ;
     public final void ruleHashKeyValue() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:364:2: ( ( ( rule__HashKeyValue__Group__0 ) ) )
-            // InternalRails.g:365:1: ( ( rule__HashKeyValue__Group__0 ) )
+            // InternalRails.g:356:2: ( ( ( rule__HashKeyValue__Group__0 ) ) )
+            // InternalRails.g:357:1: ( ( rule__HashKeyValue__Group__0 ) )
             {
-            // InternalRails.g:365:1: ( ( rule__HashKeyValue__Group__0 ) )
-            // InternalRails.g:366:1: ( rule__HashKeyValue__Group__0 )
+            // InternalRails.g:357:1: ( ( rule__HashKeyValue__Group__0 ) )
+            // InternalRails.g:358:1: ( rule__HashKeyValue__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getGroup()); 
             }
-            // InternalRails.g:367:1: ( rule__HashKeyValue__Group__0 )
-            // InternalRails.g:367:2: rule__HashKeyValue__Group__0
+            // InternalRails.g:359:1: ( rule__HashKeyValue__Group__0 )
+            // InternalRails.g:359:2: rule__HashKeyValue__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__Group__0();
@@ -1066,11 +1066,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleIgnoredHashKeyValue"
-    // InternalRails.g:379:1: entryRuleIgnoredHashKeyValue : ruleIgnoredHashKeyValue EOF ;
+    // InternalRails.g:371:1: entryRuleIgnoredHashKeyValue : ruleIgnoredHashKeyValue EOF ;
     public final void entryRuleIgnoredHashKeyValue() throws RecognitionException {
         try {
-            // InternalRails.g:380:1: ( ruleIgnoredHashKeyValue EOF )
-            // InternalRails.g:381:1: ruleIgnoredHashKeyValue EOF
+            // InternalRails.g:372:1: ( ruleIgnoredHashKeyValue EOF )
+            // InternalRails.g:373:1: ruleIgnoredHashKeyValue EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueRule()); 
@@ -1100,23 +1100,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleIgnoredHashKeyValue"
-    // InternalRails.g:388:1: ruleIgnoredHashKeyValue : ( ( rule__IgnoredHashKeyValue__Group__0 ) ) ;
+    // InternalRails.g:380:1: ruleIgnoredHashKeyValue : ( ( rule__IgnoredHashKeyValue__Group__0 ) ) ;
     public final void ruleIgnoredHashKeyValue() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:392:2: ( ( ( rule__IgnoredHashKeyValue__Group__0 ) ) )
-            // InternalRails.g:393:1: ( ( rule__IgnoredHashKeyValue__Group__0 ) )
+            // InternalRails.g:384:2: ( ( ( rule__IgnoredHashKeyValue__Group__0 ) ) )
+            // InternalRails.g:385:1: ( ( rule__IgnoredHashKeyValue__Group__0 ) )
             {
-            // InternalRails.g:393:1: ( ( rule__IgnoredHashKeyValue__Group__0 ) )
-            // InternalRails.g:394:1: ( rule__IgnoredHashKeyValue__Group__0 )
+            // InternalRails.g:385:1: ( ( rule__IgnoredHashKeyValue__Group__0 ) )
+            // InternalRails.g:386:1: ( rule__IgnoredHashKeyValue__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getGroup()); 
             }
-            // InternalRails.g:395:1: ( rule__IgnoredHashKeyValue__Group__0 )
-            // InternalRails.g:395:2: rule__IgnoredHashKeyValue__Group__0
+            // InternalRails.g:387:1: ( rule__IgnoredHashKeyValue__Group__0 )
+            // InternalRails.g:387:2: rule__IgnoredHashKeyValue__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__IgnoredHashKeyValue__Group__0();
@@ -1151,11 +1151,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleMethod"
-    // InternalRails.g:407:1: entryRuleMethod : ruleMethod EOF ;
+    // InternalRails.g:399:1: entryRuleMethod : ruleMethod EOF ;
     public final void entryRuleMethod() throws RecognitionException {
         try {
-            // InternalRails.g:408:1: ( ruleMethod EOF )
-            // InternalRails.g:409:1: ruleMethod EOF
+            // InternalRails.g:400:1: ( ruleMethod EOF )
+            // InternalRails.g:401:1: ruleMethod EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodRule()); 
@@ -1185,23 +1185,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMethod"
-    // InternalRails.g:416:1: ruleMethod : ( ( rule__Method__Group__0 ) ) ;
+    // InternalRails.g:408:1: ruleMethod : ( ( rule__Method__Group__0 ) ) ;
     public final void ruleMethod() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:420:2: ( ( ( rule__Method__Group__0 ) ) )
-            // InternalRails.g:421:1: ( ( rule__Method__Group__0 ) )
+            // InternalRails.g:412:2: ( ( ( rule__Method__Group__0 ) ) )
+            // InternalRails.g:413:1: ( ( rule__Method__Group__0 ) )
             {
-            // InternalRails.g:421:1: ( ( rule__Method__Group__0 ) )
-            // InternalRails.g:422:1: ( rule__Method__Group__0 )
+            // InternalRails.g:413:1: ( ( rule__Method__Group__0 ) )
+            // InternalRails.g:414:1: ( rule__Method__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getGroup()); 
             }
-            // InternalRails.g:423:1: ( rule__Method__Group__0 )
-            // InternalRails.g:423:2: rule__Method__Group__0
+            // InternalRails.g:415:1: ( rule__Method__Group__0 )
+            // InternalRails.g:415:2: rule__Method__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Method__Group__0();
@@ -1236,11 +1236,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleMethodName"
-    // InternalRails.g:435:1: entryRuleMethodName : ruleMethodName EOF ;
+    // InternalRails.g:427:1: entryRuleMethodName : ruleMethodName EOF ;
     public final void entryRuleMethodName() throws RecognitionException {
         try {
-            // InternalRails.g:436:1: ( ruleMethodName EOF )
-            // InternalRails.g:437:1: ruleMethodName EOF
+            // InternalRails.g:428:1: ( ruleMethodName EOF )
+            // InternalRails.g:429:1: ruleMethodName EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodNameRule()); 
@@ -1270,23 +1270,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMethodName"
-    // InternalRails.g:444:1: ruleMethodName : ( ( rule__MethodName__Group__0 ) ) ;
+    // InternalRails.g:436:1: ruleMethodName : ( ( rule__MethodName__Group__0 ) ) ;
     public final void ruleMethodName() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:448:2: ( ( ( rule__MethodName__Group__0 ) ) )
-            // InternalRails.g:449:1: ( ( rule__MethodName__Group__0 ) )
+            // InternalRails.g:440:2: ( ( ( rule__MethodName__Group__0 ) ) )
+            // InternalRails.g:441:1: ( ( rule__MethodName__Group__0 ) )
             {
-            // InternalRails.g:449:1: ( ( rule__MethodName__Group__0 ) )
-            // InternalRails.g:450:1: ( rule__MethodName__Group__0 )
+            // InternalRails.g:441:1: ( ( rule__MethodName__Group__0 ) )
+            // InternalRails.g:442:1: ( rule__MethodName__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodNameAccess().getGroup()); 
             }
-            // InternalRails.g:451:1: ( rule__MethodName__Group__0 )
-            // InternalRails.g:451:2: rule__MethodName__Group__0
+            // InternalRails.g:443:1: ( rule__MethodName__Group__0 )
+            // InternalRails.g:443:2: rule__MethodName__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__MethodName__Group__0();
@@ -1321,11 +1321,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleOperationsChain"
-    // InternalRails.g:463:1: entryRuleOperationsChain : ruleOperationsChain EOF ;
+    // InternalRails.g:455:1: entryRuleOperationsChain : ruleOperationsChain EOF ;
     public final void entryRuleOperationsChain() throws RecognitionException {
         try {
-            // InternalRails.g:464:1: ( ruleOperationsChain EOF )
-            // InternalRails.g:465:1: ruleOperationsChain EOF
+            // InternalRails.g:456:1: ( ruleOperationsChain EOF )
+            // InternalRails.g:457:1: ruleOperationsChain EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsChainRule()); 
@@ -1355,23 +1355,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleOperationsChain"
-    // InternalRails.g:472:1: ruleOperationsChain : ( ( rule__OperationsChain__Group__0 ) ) ;
+    // InternalRails.g:464:1: ruleOperationsChain : ( ( rule__OperationsChain__Group__0 ) ) ;
     public final void ruleOperationsChain() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:476:2: ( ( ( rule__OperationsChain__Group__0 ) ) )
-            // InternalRails.g:477:1: ( ( rule__OperationsChain__Group__0 ) )
+            // InternalRails.g:468:2: ( ( ( rule__OperationsChain__Group__0 ) ) )
+            // InternalRails.g:469:1: ( ( rule__OperationsChain__Group__0 ) )
             {
-            // InternalRails.g:477:1: ( ( rule__OperationsChain__Group__0 ) )
-            // InternalRails.g:478:1: ( rule__OperationsChain__Group__0 )
+            // InternalRails.g:469:1: ( ( rule__OperationsChain__Group__0 ) )
+            // InternalRails.g:470:1: ( rule__OperationsChain__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsChainAccess().getGroup()); 
             }
-            // InternalRails.g:479:1: ( rule__OperationsChain__Group__0 )
-            // InternalRails.g:479:2: rule__OperationsChain__Group__0
+            // InternalRails.g:471:1: ( rule__OperationsChain__Group__0 )
+            // InternalRails.g:471:2: rule__OperationsChain__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__OperationsChain__Group__0();
@@ -1406,11 +1406,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleOperatorRule"
-    // InternalRails.g:491:1: entryRuleOperatorRule : ruleOperatorRule EOF ;
+    // InternalRails.g:483:1: entryRuleOperatorRule : ruleOperatorRule EOF ;
     public final void entryRuleOperatorRule() throws RecognitionException {
         try {
-            // InternalRails.g:492:1: ( ruleOperatorRule EOF )
-            // InternalRails.g:493:1: ruleOperatorRule EOF
+            // InternalRails.g:484:1: ( ruleOperatorRule EOF )
+            // InternalRails.g:485:1: ruleOperatorRule EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperatorRuleRule()); 
@@ -1440,23 +1440,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleOperatorRule"
-    // InternalRails.g:500:1: ruleOperatorRule : ( ( rule__OperatorRule__Group__0 ) ) ;
+    // InternalRails.g:492:1: ruleOperatorRule : ( ( rule__OperatorRule__Group__0 ) ) ;
     public final void ruleOperatorRule() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:504:2: ( ( ( rule__OperatorRule__Group__0 ) ) )
-            // InternalRails.g:505:1: ( ( rule__OperatorRule__Group__0 ) )
+            // InternalRails.g:496:2: ( ( ( rule__OperatorRule__Group__0 ) ) )
+            // InternalRails.g:497:1: ( ( rule__OperatorRule__Group__0 ) )
             {
-            // InternalRails.g:505:1: ( ( rule__OperatorRule__Group__0 ) )
-            // InternalRails.g:506:1: ( rule__OperatorRule__Group__0 )
+            // InternalRails.g:497:1: ( ( rule__OperatorRule__Group__0 ) )
+            // InternalRails.g:498:1: ( rule__OperatorRule__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperatorRuleAccess().getGroup()); 
             }
-            // InternalRails.g:507:1: ( rule__OperatorRule__Group__0 )
-            // InternalRails.g:507:2: rule__OperatorRule__Group__0
+            // InternalRails.g:499:1: ( rule__OperatorRule__Group__0 )
+            // InternalRails.g:499:2: rule__OperatorRule__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__OperatorRule__Group__0();
@@ -1491,13 +1491,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassElement__Alternatives"
-    // InternalRails.g:519:1: rule__ClassElement__Alternatives : ( ( ( rule__ClassElement__Group_0__0 ) ) | ( ruleOperationsChain ) );
+    // InternalRails.g:511:1: rule__ClassElement__Alternatives : ( ( ( rule__ClassElement__Group_0__0 ) ) | ( ruleOperationsChain ) );
     public final void rule__ClassElement__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:523:1: ( ( ( rule__ClassElement__Group_0__0 ) ) | ( ruleOperationsChain ) )
+            // InternalRails.g:515:1: ( ( ( rule__ClassElement__Group_0__0 ) ) | ( ruleOperationsChain ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1516,16 +1516,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalRails.g:524:1: ( ( rule__ClassElement__Group_0__0 ) )
+                    // InternalRails.g:516:1: ( ( rule__ClassElement__Group_0__0 ) )
                     {
-                    // InternalRails.g:524:1: ( ( rule__ClassElement__Group_0__0 ) )
-                    // InternalRails.g:525:1: ( rule__ClassElement__Group_0__0 )
+                    // InternalRails.g:516:1: ( ( rule__ClassElement__Group_0__0 ) )
+                    // InternalRails.g:517:1: ( rule__ClassElement__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getClassElementAccess().getGroup_0()); 
                     }
-                    // InternalRails.g:526:1: ( rule__ClassElement__Group_0__0 )
-                    // InternalRails.g:526:2: rule__ClassElement__Group_0__0
+                    // InternalRails.g:518:1: ( rule__ClassElement__Group_0__0 )
+                    // InternalRails.g:518:2: rule__ClassElement__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ClassElement__Group_0__0();
@@ -1545,10 +1545,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:530:6: ( ruleOperationsChain )
+                    // InternalRails.g:522:6: ( ruleOperationsChain )
                     {
-                    // InternalRails.g:530:6: ( ruleOperationsChain )
-                    // InternalRails.g:531:1: ruleOperationsChain
+                    // InternalRails.g:522:6: ( ruleOperationsChain )
+                    // InternalRails.g:523:1: ruleOperationsChain
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getClassElementAccess().getOperationsChainParserRuleCall_1()); 
@@ -1585,13 +1585,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassElement__Alternatives_0_0"
-    // InternalRails.g:541:1: rule__ClassElement__Alternatives_0_0 : ( ( ruleMethod ) | ( ( ruleRelationship ) ) | ( ruleTableName ) );
+    // InternalRails.g:533:1: rule__ClassElement__Alternatives_0_0 : ( ( ruleMethod ) | ( ( ruleRelationship ) ) | ( ruleTableName ) );
     public final void rule__ClassElement__Alternatives_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:545:1: ( ( ruleMethod ) | ( ( ruleRelationship ) ) | ( ruleTableName ) )
+            // InternalRails.g:537:1: ( ( ruleMethod ) | ( ( ruleRelationship ) ) | ( ruleTableName ) )
             int alt2=3;
             switch ( input.LA(1) ) {
             case RULE_DEF_WORD:
@@ -1622,10 +1622,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
             switch (alt2) {
                 case 1 :
-                    // InternalRails.g:546:1: ( ruleMethod )
+                    // InternalRails.g:538:1: ( ruleMethod )
                     {
-                    // InternalRails.g:546:1: ( ruleMethod )
-                    // InternalRails.g:547:1: ruleMethod
+                    // InternalRails.g:538:1: ( ruleMethod )
+                    // InternalRails.g:539:1: ruleMethod
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getClassElementAccess().getMethodParserRuleCall_0_0_0()); 
@@ -1645,16 +1645,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:552:6: ( ( ruleRelationship ) )
+                    // InternalRails.g:544:6: ( ( ruleRelationship ) )
                     {
-                    // InternalRails.g:552:6: ( ( ruleRelationship ) )
-                    // InternalRails.g:553:1: ( ruleRelationship )
+                    // InternalRails.g:544:6: ( ( ruleRelationship ) )
+                    // InternalRails.g:545:1: ( ruleRelationship )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getClassElementAccess().getRelationshipParserRuleCall_0_0_1()); 
                     }
-                    // InternalRails.g:554:1: ( ruleRelationship )
-                    // InternalRails.g:554:3: ruleRelationship
+                    // InternalRails.g:546:1: ( ruleRelationship )
+                    // InternalRails.g:546:3: ruleRelationship
                     {
                     pushFollow(FOLLOW_2);
                     ruleRelationship();
@@ -1674,10 +1674,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:558:6: ( ruleTableName )
+                    // InternalRails.g:550:6: ( ruleTableName )
                     {
-                    // InternalRails.g:558:6: ( ruleTableName )
-                    // InternalRails.g:559:1: ruleTableName
+                    // InternalRails.g:550:6: ( ruleTableName )
+                    // InternalRails.g:551:1: ruleTableName
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getClassElementAccess().getTableNameParserRuleCall_0_0_2()); 
@@ -1714,13 +1714,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Alternatives_0"
-    // InternalRails.g:570:1: rule__MethodChainCall__Alternatives_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( ruleNamespacedModuleName ) );
+    // InternalRails.g:562:1: rule__MethodChainCall__Alternatives_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( ruleNamespacedModuleName ) );
     public final void rule__MethodChainCall__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:574:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( ruleNamespacedModuleName ) )
+            // InternalRails.g:566:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( ruleNamespacedModuleName ) )
             int alt3=7;
             switch ( input.LA(1) ) {
             case RULE_SYMBOL:
@@ -1768,10 +1768,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
             switch (alt3) {
                 case 1 :
-                    // InternalRails.g:575:1: ( RULE_SYMBOL )
+                    // InternalRails.g:567:1: ( RULE_SYMBOL )
                     {
-                    // InternalRails.g:575:1: ( RULE_SYMBOL )
-                    // InternalRails.g:576:1: RULE_SYMBOL
+                    // InternalRails.g:567:1: ( RULE_SYMBOL )
+                    // InternalRails.g:568:1: RULE_SYMBOL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodChainCallAccess().getSYMBOLTerminalRuleCall_0_0()); 
@@ -1787,10 +1787,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:581:6: ( RULE_STRING )
+                    // InternalRails.g:573:6: ( RULE_STRING )
                     {
-                    // InternalRails.g:581:6: ( RULE_STRING )
-                    // InternalRails.g:582:1: RULE_STRING
+                    // InternalRails.g:573:6: ( RULE_STRING )
+                    // InternalRails.g:574:1: RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodChainCallAccess().getSTRINGTerminalRuleCall_0_1()); 
@@ -1806,10 +1806,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:587:6: ( RULE_INT )
+                    // InternalRails.g:579:6: ( RULE_INT )
                     {
-                    // InternalRails.g:587:6: ( RULE_INT )
-                    // InternalRails.g:588:1: RULE_INT
+                    // InternalRails.g:579:6: ( RULE_INT )
+                    // InternalRails.g:580:1: RULE_INT
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodChainCallAccess().getINTTerminalRuleCall_0_2()); 
@@ -1825,10 +1825,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:593:6: ( RULE_INT_METHOD )
+                    // InternalRails.g:585:6: ( RULE_INT_METHOD )
                     {
-                    // InternalRails.g:593:6: ( RULE_INT_METHOD )
-                    // InternalRails.g:594:1: RULE_INT_METHOD
+                    // InternalRails.g:585:6: ( RULE_INT_METHOD )
+                    // InternalRails.g:586:1: RULE_INT_METHOD
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodChainCallAccess().getINT_METHODTerminalRuleCall_0_3()); 
@@ -1844,10 +1844,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:599:6: ( RULE_PARENTHESIS_BLOCK )
+                    // InternalRails.g:591:6: ( RULE_PARENTHESIS_BLOCK )
                     {
-                    // InternalRails.g:599:6: ( RULE_PARENTHESIS_BLOCK )
-                    // InternalRails.g:600:1: RULE_PARENTHESIS_BLOCK
+                    // InternalRails.g:591:6: ( RULE_PARENTHESIS_BLOCK )
+                    // InternalRails.g:592:1: RULE_PARENTHESIS_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodChainCallAccess().getPARENTHESIS_BLOCKTerminalRuleCall_0_4()); 
@@ -1863,10 +1863,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:605:6: ( RULE_ARRAY_BLOCK )
+                    // InternalRails.g:597:6: ( RULE_ARRAY_BLOCK )
                     {
-                    // InternalRails.g:605:6: ( RULE_ARRAY_BLOCK )
-                    // InternalRails.g:606:1: RULE_ARRAY_BLOCK
+                    // InternalRails.g:597:6: ( RULE_ARRAY_BLOCK )
+                    // InternalRails.g:598:1: RULE_ARRAY_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodChainCallAccess().getARRAY_BLOCKTerminalRuleCall_0_5()); 
@@ -1882,10 +1882,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:611:6: ( ruleNamespacedModuleName )
+                    // InternalRails.g:603:6: ( ruleNamespacedModuleName )
                     {
-                    // InternalRails.g:611:6: ( ruleNamespacedModuleName )
-                    // InternalRails.g:612:1: ruleNamespacedModuleName
+                    // InternalRails.g:603:6: ( ruleNamespacedModuleName )
+                    // InternalRails.g:604:1: ruleNamespacedModuleName
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodChainCallAccess().getNamespacedModuleNameParserRuleCall_0_6()); 
@@ -1922,13 +1922,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodCallParameters__Alternatives"
-    // InternalRails.g:622:1: rule__MethodCallParameters__Alternatives : ( ( RULE_PARENTHESIS_BLOCK ) | ( ruleExpressionsSeparatedByCommas ) );
+    // InternalRails.g:614:1: rule__MethodCallParameters__Alternatives : ( ( RULE_PARENTHESIS_BLOCK ) | ( ruleExpressionsSeparatedByCommas ) );
     public final void rule__MethodCallParameters__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:626:1: ( ( RULE_PARENTHESIS_BLOCK ) | ( ruleExpressionsSeparatedByCommas ) )
+            // InternalRails.g:618:1: ( ( RULE_PARENTHESIS_BLOCK ) | ( ruleExpressionsSeparatedByCommas ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1961,10 +1961,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalRails.g:627:1: ( RULE_PARENTHESIS_BLOCK )
+                    // InternalRails.g:619:1: ( RULE_PARENTHESIS_BLOCK )
                     {
-                    // InternalRails.g:627:1: ( RULE_PARENTHESIS_BLOCK )
-                    // InternalRails.g:628:1: RULE_PARENTHESIS_BLOCK
+                    // InternalRails.g:619:1: ( RULE_PARENTHESIS_BLOCK )
+                    // InternalRails.g:620:1: RULE_PARENTHESIS_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodCallParametersAccess().getPARENTHESIS_BLOCKTerminalRuleCall_0()); 
@@ -1980,10 +1980,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:633:6: ( ruleExpressionsSeparatedByCommas )
+                    // InternalRails.g:625:6: ( ruleExpressionsSeparatedByCommas )
                     {
-                    // InternalRails.g:633:6: ( ruleExpressionsSeparatedByCommas )
-                    // InternalRails.g:634:1: ruleExpressionsSeparatedByCommas
+                    // InternalRails.g:625:6: ( ruleExpressionsSeparatedByCommas )
+                    // InternalRails.g:626:1: ruleExpressionsSeparatedByCommas
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodCallParametersAccess().getExpressionsSeparatedByCommasParserRuleCall_1()); 
@@ -2020,21 +2020,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionWithOutBracket__Alternatives"
-    // InternalRails.g:644:1: rule__ExpressionWithOutBracket__Alternatives : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_ARRAY_BLOCK ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_REGEXP ) | ( ruleMethodChainCall ) | ( ruleIgnoredHashKeyValue ) );
+    // InternalRails.g:636:1: rule__ExpressionWithOutBracket__Alternatives : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_ARRAY_BLOCK ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_REGEXP ) | ( ruleMethodChainCall ) | ( ruleIgnoredHashKeyValue ) );
     public final void rule__ExpressionWithOutBracket__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:648:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_ARRAY_BLOCK ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_REGEXP ) | ( ruleMethodChainCall ) | ( ruleIgnoredHashKeyValue ) )
+            // InternalRails.g:640:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_ARRAY_BLOCK ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_REGEXP ) | ( ruleMethodChainCall ) | ( ruleIgnoredHashKeyValue ) )
             int alt5=9;
             alt5 = dfa5.predict(input);
             switch (alt5) {
                 case 1 :
-                    // InternalRails.g:649:1: ( RULE_SYMBOL )
+                    // InternalRails.g:641:1: ( RULE_SYMBOL )
                     {
-                    // InternalRails.g:649:1: ( RULE_SYMBOL )
-                    // InternalRails.g:650:1: RULE_SYMBOL
+                    // InternalRails.g:641:1: ( RULE_SYMBOL )
+                    // InternalRails.g:642:1: RULE_SYMBOL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionWithOutBracketAccess().getSYMBOLTerminalRuleCall_0()); 
@@ -2050,10 +2050,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:655:6: ( RULE_STRING )
+                    // InternalRails.g:647:6: ( RULE_STRING )
                     {
-                    // InternalRails.g:655:6: ( RULE_STRING )
-                    // InternalRails.g:656:1: RULE_STRING
+                    // InternalRails.g:647:6: ( RULE_STRING )
+                    // InternalRails.g:648:1: RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionWithOutBracketAccess().getSTRINGTerminalRuleCall_1()); 
@@ -2069,10 +2069,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:661:6: ( RULE_ARRAY_BLOCK )
+                    // InternalRails.g:653:6: ( RULE_ARRAY_BLOCK )
                     {
-                    // InternalRails.g:661:6: ( RULE_ARRAY_BLOCK )
-                    // InternalRails.g:662:1: RULE_ARRAY_BLOCK
+                    // InternalRails.g:653:6: ( RULE_ARRAY_BLOCK )
+                    // InternalRails.g:654:1: RULE_ARRAY_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionWithOutBracketAccess().getARRAY_BLOCKTerminalRuleCall_2()); 
@@ -2088,10 +2088,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:667:6: ( RULE_PARENTHESIS_BLOCK )
+                    // InternalRails.g:659:6: ( RULE_PARENTHESIS_BLOCK )
                     {
-                    // InternalRails.g:667:6: ( RULE_PARENTHESIS_BLOCK )
-                    // InternalRails.g:668:1: RULE_PARENTHESIS_BLOCK
+                    // InternalRails.g:659:6: ( RULE_PARENTHESIS_BLOCK )
+                    // InternalRails.g:660:1: RULE_PARENTHESIS_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionWithOutBracketAccess().getPARENTHESIS_BLOCKTerminalRuleCall_3()); 
@@ -2107,10 +2107,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:673:6: ( RULE_DECIMAL )
+                    // InternalRails.g:665:6: ( RULE_DECIMAL )
                     {
-                    // InternalRails.g:673:6: ( RULE_DECIMAL )
-                    // InternalRails.g:674:1: RULE_DECIMAL
+                    // InternalRails.g:665:6: ( RULE_DECIMAL )
+                    // InternalRails.g:666:1: RULE_DECIMAL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionWithOutBracketAccess().getDECIMALTerminalRuleCall_4()); 
@@ -2126,10 +2126,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:679:6: ( RULE_INT )
+                    // InternalRails.g:671:6: ( RULE_INT )
                     {
-                    // InternalRails.g:679:6: ( RULE_INT )
-                    // InternalRails.g:680:1: RULE_INT
+                    // InternalRails.g:671:6: ( RULE_INT )
+                    // InternalRails.g:672:1: RULE_INT
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionWithOutBracketAccess().getINTTerminalRuleCall_5()); 
@@ -2145,10 +2145,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:685:6: ( RULE_REGEXP )
+                    // InternalRails.g:677:6: ( RULE_REGEXP )
                     {
-                    // InternalRails.g:685:6: ( RULE_REGEXP )
-                    // InternalRails.g:686:1: RULE_REGEXP
+                    // InternalRails.g:677:6: ( RULE_REGEXP )
+                    // InternalRails.g:678:1: RULE_REGEXP
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionWithOutBracketAccess().getREGEXPTerminalRuleCall_6()); 
@@ -2164,10 +2164,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // InternalRails.g:691:6: ( ruleMethodChainCall )
+                    // InternalRails.g:683:6: ( ruleMethodChainCall )
                     {
-                    // InternalRails.g:691:6: ( ruleMethodChainCall )
-                    // InternalRails.g:692:1: ruleMethodChainCall
+                    // InternalRails.g:683:6: ( ruleMethodChainCall )
+                    // InternalRails.g:684:1: ruleMethodChainCall
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionWithOutBracketAccess().getMethodChainCallParserRuleCall_7()); 
@@ -2187,10 +2187,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 9 :
-                    // InternalRails.g:697:6: ( ruleIgnoredHashKeyValue )
+                    // InternalRails.g:689:6: ( ruleIgnoredHashKeyValue )
                     {
-                    // InternalRails.g:697:6: ( ruleIgnoredHashKeyValue )
-                    // InternalRails.g:698:1: ruleIgnoredHashKeyValue
+                    // InternalRails.g:689:6: ( ruleIgnoredHashKeyValue )
+                    // InternalRails.g:690:1: ruleIgnoredHashKeyValue
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionWithOutBracketAccess().getIgnoredHashKeyValueParserRuleCall_8()); 
@@ -2227,13 +2227,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Alternatives"
-    // InternalRails.g:708:1: rule__Expression__Alternatives : ( ( ruleExpressionWithOutBracket ) | ( RULE_BRACKET_BLOCK ) );
+    // InternalRails.g:700:1: rule__Expression__Alternatives : ( ( ruleExpressionWithOutBracket ) | ( RULE_BRACKET_BLOCK ) );
     public final void rule__Expression__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:712:1: ( ( ruleExpressionWithOutBracket ) | ( RULE_BRACKET_BLOCK ) )
+            // InternalRails.g:704:1: ( ( ruleExpressionWithOutBracket ) | ( RULE_BRACKET_BLOCK ) )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2252,10 +2252,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalRails.g:713:1: ( ruleExpressionWithOutBracket )
+                    // InternalRails.g:705:1: ( ruleExpressionWithOutBracket )
                     {
-                    // InternalRails.g:713:1: ( ruleExpressionWithOutBracket )
-                    // InternalRails.g:714:1: ruleExpressionWithOutBracket
+                    // InternalRails.g:705:1: ( ruleExpressionWithOutBracket )
+                    // InternalRails.g:706:1: ruleExpressionWithOutBracket
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionAccess().getExpressionWithOutBracketParserRuleCall_0()); 
@@ -2275,10 +2275,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:719:6: ( RULE_BRACKET_BLOCK )
+                    // InternalRails.g:711:6: ( RULE_BRACKET_BLOCK )
                     {
-                    // InternalRails.g:719:6: ( RULE_BRACKET_BLOCK )
-                    // InternalRails.g:720:1: RULE_BRACKET_BLOCK
+                    // InternalRails.g:711:6: ( RULE_BRACKET_BLOCK )
+                    // InternalRails.g:712:1: RULE_BRACKET_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionAccess().getBRACKET_BLOCKTerminalRuleCall_1()); 
@@ -2311,13 +2311,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__RelationTypeAlternatives_0_0"
-    // InternalRails.g:730:1: rule__Relationship__RelationTypeAlternatives_0_0 : ( ( RULE_HAS_MANY_WORD ) | ( RULE_HAS_ONE_WORD ) | ( RULE_HAS_AND_BELONGS_TO_MANY_WORD ) | ( RULE_BELONGS_TO_WORD ) );
+    // InternalRails.g:722:1: rule__Relationship__RelationTypeAlternatives_0_0 : ( ( RULE_HAS_MANY_WORD ) | ( RULE_HAS_ONE_WORD ) | ( RULE_HAS_AND_BELONGS_TO_MANY_WORD ) | ( RULE_BELONGS_TO_WORD ) );
     public final void rule__Relationship__RelationTypeAlternatives_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:734:1: ( ( RULE_HAS_MANY_WORD ) | ( RULE_HAS_ONE_WORD ) | ( RULE_HAS_AND_BELONGS_TO_MANY_WORD ) | ( RULE_BELONGS_TO_WORD ) )
+            // InternalRails.g:726:1: ( ( RULE_HAS_MANY_WORD ) | ( RULE_HAS_ONE_WORD ) | ( RULE_HAS_AND_BELONGS_TO_MANY_WORD ) | ( RULE_BELONGS_TO_WORD ) )
             int alt7=4;
             switch ( input.LA(1) ) {
             case RULE_HAS_MANY_WORD:
@@ -2350,10 +2350,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
             switch (alt7) {
                 case 1 :
-                    // InternalRails.g:735:1: ( RULE_HAS_MANY_WORD )
+                    // InternalRails.g:727:1: ( RULE_HAS_MANY_WORD )
                     {
-                    // InternalRails.g:735:1: ( RULE_HAS_MANY_WORD )
-                    // InternalRails.g:736:1: RULE_HAS_MANY_WORD
+                    // InternalRails.g:727:1: ( RULE_HAS_MANY_WORD )
+                    // InternalRails.g:728:1: RULE_HAS_MANY_WORD
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getRelationshipAccess().getRelationTypeHAS_MANY_WORDTerminalRuleCall_0_0_0()); 
@@ -2369,10 +2369,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:741:6: ( RULE_HAS_ONE_WORD )
+                    // InternalRails.g:733:6: ( RULE_HAS_ONE_WORD )
                     {
-                    // InternalRails.g:741:6: ( RULE_HAS_ONE_WORD )
-                    // InternalRails.g:742:1: RULE_HAS_ONE_WORD
+                    // InternalRails.g:733:6: ( RULE_HAS_ONE_WORD )
+                    // InternalRails.g:734:1: RULE_HAS_ONE_WORD
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getRelationshipAccess().getRelationTypeHAS_ONE_WORDTerminalRuleCall_0_0_1()); 
@@ -2388,10 +2388,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:747:6: ( RULE_HAS_AND_BELONGS_TO_MANY_WORD )
+                    // InternalRails.g:739:6: ( RULE_HAS_AND_BELONGS_TO_MANY_WORD )
                     {
-                    // InternalRails.g:747:6: ( RULE_HAS_AND_BELONGS_TO_MANY_WORD )
-                    // InternalRails.g:748:1: RULE_HAS_AND_BELONGS_TO_MANY_WORD
+                    // InternalRails.g:739:6: ( RULE_HAS_AND_BELONGS_TO_MANY_WORD )
+                    // InternalRails.g:740:1: RULE_HAS_AND_BELONGS_TO_MANY_WORD
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getRelationshipAccess().getRelationTypeHAS_AND_BELONGS_TO_MANY_WORDTerminalRuleCall_0_0_2()); 
@@ -2407,10 +2407,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:753:6: ( RULE_BELONGS_TO_WORD )
+                    // InternalRails.g:745:6: ( RULE_BELONGS_TO_WORD )
                     {
-                    // InternalRails.g:753:6: ( RULE_BELONGS_TO_WORD )
-                    // InternalRails.g:754:1: RULE_BELONGS_TO_WORD
+                    // InternalRails.g:745:6: ( RULE_BELONGS_TO_WORD )
+                    // InternalRails.g:746:1: RULE_BELONGS_TO_WORD
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getRelationshipAccess().getRelationTypeBELONGS_TO_WORDTerminalRuleCall_0_0_3()); 
@@ -2443,13 +2443,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__NameAlternatives_2_0"
-    // InternalRails.g:764:1: rule__Relationship__NameAlternatives_2_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
+    // InternalRails.g:756:1: rule__Relationship__NameAlternatives_2_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
     public final void rule__Relationship__NameAlternatives_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:768:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
+            // InternalRails.g:760:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -2468,10 +2468,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalRails.g:769:1: ( RULE_SYMBOL )
+                    // InternalRails.g:761:1: ( RULE_SYMBOL )
                     {
-                    // InternalRails.g:769:1: ( RULE_SYMBOL )
-                    // InternalRails.g:770:1: RULE_SYMBOL
+                    // InternalRails.g:761:1: ( RULE_SYMBOL )
+                    // InternalRails.g:762:1: RULE_SYMBOL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getRelationshipAccess().getNameSYMBOLTerminalRuleCall_2_0_0()); 
@@ -2487,10 +2487,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:775:6: ( RULE_STRING )
+                    // InternalRails.g:767:6: ( RULE_STRING )
                     {
-                    // InternalRails.g:775:6: ( RULE_STRING )
-                    // InternalRails.g:776:1: RULE_STRING
+                    // InternalRails.g:767:6: ( RULE_STRING )
+                    // InternalRails.g:768:1: RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getRelationshipAccess().getNameSTRINGTerminalRuleCall_2_0_1()); 
@@ -2523,13 +2523,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Alternatives_3"
-    // InternalRails.g:790:1: rule__HashKeyValue__Alternatives_3 : ( ( ( rule__HashKeyValue__Group_3_0__0 ) ) | ( ( rule__HashKeyValue__Group_3_1__0 ) ) );
+    // InternalRails.g:778:1: rule__HashKeyValue__Alternatives_3 : ( ( ( rule__HashKeyValue__Group_3_0__0 ) ) | ( ( rule__HashKeyValue__Group_3_1__0 ) ) );
     public final void rule__HashKeyValue__Alternatives_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:794:1: ( ( ( rule__HashKeyValue__Group_3_0__0 ) ) | ( ( rule__HashKeyValue__Group_3_1__0 ) ) )
+            // InternalRails.g:782:1: ( ( ( rule__HashKeyValue__Group_3_0__0 ) ) | ( ( rule__HashKeyValue__Group_3_1__0 ) ) )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2548,16 +2548,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt9) {
                 case 1 :
-                    // InternalRails.g:795:1: ( ( rule__HashKeyValue__Group_3_0__0 ) )
+                    // InternalRails.g:783:1: ( ( rule__HashKeyValue__Group_3_0__0 ) )
                     {
-                    // InternalRails.g:795:1: ( ( rule__HashKeyValue__Group_3_0__0 ) )
-                    // InternalRails.g:796:1: ( rule__HashKeyValue__Group_3_0__0 )
+                    // InternalRails.g:783:1: ( ( rule__HashKeyValue__Group_3_0__0 ) )
+                    // InternalRails.g:784:1: ( rule__HashKeyValue__Group_3_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getGroup_3_0()); 
                     }
-                    // InternalRails.g:797:1: ( rule__HashKeyValue__Group_3_0__0 )
-                    // InternalRails.g:797:2: rule__HashKeyValue__Group_3_0__0
+                    // InternalRails.g:785:1: ( rule__HashKeyValue__Group_3_0__0 )
+                    // InternalRails.g:785:2: rule__HashKeyValue__Group_3_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__HashKeyValue__Group_3_0__0();
@@ -2577,16 +2577,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:801:6: ( ( rule__HashKeyValue__Group_3_1__0 ) )
+                    // InternalRails.g:789:6: ( ( rule__HashKeyValue__Group_3_1__0 ) )
                     {
-                    // InternalRails.g:801:6: ( ( rule__HashKeyValue__Group_3_1__0 ) )
-                    // InternalRails.g:802:1: ( rule__HashKeyValue__Group_3_1__0 )
+                    // InternalRails.g:789:6: ( ( rule__HashKeyValue__Group_3_1__0 ) )
+                    // InternalRails.g:790:1: ( rule__HashKeyValue__Group_3_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getGroup_3_1()); 
                     }
-                    // InternalRails.g:803:1: ( rule__HashKeyValue__Group_3_1__0 )
-                    // InternalRails.g:803:2: rule__HashKeyValue__Group_3_1__0
+                    // InternalRails.g:791:1: ( rule__HashKeyValue__Group_3_1__0 )
+                    // InternalRails.g:791:2: rule__HashKeyValue__Group_3_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__HashKeyValue__Group_3_1__0();
@@ -2623,13 +2623,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__KeyAlternatives_3_1_0_0"
-    // InternalRails.g:812:1: rule__HashKeyValue__KeyAlternatives_3_1_0_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
+    // InternalRails.g:800:1: rule__HashKeyValue__KeyAlternatives_3_1_0_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
     public final void rule__HashKeyValue__KeyAlternatives_3_1_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:816:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
+            // InternalRails.g:804:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2648,10 +2648,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalRails.g:817:1: ( RULE_SYMBOL )
+                    // InternalRails.g:805:1: ( RULE_SYMBOL )
                     {
-                    // InternalRails.g:817:1: ( RULE_SYMBOL )
-                    // InternalRails.g:818:1: RULE_SYMBOL
+                    // InternalRails.g:805:1: ( RULE_SYMBOL )
+                    // InternalRails.g:806:1: RULE_SYMBOL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getKeySYMBOLTerminalRuleCall_3_1_0_0_0()); 
@@ -2667,10 +2667,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:823:6: ( RULE_STRING )
+                    // InternalRails.g:811:6: ( RULE_STRING )
                     {
-                    // InternalRails.g:823:6: ( RULE_STRING )
-                    // InternalRails.g:824:1: RULE_STRING
+                    // InternalRails.g:811:6: ( RULE_STRING )
+                    // InternalRails.g:812:1: RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getKeySTRINGTerminalRuleCall_3_1_0_0_1()); 
@@ -2703,21 +2703,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__ValueAlternatives_5_0"
-    // InternalRails.g:834:1: rule__HashKeyValue__ValueAlternatives_5_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) );
+    // InternalRails.g:822:1: rule__HashKeyValue__ValueAlternatives_5_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) );
     public final void rule__HashKeyValue__ValueAlternatives_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:838:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) )
+            // InternalRails.g:826:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) )
             int alt11=8;
             alt11 = dfa11.predict(input);
             switch (alt11) {
                 case 1 :
-                    // InternalRails.g:839:1: ( RULE_SYMBOL )
+                    // InternalRails.g:827:1: ( RULE_SYMBOL )
                     {
-                    // InternalRails.g:839:1: ( RULE_SYMBOL )
-                    // InternalRails.g:840:1: RULE_SYMBOL
+                    // InternalRails.g:827:1: ( RULE_SYMBOL )
+                    // InternalRails.g:828:1: RULE_SYMBOL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getValueSYMBOLTerminalRuleCall_5_0_0()); 
@@ -2733,10 +2733,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:845:6: ( RULE_STRING )
+                    // InternalRails.g:833:6: ( RULE_STRING )
                     {
-                    // InternalRails.g:845:6: ( RULE_STRING )
-                    // InternalRails.g:846:1: RULE_STRING
+                    // InternalRails.g:833:6: ( RULE_STRING )
+                    // InternalRails.g:834:1: RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getValueSTRINGTerminalRuleCall_5_0_1()); 
@@ -2752,10 +2752,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:851:6: ( RULE_BRACKET_BLOCK )
+                    // InternalRails.g:839:6: ( RULE_BRACKET_BLOCK )
                     {
-                    // InternalRails.g:851:6: ( RULE_BRACKET_BLOCK )
-                    // InternalRails.g:852:1: RULE_BRACKET_BLOCK
+                    // InternalRails.g:839:6: ( RULE_BRACKET_BLOCK )
+                    // InternalRails.g:840:1: RULE_BRACKET_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getValueBRACKET_BLOCKTerminalRuleCall_5_0_2()); 
@@ -2771,10 +2771,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:857:6: ( RULE_ARRAY_BLOCK )
+                    // InternalRails.g:845:6: ( RULE_ARRAY_BLOCK )
                     {
-                    // InternalRails.g:857:6: ( RULE_ARRAY_BLOCK )
-                    // InternalRails.g:858:1: RULE_ARRAY_BLOCK
+                    // InternalRails.g:845:6: ( RULE_ARRAY_BLOCK )
+                    // InternalRails.g:846:1: RULE_ARRAY_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getValueARRAY_BLOCKTerminalRuleCall_5_0_3()); 
@@ -2790,10 +2790,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:863:6: ( RULE_DECIMAL )
+                    // InternalRails.g:851:6: ( RULE_DECIMAL )
                     {
-                    // InternalRails.g:863:6: ( RULE_DECIMAL )
-                    // InternalRails.g:864:1: RULE_DECIMAL
+                    // InternalRails.g:851:6: ( RULE_DECIMAL )
+                    // InternalRails.g:852:1: RULE_DECIMAL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getValueDECIMALTerminalRuleCall_5_0_4()); 
@@ -2809,10 +2809,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:869:6: ( RULE_INT )
+                    // InternalRails.g:857:6: ( RULE_INT )
                     {
-                    // InternalRails.g:869:6: ( RULE_INT )
-                    // InternalRails.g:870:1: RULE_INT
+                    // InternalRails.g:857:6: ( RULE_INT )
+                    // InternalRails.g:858:1: RULE_INT
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getValueINTTerminalRuleCall_5_0_5()); 
@@ -2828,10 +2828,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:875:6: ( RULE_INT_METHOD )
+                    // InternalRails.g:863:6: ( RULE_INT_METHOD )
                     {
-                    // InternalRails.g:875:6: ( RULE_INT_METHOD )
-                    // InternalRails.g:876:1: RULE_INT_METHOD
+                    // InternalRails.g:863:6: ( RULE_INT_METHOD )
+                    // InternalRails.g:864:1: RULE_INT_METHOD
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getValueINT_METHODTerminalRuleCall_5_0_6()); 
@@ -2847,10 +2847,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // InternalRails.g:881:6: ( ruleMethodChainCall )
+                    // InternalRails.g:869:6: ( ruleMethodChainCall )
                     {
-                    // InternalRails.g:881:6: ( ruleMethodChainCall )
-                    // InternalRails.g:882:1: ruleMethodChainCall
+                    // InternalRails.g:869:6: ( ruleMethodChainCall )
+                    // InternalRails.g:870:1: ruleMethodChainCall
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHashKeyValueAccess().getValueMethodChainCallParserRuleCall_5_0_7()); 
@@ -2887,13 +2887,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Alternatives_1"
-    // InternalRails.g:892:1: rule__IgnoredHashKeyValue__Alternatives_1 : ( ( ( rule__IgnoredHashKeyValue__Group_1_0__0 ) ) | ( ( rule__IgnoredHashKeyValue__Group_1_1__0 ) ) );
+    // InternalRails.g:880:1: rule__IgnoredHashKeyValue__Alternatives_1 : ( ( ( rule__IgnoredHashKeyValue__Group_1_0__0 ) ) | ( ( rule__IgnoredHashKeyValue__Group_1_1__0 ) ) );
     public final void rule__IgnoredHashKeyValue__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:896:1: ( ( ( rule__IgnoredHashKeyValue__Group_1_0__0 ) ) | ( ( rule__IgnoredHashKeyValue__Group_1_1__0 ) ) )
+            // InternalRails.g:884:1: ( ( ( rule__IgnoredHashKeyValue__Group_1_0__0 ) ) | ( ( rule__IgnoredHashKeyValue__Group_1_1__0 ) ) )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -2912,16 +2912,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalRails.g:897:1: ( ( rule__IgnoredHashKeyValue__Group_1_0__0 ) )
+                    // InternalRails.g:885:1: ( ( rule__IgnoredHashKeyValue__Group_1_0__0 ) )
                     {
-                    // InternalRails.g:897:1: ( ( rule__IgnoredHashKeyValue__Group_1_0__0 ) )
-                    // InternalRails.g:898:1: ( rule__IgnoredHashKeyValue__Group_1_0__0 )
+                    // InternalRails.g:885:1: ( ( rule__IgnoredHashKeyValue__Group_1_0__0 ) )
+                    // InternalRails.g:886:1: ( rule__IgnoredHashKeyValue__Group_1_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getGroup_1_0()); 
                     }
-                    // InternalRails.g:899:1: ( rule__IgnoredHashKeyValue__Group_1_0__0 )
-                    // InternalRails.g:899:2: rule__IgnoredHashKeyValue__Group_1_0__0
+                    // InternalRails.g:887:1: ( rule__IgnoredHashKeyValue__Group_1_0__0 )
+                    // InternalRails.g:887:2: rule__IgnoredHashKeyValue__Group_1_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__IgnoredHashKeyValue__Group_1_0__0();
@@ -2941,16 +2941,16 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:903:6: ( ( rule__IgnoredHashKeyValue__Group_1_1__0 ) )
+                    // InternalRails.g:891:6: ( ( rule__IgnoredHashKeyValue__Group_1_1__0 ) )
                     {
-                    // InternalRails.g:903:6: ( ( rule__IgnoredHashKeyValue__Group_1_1__0 ) )
-                    // InternalRails.g:904:1: ( rule__IgnoredHashKeyValue__Group_1_1__0 )
+                    // InternalRails.g:891:6: ( ( rule__IgnoredHashKeyValue__Group_1_1__0 ) )
+                    // InternalRails.g:892:1: ( rule__IgnoredHashKeyValue__Group_1_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getGroup_1_1()); 
                     }
-                    // InternalRails.g:905:1: ( rule__IgnoredHashKeyValue__Group_1_1__0 )
-                    // InternalRails.g:905:2: rule__IgnoredHashKeyValue__Group_1_1__0
+                    // InternalRails.g:893:1: ( rule__IgnoredHashKeyValue__Group_1_1__0 )
+                    // InternalRails.g:893:2: rule__IgnoredHashKeyValue__Group_1_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__IgnoredHashKeyValue__Group_1_1__0();
@@ -2987,13 +2987,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Alternatives_1_1_0"
-    // InternalRails.g:914:1: rule__IgnoredHashKeyValue__Alternatives_1_1_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
+    // InternalRails.g:902:1: rule__IgnoredHashKeyValue__Alternatives_1_1_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) );
     public final void rule__IgnoredHashKeyValue__Alternatives_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:918:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
+            // InternalRails.g:906:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -3012,10 +3012,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt13) {
                 case 1 :
-                    // InternalRails.g:919:1: ( RULE_SYMBOL )
+                    // InternalRails.g:907:1: ( RULE_SYMBOL )
                     {
-                    // InternalRails.g:919:1: ( RULE_SYMBOL )
-                    // InternalRails.g:920:1: RULE_SYMBOL
+                    // InternalRails.g:907:1: ( RULE_SYMBOL )
+                    // InternalRails.g:908:1: RULE_SYMBOL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getSYMBOLTerminalRuleCall_1_1_0_0()); 
@@ -3031,10 +3031,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:925:6: ( RULE_STRING )
+                    // InternalRails.g:913:6: ( RULE_STRING )
                     {
-                    // InternalRails.g:925:6: ( RULE_STRING )
-                    // InternalRails.g:926:1: RULE_STRING
+                    // InternalRails.g:913:6: ( RULE_STRING )
+                    // InternalRails.g:914:1: RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getSTRINGTerminalRuleCall_1_1_0_1()); 
@@ -3067,21 +3067,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Alternatives_3"
-    // InternalRails.g:936:1: rule__IgnoredHashKeyValue__Alternatives_3 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) );
+    // InternalRails.g:924:1: rule__IgnoredHashKeyValue__Alternatives_3 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) );
     public final void rule__IgnoredHashKeyValue__Alternatives_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:940:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) )
+            // InternalRails.g:928:1: ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) )
             int alt14=9;
             alt14 = dfa14.predict(input);
             switch (alt14) {
                 case 1 :
-                    // InternalRails.g:941:1: ( RULE_SYMBOL )
+                    // InternalRails.g:929:1: ( RULE_SYMBOL )
                     {
-                    // InternalRails.g:941:1: ( RULE_SYMBOL )
-                    // InternalRails.g:942:1: RULE_SYMBOL
+                    // InternalRails.g:929:1: ( RULE_SYMBOL )
+                    // InternalRails.g:930:1: RULE_SYMBOL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getSYMBOLTerminalRuleCall_3_0()); 
@@ -3097,10 +3097,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:947:6: ( RULE_STRING )
+                    // InternalRails.g:935:6: ( RULE_STRING )
                     {
-                    // InternalRails.g:947:6: ( RULE_STRING )
-                    // InternalRails.g:948:1: RULE_STRING
+                    // InternalRails.g:935:6: ( RULE_STRING )
+                    // InternalRails.g:936:1: RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getSTRINGTerminalRuleCall_3_1()); 
@@ -3116,10 +3116,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:953:6: ( RULE_BRACKET_BLOCK )
+                    // InternalRails.g:941:6: ( RULE_BRACKET_BLOCK )
                     {
-                    // InternalRails.g:953:6: ( RULE_BRACKET_BLOCK )
-                    // InternalRails.g:954:1: RULE_BRACKET_BLOCK
+                    // InternalRails.g:941:6: ( RULE_BRACKET_BLOCK )
+                    // InternalRails.g:942:1: RULE_BRACKET_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getBRACKET_BLOCKTerminalRuleCall_3_2()); 
@@ -3135,10 +3135,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:959:6: ( RULE_ARRAY_BLOCK )
+                    // InternalRails.g:947:6: ( RULE_ARRAY_BLOCK )
                     {
-                    // InternalRails.g:959:6: ( RULE_ARRAY_BLOCK )
-                    // InternalRails.g:960:1: RULE_ARRAY_BLOCK
+                    // InternalRails.g:947:6: ( RULE_ARRAY_BLOCK )
+                    // InternalRails.g:948:1: RULE_ARRAY_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getARRAY_BLOCKTerminalRuleCall_3_3()); 
@@ -3154,10 +3154,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:965:6: ( RULE_DECIMAL )
+                    // InternalRails.g:953:6: ( RULE_DECIMAL )
                     {
-                    // InternalRails.g:965:6: ( RULE_DECIMAL )
-                    // InternalRails.g:966:1: RULE_DECIMAL
+                    // InternalRails.g:953:6: ( RULE_DECIMAL )
+                    // InternalRails.g:954:1: RULE_DECIMAL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getDECIMALTerminalRuleCall_3_4()); 
@@ -3173,10 +3173,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:971:6: ( RULE_INT )
+                    // InternalRails.g:959:6: ( RULE_INT )
                     {
-                    // InternalRails.g:971:6: ( RULE_INT )
-                    // InternalRails.g:972:1: RULE_INT
+                    // InternalRails.g:959:6: ( RULE_INT )
+                    // InternalRails.g:960:1: RULE_INT
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getINTTerminalRuleCall_3_5()); 
@@ -3192,10 +3192,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:977:6: ( RULE_INT_METHOD )
+                    // InternalRails.g:965:6: ( RULE_INT_METHOD )
                     {
-                    // InternalRails.g:977:6: ( RULE_INT_METHOD )
-                    // InternalRails.g:978:1: RULE_INT_METHOD
+                    // InternalRails.g:965:6: ( RULE_INT_METHOD )
+                    // InternalRails.g:966:1: RULE_INT_METHOD
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getINT_METHODTerminalRuleCall_3_6()); 
@@ -3211,10 +3211,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // InternalRails.g:983:6: ( ruleMethodChainCall )
+                    // InternalRails.g:971:6: ( ruleMethodChainCall )
                     {
-                    // InternalRails.g:983:6: ( ruleMethodChainCall )
-                    // InternalRails.g:984:1: ruleMethodChainCall
+                    // InternalRails.g:971:6: ( ruleMethodChainCall )
+                    // InternalRails.g:972:1: ruleMethodChainCall
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getMethodChainCallParserRuleCall_3_7()); 
@@ -3234,10 +3234,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 9 :
-                    // InternalRails.g:989:6: ( RULE_REGEXP )
+                    // InternalRails.g:977:6: ( RULE_REGEXP )
                     {
-                    // InternalRails.g:989:6: ( RULE_REGEXP )
-                    // InternalRails.g:990:1: RULE_REGEXP
+                    // InternalRails.g:977:6: ( RULE_REGEXP )
+                    // InternalRails.g:978:1: RULE_REGEXP
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIgnoredHashKeyValueAccess().getREGEXPTerminalRuleCall_3_8()); 
@@ -3270,13 +3270,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Alternatives_2"
-    // InternalRails.g:1000:1: rule__MethodName__Alternatives_2 : ( ( '?' ) | ( '=' ) );
+    // InternalRails.g:988:1: rule__MethodName__Alternatives_2 : ( ( '?' ) | ( '=' ) );
     public final void rule__MethodName__Alternatives_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1004:1: ( ( '?' ) | ( '=' ) )
+            // InternalRails.g:992:1: ( ( '?' ) | ( '=' ) )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -3295,10 +3295,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt15) {
                 case 1 :
-                    // InternalRails.g:1005:1: ( '?' )
+                    // InternalRails.g:993:1: ( '?' )
                     {
-                    // InternalRails.g:1005:1: ( '?' )
-                    // InternalRails.g:1006:1: '?'
+                    // InternalRails.g:993:1: ( '?' )
+                    // InternalRails.g:994:1: '?'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodNameAccess().getQuestionMarkKeyword_2_0()); 
@@ -3314,10 +3314,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:1013:6: ( '=' )
+                    // InternalRails.g:1001:6: ( '=' )
                     {
-                    // InternalRails.g:1013:6: ( '=' )
-                    // InternalRails.g:1014:1: '='
+                    // InternalRails.g:1001:6: ( '=' )
+                    // InternalRails.g:1002:1: '='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMethodNameAccess().getEqualsSignKeyword_2_1()); 
@@ -3350,13 +3350,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__OperantsAlternatives_1_1_0"
-    // InternalRails.g:1026:1: rule__OperationsChain__OperantsAlternatives_1_1_0 : ( ( RULE_BRACKET_BLOCK ) | ( RULE_DECIMAL ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) );
+    // InternalRails.g:1014:1: rule__OperationsChain__OperantsAlternatives_1_1_0 : ( ( RULE_BRACKET_BLOCK ) | ( RULE_DECIMAL ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) );
     public final void rule__OperationsChain__OperantsAlternatives_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1030:1: ( ( RULE_BRACKET_BLOCK ) | ( RULE_DECIMAL ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) )
+            // InternalRails.g:1018:1: ( ( RULE_BRACKET_BLOCK ) | ( RULE_DECIMAL ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) )
             int alt16=4;
             switch ( input.LA(1) ) {
             case RULE_BRACKET_BLOCK:
@@ -3395,10 +3395,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
             switch (alt16) {
                 case 1 :
-                    // InternalRails.g:1031:1: ( RULE_BRACKET_BLOCK )
+                    // InternalRails.g:1019:1: ( RULE_BRACKET_BLOCK )
                     {
-                    // InternalRails.g:1031:1: ( RULE_BRACKET_BLOCK )
-                    // InternalRails.g:1032:1: RULE_BRACKET_BLOCK
+                    // InternalRails.g:1019:1: ( RULE_BRACKET_BLOCK )
+                    // InternalRails.g:1020:1: RULE_BRACKET_BLOCK
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsChainAccess().getOperantsBRACKET_BLOCKTerminalRuleCall_1_1_0_0()); 
@@ -3414,10 +3414,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:1037:6: ( RULE_DECIMAL )
+                    // InternalRails.g:1025:6: ( RULE_DECIMAL )
                     {
-                    // InternalRails.g:1037:6: ( RULE_DECIMAL )
-                    // InternalRails.g:1038:1: RULE_DECIMAL
+                    // InternalRails.g:1025:6: ( RULE_DECIMAL )
+                    // InternalRails.g:1026:1: RULE_DECIMAL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsChainAccess().getOperantsDECIMALTerminalRuleCall_1_1_0_1()); 
@@ -3433,10 +3433,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:1043:6: ( ruleMethodChainCall )
+                    // InternalRails.g:1031:6: ( ruleMethodChainCall )
                     {
-                    // InternalRails.g:1043:6: ( ruleMethodChainCall )
-                    // InternalRails.g:1044:1: ruleMethodChainCall
+                    // InternalRails.g:1031:6: ( ruleMethodChainCall )
+                    // InternalRails.g:1032:1: ruleMethodChainCall
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsChainAccess().getOperantsMethodChainCallParserRuleCall_1_1_0_2()); 
@@ -3456,10 +3456,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:1049:6: ( RULE_REGEXP )
+                    // InternalRails.g:1037:6: ( RULE_REGEXP )
                     {
-                    // InternalRails.g:1049:6: ( RULE_REGEXP )
-                    // InternalRails.g:1050:1: RULE_REGEXP
+                    // InternalRails.g:1037:6: ( RULE_REGEXP )
+                    // InternalRails.g:1038:1: RULE_REGEXP
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsChainAccess().getOperantsREGEXPTerminalRuleCall_1_1_0_3()); 
@@ -3492,13 +3492,13 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperatorRule__Alternatives_0"
-    // InternalRails.g:1060:1: rule__OperatorRule__Alternatives_0 : ( ( ': ' ) | ( '?' ) | ( '<=' ) | ( '<' ) | ( '+' ) | ( '-' ) | ( '*' ) | ( '/' ) | ( '%' ) | ( '**' ) | ( '=' ) | ( '~' ) | ( '|' ) | ( '||' ) | ( '&' ) | ( '&&' ) | ( '==' ) | ( '!' ) | ( '<<' ) | ( '<=>' ) | ( '>' ) | ( '..' ) | ( '...' ) );
+    // InternalRails.g:1048:1: rule__OperatorRule__Alternatives_0 : ( ( ': ' ) | ( '?' ) | ( '<=' ) | ( '<' ) | ( '+' ) | ( '-' ) | ( '*' ) | ( '/' ) | ( '%' ) | ( '**' ) | ( '=' ) | ( '~' ) | ( '|' ) | ( '||' ) | ( '&' ) | ( '&&' ) | ( '==' ) | ( '!' ) | ( '<<' ) | ( '<=>' ) | ( '>' ) | ( '..' ) | ( '...' ) );
     public final void rule__OperatorRule__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1064:1: ( ( ': ' ) | ( '?' ) | ( '<=' ) | ( '<' ) | ( '+' ) | ( '-' ) | ( '*' ) | ( '/' ) | ( '%' ) | ( '**' ) | ( '=' ) | ( '~' ) | ( '|' ) | ( '||' ) | ( '&' ) | ( '&&' ) | ( '==' ) | ( '!' ) | ( '<<' ) | ( '<=>' ) | ( '>' ) | ( '..' ) | ( '...' ) )
+            // InternalRails.g:1052:1: ( ( ': ' ) | ( '?' ) | ( '<=' ) | ( '<' ) | ( '+' ) | ( '-' ) | ( '*' ) | ( '/' ) | ( '%' ) | ( '**' ) | ( '=' ) | ( '~' ) | ( '|' ) | ( '||' ) | ( '&' ) | ( '&&' ) | ( '==' ) | ( '!' ) | ( '<<' ) | ( '<=>' ) | ( '>' ) | ( '..' ) | ( '...' ) )
             int alt17=23;
             switch ( input.LA(1) ) {
             case 45:
@@ -3626,10 +3626,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
             switch (alt17) {
                 case 1 :
-                    // InternalRails.g:1065:1: ( ': ' )
+                    // InternalRails.g:1053:1: ( ': ' )
                     {
-                    // InternalRails.g:1065:1: ( ': ' )
-                    // InternalRails.g:1066:1: ': '
+                    // InternalRails.g:1053:1: ( ': ' )
+                    // InternalRails.g:1054:1: ': '
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getColonSpaceKeyword_0_0()); 
@@ -3645,10 +3645,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:1073:6: ( '?' )
+                    // InternalRails.g:1061:6: ( '?' )
                     {
-                    // InternalRails.g:1073:6: ( '?' )
-                    // InternalRails.g:1074:1: '?'
+                    // InternalRails.g:1061:6: ( '?' )
+                    // InternalRails.g:1062:1: '?'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getQuestionMarkKeyword_0_1()); 
@@ -3664,10 +3664,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:1081:6: ( '<=' )
+                    // InternalRails.g:1069:6: ( '<=' )
                     {
-                    // InternalRails.g:1081:6: ( '<=' )
-                    // InternalRails.g:1082:1: '<='
+                    // InternalRails.g:1069:6: ( '<=' )
+                    // InternalRails.g:1070:1: '<='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getLessThanSignEqualsSignKeyword_0_2()); 
@@ -3683,10 +3683,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:1089:6: ( '<' )
+                    // InternalRails.g:1077:6: ( '<' )
                     {
-                    // InternalRails.g:1089:6: ( '<' )
-                    // InternalRails.g:1090:1: '<'
+                    // InternalRails.g:1077:6: ( '<' )
+                    // InternalRails.g:1078:1: '<'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getLessThanSignKeyword_0_3()); 
@@ -3702,10 +3702,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:1097:6: ( '+' )
+                    // InternalRails.g:1085:6: ( '+' )
                     {
-                    // InternalRails.g:1097:6: ( '+' )
-                    // InternalRails.g:1098:1: '+'
+                    // InternalRails.g:1085:6: ( '+' )
+                    // InternalRails.g:1086:1: '+'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getPlusSignKeyword_0_4()); 
@@ -3721,10 +3721,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:1105:6: ( '-' )
+                    // InternalRails.g:1093:6: ( '-' )
                     {
-                    // InternalRails.g:1105:6: ( '-' )
-                    // InternalRails.g:1106:1: '-'
+                    // InternalRails.g:1093:6: ( '-' )
+                    // InternalRails.g:1094:1: '-'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getHyphenMinusKeyword_0_5()); 
@@ -3740,10 +3740,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:1113:6: ( '*' )
+                    // InternalRails.g:1101:6: ( '*' )
                     {
-                    // InternalRails.g:1113:6: ( '*' )
-                    // InternalRails.g:1114:1: '*'
+                    // InternalRails.g:1101:6: ( '*' )
+                    // InternalRails.g:1102:1: '*'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getAsteriskKeyword_0_6()); 
@@ -3759,10 +3759,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // InternalRails.g:1121:6: ( '/' )
+                    // InternalRails.g:1109:6: ( '/' )
                     {
-                    // InternalRails.g:1121:6: ( '/' )
-                    // InternalRails.g:1122:1: '/'
+                    // InternalRails.g:1109:6: ( '/' )
+                    // InternalRails.g:1110:1: '/'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getSolidusKeyword_0_7()); 
@@ -3778,10 +3778,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 9 :
-                    // InternalRails.g:1129:6: ( '%' )
+                    // InternalRails.g:1117:6: ( '%' )
                     {
-                    // InternalRails.g:1129:6: ( '%' )
-                    // InternalRails.g:1130:1: '%'
+                    // InternalRails.g:1117:6: ( '%' )
+                    // InternalRails.g:1118:1: '%'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getPercentSignKeyword_0_8()); 
@@ -3797,10 +3797,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 10 :
-                    // InternalRails.g:1137:6: ( '**' )
+                    // InternalRails.g:1125:6: ( '**' )
                     {
-                    // InternalRails.g:1137:6: ( '**' )
-                    // InternalRails.g:1138:1: '**'
+                    // InternalRails.g:1125:6: ( '**' )
+                    // InternalRails.g:1126:1: '**'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getAsteriskAsteriskKeyword_0_9()); 
@@ -3816,10 +3816,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 11 :
-                    // InternalRails.g:1145:6: ( '=' )
+                    // InternalRails.g:1133:6: ( '=' )
                     {
-                    // InternalRails.g:1145:6: ( '=' )
-                    // InternalRails.g:1146:1: '='
+                    // InternalRails.g:1133:6: ( '=' )
+                    // InternalRails.g:1134:1: '='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getEqualsSignKeyword_0_10()); 
@@ -3835,10 +3835,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 12 :
-                    // InternalRails.g:1153:6: ( '~' )
+                    // InternalRails.g:1141:6: ( '~' )
                     {
-                    // InternalRails.g:1153:6: ( '~' )
-                    // InternalRails.g:1154:1: '~'
+                    // InternalRails.g:1141:6: ( '~' )
+                    // InternalRails.g:1142:1: '~'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getTildeKeyword_0_11()); 
@@ -3854,10 +3854,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 13 :
-                    // InternalRails.g:1161:6: ( '|' )
+                    // InternalRails.g:1149:6: ( '|' )
                     {
-                    // InternalRails.g:1161:6: ( '|' )
-                    // InternalRails.g:1162:1: '|'
+                    // InternalRails.g:1149:6: ( '|' )
+                    // InternalRails.g:1150:1: '|'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getVerticalLineKeyword_0_12()); 
@@ -3873,10 +3873,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 14 :
-                    // InternalRails.g:1169:6: ( '||' )
+                    // InternalRails.g:1157:6: ( '||' )
                     {
-                    // InternalRails.g:1169:6: ( '||' )
-                    // InternalRails.g:1170:1: '||'
+                    // InternalRails.g:1157:6: ( '||' )
+                    // InternalRails.g:1158:1: '||'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getVerticalLineVerticalLineKeyword_0_13()); 
@@ -3892,10 +3892,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 15 :
-                    // InternalRails.g:1177:6: ( '&' )
+                    // InternalRails.g:1165:6: ( '&' )
                     {
-                    // InternalRails.g:1177:6: ( '&' )
-                    // InternalRails.g:1178:1: '&'
+                    // InternalRails.g:1165:6: ( '&' )
+                    // InternalRails.g:1166:1: '&'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getAmpersandKeyword_0_14()); 
@@ -3911,10 +3911,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 16 :
-                    // InternalRails.g:1185:6: ( '&&' )
+                    // InternalRails.g:1173:6: ( '&&' )
                     {
-                    // InternalRails.g:1185:6: ( '&&' )
-                    // InternalRails.g:1186:1: '&&'
+                    // InternalRails.g:1173:6: ( '&&' )
+                    // InternalRails.g:1174:1: '&&'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getAmpersandAmpersandKeyword_0_15()); 
@@ -3930,10 +3930,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 17 :
-                    // InternalRails.g:1193:6: ( '==' )
+                    // InternalRails.g:1181:6: ( '==' )
                     {
-                    // InternalRails.g:1193:6: ( '==' )
-                    // InternalRails.g:1194:1: '=='
+                    // InternalRails.g:1181:6: ( '==' )
+                    // InternalRails.g:1182:1: '=='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getEqualsSignEqualsSignKeyword_0_16()); 
@@ -3949,10 +3949,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 18 :
-                    // InternalRails.g:1201:6: ( '!' )
+                    // InternalRails.g:1189:6: ( '!' )
                     {
-                    // InternalRails.g:1201:6: ( '!' )
-                    // InternalRails.g:1202:1: '!'
+                    // InternalRails.g:1189:6: ( '!' )
+                    // InternalRails.g:1190:1: '!'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getExclamationMarkKeyword_0_17()); 
@@ -3968,10 +3968,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 19 :
-                    // InternalRails.g:1209:6: ( '<<' )
+                    // InternalRails.g:1197:6: ( '<<' )
                     {
-                    // InternalRails.g:1209:6: ( '<<' )
-                    // InternalRails.g:1210:1: '<<'
+                    // InternalRails.g:1197:6: ( '<<' )
+                    // InternalRails.g:1198:1: '<<'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getLessThanSignLessThanSignKeyword_0_18()); 
@@ -3987,10 +3987,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 20 :
-                    // InternalRails.g:1217:6: ( '<=>' )
+                    // InternalRails.g:1205:6: ( '<=>' )
                     {
-                    // InternalRails.g:1217:6: ( '<=>' )
-                    // InternalRails.g:1218:1: '<=>'
+                    // InternalRails.g:1205:6: ( '<=>' )
+                    // InternalRails.g:1206:1: '<=>'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getLessThanSignEqualsSignGreaterThanSignKeyword_0_19()); 
@@ -4006,10 +4006,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 21 :
-                    // InternalRails.g:1225:6: ( '>' )
+                    // InternalRails.g:1213:6: ( '>' )
                     {
-                    // InternalRails.g:1225:6: ( '>' )
-                    // InternalRails.g:1226:1: '>'
+                    // InternalRails.g:1213:6: ( '>' )
+                    // InternalRails.g:1214:1: '>'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getGreaterThanSignKeyword_0_20()); 
@@ -4025,10 +4025,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 22 :
-                    // InternalRails.g:1233:6: ( '..' )
+                    // InternalRails.g:1221:6: ( '..' )
                     {
-                    // InternalRails.g:1233:6: ( '..' )
-                    // InternalRails.g:1234:1: '..'
+                    // InternalRails.g:1221:6: ( '..' )
+                    // InternalRails.g:1222:1: '..'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getFullStopFullStopKeyword_0_21()); 
@@ -4044,10 +4044,10 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 23 :
-                    // InternalRails.g:1241:6: ( '...' )
+                    // InternalRails.g:1229:6: ( '...' )
                     {
-                    // InternalRails.g:1241:6: ( '...' )
-                    // InternalRails.g:1242:1: '...'
+                    // InternalRails.g:1229:6: ( '...' )
+                    // InternalRails.g:1230:1: '...'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorRuleAccess().getFullStopFullStopFullStopKeyword_0_22()); 
@@ -4080,14 +4080,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__0"
-    // InternalRails.g:1256:1: rule__Class__Group__0 : rule__Class__Group__0__Impl rule__Class__Group__1 ;
+    // InternalRails.g:1244:1: rule__Class__Group__0 : rule__Class__Group__0__Impl rule__Class__Group__1 ;
     public final void rule__Class__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1260:1: ( rule__Class__Group__0__Impl rule__Class__Group__1 )
-            // InternalRails.g:1261:2: rule__Class__Group__0__Impl rule__Class__Group__1
+            // InternalRails.g:1248:1: ( rule__Class__Group__0__Impl rule__Class__Group__1 )
+            // InternalRails.g:1249:2: rule__Class__Group__0__Impl rule__Class__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Class__Group__0__Impl();
@@ -4118,17 +4118,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__0__Impl"
-    // InternalRails.g:1268:1: rule__Class__Group__0__Impl : ( RULE_CLASS_WORD ) ;
+    // InternalRails.g:1256:1: rule__Class__Group__0__Impl : ( RULE_CLASS_WORD ) ;
     public final void rule__Class__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1272:1: ( ( RULE_CLASS_WORD ) )
-            // InternalRails.g:1273:1: ( RULE_CLASS_WORD )
+            // InternalRails.g:1260:1: ( ( RULE_CLASS_WORD ) )
+            // InternalRails.g:1261:1: ( RULE_CLASS_WORD )
             {
-            // InternalRails.g:1273:1: ( RULE_CLASS_WORD )
-            // InternalRails.g:1274:1: RULE_CLASS_WORD
+            // InternalRails.g:1261:1: ( RULE_CLASS_WORD )
+            // InternalRails.g:1262:1: RULE_CLASS_WORD
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getCLASS_WORDTerminalRuleCall_0()); 
@@ -4159,14 +4159,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__1"
-    // InternalRails.g:1285:1: rule__Class__Group__1 : rule__Class__Group__1__Impl rule__Class__Group__2 ;
+    // InternalRails.g:1273:1: rule__Class__Group__1 : rule__Class__Group__1__Impl rule__Class__Group__2 ;
     public final void rule__Class__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1289:1: ( rule__Class__Group__1__Impl rule__Class__Group__2 )
-            // InternalRails.g:1290:2: rule__Class__Group__1__Impl rule__Class__Group__2
+            // InternalRails.g:1277:1: ( rule__Class__Group__1__Impl rule__Class__Group__2 )
+            // InternalRails.g:1278:2: rule__Class__Group__1__Impl rule__Class__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__Class__Group__1__Impl();
@@ -4197,22 +4197,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__1__Impl"
-    // InternalRails.g:1297:1: rule__Class__Group__1__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:1285:1: rule__Class__Group__1__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__Class__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1301:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:1302:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1289:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:1290:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:1302:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:1303:1: ( RULE_SPACE )*
+            // InternalRails.g:1290:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1291:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getSPACETerminalRuleCall_1()); 
             }
-            // InternalRails.g:1304:1: ( RULE_SPACE )*
+            // InternalRails.g:1292:1: ( RULE_SPACE )*
             loop18:
             do {
                 int alt18=2;
@@ -4225,7 +4225,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt18) {
             	case 1 :
-            	    // InternalRails.g:1304:3: RULE_SPACE
+            	    // InternalRails.g:1292:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -4262,14 +4262,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__2"
-    // InternalRails.g:1314:1: rule__Class__Group__2 : rule__Class__Group__2__Impl rule__Class__Group__3 ;
+    // InternalRails.g:1302:1: rule__Class__Group__2 : rule__Class__Group__2__Impl rule__Class__Group__3 ;
     public final void rule__Class__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1318:1: ( rule__Class__Group__2__Impl rule__Class__Group__3 )
-            // InternalRails.g:1319:2: rule__Class__Group__2__Impl rule__Class__Group__3
+            // InternalRails.g:1306:1: ( rule__Class__Group__2__Impl rule__Class__Group__3 )
+            // InternalRails.g:1307:2: rule__Class__Group__2__Impl rule__Class__Group__3
             {
             pushFollow(FOLLOW_5);
             rule__Class__Group__2__Impl();
@@ -4300,23 +4300,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__2__Impl"
-    // InternalRails.g:1326:1: rule__Class__Group__2__Impl : ( ( rule__Class__NameAssignment_2 ) ) ;
+    // InternalRails.g:1314:1: rule__Class__Group__2__Impl : ( ( rule__Class__NameAssignment_2 ) ) ;
     public final void rule__Class__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1330:1: ( ( ( rule__Class__NameAssignment_2 ) ) )
-            // InternalRails.g:1331:1: ( ( rule__Class__NameAssignment_2 ) )
+            // InternalRails.g:1318:1: ( ( ( rule__Class__NameAssignment_2 ) ) )
+            // InternalRails.g:1319:1: ( ( rule__Class__NameAssignment_2 ) )
             {
-            // InternalRails.g:1331:1: ( ( rule__Class__NameAssignment_2 ) )
-            // InternalRails.g:1332:1: ( rule__Class__NameAssignment_2 )
+            // InternalRails.g:1319:1: ( ( rule__Class__NameAssignment_2 ) )
+            // InternalRails.g:1320:1: ( rule__Class__NameAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getNameAssignment_2()); 
             }
-            // InternalRails.g:1333:1: ( rule__Class__NameAssignment_2 )
-            // InternalRails.g:1333:2: rule__Class__NameAssignment_2
+            // InternalRails.g:1321:1: ( rule__Class__NameAssignment_2 )
+            // InternalRails.g:1321:2: rule__Class__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Class__NameAssignment_2();
@@ -4351,14 +4351,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__3"
-    // InternalRails.g:1343:1: rule__Class__Group__3 : rule__Class__Group__3__Impl rule__Class__Group__4 ;
+    // InternalRails.g:1331:1: rule__Class__Group__3 : rule__Class__Group__3__Impl rule__Class__Group__4 ;
     public final void rule__Class__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1347:1: ( rule__Class__Group__3__Impl rule__Class__Group__4 )
-            // InternalRails.g:1348:2: rule__Class__Group__3__Impl rule__Class__Group__4
+            // InternalRails.g:1335:1: ( rule__Class__Group__3__Impl rule__Class__Group__4 )
+            // InternalRails.g:1336:2: rule__Class__Group__3__Impl rule__Class__Group__4
             {
             pushFollow(FOLLOW_5);
             rule__Class__Group__3__Impl();
@@ -4389,27 +4389,27 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__3__Impl"
-    // InternalRails.g:1355:1: rule__Class__Group__3__Impl : ( ( rule__Class__Group_3__0 )? ) ;
+    // InternalRails.g:1343:1: rule__Class__Group__3__Impl : ( ( rule__Class__Group_3__0 )? ) ;
     public final void rule__Class__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1359:1: ( ( ( rule__Class__Group_3__0 )? ) )
-            // InternalRails.g:1360:1: ( ( rule__Class__Group_3__0 )? )
+            // InternalRails.g:1347:1: ( ( ( rule__Class__Group_3__0 )? ) )
+            // InternalRails.g:1348:1: ( ( rule__Class__Group_3__0 )? )
             {
-            // InternalRails.g:1360:1: ( ( rule__Class__Group_3__0 )? )
-            // InternalRails.g:1361:1: ( rule__Class__Group_3__0 )?
+            // InternalRails.g:1348:1: ( ( rule__Class__Group_3__0 )? )
+            // InternalRails.g:1349:1: ( rule__Class__Group_3__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getGroup_3()); 
             }
-            // InternalRails.g:1362:1: ( rule__Class__Group_3__0 )?
+            // InternalRails.g:1350:1: ( rule__Class__Group_3__0 )?
             int alt19=2;
             alt19 = dfa19.predict(input);
             switch (alt19) {
                 case 1 :
-                    // InternalRails.g:1362:2: rule__Class__Group_3__0
+                    // InternalRails.g:1350:2: rule__Class__Group_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Class__Group_3__0();
@@ -4447,14 +4447,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__4"
-    // InternalRails.g:1372:1: rule__Class__Group__4 : rule__Class__Group__4__Impl rule__Class__Group__5 ;
+    // InternalRails.g:1360:1: rule__Class__Group__4 : rule__Class__Group__4__Impl rule__Class__Group__5 ;
     public final void rule__Class__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1376:1: ( rule__Class__Group__4__Impl rule__Class__Group__5 )
-            // InternalRails.g:1377:2: rule__Class__Group__4__Impl rule__Class__Group__5
+            // InternalRails.g:1364:1: ( rule__Class__Group__4__Impl rule__Class__Group__5 )
+            // InternalRails.g:1365:2: rule__Class__Group__4__Impl rule__Class__Group__5
             {
             pushFollow(FOLLOW_5);
             rule__Class__Group__4__Impl();
@@ -4485,22 +4485,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__4__Impl"
-    // InternalRails.g:1384:1: rule__Class__Group__4__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:1372:1: rule__Class__Group__4__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__Class__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1388:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:1389:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1376:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:1377:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:1389:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:1390:1: ( RULE_SPACE )*
+            // InternalRails.g:1377:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1378:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getSPACETerminalRuleCall_4()); 
             }
-            // InternalRails.g:1391:1: ( RULE_SPACE )*
+            // InternalRails.g:1379:1: ( RULE_SPACE )*
             loop20:
             do {
                 int alt20=2;
@@ -4513,7 +4513,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt20) {
             	case 1 :
-            	    // InternalRails.g:1391:3: RULE_SPACE
+            	    // InternalRails.g:1379:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -4550,14 +4550,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__5"
-    // InternalRails.g:1401:1: rule__Class__Group__5 : rule__Class__Group__5__Impl ;
+    // InternalRails.g:1389:1: rule__Class__Group__5 : rule__Class__Group__5__Impl ;
     public final void rule__Class__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1405:1: ( rule__Class__Group__5__Impl )
-            // InternalRails.g:1406:2: rule__Class__Group__5__Impl
+            // InternalRails.g:1393:1: ( rule__Class__Group__5__Impl )
+            // InternalRails.g:1394:2: rule__Class__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Class__Group__5__Impl();
@@ -4583,22 +4583,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__5__Impl"
-    // InternalRails.g:1412:1: rule__Class__Group__5__Impl : ( ( rule__Class__ClassElementsAssignment_5 )* ) ;
+    // InternalRails.g:1400:1: rule__Class__Group__5__Impl : ( ( rule__Class__ClassElementsAssignment_5 )* ) ;
     public final void rule__Class__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1416:1: ( ( ( rule__Class__ClassElementsAssignment_5 )* ) )
-            // InternalRails.g:1417:1: ( ( rule__Class__ClassElementsAssignment_5 )* )
+            // InternalRails.g:1404:1: ( ( ( rule__Class__ClassElementsAssignment_5 )* ) )
+            // InternalRails.g:1405:1: ( ( rule__Class__ClassElementsAssignment_5 )* )
             {
-            // InternalRails.g:1417:1: ( ( rule__Class__ClassElementsAssignment_5 )* )
-            // InternalRails.g:1418:1: ( rule__Class__ClassElementsAssignment_5 )*
+            // InternalRails.g:1405:1: ( ( rule__Class__ClassElementsAssignment_5 )* )
+            // InternalRails.g:1406:1: ( rule__Class__ClassElementsAssignment_5 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getClassElementsAssignment_5()); 
             }
-            // InternalRails.g:1419:1: ( rule__Class__ClassElementsAssignment_5 )*
+            // InternalRails.g:1407:1: ( rule__Class__ClassElementsAssignment_5 )*
             loop21:
             do {
                 int alt21=2;
@@ -4611,7 +4611,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt21) {
             	case 1 :
-            	    // InternalRails.g:1419:2: rule__Class__ClassElementsAssignment_5
+            	    // InternalRails.g:1407:2: rule__Class__ClassElementsAssignment_5
             	    {
             	    pushFollow(FOLLOW_6);
             	    rule__Class__ClassElementsAssignment_5();
@@ -4652,14 +4652,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__0"
-    // InternalRails.g:1441:1: rule__Class__Group_3__0 : rule__Class__Group_3__0__Impl rule__Class__Group_3__1 ;
+    // InternalRails.g:1429:1: rule__Class__Group_3__0 : rule__Class__Group_3__0__Impl rule__Class__Group_3__1 ;
     public final void rule__Class__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1445:1: ( rule__Class__Group_3__0__Impl rule__Class__Group_3__1 )
-            // InternalRails.g:1446:2: rule__Class__Group_3__0__Impl rule__Class__Group_3__1
+            // InternalRails.g:1433:1: ( rule__Class__Group_3__0__Impl rule__Class__Group_3__1 )
+            // InternalRails.g:1434:2: rule__Class__Group_3__0__Impl rule__Class__Group_3__1
             {
             pushFollow(FOLLOW_7);
             rule__Class__Group_3__0__Impl();
@@ -4690,22 +4690,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__0__Impl"
-    // InternalRails.g:1453:1: rule__Class__Group_3__0__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:1441:1: rule__Class__Group_3__0__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__Class__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1457:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:1458:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1445:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:1446:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:1458:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:1459:1: ( RULE_SPACE )*
+            // InternalRails.g:1446:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1447:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getSPACETerminalRuleCall_3_0()); 
             }
-            // InternalRails.g:1460:1: ( RULE_SPACE )*
+            // InternalRails.g:1448:1: ( RULE_SPACE )*
             loop22:
             do {
                 int alt22=2;
@@ -4718,7 +4718,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // InternalRails.g:1460:3: RULE_SPACE
+            	    // InternalRails.g:1448:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -4755,14 +4755,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__1"
-    // InternalRails.g:1470:1: rule__Class__Group_3__1 : rule__Class__Group_3__1__Impl rule__Class__Group_3__2 ;
+    // InternalRails.g:1458:1: rule__Class__Group_3__1 : rule__Class__Group_3__1__Impl rule__Class__Group_3__2 ;
     public final void rule__Class__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1474:1: ( rule__Class__Group_3__1__Impl rule__Class__Group_3__2 )
-            // InternalRails.g:1475:2: rule__Class__Group_3__1__Impl rule__Class__Group_3__2
+            // InternalRails.g:1462:1: ( rule__Class__Group_3__1__Impl rule__Class__Group_3__2 )
+            // InternalRails.g:1463:2: rule__Class__Group_3__1__Impl rule__Class__Group_3__2
             {
             pushFollow(FOLLOW_3);
             rule__Class__Group_3__1__Impl();
@@ -4793,17 +4793,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__1__Impl"
-    // InternalRails.g:1482:1: rule__Class__Group_3__1__Impl : ( '<' ) ;
+    // InternalRails.g:1470:1: rule__Class__Group_3__1__Impl : ( '<' ) ;
     public final void rule__Class__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1486:1: ( ( '<' ) )
-            // InternalRails.g:1487:1: ( '<' )
+            // InternalRails.g:1474:1: ( ( '<' ) )
+            // InternalRails.g:1475:1: ( '<' )
             {
-            // InternalRails.g:1487:1: ( '<' )
-            // InternalRails.g:1488:1: '<'
+            // InternalRails.g:1475:1: ( '<' )
+            // InternalRails.g:1476:1: '<'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getLessThanSignKeyword_3_1()); 
@@ -4834,14 +4834,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__2"
-    // InternalRails.g:1501:1: rule__Class__Group_3__2 : rule__Class__Group_3__2__Impl rule__Class__Group_3__3 ;
+    // InternalRails.g:1489:1: rule__Class__Group_3__2 : rule__Class__Group_3__2__Impl rule__Class__Group_3__3 ;
     public final void rule__Class__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1505:1: ( rule__Class__Group_3__2__Impl rule__Class__Group_3__3 )
-            // InternalRails.g:1506:2: rule__Class__Group_3__2__Impl rule__Class__Group_3__3
+            // InternalRails.g:1493:1: ( rule__Class__Group_3__2__Impl rule__Class__Group_3__3 )
+            // InternalRails.g:1494:2: rule__Class__Group_3__2__Impl rule__Class__Group_3__3
             {
             pushFollow(FOLLOW_3);
             rule__Class__Group_3__2__Impl();
@@ -4872,22 +4872,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__2__Impl"
-    // InternalRails.g:1513:1: rule__Class__Group_3__2__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:1501:1: rule__Class__Group_3__2__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__Class__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1517:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:1518:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1505:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:1506:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:1518:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:1519:1: ( RULE_SPACE )*
+            // InternalRails.g:1506:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1507:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getSPACETerminalRuleCall_3_2()); 
             }
-            // InternalRails.g:1520:1: ( RULE_SPACE )*
+            // InternalRails.g:1508:1: ( RULE_SPACE )*
             loop23:
             do {
                 int alt23=2;
@@ -4900,7 +4900,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt23) {
             	case 1 :
-            	    // InternalRails.g:1520:3: RULE_SPACE
+            	    // InternalRails.g:1508:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -4937,14 +4937,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__3"
-    // InternalRails.g:1530:1: rule__Class__Group_3__3 : rule__Class__Group_3__3__Impl ;
+    // InternalRails.g:1518:1: rule__Class__Group_3__3 : rule__Class__Group_3__3__Impl ;
     public final void rule__Class__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1534:1: ( rule__Class__Group_3__3__Impl )
-            // InternalRails.g:1535:2: rule__Class__Group_3__3__Impl
+            // InternalRails.g:1522:1: ( rule__Class__Group_3__3__Impl )
+            // InternalRails.g:1523:2: rule__Class__Group_3__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Class__Group_3__3__Impl();
@@ -4970,23 +4970,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group_3__3__Impl"
-    // InternalRails.g:1541:1: rule__Class__Group_3__3__Impl : ( ( rule__Class__SuperTypeAssignment_3_3 ) ) ;
+    // InternalRails.g:1529:1: rule__Class__Group_3__3__Impl : ( ( rule__Class__SuperTypeAssignment_3_3 ) ) ;
     public final void rule__Class__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1545:1: ( ( ( rule__Class__SuperTypeAssignment_3_3 ) ) )
-            // InternalRails.g:1546:1: ( ( rule__Class__SuperTypeAssignment_3_3 ) )
+            // InternalRails.g:1533:1: ( ( ( rule__Class__SuperTypeAssignment_3_3 ) ) )
+            // InternalRails.g:1534:1: ( ( rule__Class__SuperTypeAssignment_3_3 ) )
             {
-            // InternalRails.g:1546:1: ( ( rule__Class__SuperTypeAssignment_3_3 ) )
-            // InternalRails.g:1547:1: ( rule__Class__SuperTypeAssignment_3_3 )
+            // InternalRails.g:1534:1: ( ( rule__Class__SuperTypeAssignment_3_3 ) )
+            // InternalRails.g:1535:1: ( rule__Class__SuperTypeAssignment_3_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getSuperTypeAssignment_3_3()); 
             }
-            // InternalRails.g:1548:1: ( rule__Class__SuperTypeAssignment_3_3 )
-            // InternalRails.g:1548:2: rule__Class__SuperTypeAssignment_3_3
+            // InternalRails.g:1536:1: ( rule__Class__SuperTypeAssignment_3_3 )
+            // InternalRails.g:1536:2: rule__Class__SuperTypeAssignment_3_3
             {
             pushFollow(FOLLOW_2);
             rule__Class__SuperTypeAssignment_3_3();
@@ -5021,14 +5021,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassElement__Group_0__0"
-    // InternalRails.g:1566:1: rule__ClassElement__Group_0__0 : rule__ClassElement__Group_0__0__Impl ;
+    // InternalRails.g:1554:1: rule__ClassElement__Group_0__0 : rule__ClassElement__Group_0__0__Impl ;
     public final void rule__ClassElement__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1570:1: ( rule__ClassElement__Group_0__0__Impl )
-            // InternalRails.g:1571:2: rule__ClassElement__Group_0__0__Impl
+            // InternalRails.g:1558:1: ( rule__ClassElement__Group_0__0__Impl )
+            // InternalRails.g:1559:2: rule__ClassElement__Group_0__0__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ClassElement__Group_0__0__Impl();
@@ -5054,23 +5054,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassElement__Group_0__0__Impl"
-    // InternalRails.g:1577:1: rule__ClassElement__Group_0__0__Impl : ( ( rule__ClassElement__Alternatives_0_0 ) ) ;
+    // InternalRails.g:1565:1: rule__ClassElement__Group_0__0__Impl : ( ( rule__ClassElement__Alternatives_0_0 ) ) ;
     public final void rule__ClassElement__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1581:1: ( ( ( rule__ClassElement__Alternatives_0_0 ) ) )
-            // InternalRails.g:1582:1: ( ( rule__ClassElement__Alternatives_0_0 ) )
+            // InternalRails.g:1569:1: ( ( ( rule__ClassElement__Alternatives_0_0 ) ) )
+            // InternalRails.g:1570:1: ( ( rule__ClassElement__Alternatives_0_0 ) )
             {
-            // InternalRails.g:1582:1: ( ( rule__ClassElement__Alternatives_0_0 ) )
-            // InternalRails.g:1583:1: ( rule__ClassElement__Alternatives_0_0 )
+            // InternalRails.g:1570:1: ( ( rule__ClassElement__Alternatives_0_0 ) )
+            // InternalRails.g:1571:1: ( rule__ClassElement__Alternatives_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassElementAccess().getAlternatives_0_0()); 
             }
-            // InternalRails.g:1584:1: ( rule__ClassElement__Alternatives_0_0 )
-            // InternalRails.g:1584:2: rule__ClassElement__Alternatives_0_0
+            // InternalRails.g:1572:1: ( rule__ClassElement__Alternatives_0_0 )
+            // InternalRails.g:1572:2: rule__ClassElement__Alternatives_0_0
             {
             pushFollow(FOLLOW_2);
             rule__ClassElement__Alternatives_0_0();
@@ -5105,14 +5105,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TableName__Group__0"
-    // InternalRails.g:1596:1: rule__TableName__Group__0 : rule__TableName__Group__0__Impl rule__TableName__Group__1 ;
+    // InternalRails.g:1584:1: rule__TableName__Group__0 : rule__TableName__Group__0__Impl rule__TableName__Group__1 ;
     public final void rule__TableName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1600:1: ( rule__TableName__Group__0__Impl rule__TableName__Group__1 )
-            // InternalRails.g:1601:2: rule__TableName__Group__0__Impl rule__TableName__Group__1
+            // InternalRails.g:1588:1: ( rule__TableName__Group__0__Impl rule__TableName__Group__1 )
+            // InternalRails.g:1589:2: rule__TableName__Group__0__Impl rule__TableName__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__TableName__Group__0__Impl();
@@ -5143,17 +5143,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TableName__Group__0__Impl"
-    // InternalRails.g:1608:1: rule__TableName__Group__0__Impl : ( RULE_SET_TABLE_NAME ) ;
+    // InternalRails.g:1596:1: rule__TableName__Group__0__Impl : ( RULE_SET_TABLE_NAME ) ;
     public final void rule__TableName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1612:1: ( ( RULE_SET_TABLE_NAME ) )
-            // InternalRails.g:1613:1: ( RULE_SET_TABLE_NAME )
+            // InternalRails.g:1600:1: ( ( RULE_SET_TABLE_NAME ) )
+            // InternalRails.g:1601:1: ( RULE_SET_TABLE_NAME )
             {
-            // InternalRails.g:1613:1: ( RULE_SET_TABLE_NAME )
-            // InternalRails.g:1614:1: RULE_SET_TABLE_NAME
+            // InternalRails.g:1601:1: ( RULE_SET_TABLE_NAME )
+            // InternalRails.g:1602:1: RULE_SET_TABLE_NAME
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTableNameAccess().getSET_TABLE_NAMETerminalRuleCall_0()); 
@@ -5184,14 +5184,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TableName__Group__1"
-    // InternalRails.g:1625:1: rule__TableName__Group__1 : rule__TableName__Group__1__Impl ;
+    // InternalRails.g:1613:1: rule__TableName__Group__1 : rule__TableName__Group__1__Impl ;
     public final void rule__TableName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1629:1: ( rule__TableName__Group__1__Impl )
-            // InternalRails.g:1630:2: rule__TableName__Group__1__Impl
+            // InternalRails.g:1617:1: ( rule__TableName__Group__1__Impl )
+            // InternalRails.g:1618:2: rule__TableName__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TableName__Group__1__Impl();
@@ -5217,23 +5217,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TableName__Group__1__Impl"
-    // InternalRails.g:1636:1: rule__TableName__Group__1__Impl : ( ( rule__TableName__NameAssignment_1 ) ) ;
+    // InternalRails.g:1624:1: rule__TableName__Group__1__Impl : ( ( rule__TableName__NameAssignment_1 ) ) ;
     public final void rule__TableName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1640:1: ( ( ( rule__TableName__NameAssignment_1 ) ) )
-            // InternalRails.g:1641:1: ( ( rule__TableName__NameAssignment_1 ) )
+            // InternalRails.g:1628:1: ( ( ( rule__TableName__NameAssignment_1 ) ) )
+            // InternalRails.g:1629:1: ( ( rule__TableName__NameAssignment_1 ) )
             {
-            // InternalRails.g:1641:1: ( ( rule__TableName__NameAssignment_1 ) )
-            // InternalRails.g:1642:1: ( rule__TableName__NameAssignment_1 )
+            // InternalRails.g:1629:1: ( ( rule__TableName__NameAssignment_1 ) )
+            // InternalRails.g:1630:1: ( rule__TableName__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTableNameAccess().getNameAssignment_1()); 
             }
-            // InternalRails.g:1643:1: ( rule__TableName__NameAssignment_1 )
-            // InternalRails.g:1643:2: rule__TableName__NameAssignment_1
+            // InternalRails.g:1631:1: ( rule__TableName__NameAssignment_1 )
+            // InternalRails.g:1631:2: rule__TableName__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__TableName__NameAssignment_1();
@@ -5268,14 +5268,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group__0"
-    // InternalRails.g:1658:1: rule__NamespacedModuleName__Group__0 : rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1 ;
+    // InternalRails.g:1646:1: rule__NamespacedModuleName__Group__0 : rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1 ;
     public final void rule__NamespacedModuleName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1662:1: ( rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1 )
-            // InternalRails.g:1663:2: rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1
+            // InternalRails.g:1650:1: ( rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1 )
+            // InternalRails.g:1651:2: rule__NamespacedModuleName__Group__0__Impl rule__NamespacedModuleName__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__NamespacedModuleName__Group__0__Impl();
@@ -5306,22 +5306,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group__0__Impl"
-    // InternalRails.g:1670:1: rule__NamespacedModuleName__Group__0__Impl : ( ( rule__NamespacedModuleName__Group_0__0 )* ) ;
+    // InternalRails.g:1658:1: rule__NamespacedModuleName__Group__0__Impl : ( ( rule__NamespacedModuleName__Group_0__0 )* ) ;
     public final void rule__NamespacedModuleName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1674:1: ( ( ( rule__NamespacedModuleName__Group_0__0 )* ) )
-            // InternalRails.g:1675:1: ( ( rule__NamespacedModuleName__Group_0__0 )* )
+            // InternalRails.g:1662:1: ( ( ( rule__NamespacedModuleName__Group_0__0 )* ) )
+            // InternalRails.g:1663:1: ( ( rule__NamespacedModuleName__Group_0__0 )* )
             {
-            // InternalRails.g:1675:1: ( ( rule__NamespacedModuleName__Group_0__0 )* )
-            // InternalRails.g:1676:1: ( rule__NamespacedModuleName__Group_0__0 )*
+            // InternalRails.g:1663:1: ( ( rule__NamespacedModuleName__Group_0__0 )* )
+            // InternalRails.g:1664:1: ( rule__NamespacedModuleName__Group_0__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNamespacedModuleNameAccess().getGroup_0()); 
             }
-            // InternalRails.g:1677:1: ( rule__NamespacedModuleName__Group_0__0 )*
+            // InternalRails.g:1665:1: ( rule__NamespacedModuleName__Group_0__0 )*
             loop24:
             do {
                 int alt24=2;
@@ -5340,7 +5340,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt24) {
             	case 1 :
-            	    // InternalRails.g:1677:2: rule__NamespacedModuleName__Group_0__0
+            	    // InternalRails.g:1665:2: rule__NamespacedModuleName__Group_0__0
             	    {
             	    pushFollow(FOLLOW_9);
             	    rule__NamespacedModuleName__Group_0__0();
@@ -5381,14 +5381,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group__1"
-    // InternalRails.g:1687:1: rule__NamespacedModuleName__Group__1 : rule__NamespacedModuleName__Group__1__Impl ;
+    // InternalRails.g:1675:1: rule__NamespacedModuleName__Group__1 : rule__NamespacedModuleName__Group__1__Impl ;
     public final void rule__NamespacedModuleName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1691:1: ( rule__NamespacedModuleName__Group__1__Impl )
-            // InternalRails.g:1692:2: rule__NamespacedModuleName__Group__1__Impl
+            // InternalRails.g:1679:1: ( rule__NamespacedModuleName__Group__1__Impl )
+            // InternalRails.g:1680:2: rule__NamespacedModuleName__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__NamespacedModuleName__Group__1__Impl();
@@ -5414,17 +5414,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group__1__Impl"
-    // InternalRails.g:1698:1: rule__NamespacedModuleName__Group__1__Impl : ( RULE_ID ) ;
+    // InternalRails.g:1686:1: rule__NamespacedModuleName__Group__1__Impl : ( RULE_ID ) ;
     public final void rule__NamespacedModuleName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1702:1: ( ( RULE_ID ) )
-            // InternalRails.g:1703:1: ( RULE_ID )
+            // InternalRails.g:1690:1: ( ( RULE_ID ) )
+            // InternalRails.g:1691:1: ( RULE_ID )
             {
-            // InternalRails.g:1703:1: ( RULE_ID )
-            // InternalRails.g:1704:1: RULE_ID
+            // InternalRails.g:1691:1: ( RULE_ID )
+            // InternalRails.g:1692:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNamespacedModuleNameAccess().getIDTerminalRuleCall_1()); 
@@ -5455,14 +5455,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group_0__0"
-    // InternalRails.g:1719:1: rule__NamespacedModuleName__Group_0__0 : rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1 ;
+    // InternalRails.g:1707:1: rule__NamespacedModuleName__Group_0__0 : rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1 ;
     public final void rule__NamespacedModuleName__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1723:1: ( rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1 )
-            // InternalRails.g:1724:2: rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1
+            // InternalRails.g:1711:1: ( rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1 )
+            // InternalRails.g:1712:2: rule__NamespacedModuleName__Group_0__0__Impl rule__NamespacedModuleName__Group_0__1
             {
             pushFollow(FOLLOW_10);
             rule__NamespacedModuleName__Group_0__0__Impl();
@@ -5493,17 +5493,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group_0__0__Impl"
-    // InternalRails.g:1731:1: rule__NamespacedModuleName__Group_0__0__Impl : ( RULE_ID ) ;
+    // InternalRails.g:1719:1: rule__NamespacedModuleName__Group_0__0__Impl : ( RULE_ID ) ;
     public final void rule__NamespacedModuleName__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1735:1: ( ( RULE_ID ) )
-            // InternalRails.g:1736:1: ( RULE_ID )
+            // InternalRails.g:1723:1: ( ( RULE_ID ) )
+            // InternalRails.g:1724:1: ( RULE_ID )
             {
-            // InternalRails.g:1736:1: ( RULE_ID )
-            // InternalRails.g:1737:1: RULE_ID
+            // InternalRails.g:1724:1: ( RULE_ID )
+            // InternalRails.g:1725:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNamespacedModuleNameAccess().getIDTerminalRuleCall_0_0()); 
@@ -5534,14 +5534,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group_0__1"
-    // InternalRails.g:1748:1: rule__NamespacedModuleName__Group_0__1 : rule__NamespacedModuleName__Group_0__1__Impl ;
+    // InternalRails.g:1736:1: rule__NamespacedModuleName__Group_0__1 : rule__NamespacedModuleName__Group_0__1__Impl ;
     public final void rule__NamespacedModuleName__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1752:1: ( rule__NamespacedModuleName__Group_0__1__Impl )
-            // InternalRails.g:1753:2: rule__NamespacedModuleName__Group_0__1__Impl
+            // InternalRails.g:1740:1: ( rule__NamespacedModuleName__Group_0__1__Impl )
+            // InternalRails.g:1741:2: rule__NamespacedModuleName__Group_0__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__NamespacedModuleName__Group_0__1__Impl();
@@ -5567,17 +5567,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamespacedModuleName__Group_0__1__Impl"
-    // InternalRails.g:1759:1: rule__NamespacedModuleName__Group_0__1__Impl : ( '::' ) ;
+    // InternalRails.g:1747:1: rule__NamespacedModuleName__Group_0__1__Impl : ( '::' ) ;
     public final void rule__NamespacedModuleName__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1763:1: ( ( '::' ) )
-            // InternalRails.g:1764:1: ( '::' )
+            // InternalRails.g:1751:1: ( ( '::' ) )
+            // InternalRails.g:1752:1: ( '::' )
             {
-            // InternalRails.g:1764:1: ( '::' )
-            // InternalRails.g:1765:1: '::'
+            // InternalRails.g:1752:1: ( '::' )
+            // InternalRails.g:1753:1: '::'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNamespacedModuleNameAccess().getColonColonKeyword_0_1()); 
@@ -5608,14 +5608,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__0"
-    // InternalRails.g:1782:1: rule__MethodChainCall__Group__0 : rule__MethodChainCall__Group__0__Impl rule__MethodChainCall__Group__1 ;
+    // InternalRails.g:1770:1: rule__MethodChainCall__Group__0 : rule__MethodChainCall__Group__0__Impl rule__MethodChainCall__Group__1 ;
     public final void rule__MethodChainCall__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1786:1: ( rule__MethodChainCall__Group__0__Impl rule__MethodChainCall__Group__1 )
-            // InternalRails.g:1787:2: rule__MethodChainCall__Group__0__Impl rule__MethodChainCall__Group__1
+            // InternalRails.g:1774:1: ( rule__MethodChainCall__Group__0__Impl rule__MethodChainCall__Group__1 )
+            // InternalRails.g:1775:2: rule__MethodChainCall__Group__0__Impl rule__MethodChainCall__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__MethodChainCall__Group__0__Impl();
@@ -5646,23 +5646,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__0__Impl"
-    // InternalRails.g:1794:1: rule__MethodChainCall__Group__0__Impl : ( ( rule__MethodChainCall__Alternatives_0 ) ) ;
+    // InternalRails.g:1782:1: rule__MethodChainCall__Group__0__Impl : ( ( rule__MethodChainCall__Alternatives_0 ) ) ;
     public final void rule__MethodChainCall__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1798:1: ( ( ( rule__MethodChainCall__Alternatives_0 ) ) )
-            // InternalRails.g:1799:1: ( ( rule__MethodChainCall__Alternatives_0 ) )
+            // InternalRails.g:1786:1: ( ( ( rule__MethodChainCall__Alternatives_0 ) ) )
+            // InternalRails.g:1787:1: ( ( rule__MethodChainCall__Alternatives_0 ) )
             {
-            // InternalRails.g:1799:1: ( ( rule__MethodChainCall__Alternatives_0 ) )
-            // InternalRails.g:1800:1: ( rule__MethodChainCall__Alternatives_0 )
+            // InternalRails.g:1787:1: ( ( rule__MethodChainCall__Alternatives_0 ) )
+            // InternalRails.g:1788:1: ( rule__MethodChainCall__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getAlternatives_0()); 
             }
-            // InternalRails.g:1801:1: ( rule__MethodChainCall__Alternatives_0 )
-            // InternalRails.g:1801:2: rule__MethodChainCall__Alternatives_0
+            // InternalRails.g:1789:1: ( rule__MethodChainCall__Alternatives_0 )
+            // InternalRails.g:1789:2: rule__MethodChainCall__Alternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__MethodChainCall__Alternatives_0();
@@ -5697,14 +5697,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__1"
-    // InternalRails.g:1811:1: rule__MethodChainCall__Group__1 : rule__MethodChainCall__Group__1__Impl rule__MethodChainCall__Group__2 ;
+    // InternalRails.g:1799:1: rule__MethodChainCall__Group__1 : rule__MethodChainCall__Group__1__Impl rule__MethodChainCall__Group__2 ;
     public final void rule__MethodChainCall__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1815:1: ( rule__MethodChainCall__Group__1__Impl rule__MethodChainCall__Group__2 )
-            // InternalRails.g:1816:2: rule__MethodChainCall__Group__1__Impl rule__MethodChainCall__Group__2
+            // InternalRails.g:1803:1: ( rule__MethodChainCall__Group__1__Impl rule__MethodChainCall__Group__2 )
+            // InternalRails.g:1804:2: rule__MethodChainCall__Group__1__Impl rule__MethodChainCall__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__MethodChainCall__Group__1__Impl();
@@ -5735,22 +5735,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__1__Impl"
-    // InternalRails.g:1823:1: rule__MethodChainCall__Group__1__Impl : ( ( rule__MethodChainCall__Group_1__0 )* ) ;
+    // InternalRails.g:1811:1: rule__MethodChainCall__Group__1__Impl : ( ( rule__MethodChainCall__Group_1__0 )* ) ;
     public final void rule__MethodChainCall__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1827:1: ( ( ( rule__MethodChainCall__Group_1__0 )* ) )
-            // InternalRails.g:1828:1: ( ( rule__MethodChainCall__Group_1__0 )* )
+            // InternalRails.g:1815:1: ( ( ( rule__MethodChainCall__Group_1__0 )* ) )
+            // InternalRails.g:1816:1: ( ( rule__MethodChainCall__Group_1__0 )* )
             {
-            // InternalRails.g:1828:1: ( ( rule__MethodChainCall__Group_1__0 )* )
-            // InternalRails.g:1829:1: ( rule__MethodChainCall__Group_1__0 )*
+            // InternalRails.g:1816:1: ( ( rule__MethodChainCall__Group_1__0 )* )
+            // InternalRails.g:1817:1: ( rule__MethodChainCall__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getGroup_1()); 
             }
-            // InternalRails.g:1830:1: ( rule__MethodChainCall__Group_1__0 )*
+            // InternalRails.g:1818:1: ( rule__MethodChainCall__Group_1__0 )*
             loop25:
             do {
                 int alt25=2;
@@ -5763,7 +5763,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt25) {
             	case 1 :
-            	    // InternalRails.g:1830:2: rule__MethodChainCall__Group_1__0
+            	    // InternalRails.g:1818:2: rule__MethodChainCall__Group_1__0
             	    {
             	    pushFollow(FOLLOW_12);
             	    rule__MethodChainCall__Group_1__0();
@@ -5804,14 +5804,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__2"
-    // InternalRails.g:1840:1: rule__MethodChainCall__Group__2 : rule__MethodChainCall__Group__2__Impl rule__MethodChainCall__Group__3 ;
+    // InternalRails.g:1828:1: rule__MethodChainCall__Group__2 : rule__MethodChainCall__Group__2__Impl rule__MethodChainCall__Group__3 ;
     public final void rule__MethodChainCall__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1844:1: ( rule__MethodChainCall__Group__2__Impl rule__MethodChainCall__Group__3 )
-            // InternalRails.g:1845:2: rule__MethodChainCall__Group__2__Impl rule__MethodChainCall__Group__3
+            // InternalRails.g:1832:1: ( rule__MethodChainCall__Group__2__Impl rule__MethodChainCall__Group__3 )
+            // InternalRails.g:1833:2: rule__MethodChainCall__Group__2__Impl rule__MethodChainCall__Group__3
             {
             pushFollow(FOLLOW_11);
             rule__MethodChainCall__Group__2__Impl();
@@ -5842,22 +5842,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__2__Impl"
-    // InternalRails.g:1852:1: rule__MethodChainCall__Group__2__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:1840:1: rule__MethodChainCall__Group__2__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__MethodChainCall__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1856:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:1857:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1844:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:1845:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:1857:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:1858:1: ( RULE_SPACE )*
+            // InternalRails.g:1845:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1846:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_2()); 
             }
-            // InternalRails.g:1859:1: ( RULE_SPACE )*
+            // InternalRails.g:1847:1: ( RULE_SPACE )*
             loop26:
             do {
                 int alt26=2;
@@ -5876,7 +5876,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt26) {
             	case 1 :
-            	    // InternalRails.g:1859:3: RULE_SPACE
+            	    // InternalRails.g:1847:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -5913,14 +5913,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__3"
-    // InternalRails.g:1869:1: rule__MethodChainCall__Group__3 : rule__MethodChainCall__Group__3__Impl rule__MethodChainCall__Group__4 ;
+    // InternalRails.g:1857:1: rule__MethodChainCall__Group__3 : rule__MethodChainCall__Group__3__Impl rule__MethodChainCall__Group__4 ;
     public final void rule__MethodChainCall__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1873:1: ( rule__MethodChainCall__Group__3__Impl rule__MethodChainCall__Group__4 )
-            // InternalRails.g:1874:2: rule__MethodChainCall__Group__3__Impl rule__MethodChainCall__Group__4
+            // InternalRails.g:1861:1: ( rule__MethodChainCall__Group__3__Impl rule__MethodChainCall__Group__4 )
+            // InternalRails.g:1862:2: rule__MethodChainCall__Group__3__Impl rule__MethodChainCall__Group__4
             {
             pushFollow(FOLLOW_11);
             rule__MethodChainCall__Group__3__Impl();
@@ -5951,27 +5951,27 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__3__Impl"
-    // InternalRails.g:1881:1: rule__MethodChainCall__Group__3__Impl : ( ( ruleMethodCallParameters )? ) ;
+    // InternalRails.g:1869:1: rule__MethodChainCall__Group__3__Impl : ( ( ruleMethodCallParameters )? ) ;
     public final void rule__MethodChainCall__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1885:1: ( ( ( ruleMethodCallParameters )? ) )
-            // InternalRails.g:1886:1: ( ( ruleMethodCallParameters )? )
+            // InternalRails.g:1873:1: ( ( ( ruleMethodCallParameters )? ) )
+            // InternalRails.g:1874:1: ( ( ruleMethodCallParameters )? )
             {
-            // InternalRails.g:1886:1: ( ( ruleMethodCallParameters )? )
-            // InternalRails.g:1887:1: ( ruleMethodCallParameters )?
+            // InternalRails.g:1874:1: ( ( ruleMethodCallParameters )? )
+            // InternalRails.g:1875:1: ( ruleMethodCallParameters )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getMethodCallParametersParserRuleCall_3()); 
             }
-            // InternalRails.g:1888:1: ( ruleMethodCallParameters )?
+            // InternalRails.g:1876:1: ( ruleMethodCallParameters )?
             int alt27=2;
             alt27 = dfa27.predict(input);
             switch (alt27) {
                 case 1 :
-                    // InternalRails.g:1888:3: ruleMethodCallParameters
+                    // InternalRails.g:1876:3: ruleMethodCallParameters
                     {
                     pushFollow(FOLLOW_2);
                     ruleMethodCallParameters();
@@ -6009,14 +6009,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__4"
-    // InternalRails.g:1898:1: rule__MethodChainCall__Group__4 : rule__MethodChainCall__Group__4__Impl rule__MethodChainCall__Group__5 ;
+    // InternalRails.g:1886:1: rule__MethodChainCall__Group__4 : rule__MethodChainCall__Group__4__Impl rule__MethodChainCall__Group__5 ;
     public final void rule__MethodChainCall__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1902:1: ( rule__MethodChainCall__Group__4__Impl rule__MethodChainCall__Group__5 )
-            // InternalRails.g:1903:2: rule__MethodChainCall__Group__4__Impl rule__MethodChainCall__Group__5
+            // InternalRails.g:1890:1: ( rule__MethodChainCall__Group__4__Impl rule__MethodChainCall__Group__5 )
+            // InternalRails.g:1891:2: rule__MethodChainCall__Group__4__Impl rule__MethodChainCall__Group__5
             {
             pushFollow(FOLLOW_11);
             rule__MethodChainCall__Group__4__Impl();
@@ -6047,22 +6047,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__4__Impl"
-    // InternalRails.g:1910:1: rule__MethodChainCall__Group__4__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:1898:1: rule__MethodChainCall__Group__4__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__MethodChainCall__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1914:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:1915:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1902:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:1903:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:1915:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:1916:1: ( RULE_SPACE )*
+            // InternalRails.g:1903:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1904:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_4()); 
             }
-            // InternalRails.g:1917:1: ( RULE_SPACE )*
+            // InternalRails.g:1905:1: ( RULE_SPACE )*
             loop28:
             do {
                 int alt28=2;
@@ -6081,7 +6081,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // InternalRails.g:1917:3: RULE_SPACE
+            	    // InternalRails.g:1905:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -6118,14 +6118,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__5"
-    // InternalRails.g:1927:1: rule__MethodChainCall__Group__5 : rule__MethodChainCall__Group__5__Impl rule__MethodChainCall__Group__6 ;
+    // InternalRails.g:1915:1: rule__MethodChainCall__Group__5 : rule__MethodChainCall__Group__5__Impl rule__MethodChainCall__Group__6 ;
     public final void rule__MethodChainCall__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1931:1: ( rule__MethodChainCall__Group__5__Impl rule__MethodChainCall__Group__6 )
-            // InternalRails.g:1932:2: rule__MethodChainCall__Group__5__Impl rule__MethodChainCall__Group__6
+            // InternalRails.g:1919:1: ( rule__MethodChainCall__Group__5__Impl rule__MethodChainCall__Group__6 )
+            // InternalRails.g:1920:2: rule__MethodChainCall__Group__5__Impl rule__MethodChainCall__Group__6
             {
             pushFollow(FOLLOW_11);
             rule__MethodChainCall__Group__5__Impl();
@@ -6156,22 +6156,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__5__Impl"
-    // InternalRails.g:1939:1: rule__MethodChainCall__Group__5__Impl : ( ( RULE_BRACKET_BLOCK )? ) ;
+    // InternalRails.g:1927:1: rule__MethodChainCall__Group__5__Impl : ( ( RULE_BRACKET_BLOCK )? ) ;
     public final void rule__MethodChainCall__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1943:1: ( ( ( RULE_BRACKET_BLOCK )? ) )
-            // InternalRails.g:1944:1: ( ( RULE_BRACKET_BLOCK )? )
+            // InternalRails.g:1931:1: ( ( ( RULE_BRACKET_BLOCK )? ) )
+            // InternalRails.g:1932:1: ( ( RULE_BRACKET_BLOCK )? )
             {
-            // InternalRails.g:1944:1: ( ( RULE_BRACKET_BLOCK )? )
-            // InternalRails.g:1945:1: ( RULE_BRACKET_BLOCK )?
+            // InternalRails.g:1932:1: ( ( RULE_BRACKET_BLOCK )? )
+            // InternalRails.g:1933:1: ( RULE_BRACKET_BLOCK )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getBRACKET_BLOCKTerminalRuleCall_5()); 
             }
-            // InternalRails.g:1946:1: ( RULE_BRACKET_BLOCK )?
+            // InternalRails.g:1934:1: ( RULE_BRACKET_BLOCK )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -6184,7 +6184,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt29) {
                 case 1 :
-                    // InternalRails.g:1946:3: RULE_BRACKET_BLOCK
+                    // InternalRails.g:1934:3: RULE_BRACKET_BLOCK
                     {
                     match(input,RULE_BRACKET_BLOCK,FOLLOW_2); if (state.failed) return ;
 
@@ -6218,14 +6218,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__6"
-    // InternalRails.g:1956:1: rule__MethodChainCall__Group__6 : rule__MethodChainCall__Group__6__Impl rule__MethodChainCall__Group__7 ;
+    // InternalRails.g:1944:1: rule__MethodChainCall__Group__6 : rule__MethodChainCall__Group__6__Impl rule__MethodChainCall__Group__7 ;
     public final void rule__MethodChainCall__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1960:1: ( rule__MethodChainCall__Group__6__Impl rule__MethodChainCall__Group__7 )
-            // InternalRails.g:1961:2: rule__MethodChainCall__Group__6__Impl rule__MethodChainCall__Group__7
+            // InternalRails.g:1948:1: ( rule__MethodChainCall__Group__6__Impl rule__MethodChainCall__Group__7 )
+            // InternalRails.g:1949:2: rule__MethodChainCall__Group__6__Impl rule__MethodChainCall__Group__7
             {
             pushFollow(FOLLOW_11);
             rule__MethodChainCall__Group__6__Impl();
@@ -6256,22 +6256,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__6__Impl"
-    // InternalRails.g:1968:1: rule__MethodChainCall__Group__6__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:1956:1: rule__MethodChainCall__Group__6__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__MethodChainCall__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1972:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:1973:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1960:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:1961:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:1973:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:1974:1: ( RULE_SPACE )*
+            // InternalRails.g:1961:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:1962:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_6()); 
             }
-            // InternalRails.g:1975:1: ( RULE_SPACE )*
+            // InternalRails.g:1963:1: ( RULE_SPACE )*
             loop30:
             do {
                 int alt30=2;
@@ -6290,7 +6290,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt30) {
             	case 1 :
-            	    // InternalRails.g:1975:3: RULE_SPACE
+            	    // InternalRails.g:1963:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -6327,14 +6327,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__7"
-    // InternalRails.g:1985:1: rule__MethodChainCall__Group__7 : rule__MethodChainCall__Group__7__Impl rule__MethodChainCall__Group__8 ;
+    // InternalRails.g:1973:1: rule__MethodChainCall__Group__7 : rule__MethodChainCall__Group__7__Impl rule__MethodChainCall__Group__8 ;
     public final void rule__MethodChainCall__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:1989:1: ( rule__MethodChainCall__Group__7__Impl rule__MethodChainCall__Group__8 )
-            // InternalRails.g:1990:2: rule__MethodChainCall__Group__7__Impl rule__MethodChainCall__Group__8
+            // InternalRails.g:1977:1: ( rule__MethodChainCall__Group__7__Impl rule__MethodChainCall__Group__8 )
+            // InternalRails.g:1978:2: rule__MethodChainCall__Group__7__Impl rule__MethodChainCall__Group__8
             {
             pushFollow(FOLLOW_11);
             rule__MethodChainCall__Group__7__Impl();
@@ -6365,22 +6365,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__7__Impl"
-    // InternalRails.g:1997:1: rule__MethodChainCall__Group__7__Impl : ( ( RULE_DO_BLOCK_PARAMETERS )? ) ;
+    // InternalRails.g:1985:1: rule__MethodChainCall__Group__7__Impl : ( ( RULE_DO_BLOCK_PARAMETERS )? ) ;
     public final void rule__MethodChainCall__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2001:1: ( ( ( RULE_DO_BLOCK_PARAMETERS )? ) )
-            // InternalRails.g:2002:1: ( ( RULE_DO_BLOCK_PARAMETERS )? )
+            // InternalRails.g:1989:1: ( ( ( RULE_DO_BLOCK_PARAMETERS )? ) )
+            // InternalRails.g:1990:1: ( ( RULE_DO_BLOCK_PARAMETERS )? )
             {
-            // InternalRails.g:2002:1: ( ( RULE_DO_BLOCK_PARAMETERS )? )
-            // InternalRails.g:2003:1: ( RULE_DO_BLOCK_PARAMETERS )?
+            // InternalRails.g:1990:1: ( ( RULE_DO_BLOCK_PARAMETERS )? )
+            // InternalRails.g:1991:1: ( RULE_DO_BLOCK_PARAMETERS )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getDO_BLOCK_PARAMETERSTerminalRuleCall_7()); 
             }
-            // InternalRails.g:2004:1: ( RULE_DO_BLOCK_PARAMETERS )?
+            // InternalRails.g:1992:1: ( RULE_DO_BLOCK_PARAMETERS )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -6393,7 +6393,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalRails.g:2004:3: RULE_DO_BLOCK_PARAMETERS
+                    // InternalRails.g:1992:3: RULE_DO_BLOCK_PARAMETERS
                     {
                     match(input,RULE_DO_BLOCK_PARAMETERS,FOLLOW_2); if (state.failed) return ;
 
@@ -6427,14 +6427,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__8"
-    // InternalRails.g:2014:1: rule__MethodChainCall__Group__8 : rule__MethodChainCall__Group__8__Impl rule__MethodChainCall__Group__9 ;
+    // InternalRails.g:2002:1: rule__MethodChainCall__Group__8 : rule__MethodChainCall__Group__8__Impl rule__MethodChainCall__Group__9 ;
     public final void rule__MethodChainCall__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2018:1: ( rule__MethodChainCall__Group__8__Impl rule__MethodChainCall__Group__9 )
-            // InternalRails.g:2019:2: rule__MethodChainCall__Group__8__Impl rule__MethodChainCall__Group__9
+            // InternalRails.g:2006:1: ( rule__MethodChainCall__Group__8__Impl rule__MethodChainCall__Group__9 )
+            // InternalRails.g:2007:2: rule__MethodChainCall__Group__8__Impl rule__MethodChainCall__Group__9
             {
             pushFollow(FOLLOW_11);
             rule__MethodChainCall__Group__8__Impl();
@@ -6465,22 +6465,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__8__Impl"
-    // InternalRails.g:2026:1: rule__MethodChainCall__Group__8__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2014:1: rule__MethodChainCall__Group__8__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__MethodChainCall__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2030:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2031:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2018:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2019:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2031:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2032:1: ( RULE_SPACE )*
+            // InternalRails.g:2019:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2020:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getSPACETerminalRuleCall_8()); 
             }
-            // InternalRails.g:2033:1: ( RULE_SPACE )*
+            // InternalRails.g:2021:1: ( RULE_SPACE )*
             loop32:
             do {
                 int alt32=2;
@@ -6499,7 +6499,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt32) {
             	case 1 :
-            	    // InternalRails.g:2033:3: RULE_SPACE
+            	    // InternalRails.g:2021:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -6536,14 +6536,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__9"
-    // InternalRails.g:2043:1: rule__MethodChainCall__Group__9 : rule__MethodChainCall__Group__9__Impl ;
+    // InternalRails.g:2031:1: rule__MethodChainCall__Group__9 : rule__MethodChainCall__Group__9__Impl ;
     public final void rule__MethodChainCall__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2047:1: ( rule__MethodChainCall__Group__9__Impl )
-            // InternalRails.g:2048:2: rule__MethodChainCall__Group__9__Impl
+            // InternalRails.g:2035:1: ( rule__MethodChainCall__Group__9__Impl )
+            // InternalRails.g:2036:2: rule__MethodChainCall__Group__9__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MethodChainCall__Group__9__Impl();
@@ -6569,22 +6569,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group__9__Impl"
-    // InternalRails.g:2054:1: rule__MethodChainCall__Group__9__Impl : ( ( RULE_LF )? ) ;
+    // InternalRails.g:2042:1: rule__MethodChainCall__Group__9__Impl : ( ( RULE_LF )? ) ;
     public final void rule__MethodChainCall__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2058:1: ( ( ( RULE_LF )? ) )
-            // InternalRails.g:2059:1: ( ( RULE_LF )? )
+            // InternalRails.g:2046:1: ( ( ( RULE_LF )? ) )
+            // InternalRails.g:2047:1: ( ( RULE_LF )? )
             {
-            // InternalRails.g:2059:1: ( ( RULE_LF )? )
-            // InternalRails.g:2060:1: ( RULE_LF )?
+            // InternalRails.g:2047:1: ( ( RULE_LF )? )
+            // InternalRails.g:2048:1: ( RULE_LF )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getLFTerminalRuleCall_9()); 
             }
-            // InternalRails.g:2061:1: ( RULE_LF )?
+            // InternalRails.g:2049:1: ( RULE_LF )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -6597,7 +6597,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt33) {
                 case 1 :
-                    // InternalRails.g:2061:3: RULE_LF
+                    // InternalRails.g:2049:3: RULE_LF
                     {
                     match(input,RULE_LF,FOLLOW_2); if (state.failed) return ;
 
@@ -6631,14 +6631,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group_1__0"
-    // InternalRails.g:2091:1: rule__MethodChainCall__Group_1__0 : rule__MethodChainCall__Group_1__0__Impl rule__MethodChainCall__Group_1__1 ;
+    // InternalRails.g:2079:1: rule__MethodChainCall__Group_1__0 : rule__MethodChainCall__Group_1__0__Impl rule__MethodChainCall__Group_1__1 ;
     public final void rule__MethodChainCall__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2095:1: ( rule__MethodChainCall__Group_1__0__Impl rule__MethodChainCall__Group_1__1 )
-            // InternalRails.g:2096:2: rule__MethodChainCall__Group_1__0__Impl rule__MethodChainCall__Group_1__1
+            // InternalRails.g:2083:1: ( rule__MethodChainCall__Group_1__0__Impl rule__MethodChainCall__Group_1__1 )
+            // InternalRails.g:2084:2: rule__MethodChainCall__Group_1__0__Impl rule__MethodChainCall__Group_1__1
             {
             pushFollow(FOLLOW_13);
             rule__MethodChainCall__Group_1__0__Impl();
@@ -6669,17 +6669,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group_1__0__Impl"
-    // InternalRails.g:2103:1: rule__MethodChainCall__Group_1__0__Impl : ( '.' ) ;
+    // InternalRails.g:2091:1: rule__MethodChainCall__Group_1__0__Impl : ( '.' ) ;
     public final void rule__MethodChainCall__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2107:1: ( ( '.' ) )
-            // InternalRails.g:2108:1: ( '.' )
+            // InternalRails.g:2095:1: ( ( '.' ) )
+            // InternalRails.g:2096:1: ( '.' )
             {
-            // InternalRails.g:2108:1: ( '.' )
-            // InternalRails.g:2109:1: '.'
+            // InternalRails.g:2096:1: ( '.' )
+            // InternalRails.g:2097:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getFullStopKeyword_1_0()); 
@@ -6710,14 +6710,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group_1__1"
-    // InternalRails.g:2122:1: rule__MethodChainCall__Group_1__1 : rule__MethodChainCall__Group_1__1__Impl rule__MethodChainCall__Group_1__2 ;
+    // InternalRails.g:2110:1: rule__MethodChainCall__Group_1__1 : rule__MethodChainCall__Group_1__1__Impl rule__MethodChainCall__Group_1__2 ;
     public final void rule__MethodChainCall__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2126:1: ( rule__MethodChainCall__Group_1__1__Impl rule__MethodChainCall__Group_1__2 )
-            // InternalRails.g:2127:2: rule__MethodChainCall__Group_1__1__Impl rule__MethodChainCall__Group_1__2
+            // InternalRails.g:2114:1: ( rule__MethodChainCall__Group_1__1__Impl rule__MethodChainCall__Group_1__2 )
+            // InternalRails.g:2115:2: rule__MethodChainCall__Group_1__1__Impl rule__MethodChainCall__Group_1__2
             {
             pushFollow(FOLLOW_14);
             rule__MethodChainCall__Group_1__1__Impl();
@@ -6748,17 +6748,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group_1__1__Impl"
-    // InternalRails.g:2134:1: rule__MethodChainCall__Group_1__1__Impl : ( RULE_ID ) ;
+    // InternalRails.g:2122:1: rule__MethodChainCall__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__MethodChainCall__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2138:1: ( ( RULE_ID ) )
-            // InternalRails.g:2139:1: ( RULE_ID )
+            // InternalRails.g:2126:1: ( ( RULE_ID ) )
+            // InternalRails.g:2127:1: ( RULE_ID )
             {
-            // InternalRails.g:2139:1: ( RULE_ID )
-            // InternalRails.g:2140:1: RULE_ID
+            // InternalRails.g:2127:1: ( RULE_ID )
+            // InternalRails.g:2128:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getIDTerminalRuleCall_1_1()); 
@@ -6789,14 +6789,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group_1__2"
-    // InternalRails.g:2151:1: rule__MethodChainCall__Group_1__2 : rule__MethodChainCall__Group_1__2__Impl ;
+    // InternalRails.g:2139:1: rule__MethodChainCall__Group_1__2 : rule__MethodChainCall__Group_1__2__Impl ;
     public final void rule__MethodChainCall__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2155:1: ( rule__MethodChainCall__Group_1__2__Impl )
-            // InternalRails.g:2156:2: rule__MethodChainCall__Group_1__2__Impl
+            // InternalRails.g:2143:1: ( rule__MethodChainCall__Group_1__2__Impl )
+            // InternalRails.g:2144:2: rule__MethodChainCall__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MethodChainCall__Group_1__2__Impl();
@@ -6822,22 +6822,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodChainCall__Group_1__2__Impl"
-    // InternalRails.g:2162:1: rule__MethodChainCall__Group_1__2__Impl : ( ( RULE_PARENTHESIS_BLOCK )? ) ;
+    // InternalRails.g:2150:1: rule__MethodChainCall__Group_1__2__Impl : ( ( RULE_PARENTHESIS_BLOCK )? ) ;
     public final void rule__MethodChainCall__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2166:1: ( ( ( RULE_PARENTHESIS_BLOCK )? ) )
-            // InternalRails.g:2167:1: ( ( RULE_PARENTHESIS_BLOCK )? )
+            // InternalRails.g:2154:1: ( ( ( RULE_PARENTHESIS_BLOCK )? ) )
+            // InternalRails.g:2155:1: ( ( RULE_PARENTHESIS_BLOCK )? )
             {
-            // InternalRails.g:2167:1: ( ( RULE_PARENTHESIS_BLOCK )? )
-            // InternalRails.g:2168:1: ( RULE_PARENTHESIS_BLOCK )?
+            // InternalRails.g:2155:1: ( ( RULE_PARENTHESIS_BLOCK )? )
+            // InternalRails.g:2156:1: ( RULE_PARENTHESIS_BLOCK )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodChainCallAccess().getPARENTHESIS_BLOCKTerminalRuleCall_1_2()); 
             }
-            // InternalRails.g:2169:1: ( RULE_PARENTHESIS_BLOCK )?
+            // InternalRails.g:2157:1: ( RULE_PARENTHESIS_BLOCK )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -6850,7 +6850,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalRails.g:2169:3: RULE_PARENTHESIS_BLOCK
+                    // InternalRails.g:2157:3: RULE_PARENTHESIS_BLOCK
                     {
                     match(input,RULE_PARENTHESIS_BLOCK,FOLLOW_2); if (state.failed) return ;
 
@@ -6884,14 +6884,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group__0"
-    // InternalRails.g:2185:1: rule__ExpressionsSeparatedByCommas__Group__0 : rule__ExpressionsSeparatedByCommas__Group__0__Impl rule__ExpressionsSeparatedByCommas__Group__1 ;
+    // InternalRails.g:2173:1: rule__ExpressionsSeparatedByCommas__Group__0 : rule__ExpressionsSeparatedByCommas__Group__0__Impl rule__ExpressionsSeparatedByCommas__Group__1 ;
     public final void rule__ExpressionsSeparatedByCommas__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2189:1: ( rule__ExpressionsSeparatedByCommas__Group__0__Impl rule__ExpressionsSeparatedByCommas__Group__1 )
-            // InternalRails.g:2190:2: rule__ExpressionsSeparatedByCommas__Group__0__Impl rule__ExpressionsSeparatedByCommas__Group__1
+            // InternalRails.g:2177:1: ( rule__ExpressionsSeparatedByCommas__Group__0__Impl rule__ExpressionsSeparatedByCommas__Group__1 )
+            // InternalRails.g:2178:2: rule__ExpressionsSeparatedByCommas__Group__0__Impl rule__ExpressionsSeparatedByCommas__Group__1
             {
             pushFollow(FOLLOW_15);
             rule__ExpressionsSeparatedByCommas__Group__0__Impl();
@@ -6922,17 +6922,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group__0__Impl"
-    // InternalRails.g:2197:1: rule__ExpressionsSeparatedByCommas__Group__0__Impl : ( ruleExpressionWithOutBracket ) ;
+    // InternalRails.g:2185:1: rule__ExpressionsSeparatedByCommas__Group__0__Impl : ( ruleExpressionWithOutBracket ) ;
     public final void rule__ExpressionsSeparatedByCommas__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2201:1: ( ( ruleExpressionWithOutBracket ) )
-            // InternalRails.g:2202:1: ( ruleExpressionWithOutBracket )
+            // InternalRails.g:2189:1: ( ( ruleExpressionWithOutBracket ) )
+            // InternalRails.g:2190:1: ( ruleExpressionWithOutBracket )
             {
-            // InternalRails.g:2202:1: ( ruleExpressionWithOutBracket )
-            // InternalRails.g:2203:1: ruleExpressionWithOutBracket
+            // InternalRails.g:2190:1: ( ruleExpressionWithOutBracket )
+            // InternalRails.g:2191:1: ruleExpressionWithOutBracket
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionsSeparatedByCommasAccess().getExpressionWithOutBracketParserRuleCall_0()); 
@@ -6967,14 +6967,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group__1"
-    // InternalRails.g:2214:1: rule__ExpressionsSeparatedByCommas__Group__1 : rule__ExpressionsSeparatedByCommas__Group__1__Impl ;
+    // InternalRails.g:2202:1: rule__ExpressionsSeparatedByCommas__Group__1 : rule__ExpressionsSeparatedByCommas__Group__1__Impl ;
     public final void rule__ExpressionsSeparatedByCommas__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2218:1: ( rule__ExpressionsSeparatedByCommas__Group__1__Impl )
-            // InternalRails.g:2219:2: rule__ExpressionsSeparatedByCommas__Group__1__Impl
+            // InternalRails.g:2206:1: ( rule__ExpressionsSeparatedByCommas__Group__1__Impl )
+            // InternalRails.g:2207:2: rule__ExpressionsSeparatedByCommas__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpressionsSeparatedByCommas__Group__1__Impl();
@@ -7000,22 +7000,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group__1__Impl"
-    // InternalRails.g:2225:1: rule__ExpressionsSeparatedByCommas__Group__1__Impl : ( ( rule__ExpressionsSeparatedByCommas__Group_1__0 )* ) ;
+    // InternalRails.g:2213:1: rule__ExpressionsSeparatedByCommas__Group__1__Impl : ( ( rule__ExpressionsSeparatedByCommas__Group_1__0 )* ) ;
     public final void rule__ExpressionsSeparatedByCommas__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2229:1: ( ( ( rule__ExpressionsSeparatedByCommas__Group_1__0 )* ) )
-            // InternalRails.g:2230:1: ( ( rule__ExpressionsSeparatedByCommas__Group_1__0 )* )
+            // InternalRails.g:2217:1: ( ( ( rule__ExpressionsSeparatedByCommas__Group_1__0 )* ) )
+            // InternalRails.g:2218:1: ( ( rule__ExpressionsSeparatedByCommas__Group_1__0 )* )
             {
-            // InternalRails.g:2230:1: ( ( rule__ExpressionsSeparatedByCommas__Group_1__0 )* )
-            // InternalRails.g:2231:1: ( rule__ExpressionsSeparatedByCommas__Group_1__0 )*
+            // InternalRails.g:2218:1: ( ( rule__ExpressionsSeparatedByCommas__Group_1__0 )* )
+            // InternalRails.g:2219:1: ( rule__ExpressionsSeparatedByCommas__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionsSeparatedByCommasAccess().getGroup_1()); 
             }
-            // InternalRails.g:2232:1: ( rule__ExpressionsSeparatedByCommas__Group_1__0 )*
+            // InternalRails.g:2220:1: ( rule__ExpressionsSeparatedByCommas__Group_1__0 )*
             loop35:
             do {
                 int alt35=2;
@@ -7043,7 +7043,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt35) {
             	case 1 :
-            	    // InternalRails.g:2232:2: rule__ExpressionsSeparatedByCommas__Group_1__0
+            	    // InternalRails.g:2220:2: rule__ExpressionsSeparatedByCommas__Group_1__0
             	    {
             	    pushFollow(FOLLOW_16);
             	    rule__ExpressionsSeparatedByCommas__Group_1__0();
@@ -7084,14 +7084,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__0"
-    // InternalRails.g:2246:1: rule__ExpressionsSeparatedByCommas__Group_1__0 : rule__ExpressionsSeparatedByCommas__Group_1__0__Impl rule__ExpressionsSeparatedByCommas__Group_1__1 ;
+    // InternalRails.g:2234:1: rule__ExpressionsSeparatedByCommas__Group_1__0 : rule__ExpressionsSeparatedByCommas__Group_1__0__Impl rule__ExpressionsSeparatedByCommas__Group_1__1 ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2250:1: ( rule__ExpressionsSeparatedByCommas__Group_1__0__Impl rule__ExpressionsSeparatedByCommas__Group_1__1 )
-            // InternalRails.g:2251:2: rule__ExpressionsSeparatedByCommas__Group_1__0__Impl rule__ExpressionsSeparatedByCommas__Group_1__1
+            // InternalRails.g:2238:1: ( rule__ExpressionsSeparatedByCommas__Group_1__0__Impl rule__ExpressionsSeparatedByCommas__Group_1__1 )
+            // InternalRails.g:2239:2: rule__ExpressionsSeparatedByCommas__Group_1__0__Impl rule__ExpressionsSeparatedByCommas__Group_1__1
             {
             pushFollow(FOLLOW_15);
             rule__ExpressionsSeparatedByCommas__Group_1__0__Impl();
@@ -7122,22 +7122,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__0__Impl"
-    // InternalRails.g:2258:1: rule__ExpressionsSeparatedByCommas__Group_1__0__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2246:1: rule__ExpressionsSeparatedByCommas__Group_1__0__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2262:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2263:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2250:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2251:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2263:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2264:1: ( RULE_SPACE )*
+            // InternalRails.g:2251:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2252:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionsSeparatedByCommasAccess().getSPACETerminalRuleCall_1_0()); 
             }
-            // InternalRails.g:2265:1: ( RULE_SPACE )*
+            // InternalRails.g:2253:1: ( RULE_SPACE )*
             loop36:
             do {
                 int alt36=2;
@@ -7150,7 +7150,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt36) {
             	case 1 :
-            	    // InternalRails.g:2265:3: RULE_SPACE
+            	    // InternalRails.g:2253:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -7187,14 +7187,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__1"
-    // InternalRails.g:2275:1: rule__ExpressionsSeparatedByCommas__Group_1__1 : rule__ExpressionsSeparatedByCommas__Group_1__1__Impl rule__ExpressionsSeparatedByCommas__Group_1__2 ;
+    // InternalRails.g:2263:1: rule__ExpressionsSeparatedByCommas__Group_1__1 : rule__ExpressionsSeparatedByCommas__Group_1__1__Impl rule__ExpressionsSeparatedByCommas__Group_1__2 ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2279:1: ( rule__ExpressionsSeparatedByCommas__Group_1__1__Impl rule__ExpressionsSeparatedByCommas__Group_1__2 )
-            // InternalRails.g:2280:2: rule__ExpressionsSeparatedByCommas__Group_1__1__Impl rule__ExpressionsSeparatedByCommas__Group_1__2
+            // InternalRails.g:2267:1: ( rule__ExpressionsSeparatedByCommas__Group_1__1__Impl rule__ExpressionsSeparatedByCommas__Group_1__2 )
+            // InternalRails.g:2268:2: rule__ExpressionsSeparatedByCommas__Group_1__1__Impl rule__ExpressionsSeparatedByCommas__Group_1__2
             {
             pushFollow(FOLLOW_17);
             rule__ExpressionsSeparatedByCommas__Group_1__1__Impl();
@@ -7225,17 +7225,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__1__Impl"
-    // InternalRails.g:2287:1: rule__ExpressionsSeparatedByCommas__Group_1__1__Impl : ( RULE_COMMA ) ;
+    // InternalRails.g:2275:1: rule__ExpressionsSeparatedByCommas__Group_1__1__Impl : ( RULE_COMMA ) ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2291:1: ( ( RULE_COMMA ) )
-            // InternalRails.g:2292:1: ( RULE_COMMA )
+            // InternalRails.g:2279:1: ( ( RULE_COMMA ) )
+            // InternalRails.g:2280:1: ( RULE_COMMA )
             {
-            // InternalRails.g:2292:1: ( RULE_COMMA )
-            // InternalRails.g:2293:1: RULE_COMMA
+            // InternalRails.g:2280:1: ( RULE_COMMA )
+            // InternalRails.g:2281:1: RULE_COMMA
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionsSeparatedByCommasAccess().getCOMMATerminalRuleCall_1_1()); 
@@ -7266,14 +7266,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__2"
-    // InternalRails.g:2304:1: rule__ExpressionsSeparatedByCommas__Group_1__2 : rule__ExpressionsSeparatedByCommas__Group_1__2__Impl rule__ExpressionsSeparatedByCommas__Group_1__3 ;
+    // InternalRails.g:2292:1: rule__ExpressionsSeparatedByCommas__Group_1__2 : rule__ExpressionsSeparatedByCommas__Group_1__2__Impl rule__ExpressionsSeparatedByCommas__Group_1__3 ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2308:1: ( rule__ExpressionsSeparatedByCommas__Group_1__2__Impl rule__ExpressionsSeparatedByCommas__Group_1__3 )
-            // InternalRails.g:2309:2: rule__ExpressionsSeparatedByCommas__Group_1__2__Impl rule__ExpressionsSeparatedByCommas__Group_1__3
+            // InternalRails.g:2296:1: ( rule__ExpressionsSeparatedByCommas__Group_1__2__Impl rule__ExpressionsSeparatedByCommas__Group_1__3 )
+            // InternalRails.g:2297:2: rule__ExpressionsSeparatedByCommas__Group_1__2__Impl rule__ExpressionsSeparatedByCommas__Group_1__3
             {
             pushFollow(FOLLOW_17);
             rule__ExpressionsSeparatedByCommas__Group_1__2__Impl();
@@ -7304,27 +7304,27 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__2__Impl"
-    // InternalRails.g:2316:1: rule__ExpressionsSeparatedByCommas__Group_1__2__Impl : ( ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )? ) ;
+    // InternalRails.g:2304:1: rule__ExpressionsSeparatedByCommas__Group_1__2__Impl : ( ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )? ) ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2320:1: ( ( ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )? ) )
-            // InternalRails.g:2321:1: ( ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )? )
+            // InternalRails.g:2308:1: ( ( ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )? ) )
+            // InternalRails.g:2309:1: ( ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )? )
             {
-            // InternalRails.g:2321:1: ( ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )? )
-            // InternalRails.g:2322:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )?
+            // InternalRails.g:2309:1: ( ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )? )
+            // InternalRails.g:2310:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionsSeparatedByCommasAccess().getGroup_1_2()); 
             }
-            // InternalRails.g:2323:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )?
+            // InternalRails.g:2311:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )?
             int alt37=2;
             alt37 = dfa37.predict(input);
             switch (alt37) {
                 case 1 :
-                    // InternalRails.g:2323:2: rule__ExpressionsSeparatedByCommas__Group_1_2__0
+                    // InternalRails.g:2311:2: rule__ExpressionsSeparatedByCommas__Group_1_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ExpressionsSeparatedByCommas__Group_1_2__0();
@@ -7362,14 +7362,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__3"
-    // InternalRails.g:2333:1: rule__ExpressionsSeparatedByCommas__Group_1__3 : rule__ExpressionsSeparatedByCommas__Group_1__3__Impl rule__ExpressionsSeparatedByCommas__Group_1__4 ;
+    // InternalRails.g:2321:1: rule__ExpressionsSeparatedByCommas__Group_1__3 : rule__ExpressionsSeparatedByCommas__Group_1__3__Impl rule__ExpressionsSeparatedByCommas__Group_1__4 ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2337:1: ( rule__ExpressionsSeparatedByCommas__Group_1__3__Impl rule__ExpressionsSeparatedByCommas__Group_1__4 )
-            // InternalRails.g:2338:2: rule__ExpressionsSeparatedByCommas__Group_1__3__Impl rule__ExpressionsSeparatedByCommas__Group_1__4
+            // InternalRails.g:2325:1: ( rule__ExpressionsSeparatedByCommas__Group_1__3__Impl rule__ExpressionsSeparatedByCommas__Group_1__4 )
+            // InternalRails.g:2326:2: rule__ExpressionsSeparatedByCommas__Group_1__3__Impl rule__ExpressionsSeparatedByCommas__Group_1__4
             {
             pushFollow(FOLLOW_17);
             rule__ExpressionsSeparatedByCommas__Group_1__3__Impl();
@@ -7400,22 +7400,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__3__Impl"
-    // InternalRails.g:2345:1: rule__ExpressionsSeparatedByCommas__Group_1__3__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2333:1: rule__ExpressionsSeparatedByCommas__Group_1__3__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2349:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2350:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2337:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2338:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2350:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2351:1: ( RULE_SPACE )*
+            // InternalRails.g:2338:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2339:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionsSeparatedByCommasAccess().getSPACETerminalRuleCall_1_3()); 
             }
-            // InternalRails.g:2352:1: ( RULE_SPACE )*
+            // InternalRails.g:2340:1: ( RULE_SPACE )*
             loop38:
             do {
                 int alt38=2;
@@ -7434,7 +7434,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt38) {
             	case 1 :
-            	    // InternalRails.g:2352:3: RULE_SPACE
+            	    // InternalRails.g:2340:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -7471,14 +7471,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__4"
-    // InternalRails.g:2362:1: rule__ExpressionsSeparatedByCommas__Group_1__4 : rule__ExpressionsSeparatedByCommas__Group_1__4__Impl ;
+    // InternalRails.g:2350:1: rule__ExpressionsSeparatedByCommas__Group_1__4 : rule__ExpressionsSeparatedByCommas__Group_1__4__Impl ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2366:1: ( rule__ExpressionsSeparatedByCommas__Group_1__4__Impl )
-            // InternalRails.g:2367:2: rule__ExpressionsSeparatedByCommas__Group_1__4__Impl
+            // InternalRails.g:2354:1: ( rule__ExpressionsSeparatedByCommas__Group_1__4__Impl )
+            // InternalRails.g:2355:2: rule__ExpressionsSeparatedByCommas__Group_1__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpressionsSeparatedByCommas__Group_1__4__Impl();
@@ -7504,17 +7504,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1__4__Impl"
-    // InternalRails.g:2373:1: rule__ExpressionsSeparatedByCommas__Group_1__4__Impl : ( ruleExpression ) ;
+    // InternalRails.g:2361:1: rule__ExpressionsSeparatedByCommas__Group_1__4__Impl : ( ruleExpression ) ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2377:1: ( ( ruleExpression ) )
-            // InternalRails.g:2378:1: ( ruleExpression )
+            // InternalRails.g:2365:1: ( ( ruleExpression ) )
+            // InternalRails.g:2366:1: ( ruleExpression )
             {
-            // InternalRails.g:2378:1: ( ruleExpression )
-            // InternalRails.g:2379:1: ruleExpression
+            // InternalRails.g:2366:1: ( ruleExpression )
+            // InternalRails.g:2367:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionsSeparatedByCommasAccess().getExpressionParserRuleCall_1_4()); 
@@ -7549,14 +7549,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1_2__0"
-    // InternalRails.g:2400:1: rule__ExpressionsSeparatedByCommas__Group_1_2__0 : rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl rule__ExpressionsSeparatedByCommas__Group_1_2__1 ;
+    // InternalRails.g:2388:1: rule__ExpressionsSeparatedByCommas__Group_1_2__0 : rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl rule__ExpressionsSeparatedByCommas__Group_1_2__1 ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2404:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl rule__ExpressionsSeparatedByCommas__Group_1_2__1 )
-            // InternalRails.g:2405:2: rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl rule__ExpressionsSeparatedByCommas__Group_1_2__1
+            // InternalRails.g:2392:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl rule__ExpressionsSeparatedByCommas__Group_1_2__1 )
+            // InternalRails.g:2393:2: rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl rule__ExpressionsSeparatedByCommas__Group_1_2__1
             {
             pushFollow(FOLLOW_18);
             rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl();
@@ -7587,22 +7587,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl"
-    // InternalRails.g:2412:1: rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2400:1: rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2416:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2417:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2404:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2405:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2417:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2418:1: ( RULE_SPACE )*
+            // InternalRails.g:2405:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2406:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionsSeparatedByCommasAccess().getSPACETerminalRuleCall_1_2_0()); 
             }
-            // InternalRails.g:2419:1: ( RULE_SPACE )*
+            // InternalRails.g:2407:1: ( RULE_SPACE )*
             loop39:
             do {
                 int alt39=2;
@@ -7615,7 +7615,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt39) {
             	case 1 :
-            	    // InternalRails.g:2419:3: RULE_SPACE
+            	    // InternalRails.g:2407:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -7652,14 +7652,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1_2__1"
-    // InternalRails.g:2429:1: rule__ExpressionsSeparatedByCommas__Group_1_2__1 : rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl ;
+    // InternalRails.g:2417:1: rule__ExpressionsSeparatedByCommas__Group_1_2__1 : rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2433:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl )
-            // InternalRails.g:2434:2: rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl
+            // InternalRails.g:2421:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl )
+            // InternalRails.g:2422:2: rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl();
@@ -7685,17 +7685,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl"
-    // InternalRails.g:2440:1: rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl : ( RULE_LF ) ;
+    // InternalRails.g:2428:1: rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl : ( RULE_LF ) ;
     public final void rule__ExpressionsSeparatedByCommas__Group_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2444:1: ( ( RULE_LF ) )
-            // InternalRails.g:2445:1: ( RULE_LF )
+            // InternalRails.g:2432:1: ( ( RULE_LF ) )
+            // InternalRails.g:2433:1: ( RULE_LF )
             {
-            // InternalRails.g:2445:1: ( RULE_LF )
-            // InternalRails.g:2446:1: RULE_LF
+            // InternalRails.g:2433:1: ( RULE_LF )
+            // InternalRails.g:2434:1: RULE_LF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionsSeparatedByCommasAccess().getLFTerminalRuleCall_1_2_1()); 
@@ -7726,14 +7726,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__0"
-    // InternalRails.g:2461:1: rule__Relationship__Group__0 : rule__Relationship__Group__0__Impl rule__Relationship__Group__1 ;
+    // InternalRails.g:2449:1: rule__Relationship__Group__0 : rule__Relationship__Group__0__Impl rule__Relationship__Group__1 ;
     public final void rule__Relationship__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2465:1: ( rule__Relationship__Group__0__Impl rule__Relationship__Group__1 )
-            // InternalRails.g:2466:2: rule__Relationship__Group__0__Impl rule__Relationship__Group__1
+            // InternalRails.g:2453:1: ( rule__Relationship__Group__0__Impl rule__Relationship__Group__1 )
+            // InternalRails.g:2454:2: rule__Relationship__Group__0__Impl rule__Relationship__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__Relationship__Group__0__Impl();
@@ -7764,23 +7764,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__0__Impl"
-    // InternalRails.g:2473:1: rule__Relationship__Group__0__Impl : ( ( rule__Relationship__RelationTypeAssignment_0 ) ) ;
+    // InternalRails.g:2461:1: rule__Relationship__Group__0__Impl : ( ( rule__Relationship__RelationTypeAssignment_0 ) ) ;
     public final void rule__Relationship__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2477:1: ( ( ( rule__Relationship__RelationTypeAssignment_0 ) ) )
-            // InternalRails.g:2478:1: ( ( rule__Relationship__RelationTypeAssignment_0 ) )
+            // InternalRails.g:2465:1: ( ( ( rule__Relationship__RelationTypeAssignment_0 ) ) )
+            // InternalRails.g:2466:1: ( ( rule__Relationship__RelationTypeAssignment_0 ) )
             {
-            // InternalRails.g:2478:1: ( ( rule__Relationship__RelationTypeAssignment_0 ) )
-            // InternalRails.g:2479:1: ( rule__Relationship__RelationTypeAssignment_0 )
+            // InternalRails.g:2466:1: ( ( rule__Relationship__RelationTypeAssignment_0 ) )
+            // InternalRails.g:2467:1: ( rule__Relationship__RelationTypeAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationshipAccess().getRelationTypeAssignment_0()); 
             }
-            // InternalRails.g:2480:1: ( rule__Relationship__RelationTypeAssignment_0 )
-            // InternalRails.g:2480:2: rule__Relationship__RelationTypeAssignment_0
+            // InternalRails.g:2468:1: ( rule__Relationship__RelationTypeAssignment_0 )
+            // InternalRails.g:2468:2: rule__Relationship__RelationTypeAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__RelationTypeAssignment_0();
@@ -7815,14 +7815,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__1"
-    // InternalRails.g:2490:1: rule__Relationship__Group__1 : rule__Relationship__Group__1__Impl rule__Relationship__Group__2 ;
+    // InternalRails.g:2478:1: rule__Relationship__Group__1 : rule__Relationship__Group__1__Impl rule__Relationship__Group__2 ;
     public final void rule__Relationship__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2494:1: ( rule__Relationship__Group__1__Impl rule__Relationship__Group__2 )
-            // InternalRails.g:2495:2: rule__Relationship__Group__1__Impl rule__Relationship__Group__2
+            // InternalRails.g:2482:1: ( rule__Relationship__Group__1__Impl rule__Relationship__Group__2 )
+            // InternalRails.g:2483:2: rule__Relationship__Group__1__Impl rule__Relationship__Group__2
             {
             pushFollow(FOLLOW_19);
             rule__Relationship__Group__1__Impl();
@@ -7853,22 +7853,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__1__Impl"
-    // InternalRails.g:2502:1: rule__Relationship__Group__1__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2490:1: rule__Relationship__Group__1__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__Relationship__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2506:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2507:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2494:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2495:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2507:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2508:1: ( RULE_SPACE )*
+            // InternalRails.g:2495:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2496:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationshipAccess().getSPACETerminalRuleCall_1()); 
             }
-            // InternalRails.g:2509:1: ( RULE_SPACE )*
+            // InternalRails.g:2497:1: ( RULE_SPACE )*
             loop40:
             do {
                 int alt40=2;
@@ -7881,7 +7881,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt40) {
             	case 1 :
-            	    // InternalRails.g:2509:3: RULE_SPACE
+            	    // InternalRails.g:2497:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -7918,14 +7918,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__2"
-    // InternalRails.g:2519:1: rule__Relationship__Group__2 : rule__Relationship__Group__2__Impl rule__Relationship__Group__3 ;
+    // InternalRails.g:2507:1: rule__Relationship__Group__2 : rule__Relationship__Group__2__Impl rule__Relationship__Group__3 ;
     public final void rule__Relationship__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2523:1: ( rule__Relationship__Group__2__Impl rule__Relationship__Group__3 )
-            // InternalRails.g:2524:2: rule__Relationship__Group__2__Impl rule__Relationship__Group__3
+            // InternalRails.g:2511:1: ( rule__Relationship__Group__2__Impl rule__Relationship__Group__3 )
+            // InternalRails.g:2512:2: rule__Relationship__Group__2__Impl rule__Relationship__Group__3
             {
             pushFollow(FOLLOW_15);
             rule__Relationship__Group__2__Impl();
@@ -7956,23 +7956,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__2__Impl"
-    // InternalRails.g:2531:1: rule__Relationship__Group__2__Impl : ( ( rule__Relationship__NameAssignment_2 ) ) ;
+    // InternalRails.g:2519:1: rule__Relationship__Group__2__Impl : ( ( rule__Relationship__NameAssignment_2 ) ) ;
     public final void rule__Relationship__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2535:1: ( ( ( rule__Relationship__NameAssignment_2 ) ) )
-            // InternalRails.g:2536:1: ( ( rule__Relationship__NameAssignment_2 ) )
+            // InternalRails.g:2523:1: ( ( ( rule__Relationship__NameAssignment_2 ) ) )
+            // InternalRails.g:2524:1: ( ( rule__Relationship__NameAssignment_2 ) )
             {
-            // InternalRails.g:2536:1: ( ( rule__Relationship__NameAssignment_2 ) )
-            // InternalRails.g:2537:1: ( rule__Relationship__NameAssignment_2 )
+            // InternalRails.g:2524:1: ( ( rule__Relationship__NameAssignment_2 ) )
+            // InternalRails.g:2525:1: ( rule__Relationship__NameAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationshipAccess().getNameAssignment_2()); 
             }
-            // InternalRails.g:2538:1: ( rule__Relationship__NameAssignment_2 )
-            // InternalRails.g:2538:2: rule__Relationship__NameAssignment_2
+            // InternalRails.g:2526:1: ( rule__Relationship__NameAssignment_2 )
+            // InternalRails.g:2526:2: rule__Relationship__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__NameAssignment_2();
@@ -8007,14 +8007,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__3"
-    // InternalRails.g:2548:1: rule__Relationship__Group__3 : rule__Relationship__Group__3__Impl rule__Relationship__Group__4 ;
+    // InternalRails.g:2536:1: rule__Relationship__Group__3 : rule__Relationship__Group__3__Impl rule__Relationship__Group__4 ;
     public final void rule__Relationship__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2552:1: ( rule__Relationship__Group__3__Impl rule__Relationship__Group__4 )
-            // InternalRails.g:2553:2: rule__Relationship__Group__3__Impl rule__Relationship__Group__4
+            // InternalRails.g:2540:1: ( rule__Relationship__Group__3__Impl rule__Relationship__Group__4 )
+            // InternalRails.g:2541:2: rule__Relationship__Group__3__Impl rule__Relationship__Group__4
             {
             pushFollow(FOLLOW_15);
             rule__Relationship__Group__3__Impl();
@@ -8045,22 +8045,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__3__Impl"
-    // InternalRails.g:2560:1: rule__Relationship__Group__3__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2548:1: rule__Relationship__Group__3__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__Relationship__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2564:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2565:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2552:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2553:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2565:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2566:1: ( RULE_SPACE )*
+            // InternalRails.g:2553:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2554:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationshipAccess().getSPACETerminalRuleCall_3()); 
             }
-            // InternalRails.g:2567:1: ( RULE_SPACE )*
+            // InternalRails.g:2555:1: ( RULE_SPACE )*
             loop41:
             do {
                 int alt41=2;
@@ -8073,7 +8073,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt41) {
             	case 1 :
-            	    // InternalRails.g:2567:3: RULE_SPACE
+            	    // InternalRails.g:2555:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -8110,14 +8110,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__4"
-    // InternalRails.g:2577:1: rule__Relationship__Group__4 : rule__Relationship__Group__4__Impl ;
+    // InternalRails.g:2565:1: rule__Relationship__Group__4 : rule__Relationship__Group__4__Impl ;
     public final void rule__Relationship__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2581:1: ( rule__Relationship__Group__4__Impl )
-            // InternalRails.g:2582:2: rule__Relationship__Group__4__Impl
+            // InternalRails.g:2569:1: ( rule__Relationship__Group__4__Impl )
+            // InternalRails.g:2570:2: rule__Relationship__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__Group__4__Impl();
@@ -8143,22 +8143,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__Group__4__Impl"
-    // InternalRails.g:2588:1: rule__Relationship__Group__4__Impl : ( ( rule__Relationship__OptionsAssignment_4 )* ) ;
+    // InternalRails.g:2576:1: rule__Relationship__Group__4__Impl : ( ( rule__Relationship__OptionsAssignment_4 )* ) ;
     public final void rule__Relationship__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2592:1: ( ( ( rule__Relationship__OptionsAssignment_4 )* ) )
-            // InternalRails.g:2593:1: ( ( rule__Relationship__OptionsAssignment_4 )* )
+            // InternalRails.g:2580:1: ( ( ( rule__Relationship__OptionsAssignment_4 )* ) )
+            // InternalRails.g:2581:1: ( ( rule__Relationship__OptionsAssignment_4 )* )
             {
-            // InternalRails.g:2593:1: ( ( rule__Relationship__OptionsAssignment_4 )* )
-            // InternalRails.g:2594:1: ( rule__Relationship__OptionsAssignment_4 )*
+            // InternalRails.g:2581:1: ( ( rule__Relationship__OptionsAssignment_4 )* )
+            // InternalRails.g:2582:1: ( rule__Relationship__OptionsAssignment_4 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationshipAccess().getOptionsAssignment_4()); 
             }
-            // InternalRails.g:2595:1: ( rule__Relationship__OptionsAssignment_4 )*
+            // InternalRails.g:2583:1: ( rule__Relationship__OptionsAssignment_4 )*
             loop42:
             do {
                 int alt42=2;
@@ -8171,7 +8171,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt42) {
             	case 1 :
-            	    // InternalRails.g:2595:2: rule__Relationship__OptionsAssignment_4
+            	    // InternalRails.g:2583:2: rule__Relationship__OptionsAssignment_4
             	    {
             	    pushFollow(FOLLOW_20);
             	    rule__Relationship__OptionsAssignment_4();
@@ -8212,14 +8212,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__0"
-    // InternalRails.g:2619:1: rule__HashKeyValue__Group__0 : rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1 ;
+    // InternalRails.g:2603:1: rule__HashKeyValue__Group__0 : rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1 ;
     public final void rule__HashKeyValue__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2623:1: ( rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1 )
-            // InternalRails.g:2624:2: rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1
+            // InternalRails.g:2607:1: ( rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1 )
+            // InternalRails.g:2608:2: rule__HashKeyValue__Group__0__Impl rule__HashKeyValue__Group__1
             {
             pushFollow(FOLLOW_21);
             rule__HashKeyValue__Group__0__Impl();
@@ -8250,17 +8250,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__0__Impl"
-    // InternalRails.g:2631:1: rule__HashKeyValue__Group__0__Impl : ( RULE_COMMA ) ;
+    // InternalRails.g:2615:1: rule__HashKeyValue__Group__0__Impl : ( RULE_COMMA ) ;
     public final void rule__HashKeyValue__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2635:1: ( ( RULE_COMMA ) )
-            // InternalRails.g:2636:1: ( RULE_COMMA )
+            // InternalRails.g:2619:1: ( ( RULE_COMMA ) )
+            // InternalRails.g:2620:1: ( RULE_COMMA )
             {
-            // InternalRails.g:2636:1: ( RULE_COMMA )
-            // InternalRails.g:2637:1: RULE_COMMA
+            // InternalRails.g:2620:1: ( RULE_COMMA )
+            // InternalRails.g:2621:1: RULE_COMMA
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getCOMMATerminalRuleCall_0()); 
@@ -8291,14 +8291,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__1"
-    // InternalRails.g:2648:1: rule__HashKeyValue__Group__1 : rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2 ;
+    // InternalRails.g:2632:1: rule__HashKeyValue__Group__1 : rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2 ;
     public final void rule__HashKeyValue__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2652:1: ( rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2 )
-            // InternalRails.g:2653:2: rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2
+            // InternalRails.g:2636:1: ( rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2 )
+            // InternalRails.g:2637:2: rule__HashKeyValue__Group__1__Impl rule__HashKeyValue__Group__2
             {
             pushFollow(FOLLOW_21);
             rule__HashKeyValue__Group__1__Impl();
@@ -8329,22 +8329,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__1__Impl"
-    // InternalRails.g:2660:1: rule__HashKeyValue__Group__1__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2644:1: rule__HashKeyValue__Group__1__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__HashKeyValue__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2664:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2665:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2648:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2649:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2665:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2666:1: ( RULE_SPACE )*
+            // InternalRails.g:2649:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2650:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_1()); 
             }
-            // InternalRails.g:2667:1: ( RULE_SPACE )*
+            // InternalRails.g:2651:1: ( RULE_SPACE )*
             loop43:
             do {
                 int alt43=2;
@@ -8357,7 +8357,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt43) {
             	case 1 :
-            	    // InternalRails.g:2667:3: RULE_SPACE
+            	    // InternalRails.g:2651:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -8394,14 +8394,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__2"
-    // InternalRails.g:2677:1: rule__HashKeyValue__Group__2 : rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3 ;
+    // InternalRails.g:2661:1: rule__HashKeyValue__Group__2 : rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3 ;
     public final void rule__HashKeyValue__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2681:1: ( rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3 )
-            // InternalRails.g:2682:2: rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3
+            // InternalRails.g:2665:1: ( rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3 )
+            // InternalRails.g:2666:2: rule__HashKeyValue__Group__2__Impl rule__HashKeyValue__Group__3
             {
             pushFollow(FOLLOW_21);
             rule__HashKeyValue__Group__2__Impl();
@@ -8432,22 +8432,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__2__Impl"
-    // InternalRails.g:2689:1: rule__HashKeyValue__Group__2__Impl : ( ( rule__HashKeyValue__Group_2__0 )? ) ;
+    // InternalRails.g:2673:1: rule__HashKeyValue__Group__2__Impl : ( ( rule__HashKeyValue__Group_2__0 )? ) ;
     public final void rule__HashKeyValue__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2693:1: ( ( ( rule__HashKeyValue__Group_2__0 )? ) )
-            // InternalRails.g:2694:1: ( ( rule__HashKeyValue__Group_2__0 )? )
+            // InternalRails.g:2677:1: ( ( ( rule__HashKeyValue__Group_2__0 )? ) )
+            // InternalRails.g:2678:1: ( ( rule__HashKeyValue__Group_2__0 )? )
             {
-            // InternalRails.g:2694:1: ( ( rule__HashKeyValue__Group_2__0 )? )
-            // InternalRails.g:2695:1: ( rule__HashKeyValue__Group_2__0 )?
+            // InternalRails.g:2678:1: ( ( rule__HashKeyValue__Group_2__0 )? )
+            // InternalRails.g:2679:1: ( rule__HashKeyValue__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getGroup_2()); 
             }
-            // InternalRails.g:2696:1: ( rule__HashKeyValue__Group_2__0 )?
+            // InternalRails.g:2680:1: ( rule__HashKeyValue__Group_2__0 )?
             int alt44=2;
             int LA44_0 = input.LA(1);
 
@@ -8456,7 +8456,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt44) {
                 case 1 :
-                    // InternalRails.g:2696:2: rule__HashKeyValue__Group_2__0
+                    // InternalRails.g:2680:2: rule__HashKeyValue__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__HashKeyValue__Group_2__0();
@@ -8494,14 +8494,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__3"
-    // InternalRails.g:2706:1: rule__HashKeyValue__Group__3 : rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4 ;
+    // InternalRails.g:2690:1: rule__HashKeyValue__Group__3 : rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4 ;
     public final void rule__HashKeyValue__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2710:1: ( rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4 )
-            // InternalRails.g:2711:2: rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4
+            // InternalRails.g:2694:1: ( rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4 )
+            // InternalRails.g:2695:2: rule__HashKeyValue__Group__3__Impl rule__HashKeyValue__Group__4
             {
             pushFollow(FOLLOW_22);
             rule__HashKeyValue__Group__3__Impl();
@@ -8532,23 +8532,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__3__Impl"
-    // InternalRails.g:2718:1: rule__HashKeyValue__Group__3__Impl : ( ( rule__HashKeyValue__Alternatives_3 ) ) ;
+    // InternalRails.g:2702:1: rule__HashKeyValue__Group__3__Impl : ( ( rule__HashKeyValue__Alternatives_3 ) ) ;
     public final void rule__HashKeyValue__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2722:1: ( ( ( rule__HashKeyValue__Alternatives_3 ) ) )
-            // InternalRails.g:2723:1: ( ( rule__HashKeyValue__Alternatives_3 ) )
+            // InternalRails.g:2706:1: ( ( ( rule__HashKeyValue__Alternatives_3 ) ) )
+            // InternalRails.g:2707:1: ( ( rule__HashKeyValue__Alternatives_3 ) )
             {
-            // InternalRails.g:2723:1: ( ( rule__HashKeyValue__Alternatives_3 ) )
-            // InternalRails.g:2724:1: ( rule__HashKeyValue__Alternatives_3 )
+            // InternalRails.g:2707:1: ( ( rule__HashKeyValue__Alternatives_3 ) )
+            // InternalRails.g:2708:1: ( rule__HashKeyValue__Alternatives_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getAlternatives_3()); 
             }
-            // InternalRails.g:2725:1: ( rule__HashKeyValue__Alternatives_3 )
-            // InternalRails.g:2725:2: rule__HashKeyValue__Alternatives_3
+            // InternalRails.g:2709:1: ( rule__HashKeyValue__Alternatives_3 )
+            // InternalRails.g:2709:2: rule__HashKeyValue__Alternatives_3
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__Alternatives_3();
@@ -8583,14 +8583,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__4"
-    // InternalRails.g:2735:1: rule__HashKeyValue__Group__4 : rule__HashKeyValue__Group__4__Impl rule__HashKeyValue__Group__5 ;
+    // InternalRails.g:2719:1: rule__HashKeyValue__Group__4 : rule__HashKeyValue__Group__4__Impl rule__HashKeyValue__Group__5 ;
     public final void rule__HashKeyValue__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2739:1: ( rule__HashKeyValue__Group__4__Impl rule__HashKeyValue__Group__5 )
-            // InternalRails.g:2740:2: rule__HashKeyValue__Group__4__Impl rule__HashKeyValue__Group__5
+            // InternalRails.g:2723:1: ( rule__HashKeyValue__Group__4__Impl rule__HashKeyValue__Group__5 )
+            // InternalRails.g:2724:2: rule__HashKeyValue__Group__4__Impl rule__HashKeyValue__Group__5
             {
             pushFollow(FOLLOW_22);
             rule__HashKeyValue__Group__4__Impl();
@@ -8621,22 +8621,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__4__Impl"
-    // InternalRails.g:2747:1: rule__HashKeyValue__Group__4__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2731:1: rule__HashKeyValue__Group__4__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__HashKeyValue__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2751:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2752:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2735:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2736:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2752:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2753:1: ( RULE_SPACE )*
+            // InternalRails.g:2736:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2737:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_4()); 
             }
-            // InternalRails.g:2754:1: ( RULE_SPACE )*
+            // InternalRails.g:2738:1: ( RULE_SPACE )*
             loop45:
             do {
                 int alt45=2;
@@ -8649,7 +8649,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt45) {
             	case 1 :
-            	    // InternalRails.g:2754:3: RULE_SPACE
+            	    // InternalRails.g:2738:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -8686,14 +8686,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__5"
-    // InternalRails.g:2764:1: rule__HashKeyValue__Group__5 : rule__HashKeyValue__Group__5__Impl rule__HashKeyValue__Group__6 ;
+    // InternalRails.g:2748:1: rule__HashKeyValue__Group__5 : rule__HashKeyValue__Group__5__Impl rule__HashKeyValue__Group__6 ;
     public final void rule__HashKeyValue__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2768:1: ( rule__HashKeyValue__Group__5__Impl rule__HashKeyValue__Group__6 )
-            // InternalRails.g:2769:2: rule__HashKeyValue__Group__5__Impl rule__HashKeyValue__Group__6
+            // InternalRails.g:2752:1: ( rule__HashKeyValue__Group__5__Impl rule__HashKeyValue__Group__6 )
+            // InternalRails.g:2753:2: rule__HashKeyValue__Group__5__Impl rule__HashKeyValue__Group__6
             {
             pushFollow(FOLLOW_23);
             rule__HashKeyValue__Group__5__Impl();
@@ -8724,23 +8724,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__5__Impl"
-    // InternalRails.g:2776:1: rule__HashKeyValue__Group__5__Impl : ( ( rule__HashKeyValue__ValueAssignment_5 ) ) ;
+    // InternalRails.g:2760:1: rule__HashKeyValue__Group__5__Impl : ( ( rule__HashKeyValue__ValueAssignment_5 ) ) ;
     public final void rule__HashKeyValue__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2780:1: ( ( ( rule__HashKeyValue__ValueAssignment_5 ) ) )
-            // InternalRails.g:2781:1: ( ( rule__HashKeyValue__ValueAssignment_5 ) )
+            // InternalRails.g:2764:1: ( ( ( rule__HashKeyValue__ValueAssignment_5 ) ) )
+            // InternalRails.g:2765:1: ( ( rule__HashKeyValue__ValueAssignment_5 ) )
             {
-            // InternalRails.g:2781:1: ( ( rule__HashKeyValue__ValueAssignment_5 ) )
-            // InternalRails.g:2782:1: ( rule__HashKeyValue__ValueAssignment_5 )
+            // InternalRails.g:2765:1: ( ( rule__HashKeyValue__ValueAssignment_5 ) )
+            // InternalRails.g:2766:1: ( rule__HashKeyValue__ValueAssignment_5 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getValueAssignment_5()); 
             }
-            // InternalRails.g:2783:1: ( rule__HashKeyValue__ValueAssignment_5 )
-            // InternalRails.g:2783:2: rule__HashKeyValue__ValueAssignment_5
+            // InternalRails.g:2767:1: ( rule__HashKeyValue__ValueAssignment_5 )
+            // InternalRails.g:2767:2: rule__HashKeyValue__ValueAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__ValueAssignment_5();
@@ -8775,14 +8775,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__6"
-    // InternalRails.g:2793:1: rule__HashKeyValue__Group__6 : rule__HashKeyValue__Group__6__Impl ;
+    // InternalRails.g:2777:1: rule__HashKeyValue__Group__6 : rule__HashKeyValue__Group__6__Impl ;
     public final void rule__HashKeyValue__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2797:1: ( rule__HashKeyValue__Group__6__Impl )
-            // InternalRails.g:2798:2: rule__HashKeyValue__Group__6__Impl
+            // InternalRails.g:2781:1: ( rule__HashKeyValue__Group__6__Impl )
+            // InternalRails.g:2782:2: rule__HashKeyValue__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__Group__6__Impl();
@@ -8808,22 +8808,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group__6__Impl"
-    // InternalRails.g:2804:1: rule__HashKeyValue__Group__6__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2788:1: rule__HashKeyValue__Group__6__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__HashKeyValue__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2808:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2809:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2792:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2793:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2809:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2810:1: ( RULE_SPACE )*
+            // InternalRails.g:2793:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2794:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_6()); 
             }
-            // InternalRails.g:2811:1: ( RULE_SPACE )*
+            // InternalRails.g:2795:1: ( RULE_SPACE )*
             loop46:
             do {
                 int alt46=2;
@@ -8836,7 +8836,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt46) {
             	case 1 :
-            	    // InternalRails.g:2811:3: RULE_SPACE
+            	    // InternalRails.g:2795:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -8873,14 +8873,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2__0"
-    // InternalRails.g:2835:1: rule__HashKeyValue__Group_2__0 : rule__HashKeyValue__Group_2__0__Impl rule__HashKeyValue__Group_2__1 ;
+    // InternalRails.g:2819:1: rule__HashKeyValue__Group_2__0 : rule__HashKeyValue__Group_2__0__Impl rule__HashKeyValue__Group_2__1 ;
     public final void rule__HashKeyValue__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2839:1: ( rule__HashKeyValue__Group_2__0__Impl rule__HashKeyValue__Group_2__1 )
-            // InternalRails.g:2840:2: rule__HashKeyValue__Group_2__0__Impl rule__HashKeyValue__Group_2__1
+            // InternalRails.g:2823:1: ( rule__HashKeyValue__Group_2__0__Impl rule__HashKeyValue__Group_2__1 )
+            // InternalRails.g:2824:2: rule__HashKeyValue__Group_2__0__Impl rule__HashKeyValue__Group_2__1
             {
             pushFollow(FOLLOW_23);
             rule__HashKeyValue__Group_2__0__Impl();
@@ -8911,17 +8911,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2__0__Impl"
-    // InternalRails.g:2847:1: rule__HashKeyValue__Group_2__0__Impl : ( RULE_LF ) ;
+    // InternalRails.g:2831:1: rule__HashKeyValue__Group_2__0__Impl : ( RULE_LF ) ;
     public final void rule__HashKeyValue__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2851:1: ( ( RULE_LF ) )
-            // InternalRails.g:2852:1: ( RULE_LF )
+            // InternalRails.g:2835:1: ( ( RULE_LF ) )
+            // InternalRails.g:2836:1: ( RULE_LF )
             {
-            // InternalRails.g:2852:1: ( RULE_LF )
-            // InternalRails.g:2853:1: RULE_LF
+            // InternalRails.g:2836:1: ( RULE_LF )
+            // InternalRails.g:2837:1: RULE_LF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getLFTerminalRuleCall_2_0()); 
@@ -8952,14 +8952,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2__1"
-    // InternalRails.g:2864:1: rule__HashKeyValue__Group_2__1 : rule__HashKeyValue__Group_2__1__Impl ;
+    // InternalRails.g:2848:1: rule__HashKeyValue__Group_2__1 : rule__HashKeyValue__Group_2__1__Impl ;
     public final void rule__HashKeyValue__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2868:1: ( rule__HashKeyValue__Group_2__1__Impl )
-            // InternalRails.g:2869:2: rule__HashKeyValue__Group_2__1__Impl
+            // InternalRails.g:2852:1: ( rule__HashKeyValue__Group_2__1__Impl )
+            // InternalRails.g:2853:2: rule__HashKeyValue__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__Group_2__1__Impl();
@@ -8985,22 +8985,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_2__1__Impl"
-    // InternalRails.g:2875:1: rule__HashKeyValue__Group_2__1__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2859:1: rule__HashKeyValue__Group_2__1__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__HashKeyValue__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2879:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:2880:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2863:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2864:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:2880:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:2881:1: ( RULE_SPACE )*
+            // InternalRails.g:2864:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2865:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_2_1()); 
             }
-            // InternalRails.g:2882:1: ( RULE_SPACE )*
+            // InternalRails.g:2866:1: ( RULE_SPACE )*
             loop47:
             do {
                 int alt47=2;
@@ -9013,7 +9013,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt47) {
             	case 1 :
-            	    // InternalRails.g:2882:3: RULE_SPACE
+            	    // InternalRails.g:2866:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -9050,14 +9050,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_0__0"
-    // InternalRails.g:2896:1: rule__HashKeyValue__Group_3_0__0 : rule__HashKeyValue__Group_3_0__0__Impl rule__HashKeyValue__Group_3_0__1 ;
+    // InternalRails.g:2880:1: rule__HashKeyValue__Group_3_0__0 : rule__HashKeyValue__Group_3_0__0__Impl rule__HashKeyValue__Group_3_0__1 ;
     public final void rule__HashKeyValue__Group_3_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2900:1: ( rule__HashKeyValue__Group_3_0__0__Impl rule__HashKeyValue__Group_3_0__1 )
-            // InternalRails.g:2901:2: rule__HashKeyValue__Group_3_0__0__Impl rule__HashKeyValue__Group_3_0__1
+            // InternalRails.g:2884:1: ( rule__HashKeyValue__Group_3_0__0__Impl rule__HashKeyValue__Group_3_0__1 )
+            // InternalRails.g:2885:2: rule__HashKeyValue__Group_3_0__0__Impl rule__HashKeyValue__Group_3_0__1
             {
             pushFollow(FOLLOW_24);
             rule__HashKeyValue__Group_3_0__0__Impl();
@@ -9088,23 +9088,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_0__0__Impl"
-    // InternalRails.g:2908:1: rule__HashKeyValue__Group_3_0__0__Impl : ( ( rule__HashKeyValue__KeyAssignment_3_0_0 ) ) ;
+    // InternalRails.g:2892:1: rule__HashKeyValue__Group_3_0__0__Impl : ( ( rule__HashKeyValue__KeyAssignment_3_0_0 ) ) ;
     public final void rule__HashKeyValue__Group_3_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2912:1: ( ( ( rule__HashKeyValue__KeyAssignment_3_0_0 ) ) )
-            // InternalRails.g:2913:1: ( ( rule__HashKeyValue__KeyAssignment_3_0_0 ) )
+            // InternalRails.g:2896:1: ( ( ( rule__HashKeyValue__KeyAssignment_3_0_0 ) ) )
+            // InternalRails.g:2897:1: ( ( rule__HashKeyValue__KeyAssignment_3_0_0 ) )
             {
-            // InternalRails.g:2913:1: ( ( rule__HashKeyValue__KeyAssignment_3_0_0 ) )
-            // InternalRails.g:2914:1: ( rule__HashKeyValue__KeyAssignment_3_0_0 )
+            // InternalRails.g:2897:1: ( ( rule__HashKeyValue__KeyAssignment_3_0_0 ) )
+            // InternalRails.g:2898:1: ( rule__HashKeyValue__KeyAssignment_3_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getKeyAssignment_3_0_0()); 
             }
-            // InternalRails.g:2915:1: ( rule__HashKeyValue__KeyAssignment_3_0_0 )
-            // InternalRails.g:2915:2: rule__HashKeyValue__KeyAssignment_3_0_0
+            // InternalRails.g:2899:1: ( rule__HashKeyValue__KeyAssignment_3_0_0 )
+            // InternalRails.g:2899:2: rule__HashKeyValue__KeyAssignment_3_0_0
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__KeyAssignment_3_0_0();
@@ -9139,14 +9139,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_0__1"
-    // InternalRails.g:2925:1: rule__HashKeyValue__Group_3_0__1 : rule__HashKeyValue__Group_3_0__1__Impl ;
+    // InternalRails.g:2909:1: rule__HashKeyValue__Group_3_0__1 : rule__HashKeyValue__Group_3_0__1__Impl ;
     public final void rule__HashKeyValue__Group_3_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2929:1: ( rule__HashKeyValue__Group_3_0__1__Impl )
-            // InternalRails.g:2930:2: rule__HashKeyValue__Group_3_0__1__Impl
+            // InternalRails.g:2913:1: ( rule__HashKeyValue__Group_3_0__1__Impl )
+            // InternalRails.g:2914:2: rule__HashKeyValue__Group_3_0__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__Group_3_0__1__Impl();
@@ -9172,17 +9172,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_0__1__Impl"
-    // InternalRails.g:2936:1: rule__HashKeyValue__Group_3_0__1__Impl : ( ':' ) ;
+    // InternalRails.g:2920:1: rule__HashKeyValue__Group_3_0__1__Impl : ( ':' ) ;
     public final void rule__HashKeyValue__Group_3_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2940:1: ( ( ':' ) )
-            // InternalRails.g:2941:1: ( ':' )
+            // InternalRails.g:2924:1: ( ( ':' ) )
+            // InternalRails.g:2925:1: ( ':' )
             {
-            // InternalRails.g:2941:1: ( ':' )
-            // InternalRails.g:2942:1: ':'
+            // InternalRails.g:2925:1: ( ':' )
+            // InternalRails.g:2926:1: ':'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getColonKeyword_3_0_1()); 
@@ -9213,14 +9213,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_1__0"
-    // InternalRails.g:2959:1: rule__HashKeyValue__Group_3_1__0 : rule__HashKeyValue__Group_3_1__0__Impl rule__HashKeyValue__Group_3_1__1 ;
+    // InternalRails.g:2943:1: rule__HashKeyValue__Group_3_1__0 : rule__HashKeyValue__Group_3_1__0__Impl rule__HashKeyValue__Group_3_1__1 ;
     public final void rule__HashKeyValue__Group_3_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2963:1: ( rule__HashKeyValue__Group_3_1__0__Impl rule__HashKeyValue__Group_3_1__1 )
-            // InternalRails.g:2964:2: rule__HashKeyValue__Group_3_1__0__Impl rule__HashKeyValue__Group_3_1__1
+            // InternalRails.g:2947:1: ( rule__HashKeyValue__Group_3_1__0__Impl rule__HashKeyValue__Group_3_1__1 )
+            // InternalRails.g:2948:2: rule__HashKeyValue__Group_3_1__0__Impl rule__HashKeyValue__Group_3_1__1
             {
             pushFollow(FOLLOW_25);
             rule__HashKeyValue__Group_3_1__0__Impl();
@@ -9251,23 +9251,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_1__0__Impl"
-    // InternalRails.g:2971:1: rule__HashKeyValue__Group_3_1__0__Impl : ( ( rule__HashKeyValue__KeyAssignment_3_1_0 ) ) ;
+    // InternalRails.g:2955:1: rule__HashKeyValue__Group_3_1__0__Impl : ( ( rule__HashKeyValue__KeyAssignment_3_1_0 ) ) ;
     public final void rule__HashKeyValue__Group_3_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2975:1: ( ( ( rule__HashKeyValue__KeyAssignment_3_1_0 ) ) )
-            // InternalRails.g:2976:1: ( ( rule__HashKeyValue__KeyAssignment_3_1_0 ) )
+            // InternalRails.g:2959:1: ( ( ( rule__HashKeyValue__KeyAssignment_3_1_0 ) ) )
+            // InternalRails.g:2960:1: ( ( rule__HashKeyValue__KeyAssignment_3_1_0 ) )
             {
-            // InternalRails.g:2976:1: ( ( rule__HashKeyValue__KeyAssignment_3_1_0 ) )
-            // InternalRails.g:2977:1: ( rule__HashKeyValue__KeyAssignment_3_1_0 )
+            // InternalRails.g:2960:1: ( ( rule__HashKeyValue__KeyAssignment_3_1_0 ) )
+            // InternalRails.g:2961:1: ( rule__HashKeyValue__KeyAssignment_3_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getKeyAssignment_3_1_0()); 
             }
-            // InternalRails.g:2978:1: ( rule__HashKeyValue__KeyAssignment_3_1_0 )
-            // InternalRails.g:2978:2: rule__HashKeyValue__KeyAssignment_3_1_0
+            // InternalRails.g:2962:1: ( rule__HashKeyValue__KeyAssignment_3_1_0 )
+            // InternalRails.g:2962:2: rule__HashKeyValue__KeyAssignment_3_1_0
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__KeyAssignment_3_1_0();
@@ -9302,14 +9302,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_1__1"
-    // InternalRails.g:2988:1: rule__HashKeyValue__Group_3_1__1 : rule__HashKeyValue__Group_3_1__1__Impl rule__HashKeyValue__Group_3_1__2 ;
+    // InternalRails.g:2972:1: rule__HashKeyValue__Group_3_1__1 : rule__HashKeyValue__Group_3_1__1__Impl rule__HashKeyValue__Group_3_1__2 ;
     public final void rule__HashKeyValue__Group_3_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:2992:1: ( rule__HashKeyValue__Group_3_1__1__Impl rule__HashKeyValue__Group_3_1__2 )
-            // InternalRails.g:2993:2: rule__HashKeyValue__Group_3_1__1__Impl rule__HashKeyValue__Group_3_1__2
+            // InternalRails.g:2976:1: ( rule__HashKeyValue__Group_3_1__1__Impl rule__HashKeyValue__Group_3_1__2 )
+            // InternalRails.g:2977:2: rule__HashKeyValue__Group_3_1__1__Impl rule__HashKeyValue__Group_3_1__2
             {
             pushFollow(FOLLOW_25);
             rule__HashKeyValue__Group_3_1__1__Impl();
@@ -9340,22 +9340,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_1__1__Impl"
-    // InternalRails.g:3000:1: rule__HashKeyValue__Group_3_1__1__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:2984:1: rule__HashKeyValue__Group_3_1__1__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__HashKeyValue__Group_3_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3004:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:3005:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2988:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:2989:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:3005:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:3006:1: ( RULE_SPACE )*
+            // InternalRails.g:2989:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:2990:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_3_1_1()); 
             }
-            // InternalRails.g:3007:1: ( RULE_SPACE )*
+            // InternalRails.g:2991:1: ( RULE_SPACE )*
             loop48:
             do {
                 int alt48=2;
@@ -9368,7 +9368,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt48) {
             	case 1 :
-            	    // InternalRails.g:3007:3: RULE_SPACE
+            	    // InternalRails.g:2991:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -9405,14 +9405,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_1__2"
-    // InternalRails.g:3017:1: rule__HashKeyValue__Group_3_1__2 : rule__HashKeyValue__Group_3_1__2__Impl ;
+    // InternalRails.g:3001:1: rule__HashKeyValue__Group_3_1__2 : rule__HashKeyValue__Group_3_1__2__Impl ;
     public final void rule__HashKeyValue__Group_3_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3021:1: ( rule__HashKeyValue__Group_3_1__2__Impl )
-            // InternalRails.g:3022:2: rule__HashKeyValue__Group_3_1__2__Impl
+            // InternalRails.g:3005:1: ( rule__HashKeyValue__Group_3_1__2__Impl )
+            // InternalRails.g:3006:2: rule__HashKeyValue__Group_3_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__Group_3_1__2__Impl();
@@ -9438,17 +9438,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__Group_3_1__2__Impl"
-    // InternalRails.g:3028:1: rule__HashKeyValue__Group_3_1__2__Impl : ( '=>' ) ;
+    // InternalRails.g:3012:1: rule__HashKeyValue__Group_3_1__2__Impl : ( '=>' ) ;
     public final void rule__HashKeyValue__Group_3_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3032:1: ( ( '=>' ) )
-            // InternalRails.g:3033:1: ( '=>' )
+            // InternalRails.g:3016:1: ( ( '=>' ) )
+            // InternalRails.g:3017:1: ( '=>' )
             {
-            // InternalRails.g:3033:1: ( '=>' )
-            // InternalRails.g:3034:1: '=>'
+            // InternalRails.g:3017:1: ( '=>' )
+            // InternalRails.g:3018:1: '=>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getEqualsSignGreaterThanSignKeyword_3_1_2()); 
@@ -9479,14 +9479,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__0"
-    // InternalRails.g:3053:1: rule__IgnoredHashKeyValue__Group__0 : rule__IgnoredHashKeyValue__Group__0__Impl rule__IgnoredHashKeyValue__Group__1 ;
+    // InternalRails.g:3037:1: rule__IgnoredHashKeyValue__Group__0 : rule__IgnoredHashKeyValue__Group__0__Impl rule__IgnoredHashKeyValue__Group__1 ;
     public final void rule__IgnoredHashKeyValue__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3057:1: ( rule__IgnoredHashKeyValue__Group__0__Impl rule__IgnoredHashKeyValue__Group__1 )
-            // InternalRails.g:3058:2: rule__IgnoredHashKeyValue__Group__0__Impl rule__IgnoredHashKeyValue__Group__1
+            // InternalRails.g:3041:1: ( rule__IgnoredHashKeyValue__Group__0__Impl rule__IgnoredHashKeyValue__Group__1 )
+            // InternalRails.g:3042:2: rule__IgnoredHashKeyValue__Group__0__Impl rule__IgnoredHashKeyValue__Group__1
             {
             pushFollow(FOLLOW_26);
             rule__IgnoredHashKeyValue__Group__0__Impl();
@@ -9517,22 +9517,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__0__Impl"
-    // InternalRails.g:3065:1: rule__IgnoredHashKeyValue__Group__0__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:3049:1: rule__IgnoredHashKeyValue__Group__0__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__IgnoredHashKeyValue__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3069:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:3070:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3053:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:3054:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:3070:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:3071:1: ( RULE_SPACE )*
+            // InternalRails.g:3054:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3055:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getSPACETerminalRuleCall_0()); 
             }
-            // InternalRails.g:3072:1: ( RULE_SPACE )*
+            // InternalRails.g:3056:1: ( RULE_SPACE )*
             loop49:
             do {
                 int alt49=2;
@@ -9545,7 +9545,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt49) {
             	case 1 :
-            	    // InternalRails.g:3072:3: RULE_SPACE
+            	    // InternalRails.g:3056:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -9582,14 +9582,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__1"
-    // InternalRails.g:3082:1: rule__IgnoredHashKeyValue__Group__1 : rule__IgnoredHashKeyValue__Group__1__Impl rule__IgnoredHashKeyValue__Group__2 ;
+    // InternalRails.g:3066:1: rule__IgnoredHashKeyValue__Group__1 : rule__IgnoredHashKeyValue__Group__1__Impl rule__IgnoredHashKeyValue__Group__2 ;
     public final void rule__IgnoredHashKeyValue__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3086:1: ( rule__IgnoredHashKeyValue__Group__1__Impl rule__IgnoredHashKeyValue__Group__2 )
-            // InternalRails.g:3087:2: rule__IgnoredHashKeyValue__Group__1__Impl rule__IgnoredHashKeyValue__Group__2
+            // InternalRails.g:3070:1: ( rule__IgnoredHashKeyValue__Group__1__Impl rule__IgnoredHashKeyValue__Group__2 )
+            // InternalRails.g:3071:2: rule__IgnoredHashKeyValue__Group__1__Impl rule__IgnoredHashKeyValue__Group__2
             {
             pushFollow(FOLLOW_27);
             rule__IgnoredHashKeyValue__Group__1__Impl();
@@ -9620,23 +9620,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__1__Impl"
-    // InternalRails.g:3094:1: rule__IgnoredHashKeyValue__Group__1__Impl : ( ( rule__IgnoredHashKeyValue__Alternatives_1 ) ) ;
+    // InternalRails.g:3078:1: rule__IgnoredHashKeyValue__Group__1__Impl : ( ( rule__IgnoredHashKeyValue__Alternatives_1 ) ) ;
     public final void rule__IgnoredHashKeyValue__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3098:1: ( ( ( rule__IgnoredHashKeyValue__Alternatives_1 ) ) )
-            // InternalRails.g:3099:1: ( ( rule__IgnoredHashKeyValue__Alternatives_1 ) )
+            // InternalRails.g:3082:1: ( ( ( rule__IgnoredHashKeyValue__Alternatives_1 ) ) )
+            // InternalRails.g:3083:1: ( ( rule__IgnoredHashKeyValue__Alternatives_1 ) )
             {
-            // InternalRails.g:3099:1: ( ( rule__IgnoredHashKeyValue__Alternatives_1 ) )
-            // InternalRails.g:3100:1: ( rule__IgnoredHashKeyValue__Alternatives_1 )
+            // InternalRails.g:3083:1: ( ( rule__IgnoredHashKeyValue__Alternatives_1 ) )
+            // InternalRails.g:3084:1: ( rule__IgnoredHashKeyValue__Alternatives_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_1()); 
             }
-            // InternalRails.g:3101:1: ( rule__IgnoredHashKeyValue__Alternatives_1 )
-            // InternalRails.g:3101:2: rule__IgnoredHashKeyValue__Alternatives_1
+            // InternalRails.g:3085:1: ( rule__IgnoredHashKeyValue__Alternatives_1 )
+            // InternalRails.g:3085:2: rule__IgnoredHashKeyValue__Alternatives_1
             {
             pushFollow(FOLLOW_2);
             rule__IgnoredHashKeyValue__Alternatives_1();
@@ -9671,14 +9671,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__2"
-    // InternalRails.g:3111:1: rule__IgnoredHashKeyValue__Group__2 : rule__IgnoredHashKeyValue__Group__2__Impl rule__IgnoredHashKeyValue__Group__3 ;
+    // InternalRails.g:3095:1: rule__IgnoredHashKeyValue__Group__2 : rule__IgnoredHashKeyValue__Group__2__Impl rule__IgnoredHashKeyValue__Group__3 ;
     public final void rule__IgnoredHashKeyValue__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3115:1: ( rule__IgnoredHashKeyValue__Group__2__Impl rule__IgnoredHashKeyValue__Group__3 )
-            // InternalRails.g:3116:2: rule__IgnoredHashKeyValue__Group__2__Impl rule__IgnoredHashKeyValue__Group__3
+            // InternalRails.g:3099:1: ( rule__IgnoredHashKeyValue__Group__2__Impl rule__IgnoredHashKeyValue__Group__3 )
+            // InternalRails.g:3100:2: rule__IgnoredHashKeyValue__Group__2__Impl rule__IgnoredHashKeyValue__Group__3
             {
             pushFollow(FOLLOW_27);
             rule__IgnoredHashKeyValue__Group__2__Impl();
@@ -9709,22 +9709,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__2__Impl"
-    // InternalRails.g:3123:1: rule__IgnoredHashKeyValue__Group__2__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:3107:1: rule__IgnoredHashKeyValue__Group__2__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__IgnoredHashKeyValue__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3127:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:3128:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3111:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:3112:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:3128:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:3129:1: ( RULE_SPACE )*
+            // InternalRails.g:3112:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3113:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getSPACETerminalRuleCall_2()); 
             }
-            // InternalRails.g:3130:1: ( RULE_SPACE )*
+            // InternalRails.g:3114:1: ( RULE_SPACE )*
             loop50:
             do {
                 int alt50=2;
@@ -9737,7 +9737,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt50) {
             	case 1 :
-            	    // InternalRails.g:3130:3: RULE_SPACE
+            	    // InternalRails.g:3114:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -9774,14 +9774,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__3"
-    // InternalRails.g:3140:1: rule__IgnoredHashKeyValue__Group__3 : rule__IgnoredHashKeyValue__Group__3__Impl rule__IgnoredHashKeyValue__Group__4 ;
+    // InternalRails.g:3124:1: rule__IgnoredHashKeyValue__Group__3 : rule__IgnoredHashKeyValue__Group__3__Impl rule__IgnoredHashKeyValue__Group__4 ;
     public final void rule__IgnoredHashKeyValue__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3144:1: ( rule__IgnoredHashKeyValue__Group__3__Impl rule__IgnoredHashKeyValue__Group__4 )
-            // InternalRails.g:3145:2: rule__IgnoredHashKeyValue__Group__3__Impl rule__IgnoredHashKeyValue__Group__4
+            // InternalRails.g:3128:1: ( rule__IgnoredHashKeyValue__Group__3__Impl rule__IgnoredHashKeyValue__Group__4 )
+            // InternalRails.g:3129:2: rule__IgnoredHashKeyValue__Group__3__Impl rule__IgnoredHashKeyValue__Group__4
             {
             pushFollow(FOLLOW_23);
             rule__IgnoredHashKeyValue__Group__3__Impl();
@@ -9812,23 +9812,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__3__Impl"
-    // InternalRails.g:3152:1: rule__IgnoredHashKeyValue__Group__3__Impl : ( ( rule__IgnoredHashKeyValue__Alternatives_3 ) ) ;
+    // InternalRails.g:3136:1: rule__IgnoredHashKeyValue__Group__3__Impl : ( ( rule__IgnoredHashKeyValue__Alternatives_3 ) ) ;
     public final void rule__IgnoredHashKeyValue__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3156:1: ( ( ( rule__IgnoredHashKeyValue__Alternatives_3 ) ) )
-            // InternalRails.g:3157:1: ( ( rule__IgnoredHashKeyValue__Alternatives_3 ) )
+            // InternalRails.g:3140:1: ( ( ( rule__IgnoredHashKeyValue__Alternatives_3 ) ) )
+            // InternalRails.g:3141:1: ( ( rule__IgnoredHashKeyValue__Alternatives_3 ) )
             {
-            // InternalRails.g:3157:1: ( ( rule__IgnoredHashKeyValue__Alternatives_3 ) )
-            // InternalRails.g:3158:1: ( rule__IgnoredHashKeyValue__Alternatives_3 )
+            // InternalRails.g:3141:1: ( ( rule__IgnoredHashKeyValue__Alternatives_3 ) )
+            // InternalRails.g:3142:1: ( rule__IgnoredHashKeyValue__Alternatives_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_3()); 
             }
-            // InternalRails.g:3159:1: ( rule__IgnoredHashKeyValue__Alternatives_3 )
-            // InternalRails.g:3159:2: rule__IgnoredHashKeyValue__Alternatives_3
+            // InternalRails.g:3143:1: ( rule__IgnoredHashKeyValue__Alternatives_3 )
+            // InternalRails.g:3143:2: rule__IgnoredHashKeyValue__Alternatives_3
             {
             pushFollow(FOLLOW_2);
             rule__IgnoredHashKeyValue__Alternatives_3();
@@ -9863,14 +9863,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__4"
-    // InternalRails.g:3169:1: rule__IgnoredHashKeyValue__Group__4 : rule__IgnoredHashKeyValue__Group__4__Impl ;
+    // InternalRails.g:3153:1: rule__IgnoredHashKeyValue__Group__4 : rule__IgnoredHashKeyValue__Group__4__Impl ;
     public final void rule__IgnoredHashKeyValue__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3173:1: ( rule__IgnoredHashKeyValue__Group__4__Impl )
-            // InternalRails.g:3174:2: rule__IgnoredHashKeyValue__Group__4__Impl
+            // InternalRails.g:3157:1: ( rule__IgnoredHashKeyValue__Group__4__Impl )
+            // InternalRails.g:3158:2: rule__IgnoredHashKeyValue__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__IgnoredHashKeyValue__Group__4__Impl();
@@ -9896,22 +9896,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group__4__Impl"
-    // InternalRails.g:3180:1: rule__IgnoredHashKeyValue__Group__4__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:3164:1: rule__IgnoredHashKeyValue__Group__4__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__IgnoredHashKeyValue__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3184:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:3185:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3168:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:3169:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:3185:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:3186:1: ( RULE_SPACE )*
+            // InternalRails.g:3169:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3170:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getSPACETerminalRuleCall_4()); 
             }
-            // InternalRails.g:3187:1: ( RULE_SPACE )*
+            // InternalRails.g:3171:1: ( RULE_SPACE )*
             loop51:
             do {
                 int alt51=2;
@@ -9930,7 +9930,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt51) {
             	case 1 :
-            	    // InternalRails.g:3187:3: RULE_SPACE
+            	    // InternalRails.g:3171:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -9967,14 +9967,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_0__0"
-    // InternalRails.g:3207:1: rule__IgnoredHashKeyValue__Group_1_0__0 : rule__IgnoredHashKeyValue__Group_1_0__0__Impl rule__IgnoredHashKeyValue__Group_1_0__1 ;
+    // InternalRails.g:3191:1: rule__IgnoredHashKeyValue__Group_1_0__0 : rule__IgnoredHashKeyValue__Group_1_0__0__Impl rule__IgnoredHashKeyValue__Group_1_0__1 ;
     public final void rule__IgnoredHashKeyValue__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3211:1: ( rule__IgnoredHashKeyValue__Group_1_0__0__Impl rule__IgnoredHashKeyValue__Group_1_0__1 )
-            // InternalRails.g:3212:2: rule__IgnoredHashKeyValue__Group_1_0__0__Impl rule__IgnoredHashKeyValue__Group_1_0__1
+            // InternalRails.g:3195:1: ( rule__IgnoredHashKeyValue__Group_1_0__0__Impl rule__IgnoredHashKeyValue__Group_1_0__1 )
+            // InternalRails.g:3196:2: rule__IgnoredHashKeyValue__Group_1_0__0__Impl rule__IgnoredHashKeyValue__Group_1_0__1
             {
             pushFollow(FOLLOW_24);
             rule__IgnoredHashKeyValue__Group_1_0__0__Impl();
@@ -10005,17 +10005,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_0__0__Impl"
-    // InternalRails.g:3219:1: rule__IgnoredHashKeyValue__Group_1_0__0__Impl : ( RULE_ID ) ;
+    // InternalRails.g:3203:1: rule__IgnoredHashKeyValue__Group_1_0__0__Impl : ( RULE_ID ) ;
     public final void rule__IgnoredHashKeyValue__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3223:1: ( ( RULE_ID ) )
-            // InternalRails.g:3224:1: ( RULE_ID )
+            // InternalRails.g:3207:1: ( ( RULE_ID ) )
+            // InternalRails.g:3208:1: ( RULE_ID )
             {
-            // InternalRails.g:3224:1: ( RULE_ID )
-            // InternalRails.g:3225:1: RULE_ID
+            // InternalRails.g:3208:1: ( RULE_ID )
+            // InternalRails.g:3209:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getIDTerminalRuleCall_1_0_0()); 
@@ -10046,14 +10046,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_0__1"
-    // InternalRails.g:3236:1: rule__IgnoredHashKeyValue__Group_1_0__1 : rule__IgnoredHashKeyValue__Group_1_0__1__Impl ;
+    // InternalRails.g:3220:1: rule__IgnoredHashKeyValue__Group_1_0__1 : rule__IgnoredHashKeyValue__Group_1_0__1__Impl ;
     public final void rule__IgnoredHashKeyValue__Group_1_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3240:1: ( rule__IgnoredHashKeyValue__Group_1_0__1__Impl )
-            // InternalRails.g:3241:2: rule__IgnoredHashKeyValue__Group_1_0__1__Impl
+            // InternalRails.g:3224:1: ( rule__IgnoredHashKeyValue__Group_1_0__1__Impl )
+            // InternalRails.g:3225:2: rule__IgnoredHashKeyValue__Group_1_0__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__IgnoredHashKeyValue__Group_1_0__1__Impl();
@@ -10079,17 +10079,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_0__1__Impl"
-    // InternalRails.g:3247:1: rule__IgnoredHashKeyValue__Group_1_0__1__Impl : ( ':' ) ;
+    // InternalRails.g:3231:1: rule__IgnoredHashKeyValue__Group_1_0__1__Impl : ( ':' ) ;
     public final void rule__IgnoredHashKeyValue__Group_1_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3251:1: ( ( ':' ) )
-            // InternalRails.g:3252:1: ( ':' )
+            // InternalRails.g:3235:1: ( ( ':' ) )
+            // InternalRails.g:3236:1: ( ':' )
             {
-            // InternalRails.g:3252:1: ( ':' )
-            // InternalRails.g:3253:1: ':'
+            // InternalRails.g:3236:1: ( ':' )
+            // InternalRails.g:3237:1: ':'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getColonKeyword_1_0_1()); 
@@ -10120,14 +10120,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_1__0"
-    // InternalRails.g:3270:1: rule__IgnoredHashKeyValue__Group_1_1__0 : rule__IgnoredHashKeyValue__Group_1_1__0__Impl rule__IgnoredHashKeyValue__Group_1_1__1 ;
+    // InternalRails.g:3254:1: rule__IgnoredHashKeyValue__Group_1_1__0 : rule__IgnoredHashKeyValue__Group_1_1__0__Impl rule__IgnoredHashKeyValue__Group_1_1__1 ;
     public final void rule__IgnoredHashKeyValue__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3274:1: ( rule__IgnoredHashKeyValue__Group_1_1__0__Impl rule__IgnoredHashKeyValue__Group_1_1__1 )
-            // InternalRails.g:3275:2: rule__IgnoredHashKeyValue__Group_1_1__0__Impl rule__IgnoredHashKeyValue__Group_1_1__1
+            // InternalRails.g:3258:1: ( rule__IgnoredHashKeyValue__Group_1_1__0__Impl rule__IgnoredHashKeyValue__Group_1_1__1 )
+            // InternalRails.g:3259:2: rule__IgnoredHashKeyValue__Group_1_1__0__Impl rule__IgnoredHashKeyValue__Group_1_1__1
             {
             pushFollow(FOLLOW_25);
             rule__IgnoredHashKeyValue__Group_1_1__0__Impl();
@@ -10158,23 +10158,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_1__0__Impl"
-    // InternalRails.g:3282:1: rule__IgnoredHashKeyValue__Group_1_1__0__Impl : ( ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 ) ) ;
+    // InternalRails.g:3266:1: rule__IgnoredHashKeyValue__Group_1_1__0__Impl : ( ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 ) ) ;
     public final void rule__IgnoredHashKeyValue__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3286:1: ( ( ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 ) ) )
-            // InternalRails.g:3287:1: ( ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 ) )
+            // InternalRails.g:3270:1: ( ( ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 ) ) )
+            // InternalRails.g:3271:1: ( ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 ) )
             {
-            // InternalRails.g:3287:1: ( ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 ) )
-            // InternalRails.g:3288:1: ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 )
+            // InternalRails.g:3271:1: ( ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 ) )
+            // InternalRails.g:3272:1: ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_1_1_0()); 
             }
-            // InternalRails.g:3289:1: ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 )
-            // InternalRails.g:3289:2: rule__IgnoredHashKeyValue__Alternatives_1_1_0
+            // InternalRails.g:3273:1: ( rule__IgnoredHashKeyValue__Alternatives_1_1_0 )
+            // InternalRails.g:3273:2: rule__IgnoredHashKeyValue__Alternatives_1_1_0
             {
             pushFollow(FOLLOW_2);
             rule__IgnoredHashKeyValue__Alternatives_1_1_0();
@@ -10209,14 +10209,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_1__1"
-    // InternalRails.g:3299:1: rule__IgnoredHashKeyValue__Group_1_1__1 : rule__IgnoredHashKeyValue__Group_1_1__1__Impl rule__IgnoredHashKeyValue__Group_1_1__2 ;
+    // InternalRails.g:3283:1: rule__IgnoredHashKeyValue__Group_1_1__1 : rule__IgnoredHashKeyValue__Group_1_1__1__Impl rule__IgnoredHashKeyValue__Group_1_1__2 ;
     public final void rule__IgnoredHashKeyValue__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3303:1: ( rule__IgnoredHashKeyValue__Group_1_1__1__Impl rule__IgnoredHashKeyValue__Group_1_1__2 )
-            // InternalRails.g:3304:2: rule__IgnoredHashKeyValue__Group_1_1__1__Impl rule__IgnoredHashKeyValue__Group_1_1__2
+            // InternalRails.g:3287:1: ( rule__IgnoredHashKeyValue__Group_1_1__1__Impl rule__IgnoredHashKeyValue__Group_1_1__2 )
+            // InternalRails.g:3288:2: rule__IgnoredHashKeyValue__Group_1_1__1__Impl rule__IgnoredHashKeyValue__Group_1_1__2
             {
             pushFollow(FOLLOW_25);
             rule__IgnoredHashKeyValue__Group_1_1__1__Impl();
@@ -10247,22 +10247,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_1__1__Impl"
-    // InternalRails.g:3311:1: rule__IgnoredHashKeyValue__Group_1_1__1__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:3295:1: rule__IgnoredHashKeyValue__Group_1_1__1__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__IgnoredHashKeyValue__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3315:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:3316:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3299:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:3300:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:3316:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:3317:1: ( RULE_SPACE )*
+            // InternalRails.g:3300:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3301:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getSPACETerminalRuleCall_1_1_1()); 
             }
-            // InternalRails.g:3318:1: ( RULE_SPACE )*
+            // InternalRails.g:3302:1: ( RULE_SPACE )*
             loop52:
             do {
                 int alt52=2;
@@ -10275,7 +10275,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt52) {
             	case 1 :
-            	    // InternalRails.g:3318:3: RULE_SPACE
+            	    // InternalRails.g:3302:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -10312,14 +10312,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_1__2"
-    // InternalRails.g:3328:1: rule__IgnoredHashKeyValue__Group_1_1__2 : rule__IgnoredHashKeyValue__Group_1_1__2__Impl ;
+    // InternalRails.g:3312:1: rule__IgnoredHashKeyValue__Group_1_1__2 : rule__IgnoredHashKeyValue__Group_1_1__2__Impl ;
     public final void rule__IgnoredHashKeyValue__Group_1_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3332:1: ( rule__IgnoredHashKeyValue__Group_1_1__2__Impl )
-            // InternalRails.g:3333:2: rule__IgnoredHashKeyValue__Group_1_1__2__Impl
+            // InternalRails.g:3316:1: ( rule__IgnoredHashKeyValue__Group_1_1__2__Impl )
+            // InternalRails.g:3317:2: rule__IgnoredHashKeyValue__Group_1_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__IgnoredHashKeyValue__Group_1_1__2__Impl();
@@ -10345,17 +10345,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IgnoredHashKeyValue__Group_1_1__2__Impl"
-    // InternalRails.g:3339:1: rule__IgnoredHashKeyValue__Group_1_1__2__Impl : ( '=>' ) ;
+    // InternalRails.g:3323:1: rule__IgnoredHashKeyValue__Group_1_1__2__Impl : ( '=>' ) ;
     public final void rule__IgnoredHashKeyValue__Group_1_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3343:1: ( ( '=>' ) )
-            // InternalRails.g:3344:1: ( '=>' )
+            // InternalRails.g:3327:1: ( ( '=>' ) )
+            // InternalRails.g:3328:1: ( '=>' )
             {
-            // InternalRails.g:3344:1: ( '=>' )
-            // InternalRails.g:3345:1: '=>'
+            // InternalRails.g:3328:1: ( '=>' )
+            // InternalRails.g:3329:1: '=>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIgnoredHashKeyValueAccess().getEqualsSignGreaterThanSignKeyword_1_1_2()); 
@@ -10386,14 +10386,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__0"
-    // InternalRails.g:3364:1: rule__Method__Group__0 : rule__Method__Group__0__Impl rule__Method__Group__1 ;
+    // InternalRails.g:3348:1: rule__Method__Group__0 : rule__Method__Group__0__Impl rule__Method__Group__1 ;
     public final void rule__Method__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3368:1: ( rule__Method__Group__0__Impl rule__Method__Group__1 )
-            // InternalRails.g:3369:2: rule__Method__Group__0__Impl rule__Method__Group__1
+            // InternalRails.g:3352:1: ( rule__Method__Group__0__Impl rule__Method__Group__1 )
+            // InternalRails.g:3353:2: rule__Method__Group__0__Impl rule__Method__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Method__Group__0__Impl();
@@ -10424,17 +10424,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__0__Impl"
-    // InternalRails.g:3376:1: rule__Method__Group__0__Impl : ( RULE_DEF_WORD ) ;
+    // InternalRails.g:3360:1: rule__Method__Group__0__Impl : ( RULE_DEF_WORD ) ;
     public final void rule__Method__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3380:1: ( ( RULE_DEF_WORD ) )
-            // InternalRails.g:3381:1: ( RULE_DEF_WORD )
+            // InternalRails.g:3364:1: ( ( RULE_DEF_WORD ) )
+            // InternalRails.g:3365:1: ( RULE_DEF_WORD )
             {
-            // InternalRails.g:3381:1: ( RULE_DEF_WORD )
-            // InternalRails.g:3382:1: RULE_DEF_WORD
+            // InternalRails.g:3365:1: ( RULE_DEF_WORD )
+            // InternalRails.g:3366:1: RULE_DEF_WORD
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getDEF_WORDTerminalRuleCall_0()); 
@@ -10465,14 +10465,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__1"
-    // InternalRails.g:3393:1: rule__Method__Group__1 : rule__Method__Group__1__Impl rule__Method__Group__2 ;
+    // InternalRails.g:3377:1: rule__Method__Group__1 : rule__Method__Group__1__Impl rule__Method__Group__2 ;
     public final void rule__Method__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3397:1: ( rule__Method__Group__1__Impl rule__Method__Group__2 )
-            // InternalRails.g:3398:2: rule__Method__Group__1__Impl rule__Method__Group__2
+            // InternalRails.g:3381:1: ( rule__Method__Group__1__Impl rule__Method__Group__2 )
+            // InternalRails.g:3382:2: rule__Method__Group__1__Impl rule__Method__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__Method__Group__1__Impl();
@@ -10503,22 +10503,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__1__Impl"
-    // InternalRails.g:3405:1: rule__Method__Group__1__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:3389:1: rule__Method__Group__1__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__Method__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3409:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:3410:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3393:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:3394:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:3410:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:3411:1: ( RULE_SPACE )*
+            // InternalRails.g:3394:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3395:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getSPACETerminalRuleCall_1()); 
             }
-            // InternalRails.g:3412:1: ( RULE_SPACE )*
+            // InternalRails.g:3396:1: ( RULE_SPACE )*
             loop53:
             do {
                 int alt53=2;
@@ -10531,7 +10531,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt53) {
             	case 1 :
-            	    // InternalRails.g:3412:3: RULE_SPACE
+            	    // InternalRails.g:3396:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -10568,14 +10568,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__2"
-    // InternalRails.g:3422:1: rule__Method__Group__2 : rule__Method__Group__2__Impl rule__Method__Group__3 ;
+    // InternalRails.g:3406:1: rule__Method__Group__2 : rule__Method__Group__2__Impl rule__Method__Group__3 ;
     public final void rule__Method__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3426:1: ( rule__Method__Group__2__Impl rule__Method__Group__3 )
-            // InternalRails.g:3427:2: rule__Method__Group__2__Impl rule__Method__Group__3
+            // InternalRails.g:3410:1: ( rule__Method__Group__2__Impl rule__Method__Group__3 )
+            // InternalRails.g:3411:2: rule__Method__Group__2__Impl rule__Method__Group__3
             {
             pushFollow(FOLLOW_28);
             rule__Method__Group__2__Impl();
@@ -10606,23 +10606,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__2__Impl"
-    // InternalRails.g:3434:1: rule__Method__Group__2__Impl : ( ( rule__Method__NameAssignment_2 ) ) ;
+    // InternalRails.g:3418:1: rule__Method__Group__2__Impl : ( ( rule__Method__NameAssignment_2 ) ) ;
     public final void rule__Method__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3438:1: ( ( ( rule__Method__NameAssignment_2 ) ) )
-            // InternalRails.g:3439:1: ( ( rule__Method__NameAssignment_2 ) )
+            // InternalRails.g:3422:1: ( ( ( rule__Method__NameAssignment_2 ) ) )
+            // InternalRails.g:3423:1: ( ( rule__Method__NameAssignment_2 ) )
             {
-            // InternalRails.g:3439:1: ( ( rule__Method__NameAssignment_2 ) )
-            // InternalRails.g:3440:1: ( rule__Method__NameAssignment_2 )
+            // InternalRails.g:3423:1: ( ( rule__Method__NameAssignment_2 ) )
+            // InternalRails.g:3424:1: ( rule__Method__NameAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getNameAssignment_2()); 
             }
-            // InternalRails.g:3441:1: ( rule__Method__NameAssignment_2 )
-            // InternalRails.g:3441:2: rule__Method__NameAssignment_2
+            // InternalRails.g:3425:1: ( rule__Method__NameAssignment_2 )
+            // InternalRails.g:3425:2: rule__Method__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Method__NameAssignment_2();
@@ -10657,14 +10657,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__3"
-    // InternalRails.g:3451:1: rule__Method__Group__3 : rule__Method__Group__3__Impl rule__Method__Group__4 ;
+    // InternalRails.g:3435:1: rule__Method__Group__3 : rule__Method__Group__3__Impl rule__Method__Group__4 ;
     public final void rule__Method__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3455:1: ( rule__Method__Group__3__Impl rule__Method__Group__4 )
-            // InternalRails.g:3456:2: rule__Method__Group__3__Impl rule__Method__Group__4
+            // InternalRails.g:3439:1: ( rule__Method__Group__3__Impl rule__Method__Group__4 )
+            // InternalRails.g:3440:2: rule__Method__Group__3__Impl rule__Method__Group__4
             {
             pushFollow(FOLLOW_28);
             rule__Method__Group__3__Impl();
@@ -10695,22 +10695,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__3__Impl"
-    // InternalRails.g:3463:1: rule__Method__Group__3__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:3447:1: rule__Method__Group__3__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__Method__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3467:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:3468:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3451:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:3452:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:3468:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:3469:1: ( RULE_SPACE )*
+            // InternalRails.g:3452:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3453:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getSPACETerminalRuleCall_3()); 
             }
-            // InternalRails.g:3470:1: ( RULE_SPACE )*
+            // InternalRails.g:3454:1: ( RULE_SPACE )*
             loop54:
             do {
                 int alt54=2;
@@ -10729,7 +10729,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt54) {
             	case 1 :
-            	    // InternalRails.g:3470:3: RULE_SPACE
+            	    // InternalRails.g:3454:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -10766,14 +10766,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__4"
-    // InternalRails.g:3480:1: rule__Method__Group__4 : rule__Method__Group__4__Impl rule__Method__Group__5 ;
+    // InternalRails.g:3464:1: rule__Method__Group__4 : rule__Method__Group__4__Impl rule__Method__Group__5 ;
     public final void rule__Method__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3484:1: ( rule__Method__Group__4__Impl rule__Method__Group__5 )
-            // InternalRails.g:3485:2: rule__Method__Group__4__Impl rule__Method__Group__5
+            // InternalRails.g:3468:1: ( rule__Method__Group__4__Impl rule__Method__Group__5 )
+            // InternalRails.g:3469:2: rule__Method__Group__4__Impl rule__Method__Group__5
             {
             pushFollow(FOLLOW_28);
             rule__Method__Group__4__Impl();
@@ -10804,22 +10804,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__4__Impl"
-    // InternalRails.g:3492:1: rule__Method__Group__4__Impl : ( ( RULE_PARENTHESIS_BLOCK )? ) ;
+    // InternalRails.g:3476:1: rule__Method__Group__4__Impl : ( ( RULE_PARENTHESIS_BLOCK )? ) ;
     public final void rule__Method__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3496:1: ( ( ( RULE_PARENTHESIS_BLOCK )? ) )
-            // InternalRails.g:3497:1: ( ( RULE_PARENTHESIS_BLOCK )? )
+            // InternalRails.g:3480:1: ( ( ( RULE_PARENTHESIS_BLOCK )? ) )
+            // InternalRails.g:3481:1: ( ( RULE_PARENTHESIS_BLOCK )? )
             {
-            // InternalRails.g:3497:1: ( ( RULE_PARENTHESIS_BLOCK )? )
-            // InternalRails.g:3498:1: ( RULE_PARENTHESIS_BLOCK )?
+            // InternalRails.g:3481:1: ( ( RULE_PARENTHESIS_BLOCK )? )
+            // InternalRails.g:3482:1: ( RULE_PARENTHESIS_BLOCK )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getPARENTHESIS_BLOCKTerminalRuleCall_4()); 
             }
-            // InternalRails.g:3499:1: ( RULE_PARENTHESIS_BLOCK )?
+            // InternalRails.g:3483:1: ( RULE_PARENTHESIS_BLOCK )?
             int alt55=2;
             int LA55_0 = input.LA(1);
 
@@ -10832,7 +10832,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt55) {
                 case 1 :
-                    // InternalRails.g:3499:3: RULE_PARENTHESIS_BLOCK
+                    // InternalRails.g:3483:3: RULE_PARENTHESIS_BLOCK
                     {
                     match(input,RULE_PARENTHESIS_BLOCK,FOLLOW_2); if (state.failed) return ;
 
@@ -10866,14 +10866,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__5"
-    // InternalRails.g:3509:1: rule__Method__Group__5 : rule__Method__Group__5__Impl rule__Method__Group__6 ;
+    // InternalRails.g:3493:1: rule__Method__Group__5 : rule__Method__Group__5__Impl rule__Method__Group__6 ;
     public final void rule__Method__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3513:1: ( rule__Method__Group__5__Impl rule__Method__Group__6 )
-            // InternalRails.g:3514:2: rule__Method__Group__5__Impl rule__Method__Group__6
+            // InternalRails.g:3497:1: ( rule__Method__Group__5__Impl rule__Method__Group__6 )
+            // InternalRails.g:3498:2: rule__Method__Group__5__Impl rule__Method__Group__6
             {
             pushFollow(FOLLOW_28);
             rule__Method__Group__5__Impl();
@@ -10904,22 +10904,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__5__Impl"
-    // InternalRails.g:3521:1: rule__Method__Group__5__Impl : ( ( RULE_SPACE )* ) ;
+    // InternalRails.g:3505:1: rule__Method__Group__5__Impl : ( ( RULE_SPACE )* ) ;
     public final void rule__Method__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3525:1: ( ( ( RULE_SPACE )* ) )
-            // InternalRails.g:3526:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3509:1: ( ( ( RULE_SPACE )* ) )
+            // InternalRails.g:3510:1: ( ( RULE_SPACE )* )
             {
-            // InternalRails.g:3526:1: ( ( RULE_SPACE )* )
-            // InternalRails.g:3527:1: ( RULE_SPACE )*
+            // InternalRails.g:3510:1: ( ( RULE_SPACE )* )
+            // InternalRails.g:3511:1: ( RULE_SPACE )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getSPACETerminalRuleCall_5()); 
             }
-            // InternalRails.g:3528:1: ( RULE_SPACE )*
+            // InternalRails.g:3512:1: ( RULE_SPACE )*
             loop56:
             do {
                 int alt56=2;
@@ -10932,7 +10932,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt56) {
             	case 1 :
-            	    // InternalRails.g:3528:3: RULE_SPACE
+            	    // InternalRails.g:3512:3: RULE_SPACE
             	    {
             	    match(input,RULE_SPACE,FOLLOW_4); if (state.failed) return ;
 
@@ -10969,14 +10969,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__6"
-    // InternalRails.g:3538:1: rule__Method__Group__6 : rule__Method__Group__6__Impl ;
+    // InternalRails.g:3522:1: rule__Method__Group__6 : rule__Method__Group__6__Impl ;
     public final void rule__Method__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3542:1: ( rule__Method__Group__6__Impl )
-            // InternalRails.g:3543:2: rule__Method__Group__6__Impl
+            // InternalRails.g:3526:1: ( rule__Method__Group__6__Impl )
+            // InternalRails.g:3527:2: rule__Method__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Method__Group__6__Impl();
@@ -11002,22 +11002,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Group__6__Impl"
-    // InternalRails.g:3549:1: rule__Method__Group__6__Impl : ( ( RULE_LF )? ) ;
+    // InternalRails.g:3533:1: rule__Method__Group__6__Impl : ( ( RULE_LF )? ) ;
     public final void rule__Method__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3553:1: ( ( ( RULE_LF )? ) )
-            // InternalRails.g:3554:1: ( ( RULE_LF )? )
+            // InternalRails.g:3537:1: ( ( ( RULE_LF )? ) )
+            // InternalRails.g:3538:1: ( ( RULE_LF )? )
             {
-            // InternalRails.g:3554:1: ( ( RULE_LF )? )
-            // InternalRails.g:3555:1: ( RULE_LF )?
+            // InternalRails.g:3538:1: ( ( RULE_LF )? )
+            // InternalRails.g:3539:1: ( RULE_LF )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getLFTerminalRuleCall_6()); 
             }
-            // InternalRails.g:3556:1: ( RULE_LF )?
+            // InternalRails.g:3540:1: ( RULE_LF )?
             int alt57=2;
             int LA57_0 = input.LA(1);
 
@@ -11026,7 +11026,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt57) {
                 case 1 :
-                    // InternalRails.g:3556:3: RULE_LF
+                    // InternalRails.g:3540:3: RULE_LF
                     {
                     match(input,RULE_LF,FOLLOW_2); if (state.failed) return ;
 
@@ -11060,14 +11060,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__0"
-    // InternalRails.g:3580:1: rule__MethodName__Group__0 : rule__MethodName__Group__0__Impl rule__MethodName__Group__1 ;
+    // InternalRails.g:3564:1: rule__MethodName__Group__0 : rule__MethodName__Group__0__Impl rule__MethodName__Group__1 ;
     public final void rule__MethodName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3584:1: ( rule__MethodName__Group__0__Impl rule__MethodName__Group__1 )
-            // InternalRails.g:3585:2: rule__MethodName__Group__0__Impl rule__MethodName__Group__1
+            // InternalRails.g:3568:1: ( rule__MethodName__Group__0__Impl rule__MethodName__Group__1 )
+            // InternalRails.g:3569:2: rule__MethodName__Group__0__Impl rule__MethodName__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__MethodName__Group__0__Impl();
@@ -11098,22 +11098,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__0__Impl"
-    // InternalRails.g:3592:1: rule__MethodName__Group__0__Impl : ( ( rule__MethodName__Group_0__0 )? ) ;
+    // InternalRails.g:3576:1: rule__MethodName__Group__0__Impl : ( ( rule__MethodName__Group_0__0 )? ) ;
     public final void rule__MethodName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3596:1: ( ( ( rule__MethodName__Group_0__0 )? ) )
-            // InternalRails.g:3597:1: ( ( rule__MethodName__Group_0__0 )? )
+            // InternalRails.g:3580:1: ( ( ( rule__MethodName__Group_0__0 )? ) )
+            // InternalRails.g:3581:1: ( ( rule__MethodName__Group_0__0 )? )
             {
-            // InternalRails.g:3597:1: ( ( rule__MethodName__Group_0__0 )? )
-            // InternalRails.g:3598:1: ( rule__MethodName__Group_0__0 )?
+            // InternalRails.g:3581:1: ( ( rule__MethodName__Group_0__0 )? )
+            // InternalRails.g:3582:1: ( rule__MethodName__Group_0__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodNameAccess().getGroup_0()); 
             }
-            // InternalRails.g:3599:1: ( rule__MethodName__Group_0__0 )?
+            // InternalRails.g:3583:1: ( rule__MethodName__Group_0__0 )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -11126,7 +11126,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt58) {
                 case 1 :
-                    // InternalRails.g:3599:2: rule__MethodName__Group_0__0
+                    // InternalRails.g:3583:2: rule__MethodName__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__MethodName__Group_0__0();
@@ -11164,14 +11164,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__1"
-    // InternalRails.g:3609:1: rule__MethodName__Group__1 : rule__MethodName__Group__1__Impl rule__MethodName__Group__2 ;
+    // InternalRails.g:3593:1: rule__MethodName__Group__1 : rule__MethodName__Group__1__Impl rule__MethodName__Group__2 ;
     public final void rule__MethodName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3613:1: ( rule__MethodName__Group__1__Impl rule__MethodName__Group__2 )
-            // InternalRails.g:3614:2: rule__MethodName__Group__1__Impl rule__MethodName__Group__2
+            // InternalRails.g:3597:1: ( rule__MethodName__Group__1__Impl rule__MethodName__Group__2 )
+            // InternalRails.g:3598:2: rule__MethodName__Group__1__Impl rule__MethodName__Group__2
             {
             pushFollow(FOLLOW_29);
             rule__MethodName__Group__1__Impl();
@@ -11202,17 +11202,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__1__Impl"
-    // InternalRails.g:3621:1: rule__MethodName__Group__1__Impl : ( RULE_ID ) ;
+    // InternalRails.g:3605:1: rule__MethodName__Group__1__Impl : ( RULE_ID ) ;
     public final void rule__MethodName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3625:1: ( ( RULE_ID ) )
-            // InternalRails.g:3626:1: ( RULE_ID )
+            // InternalRails.g:3609:1: ( ( RULE_ID ) )
+            // InternalRails.g:3610:1: ( RULE_ID )
             {
-            // InternalRails.g:3626:1: ( RULE_ID )
-            // InternalRails.g:3627:1: RULE_ID
+            // InternalRails.g:3610:1: ( RULE_ID )
+            // InternalRails.g:3611:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodNameAccess().getIDTerminalRuleCall_1()); 
@@ -11243,14 +11243,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__2"
-    // InternalRails.g:3638:1: rule__MethodName__Group__2 : rule__MethodName__Group__2__Impl ;
+    // InternalRails.g:3622:1: rule__MethodName__Group__2 : rule__MethodName__Group__2__Impl ;
     public final void rule__MethodName__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3642:1: ( rule__MethodName__Group__2__Impl )
-            // InternalRails.g:3643:2: rule__MethodName__Group__2__Impl
+            // InternalRails.g:3626:1: ( rule__MethodName__Group__2__Impl )
+            // InternalRails.g:3627:2: rule__MethodName__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MethodName__Group__2__Impl();
@@ -11276,22 +11276,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group__2__Impl"
-    // InternalRails.g:3649:1: rule__MethodName__Group__2__Impl : ( ( rule__MethodName__Alternatives_2 )? ) ;
+    // InternalRails.g:3633:1: rule__MethodName__Group__2__Impl : ( ( rule__MethodName__Alternatives_2 )? ) ;
     public final void rule__MethodName__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3653:1: ( ( ( rule__MethodName__Alternatives_2 )? ) )
-            // InternalRails.g:3654:1: ( ( rule__MethodName__Alternatives_2 )? )
+            // InternalRails.g:3637:1: ( ( ( rule__MethodName__Alternatives_2 )? ) )
+            // InternalRails.g:3638:1: ( ( rule__MethodName__Alternatives_2 )? )
             {
-            // InternalRails.g:3654:1: ( ( rule__MethodName__Alternatives_2 )? )
-            // InternalRails.g:3655:1: ( rule__MethodName__Alternatives_2 )?
+            // InternalRails.g:3638:1: ( ( rule__MethodName__Alternatives_2 )? )
+            // InternalRails.g:3639:1: ( rule__MethodName__Alternatives_2 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodNameAccess().getAlternatives_2()); 
             }
-            // InternalRails.g:3656:1: ( rule__MethodName__Alternatives_2 )?
+            // InternalRails.g:3640:1: ( rule__MethodName__Alternatives_2 )?
             int alt59=2;
             int LA59_0 = input.LA(1);
 
@@ -11300,7 +11300,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt59) {
                 case 1 :
-                    // InternalRails.g:3656:2: rule__MethodName__Alternatives_2
+                    // InternalRails.g:3640:2: rule__MethodName__Alternatives_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__MethodName__Alternatives_2();
@@ -11338,14 +11338,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group_0__0"
-    // InternalRails.g:3672:1: rule__MethodName__Group_0__0 : rule__MethodName__Group_0__0__Impl rule__MethodName__Group_0__1 ;
+    // InternalRails.g:3656:1: rule__MethodName__Group_0__0 : rule__MethodName__Group_0__0__Impl rule__MethodName__Group_0__1 ;
     public final void rule__MethodName__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3676:1: ( rule__MethodName__Group_0__0__Impl rule__MethodName__Group_0__1 )
-            // InternalRails.g:3677:2: rule__MethodName__Group_0__0__Impl rule__MethodName__Group_0__1
+            // InternalRails.g:3660:1: ( rule__MethodName__Group_0__0__Impl rule__MethodName__Group_0__1 )
+            // InternalRails.g:3661:2: rule__MethodName__Group_0__0__Impl rule__MethodName__Group_0__1
             {
             pushFollow(FOLLOW_30);
             rule__MethodName__Group_0__0__Impl();
@@ -11376,17 +11376,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group_0__0__Impl"
-    // InternalRails.g:3684:1: rule__MethodName__Group_0__0__Impl : ( ruleNamespacedModuleName ) ;
+    // InternalRails.g:3668:1: rule__MethodName__Group_0__0__Impl : ( ruleNamespacedModuleName ) ;
     public final void rule__MethodName__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3688:1: ( ( ruleNamespacedModuleName ) )
-            // InternalRails.g:3689:1: ( ruleNamespacedModuleName )
+            // InternalRails.g:3672:1: ( ( ruleNamespacedModuleName ) )
+            // InternalRails.g:3673:1: ( ruleNamespacedModuleName )
             {
-            // InternalRails.g:3689:1: ( ruleNamespacedModuleName )
-            // InternalRails.g:3690:1: ruleNamespacedModuleName
+            // InternalRails.g:3673:1: ( ruleNamespacedModuleName )
+            // InternalRails.g:3674:1: ruleNamespacedModuleName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodNameAccess().getNamespacedModuleNameParserRuleCall_0_0()); 
@@ -11421,14 +11421,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group_0__1"
-    // InternalRails.g:3701:1: rule__MethodName__Group_0__1 : rule__MethodName__Group_0__1__Impl ;
+    // InternalRails.g:3685:1: rule__MethodName__Group_0__1 : rule__MethodName__Group_0__1__Impl ;
     public final void rule__MethodName__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3705:1: ( rule__MethodName__Group_0__1__Impl )
-            // InternalRails.g:3706:2: rule__MethodName__Group_0__1__Impl
+            // InternalRails.g:3689:1: ( rule__MethodName__Group_0__1__Impl )
+            // InternalRails.g:3690:2: rule__MethodName__Group_0__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MethodName__Group_0__1__Impl();
@@ -11454,17 +11454,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodName__Group_0__1__Impl"
-    // InternalRails.g:3712:1: rule__MethodName__Group_0__1__Impl : ( '.' ) ;
+    // InternalRails.g:3696:1: rule__MethodName__Group_0__1__Impl : ( '.' ) ;
     public final void rule__MethodName__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3716:1: ( ( '.' ) )
-            // InternalRails.g:3717:1: ( '.' )
+            // InternalRails.g:3700:1: ( ( '.' ) )
+            // InternalRails.g:3701:1: ( '.' )
             {
-            // InternalRails.g:3717:1: ( '.' )
-            // InternalRails.g:3718:1: '.'
+            // InternalRails.g:3701:1: ( '.' )
+            // InternalRails.g:3702:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodNameAccess().getFullStopKeyword_0_1()); 
@@ -11495,14 +11495,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group__0"
-    // InternalRails.g:3735:1: rule__OperationsChain__Group__0 : rule__OperationsChain__Group__0__Impl rule__OperationsChain__Group__1 ;
+    // InternalRails.g:3719:1: rule__OperationsChain__Group__0 : rule__OperationsChain__Group__0__Impl rule__OperationsChain__Group__1 ;
     public final void rule__OperationsChain__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3739:1: ( rule__OperationsChain__Group__0__Impl rule__OperationsChain__Group__1 )
-            // InternalRails.g:3740:2: rule__OperationsChain__Group__0__Impl rule__OperationsChain__Group__1
+            // InternalRails.g:3723:1: ( rule__OperationsChain__Group__0__Impl rule__OperationsChain__Group__1 )
+            // InternalRails.g:3724:2: rule__OperationsChain__Group__0__Impl rule__OperationsChain__Group__1
             {
             pushFollow(FOLLOW_31);
             rule__OperationsChain__Group__0__Impl();
@@ -11533,23 +11533,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group__0__Impl"
-    // InternalRails.g:3747:1: rule__OperationsChain__Group__0__Impl : ( ( rule__OperationsChain__NameAssignment_0 ) ) ;
+    // InternalRails.g:3731:1: rule__OperationsChain__Group__0__Impl : ( ( rule__OperationsChain__NameAssignment_0 ) ) ;
     public final void rule__OperationsChain__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3751:1: ( ( ( rule__OperationsChain__NameAssignment_0 ) ) )
-            // InternalRails.g:3752:1: ( ( rule__OperationsChain__NameAssignment_0 ) )
+            // InternalRails.g:3735:1: ( ( ( rule__OperationsChain__NameAssignment_0 ) ) )
+            // InternalRails.g:3736:1: ( ( rule__OperationsChain__NameAssignment_0 ) )
             {
-            // InternalRails.g:3752:1: ( ( rule__OperationsChain__NameAssignment_0 ) )
-            // InternalRails.g:3753:1: ( rule__OperationsChain__NameAssignment_0 )
+            // InternalRails.g:3736:1: ( ( rule__OperationsChain__NameAssignment_0 ) )
+            // InternalRails.g:3737:1: ( rule__OperationsChain__NameAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsChainAccess().getNameAssignment_0()); 
             }
-            // InternalRails.g:3754:1: ( rule__OperationsChain__NameAssignment_0 )
-            // InternalRails.g:3754:2: rule__OperationsChain__NameAssignment_0
+            // InternalRails.g:3738:1: ( rule__OperationsChain__NameAssignment_0 )
+            // InternalRails.g:3738:2: rule__OperationsChain__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__OperationsChain__NameAssignment_0();
@@ -11584,14 +11584,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group__1"
-    // InternalRails.g:3764:1: rule__OperationsChain__Group__1 : rule__OperationsChain__Group__1__Impl ;
+    // InternalRails.g:3748:1: rule__OperationsChain__Group__1 : rule__OperationsChain__Group__1__Impl ;
     public final void rule__OperationsChain__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3768:1: ( rule__OperationsChain__Group__1__Impl )
-            // InternalRails.g:3769:2: rule__OperationsChain__Group__1__Impl
+            // InternalRails.g:3752:1: ( rule__OperationsChain__Group__1__Impl )
+            // InternalRails.g:3753:2: rule__OperationsChain__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__OperationsChain__Group__1__Impl();
@@ -11617,22 +11617,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group__1__Impl"
-    // InternalRails.g:3775:1: rule__OperationsChain__Group__1__Impl : ( ( rule__OperationsChain__Group_1__0 )* ) ;
+    // InternalRails.g:3759:1: rule__OperationsChain__Group__1__Impl : ( ( rule__OperationsChain__Group_1__0 )* ) ;
     public final void rule__OperationsChain__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3779:1: ( ( ( rule__OperationsChain__Group_1__0 )* ) )
-            // InternalRails.g:3780:1: ( ( rule__OperationsChain__Group_1__0 )* )
+            // InternalRails.g:3763:1: ( ( ( rule__OperationsChain__Group_1__0 )* ) )
+            // InternalRails.g:3764:1: ( ( rule__OperationsChain__Group_1__0 )* )
             {
-            // InternalRails.g:3780:1: ( ( rule__OperationsChain__Group_1__0 )* )
-            // InternalRails.g:3781:1: ( rule__OperationsChain__Group_1__0 )*
+            // InternalRails.g:3764:1: ( ( rule__OperationsChain__Group_1__0 )* )
+            // InternalRails.g:3765:1: ( rule__OperationsChain__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsChainAccess().getGroup_1()); 
             }
-            // InternalRails.g:3782:1: ( rule__OperationsChain__Group_1__0 )*
+            // InternalRails.g:3766:1: ( rule__OperationsChain__Group_1__0 )*
             loop60:
             do {
                 int alt60=2;
@@ -11645,7 +11645,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                 switch (alt60) {
             	case 1 :
-            	    // InternalRails.g:3782:2: rule__OperationsChain__Group_1__0
+            	    // InternalRails.g:3766:2: rule__OperationsChain__Group_1__0
             	    {
             	    pushFollow(FOLLOW_32);
             	    rule__OperationsChain__Group_1__0();
@@ -11686,14 +11686,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group_1__0"
-    // InternalRails.g:3796:1: rule__OperationsChain__Group_1__0 : rule__OperationsChain__Group_1__0__Impl rule__OperationsChain__Group_1__1 ;
+    // InternalRails.g:3780:1: rule__OperationsChain__Group_1__0 : rule__OperationsChain__Group_1__0__Impl rule__OperationsChain__Group_1__1 ;
     public final void rule__OperationsChain__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3800:1: ( rule__OperationsChain__Group_1__0__Impl rule__OperationsChain__Group_1__1 )
-            // InternalRails.g:3801:2: rule__OperationsChain__Group_1__0__Impl rule__OperationsChain__Group_1__1
+            // InternalRails.g:3784:1: ( rule__OperationsChain__Group_1__0__Impl rule__OperationsChain__Group_1__1 )
+            // InternalRails.g:3785:2: rule__OperationsChain__Group_1__0__Impl rule__OperationsChain__Group_1__1
             {
             pushFollow(FOLLOW_27);
             rule__OperationsChain__Group_1__0__Impl();
@@ -11724,23 +11724,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group_1__0__Impl"
-    // InternalRails.g:3808:1: rule__OperationsChain__Group_1__0__Impl : ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) ) ;
+    // InternalRails.g:3792:1: rule__OperationsChain__Group_1__0__Impl : ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) ) ;
     public final void rule__OperationsChain__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3812:1: ( ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) ) )
-            // InternalRails.g:3813:1: ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) )
+            // InternalRails.g:3796:1: ( ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) ) )
+            // InternalRails.g:3797:1: ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) )
             {
-            // InternalRails.g:3813:1: ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) )
-            // InternalRails.g:3814:1: ( rule__OperationsChain__OperatorsAssignment_1_0 )
+            // InternalRails.g:3797:1: ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) )
+            // InternalRails.g:3798:1: ( rule__OperationsChain__OperatorsAssignment_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsChainAccess().getOperatorsAssignment_1_0()); 
             }
-            // InternalRails.g:3815:1: ( rule__OperationsChain__OperatorsAssignment_1_0 )
-            // InternalRails.g:3815:2: rule__OperationsChain__OperatorsAssignment_1_0
+            // InternalRails.g:3799:1: ( rule__OperationsChain__OperatorsAssignment_1_0 )
+            // InternalRails.g:3799:2: rule__OperationsChain__OperatorsAssignment_1_0
             {
             pushFollow(FOLLOW_2);
             rule__OperationsChain__OperatorsAssignment_1_0();
@@ -11775,14 +11775,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group_1__1"
-    // InternalRails.g:3825:1: rule__OperationsChain__Group_1__1 : rule__OperationsChain__Group_1__1__Impl ;
+    // InternalRails.g:3809:1: rule__OperationsChain__Group_1__1 : rule__OperationsChain__Group_1__1__Impl ;
     public final void rule__OperationsChain__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3829:1: ( rule__OperationsChain__Group_1__1__Impl )
-            // InternalRails.g:3830:2: rule__OperationsChain__Group_1__1__Impl
+            // InternalRails.g:3813:1: ( rule__OperationsChain__Group_1__1__Impl )
+            // InternalRails.g:3814:2: rule__OperationsChain__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__OperationsChain__Group_1__1__Impl();
@@ -11808,23 +11808,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group_1__1__Impl"
-    // InternalRails.g:3836:1: rule__OperationsChain__Group_1__1__Impl : ( ( rule__OperationsChain__OperantsAssignment_1_1 ) ) ;
+    // InternalRails.g:3820:1: rule__OperationsChain__Group_1__1__Impl : ( ( rule__OperationsChain__OperantsAssignment_1_1 ) ) ;
     public final void rule__OperationsChain__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3840:1: ( ( ( rule__OperationsChain__OperantsAssignment_1_1 ) ) )
-            // InternalRails.g:3841:1: ( ( rule__OperationsChain__OperantsAssignment_1_1 ) )
+            // InternalRails.g:3824:1: ( ( ( rule__OperationsChain__OperantsAssignment_1_1 ) ) )
+            // InternalRails.g:3825:1: ( ( rule__OperationsChain__OperantsAssignment_1_1 ) )
             {
-            // InternalRails.g:3841:1: ( ( rule__OperationsChain__OperantsAssignment_1_1 ) )
-            // InternalRails.g:3842:1: ( rule__OperationsChain__OperantsAssignment_1_1 )
+            // InternalRails.g:3825:1: ( ( rule__OperationsChain__OperantsAssignment_1_1 ) )
+            // InternalRails.g:3826:1: ( rule__OperationsChain__OperantsAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsChainAccess().getOperantsAssignment_1_1()); 
             }
-            // InternalRails.g:3843:1: ( rule__OperationsChain__OperantsAssignment_1_1 )
-            // InternalRails.g:3843:2: rule__OperationsChain__OperantsAssignment_1_1
+            // InternalRails.g:3827:1: ( rule__OperationsChain__OperantsAssignment_1_1 )
+            // InternalRails.g:3827:2: rule__OperationsChain__OperantsAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__OperationsChain__OperantsAssignment_1_1();
@@ -11859,14 +11859,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperatorRule__Group__0"
-    // InternalRails.g:3857:1: rule__OperatorRule__Group__0 : rule__OperatorRule__Group__0__Impl rule__OperatorRule__Group__1 ;
+    // InternalRails.g:3841:1: rule__OperatorRule__Group__0 : rule__OperatorRule__Group__0__Impl rule__OperatorRule__Group__1 ;
     public final void rule__OperatorRule__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3861:1: ( rule__OperatorRule__Group__0__Impl rule__OperatorRule__Group__1 )
-            // InternalRails.g:3862:2: rule__OperatorRule__Group__0__Impl rule__OperatorRule__Group__1
+            // InternalRails.g:3845:1: ( rule__OperatorRule__Group__0__Impl rule__OperatorRule__Group__1 )
+            // InternalRails.g:3846:2: rule__OperatorRule__Group__0__Impl rule__OperatorRule__Group__1
             {
             pushFollow(FOLLOW_33);
             rule__OperatorRule__Group__0__Impl();
@@ -11897,23 +11897,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperatorRule__Group__0__Impl"
-    // InternalRails.g:3869:1: rule__OperatorRule__Group__0__Impl : ( ( rule__OperatorRule__Alternatives_0 ) ) ;
+    // InternalRails.g:3853:1: rule__OperatorRule__Group__0__Impl : ( ( rule__OperatorRule__Alternatives_0 ) ) ;
     public final void rule__OperatorRule__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3873:1: ( ( ( rule__OperatorRule__Alternatives_0 ) ) )
-            // InternalRails.g:3874:1: ( ( rule__OperatorRule__Alternatives_0 ) )
+            // InternalRails.g:3857:1: ( ( ( rule__OperatorRule__Alternatives_0 ) ) )
+            // InternalRails.g:3858:1: ( ( rule__OperatorRule__Alternatives_0 ) )
             {
-            // InternalRails.g:3874:1: ( ( rule__OperatorRule__Alternatives_0 ) )
-            // InternalRails.g:3875:1: ( rule__OperatorRule__Alternatives_0 )
+            // InternalRails.g:3858:1: ( ( rule__OperatorRule__Alternatives_0 ) )
+            // InternalRails.g:3859:1: ( rule__OperatorRule__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperatorRuleAccess().getAlternatives_0()); 
             }
-            // InternalRails.g:3876:1: ( rule__OperatorRule__Alternatives_0 )
-            // InternalRails.g:3876:2: rule__OperatorRule__Alternatives_0
+            // InternalRails.g:3860:1: ( rule__OperatorRule__Alternatives_0 )
+            // InternalRails.g:3860:2: rule__OperatorRule__Alternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__OperatorRule__Alternatives_0();
@@ -11948,14 +11948,14 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperatorRule__Group__1"
-    // InternalRails.g:3886:1: rule__OperatorRule__Group__1 : rule__OperatorRule__Group__1__Impl ;
+    // InternalRails.g:3870:1: rule__OperatorRule__Group__1 : rule__OperatorRule__Group__1__Impl ;
     public final void rule__OperatorRule__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3890:1: ( rule__OperatorRule__Group__1__Impl )
-            // InternalRails.g:3891:2: rule__OperatorRule__Group__1__Impl
+            // InternalRails.g:3874:1: ( rule__OperatorRule__Group__1__Impl )
+            // InternalRails.g:3875:2: rule__OperatorRule__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__OperatorRule__Group__1__Impl();
@@ -11981,22 +11981,22 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperatorRule__Group__1__Impl"
-    // InternalRails.g:3897:1: rule__OperatorRule__Group__1__Impl : ( ( '=' )? ) ;
+    // InternalRails.g:3881:1: rule__OperatorRule__Group__1__Impl : ( ( '=' )? ) ;
     public final void rule__OperatorRule__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3901:1: ( ( ( '=' )? ) )
-            // InternalRails.g:3902:1: ( ( '=' )? )
+            // InternalRails.g:3885:1: ( ( ( '=' )? ) )
+            // InternalRails.g:3886:1: ( ( '=' )? )
             {
-            // InternalRails.g:3902:1: ( ( '=' )? )
-            // InternalRails.g:3903:1: ( '=' )?
+            // InternalRails.g:3886:1: ( ( '=' )? )
+            // InternalRails.g:3887:1: ( '=' )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperatorRuleAccess().getEqualsSignKeyword_1()); 
             }
-            // InternalRails.g:3904:1: ( '=' )?
+            // InternalRails.g:3888:1: ( '=' )?
             int alt61=2;
             int LA61_0 = input.LA(1);
 
@@ -12005,7 +12005,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
             switch (alt61) {
                 case 1 :
-                    // InternalRails.g:3905:2: '='
+                    // InternalRails.g:3889:2: '='
                     {
                     match(input,44,FOLLOW_2); if (state.failed) return ;
 
@@ -12039,17 +12039,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__NameAssignment_2"
-    // InternalRails.g:3921:1: rule__Class__NameAssignment_2 : ( ruleNamespacedModuleName ) ;
+    // InternalRails.g:3905:1: rule__Class__NameAssignment_2 : ( ruleNamespacedModuleName ) ;
     public final void rule__Class__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3925:1: ( ( ruleNamespacedModuleName ) )
-            // InternalRails.g:3926:1: ( ruleNamespacedModuleName )
+            // InternalRails.g:3909:1: ( ( ruleNamespacedModuleName ) )
+            // InternalRails.g:3910:1: ( ruleNamespacedModuleName )
             {
-            // InternalRails.g:3926:1: ( ruleNamespacedModuleName )
-            // InternalRails.g:3927:1: ruleNamespacedModuleName
+            // InternalRails.g:3910:1: ( ruleNamespacedModuleName )
+            // InternalRails.g:3911:1: ruleNamespacedModuleName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getNameNamespacedModuleNameParserRuleCall_2_0()); 
@@ -12084,17 +12084,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__SuperTypeAssignment_3_3"
-    // InternalRails.g:3936:1: rule__Class__SuperTypeAssignment_3_3 : ( ruleNamespacedModuleName ) ;
+    // InternalRails.g:3920:1: rule__Class__SuperTypeAssignment_3_3 : ( ruleNamespacedModuleName ) ;
     public final void rule__Class__SuperTypeAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3940:1: ( ( ruleNamespacedModuleName ) )
-            // InternalRails.g:3941:1: ( ruleNamespacedModuleName )
+            // InternalRails.g:3924:1: ( ( ruleNamespacedModuleName ) )
+            // InternalRails.g:3925:1: ( ruleNamespacedModuleName )
             {
-            // InternalRails.g:3941:1: ( ruleNamespacedModuleName )
-            // InternalRails.g:3942:1: ruleNamespacedModuleName
+            // InternalRails.g:3925:1: ( ruleNamespacedModuleName )
+            // InternalRails.g:3926:1: ruleNamespacedModuleName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getSuperTypeNamespacedModuleNameParserRuleCall_3_3_0()); 
@@ -12129,17 +12129,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__ClassElementsAssignment_5"
-    // InternalRails.g:3951:1: rule__Class__ClassElementsAssignment_5 : ( ruleClassElement ) ;
+    // InternalRails.g:3935:1: rule__Class__ClassElementsAssignment_5 : ( ruleClassElement ) ;
     public final void rule__Class__ClassElementsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3955:1: ( ( ruleClassElement ) )
-            // InternalRails.g:3956:1: ( ruleClassElement )
+            // InternalRails.g:3939:1: ( ( ruleClassElement ) )
+            // InternalRails.g:3940:1: ( ruleClassElement )
             {
-            // InternalRails.g:3956:1: ( ruleClassElement )
-            // InternalRails.g:3957:1: ruleClassElement
+            // InternalRails.g:3940:1: ( ruleClassElement )
+            // InternalRails.g:3941:1: ruleClassElement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClassAccess().getClassElementsClassElementParserRuleCall_5_0()); 
@@ -12174,17 +12174,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TableName__NameAssignment_1"
-    // InternalRails.g:3966:1: rule__TableName__NameAssignment_1 : ( RULE_STRING ) ;
+    // InternalRails.g:3950:1: rule__TableName__NameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__TableName__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3970:1: ( ( RULE_STRING ) )
-            // InternalRails.g:3971:1: ( RULE_STRING )
+            // InternalRails.g:3954:1: ( ( RULE_STRING ) )
+            // InternalRails.g:3955:1: ( RULE_STRING )
             {
-            // InternalRails.g:3971:1: ( RULE_STRING )
-            // InternalRails.g:3972:1: RULE_STRING
+            // InternalRails.g:3955:1: ( RULE_STRING )
+            // InternalRails.g:3956:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTableNameAccess().getNameSTRINGTerminalRuleCall_1_0()); 
@@ -12215,23 +12215,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__RelationTypeAssignment_0"
-    // InternalRails.g:3981:1: rule__Relationship__RelationTypeAssignment_0 : ( ( rule__Relationship__RelationTypeAlternatives_0_0 ) ) ;
+    // InternalRails.g:3965:1: rule__Relationship__RelationTypeAssignment_0 : ( ( rule__Relationship__RelationTypeAlternatives_0_0 ) ) ;
     public final void rule__Relationship__RelationTypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3985:1: ( ( ( rule__Relationship__RelationTypeAlternatives_0_0 ) ) )
-            // InternalRails.g:3986:1: ( ( rule__Relationship__RelationTypeAlternatives_0_0 ) )
+            // InternalRails.g:3969:1: ( ( ( rule__Relationship__RelationTypeAlternatives_0_0 ) ) )
+            // InternalRails.g:3970:1: ( ( rule__Relationship__RelationTypeAlternatives_0_0 ) )
             {
-            // InternalRails.g:3986:1: ( ( rule__Relationship__RelationTypeAlternatives_0_0 ) )
-            // InternalRails.g:3987:1: ( rule__Relationship__RelationTypeAlternatives_0_0 )
+            // InternalRails.g:3970:1: ( ( rule__Relationship__RelationTypeAlternatives_0_0 ) )
+            // InternalRails.g:3971:1: ( rule__Relationship__RelationTypeAlternatives_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationshipAccess().getRelationTypeAlternatives_0_0()); 
             }
-            // InternalRails.g:3988:1: ( rule__Relationship__RelationTypeAlternatives_0_0 )
-            // InternalRails.g:3988:2: rule__Relationship__RelationTypeAlternatives_0_0
+            // InternalRails.g:3972:1: ( rule__Relationship__RelationTypeAlternatives_0_0 )
+            // InternalRails.g:3972:2: rule__Relationship__RelationTypeAlternatives_0_0
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__RelationTypeAlternatives_0_0();
@@ -12266,23 +12266,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__NameAssignment_2"
-    // InternalRails.g:3997:1: rule__Relationship__NameAssignment_2 : ( ( rule__Relationship__NameAlternatives_2_0 ) ) ;
+    // InternalRails.g:3981:1: rule__Relationship__NameAssignment_2 : ( ( rule__Relationship__NameAlternatives_2_0 ) ) ;
     public final void rule__Relationship__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:4001:1: ( ( ( rule__Relationship__NameAlternatives_2_0 ) ) )
-            // InternalRails.g:4002:1: ( ( rule__Relationship__NameAlternatives_2_0 ) )
+            // InternalRails.g:3985:1: ( ( ( rule__Relationship__NameAlternatives_2_0 ) ) )
+            // InternalRails.g:3986:1: ( ( rule__Relationship__NameAlternatives_2_0 ) )
             {
-            // InternalRails.g:4002:1: ( ( rule__Relationship__NameAlternatives_2_0 ) )
-            // InternalRails.g:4003:1: ( rule__Relationship__NameAlternatives_2_0 )
+            // InternalRails.g:3986:1: ( ( rule__Relationship__NameAlternatives_2_0 ) )
+            // InternalRails.g:3987:1: ( rule__Relationship__NameAlternatives_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationshipAccess().getNameAlternatives_2_0()); 
             }
-            // InternalRails.g:4004:1: ( rule__Relationship__NameAlternatives_2_0 )
-            // InternalRails.g:4004:2: rule__Relationship__NameAlternatives_2_0
+            // InternalRails.g:3988:1: ( rule__Relationship__NameAlternatives_2_0 )
+            // InternalRails.g:3988:2: rule__Relationship__NameAlternatives_2_0
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__NameAlternatives_2_0();
@@ -12317,17 +12317,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Relationship__OptionsAssignment_4"
-    // InternalRails.g:4013:1: rule__Relationship__OptionsAssignment_4 : ( ruleHashKeyValue ) ;
+    // InternalRails.g:3997:1: rule__Relationship__OptionsAssignment_4 : ( ruleHashKeyValue ) ;
     public final void rule__Relationship__OptionsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:4017:1: ( ( ruleHashKeyValue ) )
-            // InternalRails.g:4018:1: ( ruleHashKeyValue )
+            // InternalRails.g:4001:1: ( ( ruleHashKeyValue ) )
+            // InternalRails.g:4002:1: ( ruleHashKeyValue )
             {
-            // InternalRails.g:4018:1: ( ruleHashKeyValue )
-            // InternalRails.g:4019:1: ruleHashKeyValue
+            // InternalRails.g:4002:1: ( ruleHashKeyValue )
+            // InternalRails.g:4003:1: ruleHashKeyValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationshipAccess().getOptionsHashKeyValueParserRuleCall_4_0()); 
@@ -12362,17 +12362,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__KeyAssignment_3_0_0"
-    // InternalRails.g:4036:1: rule__HashKeyValue__KeyAssignment_3_0_0 : ( RULE_ID ) ;
+    // InternalRails.g:4012:1: rule__HashKeyValue__KeyAssignment_3_0_0 : ( RULE_ID ) ;
     public final void rule__HashKeyValue__KeyAssignment_3_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:4040:1: ( ( RULE_ID ) )
-            // InternalRails.g:4041:1: ( RULE_ID )
+            // InternalRails.g:4016:1: ( ( RULE_ID ) )
+            // InternalRails.g:4017:1: ( RULE_ID )
             {
-            // InternalRails.g:4041:1: ( RULE_ID )
-            // InternalRails.g:4042:1: RULE_ID
+            // InternalRails.g:4017:1: ( RULE_ID )
+            // InternalRails.g:4018:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getKeyIDTerminalRuleCall_3_0_0_0()); 
@@ -12403,23 +12403,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__KeyAssignment_3_1_0"
-    // InternalRails.g:4051:1: rule__HashKeyValue__KeyAssignment_3_1_0 : ( ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 ) ) ;
+    // InternalRails.g:4027:1: rule__HashKeyValue__KeyAssignment_3_1_0 : ( ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 ) ) ;
     public final void rule__HashKeyValue__KeyAssignment_3_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:4055:1: ( ( ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 ) ) )
-            // InternalRails.g:4056:1: ( ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 ) )
+            // InternalRails.g:4031:1: ( ( ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 ) ) )
+            // InternalRails.g:4032:1: ( ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 ) )
             {
-            // InternalRails.g:4056:1: ( ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 ) )
-            // InternalRails.g:4057:1: ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 )
+            // InternalRails.g:4032:1: ( ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 ) )
+            // InternalRails.g:4033:1: ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getKeyAlternatives_3_1_0_0()); 
             }
-            // InternalRails.g:4058:1: ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 )
-            // InternalRails.g:4058:2: rule__HashKeyValue__KeyAlternatives_3_1_0_0
+            // InternalRails.g:4034:1: ( rule__HashKeyValue__KeyAlternatives_3_1_0_0 )
+            // InternalRails.g:4034:2: rule__HashKeyValue__KeyAlternatives_3_1_0_0
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__KeyAlternatives_3_1_0_0();
@@ -12454,23 +12454,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HashKeyValue__ValueAssignment_5"
-    // InternalRails.g:4067:1: rule__HashKeyValue__ValueAssignment_5 : ( ( rule__HashKeyValue__ValueAlternatives_5_0 ) ) ;
+    // InternalRails.g:4043:1: rule__HashKeyValue__ValueAssignment_5 : ( ( rule__HashKeyValue__ValueAlternatives_5_0 ) ) ;
     public final void rule__HashKeyValue__ValueAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:4071:1: ( ( ( rule__HashKeyValue__ValueAlternatives_5_0 ) ) )
-            // InternalRails.g:4072:1: ( ( rule__HashKeyValue__ValueAlternatives_5_0 ) )
+            // InternalRails.g:4047:1: ( ( ( rule__HashKeyValue__ValueAlternatives_5_0 ) ) )
+            // InternalRails.g:4048:1: ( ( rule__HashKeyValue__ValueAlternatives_5_0 ) )
             {
-            // InternalRails.g:4072:1: ( ( rule__HashKeyValue__ValueAlternatives_5_0 ) )
-            // InternalRails.g:4073:1: ( rule__HashKeyValue__ValueAlternatives_5_0 )
+            // InternalRails.g:4048:1: ( ( rule__HashKeyValue__ValueAlternatives_5_0 ) )
+            // InternalRails.g:4049:1: ( rule__HashKeyValue__ValueAlternatives_5_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHashKeyValueAccess().getValueAlternatives_5_0()); 
             }
-            // InternalRails.g:4074:1: ( rule__HashKeyValue__ValueAlternatives_5_0 )
-            // InternalRails.g:4074:2: rule__HashKeyValue__ValueAlternatives_5_0
+            // InternalRails.g:4050:1: ( rule__HashKeyValue__ValueAlternatives_5_0 )
+            // InternalRails.g:4050:2: rule__HashKeyValue__ValueAlternatives_5_0
             {
             pushFollow(FOLLOW_2);
             rule__HashKeyValue__ValueAlternatives_5_0();
@@ -12505,17 +12505,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__NameAssignment_2"
-    // InternalRails.g:4083:1: rule__Method__NameAssignment_2 : ( ruleMethodName ) ;
+    // InternalRails.g:4059:1: rule__Method__NameAssignment_2 : ( ruleMethodName ) ;
     public final void rule__Method__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:4087:1: ( ( ruleMethodName ) )
-            // InternalRails.g:4088:1: ( ruleMethodName )
+            // InternalRails.g:4063:1: ( ( ruleMethodName ) )
+            // InternalRails.g:4064:1: ( ruleMethodName )
             {
-            // InternalRails.g:4088:1: ( ruleMethodName )
-            // InternalRails.g:4089:1: ruleMethodName
+            // InternalRails.g:4064:1: ( ruleMethodName )
+            // InternalRails.g:4065:1: ruleMethodName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_2_0()); 
@@ -12550,17 +12550,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__NameAssignment_0"
-    // InternalRails.g:4098:1: rule__OperationsChain__NameAssignment_0 : ( ruleMethodChainCall ) ;
+    // InternalRails.g:4074:1: rule__OperationsChain__NameAssignment_0 : ( ruleMethodChainCall ) ;
     public final void rule__OperationsChain__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:4102:1: ( ( ruleMethodChainCall ) )
-            // InternalRails.g:4103:1: ( ruleMethodChainCall )
+            // InternalRails.g:4078:1: ( ( ruleMethodChainCall ) )
+            // InternalRails.g:4079:1: ( ruleMethodChainCall )
             {
-            // InternalRails.g:4103:1: ( ruleMethodChainCall )
-            // InternalRails.g:4104:1: ruleMethodChainCall
+            // InternalRails.g:4079:1: ( ruleMethodChainCall )
+            // InternalRails.g:4080:1: ruleMethodChainCall
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsChainAccess().getNameMethodChainCallParserRuleCall_0_0()); 
@@ -12595,17 +12595,17 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__OperatorsAssignment_1_0"
-    // InternalRails.g:4113:1: rule__OperationsChain__OperatorsAssignment_1_0 : ( ruleOperatorRule ) ;
+    // InternalRails.g:4089:1: rule__OperationsChain__OperatorsAssignment_1_0 : ( ruleOperatorRule ) ;
     public final void rule__OperationsChain__OperatorsAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:4117:1: ( ( ruleOperatorRule ) )
-            // InternalRails.g:4118:1: ( ruleOperatorRule )
+            // InternalRails.g:4093:1: ( ( ruleOperatorRule ) )
+            // InternalRails.g:4094:1: ( ruleOperatorRule )
             {
-            // InternalRails.g:4118:1: ( ruleOperatorRule )
-            // InternalRails.g:4119:1: ruleOperatorRule
+            // InternalRails.g:4094:1: ( ruleOperatorRule )
+            // InternalRails.g:4095:1: ruleOperatorRule
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsChainAccess().getOperatorsOperatorRuleParserRuleCall_1_0_0()); 
@@ -12640,23 +12640,23 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__OperantsAssignment_1_1"
-    // InternalRails.g:4128:1: rule__OperationsChain__OperantsAssignment_1_1 : ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) ) ;
+    // InternalRails.g:4104:1: rule__OperationsChain__OperantsAssignment_1_1 : ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) ) ;
     public final void rule__OperationsChain__OperantsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:4132:1: ( ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) ) )
-            // InternalRails.g:4133:1: ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) )
+            // InternalRails.g:4108:1: ( ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) ) )
+            // InternalRails.g:4109:1: ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) )
             {
-            // InternalRails.g:4133:1: ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) )
-            // InternalRails.g:4134:1: ( rule__OperationsChain__OperantsAlternatives_1_1_0 )
+            // InternalRails.g:4109:1: ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) )
+            // InternalRails.g:4110:1: ( rule__OperationsChain__OperantsAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsChainAccess().getOperantsAlternatives_1_1_0()); 
             }
-            // InternalRails.g:4135:1: ( rule__OperationsChain__OperantsAlternatives_1_1_0 )
-            // InternalRails.g:4135:2: rule__OperationsChain__OperantsAlternatives_1_1_0
+            // InternalRails.g:4111:1: ( rule__OperationsChain__OperantsAlternatives_1_1_0 )
+            // InternalRails.g:4111:2: rule__OperationsChain__OperantsAlternatives_1_1_0
             {
             pushFollow(FOLLOW_2);
             rule__OperationsChain__OperantsAlternatives_1_1_0();
@@ -12691,11 +12691,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred10_InternalRails
     public final void synpred10_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:627:1: ( ( RULE_PARENTHESIS_BLOCK ) )
-        // InternalRails.g:627:1: ( RULE_PARENTHESIS_BLOCK )
+        // InternalRails.g:619:1: ( ( RULE_PARENTHESIS_BLOCK ) )
+        // InternalRails.g:619:1: ( RULE_PARENTHESIS_BLOCK )
         {
-        // InternalRails.g:627:1: ( RULE_PARENTHESIS_BLOCK )
-        // InternalRails.g:628:1: RULE_PARENTHESIS_BLOCK
+        // InternalRails.g:619:1: ( RULE_PARENTHESIS_BLOCK )
+        // InternalRails.g:620:1: RULE_PARENTHESIS_BLOCK
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getMethodCallParametersAccess().getPARENTHESIS_BLOCKTerminalRuleCall_0()); 
@@ -12711,11 +12711,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred11_InternalRails
     public final void synpred11_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:649:1: ( ( RULE_SYMBOL ) )
-        // InternalRails.g:649:1: ( RULE_SYMBOL )
+        // InternalRails.g:641:1: ( ( RULE_SYMBOL ) )
+        // InternalRails.g:641:1: ( RULE_SYMBOL )
         {
-        // InternalRails.g:649:1: ( RULE_SYMBOL )
-        // InternalRails.g:650:1: RULE_SYMBOL
+        // InternalRails.g:641:1: ( RULE_SYMBOL )
+        // InternalRails.g:642:1: RULE_SYMBOL
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getExpressionWithOutBracketAccess().getSYMBOLTerminalRuleCall_0()); 
@@ -12731,11 +12731,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred12_InternalRails
     public final void synpred12_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:655:6: ( ( RULE_STRING ) )
-        // InternalRails.g:655:6: ( RULE_STRING )
+        // InternalRails.g:647:6: ( ( RULE_STRING ) )
+        // InternalRails.g:647:6: ( RULE_STRING )
         {
-        // InternalRails.g:655:6: ( RULE_STRING )
-        // InternalRails.g:656:1: RULE_STRING
+        // InternalRails.g:647:6: ( RULE_STRING )
+        // InternalRails.g:648:1: RULE_STRING
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getExpressionWithOutBracketAccess().getSTRINGTerminalRuleCall_1()); 
@@ -12751,11 +12751,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred13_InternalRails
     public final void synpred13_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:661:6: ( ( RULE_ARRAY_BLOCK ) )
-        // InternalRails.g:661:6: ( RULE_ARRAY_BLOCK )
+        // InternalRails.g:653:6: ( ( RULE_ARRAY_BLOCK ) )
+        // InternalRails.g:653:6: ( RULE_ARRAY_BLOCK )
         {
-        // InternalRails.g:661:6: ( RULE_ARRAY_BLOCK )
-        // InternalRails.g:662:1: RULE_ARRAY_BLOCK
+        // InternalRails.g:653:6: ( RULE_ARRAY_BLOCK )
+        // InternalRails.g:654:1: RULE_ARRAY_BLOCK
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getExpressionWithOutBracketAccess().getARRAY_BLOCKTerminalRuleCall_2()); 
@@ -12771,11 +12771,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred14_InternalRails
     public final void synpred14_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:667:6: ( ( RULE_PARENTHESIS_BLOCK ) )
-        // InternalRails.g:667:6: ( RULE_PARENTHESIS_BLOCK )
+        // InternalRails.g:659:6: ( ( RULE_PARENTHESIS_BLOCK ) )
+        // InternalRails.g:659:6: ( RULE_PARENTHESIS_BLOCK )
         {
-        // InternalRails.g:667:6: ( RULE_PARENTHESIS_BLOCK )
-        // InternalRails.g:668:1: RULE_PARENTHESIS_BLOCK
+        // InternalRails.g:659:6: ( RULE_PARENTHESIS_BLOCK )
+        // InternalRails.g:660:1: RULE_PARENTHESIS_BLOCK
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getExpressionWithOutBracketAccess().getPARENTHESIS_BLOCKTerminalRuleCall_3()); 
@@ -12791,11 +12791,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred16_InternalRails
     public final void synpred16_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:679:6: ( ( RULE_INT ) )
-        // InternalRails.g:679:6: ( RULE_INT )
+        // InternalRails.g:671:6: ( ( RULE_INT ) )
+        // InternalRails.g:671:6: ( RULE_INT )
         {
-        // InternalRails.g:679:6: ( RULE_INT )
-        // InternalRails.g:680:1: RULE_INT
+        // InternalRails.g:671:6: ( RULE_INT )
+        // InternalRails.g:672:1: RULE_INT
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getExpressionWithOutBracketAccess().getINTTerminalRuleCall_5()); 
@@ -12811,11 +12811,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred18_InternalRails
     public final void synpred18_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:691:6: ( ( ruleMethodChainCall ) )
-        // InternalRails.g:691:6: ( ruleMethodChainCall )
+        // InternalRails.g:683:6: ( ( ruleMethodChainCall ) )
+        // InternalRails.g:683:6: ( ruleMethodChainCall )
         {
-        // InternalRails.g:691:6: ( ruleMethodChainCall )
-        // InternalRails.g:692:1: ruleMethodChainCall
+        // InternalRails.g:683:6: ( ruleMethodChainCall )
+        // InternalRails.g:684:1: ruleMethodChainCall
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getExpressionWithOutBracketAccess().getMethodChainCallParserRuleCall_7()); 
@@ -12835,11 +12835,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred26_InternalRails
     public final void synpred26_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:839:1: ( ( RULE_SYMBOL ) )
-        // InternalRails.g:839:1: ( RULE_SYMBOL )
+        // InternalRails.g:827:1: ( ( RULE_SYMBOL ) )
+        // InternalRails.g:827:1: ( RULE_SYMBOL )
         {
-        // InternalRails.g:839:1: ( RULE_SYMBOL )
-        // InternalRails.g:840:1: RULE_SYMBOL
+        // InternalRails.g:827:1: ( RULE_SYMBOL )
+        // InternalRails.g:828:1: RULE_SYMBOL
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getHashKeyValueAccess().getValueSYMBOLTerminalRuleCall_5_0_0()); 
@@ -12855,11 +12855,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred27_InternalRails
     public final void synpred27_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:845:6: ( ( RULE_STRING ) )
-        // InternalRails.g:845:6: ( RULE_STRING )
+        // InternalRails.g:833:6: ( ( RULE_STRING ) )
+        // InternalRails.g:833:6: ( RULE_STRING )
         {
-        // InternalRails.g:845:6: ( RULE_STRING )
-        // InternalRails.g:846:1: RULE_STRING
+        // InternalRails.g:833:6: ( RULE_STRING )
+        // InternalRails.g:834:1: RULE_STRING
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getHashKeyValueAccess().getValueSTRINGTerminalRuleCall_5_0_1()); 
@@ -12875,11 +12875,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred29_InternalRails
     public final void synpred29_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:857:6: ( ( RULE_ARRAY_BLOCK ) )
-        // InternalRails.g:857:6: ( RULE_ARRAY_BLOCK )
+        // InternalRails.g:845:6: ( ( RULE_ARRAY_BLOCK ) )
+        // InternalRails.g:845:6: ( RULE_ARRAY_BLOCK )
         {
-        // InternalRails.g:857:6: ( RULE_ARRAY_BLOCK )
-        // InternalRails.g:858:1: RULE_ARRAY_BLOCK
+        // InternalRails.g:845:6: ( RULE_ARRAY_BLOCK )
+        // InternalRails.g:846:1: RULE_ARRAY_BLOCK
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getHashKeyValueAccess().getValueARRAY_BLOCKTerminalRuleCall_5_0_3()); 
@@ -12895,11 +12895,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred31_InternalRails
     public final void synpred31_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:869:6: ( ( RULE_INT ) )
-        // InternalRails.g:869:6: ( RULE_INT )
+        // InternalRails.g:857:6: ( ( RULE_INT ) )
+        // InternalRails.g:857:6: ( RULE_INT )
         {
-        // InternalRails.g:869:6: ( RULE_INT )
-        // InternalRails.g:870:1: RULE_INT
+        // InternalRails.g:857:6: ( RULE_INT )
+        // InternalRails.g:858:1: RULE_INT
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getHashKeyValueAccess().getValueINTTerminalRuleCall_5_0_5()); 
@@ -12915,11 +12915,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred32_InternalRails
     public final void synpred32_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:875:6: ( ( RULE_INT_METHOD ) )
-        // InternalRails.g:875:6: ( RULE_INT_METHOD )
+        // InternalRails.g:863:6: ( ( RULE_INT_METHOD ) )
+        // InternalRails.g:863:6: ( RULE_INT_METHOD )
         {
-        // InternalRails.g:875:6: ( RULE_INT_METHOD )
-        // InternalRails.g:876:1: RULE_INT_METHOD
+        // InternalRails.g:863:6: ( RULE_INT_METHOD )
+        // InternalRails.g:864:1: RULE_INT_METHOD
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getHashKeyValueAccess().getValueINT_METHODTerminalRuleCall_5_0_6()); 
@@ -12935,11 +12935,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred35_InternalRails
     public final void synpred35_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:941:1: ( ( RULE_SYMBOL ) )
-        // InternalRails.g:941:1: ( RULE_SYMBOL )
+        // InternalRails.g:929:1: ( ( RULE_SYMBOL ) )
+        // InternalRails.g:929:1: ( RULE_SYMBOL )
         {
-        // InternalRails.g:941:1: ( RULE_SYMBOL )
-        // InternalRails.g:942:1: RULE_SYMBOL
+        // InternalRails.g:929:1: ( RULE_SYMBOL )
+        // InternalRails.g:930:1: RULE_SYMBOL
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getIgnoredHashKeyValueAccess().getSYMBOLTerminalRuleCall_3_0()); 
@@ -12955,11 +12955,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred36_InternalRails
     public final void synpred36_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:947:6: ( ( RULE_STRING ) )
-        // InternalRails.g:947:6: ( RULE_STRING )
+        // InternalRails.g:935:6: ( ( RULE_STRING ) )
+        // InternalRails.g:935:6: ( RULE_STRING )
         {
-        // InternalRails.g:947:6: ( RULE_STRING )
-        // InternalRails.g:948:1: RULE_STRING
+        // InternalRails.g:935:6: ( RULE_STRING )
+        // InternalRails.g:936:1: RULE_STRING
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getIgnoredHashKeyValueAccess().getSTRINGTerminalRuleCall_3_1()); 
@@ -12975,11 +12975,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred38_InternalRails
     public final void synpred38_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:959:6: ( ( RULE_ARRAY_BLOCK ) )
-        // InternalRails.g:959:6: ( RULE_ARRAY_BLOCK )
+        // InternalRails.g:947:6: ( ( RULE_ARRAY_BLOCK ) )
+        // InternalRails.g:947:6: ( RULE_ARRAY_BLOCK )
         {
-        // InternalRails.g:959:6: ( RULE_ARRAY_BLOCK )
-        // InternalRails.g:960:1: RULE_ARRAY_BLOCK
+        // InternalRails.g:947:6: ( RULE_ARRAY_BLOCK )
+        // InternalRails.g:948:1: RULE_ARRAY_BLOCK
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getIgnoredHashKeyValueAccess().getARRAY_BLOCKTerminalRuleCall_3_3()); 
@@ -12995,11 +12995,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred40_InternalRails
     public final void synpred40_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:971:6: ( ( RULE_INT ) )
-        // InternalRails.g:971:6: ( RULE_INT )
+        // InternalRails.g:959:6: ( ( RULE_INT ) )
+        // InternalRails.g:959:6: ( RULE_INT )
         {
-        // InternalRails.g:971:6: ( RULE_INT )
-        // InternalRails.g:972:1: RULE_INT
+        // InternalRails.g:959:6: ( RULE_INT )
+        // InternalRails.g:960:1: RULE_INT
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getIgnoredHashKeyValueAccess().getINTTerminalRuleCall_3_5()); 
@@ -13015,11 +13015,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred41_InternalRails
     public final void synpred41_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:977:6: ( ( RULE_INT_METHOD ) )
-        // InternalRails.g:977:6: ( RULE_INT_METHOD )
+        // InternalRails.g:965:6: ( ( RULE_INT_METHOD ) )
+        // InternalRails.g:965:6: ( RULE_INT_METHOD )
         {
-        // InternalRails.g:977:6: ( RULE_INT_METHOD )
-        // InternalRails.g:978:1: RULE_INT_METHOD
+        // InternalRails.g:965:6: ( RULE_INT_METHOD )
+        // InternalRails.g:966:1: RULE_INT_METHOD
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getIgnoredHashKeyValueAccess().getINT_METHODTerminalRuleCall_3_6()); 
@@ -13035,11 +13035,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred42_InternalRails
     public final void synpred42_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:983:6: ( ( ruleMethodChainCall ) )
-        // InternalRails.g:983:6: ( ruleMethodChainCall )
+        // InternalRails.g:971:6: ( ( ruleMethodChainCall ) )
+        // InternalRails.g:971:6: ( ruleMethodChainCall )
         {
-        // InternalRails.g:983:6: ( ruleMethodChainCall )
-        // InternalRails.g:984:1: ruleMethodChainCall
+        // InternalRails.g:971:6: ( ruleMethodChainCall )
+        // InternalRails.g:972:1: ruleMethodChainCall
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getIgnoredHashKeyValueAccess().getMethodChainCallParserRuleCall_3_7()); 
@@ -13059,8 +13059,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred77_InternalRails
     public final void synpred77_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:1859:3: ( RULE_SPACE )
-        // InternalRails.g:1859:3: RULE_SPACE
+        // InternalRails.g:1847:3: ( RULE_SPACE )
+        // InternalRails.g:1847:3: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -13070,8 +13070,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred78_InternalRails
     public final void synpred78_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:1888:3: ( ruleMethodCallParameters )
-        // InternalRails.g:1888:3: ruleMethodCallParameters
+        // InternalRails.g:1876:3: ( ruleMethodCallParameters )
+        // InternalRails.g:1876:3: ruleMethodCallParameters
         {
         pushFollow(FOLLOW_2);
         ruleMethodCallParameters();
@@ -13085,8 +13085,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred79_InternalRails
     public final void synpred79_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:1917:3: ( RULE_SPACE )
-        // InternalRails.g:1917:3: RULE_SPACE
+        // InternalRails.g:1905:3: ( RULE_SPACE )
+        // InternalRails.g:1905:3: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -13096,8 +13096,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred80_InternalRails
     public final void synpred80_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:1946:3: ( RULE_BRACKET_BLOCK )
-        // InternalRails.g:1946:3: RULE_BRACKET_BLOCK
+        // InternalRails.g:1934:3: ( RULE_BRACKET_BLOCK )
+        // InternalRails.g:1934:3: RULE_BRACKET_BLOCK
         {
         match(input,RULE_BRACKET_BLOCK,FOLLOW_2); if (state.failed) return ;
 
@@ -13107,8 +13107,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred81_InternalRails
     public final void synpred81_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:1975:3: ( RULE_SPACE )
-        // InternalRails.g:1975:3: RULE_SPACE
+        // InternalRails.g:1963:3: ( RULE_SPACE )
+        // InternalRails.g:1963:3: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -13118,8 +13118,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred82_InternalRails
     public final void synpred82_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:2004:3: ( RULE_DO_BLOCK_PARAMETERS )
-        // InternalRails.g:2004:3: RULE_DO_BLOCK_PARAMETERS
+        // InternalRails.g:1992:3: ( RULE_DO_BLOCK_PARAMETERS )
+        // InternalRails.g:1992:3: RULE_DO_BLOCK_PARAMETERS
         {
         match(input,RULE_DO_BLOCK_PARAMETERS,FOLLOW_2); if (state.failed) return ;
 
@@ -13129,8 +13129,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred83_InternalRails
     public final void synpred83_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:2033:3: ( RULE_SPACE )
-        // InternalRails.g:2033:3: RULE_SPACE
+        // InternalRails.g:2021:3: ( RULE_SPACE )
+        // InternalRails.g:2021:3: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -13140,8 +13140,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred84_InternalRails
     public final void synpred84_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:2061:3: ( RULE_LF )
-        // InternalRails.g:2061:3: RULE_LF
+        // InternalRails.g:2049:3: ( RULE_LF )
+        // InternalRails.g:2049:3: RULE_LF
         {
         match(input,RULE_LF,FOLLOW_2); if (state.failed) return ;
 
@@ -13151,8 +13151,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred85_InternalRails
     public final void synpred85_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:2169:3: ( RULE_PARENTHESIS_BLOCK )
-        // InternalRails.g:2169:3: RULE_PARENTHESIS_BLOCK
+        // InternalRails.g:2157:3: ( RULE_PARENTHESIS_BLOCK )
+        // InternalRails.g:2157:3: RULE_PARENTHESIS_BLOCK
         {
         match(input,RULE_PARENTHESIS_BLOCK,FOLLOW_2); if (state.failed) return ;
 
@@ -13162,8 +13162,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred86_InternalRails
     public final void synpred86_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:2232:2: ( rule__ExpressionsSeparatedByCommas__Group_1__0 )
-        // InternalRails.g:2232:2: rule__ExpressionsSeparatedByCommas__Group_1__0
+        // InternalRails.g:2220:2: ( rule__ExpressionsSeparatedByCommas__Group_1__0 )
+        // InternalRails.g:2220:2: rule__ExpressionsSeparatedByCommas__Group_1__0
         {
         pushFollow(FOLLOW_2);
         rule__ExpressionsSeparatedByCommas__Group_1__0();
@@ -13177,8 +13177,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred89_InternalRails
     public final void synpred89_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:2352:3: ( RULE_SPACE )
-        // InternalRails.g:2352:3: RULE_SPACE
+        // InternalRails.g:2340:3: ( RULE_SPACE )
+        // InternalRails.g:2340:3: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -13188,8 +13188,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred102_InternalRails
     public final void synpred102_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:3187:3: ( RULE_SPACE )
-        // InternalRails.g:3187:3: RULE_SPACE
+        // InternalRails.g:3171:3: ( RULE_SPACE )
+        // InternalRails.g:3171:3: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -13199,8 +13199,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred105_InternalRails
     public final void synpred105_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:3470:3: ( RULE_SPACE )
-        // InternalRails.g:3470:3: RULE_SPACE
+        // InternalRails.g:3454:3: ( RULE_SPACE )
+        // InternalRails.g:3454:3: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -13210,8 +13210,8 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred106_InternalRails
     public final void synpred106_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:3499:3: ( RULE_PARENTHESIS_BLOCK )
-        // InternalRails.g:3499:3: RULE_PARENTHESIS_BLOCK
+        // InternalRails.g:3483:3: ( RULE_PARENTHESIS_BLOCK )
+        // InternalRails.g:3483:3: RULE_PARENTHESIS_BLOCK
         {
         match(input,RULE_PARENTHESIS_BLOCK,FOLLOW_2); if (state.failed) return ;
 
@@ -13724,7 +13724,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             this.transition = dfa_7;
         }
         public String getDescription() {
-            return "644:1: rule__ExpressionWithOutBracket__Alternatives : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_ARRAY_BLOCK ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_REGEXP ) | ( ruleMethodChainCall ) | ( ruleIgnoredHashKeyValue ) );";
+            return "636:1: rule__ExpressionWithOutBracket__Alternatives : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_ARRAY_BLOCK ) | ( RULE_PARENTHESIS_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_REGEXP ) | ( ruleMethodChainCall ) | ( ruleIgnoredHashKeyValue ) );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -13860,7 +13860,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             this.transition = dfa_13;
         }
         public String getDescription() {
-            return "834:1: rule__HashKeyValue__ValueAlternatives_5_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) );";
+            return "822:1: rule__HashKeyValue__ValueAlternatives_5_0 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -13993,7 +13993,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             this.transition = dfa_19;
         }
         public String getDescription() {
-            return "936:1: rule__IgnoredHashKeyValue__Alternatives_3 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) );";
+            return "924:1: rule__IgnoredHashKeyValue__Alternatives_3 : ( ( RULE_SYMBOL ) | ( RULE_STRING ) | ( RULE_BRACKET_BLOCK ) | ( RULE_ARRAY_BLOCK ) | ( RULE_DECIMAL ) | ( RULE_INT ) | ( RULE_INT_METHOD ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -14117,7 +14117,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             this.transition = dfa_26;
         }
         public String getDescription() {
-            return "1362:1: ( rule__Class__Group_3__0 )?";
+            return "1350:1: ( rule__Class__Group_3__0 )?";
         }
     }
     static final String dfa_27s = "\55\uffff";
@@ -14196,7 +14196,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             this.transition = dfa_33;
         }
         public String getDescription() {
-            return "1888:1: ( ruleMethodCallParameters )?";
+            return "1876:1: ( ruleMethodCallParameters )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -14354,7 +14354,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             this.transition = dfa_35;
         }
         public String getDescription() {
-            return "2323:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )?";
+            return "2311:1: ( rule__ExpressionsSeparatedByCommas__Group_1_2__0 )?";
         }
     }
  

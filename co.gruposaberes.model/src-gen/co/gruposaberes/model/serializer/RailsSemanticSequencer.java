@@ -3,10 +3,6 @@
  */
 package co.gruposaberes.model.serializer;
 
-import co.gruposaberes.model.rails.BelongsTo;
-import co.gruposaberes.model.rails.HasAndBelongsToMany;
-import co.gruposaberes.model.rails.HasMany;
-import co.gruposaberes.model.rails.HasOne;
 import co.gruposaberes.model.rails.HashKeyValue;
 import co.gruposaberes.model.rails.OperationsChain;
 import co.gruposaberes.model.rails.RailsPackage;
@@ -41,18 +37,6 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == RailsPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case RailsPackage.BELONGS_TO:
-				sequence_BelongsTo(context, (BelongsTo) semanticObject); 
-				return; 
-			case RailsPackage.HAS_AND_BELONGS_TO_MANY:
-				sequence_HasAndBelongsToMany(context, (HasAndBelongsToMany) semanticObject); 
-				return; 
-			case RailsPackage.HAS_MANY:
-				sequence_HasMany(context, (HasMany) semanticObject); 
-				return; 
-			case RailsPackage.HAS_ONE:
-				sequence_HasOne(context, (HasOne) semanticObject); 
-				return; 
 			case RailsPackage.HASH_KEY_VALUE:
 				sequence_HashKeyValue(context, (HashKeyValue) semanticObject); 
 				return; 
@@ -78,60 +62,12 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     BelongsTo returns BelongsTo
-	 *
-	 * Constraint:
-	 *     ((name=SYMBOL | name=STRING) options+=HashKeyValue*)
-	 */
-	protected void sequence_BelongsTo(ISerializationContext context, BelongsTo semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Class returns RubyClass
 	 *
 	 * Constraint:
 	 *     (name=NamespacedModuleName superType=NamespacedModuleName? classElements+=ClassElement*)
 	 */
 	protected void sequence_Class(ISerializationContext context, RubyClass semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     HasAndBelongsToMany returns HasAndBelongsToMany
-	 *
-	 * Constraint:
-	 *     ((name=SYMBOL | name=STRING) options+=HashKeyValue*)
-	 */
-	protected void sequence_HasAndBelongsToMany(ISerializationContext context, HasAndBelongsToMany semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     HasMany returns HasMany
-	 *
-	 * Constraint:
-	 *     ((name=SYMBOL | name=STRING) options+=HashKeyValue*)
-	 */
-	protected void sequence_HasMany(ISerializationContext context, HasMany semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     HasOne returns HasOne
-	 *
-	 * Constraint:
-	 *     ((name=SYMBOL | name=STRING) options+=HashKeyValue*)
-	 */
-	protected void sequence_HasOne(ISerializationContext context, HasOne semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

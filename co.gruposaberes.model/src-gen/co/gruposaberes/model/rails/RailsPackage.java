@@ -205,154 +205,6 @@ public interface RailsPackage extends EPackage
   int RELATIONSHIP_FEATURE_COUNT = CLASS_ELEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link co.gruposaberes.model.rails.impl.HasManyImpl <em>Has Many</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.gruposaberes.model.rails.impl.HasManyImpl
-   * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHasMany()
-   * @generated
-   */
-  int HAS_MANY = 4;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAS_MANY__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Options</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAS_MANY__OPTIONS = 1;
-
-  /**
-   * The number of structural features of the '<em>Has Many</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAS_MANY_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link co.gruposaberes.model.rails.impl.HasOneImpl <em>Has One</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.gruposaberes.model.rails.impl.HasOneImpl
-   * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHasOne()
-   * @generated
-   */
-  int HAS_ONE = 5;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAS_ONE__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Options</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAS_ONE__OPTIONS = 1;
-
-  /**
-   * The number of structural features of the '<em>Has One</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAS_ONE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link co.gruposaberes.model.rails.impl.HasAndBelongsToManyImpl <em>Has And Belongs To Many</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.gruposaberes.model.rails.impl.HasAndBelongsToManyImpl
-   * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHasAndBelongsToMany()
-   * @generated
-   */
-  int HAS_AND_BELONGS_TO_MANY = 6;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAS_AND_BELONGS_TO_MANY__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Options</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAS_AND_BELONGS_TO_MANY__OPTIONS = 1;
-
-  /**
-   * The number of structural features of the '<em>Has And Belongs To Many</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HAS_AND_BELONGS_TO_MANY_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link co.gruposaberes.model.rails.impl.BelongsToImpl <em>Belongs To</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.gruposaberes.model.rails.impl.BelongsToImpl
-   * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getBelongsTo()
-   * @generated
-   */
-  int BELONGS_TO = 7;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BELONGS_TO__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Options</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BELONGS_TO__OPTIONS = 1;
-
-  /**
-   * The number of structural features of the '<em>Belongs To</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BELONGS_TO_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link co.gruposaberes.model.rails.impl.HashKeyValueImpl <em>Hash Key Value</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -360,7 +212,7 @@ public interface RailsPackage extends EPackage
    * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHashKeyValue()
    * @generated
    */
-  int HASH_KEY_VALUE = 8;
+  int HASH_KEY_VALUE = 4;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -397,7 +249,7 @@ public interface RailsPackage extends EPackage
    * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getRubyMethod()
    * @generated
    */
-  int RUBY_METHOD = 9;
+  int RUBY_METHOD = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -425,7 +277,7 @@ public interface RailsPackage extends EPackage
    * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getOperationsChain()
    * @generated
    */
-  int OPERATIONS_CHAIN = 10;
+  int OPERATIONS_CHAIN = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -569,134 +421,6 @@ public interface RailsPackage extends EPackage
    * @generated
    */
   EReference getRelationship_Options();
-
-  /**
-   * Returns the meta object for class '{@link co.gruposaberes.model.rails.HasMany <em>Has Many</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Has Many</em>'.
-   * @see co.gruposaberes.model.rails.HasMany
-   * @generated
-   */
-  EClass getHasMany();
-
-  /**
-   * Returns the meta object for the attribute '{@link co.gruposaberes.model.rails.HasMany#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see co.gruposaberes.model.rails.HasMany#getName()
-   * @see #getHasMany()
-   * @generated
-   */
-  EAttribute getHasMany_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link co.gruposaberes.model.rails.HasMany#getOptions <em>Options</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Options</em>'.
-   * @see co.gruposaberes.model.rails.HasMany#getOptions()
-   * @see #getHasMany()
-   * @generated
-   */
-  EReference getHasMany_Options();
-
-  /**
-   * Returns the meta object for class '{@link co.gruposaberes.model.rails.HasOne <em>Has One</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Has One</em>'.
-   * @see co.gruposaberes.model.rails.HasOne
-   * @generated
-   */
-  EClass getHasOne();
-
-  /**
-   * Returns the meta object for the attribute '{@link co.gruposaberes.model.rails.HasOne#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see co.gruposaberes.model.rails.HasOne#getName()
-   * @see #getHasOne()
-   * @generated
-   */
-  EAttribute getHasOne_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link co.gruposaberes.model.rails.HasOne#getOptions <em>Options</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Options</em>'.
-   * @see co.gruposaberes.model.rails.HasOne#getOptions()
-   * @see #getHasOne()
-   * @generated
-   */
-  EReference getHasOne_Options();
-
-  /**
-   * Returns the meta object for class '{@link co.gruposaberes.model.rails.HasAndBelongsToMany <em>Has And Belongs To Many</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Has And Belongs To Many</em>'.
-   * @see co.gruposaberes.model.rails.HasAndBelongsToMany
-   * @generated
-   */
-  EClass getHasAndBelongsToMany();
-
-  /**
-   * Returns the meta object for the attribute '{@link co.gruposaberes.model.rails.HasAndBelongsToMany#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see co.gruposaberes.model.rails.HasAndBelongsToMany#getName()
-   * @see #getHasAndBelongsToMany()
-   * @generated
-   */
-  EAttribute getHasAndBelongsToMany_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link co.gruposaberes.model.rails.HasAndBelongsToMany#getOptions <em>Options</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Options</em>'.
-   * @see co.gruposaberes.model.rails.HasAndBelongsToMany#getOptions()
-   * @see #getHasAndBelongsToMany()
-   * @generated
-   */
-  EReference getHasAndBelongsToMany_Options();
-
-  /**
-   * Returns the meta object for class '{@link co.gruposaberes.model.rails.BelongsTo <em>Belongs To</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Belongs To</em>'.
-   * @see co.gruposaberes.model.rails.BelongsTo
-   * @generated
-   */
-  EClass getBelongsTo();
-
-  /**
-   * Returns the meta object for the attribute '{@link co.gruposaberes.model.rails.BelongsTo#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see co.gruposaberes.model.rails.BelongsTo#getName()
-   * @see #getBelongsTo()
-   * @generated
-   */
-  EAttribute getBelongsTo_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link co.gruposaberes.model.rails.BelongsTo#getOptions <em>Options</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Options</em>'.
-   * @see co.gruposaberes.model.rails.BelongsTo#getOptions()
-   * @see #getBelongsTo()
-   * @generated
-   */
-  EReference getBelongsTo_Options();
 
   /**
    * Returns the meta object for class '{@link co.gruposaberes.model.rails.HashKeyValue <em>Hash Key Value</em>}'.
@@ -882,110 +606,6 @@ public interface RailsPackage extends EPackage
      * @generated
      */
     EReference RELATIONSHIP__OPTIONS = eINSTANCE.getRelationship_Options();
-
-    /**
-     * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.HasManyImpl <em>Has Many</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.gruposaberes.model.rails.impl.HasManyImpl
-     * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHasMany()
-     * @generated
-     */
-    EClass HAS_MANY = eINSTANCE.getHasMany();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute HAS_MANY__NAME = eINSTANCE.getHasMany_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference HAS_MANY__OPTIONS = eINSTANCE.getHasMany_Options();
-
-    /**
-     * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.HasOneImpl <em>Has One</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.gruposaberes.model.rails.impl.HasOneImpl
-     * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHasOne()
-     * @generated
-     */
-    EClass HAS_ONE = eINSTANCE.getHasOne();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute HAS_ONE__NAME = eINSTANCE.getHasOne_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference HAS_ONE__OPTIONS = eINSTANCE.getHasOne_Options();
-
-    /**
-     * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.HasAndBelongsToManyImpl <em>Has And Belongs To Many</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.gruposaberes.model.rails.impl.HasAndBelongsToManyImpl
-     * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getHasAndBelongsToMany()
-     * @generated
-     */
-    EClass HAS_AND_BELONGS_TO_MANY = eINSTANCE.getHasAndBelongsToMany();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute HAS_AND_BELONGS_TO_MANY__NAME = eINSTANCE.getHasAndBelongsToMany_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference HAS_AND_BELONGS_TO_MANY__OPTIONS = eINSTANCE.getHasAndBelongsToMany_Options();
-
-    /**
-     * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.BelongsToImpl <em>Belongs To</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.gruposaberes.model.rails.impl.BelongsToImpl
-     * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getBelongsTo()
-     * @generated
-     */
-    EClass BELONGS_TO = eINSTANCE.getBelongsTo();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BELONGS_TO__NAME = eINSTANCE.getBelongsTo_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BELONGS_TO__OPTIONS = eINSTANCE.getBelongsTo_Options();
 
     /**
      * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.HashKeyValueImpl <em>Hash Key Value</em>}' class.

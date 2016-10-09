@@ -68,10 +68,6 @@ public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
       case RailsPackage.CLASS_ELEMENT: return createClassElement();
       case RailsPackage.TABLE_NAME: return createTableName();
       case RailsPackage.RELATIONSHIP: return createRelationship();
-      case RailsPackage.HAS_MANY: return createHasMany();
-      case RailsPackage.HAS_ONE: return createHasOne();
-      case RailsPackage.HAS_AND_BELONGS_TO_MANY: return createHasAndBelongsToMany();
-      case RailsPackage.BELONGS_TO: return createBelongsTo();
       case RailsPackage.HASH_KEY_VALUE: return createHashKeyValue();
       case RailsPackage.RUBY_METHOD: return createRubyMethod();
       case RailsPackage.OPERATIONS_CHAIN: return createOperationsChain();
@@ -122,50 +118,6 @@ public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
   {
     RelationshipImpl relationship = new RelationshipImpl();
     return relationship;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public HasMany createHasMany()
-  {
-    HasManyImpl hasMany = new HasManyImpl();
-    return hasMany;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public HasOne createHasOne()
-  {
-    HasOneImpl hasOne = new HasOneImpl();
-    return hasOne;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public HasAndBelongsToMany createHasAndBelongsToMany()
-  {
-    HasAndBelongsToManyImpl hasAndBelongsToMany = new HasAndBelongsToManyImpl();
-    return hasAndBelongsToMany;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BelongsTo createBelongsTo()
-  {
-    BelongsToImpl belongsTo = new BelongsToImpl();
-    return belongsTo;
   }
 
   /**

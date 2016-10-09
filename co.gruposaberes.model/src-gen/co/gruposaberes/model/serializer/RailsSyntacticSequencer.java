@@ -21,20 +21,10 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected RailsGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_BelongsTo_SPACETerminalRuleCall_1_a;
-	protected AbstractElementAlias match_BelongsTo_SPACETerminalRuleCall_3_a;
 	protected AbstractElementAlias match_Class_SPACETerminalRuleCall_1_a;
 	protected AbstractElementAlias match_Class_SPACETerminalRuleCall_3_0_a;
 	protected AbstractElementAlias match_Class_SPACETerminalRuleCall_3_2_a;
 	protected AbstractElementAlias match_Class_SPACETerminalRuleCall_4_a;
-	protected AbstractElementAlias match_HasAndBelongsToMany_SPACETerminalRuleCall_1_a;
-	protected AbstractElementAlias match_HasAndBelongsToMany_SPACETerminalRuleCall_3_a;
-	protected AbstractElementAlias match_HasMany_SL_COMMENTTerminalRuleCall_5_q;
-	protected AbstractElementAlias match_HasMany_SPACETerminalRuleCall_1_a;
-	protected AbstractElementAlias match_HasMany_SPACETerminalRuleCall_3_a;
-	protected AbstractElementAlias match_HasOne_SL_COMMENTTerminalRuleCall_5_q;
-	protected AbstractElementAlias match_HasOne_SPACETerminalRuleCall_1_a;
-	protected AbstractElementAlias match_HasOne_SPACETerminalRuleCall_3_a;
 	protected AbstractElementAlias match_HashKeyValue_SPACETerminalRuleCall_1_a;
 	protected AbstractElementAlias match_HashKeyValue_SPACETerminalRuleCall_3_1_1_a;
 	protected AbstractElementAlias match_HashKeyValue_SPACETerminalRuleCall_4_a;
@@ -51,20 +41,10 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (RailsGrammarAccess) access;
-		match_BelongsTo_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getBelongsToAccess().getSPACETerminalRuleCall_1());
-		match_BelongsTo_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getBelongsToAccess().getSPACETerminalRuleCall_3());
 		match_Class_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSPACETerminalRuleCall_1());
 		match_Class_SPACETerminalRuleCall_3_0_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSPACETerminalRuleCall_3_0());
 		match_Class_SPACETerminalRuleCall_3_2_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSPACETerminalRuleCall_3_2());
 		match_Class_SPACETerminalRuleCall_4_a = new TokenAlias(true, true, grammarAccess.getClassAccess().getSPACETerminalRuleCall_4());
-		match_HasAndBelongsToMany_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getHasAndBelongsToManyAccess().getSPACETerminalRuleCall_1());
-		match_HasAndBelongsToMany_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getHasAndBelongsToManyAccess().getSPACETerminalRuleCall_3());
-		match_HasMany_SL_COMMENTTerminalRuleCall_5_q = new TokenAlias(false, true, grammarAccess.getHasManyAccess().getSL_COMMENTTerminalRuleCall_5());
-		match_HasMany_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getHasManyAccess().getSPACETerminalRuleCall_1());
-		match_HasMany_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getHasManyAccess().getSPACETerminalRuleCall_3());
-		match_HasOne_SL_COMMENTTerminalRuleCall_5_q = new TokenAlias(false, true, grammarAccess.getHasOneAccess().getSL_COMMENTTerminalRuleCall_5());
-		match_HasOne_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getHasOneAccess().getSPACETerminalRuleCall_1());
-		match_HasOne_SPACETerminalRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getHasOneAccess().getSPACETerminalRuleCall_3());
 		match_HashKeyValue_SPACETerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_1());
 		match_HashKeyValue_SPACETerminalRuleCall_3_1_1_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_3_1_1());
 		match_HashKeyValue_SPACETerminalRuleCall_4_a = new TokenAlias(true, true, grammarAccess.getHashKeyValueAccess().getSPACETerminalRuleCall_4());
@@ -81,40 +61,21 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getBELONGS_TO_WORDRule())
-			return getBELONGS_TO_WORDToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getCLASS_WORDRule())
+		if (ruleCall.getRule() == grammarAccess.getCLASS_WORDRule())
 			return getCLASS_WORDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getCOMMARule())
 			return getCOMMAToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getDEF_WORDRule())
 			return getDEF_WORDToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getHAS_AND_BELONGS_TO_MANY_WORDRule())
-			return getHAS_AND_BELONGS_TO_MANY_WORDToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getHAS_MANY_WORDRule())
-			return getHAS_MANY_WORDToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getHAS_ONE_WORDRule())
-			return getHAS_ONE_WORDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLFRule())
 			return getLFToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPARENTHESIS_BLOCKRule())
 			return getPARENTHESIS_BLOCKToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSET_TABLE_NAMERule())
 			return getSET_TABLE_NAMEToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getSL_COMMENTRule())
-			return getSL_COMMENTToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSPACERule())
 			return getSPACEToken(semanticObject, ruleCall, node);
 		return "";
-	}
-	
-	/**
-	 * terminal BELONGS_TO_WORD: 'belongs_to';
-	 */
-	protected String getBELONGS_TO_WORDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "belongs_to";
 	}
 	
 	/**
@@ -142,33 +103,6 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "def";
-	}
-	
-	/**
-	 * terminal HAS_AND_BELONGS_TO_MANY_WORD: 'has_and_belongs_to_many';
-	 */
-	protected String getHAS_AND_BELONGS_TO_MANY_WORDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "has_and_belongs_to_many";
-	}
-	
-	/**
-	 * terminal HAS_MANY_WORD: 'has_many';
-	 */
-	protected String getHAS_MANY_WORDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "has_many";
-	}
-	
-	/**
-	 * terminal HAS_ONE_WORD: 'has_one';
-	 */
-	protected String getHAS_ONE_WORDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "has_one";
 	}
 	
 	/**
@@ -204,15 +138,6 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
-	 * terminal SL_COMMENT : '#'->'\n';
-	 */
-	protected String getSL_COMMENTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "#";
-	}
-	
-	/**
 	 * terminal SPACE: ' '|'\t';
 	 */
 	protected String getSPACEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
@@ -227,11 +152,7 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_BelongsTo_SPACETerminalRuleCall_1_a.equals(syntax))
-				emit_BelongsTo_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_BelongsTo_SPACETerminalRuleCall_3_a.equals(syntax))
-				emit_BelongsTo_SPACETerminalRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Class_SPACETerminalRuleCall_1_a.equals(syntax))
+			if (match_Class_SPACETerminalRuleCall_1_a.equals(syntax))
 				emit_Class_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Class_SPACETerminalRuleCall_3_0_a.equals(syntax))
 				emit_Class_SPACETerminalRuleCall_3_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -239,22 +160,6 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Class_SPACETerminalRuleCall_3_2_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Class_SPACETerminalRuleCall_4_a.equals(syntax))
 				emit_Class_SPACETerminalRuleCall_4_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_HasAndBelongsToMany_SPACETerminalRuleCall_1_a.equals(syntax))
-				emit_HasAndBelongsToMany_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_HasAndBelongsToMany_SPACETerminalRuleCall_3_a.equals(syntax))
-				emit_HasAndBelongsToMany_SPACETerminalRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_HasMany_SL_COMMENTTerminalRuleCall_5_q.equals(syntax))
-				emit_HasMany_SL_COMMENTTerminalRuleCall_5_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_HasMany_SPACETerminalRuleCall_1_a.equals(syntax))
-				emit_HasMany_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_HasMany_SPACETerminalRuleCall_3_a.equals(syntax))
-				emit_HasMany_SPACETerminalRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_HasOne_SL_COMMENTTerminalRuleCall_5_q.equals(syntax))
-				emit_HasOne_SL_COMMENTTerminalRuleCall_5_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_HasOne_SPACETerminalRuleCall_1_a.equals(syntax))
-				emit_HasOne_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_HasOne_SPACETerminalRuleCall_3_a.equals(syntax))
-				emit_HasOne_SPACETerminalRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_HashKeyValue_SPACETerminalRuleCall_1_a.equals(syntax))
 				emit_HashKeyValue_SPACETerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_HashKeyValue_SPACETerminalRuleCall_3_1_1_a.equals(syntax))
@@ -283,32 +188,6 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     SPACE*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) BELONGS_TO_WORD (ambiguity) name=STRING
-	 *     (rule start) BELONGS_TO_WORD (ambiguity) name=SYMBOL
-	 */
-	protected void emit_BelongsTo_SPACETerminalRuleCall_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     SPACE*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name=STRING (ambiguity) (rule end)
-	 *     name=STRING (ambiguity) options+=HashKeyValue
-	 *     name=SYMBOL (ambiguity) (rule end)
-	 *     name=SYMBOL (ambiguity) options+=HashKeyValue
-	 */
-	protected void emit_BelongsTo_SPACETerminalRuleCall_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     SPACE*
@@ -353,110 +232,6 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     superType=NamespacedModuleName (ambiguity) classElements+=ClassElement
 	 */
 	protected void emit_Class_SPACETerminalRuleCall_4_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     SPACE*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) HAS_AND_BELONGS_TO_MANY_WORD (ambiguity) name=STRING
-	 *     (rule start) HAS_AND_BELONGS_TO_MANY_WORD (ambiguity) name=SYMBOL
-	 */
-	protected void emit_HasAndBelongsToMany_SPACETerminalRuleCall_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     SPACE*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name=STRING (ambiguity) (rule end)
-	 *     name=STRING (ambiguity) options+=HashKeyValue
-	 *     name=SYMBOL (ambiguity) (rule end)
-	 *     name=SYMBOL (ambiguity) options+=HashKeyValue
-	 */
-	protected void emit_HasAndBelongsToMany_SPACETerminalRuleCall_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     SL_COMMENT?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name=STRING SPACE* (ambiguity) (rule end)
-	 *     name=SYMBOL SPACE* (ambiguity) (rule end)
-	 *     options+=HashKeyValue (ambiguity) (rule end)
-	 */
-	protected void emit_HasMany_SL_COMMENTTerminalRuleCall_5_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     SPACE*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) HAS_MANY_WORD (ambiguity) name=STRING
-	 *     (rule start) HAS_MANY_WORD (ambiguity) name=SYMBOL
-	 */
-	protected void emit_HasMany_SPACETerminalRuleCall_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     SPACE*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name=STRING (ambiguity) SL_COMMENT? (rule end)
-	 *     name=STRING (ambiguity) options+=HashKeyValue
-	 *     name=SYMBOL (ambiguity) SL_COMMENT? (rule end)
-	 *     name=SYMBOL (ambiguity) options+=HashKeyValue
-	 */
-	protected void emit_HasMany_SPACETerminalRuleCall_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     SL_COMMENT?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name=STRING SPACE* (ambiguity) (rule end)
-	 *     name=SYMBOL SPACE* (ambiguity) (rule end)
-	 *     options+=HashKeyValue (ambiguity) (rule end)
-	 */
-	protected void emit_HasOne_SL_COMMENTTerminalRuleCall_5_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     SPACE*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) HAS_ONE_WORD (ambiguity) name=STRING
-	 *     (rule start) HAS_ONE_WORD (ambiguity) name=SYMBOL
-	 */
-	protected void emit_HasOne_SPACETerminalRuleCall_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     SPACE*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name=STRING (ambiguity) SL_COMMENT? (rule end)
-	 *     name=STRING (ambiguity) options+=HashKeyValue
-	 *     name=SYMBOL (ambiguity) SL_COMMENT? (rule end)
-	 *     name=SYMBOL (ambiguity) options+=HashKeyValue
-	 */
-	protected void emit_HasOne_SPACETerminalRuleCall_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

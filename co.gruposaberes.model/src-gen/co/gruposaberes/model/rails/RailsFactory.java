@@ -59,42 +59,6 @@ public interface RailsFactory extends EFactory
   Relationship createRelationship();
 
   /**
-   * Returns a new object of class '<em>Has Many</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Has Many</em>'.
-   * @generated
-   */
-  HasMany createHasMany();
-
-  /**
-   * Returns a new object of class '<em>Has One</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Has One</em>'.
-   * @generated
-   */
-  HasOne createHasOne();
-
-  /**
-   * Returns a new object of class '<em>Has And Belongs To Many</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Has And Belongs To Many</em>'.
-   * @generated
-   */
-  HasAndBelongsToMany createHasAndBelongsToMany();
-
-  /**
-   * Returns a new object of class '<em>Belongs To</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Belongs To</em>'.
-   * @generated
-   */
-  BelongsTo createBelongsTo();
-
-  /**
    * Returns a new object of class '<em>Hash Key Value</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

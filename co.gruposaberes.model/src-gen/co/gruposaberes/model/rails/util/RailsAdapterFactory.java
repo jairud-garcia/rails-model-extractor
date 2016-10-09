@@ -95,26 +95,6 @@ public class RailsAdapterFactory extends AdapterFactoryImpl
         return createRelationshipAdapter();
       }
       @Override
-      public Adapter caseHasMany(HasMany object)
-      {
-        return createHasManyAdapter();
-      }
-      @Override
-      public Adapter caseHasOne(HasOne object)
-      {
-        return createHasOneAdapter();
-      }
-      @Override
-      public Adapter caseHasAndBelongsToMany(HasAndBelongsToMany object)
-      {
-        return createHasAndBelongsToManyAdapter();
-      }
-      @Override
-      public Adapter caseBelongsTo(BelongsTo object)
-      {
-        return createBelongsToAdapter();
-      }
-      @Override
       public Adapter caseHashKeyValue(HashKeyValue object)
       {
         return createHashKeyValueAdapter();
@@ -207,66 +187,6 @@ public class RailsAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRelationshipAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.gruposaberes.model.rails.HasMany <em>Has Many</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.gruposaberes.model.rails.HasMany
-   * @generated
-   */
-  public Adapter createHasManyAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.gruposaberes.model.rails.HasOne <em>Has One</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.gruposaberes.model.rails.HasOne
-   * @generated
-   */
-  public Adapter createHasOneAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.gruposaberes.model.rails.HasAndBelongsToMany <em>Has And Belongs To Many</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.gruposaberes.model.rails.HasAndBelongsToMany
-   * @generated
-   */
-  public Adapter createHasAndBelongsToManyAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.gruposaberes.model.rails.BelongsTo <em>Belongs To</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.gruposaberes.model.rails.BelongsTo
-   * @generated
-   */
-  public Adapter createBelongsToAdapter()
   {
     return null;
   }
