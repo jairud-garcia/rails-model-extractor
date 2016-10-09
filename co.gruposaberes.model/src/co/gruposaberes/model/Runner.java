@@ -10,10 +10,9 @@ import java.io.FilenameFilter;
 import org.eclipse.emf.common.util.URI;
 import com.google.inject.Injector;
 
-import co.gruposaberes.model.rails.ClassElement;
-import co.gruposaberes.model.rails.Relationship;
+//import co.gruposaberes.model.rails.Application;
 import co.gruposaberes.model.rails.RubyClass;
-import co.gruposaberes.model.rails.TableName;
+import co.gruposaberes.model.rails.impl.RailsFactoryImpl;
 
 public class Runner {
 
@@ -22,14 +21,19 @@ public class Runner {
 		Injector injector = new RailsStandaloneSetup().createInjectorAndDoEMFRegistration();;
 		XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
+		//Application application = RailsFactoryImpl.init().createApplication();
+		
+		
+		
 		File[] projectDirectories = (new File("/Users/jairud/rails/saberes")).listFiles(new FilenameFilter() {
 		    public boolean accept(File dir, String name) {
 		        return new File(dir, name).isDirectory();
 		    }
 		});
 		int index = 0;
+		
 		for(File projectDirectory : projectDirectories){
-			System.out.println("PROYECT: "+projectDirectory.getName());
+			System.out.println("PROJECT: "+projectDirectory.getName());
 			File f = new File(projectDirectory.getPath()+"/app/models");
 			File[] matchingFiles = f.listFiles(new FilenameFilter() {
 				public boolean accept(File dir, String name) {
@@ -38,18 +42,15 @@ public class Runner {
 			});
 			for(File file : matchingFiles){
 				index++;
-				//System.out.println("FILE: "+file.getPath());
 				try{
 					Resource resource = resourceSet.getResource(
 						    URI.createURI("file://"+file.getPath()), true);
 					RubyClass model = (RubyClass) resource.getContents().get(0);
+					//application.getRubyClasses().add(model);					
+					//debug
 					System.out.println("Class: "+model.getName()+ " heredada de "+model.getSuperType());
-					for(ClassElement classElement : model.getClassElements()){
-					String klassName=classElement.eClass().getClass().getSimpleName();
-					System.out.println(classElement.getName());
-										}
 				}catch(Exception e){
-					System.err.println("FILE: "+file.getPath()+": /"+e.getMessage());
+					 System.err.println("FILE: "+file.getPath()+": /"+e.getMessage());
 				}
 			}
 
@@ -57,8 +58,3 @@ public class Runner {
 		System.out.println("Processed "+index);
 	}
 }
-
-//enum CLAZZ {
-//    A,B,C;
-//
-//}
