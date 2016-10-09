@@ -2,6 +2,7 @@
  */
 package co.gruposaberes.model.rails.impl;
 
+import co.gruposaberes.model.rails.Application;
 import co.gruposaberes.model.rails.ClassElement;
 import co.gruposaberes.model.rails.HashKeyValue;
 import co.gruposaberes.model.rails.OperationsChain;
@@ -28,403 +29,445 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 public class RailsPackageImpl extends EPackageImpl implements RailsPackage
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass applicationEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass rubyClassEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass classElementEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass tableNameEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass relationshipEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass hashKeyValueEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass rubyMethodEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass operationsChainEClass = null;
 
   /**
-   * Creates an instance of the model <b>Package</b>, registered with
-   * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
-   * package URI value.
-   * <p>Note: the correct way to create the package is via the static
-   * factory method {@link #init init()}, which also performs
-   * initialization of the package, or returns the registered package,
-   * if one already exists.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipse.emf.ecore.EPackage.Registry
-   * @see co.gruposaberes.model.rails.RailsPackage#eNS_URI
-   * @see #init()
-   * @generated
-   */
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see co.gruposaberes.model.rails.RailsPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
   private RailsPackageImpl()
   {
-    super(eNS_URI, RailsFactory.eINSTANCE);
-  }
+		super(eNS_URI, RailsFactory.eINSTANCE);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private static boolean isInited = false;
 
   /**
-   * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
-   * <p>This method is used to initialize {@link RailsPackage#eINSTANCE} when that field is accessed.
-   * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
-   * <!-- begin-user-doc -->
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 * 
+	 * <p>This method is used to initialize {@link RailsPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #eNS_URI
-   * @see #createPackageContents()
-   * @see #initializePackageContents()
-   * @generated
-   */
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
   public static RailsPackage init()
   {
-    if (isInited) return (RailsPackage)EPackage.Registry.INSTANCE.getEPackage(RailsPackage.eNS_URI);
+		if (isInited) return (RailsPackage)EPackage.Registry.INSTANCE.getEPackage(RailsPackage.eNS_URI);
 
-    // Obtain or create and register package
-    RailsPackageImpl theRailsPackage = (RailsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof RailsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new RailsPackageImpl());
+		// Obtain or create and register package
+		RailsPackageImpl theRailsPackage = (RailsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof RailsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new RailsPackageImpl());
 
-    isInited = true;
+		isInited = true;
 
-    // Create package meta-data objects
-    theRailsPackage.createPackageContents();
+		// Create package meta-data objects
+		theRailsPackage.createPackageContents();
 
-    // Initialize created meta-data
-    theRailsPackage.initializePackageContents();
+		// Initialize created meta-data
+		theRailsPackage.initializePackageContents();
 
-    // Mark meta-data to indicate it can't be changed
-    theRailsPackage.freeze();
+		// Mark meta-data to indicate it can't be changed
+		theRailsPackage.freeze();
 
   
-    // Update the registry and return the package
-    EPackage.Registry.INSTANCE.put(RailsPackage.eNS_URI, theRailsPackage);
-    return theRailsPackage;
-  }
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(RailsPackage.eNS_URI, theRailsPackage);
+		return theRailsPackage;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getApplication() {
+		return applicationEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getApplication_Name() {
+		return (EAttribute)applicationEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getApplication_RubyClasses() {
+		return (EReference)applicationEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EClass getRubyClass()
   {
-    return rubyClassEClass;
-  }
+		return rubyClassEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EAttribute getRubyClass_Name()
   {
-    return (EAttribute)rubyClassEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)rubyClassEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EAttribute getRubyClass_SuperType()
   {
-    return (EAttribute)rubyClassEClass.getEStructuralFeatures().get(1);
-  }
+		return (EAttribute)rubyClassEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EReference getRubyClass_ClassElements()
   {
-    return (EReference)rubyClassEClass.getEStructuralFeatures().get(2);
-  }
+		return (EReference)rubyClassEClass.getEStructuralFeatures().get(2);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EClass getClassElement()
   {
-    return classElementEClass;
-  }
+		return classElementEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EAttribute getClassElement_Name()
   {
-    return (EAttribute)classElementEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)classElementEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EClass getTableName()
   {
-    return tableNameEClass;
-  }
+		return tableNameEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EClass getRelationship()
   {
-    return relationshipEClass;
-  }
+		return relationshipEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EAttribute getRelationship_RelationType()
   {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)relationshipEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EReference getRelationship_Options()
   {
-    return (EReference)relationshipEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)relationshipEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EClass getHashKeyValue()
   {
-    return hashKeyValueEClass;
-  }
+		return hashKeyValueEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EAttribute getHashKeyValue_Key()
   {
-    return (EAttribute)hashKeyValueEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)hashKeyValueEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EAttribute getHashKeyValue_Value()
   {
-    return (EAttribute)hashKeyValueEClass.getEStructuralFeatures().get(1);
-  }
+		return (EAttribute)hashKeyValueEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EClass getRubyMethod()
   {
-    return rubyMethodEClass;
-  }
+		return rubyMethodEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EClass getOperationsChain()
   {
-    return operationsChainEClass;
-  }
+		return operationsChainEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EAttribute getOperationsChain_Operators()
   {
-    return (EAttribute)operationsChainEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)operationsChainEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EAttribute getOperationsChain_Operants()
   {
-    return (EAttribute)operationsChainEClass.getEStructuralFeatures().get(1);
-  }
+		return (EAttribute)operationsChainEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public RailsFactory getRailsFactory()
   {
-    return (RailsFactory)getEFactoryInstance();
-  }
+		return (RailsFactory)getEFactoryInstance();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private boolean isCreated = false;
 
   /**
-   * Creates the meta-model objects for the package.  This method is
-   * guarded to have no affect on any invocation but its first.
-   * <!-- begin-user-doc -->
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void createPackageContents()
   {
-    if (isCreated) return;
-    isCreated = true;
+		if (isCreated) return;
+		isCreated = true;
 
-    // Create classes and their features
-    rubyClassEClass = createEClass(RUBY_CLASS);
-    createEAttribute(rubyClassEClass, RUBY_CLASS__NAME);
-    createEAttribute(rubyClassEClass, RUBY_CLASS__SUPER_TYPE);
-    createEReference(rubyClassEClass, RUBY_CLASS__CLASS_ELEMENTS);
+		// Create classes and their features
+		applicationEClass = createEClass(APPLICATION);
+		createEAttribute(applicationEClass, APPLICATION__NAME);
+		createEReference(applicationEClass, APPLICATION__RUBY_CLASSES);
 
-    classElementEClass = createEClass(CLASS_ELEMENT);
-    createEAttribute(classElementEClass, CLASS_ELEMENT__NAME);
+		rubyClassEClass = createEClass(RUBY_CLASS);
+		createEAttribute(rubyClassEClass, RUBY_CLASS__NAME);
+		createEAttribute(rubyClassEClass, RUBY_CLASS__SUPER_TYPE);
+		createEReference(rubyClassEClass, RUBY_CLASS__CLASS_ELEMENTS);
 
-    tableNameEClass = createEClass(TABLE_NAME);
+		classElementEClass = createEClass(CLASS_ELEMENT);
+		createEAttribute(classElementEClass, CLASS_ELEMENT__NAME);
 
-    relationshipEClass = createEClass(RELATIONSHIP);
-    createEAttribute(relationshipEClass, RELATIONSHIP__RELATION_TYPE);
-    createEReference(relationshipEClass, RELATIONSHIP__OPTIONS);
+		tableNameEClass = createEClass(TABLE_NAME);
 
-    hashKeyValueEClass = createEClass(HASH_KEY_VALUE);
-    createEAttribute(hashKeyValueEClass, HASH_KEY_VALUE__KEY);
-    createEAttribute(hashKeyValueEClass, HASH_KEY_VALUE__VALUE);
+		relationshipEClass = createEClass(RELATIONSHIP);
+		createEAttribute(relationshipEClass, RELATIONSHIP__RELATION_TYPE);
+		createEReference(relationshipEClass, RELATIONSHIP__OPTIONS);
 
-    rubyMethodEClass = createEClass(RUBY_METHOD);
+		hashKeyValueEClass = createEClass(HASH_KEY_VALUE);
+		createEAttribute(hashKeyValueEClass, HASH_KEY_VALUE__KEY);
+		createEAttribute(hashKeyValueEClass, HASH_KEY_VALUE__VALUE);
 
-    operationsChainEClass = createEClass(OPERATIONS_CHAIN);
-    createEAttribute(operationsChainEClass, OPERATIONS_CHAIN__OPERATORS);
-    createEAttribute(operationsChainEClass, OPERATIONS_CHAIN__OPERANTS);
-  }
+		rubyMethodEClass = createEClass(RUBY_METHOD);
+
+		operationsChainEClass = createEClass(OPERATIONS_CHAIN);
+		createEAttribute(operationsChainEClass, OPERATIONS_CHAIN__OPERATORS);
+		createEAttribute(operationsChainEClass, OPERATIONS_CHAIN__OPERANTS);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private boolean isInitialized = false;
 
   /**
-   * Complete the initialization of the package and its meta-model.  This
-   * method is guarded to have no affect on any invocation but its first.
-   * <!-- begin-user-doc -->
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void initializePackageContents()
   {
-    if (isInitialized) return;
-    isInitialized = true;
+		if (isInitialized) return;
+		isInitialized = true;
 
-    // Initialize package
-    setName(eNAME);
-    setNsPrefix(eNS_PREFIX);
-    setNsURI(eNS_URI);
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
 
-    // Create type parameters
+		// Create type parameters
 
-    // Set bounds for type parameters
+		// Set bounds for type parameters
 
-    // Add supertypes to classes
-    tableNameEClass.getESuperTypes().add(this.getClassElement());
-    relationshipEClass.getESuperTypes().add(this.getClassElement());
-    rubyMethodEClass.getESuperTypes().add(this.getClassElement());
-    operationsChainEClass.getESuperTypes().add(this.getClassElement());
+		// Add supertypes to classes
+		tableNameEClass.getESuperTypes().add(this.getClassElement());
+		relationshipEClass.getESuperTypes().add(this.getClassElement());
+		rubyMethodEClass.getESuperTypes().add(this.getClassElement());
+		operationsChainEClass.getESuperTypes().add(this.getClassElement());
 
-    // Initialize classes and features; add operations and parameters
-    initEClass(rubyClassEClass, RubyClass.class, "RubyClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRubyClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, RubyClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRubyClass_SuperType(), ecorePackage.getEString(), "superType", null, 0, 1, RubyClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRubyClass_ClassElements(), this.getClassElement(), null, "classElements", null, 0, -1, RubyClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		// Initialize classes and features; add operations and parameters
+		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getApplication_Name(), ecorePackage.getEString(), "name", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApplication_RubyClasses(), this.getRubyClass(), null, "rubyClasses", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(classElementEClass, ClassElement.class, "ClassElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getClassElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ClassElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(rubyClassEClass, RubyClass.class, "RubyClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRubyClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, RubyClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRubyClass_SuperType(), ecorePackage.getEString(), "superType", null, 0, 1, RubyClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRubyClass_ClassElements(), this.getClassElement(), null, "classElements", null, 0, -1, RubyClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tableNameEClass, TableName.class, "TableName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(classElementEClass, ClassElement.class, "ClassElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getClassElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ClassElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRelationship_RelationType(), ecorePackage.getEString(), "relationType", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRelationship_Options(), this.getHashKeyValue(), null, "options", null, 0, -1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tableNameEClass, TableName.class, "TableName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(hashKeyValueEClass, HashKeyValue.class, "HashKeyValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getHashKeyValue_Key(), ecorePackage.getEString(), "key", null, 0, 1, HashKeyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getHashKeyValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, HashKeyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRelationship_RelationType(), ecorePackage.getEString(), "relationType", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationship_Options(), this.getHashKeyValue(), null, "options", null, 0, -1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(rubyMethodEClass, RubyMethod.class, "RubyMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(hashKeyValueEClass, HashKeyValue.class, "HashKeyValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHashKeyValue_Key(), ecorePackage.getEString(), "key", null, 0, 1, HashKeyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHashKeyValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, HashKeyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(operationsChainEClass, OperationsChain.class, "OperationsChain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getOperationsChain_Operators(), ecorePackage.getEString(), "operators", null, 0, -1, OperationsChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getOperationsChain_Operants(), ecorePackage.getEString(), "operants", null, 0, -1, OperationsChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(rubyMethodEClass, RubyMethod.class, "RubyMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    // Create resource
-    createResource(eNS_URI);
-  }
+		initEClass(operationsChainEClass, OperationsChain.class, "OperationsChain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOperationsChain_Operators(), ecorePackage.getEString(), "operators", null, 0, -1, OperationsChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOperationsChain_Operants(), ecorePackage.getEString(), "operants", null, 0, -1, OperationsChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
+	}
 
 } //RailsPackageImpl

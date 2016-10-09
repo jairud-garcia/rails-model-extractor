@@ -21,158 +21,165 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
 {
   /**
-   * Creates the default factory implementation.
-   * <!-- begin-user-doc -->
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public static RailsFactory init()
   {
-    try
-    {
-      RailsFactory theRailsFactory = (RailsFactory)EPackage.Registry.INSTANCE.getEFactory(RailsPackage.eNS_URI);
-      if (theRailsFactory != null)
-      {
-        return theRailsFactory;
-      }
-    }
-    catch (Exception exception)
-    {
-      EcorePlugin.INSTANCE.log(exception);
-    }
-    return new RailsFactoryImpl();
-  }
+		try {
+			RailsFactory theRailsFactory = (RailsFactory)EPackage.Registry.INSTANCE.getEFactory(RailsPackage.eNS_URI);
+			if (theRailsFactory != null) {
+				return theRailsFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new RailsFactoryImpl();
+	}
 
   /**
-   * Creates an instance of the factory.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public RailsFactoryImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EObject create(EClass eClass)
   {
-    switch (eClass.getClassifierID())
-    {
-      case RailsPackage.RUBY_CLASS: return createRubyClass();
-      case RailsPackage.CLASS_ELEMENT: return createClassElement();
-      case RailsPackage.TABLE_NAME: return createTableName();
-      case RailsPackage.RELATIONSHIP: return createRelationship();
-      case RailsPackage.HASH_KEY_VALUE: return createHashKeyValue();
-      case RailsPackage.RUBY_METHOD: return createRubyMethod();
-      case RailsPackage.OPERATIONS_CHAIN: return createOperationsChain();
-      default:
-        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-    }
-  }
+		switch (eClass.getClassifierID()) {
+			case RailsPackage.APPLICATION: return createApplication();
+			case RailsPackage.RUBY_CLASS: return createRubyClass();
+			case RailsPackage.CLASS_ELEMENT: return createClassElement();
+			case RailsPackage.TABLE_NAME: return createTableName();
+			case RailsPackage.RELATIONSHIP: return createRelationship();
+			case RailsPackage.HASH_KEY_VALUE: return createHashKeyValue();
+			case RailsPackage.RUBY_METHOD: return createRubyMethod();
+			case RailsPackage.OPERATIONS_CHAIN: return createOperationsChain();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Application createApplication() {
+		ApplicationImpl application = new ApplicationImpl();
+		return application;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public RubyClass createRubyClass()
   {
-    RubyClassImpl rubyClass = new RubyClassImpl();
-    return rubyClass;
-  }
+		RubyClassImpl rubyClass = new RubyClassImpl();
+		return rubyClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ClassElement createClassElement()
   {
-    ClassElementImpl classElement = new ClassElementImpl();
-    return classElement;
-  }
+		ClassElementImpl classElement = new ClassElementImpl();
+		return classElement;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public TableName createTableName()
   {
-    TableNameImpl tableName = new TableNameImpl();
-    return tableName;
-  }
+		TableNameImpl tableName = new TableNameImpl();
+		return tableName;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Relationship createRelationship()
   {
-    RelationshipImpl relationship = new RelationshipImpl();
-    return relationship;
-  }
+		RelationshipImpl relationship = new RelationshipImpl();
+		return relationship;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public HashKeyValue createHashKeyValue()
   {
-    HashKeyValueImpl hashKeyValue = new HashKeyValueImpl();
-    return hashKeyValue;
-  }
+		HashKeyValueImpl hashKeyValue = new HashKeyValueImpl();
+		return hashKeyValue;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public RubyMethod createRubyMethod()
   {
-    RubyMethodImpl rubyMethod = new RubyMethodImpl();
-    return rubyMethod;
-  }
+		RubyMethodImpl rubyMethod = new RubyMethodImpl();
+		return rubyMethod;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public OperationsChain createOperationsChain()
   {
-    OperationsChainImpl operationsChain = new OperationsChainImpl();
-    return operationsChain;
-  }
+		OperationsChainImpl operationsChain = new OperationsChainImpl();
+		return operationsChain;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public RailsPackage getRailsPackage()
   {
-    return (RailsPackage)getEPackage();
-  }
+		return (RailsPackage)getEPackage();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @deprecated
-   * @generated
-   */
+	 * @deprecated
+	 * @generated
+	 */
   @Deprecated
   public static RailsPackage getPackage()
   {
-    return RailsPackage.eINSTANCE;
-  }
+		return RailsPackage.eINSTANCE;
+	}
 
 } //RailsFactoryImpl

@@ -10,7 +10,7 @@ import java.io.FilenameFilter;
 import org.eclipse.emf.common.util.URI;
 import com.google.inject.Injector;
 
-//import co.gruposaberes.model.rails.Application;
+import co.gruposaberes.model.rails.Application;
 import co.gruposaberes.model.rails.RubyClass;
 import co.gruposaberes.model.rails.impl.RailsFactoryImpl;
 
@@ -21,7 +21,7 @@ public class Runner {
 		Injector injector = new RailsStandaloneSetup().createInjectorAndDoEMFRegistration();;
 		XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
-		//Application application = RailsFactoryImpl.init().createApplication();
+		Application application = RailsFactoryImpl.init().createApplication();
 		
 		
 		
@@ -46,7 +46,7 @@ public class Runner {
 					Resource resource = resourceSet.getResource(
 						    URI.createURI("file://"+file.getPath()), true);
 					RubyClass model = (RubyClass) resource.getContents().get(0);
-					//application.getRubyClasses().add(model);					
+					application.getRubyClasses().add(model);					
 					//debug
 					System.out.println("Class: "+model.getName()+ " heredada de "+model.getSuperType());
 				}catch(Exception e){
