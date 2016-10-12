@@ -69,6 +69,8 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getDEF_WORDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLFRule())
 			return getLFToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getOperationsChainRule())
+			return getOperationsChainToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPARENTHESIS_BLOCKRule())
 			return getPARENTHESIS_BLOCKToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSET_TABLE_NAMERule())
@@ -112,6 +114,17 @@ public class RailsSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "\n";
+	}
+	
+	/**
+	 * OperationsChain:
+	 * 	MethodChainCall (OperatorRule (BRACKET_BLOCK|DECIMAL|MethodChainCall|REGEXP))*
+	 * ;
+	 */
+	protected String getOperationsChainToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return ":class ";
 	}
 	
 	/**

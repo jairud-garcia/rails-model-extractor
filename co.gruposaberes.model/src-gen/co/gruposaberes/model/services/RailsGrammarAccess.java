@@ -861,57 +861,45 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	public class OperationsChainElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.gruposaberes.model.Rails.OperationsChain");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameMethodChainCallParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cMethodChainCallParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Assignment cOperatorsAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final RuleCall cOperatorsOperatorRuleParserRuleCall_1_0_0 = (RuleCall)cOperatorsAssignment_1_0.eContents().get(0);
-		private final Assignment cOperantsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final Alternatives cOperantsAlternatives_1_1_0 = (Alternatives)cOperantsAssignment_1_1.eContents().get(0);
-		private final RuleCall cOperantsBRACKET_BLOCKTerminalRuleCall_1_1_0_0 = (RuleCall)cOperantsAlternatives_1_1_0.eContents().get(0);
-		private final RuleCall cOperantsDECIMALTerminalRuleCall_1_1_0_1 = (RuleCall)cOperantsAlternatives_1_1_0.eContents().get(1);
-		private final RuleCall cOperantsMethodChainCallParserRuleCall_1_1_0_2 = (RuleCall)cOperantsAlternatives_1_1_0.eContents().get(2);
-		private final RuleCall cOperantsREGEXPTerminalRuleCall_1_1_0_3 = (RuleCall)cOperantsAlternatives_1_1_0.eContents().get(3);
+		private final RuleCall cOperatorRuleParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Alternatives cAlternatives_1_1 = (Alternatives)cGroup_1.eContents().get(1);
+		private final RuleCall cBRACKET_BLOCKTerminalRuleCall_1_1_0 = (RuleCall)cAlternatives_1_1.eContents().get(0);
+		private final RuleCall cDECIMALTerminalRuleCall_1_1_1 = (RuleCall)cAlternatives_1_1.eContents().get(1);
+		private final RuleCall cMethodChainCallParserRuleCall_1_1_2 = (RuleCall)cAlternatives_1_1.eContents().get(2);
+		private final RuleCall cREGEXPTerminalRuleCall_1_1_3 = (RuleCall)cAlternatives_1_1.eContents().get(3);
 		
 		//OperationsChain:
-		//	name=MethodChainCall (operators+=OperatorRule operants+=(BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP))*;
+		//	MethodChainCall (OperatorRule (BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP))*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=MethodChainCall (operators+=OperatorRule operants+=(BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP))*
+		//MethodChainCall (OperatorRule (BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP))*
 		public Group getGroup() { return cGroup; }
 
-		//name=MethodChainCall
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
 		//MethodChainCall
-		public RuleCall getNameMethodChainCallParserRuleCall_0_0() { return cNameMethodChainCallParserRuleCall_0_0; }
+		public RuleCall getMethodChainCallParserRuleCall_0() { return cMethodChainCallParserRuleCall_0; }
 
-		//(operators+=OperatorRule operants+=(BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP))*
+		//(OperatorRule (BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP))*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//operators+=OperatorRule
-		public Assignment getOperatorsAssignment_1_0() { return cOperatorsAssignment_1_0; }
-
 		//OperatorRule
-		public RuleCall getOperatorsOperatorRuleParserRuleCall_1_0_0() { return cOperatorsOperatorRuleParserRuleCall_1_0_0; }
-
-		//operants+=(BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP)
-		public Assignment getOperantsAssignment_1_1() { return cOperantsAssignment_1_1; }
+		public RuleCall getOperatorRuleParserRuleCall_1_0() { return cOperatorRuleParserRuleCall_1_0; }
 
 		//(BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP)
-		public Alternatives getOperantsAlternatives_1_1_0() { return cOperantsAlternatives_1_1_0; }
+		public Alternatives getAlternatives_1_1() { return cAlternatives_1_1; }
 
 		//BRACKET_BLOCK
-		public RuleCall getOperantsBRACKET_BLOCKTerminalRuleCall_1_1_0_0() { return cOperantsBRACKET_BLOCKTerminalRuleCall_1_1_0_0; }
+		public RuleCall getBRACKET_BLOCKTerminalRuleCall_1_1_0() { return cBRACKET_BLOCKTerminalRuleCall_1_1_0; }
 
 		//DECIMAL
-		public RuleCall getOperantsDECIMALTerminalRuleCall_1_1_0_1() { return cOperantsDECIMALTerminalRuleCall_1_1_0_1; }
+		public RuleCall getDECIMALTerminalRuleCall_1_1_1() { return cDECIMALTerminalRuleCall_1_1_1; }
 
 		//MethodChainCall
-		public RuleCall getOperantsMethodChainCallParserRuleCall_1_1_0_2() { return cOperantsMethodChainCallParserRuleCall_1_1_0_2; }
+		public RuleCall getMethodChainCallParserRuleCall_1_1_2() { return cMethodChainCallParserRuleCall_1_1_2; }
 
 		//REGEXP
-		public RuleCall getOperantsREGEXPTerminalRuleCall_1_1_0_3() { return cOperantsREGEXPTerminalRuleCall_1_1_0_3; }
+		public RuleCall getREGEXPTerminalRuleCall_1_1_3() { return cREGEXPTerminalRuleCall_1_1_3; }
 	}
 
 	public class OperatorRuleElements extends AbstractParserRuleElementFinder {
@@ -1335,7 +1323,7 @@ public class RailsGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//OperationsChain:
-	//	name=MethodChainCall (operators+=OperatorRule operants+=(BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP))*;
+	//	MethodChainCall (OperatorRule (BRACKET_BLOCK | DECIMAL | MethodChainCall | REGEXP))*;
 	public OperationsChainElements getOperationsChainAccess() {
 		return pOperationsChain;
 	}

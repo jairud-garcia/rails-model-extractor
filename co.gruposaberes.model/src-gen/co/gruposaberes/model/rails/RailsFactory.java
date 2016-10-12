@@ -86,15 +86,6 @@ public interface RailsFactory extends EFactory
   RubyMethod createRubyMethod();
 
   /**
-	 * Returns a new object of class '<em>Operations Chain</em>'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Operations Chain</em>'.
-	 * @generated
-	 */
-  OperationsChain createOperationsChain();
-
-  /**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

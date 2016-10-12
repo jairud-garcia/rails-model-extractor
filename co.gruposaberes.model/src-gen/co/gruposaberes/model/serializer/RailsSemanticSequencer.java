@@ -4,7 +4,6 @@
 package co.gruposaberes.model.serializer;
 
 import co.gruposaberes.model.rails.HashKeyValue;
-import co.gruposaberes.model.rails.OperationsChain;
 import co.gruposaberes.model.rails.RailsPackage;
 import co.gruposaberes.model.rails.Relationship;
 import co.gruposaberes.model.rails.RubyClass;
@@ -39,9 +38,6 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			switch (semanticObject.eClass().getClassifierID()) {
 			case RailsPackage.HASH_KEY_VALUE:
 				sequence_HashKeyValue(context, (HashKeyValue) semanticObject); 
-				return; 
-			case RailsPackage.OPERATIONS_CHAIN:
-				sequence_OperationsChain(context, (OperationsChain) semanticObject); 
 				return; 
 			case RailsPackage.RELATIONSHIP:
 				sequence_Relationship(context, (Relationship) semanticObject); 
@@ -112,19 +108,6 @@ public class RailsSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMethodAccess().getNameMethodNameParserRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     ClassElement returns OperationsChain
-	 *     OperationsChain returns OperationsChain
-	 *
-	 * Constraint:
-	 *     (name=MethodChainCall (operators+=OperatorRule (operants+=BRACKET_BLOCK | operants+=DECIMAL | operants+=MethodChainCall | operants+=REGEXP))*)
-	 */
-	protected void sequence_OperationsChain(ISerializationContext context, OperationsChain semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

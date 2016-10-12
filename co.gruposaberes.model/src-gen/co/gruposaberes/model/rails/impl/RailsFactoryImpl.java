@@ -67,7 +67,6 @@ public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
 			case RailsPackage.RELATIONSHIP: return createRelationship();
 			case RailsPackage.HASH_KEY_VALUE: return createHashKeyValue();
 			case RailsPackage.RUBY_METHOD: return createRubyMethod();
-			case RailsPackage.OPERATIONS_CHAIN: return createOperationsChain();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -147,17 +146,6 @@ public class RailsFactoryImpl extends EFactoryImpl implements RailsFactory
   {
 		RubyMethodImpl rubyMethod = new RubyMethodImpl();
 		return rubyMethod;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public OperationsChain createOperationsChain()
-  {
-		OperationsChainImpl operationsChain = new OperationsChainImpl();
-		return operationsChain;
 	}
 
   /**

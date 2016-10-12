@@ -53,7 +53,7 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_1_1_0(), "rule__IgnoredHashKeyValue__Alternatives_1_1_0");
 					put(grammarAccess.getIgnoredHashKeyValueAccess().getAlternatives_3(), "rule__IgnoredHashKeyValue__Alternatives_3");
 					put(grammarAccess.getMethodNameAccess().getAlternatives_2(), "rule__MethodName__Alternatives_2");
-					put(grammarAccess.getOperationsChainAccess().getOperantsAlternatives_1_1_0(), "rule__OperationsChain__OperantsAlternatives_1_1_0");
+					put(grammarAccess.getOperationsChainAccess().getAlternatives_1_1(), "rule__OperationsChain__Alternatives_1_1");
 					put(grammarAccess.getOperatorRuleAccess().getAlternatives_0(), "rule__OperatorRule__Alternatives_0");
 					put(grammarAccess.getClassAccess().getGroup(), "rule__Class__Group__0");
 					put(grammarAccess.getClassAccess().getGroup_3(), "rule__Class__Group_3__0");
@@ -92,9 +92,6 @@ public class RailsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHashKeyValueAccess().getKeyAssignment_3_1_0(), "rule__HashKeyValue__KeyAssignment_3_1_0");
 					put(grammarAccess.getHashKeyValueAccess().getValueAssignment_5(), "rule__HashKeyValue__ValueAssignment_5");
 					put(grammarAccess.getMethodAccess().getNameAssignment_2(), "rule__Method__NameAssignment_2");
-					put(grammarAccess.getOperationsChainAccess().getNameAssignment_0(), "rule__OperationsChain__NameAssignment_0");
-					put(grammarAccess.getOperationsChainAccess().getOperatorsAssignment_1_0(), "rule__OperationsChain__OperatorsAssignment_1_0");
-					put(grammarAccess.getOperationsChainAccess().getOperantsAssignment_1_1(), "rule__OperationsChain__OperantsAssignment_1_1");
 				}
 			};
 		}

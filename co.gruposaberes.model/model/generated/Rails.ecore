@@ -26,10 +26,4 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RubyMethod" eSuperTypes="#//ClassElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="OperationsChain" eSuperTypes="#//ClassElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operators" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operants" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
 </ecore:EPackage>

@@ -306,52 +306,6 @@ public interface RailsPackage extends EPackage
 	 */
   int RUBY_METHOD_FEATURE_COUNT = CLASS_ELEMENT_FEATURE_COUNT + 0;
 
-  /**
-	 * The meta object id for the '{@link co.gruposaberes.model.rails.impl.OperationsChainImpl <em>Operations Chain</em>}' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see co.gruposaberes.model.rails.impl.OperationsChainImpl
-	 * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getOperationsChain()
-	 * @generated
-	 */
-  int OPERATIONS_CHAIN = 7;
-
-  /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int OPERATIONS_CHAIN__NAME = CLASS_ELEMENT__NAME;
-
-  /**
-	 * The feature id for the '<em><b>Operators</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int OPERATIONS_CHAIN__OPERATORS = CLASS_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-	 * The feature id for the '<em><b>Operants</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int OPERATIONS_CHAIN__OPERANTS = CLASS_ELEMENT_FEATURE_COUNT + 1;
-
-  /**
-	 * The number of structural features of the '<em>Operations Chain</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int OPERATIONS_CHAIN_FEATURE_COUNT = CLASS_ELEMENT_FEATURE_COUNT + 2;
-
 
   /**
 	 * Returns the meta object for class '{@link co.gruposaberes.model.rails.Application <em>Application</em>}'.
@@ -534,38 +488,6 @@ public interface RailsPackage extends EPackage
   EClass getRubyMethod();
 
   /**
-	 * Returns the meta object for class '{@link co.gruposaberes.model.rails.OperationsChain <em>Operations Chain</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Operations Chain</em>'.
-	 * @see co.gruposaberes.model.rails.OperationsChain
-	 * @generated
-	 */
-  EClass getOperationsChain();
-
-  /**
-	 * Returns the meta object for the attribute list '{@link co.gruposaberes.model.rails.OperationsChain#getOperators <em>Operators</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Operators</em>'.
-	 * @see co.gruposaberes.model.rails.OperationsChain#getOperators()
-	 * @see #getOperationsChain()
-	 * @generated
-	 */
-  EAttribute getOperationsChain_Operators();
-
-  /**
-	 * Returns the meta object for the attribute list '{@link co.gruposaberes.model.rails.OperationsChain#getOperants <em>Operants</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Operants</em>'.
-	 * @see co.gruposaberes.model.rails.OperationsChain#getOperants()
-	 * @see #getOperationsChain()
-	 * @generated
-	 */
-  EAttribute getOperationsChain_Operants();
-
-  /**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -737,32 +659,6 @@ public interface RailsPackage extends EPackage
 		 * @generated
 		 */
     EClass RUBY_METHOD = eINSTANCE.getRubyMethod();
-
-    /**
-		 * The meta object literal for the '{@link co.gruposaberes.model.rails.impl.OperationsChainImpl <em>Operations Chain</em>}' class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see co.gruposaberes.model.rails.impl.OperationsChainImpl
-		 * @see co.gruposaberes.model.rails.impl.RailsPackageImpl#getOperationsChain()
-		 * @generated
-		 */
-    EClass OPERATIONS_CHAIN = eINSTANCE.getOperationsChain();
-
-    /**
-		 * The meta object literal for the '<em><b>Operators</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EAttribute OPERATIONS_CHAIN__OPERATORS = eINSTANCE.getOperationsChain_Operators();
-
-    /**
-		 * The meta object literal for the '<em><b>Operants</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EAttribute OPERATIONS_CHAIN__OPERANTS = eINSTANCE.getOperationsChain_Operants();
 
   }
 

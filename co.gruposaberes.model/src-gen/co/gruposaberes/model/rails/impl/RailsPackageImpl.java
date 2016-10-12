@@ -5,7 +5,6 @@ package co.gruposaberes.model.rails.impl;
 import co.gruposaberes.model.rails.Application;
 import co.gruposaberes.model.rails.ClassElement;
 import co.gruposaberes.model.rails.HashKeyValue;
-import co.gruposaberes.model.rails.OperationsChain;
 import co.gruposaberes.model.rails.RailsFactory;
 import co.gruposaberes.model.rails.RailsPackage;
 import co.gruposaberes.model.rails.Relationship;
@@ -76,13 +75,6 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
 	 * @generated
 	 */
   private EClass rubyMethodEClass = null;
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EClass operationsChainEClass = null;
 
   /**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -319,36 +311,6 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getOperationsChain()
-  {
-		return operationsChainEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getOperationsChain_Operators()
-  {
-		return (EAttribute)operationsChainEClass.getEStructuralFeatures().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getOperationsChain_Operants()
-  {
-		return (EAttribute)operationsChainEClass.getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
   public RailsFactory getRailsFactory()
   {
 		return (RailsFactory)getEFactoryInstance();
@@ -397,10 +359,6 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
 		createEAttribute(hashKeyValueEClass, HASH_KEY_VALUE__VALUE);
 
 		rubyMethodEClass = createEClass(RUBY_METHOD);
-
-		operationsChainEClass = createEClass(OPERATIONS_CHAIN);
-		createEAttribute(operationsChainEClass, OPERATIONS_CHAIN__OPERATORS);
-		createEAttribute(operationsChainEClass, OPERATIONS_CHAIN__OPERANTS);
 	}
 
   /**
@@ -435,7 +393,6 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
 		tableNameEClass.getESuperTypes().add(this.getClassElement());
 		relationshipEClass.getESuperTypes().add(this.getClassElement());
 		rubyMethodEClass.getESuperTypes().add(this.getClassElement());
-		operationsChainEClass.getESuperTypes().add(this.getClassElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -461,10 +418,6 @@ public class RailsPackageImpl extends EPackageImpl implements RailsPackage
 		initEAttribute(getHashKeyValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, HashKeyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rubyMethodEClass, RubyMethod.class, "RubyMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(operationsChainEClass, OperationsChain.class, "OperationsChain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOperationsChain_Operators(), ecorePackage.getEString(), "operators", null, 0, -1, OperationsChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOperationsChain_Operants(), ecorePackage.getEString(), "operants", null, 0, -1, OperationsChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

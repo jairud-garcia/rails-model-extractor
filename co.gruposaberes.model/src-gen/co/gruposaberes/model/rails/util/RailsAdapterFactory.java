@@ -99,10 +99,6 @@ public class RailsAdapterFactory extends AdapterFactoryImpl
 				return createRubyMethodAdapter();
 			}
 			@Override
-			public Adapter caseOperationsChain(OperationsChain object) {
-				return createOperationsChainAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -223,21 +219,6 @@ public class RailsAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createRubyMethodAdapter()
-  {
-		return null;
-	}
-
-  /**
-	 * Creates a new adapter for an object of class '{@link co.gruposaberes.model.rails.OperationsChain <em>Operations Chain</em>}'.
-	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see co.gruposaberes.model.rails.OperationsChain
-	 * @generated
-	 */
-  public Adapter createOperationsChainAdapter()
   {
 		return null;
 	}

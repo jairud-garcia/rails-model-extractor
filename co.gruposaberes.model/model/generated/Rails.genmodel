@@ -25,9 +25,5 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//HashKeyValue/value"/>
     </genClasses>
     <genClasses ecoreClass="Rails.ecore#//RubyMethod"/>
-    <genClasses ecoreClass="Rails.ecore#//OperationsChain">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//OperationsChain/operators"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Rails.ecore#//OperationsChain/operants"/>
-    </genClasses>
   </genPackages>
 </genmodel:GenModel>

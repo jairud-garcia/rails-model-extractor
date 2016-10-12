@@ -210,9 +210,8 @@ ruleClassElement returns [EObject current=null]
     { 
         newCompositeNode(grammarAccess.getClassElementAccess().getOperationsChainParserRuleCall_1()); 
     }
-    this_OperationsChain_3=ruleOperationsChain
+ruleOperationsChain
     { 
-        $current = $this_OperationsChain_3.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -1394,123 +1393,78 @@ ruleMethodName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
 
 
 // Entry rule entryRuleOperationsChain
-entryRuleOperationsChain returns [EObject current=null] 
+entryRuleOperationsChain returns [String current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getOperationsChainRule()); }
+	{ newCompositeNode(grammarAccess.getOperationsChainRule()); } 
 	 iv_ruleOperationsChain=ruleOperationsChain 
-	 { $current=$iv_ruleOperationsChain.current; } 
+	 { $current=$iv_ruleOperationsChain.current.getText(); }  
 	 EOF 
 ;
 
 // Rule OperationsChain
-ruleOperationsChain returns [EObject current=null] 
+ruleOperationsChain returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getOperationsChainAccess().getNameMethodChainCallParserRuleCall_0_0()); 
-	    }
-		lv_name_0_0=ruleMethodChainCall		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getOperationsChainRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"co.gruposaberes.model.Rails.MethodChainCall");
-	        afterParserOrEnumRuleCall();
-	    }
+    { 
+        newCompositeNode(grammarAccess.getOperationsChainAccess().getMethodChainCallParserRuleCall_0()); 
+    }
+    this_MethodChainCall_0=ruleMethodChainCall    {
+		$current.merge(this_MethodChainCall_0);
+    }
 
-)
-)((
+    { 
+        afterParserOrEnumRuleCall();
+    }
 (
-		{ 
-	        newCompositeNode(grammarAccess.getOperationsChainAccess().getOperatorsOperatorRuleParserRuleCall_1_0_0()); 
-	    }
-		lv_operators_1_0=ruleOperatorRule		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getOperationsChainRule());
-	        }
-       		add(
-       			$current, 
-       			"operators",
-        		lv_operators_1_0, 
-        		"co.gruposaberes.model.Rails.OperatorRule");
-	        afterParserOrEnumRuleCall();
-	    }
+    { 
+        newCompositeNode(grammarAccess.getOperationsChainAccess().getOperatorRuleParserRuleCall_1_0()); 
+    }
+    this_OperatorRule_1=ruleOperatorRule    {
+		$current.merge(this_OperatorRule_1);
+    }
 
-)
-)(
-(
-(
-		lv_operants_2_1=RULE_BRACKET_BLOCK
-		{
-			newLeafNode(lv_operants_2_1, grammarAccess.getOperationsChainAccess().getOperantsBRACKET_BLOCKTerminalRuleCall_1_1_0_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getOperationsChainRule());
-	        }
-       		addWithLastConsumed(
-       			$current, 
-       			"operants",
-        		lv_operants_2_1, 
-        		"co.gruposaberes.model.Rails.BRACKET_BLOCK");
-	    }
+    { 
+        afterParserOrEnumRuleCall();
+    }
+(    this_BRACKET_BLOCK_2=RULE_BRACKET_BLOCK    {
+		$current.merge(this_BRACKET_BLOCK_2);
+    }
 
-    |		lv_operants_2_2=RULE_DECIMAL
-		{
-			newLeafNode(lv_operants_2_2, grammarAccess.getOperationsChainAccess().getOperantsDECIMALTerminalRuleCall_1_1_0_1()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getOperationsChainRule());
-	        }
-       		addWithLastConsumed(
-       			$current, 
-       			"operants",
-        		lv_operants_2_2, 
-        		"co.gruposaberes.model.Rails.DECIMAL");
-	    }
+    { 
+    newLeafNode(this_BRACKET_BLOCK_2, grammarAccess.getOperationsChainAccess().getBRACKET_BLOCKTerminalRuleCall_1_1_0()); 
+    }
 
-    |		{ 
-	        newCompositeNode(grammarAccess.getOperationsChainAccess().getOperantsMethodChainCallParserRuleCall_1_1_0_2()); 
-	    }
-		lv_operants_2_3=ruleMethodChainCall		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getOperationsChainRule());
-	        }
-       		add(
-       			$current, 
-       			"operants",
-        		lv_operants_2_3, 
-        		"co.gruposaberes.model.Rails.MethodChainCall");
-	        afterParserOrEnumRuleCall();
-	    }
+    |    this_DECIMAL_3=RULE_DECIMAL    {
+		$current.merge(this_DECIMAL_3);
+    }
 
-    |		lv_operants_2_4=RULE_REGEXP
-		{
-			newLeafNode(lv_operants_2_4, grammarAccess.getOperationsChainAccess().getOperantsREGEXPTerminalRuleCall_1_1_0_3()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getOperationsChainRule());
-	        }
-       		addWithLastConsumed(
-       			$current, 
-       			"operants",
-        		lv_operants_2_4, 
-        		"co.gruposaberes.model.Rails.REGEXP");
-	    }
+    { 
+    newLeafNode(this_DECIMAL_3, grammarAccess.getOperationsChainAccess().getDECIMALTerminalRuleCall_1_1_1()); 
+    }
 
-)
+    |
+    { 
+        newCompositeNode(grammarAccess.getOperationsChainAccess().getMethodChainCallParserRuleCall_1_1_2()); 
+    }
+    this_MethodChainCall_4=ruleMethodChainCall    {
+		$current.merge(this_MethodChainCall_4);
+    }
 
-)
+    { 
+        afterParserOrEnumRuleCall();
+    }
+
+    |    this_REGEXP_5=RULE_REGEXP    {
+		$current.merge(this_REGEXP_5);
+    }
+
+    { 
+    newLeafNode(this_REGEXP_5, grammarAccess.getOperationsChainAccess().getREGEXPTerminalRuleCall_1_1_3()); 
+    }
 ))*)
-;
+    ;
 
 
 

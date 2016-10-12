@@ -3349,9 +3349,9 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MethodName__Alternatives_2"
 
 
-    // $ANTLR start "rule__OperationsChain__OperantsAlternatives_1_1_0"
-    // InternalRails.g:1014:1: rule__OperationsChain__OperantsAlternatives_1_1_0 : ( ( RULE_BRACKET_BLOCK ) | ( RULE_DECIMAL ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) );
-    public final void rule__OperationsChain__OperantsAlternatives_1_1_0() throws RecognitionException {
+    // $ANTLR start "rule__OperationsChain__Alternatives_1_1"
+    // InternalRails.g:1014:1: rule__OperationsChain__Alternatives_1_1 : ( ( RULE_BRACKET_BLOCK ) | ( RULE_DECIMAL ) | ( ruleMethodChainCall ) | ( RULE_REGEXP ) );
+    public final void rule__OperationsChain__Alternatives_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -3401,11 +3401,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     // InternalRails.g:1020:1: RULE_BRACKET_BLOCK
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getOperationsChainAccess().getOperantsBRACKET_BLOCKTerminalRuleCall_1_1_0_0()); 
+                       before(grammarAccess.getOperationsChainAccess().getBRACKET_BLOCKTerminalRuleCall_1_1_0()); 
                     }
                     match(input,RULE_BRACKET_BLOCK,FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getOperationsChainAccess().getOperantsBRACKET_BLOCKTerminalRuleCall_1_1_0_0()); 
+                       after(grammarAccess.getOperationsChainAccess().getBRACKET_BLOCKTerminalRuleCall_1_1_0()); 
                     }
 
                     }
@@ -3420,11 +3420,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     // InternalRails.g:1026:1: RULE_DECIMAL
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getOperationsChainAccess().getOperantsDECIMALTerminalRuleCall_1_1_0_1()); 
+                       before(grammarAccess.getOperationsChainAccess().getDECIMALTerminalRuleCall_1_1_1()); 
                     }
                     match(input,RULE_DECIMAL,FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getOperationsChainAccess().getOperantsDECIMALTerminalRuleCall_1_1_0_1()); 
+                       after(grammarAccess.getOperationsChainAccess().getDECIMALTerminalRuleCall_1_1_1()); 
                     }
 
                     }
@@ -3439,7 +3439,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     // InternalRails.g:1032:1: ruleMethodChainCall
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getOperationsChainAccess().getOperantsMethodChainCallParserRuleCall_1_1_0_2()); 
+                       before(grammarAccess.getOperationsChainAccess().getMethodChainCallParserRuleCall_1_1_2()); 
                     }
                     pushFollow(FOLLOW_2);
                     ruleMethodChainCall();
@@ -3447,7 +3447,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     state._fsp--;
                     if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getOperationsChainAccess().getOperantsMethodChainCallParserRuleCall_1_1_0_2()); 
+                       after(grammarAccess.getOperationsChainAccess().getMethodChainCallParserRuleCall_1_1_2()); 
                     }
 
                     }
@@ -3462,11 +3462,11 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                     // InternalRails.g:1038:1: RULE_REGEXP
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getOperationsChainAccess().getOperantsREGEXPTerminalRuleCall_1_1_0_3()); 
+                       before(grammarAccess.getOperationsChainAccess().getREGEXPTerminalRuleCall_1_1_3()); 
                     }
                     match(input,RULE_REGEXP,FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getOperationsChainAccess().getOperantsREGEXPTerminalRuleCall_1_1_0_3()); 
+                       after(grammarAccess.getOperationsChainAccess().getREGEXPTerminalRuleCall_1_1_3()); 
                     }
 
                     }
@@ -3488,7 +3488,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__OperationsChain__OperantsAlternatives_1_1_0"
+    // $ANTLR end "rule__OperationsChain__Alternatives_1_1"
 
 
     // $ANTLR start "rule__OperatorRule__Alternatives_0"
@@ -11533,34 +11533,28 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group__0__Impl"
-    // InternalRails.g:3731:1: rule__OperationsChain__Group__0__Impl : ( ( rule__OperationsChain__NameAssignment_0 ) ) ;
+    // InternalRails.g:3731:1: rule__OperationsChain__Group__0__Impl : ( ruleMethodChainCall ) ;
     public final void rule__OperationsChain__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3735:1: ( ( ( rule__OperationsChain__NameAssignment_0 ) ) )
-            // InternalRails.g:3736:1: ( ( rule__OperationsChain__NameAssignment_0 ) )
+            // InternalRails.g:3735:1: ( ( ruleMethodChainCall ) )
+            // InternalRails.g:3736:1: ( ruleMethodChainCall )
             {
-            // InternalRails.g:3736:1: ( ( rule__OperationsChain__NameAssignment_0 ) )
-            // InternalRails.g:3737:1: ( rule__OperationsChain__NameAssignment_0 )
+            // InternalRails.g:3736:1: ( ruleMethodChainCall )
+            // InternalRails.g:3737:1: ruleMethodChainCall
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getOperationsChainAccess().getNameAssignment_0()); 
+               before(grammarAccess.getOperationsChainAccess().getMethodChainCallParserRuleCall_0()); 
             }
-            // InternalRails.g:3738:1: ( rule__OperationsChain__NameAssignment_0 )
-            // InternalRails.g:3738:2: rule__OperationsChain__NameAssignment_0
-            {
             pushFollow(FOLLOW_2);
-            rule__OperationsChain__NameAssignment_0();
+            ruleMethodChainCall();
 
             state._fsp--;
             if (state.failed) return ;
-
-            }
-
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getOperationsChainAccess().getNameAssignment_0()); 
+               after(grammarAccess.getOperationsChainAccess().getMethodChainCallParserRuleCall_0()); 
             }
 
             }
@@ -11724,34 +11718,28 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group_1__0__Impl"
-    // InternalRails.g:3792:1: rule__OperationsChain__Group_1__0__Impl : ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) ) ;
+    // InternalRails.g:3792:1: rule__OperationsChain__Group_1__0__Impl : ( ruleOperatorRule ) ;
     public final void rule__OperationsChain__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3796:1: ( ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) ) )
-            // InternalRails.g:3797:1: ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) )
+            // InternalRails.g:3796:1: ( ( ruleOperatorRule ) )
+            // InternalRails.g:3797:1: ( ruleOperatorRule )
             {
-            // InternalRails.g:3797:1: ( ( rule__OperationsChain__OperatorsAssignment_1_0 ) )
-            // InternalRails.g:3798:1: ( rule__OperationsChain__OperatorsAssignment_1_0 )
+            // InternalRails.g:3797:1: ( ruleOperatorRule )
+            // InternalRails.g:3798:1: ruleOperatorRule
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getOperationsChainAccess().getOperatorsAssignment_1_0()); 
+               before(grammarAccess.getOperationsChainAccess().getOperatorRuleParserRuleCall_1_0()); 
             }
-            // InternalRails.g:3799:1: ( rule__OperationsChain__OperatorsAssignment_1_0 )
-            // InternalRails.g:3799:2: rule__OperationsChain__OperatorsAssignment_1_0
-            {
             pushFollow(FOLLOW_2);
-            rule__OperationsChain__OperatorsAssignment_1_0();
+            ruleOperatorRule();
 
             state._fsp--;
             if (state.failed) return ;
-
-            }
-
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getOperationsChainAccess().getOperatorsAssignment_1_0()); 
+               after(grammarAccess.getOperationsChainAccess().getOperatorRuleParserRuleCall_1_0()); 
             }
 
             }
@@ -11808,26 +11796,26 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsChain__Group_1__1__Impl"
-    // InternalRails.g:3820:1: rule__OperationsChain__Group_1__1__Impl : ( ( rule__OperationsChain__OperantsAssignment_1_1 ) ) ;
+    // InternalRails.g:3820:1: rule__OperationsChain__Group_1__1__Impl : ( ( rule__OperationsChain__Alternatives_1_1 ) ) ;
     public final void rule__OperationsChain__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalRails.g:3824:1: ( ( ( rule__OperationsChain__OperantsAssignment_1_1 ) ) )
-            // InternalRails.g:3825:1: ( ( rule__OperationsChain__OperantsAssignment_1_1 ) )
+            // InternalRails.g:3824:1: ( ( ( rule__OperationsChain__Alternatives_1_1 ) ) )
+            // InternalRails.g:3825:1: ( ( rule__OperationsChain__Alternatives_1_1 ) )
             {
-            // InternalRails.g:3825:1: ( ( rule__OperationsChain__OperantsAssignment_1_1 ) )
-            // InternalRails.g:3826:1: ( rule__OperationsChain__OperantsAssignment_1_1 )
+            // InternalRails.g:3825:1: ( ( rule__OperationsChain__Alternatives_1_1 ) )
+            // InternalRails.g:3826:1: ( rule__OperationsChain__Alternatives_1_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getOperationsChainAccess().getOperantsAssignment_1_1()); 
+               before(grammarAccess.getOperationsChainAccess().getAlternatives_1_1()); 
             }
-            // InternalRails.g:3827:1: ( rule__OperationsChain__OperantsAssignment_1_1 )
-            // InternalRails.g:3827:2: rule__OperationsChain__OperantsAssignment_1_1
+            // InternalRails.g:3827:1: ( rule__OperationsChain__Alternatives_1_1 )
+            // InternalRails.g:3827:2: rule__OperationsChain__Alternatives_1_1
             {
             pushFollow(FOLLOW_2);
-            rule__OperationsChain__OperantsAssignment_1_1();
+            rule__OperationsChain__Alternatives_1_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -11835,7 +11823,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getOperationsChainAccess().getOperantsAssignment_1_1()); 
+               after(grammarAccess.getOperationsChainAccess().getAlternatives_1_1()); 
             }
 
             }
@@ -12547,147 +12535,6 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "rule__Method__NameAssignment_2"
-
-
-    // $ANTLR start "rule__OperationsChain__NameAssignment_0"
-    // InternalRails.g:4074:1: rule__OperationsChain__NameAssignment_0 : ( ruleMethodChainCall ) ;
-    public final void rule__OperationsChain__NameAssignment_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalRails.g:4078:1: ( ( ruleMethodChainCall ) )
-            // InternalRails.g:4079:1: ( ruleMethodChainCall )
-            {
-            // InternalRails.g:4079:1: ( ruleMethodChainCall )
-            // InternalRails.g:4080:1: ruleMethodChainCall
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getOperationsChainAccess().getNameMethodChainCallParserRuleCall_0_0()); 
-            }
-            pushFollow(FOLLOW_2);
-            ruleMethodChainCall();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getOperationsChainAccess().getNameMethodChainCallParserRuleCall_0_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__OperationsChain__NameAssignment_0"
-
-
-    // $ANTLR start "rule__OperationsChain__OperatorsAssignment_1_0"
-    // InternalRails.g:4089:1: rule__OperationsChain__OperatorsAssignment_1_0 : ( ruleOperatorRule ) ;
-    public final void rule__OperationsChain__OperatorsAssignment_1_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalRails.g:4093:1: ( ( ruleOperatorRule ) )
-            // InternalRails.g:4094:1: ( ruleOperatorRule )
-            {
-            // InternalRails.g:4094:1: ( ruleOperatorRule )
-            // InternalRails.g:4095:1: ruleOperatorRule
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getOperationsChainAccess().getOperatorsOperatorRuleParserRuleCall_1_0_0()); 
-            }
-            pushFollow(FOLLOW_2);
-            ruleOperatorRule();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getOperationsChainAccess().getOperatorsOperatorRuleParserRuleCall_1_0_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__OperationsChain__OperatorsAssignment_1_0"
-
-
-    // $ANTLR start "rule__OperationsChain__OperantsAssignment_1_1"
-    // InternalRails.g:4104:1: rule__OperationsChain__OperantsAssignment_1_1 : ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) ) ;
-    public final void rule__OperationsChain__OperantsAssignment_1_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // InternalRails.g:4108:1: ( ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) ) )
-            // InternalRails.g:4109:1: ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) )
-            {
-            // InternalRails.g:4109:1: ( ( rule__OperationsChain__OperantsAlternatives_1_1_0 ) )
-            // InternalRails.g:4110:1: ( rule__OperationsChain__OperantsAlternatives_1_1_0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getOperationsChainAccess().getOperantsAlternatives_1_1_0()); 
-            }
-            // InternalRails.g:4111:1: ( rule__OperationsChain__OperantsAlternatives_1_1_0 )
-            // InternalRails.g:4111:2: rule__OperationsChain__OperantsAlternatives_1_1_0
-            {
-            pushFollow(FOLLOW_2);
-            rule__OperationsChain__OperantsAlternatives_1_1_0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getOperationsChainAccess().getOperantsAlternatives_1_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__OperationsChain__OperantsAssignment_1_1"
 
     // $ANTLR start synpred10_InternalRails
     public final void synpred10_InternalRails_fragment() throws RecognitionException {   
@@ -13682,7 +13529,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
     static final String dfa_3s = "\1\4\2\22\2\0\1\uffff\1\0\2\uffff\1\4\6\uffff";
     static final String dfa_4s = "\1\24\2\105\2\0\1\uffff\1\0\2\uffff\1\104\6\uffff";
     static final String dfa_5s = "\5\uffff\1\5\1\uffff\1\7\1\10\1\uffff\1\11\1\1\1\2\1\3\1\4\1\6";
-    static final String dfa_6s = "\1\uffff\1\0\1\4\1\2\1\3\1\uffff\1\1\11\uffff}>";
+    static final String dfa_6s = "\1\uffff\1\0\1\1\1\3\1\4\1\uffff\1\2\11\uffff}>";
     static final String[] dfa_7s = {
             "\1\1\1\2\1\6\1\10\1\4\1\3\1\5\1\7\6\uffff\1\12\1\uffff\1\11",
             "\1\12\62\uffff\1\12",
@@ -13748,51 +13595,6 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA5_6 = input.LA(1);
-
-                         
-                        int index5_6 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred16_InternalRails()) ) {s = 15;}
-
-                        else if ( (synpred18_InternalRails()) ) {s = 8;}
-
-                         
-                        input.seek(index5_6);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA5_3 = input.LA(1);
-
-                         
-                        int index5_3 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred13_InternalRails()) ) {s = 13;}
-
-                        else if ( (synpred18_InternalRails()) ) {s = 8;}
-
-                         
-                        input.seek(index5_3);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
-                        int LA5_4 = input.LA(1);
-
-                         
-                        int index5_4 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred14_InternalRails()) ) {s = 14;}
-
-                        else if ( (synpred18_InternalRails()) ) {s = 8;}
-
-                         
-                        input.seek(index5_4);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
                         int LA5_2 = input.LA(1);
 
                          
@@ -13809,6 +13611,51 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                         input.seek(index5_2);
                         if ( s>=0 ) return s;
                         break;
+                    case 2 : 
+                        int LA5_6 = input.LA(1);
+
+                         
+                        int index5_6 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred16_InternalRails()) ) {s = 15;}
+
+                        else if ( (synpred18_InternalRails()) ) {s = 8;}
+
+                         
+                        input.seek(index5_6);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA5_3 = input.LA(1);
+
+                         
+                        int index5_3 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred13_InternalRails()) ) {s = 13;}
+
+                        else if ( (synpred18_InternalRails()) ) {s = 8;}
+
+                         
+                        input.seek(index5_3);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA5_4 = input.LA(1);
+
+                         
+                        int index5_4 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred14_InternalRails()) ) {s = 14;}
+
+                        else if ( (synpred18_InternalRails()) ) {s = 8;}
+
+                         
+                        input.seek(index5_4);
+                        if ( s>=0 ) return s;
+                        break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
@@ -13821,7 +13668,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
     static final String dfa_9s = "\1\4\2\0\1\uffff\1\0\1\uffff\2\0\6\uffff";
     static final String dfa_10s = "\1\24\2\0\1\uffff\1\0\1\uffff\2\0\6\uffff";
     static final String dfa_11s = "\3\uffff\1\3\1\uffff\1\5\2\uffff\1\10\1\1\1\2\1\4\1\6\1\7";
-    static final String dfa_12s = "\1\uffff\1\3\1\0\1\uffff\1\2\1\uffff\1\4\1\1\6\uffff}>";
+    static final String dfa_12s = "\1\uffff\1\1\1\2\1\uffff\1\3\1\uffff\1\4\1\0\6\uffff}>";
     static final String[] dfa_13s = {
             "\1\1\1\2\1\6\1\7\1\10\1\4\1\5\1\uffff\1\3\7\uffff\1\10",
             "\1\uffff",
@@ -13867,21 +13714,6 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA11_2 = input.LA(1);
-
-                         
-                        int index11_2 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred27_InternalRails()) ) {s = 10;}
-
-                        else if ( (true) ) {s = 8;}
-
-                         
-                        input.seek(index11_2);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA11_7 = input.LA(1);
 
                          
@@ -13896,22 +13728,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                         input.seek(index11_7);
                         if ( s>=0 ) return s;
                         break;
-                    case 2 : 
-                        int LA11_4 = input.LA(1);
-
-                         
-                        int index11_4 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred29_InternalRails()) ) {s = 11;}
-
-                        else if ( (true) ) {s = 8;}
-
-                         
-                        input.seek(index11_4);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
+                    case 1 : 
                         int LA11_1 = input.LA(1);
 
                          
@@ -13924,6 +13741,36 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                          
                         input.seek(index11_1);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA11_2 = input.LA(1);
+
+                         
+                        int index11_2 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred27_InternalRails()) ) {s = 10;}
+
+                        else if ( (true) ) {s = 8;}
+
+                         
+                        input.seek(index11_2);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA11_4 = input.LA(1);
+
+                         
+                        int index11_4 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred29_InternalRails()) ) {s = 11;}
+
+                        else if ( (true) ) {s = 8;}
+
+                         
+                        input.seek(index11_4);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
@@ -13953,7 +13800,7 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
     static final String dfa_15s = "\1\4\2\0\1\uffff\1\0\1\uffff\2\0\7\uffff";
     static final String dfa_16s = "\1\24\2\0\1\uffff\1\0\1\uffff\2\0\7\uffff";
     static final String dfa_17s = "\3\uffff\1\3\1\uffff\1\5\2\uffff\1\10\1\11\1\1\1\2\1\4\1\6\1\7";
-    static final String dfa_18s = "\1\uffff\1\0\1\2\1\uffff\1\3\1\uffff\1\4\1\1\7\uffff}>";
+    static final String dfa_18s = "\1\uffff\1\2\1\1\1\uffff\1\4\1\uffff\1\0\1\3\7\uffff}>";
     static final String[] dfa_19s = {
             "\1\1\1\2\1\6\1\7\1\10\1\4\1\5\1\11\1\3\7\uffff\1\10",
             "\1\uffff",
@@ -14000,36 +13847,21 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA14_1 = input.LA(1);
+                        int LA14_6 = input.LA(1);
 
                          
-                        int index14_1 = input.index();
+                        int index14_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred35_InternalRails()) ) {s = 10;}
+                        if ( (synpred40_InternalRails()) ) {s = 13;}
 
                         else if ( (synpred42_InternalRails()) ) {s = 8;}
 
                          
-                        input.seek(index14_1);
+                        input.seek(index14_6);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA14_7 = input.LA(1);
-
-                         
-                        int index14_7 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred41_InternalRails()) ) {s = 14;}
-
-                        else if ( (synpred42_InternalRails()) ) {s = 8;}
-
-                         
-                        input.seek(index14_7);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA14_2 = input.LA(1);
 
                          
@@ -14044,7 +13876,37 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
                         input.seek(index14_2);
                         if ( s>=0 ) return s;
                         break;
+                    case 2 : 
+                        int LA14_1 = input.LA(1);
+
+                         
+                        int index14_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred35_InternalRails()) ) {s = 10;}
+
+                        else if ( (synpred42_InternalRails()) ) {s = 8;}
+
+                         
+                        input.seek(index14_1);
+                        if ( s>=0 ) return s;
+                        break;
                     case 3 : 
+                        int LA14_7 = input.LA(1);
+
+                         
+                        int index14_7 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred41_InternalRails()) ) {s = 14;}
+
+                        else if ( (synpred42_InternalRails()) ) {s = 8;}
+
+                         
+                        input.seek(index14_7);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
                         int LA14_4 = input.LA(1);
 
                          
@@ -14057,21 +13919,6 @@ public class InternalRailsParser extends AbstractInternalContentAssistParser {
 
                          
                         input.seek(index14_4);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA14_6 = input.LA(1);
-
-                         
-                        int index14_6 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred40_InternalRails()) ) {s = 13;}
-
-                        else if ( (synpred42_InternalRails()) ) {s = 8;}
-
-                         
-                        input.seek(index14_6);
                         if ( s>=0 ) return s;
                         break;
             }

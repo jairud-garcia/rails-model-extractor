@@ -650,8 +650,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1706:12: ( ',' )
-            // InternalRails.g:1706:14: ','
+            // InternalRails.g:1660:12: ( ',' )
+            // InternalRails.g:1660:14: ','
             {
             match(','); 
 
@@ -670,8 +670,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_SPACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1708:12: ( ( ' ' | '\\t' ) )
-            // InternalRails.g:1708:14: ( ' ' | '\\t' )
+            // InternalRails.g:1662:12: ( ( ' ' | '\\t' ) )
+            // InternalRails.g:1662:14: ( ' ' | '\\t' )
             {
             if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
                 input.consume();
@@ -696,10 +696,10 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_NOT_BRACKET_SEQ"
     public final void mRULE_NOT_BRACKET_SEQ() throws RecognitionException {
         try {
-            // InternalRails.g:1710:31: ( (~ ( ( '{' | '}' ) ) )* )
-            // InternalRails.g:1710:33: (~ ( ( '{' | '}' ) ) )*
+            // InternalRails.g:1664:31: ( (~ ( ( '{' | '}' ) ) )* )
+            // InternalRails.g:1664:33: (~ ( ( '{' | '}' ) ) )*
             {
-            // InternalRails.g:1710:33: (~ ( ( '{' | '}' ) ) )*
+            // InternalRails.g:1664:33: (~ ( ( '{' | '}' ) ) )*
             loop1:
             do {
                 int alt1=2;
@@ -712,7 +712,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalRails.g:1710:33: ~ ( ( '{' | '}' ) )
+            	    // InternalRails.g:1664:33: ~ ( ( '{' | '}' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='z')||input.LA(1)=='|'||(input.LA(1)>='~' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -744,8 +744,8 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_FIRST_LEVEL_BRACKET_BLOCK"
     public final void mRULE_FIRST_LEVEL_BRACKET_BLOCK() throws RecognitionException {
         try {
-            // InternalRails.g:1712:41: ( '{' RULE_NOT_BRACKET_SEQ '}' RULE_NOT_BRACKET_SEQ )
-            // InternalRails.g:1712:43: '{' RULE_NOT_BRACKET_SEQ '}' RULE_NOT_BRACKET_SEQ
+            // InternalRails.g:1666:41: ( '{' RULE_NOT_BRACKET_SEQ '}' RULE_NOT_BRACKET_SEQ )
+            // InternalRails.g:1666:43: '{' RULE_NOT_BRACKET_SEQ '}' RULE_NOT_BRACKET_SEQ
             {
             match('{'); 
             mRULE_NOT_BRACKET_SEQ(); 
@@ -763,12 +763,12 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_SECOND_LEVEL_BRACKET_BLOCK"
     public final void mRULE_SECOND_LEVEL_BRACKET_BLOCK() throws RecognitionException {
         try {
-            // InternalRails.g:1714:42: ( '{' RULE_NOT_BRACKET_SEQ ( RULE_FIRST_LEVEL_BRACKET_BLOCK )* '}' RULE_NOT_BRACKET_SEQ )
-            // InternalRails.g:1714:44: '{' RULE_NOT_BRACKET_SEQ ( RULE_FIRST_LEVEL_BRACKET_BLOCK )* '}' RULE_NOT_BRACKET_SEQ
+            // InternalRails.g:1668:42: ( '{' RULE_NOT_BRACKET_SEQ ( RULE_FIRST_LEVEL_BRACKET_BLOCK )* '}' RULE_NOT_BRACKET_SEQ )
+            // InternalRails.g:1668:44: '{' RULE_NOT_BRACKET_SEQ ( RULE_FIRST_LEVEL_BRACKET_BLOCK )* '}' RULE_NOT_BRACKET_SEQ
             {
             match('{'); 
             mRULE_NOT_BRACKET_SEQ(); 
-            // InternalRails.g:1714:69: ( RULE_FIRST_LEVEL_BRACKET_BLOCK )*
+            // InternalRails.g:1668:69: ( RULE_FIRST_LEVEL_BRACKET_BLOCK )*
             loop2:
             do {
                 int alt2=2;
@@ -781,7 +781,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalRails.g:1714:69: RULE_FIRST_LEVEL_BRACKET_BLOCK
+            	    // InternalRails.g:1668:69: RULE_FIRST_LEVEL_BRACKET_BLOCK
             	    {
             	    mRULE_FIRST_LEVEL_BRACKET_BLOCK(); 
 
@@ -807,12 +807,12 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_THIRD_LEVEL_BRACKET_BLOCK"
     public final void mRULE_THIRD_LEVEL_BRACKET_BLOCK() throws RecognitionException {
         try {
-            // InternalRails.g:1716:41: ( '{' RULE_NOT_BRACKET_SEQ ( RULE_SECOND_LEVEL_BRACKET_BLOCK )* '}' RULE_NOT_BRACKET_SEQ )
-            // InternalRails.g:1716:43: '{' RULE_NOT_BRACKET_SEQ ( RULE_SECOND_LEVEL_BRACKET_BLOCK )* '}' RULE_NOT_BRACKET_SEQ
+            // InternalRails.g:1670:41: ( '{' RULE_NOT_BRACKET_SEQ ( RULE_SECOND_LEVEL_BRACKET_BLOCK )* '}' RULE_NOT_BRACKET_SEQ )
+            // InternalRails.g:1670:43: '{' RULE_NOT_BRACKET_SEQ ( RULE_SECOND_LEVEL_BRACKET_BLOCK )* '}' RULE_NOT_BRACKET_SEQ
             {
             match('{'); 
             mRULE_NOT_BRACKET_SEQ(); 
-            // InternalRails.g:1716:68: ( RULE_SECOND_LEVEL_BRACKET_BLOCK )*
+            // InternalRails.g:1670:68: ( RULE_SECOND_LEVEL_BRACKET_BLOCK )*
             loop3:
             do {
                 int alt3=2;
@@ -825,7 +825,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalRails.g:1716:68: RULE_SECOND_LEVEL_BRACKET_BLOCK
+            	    // InternalRails.g:1670:68: RULE_SECOND_LEVEL_BRACKET_BLOCK
             	    {
             	    mRULE_SECOND_LEVEL_BRACKET_BLOCK(); 
 
@@ -853,12 +853,12 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_BRACKET_BLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1718:20: ( '{' RULE_NOT_BRACKET_SEQ ( RULE_THIRD_LEVEL_BRACKET_BLOCK )* '}' )
-            // InternalRails.g:1718:22: '{' RULE_NOT_BRACKET_SEQ ( RULE_THIRD_LEVEL_BRACKET_BLOCK )* '}'
+            // InternalRails.g:1672:20: ( '{' RULE_NOT_BRACKET_SEQ ( RULE_THIRD_LEVEL_BRACKET_BLOCK )* '}' )
+            // InternalRails.g:1672:22: '{' RULE_NOT_BRACKET_SEQ ( RULE_THIRD_LEVEL_BRACKET_BLOCK )* '}'
             {
             match('{'); 
             mRULE_NOT_BRACKET_SEQ(); 
-            // InternalRails.g:1718:47: ( RULE_THIRD_LEVEL_BRACKET_BLOCK )*
+            // InternalRails.g:1672:47: ( RULE_THIRD_LEVEL_BRACKET_BLOCK )*
             loop4:
             do {
                 int alt4=2;
@@ -871,7 +871,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalRails.g:1718:47: RULE_THIRD_LEVEL_BRACKET_BLOCK
+            	    // InternalRails.g:1672:47: RULE_THIRD_LEVEL_BRACKET_BLOCK
             	    {
             	    mRULE_THIRD_LEVEL_BRACKET_BLOCK(); 
 
@@ -898,10 +898,10 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_NOT_ARRAY_SEQ"
     public final void mRULE_NOT_ARRAY_SEQ() throws RecognitionException {
         try {
-            // InternalRails.g:1720:29: ( (~ ( ( '[' | ']' ) ) )* )
-            // InternalRails.g:1720:31: (~ ( ( '[' | ']' ) ) )*
+            // InternalRails.g:1674:29: ( (~ ( ( '[' | ']' ) ) )* )
+            // InternalRails.g:1674:31: (~ ( ( '[' | ']' ) ) )*
             {
-            // InternalRails.g:1720:31: (~ ( ( '[' | ']' ) ) )*
+            // InternalRails.g:1674:31: (~ ( ( '[' | ']' ) ) )*
             loop5:
             do {
                 int alt5=2;
@@ -914,7 +914,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalRails.g:1720:31: ~ ( ( '[' | ']' ) )
+            	    // InternalRails.g:1674:31: ~ ( ( '[' | ']' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='Z')||input.LA(1)=='\\'||(input.LA(1)>='^' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -946,8 +946,8 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_FIRST_LEVEL_ARRAY_BLOCK"
     public final void mRULE_FIRST_LEVEL_ARRAY_BLOCK() throws RecognitionException {
         try {
-            // InternalRails.g:1722:39: ( '[' RULE_NOT_ARRAY_SEQ ']' RULE_NOT_ARRAY_SEQ )
-            // InternalRails.g:1722:41: '[' RULE_NOT_ARRAY_SEQ ']' RULE_NOT_ARRAY_SEQ
+            // InternalRails.g:1676:39: ( '[' RULE_NOT_ARRAY_SEQ ']' RULE_NOT_ARRAY_SEQ )
+            // InternalRails.g:1676:41: '[' RULE_NOT_ARRAY_SEQ ']' RULE_NOT_ARRAY_SEQ
             {
             match('['); 
             mRULE_NOT_ARRAY_SEQ(); 
@@ -965,12 +965,12 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_SECOND_LEVEL_ARRAY_BLOCK"
     public final void mRULE_SECOND_LEVEL_ARRAY_BLOCK() throws RecognitionException {
         try {
-            // InternalRails.g:1724:40: ( '[' RULE_NOT_ARRAY_SEQ ( RULE_FIRST_LEVEL_ARRAY_BLOCK )* ']' RULE_NOT_ARRAY_SEQ )
-            // InternalRails.g:1724:42: '[' RULE_NOT_ARRAY_SEQ ( RULE_FIRST_LEVEL_ARRAY_BLOCK )* ']' RULE_NOT_ARRAY_SEQ
+            // InternalRails.g:1678:40: ( '[' RULE_NOT_ARRAY_SEQ ( RULE_FIRST_LEVEL_ARRAY_BLOCK )* ']' RULE_NOT_ARRAY_SEQ )
+            // InternalRails.g:1678:42: '[' RULE_NOT_ARRAY_SEQ ( RULE_FIRST_LEVEL_ARRAY_BLOCK )* ']' RULE_NOT_ARRAY_SEQ
             {
             match('['); 
             mRULE_NOT_ARRAY_SEQ(); 
-            // InternalRails.g:1724:65: ( RULE_FIRST_LEVEL_ARRAY_BLOCK )*
+            // InternalRails.g:1678:65: ( RULE_FIRST_LEVEL_ARRAY_BLOCK )*
             loop6:
             do {
                 int alt6=2;
@@ -983,7 +983,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalRails.g:1724:65: RULE_FIRST_LEVEL_ARRAY_BLOCK
+            	    // InternalRails.g:1678:65: RULE_FIRST_LEVEL_ARRAY_BLOCK
             	    {
             	    mRULE_FIRST_LEVEL_ARRAY_BLOCK(); 
 
@@ -1009,12 +1009,12 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_THIRD_LEVEL_ARRAY_BLOCK"
     public final void mRULE_THIRD_LEVEL_ARRAY_BLOCK() throws RecognitionException {
         try {
-            // InternalRails.g:1726:39: ( '[' RULE_NOT_ARRAY_SEQ ( RULE_SECOND_LEVEL_ARRAY_BLOCK )* ']' RULE_NOT_ARRAY_SEQ )
-            // InternalRails.g:1726:41: '[' RULE_NOT_ARRAY_SEQ ( RULE_SECOND_LEVEL_ARRAY_BLOCK )* ']' RULE_NOT_ARRAY_SEQ
+            // InternalRails.g:1680:39: ( '[' RULE_NOT_ARRAY_SEQ ( RULE_SECOND_LEVEL_ARRAY_BLOCK )* ']' RULE_NOT_ARRAY_SEQ )
+            // InternalRails.g:1680:41: '[' RULE_NOT_ARRAY_SEQ ( RULE_SECOND_LEVEL_ARRAY_BLOCK )* ']' RULE_NOT_ARRAY_SEQ
             {
             match('['); 
             mRULE_NOT_ARRAY_SEQ(); 
-            // InternalRails.g:1726:64: ( RULE_SECOND_LEVEL_ARRAY_BLOCK )*
+            // InternalRails.g:1680:64: ( RULE_SECOND_LEVEL_ARRAY_BLOCK )*
             loop7:
             do {
                 int alt7=2;
@@ -1027,7 +1027,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalRails.g:1726:64: RULE_SECOND_LEVEL_ARRAY_BLOCK
+            	    // InternalRails.g:1680:64: RULE_SECOND_LEVEL_ARRAY_BLOCK
             	    {
             	    mRULE_SECOND_LEVEL_ARRAY_BLOCK(); 
 
@@ -1055,12 +1055,12 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_ARRAY_BLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1728:18: ( '[' RULE_NOT_ARRAY_SEQ ( RULE_THIRD_LEVEL_ARRAY_BLOCK )* ']' )
-            // InternalRails.g:1728:20: '[' RULE_NOT_ARRAY_SEQ ( RULE_THIRD_LEVEL_ARRAY_BLOCK )* ']'
+            // InternalRails.g:1682:18: ( '[' RULE_NOT_ARRAY_SEQ ( RULE_THIRD_LEVEL_ARRAY_BLOCK )* ']' )
+            // InternalRails.g:1682:20: '[' RULE_NOT_ARRAY_SEQ ( RULE_THIRD_LEVEL_ARRAY_BLOCK )* ']'
             {
             match('['); 
             mRULE_NOT_ARRAY_SEQ(); 
-            // InternalRails.g:1728:43: ( RULE_THIRD_LEVEL_ARRAY_BLOCK )*
+            // InternalRails.g:1682:43: ( RULE_THIRD_LEVEL_ARRAY_BLOCK )*
             loop8:
             do {
                 int alt8=2;
@@ -1073,7 +1073,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalRails.g:1728:43: RULE_THIRD_LEVEL_ARRAY_BLOCK
+            	    // InternalRails.g:1682:43: RULE_THIRD_LEVEL_ARRAY_BLOCK
             	    {
             	    mRULE_THIRD_LEVEL_ARRAY_BLOCK(); 
 
@@ -1100,10 +1100,10 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_NOT_PARENTHESIS_SEQ"
     public final void mRULE_NOT_PARENTHESIS_SEQ() throws RecognitionException {
         try {
-            // InternalRails.g:1730:35: ( (~ ( ( '(' | ')' ) ) )* )
-            // InternalRails.g:1730:37: (~ ( ( '(' | ')' ) ) )*
+            // InternalRails.g:1684:35: ( (~ ( ( '(' | ')' ) ) )* )
+            // InternalRails.g:1684:37: (~ ( ( '(' | ')' ) ) )*
             {
-            // InternalRails.g:1730:37: (~ ( ( '(' | ')' ) ) )*
+            // InternalRails.g:1684:37: (~ ( ( '(' | ')' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1116,7 +1116,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalRails.g:1730:37: ~ ( ( '(' | ')' ) )
+            	    // InternalRails.g:1684:37: ~ ( ( '(' | ')' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\'')||(input.LA(1)>='*' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1148,8 +1148,8 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_FIRST_LEVEL_PARENTHESIS_BLOCK"
     public final void mRULE_FIRST_LEVEL_PARENTHESIS_BLOCK() throws RecognitionException {
         try {
-            // InternalRails.g:1732:45: ( '(' RULE_NOT_PARENTHESIS_SEQ ')' RULE_NOT_PARENTHESIS_SEQ )
-            // InternalRails.g:1732:47: '(' RULE_NOT_PARENTHESIS_SEQ ')' RULE_NOT_PARENTHESIS_SEQ
+            // InternalRails.g:1686:45: ( '(' RULE_NOT_PARENTHESIS_SEQ ')' RULE_NOT_PARENTHESIS_SEQ )
+            // InternalRails.g:1686:47: '(' RULE_NOT_PARENTHESIS_SEQ ')' RULE_NOT_PARENTHESIS_SEQ
             {
             match('('); 
             mRULE_NOT_PARENTHESIS_SEQ(); 
@@ -1167,12 +1167,12 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_SECOND_LEVEL_PARENTHESIS_BLOCK"
     public final void mRULE_SECOND_LEVEL_PARENTHESIS_BLOCK() throws RecognitionException {
         try {
-            // InternalRails.g:1734:46: ( '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_FIRST_LEVEL_PARENTHESIS_BLOCK )* ')' RULE_NOT_PARENTHESIS_SEQ )
-            // InternalRails.g:1734:48: '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_FIRST_LEVEL_PARENTHESIS_BLOCK )* ')' RULE_NOT_PARENTHESIS_SEQ
+            // InternalRails.g:1688:46: ( '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_FIRST_LEVEL_PARENTHESIS_BLOCK )* ')' RULE_NOT_PARENTHESIS_SEQ )
+            // InternalRails.g:1688:48: '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_FIRST_LEVEL_PARENTHESIS_BLOCK )* ')' RULE_NOT_PARENTHESIS_SEQ
             {
             match('('); 
             mRULE_NOT_PARENTHESIS_SEQ(); 
-            // InternalRails.g:1734:77: ( RULE_FIRST_LEVEL_PARENTHESIS_BLOCK )*
+            // InternalRails.g:1688:77: ( RULE_FIRST_LEVEL_PARENTHESIS_BLOCK )*
             loop10:
             do {
                 int alt10=2;
@@ -1185,7 +1185,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // InternalRails.g:1734:77: RULE_FIRST_LEVEL_PARENTHESIS_BLOCK
+            	    // InternalRails.g:1688:77: RULE_FIRST_LEVEL_PARENTHESIS_BLOCK
             	    {
             	    mRULE_FIRST_LEVEL_PARENTHESIS_BLOCK(); 
 
@@ -1211,12 +1211,12 @@ public class InternalRailsLexer extends Lexer {
     // $ANTLR start "RULE_THIRD_LEVEL_PARENTHESIS_BLOCK"
     public final void mRULE_THIRD_LEVEL_PARENTHESIS_BLOCK() throws RecognitionException {
         try {
-            // InternalRails.g:1736:45: ( '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_SECOND_LEVEL_PARENTHESIS_BLOCK )* ')' RULE_NOT_PARENTHESIS_SEQ )
-            // InternalRails.g:1736:47: '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_SECOND_LEVEL_PARENTHESIS_BLOCK )* ')' RULE_NOT_PARENTHESIS_SEQ
+            // InternalRails.g:1690:45: ( '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_SECOND_LEVEL_PARENTHESIS_BLOCK )* ')' RULE_NOT_PARENTHESIS_SEQ )
+            // InternalRails.g:1690:47: '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_SECOND_LEVEL_PARENTHESIS_BLOCK )* ')' RULE_NOT_PARENTHESIS_SEQ
             {
             match('('); 
             mRULE_NOT_PARENTHESIS_SEQ(); 
-            // InternalRails.g:1736:76: ( RULE_SECOND_LEVEL_PARENTHESIS_BLOCK )*
+            // InternalRails.g:1690:76: ( RULE_SECOND_LEVEL_PARENTHESIS_BLOCK )*
             loop11:
             do {
                 int alt11=2;
@@ -1229,7 +1229,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // InternalRails.g:1736:76: RULE_SECOND_LEVEL_PARENTHESIS_BLOCK
+            	    // InternalRails.g:1690:76: RULE_SECOND_LEVEL_PARENTHESIS_BLOCK
             	    {
             	    mRULE_SECOND_LEVEL_PARENTHESIS_BLOCK(); 
 
@@ -1257,12 +1257,12 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_PARENTHESIS_BLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1738:24: ( '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_THIRD_LEVEL_PARENTHESIS_BLOCK )* ')' )
-            // InternalRails.g:1738:26: '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_THIRD_LEVEL_PARENTHESIS_BLOCK )* ')'
+            // InternalRails.g:1692:24: ( '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_THIRD_LEVEL_PARENTHESIS_BLOCK )* ')' )
+            // InternalRails.g:1692:26: '(' RULE_NOT_PARENTHESIS_SEQ ( RULE_THIRD_LEVEL_PARENTHESIS_BLOCK )* ')'
             {
             match('('); 
             mRULE_NOT_PARENTHESIS_SEQ(); 
-            // InternalRails.g:1738:55: ( RULE_THIRD_LEVEL_PARENTHESIS_BLOCK )*
+            // InternalRails.g:1692:55: ( RULE_THIRD_LEVEL_PARENTHESIS_BLOCK )*
             loop12:
             do {
                 int alt12=2;
@@ -1275,7 +1275,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // InternalRails.g:1738:55: RULE_THIRD_LEVEL_PARENTHESIS_BLOCK
+            	    // InternalRails.g:1692:55: RULE_THIRD_LEVEL_PARENTHESIS_BLOCK
             	    {
             	    mRULE_THIRD_LEVEL_PARENTHESIS_BLOCK(); 
 
@@ -1304,12 +1304,12 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_DO_BLOCK_PARAMETERS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1740:26: ( 'do' ( RULE_SPACE )* '|' RULE_ID ( RULE_SPACE )* ( RULE_COMMA ( RULE_SPACE )* RULE_ID )* '|' )
-            // InternalRails.g:1740:28: 'do' ( RULE_SPACE )* '|' RULE_ID ( RULE_SPACE )* ( RULE_COMMA ( RULE_SPACE )* RULE_ID )* '|'
+            // InternalRails.g:1694:26: ( 'do' ( RULE_SPACE )* '|' RULE_ID ( RULE_SPACE )* ( RULE_COMMA ( RULE_SPACE )* RULE_ID )* '|' )
+            // InternalRails.g:1694:28: 'do' ( RULE_SPACE )* '|' RULE_ID ( RULE_SPACE )* ( RULE_COMMA ( RULE_SPACE )* RULE_ID )* '|'
             {
             match("do"); 
 
-            // InternalRails.g:1740:33: ( RULE_SPACE )*
+            // InternalRails.g:1694:33: ( RULE_SPACE )*
             loop13:
             do {
                 int alt13=2;
@@ -1322,7 +1322,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // InternalRails.g:1740:33: RULE_SPACE
+            	    // InternalRails.g:1694:33: RULE_SPACE
             	    {
             	    mRULE_SPACE(); 
 
@@ -1336,7 +1336,7 @@ public class InternalRailsLexer extends Lexer {
 
             match('|'); 
             mRULE_ID(); 
-            // InternalRails.g:1740:57: ( RULE_SPACE )*
+            // InternalRails.g:1694:57: ( RULE_SPACE )*
             loop14:
             do {
                 int alt14=2;
@@ -1349,7 +1349,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalRails.g:1740:57: RULE_SPACE
+            	    // InternalRails.g:1694:57: RULE_SPACE
             	    {
             	    mRULE_SPACE(); 
 
@@ -1361,7 +1361,7 @@ public class InternalRailsLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalRails.g:1740:69: ( RULE_COMMA ( RULE_SPACE )* RULE_ID )*
+            // InternalRails.g:1694:69: ( RULE_COMMA ( RULE_SPACE )* RULE_ID )*
             loop16:
             do {
                 int alt16=2;
@@ -1374,10 +1374,10 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt16) {
             	case 1 :
-            	    // InternalRails.g:1740:70: RULE_COMMA ( RULE_SPACE )* RULE_ID
+            	    // InternalRails.g:1694:70: RULE_COMMA ( RULE_SPACE )* RULE_ID
             	    {
             	    mRULE_COMMA(); 
-            	    // InternalRails.g:1740:81: ( RULE_SPACE )*
+            	    // InternalRails.g:1694:81: ( RULE_SPACE )*
             	    loop15:
             	    do {
             	        int alt15=2;
@@ -1390,7 +1390,7 @@ public class InternalRailsLexer extends Lexer {
 
             	        switch (alt15) {
             	    	case 1 :
-            	    	    // InternalRails.g:1740:81: RULE_SPACE
+            	    	    // InternalRails.g:1694:81: RULE_SPACE
             	    	    {
             	    	    mRULE_SPACE(); 
 
@@ -1429,8 +1429,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_BELONGS_TO_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1742:22: ( 'belongs_to' )
-            // InternalRails.g:1742:24: 'belongs_to'
+            // InternalRails.g:1696:22: ( 'belongs_to' )
+            // InternalRails.g:1696:24: 'belongs_to'
             {
             match("belongs_to"); 
 
@@ -1450,8 +1450,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_HAS_MANY_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1744:20: ( 'has_many' )
-            // InternalRails.g:1744:22: 'has_many'
+            // InternalRails.g:1698:20: ( 'has_many' )
+            // InternalRails.g:1698:22: 'has_many'
             {
             match("has_many"); 
 
@@ -1471,8 +1471,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_HAS_ONE_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1746:19: ( 'has_one' )
-            // InternalRails.g:1746:21: 'has_one'
+            // InternalRails.g:1700:19: ( 'has_one' )
+            // InternalRails.g:1700:21: 'has_one'
             {
             match("has_one"); 
 
@@ -1492,8 +1492,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_HAS_AND_BELONGS_TO_MANY_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1748:35: ( 'has_and_belongs_to_many' )
-            // InternalRails.g:1748:37: 'has_and_belongs_to_many'
+            // InternalRails.g:1702:35: ( 'has_and_belongs_to_many' )
+            // InternalRails.g:1702:37: 'has_and_belongs_to_many'
             {
             match("has_and_belongs_to_many"); 
 
@@ -1513,8 +1513,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_SET_TABLE_NAME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1750:21: ( 'set_table_name' )
-            // InternalRails.g:1750:23: 'set_table_name'
+            // InternalRails.g:1704:21: ( 'set_table_name' )
+            // InternalRails.g:1704:23: 'set_table_name'
             {
             match("set_table_name"); 
 
@@ -1534,8 +1534,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_MODULE_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1752:18: ( 'module' )
-            // InternalRails.g:1752:20: 'module'
+            // InternalRails.g:1706:18: ( 'module' )
+            // InternalRails.g:1706:20: 'module'
             {
             match("module"); 
 
@@ -1555,8 +1555,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_CLASS_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1754:17: ( 'class ' )
-            // InternalRails.g:1754:19: 'class '
+            // InternalRails.g:1708:17: ( 'class ' )
+            // InternalRails.g:1708:19: 'class '
             {
             match("class "); 
 
@@ -1576,8 +1576,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_DEF_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1756:15: ( 'def' )
-            // InternalRails.g:1756:17: 'def'
+            // InternalRails.g:1710:15: ( 'def' )
+            // InternalRails.g:1710:17: 'def'
             {
             match("def"); 
 
@@ -1597,8 +1597,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_SYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1758:13: ( ':' RULE_ID )
-            // InternalRails.g:1758:15: ':' RULE_ID
+            // InternalRails.g:1712:13: ( ':' RULE_ID )
+            // InternalRails.g:1712:15: ':' RULE_ID
             {
             match(':'); 
             mRULE_ID(); 
@@ -1618,10 +1618,10 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1760:9: ( ( RULE_CLASS_WORD | ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '$' | '@' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )* ) )
-            // InternalRails.g:1760:11: ( RULE_CLASS_WORD | ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '$' | '@' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )* )
+            // InternalRails.g:1714:9: ( ( RULE_CLASS_WORD | ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '$' | '@' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )* ) )
+            // InternalRails.g:1714:11: ( RULE_CLASS_WORD | ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '$' | '@' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )* )
             {
-            // InternalRails.g:1760:11: ( RULE_CLASS_WORD | ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '$' | '@' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )* )
+            // InternalRails.g:1714:11: ( RULE_CLASS_WORD | ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '$' | '@' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )* )
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -1669,14 +1669,14 @@ public class InternalRailsLexer extends Lexer {
             }
             switch (alt18) {
                 case 1 :
-                    // InternalRails.g:1760:12: RULE_CLASS_WORD
+                    // InternalRails.g:1714:12: RULE_CLASS_WORD
                     {
                     mRULE_CLASS_WORD(); 
 
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:1760:28: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '$' | '@' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )*
+                    // InternalRails.g:1714:28: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '$' | '@' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )*
                     {
                     if ( input.LA(1)=='$'||(input.LA(1)>='@' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                         input.consume();
@@ -1687,7 +1687,7 @@ public class InternalRailsLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // InternalRails.g:1760:60: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )*
+                    // InternalRails.g:1714:60: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '!' | '@' | '?' )*
                     loop17:
                     do {
                         int alt17=2;
@@ -1742,10 +1742,10 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1762:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalRails.g:1762:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalRails.g:1716:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalRails.g:1716:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalRails.g:1762:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalRails.g:1716:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -1763,17 +1763,17 @@ public class InternalRailsLexer extends Lexer {
             }
             switch (alt21) {
                 case 1 :
-                    // InternalRails.g:1762:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalRails.g:1716:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalRails.g:1762:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalRails.g:1716:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop19:
                     do {
                         int alt19=4;
                         alt19 = dfa19.predict(input);
                         switch (alt19) {
                     	case 1 :
-                    	    // InternalRails.g:1762:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // InternalRails.g:1716:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1789,7 +1789,7 @@ public class InternalRailsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalRails.g:1762:66: '#' RULE_BRACKET_BLOCK
+                    	    // InternalRails.g:1716:66: '#' RULE_BRACKET_BLOCK
                     	    {
                     	    match('#'); 
                     	    mRULE_BRACKET_BLOCK(); 
@@ -1797,7 +1797,7 @@ public class InternalRailsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 3 :
-                    	    // InternalRails.g:1762:89: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalRails.g:1716:89: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1822,10 +1822,10 @@ public class InternalRailsLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:1762:109: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalRails.g:1716:109: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalRails.g:1762:114: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalRails.g:1716:114: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop20:
                     do {
                         int alt20=3;
@@ -1841,7 +1841,7 @@ public class InternalRailsLexer extends Lexer {
 
                         switch (alt20) {
                     	case 1 :
-                    	    // InternalRails.g:1762:115: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // InternalRails.g:1716:115: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1857,7 +1857,7 @@ public class InternalRailsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalRails.g:1762:160: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalRails.g:1716:160: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1900,12 +1900,12 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1764:17: ( '=begin' ( options {greedy=false; } : . )* '=end' )
-            // InternalRails.g:1764:19: '=begin' ( options {greedy=false; } : . )* '=end'
+            // InternalRails.g:1718:17: ( '=begin' ( options {greedy=false; } : . )* '=end' )
+            // InternalRails.g:1718:19: '=begin' ( options {greedy=false; } : . )* '=end'
             {
             match("=begin"); 
 
-            // InternalRails.g:1764:28: ( options {greedy=false; } : . )*
+            // InternalRails.g:1718:28: ( options {greedy=false; } : . )*
             loop22:
             do {
                 int alt22=2;
@@ -1948,7 +1948,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt22) {
             	case 1 :
-            	    // InternalRails.g:1764:56: .
+            	    // InternalRails.g:1718:56: .
             	    {
             	    matchAny(); 
 
@@ -1978,11 +1978,11 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1766:17: ( '#' ( options {greedy=false; } : . )* '\\n' )
-            // InternalRails.g:1766:19: '#' ( options {greedy=false; } : . )* '\\n'
+            // InternalRails.g:1720:17: ( '#' ( options {greedy=false; } : . )* '\\n' )
+            // InternalRails.g:1720:19: '#' ( options {greedy=false; } : . )* '\\n'
             {
             match('#'); 
-            // InternalRails.g:1766:23: ( options {greedy=false; } : . )*
+            // InternalRails.g:1720:23: ( options {greedy=false; } : . )*
             loop23:
             do {
                 int alt23=2;
@@ -1998,7 +1998,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt23) {
             	case 1 :
-            	    // InternalRails.g:1766:51: .
+            	    // InternalRails.g:1720:51: .
             	    {
             	    matchAny(); 
 
@@ -2027,10 +2027,10 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1768:10: ( ( '0' .. '9' )+ )
-            // InternalRails.g:1768:12: ( '0' .. '9' )+
+            // InternalRails.g:1722:10: ( ( '0' .. '9' )+ )
+            // InternalRails.g:1722:12: ( '0' .. '9' )+
             {
-            // InternalRails.g:1768:12: ( '0' .. '9' )+
+            // InternalRails.g:1722:12: ( '0' .. '9' )+
             int cnt24=0;
             loop24:
             do {
@@ -2044,7 +2044,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt24) {
             	case 1 :
-            	    // InternalRails.g:1768:13: '0' .. '9'
+            	    // InternalRails.g:1722:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2076,10 +2076,10 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_INT_METHOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1770:17: ( ( '0' .. '9' )+ '.' RULE_ID )
-            // InternalRails.g:1770:19: ( '0' .. '9' )+ '.' RULE_ID
+            // InternalRails.g:1724:17: ( ( '0' .. '9' )+ '.' RULE_ID )
+            // InternalRails.g:1724:19: ( '0' .. '9' )+ '.' RULE_ID
             {
-            // InternalRails.g:1770:19: ( '0' .. '9' )+
+            // InternalRails.g:1724:19: ( '0' .. '9' )+
             int cnt25=0;
             loop25:
             do {
@@ -2093,7 +2093,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt25) {
             	case 1 :
-            	    // InternalRails.g:1770:20: '0' .. '9'
+            	    // InternalRails.g:1724:20: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2127,10 +2127,10 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1772:14: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
-            // InternalRails.g:1772:16: ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+            // InternalRails.g:1726:14: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
+            // InternalRails.g:1726:16: ( '0' .. '9' )+ '.' ( '0' .. '9' )+
             {
-            // InternalRails.g:1772:16: ( '0' .. '9' )+
+            // InternalRails.g:1726:16: ( '0' .. '9' )+
             int cnt26=0;
             loop26:
             do {
@@ -2144,7 +2144,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt26) {
             	case 1 :
-            	    // InternalRails.g:1772:17: '0' .. '9'
+            	    // InternalRails.g:1726:17: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2161,7 +2161,7 @@ public class InternalRailsLexer extends Lexer {
             } while (true);
 
             match('.'); 
-            // InternalRails.g:1772:32: ( '0' .. '9' )+
+            // InternalRails.g:1726:32: ( '0' .. '9' )+
             int cnt27=0;
             loop27:
             do {
@@ -2175,7 +2175,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt27) {
             	case 1 :
-            	    // InternalRails.g:1772:33: '0' .. '9'
+            	    // InternalRails.g:1726:33: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2207,11 +2207,11 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_REGEXP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1774:13: ( '/' ( '\\\\/' | ~ ( ( '\\\\/' | RULE_LF ) ) )* '/' ( 'i' | 'o' | 'p' )? )
-            // InternalRails.g:1774:15: '/' ( '\\\\/' | ~ ( ( '\\\\/' | RULE_LF ) ) )* '/' ( 'i' | 'o' | 'p' )?
+            // InternalRails.g:1728:13: ( '/' ( '\\\\/' | ~ ( ( '\\\\/' | RULE_LF ) ) )* '/' ( 'i' | 'o' | 'p' )? )
+            // InternalRails.g:1728:15: '/' ( '\\\\/' | ~ ( ( '\\\\/' | RULE_LF ) ) )* '/' ( 'i' | 'o' | 'p' )?
             {
             match('/'); 
-            // InternalRails.g:1774:19: ( '\\\\/' | ~ ( ( '\\\\/' | RULE_LF ) ) )*
+            // InternalRails.g:1728:19: ( '\\\\/' | ~ ( ( '\\\\/' | RULE_LF ) ) )*
             loop28:
             do {
                 int alt28=3;
@@ -2254,7 +2254,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt28) {
             	case 1 :
-            	    // InternalRails.g:1774:20: '\\\\/'
+            	    // InternalRails.g:1728:20: '\\\\/'
             	    {
             	    match("\\/"); 
 
@@ -2262,7 +2262,7 @@ public class InternalRailsLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // InternalRails.g:1774:26: ~ ( ( '\\\\/' | RULE_LF ) )
+            	    // InternalRails.g:1728:26: ~ ( ( '\\\\/' | RULE_LF ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2283,7 +2283,7 @@ public class InternalRailsLexer extends Lexer {
             } while (true);
 
             match('/'); 
-            // InternalRails.g:1774:51: ( 'i' | 'o' | 'p' )?
+            // InternalRails.g:1728:51: ( 'i' | 'o' | 'p' )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -2325,8 +2325,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_LF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1776:9: ( '\\n' )
-            // InternalRails.g:1776:11: '\\n'
+            // InternalRails.g:1730:9: ( '\\n' )
+            // InternalRails.g:1730:11: '\\n'
             {
             match('\n'); 
 
@@ -2345,8 +2345,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_CR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1778:9: ( '\\r' )
-            // InternalRails.g:1778:11: '\\r'
+            // InternalRails.g:1732:9: ( '\\r' )
+            // InternalRails.g:1732:11: '\\r'
             {
             match('\r'); 
 
@@ -2365,12 +2365,12 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_REQUIRE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1780:14: ( 'require' ( RULE_SPACE )* RULE_STRING )
-            // InternalRails.g:1780:16: 'require' ( RULE_SPACE )* RULE_STRING
+            // InternalRails.g:1734:14: ( 'require' ( RULE_SPACE )* RULE_STRING )
+            // InternalRails.g:1734:16: 'require' ( RULE_SPACE )* RULE_STRING
             {
             match("require"); 
 
-            // InternalRails.g:1780:26: ( RULE_SPACE )*
+            // InternalRails.g:1734:26: ( RULE_SPACE )*
             loop30:
             do {
                 int alt30=2;
@@ -2383,7 +2383,7 @@ public class InternalRailsLexer extends Lexer {
 
                 switch (alt30) {
             	case 1 :
-            	    // InternalRails.g:1780:26: RULE_SPACE
+            	    // InternalRails.g:1734:26: RULE_SPACE
             	    {
             	    mRULE_SPACE(); 
 
@@ -2412,8 +2412,8 @@ public class InternalRailsLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRails.g:1782:16: ( . )
-            // InternalRails.g:1782:18: .
+            // InternalRails.g:1736:16: ( . )
+            // InternalRails.g:1736:18: .
             {
             matchAny(); 
 
@@ -3038,7 +3038,7 @@ public class InternalRailsLexer extends Lexer {
             this.transition = DFA19_transition;
         }
         public String getDescription() {
-            return "()* loopback of 1762:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )*";
+            return "()* loopback of 1716:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | '#' RULE_BRACKET_BLOCK | ~ ( ( '\\\\' | '\"' ) ) )*";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;

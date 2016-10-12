@@ -528,7 +528,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClassElement"
-    // InternalRails.g:175:1: ruleClassElement returns [EObject current=null] : ( ( ( RULE_DEF_WORD | RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD | RULE_SET_TABLE_NAME )=> (this_Method_0= ruleMethod | ( ( RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD )=>this_Relationship_1= ruleRelationship ) | this_TableName_2= ruleTableName ) ) | this_OperationsChain_3= ruleOperationsChain ) ;
+    // InternalRails.g:175:1: ruleClassElement returns [EObject current=null] : ( ( ( RULE_DEF_WORD | RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD | RULE_SET_TABLE_NAME )=> (this_Method_0= ruleMethod | ( ( RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD )=>this_Relationship_1= ruleRelationship ) | this_TableName_2= ruleTableName ) ) | ruleOperationsChain ) ;
     public final EObject ruleClassElement() throws RecognitionException {
         EObject current = null;
 
@@ -538,16 +538,14 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
         EObject this_TableName_2 = null;
 
-        EObject this_OperationsChain_3 = null;
-
 
          enterRule(); 
             
         try {
-            // InternalRails.g:178:28: ( ( ( ( RULE_DEF_WORD | RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD | RULE_SET_TABLE_NAME )=> (this_Method_0= ruleMethod | ( ( RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD )=>this_Relationship_1= ruleRelationship ) | this_TableName_2= ruleTableName ) ) | this_OperationsChain_3= ruleOperationsChain ) )
-            // InternalRails.g:179:1: ( ( ( RULE_DEF_WORD | RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD | RULE_SET_TABLE_NAME )=> (this_Method_0= ruleMethod | ( ( RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD )=>this_Relationship_1= ruleRelationship ) | this_TableName_2= ruleTableName ) ) | this_OperationsChain_3= ruleOperationsChain )
+            // InternalRails.g:178:28: ( ( ( ( RULE_DEF_WORD | RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD | RULE_SET_TABLE_NAME )=> (this_Method_0= ruleMethod | ( ( RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD )=>this_Relationship_1= ruleRelationship ) | this_TableName_2= ruleTableName ) ) | ruleOperationsChain ) )
+            // InternalRails.g:179:1: ( ( ( RULE_DEF_WORD | RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD | RULE_SET_TABLE_NAME )=> (this_Method_0= ruleMethod | ( ( RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD )=>this_Relationship_1= ruleRelationship ) | this_TableName_2= ruleTableName ) ) | ruleOperationsChain )
             {
-            // InternalRails.g:179:1: ( ( ( RULE_DEF_WORD | RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD | RULE_SET_TABLE_NAME )=> (this_Method_0= ruleMethod | ( ( RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD )=>this_Relationship_1= ruleRelationship ) | this_TableName_2= ruleTableName ) ) | this_OperationsChain_3= ruleOperationsChain )
+            // InternalRails.g:179:1: ( ( ( RULE_DEF_WORD | RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD | RULE_SET_TABLE_NAME )=> (this_Method_0= ruleMethod | ( ( RULE_HAS_MANY_WORD | RULE_HAS_ONE_WORD | RULE_HAS_AND_BELONGS_TO_MANY_WORD | RULE_BELONGS_TO_WORD )=>this_Relationship_1= ruleRelationship ) | this_TableName_2= ruleTableName ) ) | ruleOperationsChain )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -698,7 +696,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:210:5: this_OperationsChain_3= ruleOperationsChain
+                    // InternalRails.g:210:5: ruleOperationsChain
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -706,13 +704,12 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                           
                     }
                     pushFollow(FOLLOW_2);
-                    this_OperationsChain_3=ruleOperationsChain();
+                    ruleOperationsChain();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
-                              current = this_OperationsChain_3; 
                               afterParserOrEnumRuleCall();
                           
                     }
@@ -742,7 +739,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTableName"
-    // InternalRails.g:226:1: entryRuleTableName returns [EObject current=null] : iv_ruleTableName= ruleTableName EOF ;
+    // InternalRails.g:225:1: entryRuleTableName returns [EObject current=null] : iv_ruleTableName= ruleTableName EOF ;
     public final EObject entryRuleTableName() throws RecognitionException {
         EObject current = null;
 
@@ -750,8 +747,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:227:2: (iv_ruleTableName= ruleTableName EOF )
-            // InternalRails.g:228:2: iv_ruleTableName= ruleTableName EOF
+            // InternalRails.g:226:2: (iv_ruleTableName= ruleTableName EOF )
+            // InternalRails.g:227:2: iv_ruleTableName= ruleTableName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTableNameRule()); 
@@ -782,7 +779,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTableName"
-    // InternalRails.g:235:1: ruleTableName returns [EObject current=null] : (this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) ) ) ;
+    // InternalRails.g:234:1: ruleTableName returns [EObject current=null] : (this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleTableName() throws RecognitionException {
         EObject current = null;
 
@@ -792,11 +789,11 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:238:28: ( (this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) ) ) )
-            // InternalRails.g:239:1: (this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) ) )
+            // InternalRails.g:237:28: ( (this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) ) ) )
+            // InternalRails.g:238:1: (this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) ) )
             {
-            // InternalRails.g:239:1: (this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) ) )
-            // InternalRails.g:239:2: this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) )
+            // InternalRails.g:238:1: (this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) ) )
+            // InternalRails.g:238:2: this_SET_TABLE_NAME_0= RULE_SET_TABLE_NAME ( (lv_name_1_0= RULE_STRING ) )
             {
             this_SET_TABLE_NAME_0=(Token)match(input,RULE_SET_TABLE_NAME,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -804,11 +801,11 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                   newLeafNode(this_SET_TABLE_NAME_0, grammarAccess.getTableNameAccess().getSET_TABLE_NAMETerminalRuleCall_0()); 
                   
             }
-            // InternalRails.g:243:1: ( (lv_name_1_0= RULE_STRING ) )
-            // InternalRails.g:244:1: (lv_name_1_0= RULE_STRING )
+            // InternalRails.g:242:1: ( (lv_name_1_0= RULE_STRING ) )
+            // InternalRails.g:243:1: (lv_name_1_0= RULE_STRING )
             {
-            // InternalRails.g:244:1: (lv_name_1_0= RULE_STRING )
-            // InternalRails.g:245:3: lv_name_1_0= RULE_STRING
+            // InternalRails.g:243:1: (lv_name_1_0= RULE_STRING )
+            // InternalRails.g:244:3: lv_name_1_0= RULE_STRING
             {
             lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -857,7 +854,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNamespacedModuleName"
-    // InternalRails.g:271:1: entryRuleNamespacedModuleName returns [String current=null] : iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF ;
+    // InternalRails.g:270:1: entryRuleNamespacedModuleName returns [String current=null] : iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF ;
     public final String entryRuleNamespacedModuleName() throws RecognitionException {
         String current = null;
 
@@ -865,8 +862,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:272:2: (iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF )
-            // InternalRails.g:273:2: iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF
+            // InternalRails.g:271:2: (iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF )
+            // InternalRails.g:272:2: iv_ruleNamespacedModuleName= ruleNamespacedModuleName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNamespacedModuleNameRule()); 
@@ -897,7 +894,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNamespacedModuleName"
-    // InternalRails.g:280:1: ruleNamespacedModuleName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID ) ;
+    // InternalRails.g:279:1: ruleNamespacedModuleName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleNamespacedModuleName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -908,13 +905,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:283:28: ( ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID ) )
-            // InternalRails.g:284:1: ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID )
+            // InternalRails.g:282:28: ( ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID ) )
+            // InternalRails.g:283:1: ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID )
             {
-            // InternalRails.g:284:1: ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID )
-            // InternalRails.g:284:2: (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID
+            // InternalRails.g:283:1: ( (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID )
+            // InternalRails.g:283:2: (this_ID_0= RULE_ID kw= '::' )* this_ID_2= RULE_ID
             {
-            // InternalRails.g:284:2: (this_ID_0= RULE_ID kw= '::' )*
+            // InternalRails.g:283:2: (this_ID_0= RULE_ID kw= '::' )*
             loop9:
             do {
                 int alt9=2;
@@ -933,7 +930,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalRails.g:284:7: this_ID_0= RULE_ID kw= '::'
+            	    // InternalRails.g:283:7: this_ID_0= RULE_ID kw= '::'
             	    {
             	    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_8); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -996,7 +993,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMethodChainCall"
-    // InternalRails.g:312:1: entryRuleMethodChainCall returns [String current=null] : iv_ruleMethodChainCall= ruleMethodChainCall EOF ;
+    // InternalRails.g:311:1: entryRuleMethodChainCall returns [String current=null] : iv_ruleMethodChainCall= ruleMethodChainCall EOF ;
     public final String entryRuleMethodChainCall() throws RecognitionException {
         String current = null;
 
@@ -1004,8 +1001,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:313:2: (iv_ruleMethodChainCall= ruleMethodChainCall EOF )
-            // InternalRails.g:314:2: iv_ruleMethodChainCall= ruleMethodChainCall EOF
+            // InternalRails.g:312:2: (iv_ruleMethodChainCall= ruleMethodChainCall EOF )
+            // InternalRails.g:313:2: iv_ruleMethodChainCall= ruleMethodChainCall EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMethodChainCallRule()); 
@@ -1036,7 +1033,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethodChainCall"
-    // InternalRails.g:321:1: ruleMethodChainCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )? ) ;
+    // InternalRails.g:320:1: ruleMethodChainCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )? ) ;
     public final AntlrDatatypeRuleToken ruleMethodChainCall() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1064,13 +1061,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:324:28: ( ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )? ) )
-            // InternalRails.g:325:1: ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )? )
+            // InternalRails.g:323:28: ( ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )? ) )
+            // InternalRails.g:324:1: ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )? )
             {
-            // InternalRails.g:325:1: ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )? )
-            // InternalRails.g:325:2: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )?
+            // InternalRails.g:324:1: ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )? )
+            // InternalRails.g:324:2: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName ) (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )* (this_SPACE_10= RULE_SPACE )* (this_MethodCallParameters_11= ruleMethodCallParameters )? ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )* (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )? ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )* (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )? ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )* ( ( RULE_LF )=>this_LF_17= RULE_LF )?
             {
-            // InternalRails.g:325:2: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName )
+            // InternalRails.g:324:2: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_INT_2= RULE_INT | this_INT_METHOD_3= RULE_INT_METHOD | this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK | this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK | this_NamespacedModuleName_6= ruleNamespacedModuleName )
             int alt10=7;
             switch ( input.LA(1) ) {
             case RULE_SYMBOL:
@@ -1118,7 +1115,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             switch (alt10) {
                 case 1 :
-                    // InternalRails.g:325:7: this_SYMBOL_0= RULE_SYMBOL
+                    // InternalRails.g:324:7: this_SYMBOL_0= RULE_SYMBOL
                     {
                     this_SYMBOL_0=(Token)match(input,RULE_SYMBOL,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1135,7 +1132,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:333:10: this_STRING_1= RULE_STRING
+                    // InternalRails.g:332:10: this_STRING_1= RULE_STRING
                     {
                     this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1152,7 +1149,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:341:10: this_INT_2= RULE_INT
+                    // InternalRails.g:340:10: this_INT_2= RULE_INT
                     {
                     this_INT_2=(Token)match(input,RULE_INT,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1169,7 +1166,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:349:10: this_INT_METHOD_3= RULE_INT_METHOD
+                    // InternalRails.g:348:10: this_INT_METHOD_3= RULE_INT_METHOD
                     {
                     this_INT_METHOD_3=(Token)match(input,RULE_INT_METHOD,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1186,7 +1183,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:357:10: this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK
+                    // InternalRails.g:356:10: this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK
                     {
                     this_PARENTHESIS_BLOCK_4=(Token)match(input,RULE_PARENTHESIS_BLOCK,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1203,7 +1200,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:365:10: this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK
+                    // InternalRails.g:364:10: this_ARRAY_BLOCK_5= RULE_ARRAY_BLOCK
                     {
                     this_ARRAY_BLOCK_5=(Token)match(input,RULE_ARRAY_BLOCK,FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1220,7 +1217,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:374:5: this_NamespacedModuleName_6= ruleNamespacedModuleName
+                    // InternalRails.g:373:5: this_NamespacedModuleName_6= ruleNamespacedModuleName
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -1248,7 +1245,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:384:2: (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )*
+            // InternalRails.g:383:2: (kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )? )*
             loop12:
             do {
                 int alt12=2;
@@ -1261,7 +1258,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt12) {
             	case 1 :
-            	    // InternalRails.g:385:2: kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )?
+            	    // InternalRails.g:384:2: kw= '.' this_ID_8= RULE_ID (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )?
             	    {
             	    kw=(Token)match(input,45,FOLLOW_9); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -1281,7 +1278,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             	          newLeafNode(this_ID_8, grammarAccess.getMethodChainCallAccess().getIDTerminalRuleCall_1_1()); 
             	          
             	    }
-            	    // InternalRails.g:397:1: (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )?
+            	    // InternalRails.g:396:1: (this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK )?
             	    int alt11=2;
             	    int LA11_0 = input.LA(1);
 
@@ -1290,7 +1287,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt11) {
             	        case 1 :
-            	            // InternalRails.g:397:6: this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK
+            	            // InternalRails.g:396:6: this_PARENTHESIS_BLOCK_9= RULE_PARENTHESIS_BLOCK
             	            {
             	            this_PARENTHESIS_BLOCK_9=(Token)match(input,RULE_PARENTHESIS_BLOCK,FOLLOW_10); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -1318,7 +1315,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:404:5: (this_SPACE_10= RULE_SPACE )*
+            // InternalRails.g:403:5: (this_SPACE_10= RULE_SPACE )*
             loop13:
             do {
                 int alt13=2;
@@ -1331,7 +1328,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt13) {
             	case 1 :
-            	    // InternalRails.g:404:10: this_SPACE_10= RULE_SPACE
+            	    // InternalRails.g:403:10: this_SPACE_10= RULE_SPACE
             	    {
             	    this_SPACE_10=(Token)match(input,RULE_SPACE,FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -1353,12 +1350,12 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:411:3: (this_MethodCallParameters_11= ruleMethodCallParameters )?
+            // InternalRails.g:410:3: (this_MethodCallParameters_11= ruleMethodCallParameters )?
             int alt14=2;
             alt14 = dfa14.predict(input);
             switch (alt14) {
                 case 1 :
-                    // InternalRails.g:412:5: this_MethodCallParameters_11= ruleMethodCallParameters
+                    // InternalRails.g:411:5: this_MethodCallParameters_11= ruleMethodCallParameters
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -1386,7 +1383,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:422:3: ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )*
+            // InternalRails.g:421:3: ( ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE )*
             loop15:
             do {
                 int alt15=2;
@@ -1405,7 +1402,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt15) {
             	case 1 :
-            	    // InternalRails.g:422:4: ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE
+            	    // InternalRails.g:421:4: ( RULE_SPACE )=>this_SPACE_12= RULE_SPACE
             	    {
             	    this_SPACE_12=(Token)match(input,RULE_SPACE,FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -1427,7 +1424,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:429:3: (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )?
+            // InternalRails.g:428:3: (this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1436,7 +1433,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt16) {
                 case 1 :
-                    // InternalRails.g:429:8: this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK
+                    // InternalRails.g:428:8: this_BRACKET_BLOCK_13= RULE_BRACKET_BLOCK
                     {
                     this_BRACKET_BLOCK_13=(Token)match(input,RULE_BRACKET_BLOCK,FOLLOW_13); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1455,7 +1452,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:436:3: ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )*
+            // InternalRails.g:435:3: ( ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE )*
             loop17:
             do {
                 int alt17=2;
@@ -1474,7 +1471,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt17) {
             	case 1 :
-            	    // InternalRails.g:436:4: ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE
+            	    // InternalRails.g:435:4: ( RULE_SPACE )=>this_SPACE_14= RULE_SPACE
             	    {
             	    this_SPACE_14=(Token)match(input,RULE_SPACE,FOLLOW_13); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -1496,7 +1493,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:443:3: (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )?
+            // InternalRails.g:442:3: (this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -1505,7 +1502,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt18) {
                 case 1 :
-                    // InternalRails.g:443:8: this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS
+                    // InternalRails.g:442:8: this_DO_BLOCK_PARAMETERS_15= RULE_DO_BLOCK_PARAMETERS
                     {
                     this_DO_BLOCK_PARAMETERS_15=(Token)match(input,RULE_DO_BLOCK_PARAMETERS,FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1524,7 +1521,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:450:3: ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )*
+            // InternalRails.g:449:3: ( ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE )*
             loop19:
             do {
                 int alt19=2;
@@ -1543,7 +1540,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt19) {
             	case 1 :
-            	    // InternalRails.g:450:4: ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE
+            	    // InternalRails.g:449:4: ( RULE_SPACE )=>this_SPACE_16= RULE_SPACE
             	    {
             	    this_SPACE_16=(Token)match(input,RULE_SPACE,FOLLOW_14); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -1565,7 +1562,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:457:3: ( ( RULE_LF )=>this_LF_17= RULE_LF )?
+            // InternalRails.g:456:3: ( ( RULE_LF )=>this_LF_17= RULE_LF )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -1578,7 +1575,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt20) {
                 case 1 :
-                    // InternalRails.g:457:4: ( RULE_LF )=>this_LF_17= RULE_LF
+                    // InternalRails.g:456:4: ( RULE_LF )=>this_LF_17= RULE_LF
                     {
                     this_LF_17=(Token)match(input,RULE_LF,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1620,7 +1617,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMethodCallParameters"
-    // InternalRails.g:472:1: entryRuleMethodCallParameters returns [String current=null] : iv_ruleMethodCallParameters= ruleMethodCallParameters EOF ;
+    // InternalRails.g:471:1: entryRuleMethodCallParameters returns [String current=null] : iv_ruleMethodCallParameters= ruleMethodCallParameters EOF ;
     public final String entryRuleMethodCallParameters() throws RecognitionException {
         String current = null;
 
@@ -1628,8 +1625,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:473:2: (iv_ruleMethodCallParameters= ruleMethodCallParameters EOF )
-            // InternalRails.g:474:2: iv_ruleMethodCallParameters= ruleMethodCallParameters EOF
+            // InternalRails.g:472:2: (iv_ruleMethodCallParameters= ruleMethodCallParameters EOF )
+            // InternalRails.g:473:2: iv_ruleMethodCallParameters= ruleMethodCallParameters EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMethodCallParametersRule()); 
@@ -1660,7 +1657,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethodCallParameters"
-    // InternalRails.g:481:1: ruleMethodCallParameters returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK | this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas ) ;
+    // InternalRails.g:480:1: ruleMethodCallParameters returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK | this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas ) ;
     public final AntlrDatatypeRuleToken ruleMethodCallParameters() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1671,10 +1668,10 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:484:28: ( (this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK | this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas ) )
-            // InternalRails.g:485:1: (this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK | this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas )
+            // InternalRails.g:483:28: ( (this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK | this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas ) )
+            // InternalRails.g:484:1: (this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK | this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas )
             {
-            // InternalRails.g:485:1: (this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK | this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas )
+            // InternalRails.g:484:1: (this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK | this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -1693,7 +1690,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt21) {
                 case 1 :
-                    // InternalRails.g:485:6: this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK
+                    // InternalRails.g:484:6: this_PARENTHESIS_BLOCK_0= RULE_PARENTHESIS_BLOCK
                     {
                     this_PARENTHESIS_BLOCK_0=(Token)match(input,RULE_PARENTHESIS_BLOCK,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1710,7 +1707,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:494:5: this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas
+                    // InternalRails.g:493:5: this_ExpressionsSeparatedByCommas_1= ruleExpressionsSeparatedByCommas
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -1758,7 +1755,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpressionsSeparatedByCommas"
-    // InternalRails.g:512:1: entryRuleExpressionsSeparatedByCommas returns [String current=null] : iv_ruleExpressionsSeparatedByCommas= ruleExpressionsSeparatedByCommas EOF ;
+    // InternalRails.g:511:1: entryRuleExpressionsSeparatedByCommas returns [String current=null] : iv_ruleExpressionsSeparatedByCommas= ruleExpressionsSeparatedByCommas EOF ;
     public final String entryRuleExpressionsSeparatedByCommas() throws RecognitionException {
         String current = null;
 
@@ -1766,8 +1763,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:513:2: (iv_ruleExpressionsSeparatedByCommas= ruleExpressionsSeparatedByCommas EOF )
-            // InternalRails.g:514:2: iv_ruleExpressionsSeparatedByCommas= ruleExpressionsSeparatedByCommas EOF
+            // InternalRails.g:512:2: (iv_ruleExpressionsSeparatedByCommas= ruleExpressionsSeparatedByCommas EOF )
+            // InternalRails.g:513:2: iv_ruleExpressionsSeparatedByCommas= ruleExpressionsSeparatedByCommas EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpressionsSeparatedByCommasRule()); 
@@ -1798,7 +1795,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpressionsSeparatedByCommas"
-    // InternalRails.g:521:1: ruleExpressionsSeparatedByCommas returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )* ) ;
+    // InternalRails.g:520:1: ruleExpressionsSeparatedByCommas returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )* ) ;
     public final AntlrDatatypeRuleToken ruleExpressionsSeparatedByCommas() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1815,11 +1812,11 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:524:28: ( (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )* ) )
-            // InternalRails.g:525:1: (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )* )
+            // InternalRails.g:523:28: ( (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )* ) )
+            // InternalRails.g:524:1: (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )* )
             {
-            // InternalRails.g:525:1: (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )* )
-            // InternalRails.g:526:5: this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )*
+            // InternalRails.g:524:1: (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )* )
+            // InternalRails.g:525:5: this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )*
             {
             if ( state.backtracking==0 ) {
                
@@ -1841,7 +1838,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalRails.g:536:1: ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )*
+            // InternalRails.g:535:1: ( (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression )*
             loop26:
             do {
                 int alt26=2;
@@ -1857,9 +1854,9 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt26) {
             	case 1 :
-            	    // InternalRails.g:536:2: (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression
+            	    // InternalRails.g:535:2: (this_SPACE_1= RULE_SPACE )* this_COMMA_2= RULE_COMMA ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )? (this_SPACE_5= RULE_SPACE )* this_Expression_6= ruleExpression
             	    {
-            	    // InternalRails.g:536:2: (this_SPACE_1= RULE_SPACE )*
+            	    // InternalRails.g:535:2: (this_SPACE_1= RULE_SPACE )*
             	    loop22:
             	    do {
             	        int alt22=2;
@@ -1872,7 +1869,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             	        switch (alt22) {
             	    	case 1 :
-            	    	    // InternalRails.g:536:7: this_SPACE_1= RULE_SPACE
+            	    	    // InternalRails.g:535:7: this_SPACE_1= RULE_SPACE
             	    	    {
             	    	    this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_16); if (state.failed) return current;
             	    	    if ( state.backtracking==0 ) {
@@ -1905,14 +1902,14 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             	          newLeafNode(this_COMMA_2, grammarAccess.getExpressionsSeparatedByCommasAccess().getCOMMATerminalRuleCall_1_1()); 
             	          
             	    }
-            	    // InternalRails.g:550:1: ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )?
+            	    // InternalRails.g:549:1: ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )?
             	    int alt24=2;
             	    alt24 = dfa24.predict(input);
             	    switch (alt24) {
             	        case 1 :
-            	            // InternalRails.g:550:2: (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF
+            	            // InternalRails.g:549:2: (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF
             	            {
-            	            // InternalRails.g:550:2: (this_SPACE_3= RULE_SPACE )*
+            	            // InternalRails.g:549:2: (this_SPACE_3= RULE_SPACE )*
             	            loop23:
             	            do {
             	                int alt23=2;
@@ -1925,7 +1922,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             	                switch (alt23) {
             	            	case 1 :
-            	            	    // InternalRails.g:550:7: this_SPACE_3= RULE_SPACE
+            	            	    // InternalRails.g:549:7: this_SPACE_3= RULE_SPACE
             	            	    {
             	            	    this_SPACE_3=(Token)match(input,RULE_SPACE,FOLLOW_18); if (state.failed) return current;
             	            	    if ( state.backtracking==0 ) {
@@ -1964,7 +1961,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalRails.g:564:3: (this_SPACE_5= RULE_SPACE )*
+            	    // InternalRails.g:563:3: (this_SPACE_5= RULE_SPACE )*
             	    loop25:
             	    do {
             	        int alt25=2;
@@ -1977,7 +1974,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             	        switch (alt25) {
             	    	case 1 :
-            	    	    // InternalRails.g:564:8: this_SPACE_5= RULE_SPACE
+            	    	    // InternalRails.g:563:8: this_SPACE_5= RULE_SPACE
             	    	    {
             	    	    this_SPACE_5=(Token)match(input,RULE_SPACE,FOLLOW_17); if (state.failed) return current;
             	    	    if ( state.backtracking==0 ) {
@@ -2051,7 +2048,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpressionWithOutBracket"
-    // InternalRails.g:590:1: entryRuleExpressionWithOutBracket returns [String current=null] : iv_ruleExpressionWithOutBracket= ruleExpressionWithOutBracket EOF ;
+    // InternalRails.g:589:1: entryRuleExpressionWithOutBracket returns [String current=null] : iv_ruleExpressionWithOutBracket= ruleExpressionWithOutBracket EOF ;
     public final String entryRuleExpressionWithOutBracket() throws RecognitionException {
         String current = null;
 
@@ -2059,8 +2056,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:591:2: (iv_ruleExpressionWithOutBracket= ruleExpressionWithOutBracket EOF )
-            // InternalRails.g:592:2: iv_ruleExpressionWithOutBracket= ruleExpressionWithOutBracket EOF
+            // InternalRails.g:590:2: (iv_ruleExpressionWithOutBracket= ruleExpressionWithOutBracket EOF )
+            // InternalRails.g:591:2: iv_ruleExpressionWithOutBracket= ruleExpressionWithOutBracket EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpressionWithOutBracketRule()); 
@@ -2091,7 +2088,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpressionWithOutBracket"
-    // InternalRails.g:599:1: ruleExpressionWithOutBracket returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue ) ;
+    // InternalRails.g:598:1: ruleExpressionWithOutBracket returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue ) ;
     public final AntlrDatatypeRuleToken ruleExpressionWithOutBracket() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2110,15 +2107,15 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:602:28: ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue ) )
-            // InternalRails.g:603:1: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue )
+            // InternalRails.g:601:28: ( (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue ) )
+            // InternalRails.g:602:1: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue )
             {
-            // InternalRails.g:603:1: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue )
+            // InternalRails.g:602:1: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue )
             int alt27=9;
             alt27 = dfa27.predict(input);
             switch (alt27) {
                 case 1 :
-                    // InternalRails.g:603:6: this_SYMBOL_0= RULE_SYMBOL
+                    // InternalRails.g:602:6: this_SYMBOL_0= RULE_SYMBOL
                     {
                     this_SYMBOL_0=(Token)match(input,RULE_SYMBOL,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2135,7 +2132,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:611:10: this_STRING_1= RULE_STRING
+                    // InternalRails.g:610:10: this_STRING_1= RULE_STRING
                     {
                     this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2152,7 +2149,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:619:10: this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK
+                    // InternalRails.g:618:10: this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK
                     {
                     this_ARRAY_BLOCK_2=(Token)match(input,RULE_ARRAY_BLOCK,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2169,7 +2166,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:627:10: this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK
+                    // InternalRails.g:626:10: this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK
                     {
                     this_PARENTHESIS_BLOCK_3=(Token)match(input,RULE_PARENTHESIS_BLOCK,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2186,7 +2183,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:635:10: this_DECIMAL_4= RULE_DECIMAL
+                    // InternalRails.g:634:10: this_DECIMAL_4= RULE_DECIMAL
                     {
                     this_DECIMAL_4=(Token)match(input,RULE_DECIMAL,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2203,7 +2200,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:643:10: this_INT_5= RULE_INT
+                    // InternalRails.g:642:10: this_INT_5= RULE_INT
                     {
                     this_INT_5=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2220,7 +2217,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:651:10: this_REGEXP_6= RULE_REGEXP
+                    // InternalRails.g:650:10: this_REGEXP_6= RULE_REGEXP
                     {
                     this_REGEXP_6=(Token)match(input,RULE_REGEXP,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2237,7 +2234,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalRails.g:660:5: this_MethodChainCall_7= ruleMethodChainCall
+                    // InternalRails.g:659:5: this_MethodChainCall_7= ruleMethodChainCall
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -2263,7 +2260,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalRails.g:672:5: this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue
+                    // InternalRails.g:671:5: this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -2311,7 +2308,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpression"
-    // InternalRails.g:690:1: entryRuleExpression returns [String current=null] : iv_ruleExpression= ruleExpression EOF ;
+    // InternalRails.g:689:1: entryRuleExpression returns [String current=null] : iv_ruleExpression= ruleExpression EOF ;
     public final String entryRuleExpression() throws RecognitionException {
         String current = null;
 
@@ -2319,8 +2316,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:691:2: (iv_ruleExpression= ruleExpression EOF )
-            // InternalRails.g:692:2: iv_ruleExpression= ruleExpression EOF
+            // InternalRails.g:690:2: (iv_ruleExpression= ruleExpression EOF )
+            // InternalRails.g:691:2: iv_ruleExpression= ruleExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpressionRule()); 
@@ -2351,7 +2348,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpression"
-    // InternalRails.g:699:1: ruleExpression returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket | this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK ) ;
+    // InternalRails.g:698:1: ruleExpression returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket | this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK ) ;
     public final AntlrDatatypeRuleToken ruleExpression() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2362,10 +2359,10 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:702:28: ( (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket | this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK ) )
-            // InternalRails.g:703:1: (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket | this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK )
+            // InternalRails.g:701:28: ( (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket | this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK ) )
+            // InternalRails.g:702:1: (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket | this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK )
             {
-            // InternalRails.g:703:1: (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket | this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK )
+            // InternalRails.g:702:1: (this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket | this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK )
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -2384,7 +2381,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt28) {
                 case 1 :
-                    // InternalRails.g:704:5: this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket
+                    // InternalRails.g:703:5: this_ExpressionWithOutBracket_0= ruleExpressionWithOutBracket
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -2410,7 +2407,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:715:10: this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK
+                    // InternalRails.g:714:10: this_BRACKET_BLOCK_1= RULE_BRACKET_BLOCK
                     {
                     this_BRACKET_BLOCK_1=(Token)match(input,RULE_BRACKET_BLOCK,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2449,7 +2446,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRelationship"
-    // InternalRails.g:730:1: entryRuleRelationship returns [EObject current=null] : iv_ruleRelationship= ruleRelationship EOF ;
+    // InternalRails.g:729:1: entryRuleRelationship returns [EObject current=null] : iv_ruleRelationship= ruleRelationship EOF ;
     public final EObject entryRuleRelationship() throws RecognitionException {
         EObject current = null;
 
@@ -2457,8 +2454,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:731:2: (iv_ruleRelationship= ruleRelationship EOF )
-            // InternalRails.g:732:2: iv_ruleRelationship= ruleRelationship EOF
+            // InternalRails.g:730:2: (iv_ruleRelationship= ruleRelationship EOF )
+            // InternalRails.g:731:2: iv_ruleRelationship= ruleRelationship EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRelationshipRule()); 
@@ -2489,7 +2486,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRelationship"
-    // InternalRails.g:739:1: ruleRelationship returns [EObject current=null] : ( ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) ;
+    // InternalRails.g:738:1: ruleRelationship returns [EObject current=null] : ( ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) ;
     public final EObject ruleRelationship() throws RecognitionException {
         EObject current = null;
 
@@ -2507,19 +2504,19 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:742:28: ( ( ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) )
-            // InternalRails.g:743:1: ( ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
+            // InternalRails.g:741:28: ( ( ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* ) )
+            // InternalRails.g:742:1: ( ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
             {
-            // InternalRails.g:743:1: ( ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
-            // InternalRails.g:743:2: ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )*
+            // InternalRails.g:742:1: ( ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )* )
+            // InternalRails.g:742:2: ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) ) (this_SPACE_1= RULE_SPACE )* ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) ) (this_SPACE_3= RULE_SPACE )* ( (lv_options_4_0= ruleHashKeyValue ) )*
             {
-            // InternalRails.g:743:2: ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) )
-            // InternalRails.g:744:1: ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) )
+            // InternalRails.g:742:2: ( ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) ) )
+            // InternalRails.g:743:1: ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) )
             {
-            // InternalRails.g:744:1: ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) )
-            // InternalRails.g:745:1: (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD )
+            // InternalRails.g:743:1: ( (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD ) )
+            // InternalRails.g:744:1: (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD )
             {
-            // InternalRails.g:745:1: (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD )
+            // InternalRails.g:744:1: (lv_relationType_0_1= RULE_HAS_MANY_WORD | lv_relationType_0_2= RULE_HAS_ONE_WORD | lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD | lv_relationType_0_4= RULE_BELONGS_TO_WORD )
             int alt29=4;
             switch ( input.LA(1) ) {
             case RULE_HAS_MANY_WORD:
@@ -2552,7 +2549,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             switch (alt29) {
                 case 1 :
-                    // InternalRails.g:746:3: lv_relationType_0_1= RULE_HAS_MANY_WORD
+                    // InternalRails.g:745:3: lv_relationType_0_1= RULE_HAS_MANY_WORD
                     {
                     lv_relationType_0_1=(Token)match(input,RULE_HAS_MANY_WORD,FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2576,7 +2573,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:761:8: lv_relationType_0_2= RULE_HAS_ONE_WORD
+                    // InternalRails.g:760:8: lv_relationType_0_2= RULE_HAS_ONE_WORD
                     {
                     lv_relationType_0_2=(Token)match(input,RULE_HAS_ONE_WORD,FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2600,7 +2597,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:776:8: lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD
+                    // InternalRails.g:775:8: lv_relationType_0_3= RULE_HAS_AND_BELONGS_TO_MANY_WORD
                     {
                     lv_relationType_0_3=(Token)match(input,RULE_HAS_AND_BELONGS_TO_MANY_WORD,FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2624,7 +2621,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:791:8: lv_relationType_0_4= RULE_BELONGS_TO_WORD
+                    // InternalRails.g:790:8: lv_relationType_0_4= RULE_BELONGS_TO_WORD
                     {
                     lv_relationType_0_4=(Token)match(input,RULE_BELONGS_TO_WORD,FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2656,7 +2653,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:809:2: (this_SPACE_1= RULE_SPACE )*
+            // InternalRails.g:808:2: (this_SPACE_1= RULE_SPACE )*
             loop30:
             do {
                 int alt30=2;
@@ -2669,7 +2666,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt30) {
             	case 1 :
-            	    // InternalRails.g:809:3: this_SPACE_1= RULE_SPACE
+            	    // InternalRails.g:808:3: this_SPACE_1= RULE_SPACE
             	    {
             	    this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_19); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -2686,13 +2683,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:813:3: ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) )
-            // InternalRails.g:814:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
+            // InternalRails.g:812:3: ( ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) ) )
+            // InternalRails.g:813:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
             {
-            // InternalRails.g:814:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
-            // InternalRails.g:815:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
+            // InternalRails.g:813:1: ( (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING ) )
+            // InternalRails.g:814:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
             {
-            // InternalRails.g:815:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
+            // InternalRails.g:814:1: (lv_name_2_1= RULE_SYMBOL | lv_name_2_2= RULE_STRING )
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -2711,7 +2708,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalRails.g:816:3: lv_name_2_1= RULE_SYMBOL
+                    // InternalRails.g:815:3: lv_name_2_1= RULE_SYMBOL
                     {
                     lv_name_2_1=(Token)match(input,RULE_SYMBOL,FOLLOW_15); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2735,7 +2732,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:831:8: lv_name_2_2= RULE_STRING
+                    // InternalRails.g:830:8: lv_name_2_2= RULE_STRING
                     {
                     lv_name_2_2=(Token)match(input,RULE_STRING,FOLLOW_15); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2767,7 +2764,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:849:2: (this_SPACE_3= RULE_SPACE )*
+            // InternalRails.g:848:2: (this_SPACE_3= RULE_SPACE )*
             loop32:
             do {
                 int alt32=2;
@@ -2780,7 +2777,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt32) {
             	case 1 :
-            	    // InternalRails.g:849:3: this_SPACE_3= RULE_SPACE
+            	    // InternalRails.g:848:3: this_SPACE_3= RULE_SPACE
             	    {
             	    this_SPACE_3=(Token)match(input,RULE_SPACE,FOLLOW_15); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -2797,7 +2794,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:853:3: ( (lv_options_4_0= ruleHashKeyValue ) )*
+            // InternalRails.g:852:3: ( (lv_options_4_0= ruleHashKeyValue ) )*
             loop33:
             do {
                 int alt33=2;
@@ -2810,10 +2807,10 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt33) {
             	case 1 :
-            	    // InternalRails.g:854:1: (lv_options_4_0= ruleHashKeyValue )
+            	    // InternalRails.g:853:1: (lv_options_4_0= ruleHashKeyValue )
             	    {
-            	    // InternalRails.g:854:1: (lv_options_4_0= ruleHashKeyValue )
-            	    // InternalRails.g:855:3: lv_options_4_0= ruleHashKeyValue
+            	    // InternalRails.g:853:1: (lv_options_4_0= ruleHashKeyValue )
+            	    // InternalRails.g:854:3: lv_options_4_0= ruleHashKeyValue
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -2873,7 +2870,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHashKeyValue"
-    // InternalRails.g:879:1: entryRuleHashKeyValue returns [EObject current=null] : iv_ruleHashKeyValue= ruleHashKeyValue EOF ;
+    // InternalRails.g:878:1: entryRuleHashKeyValue returns [EObject current=null] : iv_ruleHashKeyValue= ruleHashKeyValue EOF ;
     public final EObject entryRuleHashKeyValue() throws RecognitionException {
         EObject current = null;
 
@@ -2881,8 +2878,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:880:2: (iv_ruleHashKeyValue= ruleHashKeyValue EOF )
-            // InternalRails.g:881:2: iv_ruleHashKeyValue= ruleHashKeyValue EOF
+            // InternalRails.g:879:2: (iv_ruleHashKeyValue= ruleHashKeyValue EOF )
+            // InternalRails.g:880:2: iv_ruleHashKeyValue= ruleHashKeyValue EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getHashKeyValueRule()); 
@@ -2913,7 +2910,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHashKeyValue"
-    // InternalRails.g:888:1: ruleHashKeyValue returns [EObject current=null] : (this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )* ) ;
+    // InternalRails.g:887:1: ruleHashKeyValue returns [EObject current=null] : (this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )* ) ;
     public final EObject ruleHashKeyValue() throws RecognitionException {
         EObject current = null;
 
@@ -2942,11 +2939,11 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:891:28: ( (this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )* ) )
-            // InternalRails.g:892:1: (this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )* )
+            // InternalRails.g:890:28: ( (this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )* ) )
+            // InternalRails.g:891:1: (this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )* )
             {
-            // InternalRails.g:892:1: (this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )* )
-            // InternalRails.g:892:2: this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )*
+            // InternalRails.g:891:1: (this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )* )
+            // InternalRails.g:891:2: this_COMMA_0= RULE_COMMA (this_SPACE_1= RULE_SPACE )* (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )? ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) ) (this_SPACE_9= RULE_SPACE )* ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) ) (this_SPACE_11= RULE_SPACE )*
             {
             this_COMMA_0=(Token)match(input,RULE_COMMA,FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2954,7 +2951,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                   newLeafNode(this_COMMA_0, grammarAccess.getHashKeyValueAccess().getCOMMATerminalRuleCall_0()); 
                   
             }
-            // InternalRails.g:896:1: (this_SPACE_1= RULE_SPACE )*
+            // InternalRails.g:895:1: (this_SPACE_1= RULE_SPACE )*
             loop34:
             do {
                 int alt34=2;
@@ -2967,7 +2964,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt34) {
             	case 1 :
-            	    // InternalRails.g:896:2: this_SPACE_1= RULE_SPACE
+            	    // InternalRails.g:895:2: this_SPACE_1= RULE_SPACE
             	    {
             	    this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_21); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -2984,7 +2981,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:900:3: (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )?
+            // InternalRails.g:899:3: (this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )* )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -2993,7 +2990,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt36) {
                 case 1 :
-                    // InternalRails.g:900:4: this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )*
+                    // InternalRails.g:899:4: this_LF_2= RULE_LF (this_SPACE_3= RULE_SPACE )*
                     {
                     this_LF_2=(Token)match(input,RULE_LF,FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3001,7 +2998,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                           newLeafNode(this_LF_2, grammarAccess.getHashKeyValueAccess().getLFTerminalRuleCall_2_0()); 
                           
                     }
-                    // InternalRails.g:904:1: (this_SPACE_3= RULE_SPACE )*
+                    // InternalRails.g:903:1: (this_SPACE_3= RULE_SPACE )*
                     loop35:
                     do {
                         int alt35=2;
@@ -3014,7 +3011,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                         switch (alt35) {
                     	case 1 :
-                    	    // InternalRails.g:904:2: this_SPACE_3= RULE_SPACE
+                    	    // InternalRails.g:903:2: this_SPACE_3= RULE_SPACE
                     	    {
                     	    this_SPACE_3=(Token)match(input,RULE_SPACE,FOLLOW_22); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
@@ -3037,7 +3034,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:908:5: ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) )
+            // InternalRails.g:907:5: ( ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' ) | ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' ) )
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -3056,16 +3053,16 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt39) {
                 case 1 :
-                    // InternalRails.g:908:6: ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' )
+                    // InternalRails.g:907:6: ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' )
                     {
-                    // InternalRails.g:908:6: ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' )
-                    // InternalRails.g:908:7: ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':'
+                    // InternalRails.g:907:6: ( ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':' )
+                    // InternalRails.g:907:7: ( (lv_key_4_0= RULE_ID ) ) otherlv_5= ':'
                     {
-                    // InternalRails.g:908:7: ( (lv_key_4_0= RULE_ID ) )
-                    // InternalRails.g:909:1: (lv_key_4_0= RULE_ID )
+                    // InternalRails.g:907:7: ( (lv_key_4_0= RULE_ID ) )
+                    // InternalRails.g:908:1: (lv_key_4_0= RULE_ID )
                     {
-                    // InternalRails.g:909:1: (lv_key_4_0= RULE_ID )
-                    // InternalRails.g:910:3: lv_key_4_0= RULE_ID
+                    // InternalRails.g:908:1: (lv_key_4_0= RULE_ID )
+                    // InternalRails.g:909:3: lv_key_4_0= RULE_ID
                     {
                     lv_key_4_0=(Token)match(input,RULE_ID,FOLLOW_23); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3104,18 +3101,18 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:931:6: ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' )
+                    // InternalRails.g:930:6: ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' )
                     {
-                    // InternalRails.g:931:6: ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' )
-                    // InternalRails.g:931:7: ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>'
+                    // InternalRails.g:930:6: ( ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>' )
+                    // InternalRails.g:930:7: ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) ) (this_SPACE_7= RULE_SPACE )* otherlv_8= '=>'
                     {
-                    // InternalRails.g:931:7: ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) )
-                    // InternalRails.g:932:1: ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) )
+                    // InternalRails.g:930:7: ( ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) ) )
+                    // InternalRails.g:931:1: ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) )
                     {
-                    // InternalRails.g:932:1: ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) )
-                    // InternalRails.g:933:1: (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING )
+                    // InternalRails.g:931:1: ( (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING ) )
+                    // InternalRails.g:932:1: (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING )
                     {
-                    // InternalRails.g:933:1: (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING )
+                    // InternalRails.g:932:1: (lv_key_6_1= RULE_SYMBOL | lv_key_6_2= RULE_STRING )
                     int alt37=2;
                     int LA37_0 = input.LA(1);
 
@@ -3134,7 +3131,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt37) {
                         case 1 :
-                            // InternalRails.g:934:3: lv_key_6_1= RULE_SYMBOL
+                            // InternalRails.g:933:3: lv_key_6_1= RULE_SYMBOL
                             {
                             lv_key_6_1=(Token)match(input,RULE_SYMBOL,FOLLOW_25); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -3158,7 +3155,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalRails.g:949:8: lv_key_6_2= RULE_STRING
+                            // InternalRails.g:948:8: lv_key_6_2= RULE_STRING
                             {
                             lv_key_6_2=(Token)match(input,RULE_STRING,FOLLOW_25); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -3190,7 +3187,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalRails.g:967:2: (this_SPACE_7= RULE_SPACE )*
+                    // InternalRails.g:966:2: (this_SPACE_7= RULE_SPACE )*
                     loop38:
                     do {
                         int alt38=2;
@@ -3203,7 +3200,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                         switch (alt38) {
                     	case 1 :
-                    	    // InternalRails.g:967:3: this_SPACE_7= RULE_SPACE
+                    	    // InternalRails.g:966:3: this_SPACE_7= RULE_SPACE
                     	    {
                     	    this_SPACE_7=(Token)match(input,RULE_SPACE,FOLLOW_25); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
@@ -3235,7 +3232,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:975:3: (this_SPACE_9= RULE_SPACE )*
+            // InternalRails.g:974:3: (this_SPACE_9= RULE_SPACE )*
             loop40:
             do {
                 int alt40=2;
@@ -3248,7 +3245,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt40) {
             	case 1 :
-            	    // InternalRails.g:975:4: this_SPACE_9= RULE_SPACE
+            	    // InternalRails.g:974:4: this_SPACE_9= RULE_SPACE
             	    {
             	    this_SPACE_9=(Token)match(input,RULE_SPACE,FOLLOW_24); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -3265,13 +3262,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:979:3: ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) )
-            // InternalRails.g:980:1: ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) )
+            // InternalRails.g:978:3: ( ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) ) )
+            // InternalRails.g:979:1: ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) )
             {
-            // InternalRails.g:980:1: ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) )
-            // InternalRails.g:981:1: (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall )
+            // InternalRails.g:979:1: ( (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall ) )
+            // InternalRails.g:980:1: (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall )
             {
-            // InternalRails.g:981:1: (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall )
+            // InternalRails.g:980:1: (lv_value_10_1= RULE_SYMBOL | lv_value_10_2= RULE_STRING | lv_value_10_3= RULE_BRACKET_BLOCK | lv_value_10_4= RULE_ARRAY_BLOCK | lv_value_10_5= RULE_DECIMAL | lv_value_10_6= RULE_INT | lv_value_10_7= RULE_INT_METHOD | lv_value_10_8= ruleMethodChainCall )
             int alt41=8;
             switch ( input.LA(1) ) {
             case RULE_SYMBOL:
@@ -3325,7 +3322,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             switch (alt41) {
                 case 1 :
-                    // InternalRails.g:982:3: lv_value_10_1= RULE_SYMBOL
+                    // InternalRails.g:981:3: lv_value_10_1= RULE_SYMBOL
                     {
                     lv_value_10_1=(Token)match(input,RULE_SYMBOL,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3349,7 +3346,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:997:8: lv_value_10_2= RULE_STRING
+                    // InternalRails.g:996:8: lv_value_10_2= RULE_STRING
                     {
                     lv_value_10_2=(Token)match(input,RULE_STRING,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3373,7 +3370,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:1012:8: lv_value_10_3= RULE_BRACKET_BLOCK
+                    // InternalRails.g:1011:8: lv_value_10_3= RULE_BRACKET_BLOCK
                     {
                     lv_value_10_3=(Token)match(input,RULE_BRACKET_BLOCK,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3397,7 +3394,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:1027:8: lv_value_10_4= RULE_ARRAY_BLOCK
+                    // InternalRails.g:1026:8: lv_value_10_4= RULE_ARRAY_BLOCK
                     {
                     lv_value_10_4=(Token)match(input,RULE_ARRAY_BLOCK,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3421,7 +3418,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:1042:8: lv_value_10_5= RULE_DECIMAL
+                    // InternalRails.g:1041:8: lv_value_10_5= RULE_DECIMAL
                     {
                     lv_value_10_5=(Token)match(input,RULE_DECIMAL,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3445,7 +3442,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:1057:8: lv_value_10_6= RULE_INT
+                    // InternalRails.g:1056:8: lv_value_10_6= RULE_INT
                     {
                     lv_value_10_6=(Token)match(input,RULE_INT,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3469,7 +3466,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:1072:8: lv_value_10_7= RULE_INT_METHOD
+                    // InternalRails.g:1071:8: lv_value_10_7= RULE_INT_METHOD
                     {
                     lv_value_10_7=(Token)match(input,RULE_INT_METHOD,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3493,7 +3490,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalRails.g:1087:8: lv_value_10_8= ruleMethodChainCall
+                    // InternalRails.g:1086:8: lv_value_10_8= ruleMethodChainCall
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -3530,7 +3527,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:1105:2: (this_SPACE_11= RULE_SPACE )*
+            // InternalRails.g:1104:2: (this_SPACE_11= RULE_SPACE )*
             loop42:
             do {
                 int alt42=2;
@@ -3543,7 +3540,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt42) {
             	case 1 :
-            	    // InternalRails.g:1105:3: this_SPACE_11= RULE_SPACE
+            	    // InternalRails.g:1104:3: this_SPACE_11= RULE_SPACE
             	    {
             	    this_SPACE_11=(Token)match(input,RULE_SPACE,FOLLOW_26); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -3583,7 +3580,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIgnoredHashKeyValue"
-    // InternalRails.g:1117:1: entryRuleIgnoredHashKeyValue returns [String current=null] : iv_ruleIgnoredHashKeyValue= ruleIgnoredHashKeyValue EOF ;
+    // InternalRails.g:1116:1: entryRuleIgnoredHashKeyValue returns [String current=null] : iv_ruleIgnoredHashKeyValue= ruleIgnoredHashKeyValue EOF ;
     public final String entryRuleIgnoredHashKeyValue() throws RecognitionException {
         String current = null;
 
@@ -3591,8 +3588,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:1118:2: (iv_ruleIgnoredHashKeyValue= ruleIgnoredHashKeyValue EOF )
-            // InternalRails.g:1119:2: iv_ruleIgnoredHashKeyValue= ruleIgnoredHashKeyValue EOF
+            // InternalRails.g:1117:2: (iv_ruleIgnoredHashKeyValue= ruleIgnoredHashKeyValue EOF )
+            // InternalRails.g:1118:2: iv_ruleIgnoredHashKeyValue= ruleIgnoredHashKeyValue EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIgnoredHashKeyValueRule()); 
@@ -3623,7 +3620,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIgnoredHashKeyValue"
-    // InternalRails.g:1126:1: ruleIgnoredHashKeyValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )* ) ;
+    // InternalRails.g:1125:1: ruleIgnoredHashKeyValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )* ) ;
     public final AntlrDatatypeRuleToken ruleIgnoredHashKeyValue() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3649,13 +3646,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:1129:28: ( ( (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )* ) )
-            // InternalRails.g:1130:1: ( (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )* )
+            // InternalRails.g:1128:28: ( ( (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )* ) )
+            // InternalRails.g:1129:1: ( (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )* )
             {
-            // InternalRails.g:1130:1: ( (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )* )
-            // InternalRails.g:1130:2: (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )*
+            // InternalRails.g:1129:1: ( (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )* )
+            // InternalRails.g:1129:2: (this_SPACE_0= RULE_SPACE )* ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) ) (this_SPACE_7= RULE_SPACE )* (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP ) (this_SPACE_17= RULE_SPACE )*
             {
-            // InternalRails.g:1130:2: (this_SPACE_0= RULE_SPACE )*
+            // InternalRails.g:1129:2: (this_SPACE_0= RULE_SPACE )*
             loop43:
             do {
                 int alt43=2;
@@ -3668,7 +3665,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt43) {
             	case 1 :
-            	    // InternalRails.g:1130:7: this_SPACE_0= RULE_SPACE
+            	    // InternalRails.g:1129:7: this_SPACE_0= RULE_SPACE
             	    {
             	    this_SPACE_0=(Token)match(input,RULE_SPACE,FOLLOW_22); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -3690,7 +3687,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:1137:3: ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) )
+            // InternalRails.g:1136:3: ( (this_ID_1= RULE_ID kw= ':' ) | ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' ) )
             int alt46=2;
             int LA46_0 = input.LA(1);
 
@@ -3709,10 +3706,10 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt46) {
                 case 1 :
-                    // InternalRails.g:1137:4: (this_ID_1= RULE_ID kw= ':' )
+                    // InternalRails.g:1136:4: (this_ID_1= RULE_ID kw= ':' )
                     {
-                    // InternalRails.g:1137:4: (this_ID_1= RULE_ID kw= ':' )
-                    // InternalRails.g:1137:9: this_ID_1= RULE_ID kw= ':'
+                    // InternalRails.g:1136:4: (this_ID_1= RULE_ID kw= ':' )
+                    // InternalRails.g:1136:9: this_ID_1= RULE_ID kw= ':'
                     {
                     this_ID_1=(Token)match(input,RULE_ID,FOLLOW_23); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3739,12 +3736,12 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:1151:6: ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' )
+                    // InternalRails.g:1150:6: ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' )
                     {
-                    // InternalRails.g:1151:6: ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' )
-                    // InternalRails.g:1151:7: (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>'
+                    // InternalRails.g:1150:6: ( (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>' )
+                    // InternalRails.g:1150:7: (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING ) (this_SPACE_5= RULE_SPACE )* kw= '=>'
                     {
-                    // InternalRails.g:1151:7: (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING )
+                    // InternalRails.g:1150:7: (this_SYMBOL_3= RULE_SYMBOL | this_STRING_4= RULE_STRING )
                     int alt44=2;
                     int LA44_0 = input.LA(1);
 
@@ -3763,7 +3760,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt44) {
                         case 1 :
-                            // InternalRails.g:1151:12: this_SYMBOL_3= RULE_SYMBOL
+                            // InternalRails.g:1150:12: this_SYMBOL_3= RULE_SYMBOL
                             {
                             this_SYMBOL_3=(Token)match(input,RULE_SYMBOL,FOLLOW_25); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -3780,7 +3777,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalRails.g:1159:10: this_STRING_4= RULE_STRING
+                            // InternalRails.g:1158:10: this_STRING_4= RULE_STRING
                             {
                             this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_25); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -3799,7 +3796,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalRails.g:1166:2: (this_SPACE_5= RULE_SPACE )*
+                    // InternalRails.g:1165:2: (this_SPACE_5= RULE_SPACE )*
                     loop45:
                     do {
                         int alt45=2;
@@ -3812,7 +3809,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                         switch (alt45) {
                     	case 1 :
-                    	    // InternalRails.g:1166:7: this_SPACE_5= RULE_SPACE
+                    	    // InternalRails.g:1165:7: this_SPACE_5= RULE_SPACE
                     	    {
                     	    this_SPACE_5=(Token)match(input,RULE_SPACE,FOLLOW_25); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
@@ -3850,7 +3847,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:1179:3: (this_SPACE_7= RULE_SPACE )*
+            // InternalRails.g:1178:3: (this_SPACE_7= RULE_SPACE )*
             loop47:
             do {
                 int alt47=2;
@@ -3863,7 +3860,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt47) {
             	case 1 :
-            	    // InternalRails.g:1179:8: this_SPACE_7= RULE_SPACE
+            	    // InternalRails.g:1178:8: this_SPACE_7= RULE_SPACE
             	    {
             	    this_SPACE_7=(Token)match(input,RULE_SPACE,FOLLOW_27); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -3885,12 +3882,12 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:1186:3: (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP )
+            // InternalRails.g:1185:3: (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP )
             int alt48=9;
             alt48 = dfa48.predict(input);
             switch (alt48) {
                 case 1 :
-                    // InternalRails.g:1186:8: this_SYMBOL_8= RULE_SYMBOL
+                    // InternalRails.g:1185:8: this_SYMBOL_8= RULE_SYMBOL
                     {
                     this_SYMBOL_8=(Token)match(input,RULE_SYMBOL,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3907,7 +3904,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:1194:10: this_STRING_9= RULE_STRING
+                    // InternalRails.g:1193:10: this_STRING_9= RULE_STRING
                     {
                     this_STRING_9=(Token)match(input,RULE_STRING,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3924,7 +3921,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:1202:10: this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK
+                    // InternalRails.g:1201:10: this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK
                     {
                     this_BRACKET_BLOCK_10=(Token)match(input,RULE_BRACKET_BLOCK,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3941,7 +3938,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:1210:10: this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK
+                    // InternalRails.g:1209:10: this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK
                     {
                     this_ARRAY_BLOCK_11=(Token)match(input,RULE_ARRAY_BLOCK,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3958,7 +3955,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:1218:10: this_DECIMAL_12= RULE_DECIMAL
+                    // InternalRails.g:1217:10: this_DECIMAL_12= RULE_DECIMAL
                     {
                     this_DECIMAL_12=(Token)match(input,RULE_DECIMAL,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3975,7 +3972,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:1226:10: this_INT_13= RULE_INT
+                    // InternalRails.g:1225:10: this_INT_13= RULE_INT
                     {
                     this_INT_13=(Token)match(input,RULE_INT,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3992,7 +3989,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:1234:10: this_INT_METHOD_14= RULE_INT_METHOD
+                    // InternalRails.g:1233:10: this_INT_METHOD_14= RULE_INT_METHOD
                     {
                     this_INT_METHOD_14=(Token)match(input,RULE_INT_METHOD,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4009,7 +4006,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalRails.g:1243:5: this_MethodChainCall_15= ruleMethodChainCall
+                    // InternalRails.g:1242:5: this_MethodChainCall_15= ruleMethodChainCall
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -4035,7 +4032,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalRails.g:1254:10: this_REGEXP_16= RULE_REGEXP
+                    // InternalRails.g:1253:10: this_REGEXP_16= RULE_REGEXP
                     {
                     this_REGEXP_16=(Token)match(input,RULE_REGEXP,FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4054,7 +4051,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:1261:2: (this_SPACE_17= RULE_SPACE )*
+            // InternalRails.g:1260:2: (this_SPACE_17= RULE_SPACE )*
             loop49:
             do {
                 int alt49=2;
@@ -4067,7 +4064,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt49) {
             	case 1 :
-            	    // InternalRails.g:1261:7: this_SPACE_17= RULE_SPACE
+            	    // InternalRails.g:1260:7: this_SPACE_17= RULE_SPACE
             	    {
             	    this_SPACE_17=(Token)match(input,RULE_SPACE,FOLLOW_26); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -4112,7 +4109,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMethod"
-    // InternalRails.g:1276:1: entryRuleMethod returns [EObject current=null] : iv_ruleMethod= ruleMethod EOF ;
+    // InternalRails.g:1275:1: entryRuleMethod returns [EObject current=null] : iv_ruleMethod= ruleMethod EOF ;
     public final EObject entryRuleMethod() throws RecognitionException {
         EObject current = null;
 
@@ -4120,8 +4117,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:1277:2: (iv_ruleMethod= ruleMethod EOF )
-            // InternalRails.g:1278:2: iv_ruleMethod= ruleMethod EOF
+            // InternalRails.g:1276:2: (iv_ruleMethod= ruleMethod EOF )
+            // InternalRails.g:1277:2: iv_ruleMethod= ruleMethod EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMethodRule()); 
@@ -4152,7 +4149,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethod"
-    // InternalRails.g:1285:1: ruleMethod returns [EObject current=null] : (this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )? ) ;
+    // InternalRails.g:1284:1: ruleMethod returns [EObject current=null] : (this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )? ) ;
     public final EObject ruleMethod() throws RecognitionException {
         EObject current = null;
 
@@ -4168,11 +4165,11 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:1288:28: ( (this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )? ) )
-            // InternalRails.g:1289:1: (this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )? )
+            // InternalRails.g:1287:28: ( (this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )? ) )
+            // InternalRails.g:1288:1: (this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )? )
             {
-            // InternalRails.g:1289:1: (this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )? )
-            // InternalRails.g:1289:2: this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )?
+            // InternalRails.g:1288:1: (this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )? )
+            // InternalRails.g:1288:2: this_DEF_WORD_0= RULE_DEF_WORD (this_SPACE_1= RULE_SPACE )* ( (lv_name_2_0= ruleMethodName ) ) (this_SPACE_3= RULE_SPACE )* (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )? (this_SPACE_5= RULE_SPACE )* (this_LF_6= RULE_LF )?
             {
             this_DEF_WORD_0=(Token)match(input,RULE_DEF_WORD,FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4180,7 +4177,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                   newLeafNode(this_DEF_WORD_0, grammarAccess.getMethodAccess().getDEF_WORDTerminalRuleCall_0()); 
                   
             }
-            // InternalRails.g:1293:1: (this_SPACE_1= RULE_SPACE )*
+            // InternalRails.g:1292:1: (this_SPACE_1= RULE_SPACE )*
             loop50:
             do {
                 int alt50=2;
@@ -4193,7 +4190,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt50) {
             	case 1 :
-            	    // InternalRails.g:1293:2: this_SPACE_1= RULE_SPACE
+            	    // InternalRails.g:1292:2: this_SPACE_1= RULE_SPACE
             	    {
             	    this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_3); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -4210,11 +4207,11 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:1297:3: ( (lv_name_2_0= ruleMethodName ) )
-            // InternalRails.g:1298:1: (lv_name_2_0= ruleMethodName )
+            // InternalRails.g:1296:3: ( (lv_name_2_0= ruleMethodName ) )
+            // InternalRails.g:1297:1: (lv_name_2_0= ruleMethodName )
             {
-            // InternalRails.g:1298:1: (lv_name_2_0= ruleMethodName )
-            // InternalRails.g:1299:3: lv_name_2_0= ruleMethodName
+            // InternalRails.g:1297:1: (lv_name_2_0= ruleMethodName )
+            // InternalRails.g:1298:3: lv_name_2_0= ruleMethodName
             {
             if ( state.backtracking==0 ) {
                
@@ -4245,7 +4242,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:1315:2: (this_SPACE_3= RULE_SPACE )*
+            // InternalRails.g:1314:2: (this_SPACE_3= RULE_SPACE )*
             loop51:
             do {
                 int alt51=2;
@@ -4258,7 +4255,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt51) {
             	case 1 :
-            	    // InternalRails.g:1315:3: this_SPACE_3= RULE_SPACE
+            	    // InternalRails.g:1314:3: this_SPACE_3= RULE_SPACE
             	    {
             	    this_SPACE_3=(Token)match(input,RULE_SPACE,FOLLOW_28); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -4275,7 +4272,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:1319:3: (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )?
+            // InternalRails.g:1318:3: (this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK )?
             int alt52=2;
             int LA52_0 = input.LA(1);
 
@@ -4284,7 +4281,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt52) {
                 case 1 :
-                    // InternalRails.g:1319:4: this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK
+                    // InternalRails.g:1318:4: this_PARENTHESIS_BLOCK_4= RULE_PARENTHESIS_BLOCK
                     {
                     this_PARENTHESIS_BLOCK_4=(Token)match(input,RULE_PARENTHESIS_BLOCK,FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4298,7 +4295,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:1323:3: (this_SPACE_5= RULE_SPACE )*
+            // InternalRails.g:1322:3: (this_SPACE_5= RULE_SPACE )*
             loop53:
             do {
                 int alt53=2;
@@ -4311,7 +4308,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt53) {
             	case 1 :
-            	    // InternalRails.g:1323:4: this_SPACE_5= RULE_SPACE
+            	    // InternalRails.g:1322:4: this_SPACE_5= RULE_SPACE
             	    {
             	    this_SPACE_5=(Token)match(input,RULE_SPACE,FOLLOW_14); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -4328,7 +4325,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalRails.g:1327:3: (this_LF_6= RULE_LF )?
+            // InternalRails.g:1326:3: (this_LF_6= RULE_LF )?
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -4337,7 +4334,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt54) {
                 case 1 :
-                    // InternalRails.g:1327:4: this_LF_6= RULE_LF
+                    // InternalRails.g:1326:4: this_LF_6= RULE_LF
                     {
                     this_LF_6=(Token)match(input,RULE_LF,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4374,7 +4371,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMethodName"
-    // InternalRails.g:1339:1: entryRuleMethodName returns [String current=null] : iv_ruleMethodName= ruleMethodName EOF ;
+    // InternalRails.g:1338:1: entryRuleMethodName returns [String current=null] : iv_ruleMethodName= ruleMethodName EOF ;
     public final String entryRuleMethodName() throws RecognitionException {
         String current = null;
 
@@ -4382,8 +4379,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:1340:2: (iv_ruleMethodName= ruleMethodName EOF )
-            // InternalRails.g:1341:2: iv_ruleMethodName= ruleMethodName EOF
+            // InternalRails.g:1339:2: (iv_ruleMethodName= ruleMethodName EOF )
+            // InternalRails.g:1340:2: iv_ruleMethodName= ruleMethodName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMethodNameRule()); 
@@ -4414,7 +4411,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethodName"
-    // InternalRails.g:1348:1: ruleMethodName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )? ) ;
+    // InternalRails.g:1347:1: ruleMethodName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )? ) ;
     public final AntlrDatatypeRuleToken ruleMethodName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4426,13 +4423,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:1351:28: ( ( (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )? ) )
-            // InternalRails.g:1352:1: ( (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )? )
+            // InternalRails.g:1350:28: ( ( (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )? ) )
+            // InternalRails.g:1351:1: ( (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )? )
             {
-            // InternalRails.g:1352:1: ( (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )? )
-            // InternalRails.g:1352:2: (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )?
+            // InternalRails.g:1351:1: ( (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )? )
+            // InternalRails.g:1351:2: (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )? this_ID_2= RULE_ID (kw= '?' | kw= '=' )?
             {
-            // InternalRails.g:1352:2: (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )?
+            // InternalRails.g:1351:2: (this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.' )?
             int alt55=2;
             int LA55_0 = input.LA(1);
 
@@ -4445,7 +4442,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt55) {
                 case 1 :
-                    // InternalRails.g:1353:5: this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.'
+                    // InternalRails.g:1352:5: this_NamespacedModuleName_0= ruleNamespacedModuleName kw= '.'
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -4491,7 +4488,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                   newLeafNode(this_ID_2, grammarAccess.getMethodNameAccess().getIDTerminalRuleCall_1()); 
                   
             }
-            // InternalRails.g:1376:1: (kw= '?' | kw= '=' )?
+            // InternalRails.g:1375:1: (kw= '?' | kw= '=' )?
             int alt56=3;
             int LA56_0 = input.LA(1);
 
@@ -4503,7 +4500,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt56) {
                 case 1 :
-                    // InternalRails.g:1377:2: kw= '?'
+                    // InternalRails.g:1376:2: kw= '?'
                     {
                     kw=(Token)match(input,48,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4516,7 +4513,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:1384:2: kw= '='
+                    // InternalRails.g:1383:2: kw= '='
                     {
                     kw=(Token)match(input,49,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4554,16 +4551,16 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperationsChain"
-    // InternalRails.g:1397:1: entryRuleOperationsChain returns [EObject current=null] : iv_ruleOperationsChain= ruleOperationsChain EOF ;
-    public final EObject entryRuleOperationsChain() throws RecognitionException {
-        EObject current = null;
+    // InternalRails.g:1396:1: entryRuleOperationsChain returns [String current=null] : iv_ruleOperationsChain= ruleOperationsChain EOF ;
+    public final String entryRuleOperationsChain() throws RecognitionException {
+        String current = null;
 
-        EObject iv_ruleOperationsChain = null;
+        AntlrDatatypeRuleToken iv_ruleOperationsChain = null;
 
 
         try {
-            // InternalRails.g:1398:2: (iv_ruleOperationsChain= ruleOperationsChain EOF )
-            // InternalRails.g:1399:2: iv_ruleOperationsChain= ruleOperationsChain EOF
+            // InternalRails.g:1397:2: (iv_ruleOperationsChain= ruleOperationsChain EOF )
+            // InternalRails.g:1398:2: iv_ruleOperationsChain= ruleOperationsChain EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOperationsChainRule()); 
@@ -4574,7 +4571,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleOperationsChain; 
+               current =iv_ruleOperationsChain.getText(); 
             }
             match(input,EOF,FOLLOW_2); if (state.failed) return current;
 
@@ -4594,65 +4591,50 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperationsChain"
-    // InternalRails.g:1406:1: ruleOperationsChain returns [EObject current=null] : ( ( (lv_name_0_0= ruleMethodChainCall ) ) ( ( (lv_operators_1_0= ruleOperatorRule ) ) ( ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) ) ) )* ) ;
-    public final EObject ruleOperationsChain() throws RecognitionException {
-        EObject current = null;
+    // InternalRails.g:1405:1: ruleOperationsChain returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_MethodChainCall_0= ruleMethodChainCall (this_OperatorRule_1= ruleOperatorRule (this_BRACKET_BLOCK_2= RULE_BRACKET_BLOCK | this_DECIMAL_3= RULE_DECIMAL | this_MethodChainCall_4= ruleMethodChainCall | this_REGEXP_5= RULE_REGEXP ) )* ) ;
+    public final AntlrDatatypeRuleToken ruleOperationsChain() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
-        Token lv_operants_2_1=null;
-        Token lv_operants_2_2=null;
-        Token lv_operants_2_4=null;
-        AntlrDatatypeRuleToken lv_name_0_0 = null;
+        Token this_BRACKET_BLOCK_2=null;
+        Token this_DECIMAL_3=null;
+        Token this_REGEXP_5=null;
+        AntlrDatatypeRuleToken this_MethodChainCall_0 = null;
 
-        AntlrDatatypeRuleToken lv_operators_1_0 = null;
+        AntlrDatatypeRuleToken this_OperatorRule_1 = null;
 
-        AntlrDatatypeRuleToken lv_operants_2_3 = null;
+        AntlrDatatypeRuleToken this_MethodChainCall_4 = null;
 
 
          enterRule(); 
             
         try {
-            // InternalRails.g:1409:28: ( ( ( (lv_name_0_0= ruleMethodChainCall ) ) ( ( (lv_operators_1_0= ruleOperatorRule ) ) ( ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) ) ) )* ) )
-            // InternalRails.g:1410:1: ( ( (lv_name_0_0= ruleMethodChainCall ) ) ( ( (lv_operators_1_0= ruleOperatorRule ) ) ( ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) ) ) )* )
+            // InternalRails.g:1408:28: ( (this_MethodChainCall_0= ruleMethodChainCall (this_OperatorRule_1= ruleOperatorRule (this_BRACKET_BLOCK_2= RULE_BRACKET_BLOCK | this_DECIMAL_3= RULE_DECIMAL | this_MethodChainCall_4= ruleMethodChainCall | this_REGEXP_5= RULE_REGEXP ) )* ) )
+            // InternalRails.g:1409:1: (this_MethodChainCall_0= ruleMethodChainCall (this_OperatorRule_1= ruleOperatorRule (this_BRACKET_BLOCK_2= RULE_BRACKET_BLOCK | this_DECIMAL_3= RULE_DECIMAL | this_MethodChainCall_4= ruleMethodChainCall | this_REGEXP_5= RULE_REGEXP ) )* )
             {
-            // InternalRails.g:1410:1: ( ( (lv_name_0_0= ruleMethodChainCall ) ) ( ( (lv_operators_1_0= ruleOperatorRule ) ) ( ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) ) ) )* )
-            // InternalRails.g:1410:2: ( (lv_name_0_0= ruleMethodChainCall ) ) ( ( (lv_operators_1_0= ruleOperatorRule ) ) ( ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) ) ) )*
-            {
-            // InternalRails.g:1410:2: ( (lv_name_0_0= ruleMethodChainCall ) )
-            // InternalRails.g:1411:1: (lv_name_0_0= ruleMethodChainCall )
-            {
-            // InternalRails.g:1411:1: (lv_name_0_0= ruleMethodChainCall )
-            // InternalRails.g:1412:3: lv_name_0_0= ruleMethodChainCall
+            // InternalRails.g:1409:1: (this_MethodChainCall_0= ruleMethodChainCall (this_OperatorRule_1= ruleOperatorRule (this_BRACKET_BLOCK_2= RULE_BRACKET_BLOCK | this_DECIMAL_3= RULE_DECIMAL | this_MethodChainCall_4= ruleMethodChainCall | this_REGEXP_5= RULE_REGEXP ) )* )
+            // InternalRails.g:1410:5: this_MethodChainCall_0= ruleMethodChainCall (this_OperatorRule_1= ruleOperatorRule (this_BRACKET_BLOCK_2= RULE_BRACKET_BLOCK | this_DECIMAL_3= RULE_DECIMAL | this_MethodChainCall_4= ruleMethodChainCall | this_REGEXP_5= RULE_REGEXP ) )*
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getOperationsChainAccess().getNameMethodChainCallParserRuleCall_0_0()); 
-              	    
+                      newCompositeNode(grammarAccess.getOperationsChainAccess().getMethodChainCallParserRuleCall_0()); 
+                  
             }
             pushFollow(FOLLOW_31);
-            lv_name_0_0=ruleMethodChainCall();
+            this_MethodChainCall_0=ruleMethodChainCall();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getOperationsChainRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"name",
-                      		lv_name_0_0, 
-                      		"co.gruposaberes.model.Rails.MethodChainCall");
-              	        afterParserOrEnumRuleCall();
-              	    
+              		current.merge(this_MethodChainCall_0);
+                  
             }
-
+            if ( state.backtracking==0 ) {
+               
+                      afterParserOrEnumRuleCall();
+                  
             }
-
-
-            }
-
-            // InternalRails.g:1428:2: ( ( (lv_operators_1_0= ruleOperatorRule ) ) ( ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) ) ) )*
+            // InternalRails.g:1420:1: (this_OperatorRule_1= ruleOperatorRule (this_BRACKET_BLOCK_2= RULE_BRACKET_BLOCK | this_DECIMAL_3= RULE_DECIMAL | this_MethodChainCall_4= ruleMethodChainCall | this_REGEXP_5= RULE_REGEXP ) )*
             loop58:
             do {
                 int alt58=2;
@@ -4665,50 +4647,29 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
                 switch (alt58) {
             	case 1 :
-            	    // InternalRails.g:1428:3: ( (lv_operators_1_0= ruleOperatorRule ) ) ( ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) ) )
-            	    {
-            	    // InternalRails.g:1428:3: ( (lv_operators_1_0= ruleOperatorRule ) )
-            	    // InternalRails.g:1429:1: (lv_operators_1_0= ruleOperatorRule )
-            	    {
-            	    // InternalRails.g:1429:1: (lv_operators_1_0= ruleOperatorRule )
-            	    // InternalRails.g:1430:3: lv_operators_1_0= ruleOperatorRule
+            	    // InternalRails.g:1421:5: this_OperatorRule_1= ruleOperatorRule (this_BRACKET_BLOCK_2= RULE_BRACKET_BLOCK | this_DECIMAL_3= RULE_DECIMAL | this_MethodChainCall_4= ruleMethodChainCall | this_REGEXP_5= RULE_REGEXP )
             	    {
             	    if ( state.backtracking==0 ) {
             	       
-            	      	        newCompositeNode(grammarAccess.getOperationsChainAccess().getOperatorsOperatorRuleParserRuleCall_1_0_0()); 
-            	      	    
+            	              newCompositeNode(grammarAccess.getOperationsChainAccess().getOperatorRuleParserRuleCall_1_0()); 
+            	          
             	    }
             	    pushFollow(FOLLOW_27);
-            	    lv_operators_1_0=ruleOperatorRule();
+            	    this_OperatorRule_1=ruleOperatorRule();
 
             	    state._fsp--;
             	    if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      	        if (current==null) {
-            	      	            current = createModelElementForParent(grammarAccess.getOperationsChainRule());
-            	      	        }
-            	             		add(
-            	             			current, 
-            	             			"operators",
-            	              		lv_operators_1_0, 
-            	              		"co.gruposaberes.model.Rails.OperatorRule");
-            	      	        afterParserOrEnumRuleCall();
-            	      	    
+            	      		current.merge(this_OperatorRule_1);
+            	          
             	    }
-
+            	    if ( state.backtracking==0 ) {
+            	       
+            	              afterParserOrEnumRuleCall();
+            	          
             	    }
-
-
-            	    }
-
-            	    // InternalRails.g:1446:2: ( ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) ) )
-            	    // InternalRails.g:1447:1: ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) )
-            	    {
-            	    // InternalRails.g:1447:1: ( (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP ) )
-            	    // InternalRails.g:1448:1: (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP )
-            	    {
-            	    // InternalRails.g:1448:1: (lv_operants_2_1= RULE_BRACKET_BLOCK | lv_operants_2_2= RULE_DECIMAL | lv_operants_2_3= ruleMethodChainCall | lv_operants_2_4= RULE_REGEXP )
+            	    // InternalRails.g:1431:1: (this_BRACKET_BLOCK_2= RULE_BRACKET_BLOCK | this_DECIMAL_3= RULE_DECIMAL | this_MethodChainCall_4= ruleMethodChainCall | this_REGEXP_5= RULE_REGEXP )
             	    int alt57=4;
             	    switch ( input.LA(1) ) {
             	    case RULE_BRACKET_BLOCK:
@@ -4747,112 +4708,82 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             	    switch (alt57) {
             	        case 1 :
-            	            // InternalRails.g:1449:3: lv_operants_2_1= RULE_BRACKET_BLOCK
+            	            // InternalRails.g:1431:6: this_BRACKET_BLOCK_2= RULE_BRACKET_BLOCK
             	            {
-            	            lv_operants_2_1=(Token)match(input,RULE_BRACKET_BLOCK,FOLLOW_31); if (state.failed) return current;
+            	            this_BRACKET_BLOCK_2=(Token)match(input,RULE_BRACKET_BLOCK,FOLLOW_31); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
-            	              			newLeafNode(lv_operants_2_1, grammarAccess.getOperationsChainAccess().getOperantsBRACKET_BLOCKTerminalRuleCall_1_1_0_0()); 
-            	              		
+            	              		current.merge(this_BRACKET_BLOCK_2);
+            	                  
             	            }
             	            if ( state.backtracking==0 ) {
-
-            	              	        if (current==null) {
-            	              	            current = createModelElement(grammarAccess.getOperationsChainRule());
-            	              	        }
-            	                     		addWithLastConsumed(
-            	                     			current, 
-            	                     			"operants",
-            	                      		lv_operants_2_1, 
-            	                      		"co.gruposaberes.model.Rails.BRACKET_BLOCK");
-            	              	    
+            	               
+            	                  newLeafNode(this_BRACKET_BLOCK_2, grammarAccess.getOperationsChainAccess().getBRACKET_BLOCKTerminalRuleCall_1_1_0()); 
+            	                  
             	            }
 
             	            }
             	            break;
             	        case 2 :
-            	            // InternalRails.g:1464:8: lv_operants_2_2= RULE_DECIMAL
+            	            // InternalRails.g:1439:10: this_DECIMAL_3= RULE_DECIMAL
             	            {
-            	            lv_operants_2_2=(Token)match(input,RULE_DECIMAL,FOLLOW_31); if (state.failed) return current;
+            	            this_DECIMAL_3=(Token)match(input,RULE_DECIMAL,FOLLOW_31); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
-            	              			newLeafNode(lv_operants_2_2, grammarAccess.getOperationsChainAccess().getOperantsDECIMALTerminalRuleCall_1_1_0_1()); 
-            	              		
+            	              		current.merge(this_DECIMAL_3);
+            	                  
             	            }
             	            if ( state.backtracking==0 ) {
-
-            	              	        if (current==null) {
-            	              	            current = createModelElement(grammarAccess.getOperationsChainRule());
-            	              	        }
-            	                     		addWithLastConsumed(
-            	                     			current, 
-            	                     			"operants",
-            	                      		lv_operants_2_2, 
-            	                      		"co.gruposaberes.model.Rails.DECIMAL");
-            	              	    
+            	               
+            	                  newLeafNode(this_DECIMAL_3, grammarAccess.getOperationsChainAccess().getDECIMALTerminalRuleCall_1_1_1()); 
+            	                  
             	            }
 
             	            }
             	            break;
             	        case 3 :
-            	            // InternalRails.g:1479:8: lv_operants_2_3= ruleMethodChainCall
+            	            // InternalRails.g:1448:5: this_MethodChainCall_4= ruleMethodChainCall
             	            {
             	            if ( state.backtracking==0 ) {
             	               
-            	              	        newCompositeNode(grammarAccess.getOperationsChainAccess().getOperantsMethodChainCallParserRuleCall_1_1_0_2()); 
-            	              	    
+            	                      newCompositeNode(grammarAccess.getOperationsChainAccess().getMethodChainCallParserRuleCall_1_1_2()); 
+            	                  
             	            }
             	            pushFollow(FOLLOW_31);
-            	            lv_operants_2_3=ruleMethodChainCall();
+            	            this_MethodChainCall_4=ruleMethodChainCall();
 
             	            state._fsp--;
             	            if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
-            	              	        if (current==null) {
-            	              	            current = createModelElementForParent(grammarAccess.getOperationsChainRule());
-            	              	        }
-            	                     		add(
-            	                     			current, 
-            	                     			"operants",
-            	                      		lv_operants_2_3, 
-            	                      		"co.gruposaberes.model.Rails.MethodChainCall");
-            	              	        afterParserOrEnumRuleCall();
-            	              	    
+            	              		current.merge(this_MethodChainCall_4);
+            	                  
+            	            }
+            	            if ( state.backtracking==0 ) {
+            	               
+            	                      afterParserOrEnumRuleCall();
+            	                  
             	            }
 
             	            }
             	            break;
             	        case 4 :
-            	            // InternalRails.g:1494:8: lv_operants_2_4= RULE_REGEXP
+            	            // InternalRails.g:1459:10: this_REGEXP_5= RULE_REGEXP
             	            {
-            	            lv_operants_2_4=(Token)match(input,RULE_REGEXP,FOLLOW_31); if (state.failed) return current;
+            	            this_REGEXP_5=(Token)match(input,RULE_REGEXP,FOLLOW_31); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
-            	              			newLeafNode(lv_operants_2_4, grammarAccess.getOperationsChainAccess().getOperantsREGEXPTerminalRuleCall_1_1_0_3()); 
-            	              		
+            	              		current.merge(this_REGEXP_5);
+            	                  
             	            }
             	            if ( state.backtracking==0 ) {
-
-            	              	        if (current==null) {
-            	              	            current = createModelElement(grammarAccess.getOperationsChainRule());
-            	              	        }
-            	                     		addWithLastConsumed(
-            	                     			current, 
-            	                     			"operants",
-            	                      		lv_operants_2_4, 
-            	                      		"co.gruposaberes.model.Rails.REGEXP");
-            	              	    
+            	               
+            	                  newLeafNode(this_REGEXP_5, grammarAccess.getOperationsChainAccess().getREGEXPTerminalRuleCall_1_1_3()); 
+            	                  
             	            }
 
             	            }
             	            break;
-
-            	    }
-
-
-            	    }
-
 
             	    }
 
@@ -4888,7 +4819,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperatorRule"
-    // InternalRails.g:1520:1: entryRuleOperatorRule returns [String current=null] : iv_ruleOperatorRule= ruleOperatorRule EOF ;
+    // InternalRails.g:1474:1: entryRuleOperatorRule returns [String current=null] : iv_ruleOperatorRule= ruleOperatorRule EOF ;
     public final String entryRuleOperatorRule() throws RecognitionException {
         String current = null;
 
@@ -4896,8 +4827,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRails.g:1521:2: (iv_ruleOperatorRule= ruleOperatorRule EOF )
-            // InternalRails.g:1522:2: iv_ruleOperatorRule= ruleOperatorRule EOF
+            // InternalRails.g:1475:2: (iv_ruleOperatorRule= ruleOperatorRule EOF )
+            // InternalRails.g:1476:2: iv_ruleOperatorRule= ruleOperatorRule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOperatorRuleRule()); 
@@ -4928,7 +4859,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperatorRule"
-    // InternalRails.g:1529:1: ruleOperatorRule returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )? ) ;
+    // InternalRails.g:1483:1: ruleOperatorRule returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )? ) ;
     public final AntlrDatatypeRuleToken ruleOperatorRule() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4937,13 +4868,13 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalRails.g:1532:28: ( ( (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )? ) )
-            // InternalRails.g:1533:1: ( (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )? )
+            // InternalRails.g:1486:28: ( ( (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )? ) )
+            // InternalRails.g:1487:1: ( (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )? )
             {
-            // InternalRails.g:1533:1: ( (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )? )
-            // InternalRails.g:1533:2: (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )?
+            // InternalRails.g:1487:1: ( (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )? )
+            // InternalRails.g:1487:2: (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' ) (kw= '=' )?
             {
-            // InternalRails.g:1533:2: (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' )
+            // InternalRails.g:1487:2: (kw= ': ' | kw= '?' | kw= '<=' | kw= '<' | kw= '+' | kw= '-' | kw= '*' | kw= '/' | kw= '%' | kw= '**' | kw= '=' | kw= '~' | kw= '|' | kw= '||' | kw= '&' | kw= '&&' | kw= '==' | kw= '!' | kw= '<<' | kw= '<=>' | kw= '>' | kw= '..' | kw= '...' )
             int alt59=23;
             switch ( input.LA(1) ) {
             case 50:
@@ -5071,7 +5002,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             switch (alt59) {
                 case 1 :
-                    // InternalRails.g:1534:2: kw= ': '
+                    // InternalRails.g:1488:2: kw= ': '
                     {
                     kw=(Token)match(input,50,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5084,7 +5015,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRails.g:1541:2: kw= '?'
+                    // InternalRails.g:1495:2: kw= '?'
                     {
                     kw=(Token)match(input,48,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5097,7 +5028,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalRails.g:1548:2: kw= '<='
+                    // InternalRails.g:1502:2: kw= '<='
                     {
                     kw=(Token)match(input,51,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5110,7 +5041,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalRails.g:1555:2: kw= '<'
+                    // InternalRails.g:1509:2: kw= '<'
                     {
                     kw=(Token)match(input,43,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5123,7 +5054,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalRails.g:1562:2: kw= '+'
+                    // InternalRails.g:1516:2: kw= '+'
                     {
                     kw=(Token)match(input,52,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5136,7 +5067,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalRails.g:1569:2: kw= '-'
+                    // InternalRails.g:1523:2: kw= '-'
                     {
                     kw=(Token)match(input,53,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5149,7 +5080,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalRails.g:1576:2: kw= '*'
+                    // InternalRails.g:1530:2: kw= '*'
                     {
                     kw=(Token)match(input,54,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5162,7 +5093,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalRails.g:1583:2: kw= '/'
+                    // InternalRails.g:1537:2: kw= '/'
                     {
                     kw=(Token)match(input,55,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5175,7 +5106,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalRails.g:1590:2: kw= '%'
+                    // InternalRails.g:1544:2: kw= '%'
                     {
                     kw=(Token)match(input,56,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5188,7 +5119,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalRails.g:1597:2: kw= '**'
+                    // InternalRails.g:1551:2: kw= '**'
                     {
                     kw=(Token)match(input,57,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5201,7 +5132,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalRails.g:1604:2: kw= '='
+                    // InternalRails.g:1558:2: kw= '='
                     {
                     kw=(Token)match(input,49,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5214,7 +5145,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalRails.g:1611:2: kw= '~'
+                    // InternalRails.g:1565:2: kw= '~'
                     {
                     kw=(Token)match(input,58,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5227,7 +5158,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalRails.g:1618:2: kw= '|'
+                    // InternalRails.g:1572:2: kw= '|'
                     {
                     kw=(Token)match(input,59,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5240,7 +5171,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // InternalRails.g:1625:2: kw= '||'
+                    // InternalRails.g:1579:2: kw= '||'
                     {
                     kw=(Token)match(input,60,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5253,7 +5184,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // InternalRails.g:1632:2: kw= '&'
+                    // InternalRails.g:1586:2: kw= '&'
                     {
                     kw=(Token)match(input,61,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5266,7 +5197,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // InternalRails.g:1639:2: kw= '&&'
+                    // InternalRails.g:1593:2: kw= '&&'
                     {
                     kw=(Token)match(input,62,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5279,7 +5210,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // InternalRails.g:1646:2: kw= '=='
+                    // InternalRails.g:1600:2: kw= '=='
                     {
                     kw=(Token)match(input,63,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5292,7 +5223,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // InternalRails.g:1653:2: kw= '!'
+                    // InternalRails.g:1607:2: kw= '!'
                     {
                     kw=(Token)match(input,64,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5305,7 +5236,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // InternalRails.g:1660:2: kw= '<<'
+                    // InternalRails.g:1614:2: kw= '<<'
                     {
                     kw=(Token)match(input,65,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5318,7 +5249,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // InternalRails.g:1667:2: kw= '<=>'
+                    // InternalRails.g:1621:2: kw= '<=>'
                     {
                     kw=(Token)match(input,66,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5331,7 +5262,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 21 :
-                    // InternalRails.g:1674:2: kw= '>'
+                    // InternalRails.g:1628:2: kw= '>'
                     {
                     kw=(Token)match(input,67,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5344,7 +5275,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 22 :
-                    // InternalRails.g:1681:2: kw= '..'
+                    // InternalRails.g:1635:2: kw= '..'
                     {
                     kw=(Token)match(input,68,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5357,7 +5288,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 23 :
-                    // InternalRails.g:1688:2: kw= '...'
+                    // InternalRails.g:1642:2: kw= '...'
                     {
                     kw=(Token)match(input,69,FOLLOW_32); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5372,7 +5303,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRails.g:1693:2: (kw= '=' )?
+            // InternalRails.g:1647:2: (kw= '=' )?
             int alt60=2;
             int LA60_0 = input.LA(1);
 
@@ -5381,7 +5312,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             }
             switch (alt60) {
                 case 1 :
-                    // InternalRails.g:1694:2: kw= '='
+                    // InternalRails.g:1648:2: kw= '='
                     {
                     kw=(Token)match(input,49,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5459,8 +5390,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred3_InternalRails
     public final void synpred3_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:422:4: ( RULE_SPACE )
-        // InternalRails.g:422:6: RULE_SPACE
+        // InternalRails.g:421:4: ( RULE_SPACE )
+        // InternalRails.g:421:6: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -5470,8 +5401,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred4_InternalRails
     public final void synpred4_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:436:4: ( RULE_SPACE )
-        // InternalRails.g:436:6: RULE_SPACE
+        // InternalRails.g:435:4: ( RULE_SPACE )
+        // InternalRails.g:435:6: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -5481,8 +5412,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred5_InternalRails
     public final void synpred5_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:450:4: ( RULE_SPACE )
-        // InternalRails.g:450:6: RULE_SPACE
+        // InternalRails.g:449:4: ( RULE_SPACE )
+        // InternalRails.g:449:6: RULE_SPACE
         {
         match(input,RULE_SPACE,FOLLOW_2); if (state.failed) return ;
 
@@ -5492,8 +5423,8 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred6_InternalRails
     public final void synpred6_InternalRails_fragment() throws RecognitionException {   
-        // InternalRails.g:457:4: ( RULE_LF )
-        // InternalRails.g:457:6: RULE_LF
+        // InternalRails.g:456:4: ( RULE_LF )
+        // InternalRails.g:456:6: RULE_LF
         {
         match(input,RULE_LF,FOLLOW_2); if (state.failed) return ;
 
@@ -5677,7 +5608,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             this.transition = dfa_14;
         }
         public String getDescription() {
-            return "411:3: (this_MethodCallParameters_11= ruleMethodCallParameters )?";
+            return "410:3: (this_MethodCallParameters_11= ruleMethodCallParameters )?";
         }
     }
     static final String dfa_15s = "\2\23\2\uffff";
@@ -5704,7 +5635,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             this.transition = dfa_16;
         }
         public String getDescription() {
-            return "550:1: ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )?";
+            return "549:1: ( (this_SPACE_3= RULE_SPACE )* this_LF_4= RULE_LF )?";
         }
     }
     static final String dfa_17s = "\17\uffff";
@@ -5753,7 +5684,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             this.transition = dfa_23;
         }
         public String getDescription() {
-            return "603:1: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue )";
+            return "602:1: (this_SYMBOL_0= RULE_SYMBOL | this_STRING_1= RULE_STRING | this_ARRAY_BLOCK_2= RULE_ARRAY_BLOCK | this_PARENTHESIS_BLOCK_3= RULE_PARENTHESIS_BLOCK | this_DECIMAL_4= RULE_DECIMAL | this_INT_5= RULE_INT | this_REGEXP_6= RULE_REGEXP | this_MethodChainCall_7= ruleMethodChainCall | this_IgnoredHashKeyValue_8= ruleIgnoredHashKeyValue )";
         }
     }
     static final String dfa_24s = "\12\uffff";
@@ -5795,7 +5726,7 @@ public class InternalRailsParser extends AbstractInternalAntlrParser {
             this.transition = dfa_29;
         }
         public String getDescription() {
-            return "1186:3: (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP )";
+            return "1185:3: (this_SYMBOL_8= RULE_SYMBOL | this_STRING_9= RULE_STRING | this_BRACKET_BLOCK_10= RULE_BRACKET_BLOCK | this_ARRAY_BLOCK_11= RULE_ARRAY_BLOCK | this_DECIMAL_12= RULE_DECIMAL | this_INT_13= RULE_INT | this_INT_METHOD_14= RULE_INT_METHOD | this_MethodChainCall_15= ruleMethodChainCall | this_REGEXP_16= RULE_REGEXP )";
         }
     }
  
