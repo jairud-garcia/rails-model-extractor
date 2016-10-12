@@ -75,7 +75,7 @@ MethodName:
 ;
 
 OperationsChain:
-	name=MethodChainCall (operators+=OperatorRule operants+=(BRACKET_BLOCK|DECIMAL|MethodChainCall|REGEXP))*
+	MethodChainCall (OperatorRule (BRACKET_BLOCK|DECIMAL|MethodChainCall|REGEXP))*
 ;
 OperatorRule:
 //	operator_string=OPERATOR_STRING '='?
