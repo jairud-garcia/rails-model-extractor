@@ -1,0 +1,27 @@
+pre{
+	var targetApp=rmodel!Application.all.first().transformApp();
+}
+
+
+operation rmodel!Application transformApp(): target!Application {
+	var app=new target!Application;
+	app.name = self.name;
+	app.simpleRelationships=new Collection;
+	app.basicElements=new Collection;
+	rmodel!RubyClass.all.collect(r|r.extractClass(app));
+	return app;
+}
+
+
+operation rmodel!RubyClass extractClass(targetApp){
+	var klass=new target!RubyClass;
+	klass.name=self.name;
+//	klass.superClass=self.superType;
+	klass.description = self.superType;
+	targetApp.basicElements.add(klass);
+
+}
+
+post{
+	"Finished".println();
+}
