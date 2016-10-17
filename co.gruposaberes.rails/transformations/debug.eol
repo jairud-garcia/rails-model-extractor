@@ -1,0 +1,22 @@
+var StringTool : new Native("co.gruposaberes.rails.eclipse.StringTool");
+var className = "Materias";
+if(className.endsWith('s')){
+	className=className.substring(0,className.length()-1);
+}
+className=className.toLowerCase();
+var classCollection = new Collection();
+classCollection.println();
+classCollection.add('Matricula');
+classCollection.add('Pension');
+classCollection.add('ateria');
+classCollection.add('Persona');
+var currentClass=null;
+var currentScore=10;
+for(klass in classCollection){
+	var distance = StringTool.distance(className,klass);
+	if(distance<currentScore){
+		currentScore=distance;
+		currentClass=klass;
+	}
+}
+currentClass.println();

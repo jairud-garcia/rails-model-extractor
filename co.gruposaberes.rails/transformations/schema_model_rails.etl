@@ -8,18 +8,172 @@ operation rmodel!Application transformApp(): target!Application {
 	app.name = self.name;
 	app.simpleRelationships=new Collection;
 	app.basicElements=new Collection;
-	rmodel!RubyClass.all.collect(r|r.extractClass(app));
+	var classes=rmodel!RubyClass.all.collect(r|r.getClass(app));
+	var associations=rmodel!RubyClass.all.collect(r|r.getRelations(app));
+	app.simpleRelationships.addAll(associations.flatten().select(e|e<>null));
+	app.basicElements.addAll(target!Namespace.all);
+	app.basicElements.addAll(classes);
 	return app;
 }
 
 
-operation rmodel!RubyClass extractClass(targetApp){
-	var klass=new target!RubyClass;
-	klass.name=self.name;
-//	klass.superClass=self.superType;
-	klass.description = self.superType;
-	targetApp.basicElements.add(klass);
+operation rmodel!RubyClass getRelations(targetApp) : Collection{
+	var originClass= target!RubyClass.all.selectOne(i|i.fullName == self.name);
+	return self.classElements.select(e|e.isKindOf(rmodel!Relationship)).collect(d|d.getAssociation(originClass));
+}
 
+operation rmodel!Relationship getOrCreateAssociation(sourceClass,targetClass,foreignKey) : target!Association{
+	var association = target!Association.all.selectOne(e|e.source==sourceClass and e.target==targetClass and e.foreignKey==foreignKey);
+	if(association==null){
+		association=new target!Association();
+		association.source=sourceClass;
+		association.target=targetClass;
+		association.foreignKey=foreignKey;
+		("New associaction "+ sourceClass.name + " -> "+ targetClass.name + ' : ' +foreignKey).println();
+	}
+	return association;
+}
+
+
+operation rmodel!Relationship getAssociation(klass): target!Association{
+	var associationClass=self.getAssociationClass();
+	if(associationClass==null){
+		("Association Not found "+ klass.name+" "+self.name).println();
+		return null;
+	}
+	var foreign_key=self.getForeignKey(klass);
+	var relation = null;
+	switch (self.relationType) {
+		case 'belongs_to': 
+			relation=self.getOrCreateAssociation(klass,associationClass,foreign_key);
+		case 'has_many' :
+			relation=self.getOrCreateAssociation(associationClass,klass,foreign_key);
+			relation.associationType="O2M";
+		case 'has_one' : 
+			relation=self.getOrCreateAssociation(associationClass,klass,foreign_key);
+			relation.associationType="O2O";
+		case 'has_and_belongs_to_many' :
+			relation= target!Association.all.selectOne(e|e.associationType=="M2M" and (
+				(e.source==klass and e.target==associationClass) or
+				(e.source==associationClass and e.target==klass) 
+			));
+			if(relation==null){
+				relation=new target!Association;
+				relation.source=klass;
+				relation.target=associationClass;
+				relation.associationType="M2M";
+			}		
+	}
+	return relation;
+}
+
+operation rmodel!Relationship getForeignKey(klass): String{
+	if(self.options<>null){
+		var class_options=self.options.select(a| a.key==':foreign_key' or a.key='foreign_key' );
+		if(class_options.size()>0){
+			return class_options.last.value;
+		}
+	}
+	switch (self.relationType) {
+		case 'belongs_to': 
+			return singularize(self.name)+'_id';
+		case 'has_many' :
+			return klass.name.toLowerCase().replace(':','')+'_id';
+		case 'has_one' : 
+			return klass.name.toLowerCase().replace(':','')+'_id';
+		default :
+			return null;
+	}
+}
+
+operation singularize(text): String{
+	if(text.endsWith('s')){
+		text=text.substring(0,text.length()-1);
+	}
+	return text.toLowerCase().replace('_','').replace(':','');
+}
+
+operation rmodel!Relationship getAssociationClass(): target!RubyClass{
+	var currentClass=self.getAssociationClassFromOptions();
+	if(currentClass==null){
+		var className=singularize(self.name);
+		var StringTool : new Native("co.gruposaberes.rails.eclipse.StringTool");
+
+		var currentScore=10;
+		for(klass in target!RubyClass.all){
+			var distance = StringTool.distance(className,klass.name);
+			if(distance<currentScore){
+				currentScore=distance;
+				currentClass=klass;
+			}
+		}
+	}
+	if(currentClass==null){
+		("AssociationClass Not found "+ self.name).println();
+	}
+	return currentClass;
+}
+
+operation rmodel!Relationship getAssociationClassFromOptions(): target!RubyClass{
+	var currentClass=null;
+	if(self.options<>null){
+		var class_options=self.options.select(a| a.key==':class_name' or a.key='class_name' );
+		if(class_options.size()>0){
+			currentClass=target!RubyClass.all.selectOne(i|i.name = class_options.last.value);
+		}
+	}
+	return currentClass;
+}
+
+operation rmodel!RubyClass getClass(targetApp){
+	var namespace=self.getNamespace(targetApp);
+	var klass=new target!RubyClass;
+	klass.name=self.name.split('::').last;
+	klass.fullName=self.name;
+	klass.superClass=self.superType;
+	klass.description = klass.name+" < "+self.superType;
+	klass.innerElements=new Collection;
+	targetApp.basicElements.add(klass);
+	if(namespace <> null){
+		namespace.innerElements.add(klass);
+		namespace.innerElements.println();
+	}
+	klass.innerElements.addAll(self.getMethods(targetApp));
+	return klass;
+}
+
+operation rmodel!RubyClass getMethods(targetApp): Collection{
+	var methods = self.classElements.select(e|e.isKindOf(rmodel!RubyMethod)).collect(d|d.getMethod());
+	targetApp.basicElements.addAll(methods);
+	return methods;
+}
+
+operation rmodel!RubyMethod getMethod(): target!Method
+{
+	var method=new target!Method;
+	method.name=self.name;
+	return method ;
+}
+
+operation rmodel!RubyClass getNamespace(targetApp) {
+	var tokens=self.name.split('::');
+	var currentNamespace=null;
+	var currentNamespaceName="";
+	if(tokens.size()>1){
+		for (i in Sequence{0..tokens.size()-2}) {
+			currentNamespaceName=currentNamespaceName+'::'+tokens.at(i);
+			var namespace=target!Namespace.all.selectOne(i|i.description==currentNamespaceName);
+			if(namespace==null){
+				('nueva instancia '+currentNamespaceName).println();
+				namespace= new target!Namespace();
+				namespace.name =tokens.at(i);
+				namespace.description=currentNamespaceName;
+				namespace.innerElements=new Collection;
+			}
+			currentNamespace=namespace;
+		}
+	}
+	return currentNamespace; 	
 }
 
 post{
