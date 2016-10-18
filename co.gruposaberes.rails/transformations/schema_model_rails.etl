@@ -188,14 +188,20 @@ operation rmodel!RubyClass getConfigTable(): rschema!Table{
 	}
 }
 operation rmodel!RubyClass getMethods(targetApp): Collection{
-	var methods = self.classElements.select(e|e.isKindOf(rmodel!RubyMethod)).collect(d|d.getMethod());
+	var methods = self.classElements.select(e|e.isKindOf(rmodel!RubyMethod) and e.name <> null and e.name <> "").collect(d|d.getMethod());
 	targetApp.basicElements.addAll(methods);
 	return methods;
 }
 
 operation rmodel!RubyMethod getMethod(): target!Method{
 	var method=new target!Method;
-	method.name=self.name;
+	if(self.name.startsWith('self.')){
+		method.methodType='class';
+		method.name=self.name.substring(5);
+	}else{
+		method.methodType='instance';
+		method.name=self.name;
+	}
 	return method ;
 }
 
