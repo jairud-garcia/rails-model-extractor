@@ -12,7 +12,6 @@ operation rmodel!Application transformApp(): target!Application {
 	var associations=rmodel!RubyClass.all.collect(r|r.getRelations(app));
 	app.simpleRelationships.addAll(associations.flatten().select(e|e<>null));
 	app.basicElements.addAll(target!Namespace.all);
-	app.basicElements.addAll(classes);
 	return app;
 }
 
@@ -125,7 +124,7 @@ operation rmodel!Relationship getAssociationClassFromOptions(): target!RubyClass
 	return currentClass;
 }
 
-operation rmodel!RubyClass getClass(targetApp){
+operation rmodel!RubyClass getClass(targetApp) : target!RubyClass{
 	var namespace=self.getNamespace(targetApp);
 	var klass=new target!RubyClass;
 	klass.name=self.name.split('::').last;
@@ -136,26 +135,71 @@ operation rmodel!RubyClass getClass(targetApp){
 	targetApp.basicElements.add(klass);
 	if(namespace <> null){
 		namespace.innerElements.add(klass);
-		namespace.innerElements.println();
 	}
 	klass.innerElements.addAll(self.getMethods(targetApp));
+	if(klass.superClass=='ActiveRecord::Base'){
+		var attributes =self.getAttributes(klass);
+		if(attributes.size()>0){
+
+			klass.innerElements.addAll(attributes);
+		}
+	}
 	return klass;
 }
 
+operation rmodel!RubyClass getAttributes(klass): Collection{
+	var table = self.getTable(klass);
+	if(table<>null){
+		return table.attributes.collect(e|e.getAttribute());
+	}
+	return new Collection;
+}
+
+operation rschema!TableAttributes getAttribute(): target!Attribute{
+	var attribute=new target!Attribute();
+	attribute.name = self.name;
+	attribute.dataType = self.datatype;
+	return attribute;
+}
+
+operation rmodel!RubyClass getTable(klass): rschema!Table{
+	var currentTable=self.getConfigTable();
+	if(currentTable==null){
+		var StringTool : new Native("co.gruposaberes.rails.eclipse.StringTool");
+		var currentScore=10;
+		for(table in rschema!Table.all){
+			var distance = StringTool.distance(StringTool.pluralize(klass.name.toLowerCase()),table.name.replace('_',''));
+			if(distance<currentScore){
+				currentScore=distance;
+				currentTable=table;
+			}
+		}
+	}
+	if(currentTable<> null){
+		("Found table "+currentTable.name+' for class '+klass.name).println();
+	}
+	return currentTable;
+}
+
+operation rmodel!RubyClass getConfigTable(): rschema!Table{
+	var table_name=self.classElements.selectOne(e|e.isKindOf(rmodel!TableName));
+	if(table_name<> null ){
+		return rschema!Table.all.selectOne(e|e.name=='table_name');
+	}
+}
 operation rmodel!RubyClass getMethods(targetApp): Collection{
 	var methods = self.classElements.select(e|e.isKindOf(rmodel!RubyMethod)).collect(d|d.getMethod());
 	targetApp.basicElements.addAll(methods);
 	return methods;
 }
 
-operation rmodel!RubyMethod getMethod(): target!Method
-{
+operation rmodel!RubyMethod getMethod(): target!Method{
 	var method=new target!Method;
 	method.name=self.name;
 	return method ;
 }
 
-operation rmodel!RubyClass getNamespace(targetApp) {
+operation rmodel!RubyClass getNamespace(targetApp) : target!Namespace{
 	var tokens=self.name.split('::');
 	var currentNamespace=null;
 	var currentNamespaceName="";
@@ -164,7 +208,7 @@ operation rmodel!RubyClass getNamespace(targetApp) {
 			currentNamespaceName=currentNamespaceName+'::'+tokens.at(i);
 			var namespace=target!Namespace.all.selectOne(i|i.description==currentNamespaceName);
 			if(namespace==null){
-				('nueva instancia '+currentNamespaceName).println();
+				('Found namespace '+currentNamespaceName).println();
 				namespace= new target!Namespace();
 				namespace.name =tokens.at(i);
 				namespace.description=currentNamespaceName;
