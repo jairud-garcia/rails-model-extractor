@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated universal3 -->
+      <package
+            uri="http://universal/core"
+            class="universal.core.CorePackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated universal3 -->
+      <package
+            uri="http://universal/metrics"
+            class="universal.metrics.MetricsPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated universal3 -->
+      <package
+            uri="http://universal/oracleforms"
+            class="universal.oracleforms.OracleformsPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated universal3 -->
+      <package
+            uri="http://universal/oop"
+            class="universal.OOP.OOPPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated universal3 -->
+      <package
+            uri="http://universal/microservice"
+            class="universal.microservice.MicroservicePackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated universal3 -->
+      <package
+            uri="http://universal/visualization"
+            class="universal.visualization.VisualizationPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated universal3 -->
+      <package
+            uri="http://universal/rails"
+            class="universal.rails.RailsPackage"/>
+   </extension>
+
+</plugin>

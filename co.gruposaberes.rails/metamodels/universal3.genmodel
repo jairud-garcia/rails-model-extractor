@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/UMTModel/src" modelPluginID="UMTModel" modelName="Universal3"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>universal3.ecore</foreignModel>
+  <genPackages prefix="Universal" disposableProviderFactory="true" ecorePackage="universal3.ecore#/">
+    <nestedGenPackages prefix="Core" disposableProviderFactory="true" ecorePackage="universal3.ecore#//core">
+      <genClasses image="false" ecoreClass="universal3.ecore#//core/Element">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//core/Element/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//core/Element/description"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//core/Element/measurant"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//core/SimpleElement"/>
+      <genClasses ecoreClass="universal3.ecore#//core/Container">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference universal3.ecore#//core/Container/innerElements"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//core/Relation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//core/Relation/source"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//core/Relation/target"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//core/Relation/measurant"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//core/RelationContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference universal3.ecore#//core/RelationContainer/relations"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//core/Application">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//core/Application/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference universal3.ecore#//core/Application/basicElements"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference universal3.ecore#//core/Application/complexRelationships"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference universal3.ecore#//core/Application/simpleRelationships"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Metrics" disposableProviderFactory="true" ecorePackage="universal3.ecore#//metrics">
+      <genClasses ecoreClass="universal3.ecore#//metrics/Measurement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//metrics/Measurement/elmentMeasurants"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//metrics/Measurement/relationMeasurants"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//metrics/Measurement/measure"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//metrics/Grade">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//metrics/Grade/gradeValue"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//metrics/DimensionalMeasurement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//metrics/DimensionalMeasurement/dimensionValue"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//metrics/DimensionalToObjectMeasurement"/>
+      <genClasses ecoreClass="universal3.ecore#//metrics/Measure">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//metrics/Measure/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//metrics/Measure/description"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//metrics/SimplifiedDecisionMetrics">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference universal3.ecore#//metrics/SimplifiedDecisionMetrics/measures"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference universal3.ecore#//metrics/SimplifiedDecisionMetrics/observations"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//metrics/Observations">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//metrics/Observations/whenObserved"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference universal3.ecore#//metrics/Observations/measurement"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//metrics/NumberLinesMeasure">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//metrics/NumberLinesMeasure/totalLines"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Oracleforms" disposableProviderFactory="true" ecorePackage="universal3.ecore#//oracleforms">
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/Form"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/Table"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/Module"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/OracleFormsApp"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/ModuleRelationship"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/FormCallRelationship"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/MasterDetailRelationship"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/DetailTableRelationship"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/SingleTableRelationship"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/PLSQLRelationship"/>
+      <genClasses ecoreClass="universal3.ecore#//oracleforms/NumberOfFormsPerModuleMeasure"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="OOP" disposableProviderFactory="true" ecorePackage="universal3.ecore#//OOP">
+      <genClasses ecoreClass="universal3.ecore#//OOP/Method"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/Type"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/Class"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/Interface"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/OOPApplication"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/TypeRelationship"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/Generalization"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/Realization"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/Composition"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/Dependency">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//OOP/Dependency/methodInvokedFromSourceClass"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//OOP/Dependency/methodInvokerFromTargetClass"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//OOP/WeigthedMethodsPerClassMeasure"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/NumberOfClassesMeasure"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/CouplingBetweenObjectMeasure"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/NumberOfUsesMeasure"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/CalculatedCouplingMeasure"/>
+      <genClasses ecoreClass="universal3.ecore#//OOP/NumberOfContainmentsMeasure"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Microservice" disposableProviderFactory="true" ecorePackage="universal3.ecore#//microservice">
+      <genClasses ecoreClass="universal3.ecore#//microservice/SessionToEntityCluster">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//microservice/SessionToEntityCluster/numberOfTypes"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//microservice/SessionToEntityCluster/numberOfLines"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//microservice/SessionToEntityCluster/typeReferences"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//microservice/Microservice"/>
+      <genClasses ecoreClass="universal3.ecore#//microservice/MicroserviceArchitecture"/>
+      <genClasses ecoreClass="universal3.ecore#//microservice/ClusterRelationship">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//microservice/ClusterRelationship/typesContainedLeft"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//microservice/ClusterRelationship/typesContainedRight"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//microservice/MicroserviceRelationship">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//microservice/MicroserviceRelationship/dependencies"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//microservice/ClusterRelationConflictPercentageMeasure"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Visualization" disposableProviderFactory="true" ecorePackage="universal3.ecore#//visualization">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="universal3.ecore#//visualization/Color">
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/white"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/black"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/blue"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/chocolate"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/gray"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/green"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/orange"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/purple"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/red"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Color/yellow"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="universal3.ecore#//visualization/Alignment">
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Alignment/CENTER"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Alignment/LEFT"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Alignment/RIGHT"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="universal3.ecore#//visualization/Position">
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Position/BORDER"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/Position/NODE"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="universal3.ecore#//visualization/LineType">
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/LineType/STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/LineType/STROKE"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/LineType/POINTS"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/LineType/MIXED"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="universal3.ecore#//visualization/RoutingType">
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/RoutingType/DIRECT"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/RoutingType/RECTILINEAL"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/RoutingType/TREE"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="universal3.ecore#//visualization/ArrowType">
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/NONE"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/SIMPLE"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/TRIANGULAR"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/TRIANGULAR_FILLED"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/DIAMOND"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/DIAMOND_FILLED"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/ARROW_DIAMOND"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/ARROW_DIAMOND_FILLED"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/MANY"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/MANY_TRIANGULAR"/>
+        <genEnumLiterals ecoreEnumLiteral="universal3.ecore#//visualization/ArrowType/MANY_FILLED"/>
+      </genEnums>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VDiagramElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VDiagramElement/uuid"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//visualization/VDiagramElement/label"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//visualization/VDiagramElement/border"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VLabel">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VLabel/size"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VLabel/font"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VLabel/isBold"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VLabel/isItalic"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VLabel/alignment"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VLabel/position"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VDrawable">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VDrawable/color"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VDrawable/thickness"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VBorder"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VContainer">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//visualization/VContainer/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VDiagram">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VDiagram/isRoot"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VClass">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VClass/isShared"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VPackage"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VShape">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VShape/color"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VShape/width"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VShape/heigth"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VCircule"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VTriangle"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VDiamond"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VQuadrangle"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VDot"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VEllipse"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VRelationInvocation">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VRelationInvocation/className"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VRelationInvocation/methodName"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VInvocation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//visualization/VInvocation/fromMethod"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//visualization/VInvocation/toMethod"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VConnectorElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VConnectorElement/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VConnectorElement/lineType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VConnectorElement/routingType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VConnectorElement/arrowTypeForSource"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VConnectorElement/arrowTypeForTarget"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VConnectorElement/sourceID"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute universal3.ecore#//visualization/VConnectorElement/targetID"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//visualization/VConnectorElement/invocations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference universal3.ecore#//visualization/VConnectorElement/connectors"/>
+      </genClasses>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VGeneralization"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VImplements"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VDependecy"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VAssociation"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VAgregation"/>
+      <genClasses ecoreClass="universal3.ecore#//visualization/VComposition"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
