@@ -448,48 +448,48 @@
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
       <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="Application" eSuperTypes="#//core/Application">
+    <eClassifiers xsi:type="ecore:EClass" name="RailsApplication" eSuperTypes="#//core/Application">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="simpleRelationShipsInvariant basicElementsInvariant"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="simpleRelationShipsInvariant" value="self.simpleRelationships->forAll(e | e.oclIsTypeOf(Association)=true)"/>
-        <details key="basicElementsInvariant" value="self.basicElements->forAll(&#xA;       &#x9;&#x9;&#x9;e | e.oclIsTypeOf(Method)=true or e.oclIsTypeOf(Attribute)=true or e.oclIsTypeOf(RubyClass)=true or e.oclIsTypeOf(Namespace)=true  &#x9;&#x9;&#x9;&#xA;       &#x9;&#x9;)"/>
+        <details key="simpleRelationShipsInvariant" value="self.simpleRelationships->forAll(e | e.oclIsTypeOf(RailsAssociation)=true)"/>
+        <details key="basicElementsInvariant" value="self.basicElements->forAll(&#xA;       &#x9;&#x9;&#x9;e | e.oclIsTypeOf(RailsMethod)=true or e.oclIsTypeOf(RailsAttribute)=true or e.oclIsTypeOf(RailsClass)=true or e.oclIsTypeOf(RailsNamespace)=true  &#x9;&#x9;&#x9;&#xA;       &#x9;&#x9;)"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//core/Relation">
+    <eClassifiers xsi:type="ecore:EClass" name="RailsAssociation" eSuperTypes="#//core/Relation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="associationTypeInvariant sourceInvariant targetInvariant"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="associationTypeInvariant" value="self.associationType = null or &#xA;&#x9;&#x9;&#x9;&#x9;self.associationType = 'M2M' or self.associationType = 'O2M' or self.associationType = 'O2O'"/>
-        <details key="sourceInvariant" value="self.source.oclIsTypeOf(RubyClass)=true"/>
-        <details key="targetInvariant" value="self.target.oclIsTypeOf(RubyClass)=true"/>
+        <details key="sourceInvariant" value="self.source.oclIsTypeOf(RailsClass)=true"/>
+        <details key="targetInvariant" value="self.target.oclIsTypeOf(RailsClass)=true"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="associationType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="foreignKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Namespace" eSuperTypes="#//core/Container">
+    <eClassifiers xsi:type="ecore:EClass" name="RailsNamespace" eSuperTypes="#//core/Container">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="innerElementsInvariant"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="innerElementsInvariant" value="self.innerElements->forAll(&#xA;&#x9;&#x9;&#x9;&#x9;e|e.oclIsTypeOf(RubyClass)=true or e.oclIsTypeOf(Namespace)=true&#xA;&#x9;&#x9;&#x9;)"/>
+        <details key="innerElementsInvariant" value="self.innerElements->forAll(&#xA;&#x9;&#x9;&#x9;&#x9;e|e.oclIsTypeOf(RailsClass)=true or e.oclIsTypeOf(RailsNamespace)=true&#xA;&#x9;&#x9;&#x9;)"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="RubyClass" eSuperTypes="#//core/Container">
+    <eClassifiers xsi:type="ecore:EClass" name="RailsClass" eSuperTypes="#//core/Container">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="innerElementsInvariant"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="innerElementsInvariant" value="self.innerElements->forAll(&#xA;&#x9;&#x9;&#x9;&#x9;e|e.oclIsTypeOf(Method)=true or e.oclIsTypeOf(Attribute)=true&#xA;&#x9;&#x9;&#x9;)"/>
+        <details key="innerElementsInvariant" value="self.innerElements->forAll(&#xA;&#x9;&#x9;&#x9;&#x9;e|e.oclIsTypeOf(RailsMethod)=true or e.oclIsTypeOf(RailsAttribute)=true&#xA;&#x9;&#x9;&#x9;)"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="superClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="#//core/SimpleElement">
+    <eClassifiers xsi:type="ecore:EClass" name="RailsMethod" eSuperTypes="#//core/SimpleElement">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="methodTypeInvariant"/>
       </eAnnotations>
@@ -498,7 +498,7 @@
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//core/SimpleElement">
+    <eClassifiers xsi:type="ecore:EClass" name="RailsAttribute" eSuperTypes="#//core/SimpleElement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>

@@ -3,28 +3,28 @@ pre{
 }
 
 
-operation rmodel!Application transformApp(): target!Application {
-	var app=new target!Application;
+operation rmodel!Application transformApp(): target!RailsApplication {
+	var app=new target!RailsApplication;
 	app.name = self.name;
 	app.simpleRelationships=new Collection;
 	app.basicElements=new Collection;
 	var classes=rmodel!RubyClass.all.collect(r|r.getClass(app));
 	var associations=rmodel!RubyClass.all.collect(r|r.getRelations(app));
 	app.simpleRelationships.addAll(associations.flatten().select(e|e<>null));
-	app.basicElements.addAll(target!Namespace.all);
+	app.basicElements.addAll(target!RailsNamespace.all);
 	return app;
 }
 
 
 operation rmodel!RubyClass getRelations(targetApp) : Collection{
-	var originClass= target!RubyClass.all.selectOne(i|i.fullName == self.name);
+	var originClass= target!RailsClass.all.selectOne(i|i.fullName == self.name);
 	return self.classElements.select(e|e.isKindOf(rmodel!Relationship)).collect(d|d.getAssociation(originClass));
 }
 
-operation rmodel!Relationship getOrCreateAssociation(sourceClass,targetClass,foreignKey) : target!Association{
-	var association = target!Association.all.selectOne(e|e.source==sourceClass and e.target==targetClass and e.foreignKey==foreignKey);
+operation rmodel!Relationship getOrCreateAssociation(sourceClass,targetClass,foreignKey) : target!RailsAssociation{
+	var association = target!RailsAssociation.all.selectOne(e|e.source==sourceClass and e.target==targetClass and e.foreignKey==foreignKey);
 	if(association==null){
-		association=new target!Association();
+		association=new target!RailsAssociation();
 		association.source=sourceClass;
 		association.target=targetClass;
 		association.foreignKey=foreignKey;
@@ -34,7 +34,7 @@ operation rmodel!Relationship getOrCreateAssociation(sourceClass,targetClass,for
 }
 
 
-operation rmodel!Relationship getAssociation(klass): target!Association{
+operation rmodel!Relationship getAssociation(klass): target!RailsAssociation{
 	var associationClass=self.getAssociationClass();
 	if(associationClass==null){
 		("Association Not found "+ klass.name+" "+self.name).println();
@@ -52,12 +52,12 @@ operation rmodel!Relationship getAssociation(klass): target!Association{
 			relation=self.getOrCreateAssociation(associationClass,klass,foreign_key);
 			relation.associationType="O2O";
 		case 'has_and_belongs_to_many' :
-			relation= target!Association.all.selectOne(e|e.associationType=="M2M" and (
+			relation= target!RailsAssociation.all.selectOne(e|e.associationType=="M2M" and (
 				(e.source==klass and e.target==associationClass) or
 				(e.source==associationClass and e.target==klass) 
 			));
 			if(relation==null){
-				relation=new target!Association;
+				relation=new target!RailsAssociation;
 				relation.source=klass;
 				relation.target=associationClass;
 				relation.associationType="M2M";
@@ -92,14 +92,14 @@ operation singularize(text): String{
 	return text.toLowerCase().replace('_','').replace(':','');
 }
 
-operation rmodel!Relationship getAssociationClass(): target!RubyClass{
+operation rmodel!Relationship getAssociationClass(): target!RailsClass{
 	var currentClass=self.getAssociationClassFromOptions();
 	if(currentClass==null){
 		var className=singularize(self.name);
 		var StringTool : new Native("co.gruposaberes.rails.eclipse.StringTool");
 
 		var currentScore=10;
-		for(klass in target!RubyClass.all){
+		for(klass in target!RailsClass.all){
 			var distance = StringTool.distance(className,klass.name);
 			if(distance<currentScore){
 				currentScore=distance;
@@ -113,20 +113,20 @@ operation rmodel!Relationship getAssociationClass(): target!RubyClass{
 	return currentClass;
 }
 
-operation rmodel!Relationship getAssociationClassFromOptions(): target!RubyClass{
+operation rmodel!Relationship getAssociationClassFromOptions(): target!RailsClass{
 	var currentClass=null;
 	if(self.options<>null){
 		var class_options=self.options.select(a| a.key==':class_name' or a.key='class_name' );
 		if(class_options.size()>0){
-			currentClass=target!RubyClass.all.selectOne(i|i.name = class_options.last.value);
+			currentClass=target!RailsClass.all.selectOne(i|i.name = class_options.last.value);
 		}
 	}
 	return currentClass;
 }
 
-operation rmodel!RubyClass getClass(targetApp) : target!RubyClass{
+operation rmodel!RubyClass getClass(targetApp) : target!RailsClass{
 	var namespace=self.getNamespace(targetApp);
-	var klass=new target!RubyClass;
+	var klass=new target!RailsClass;
 	klass.name=self.name.split('::').last;
 	klass.fullName=self.name;
 	klass.superClass=self.superType;
@@ -155,8 +155,8 @@ operation rmodel!RubyClass getAttributes(klass): Collection{
 	return new Collection;
 }
 
-operation rschema!TableAttributes getAttribute(): target!Attribute{
-	var attribute=new target!Attribute();
+operation rschema!TableAttributes getAttribute(): target!RailsAttribute{
+	var attribute=new target!RailsAttribute();
 	attribute.name = self.name;
 	attribute.dataType = self.datatype;
 	return attribute;
@@ -193,8 +193,8 @@ operation rmodel!RubyClass getMethods(targetApp): Collection{
 	return methods;
 }
 
-operation rmodel!RubyMethod getMethod(): target!Method{
-	var method=new target!Method;
+operation rmodel!RubyMethod getMethod(): target!RailsMethod{
+	var method=new target!RailsMethod;
 	if(self.name.startsWith('self.')){
 		method.methodType='class';
 		method.name=self.name.substring(5);
@@ -205,17 +205,17 @@ operation rmodel!RubyMethod getMethod(): target!Method{
 	return method ;
 }
 
-operation rmodel!RubyClass getNamespace(targetApp) : target!Namespace{
+operation rmodel!RubyClass getNamespace(targetApp) : target!RailsNamespace{
 	var tokens=self.name.split('::');
 	var currentNamespace=null;
 	var currentNamespaceName="";
 	if(tokens.size()>1){
 		for (i in Sequence{0..tokens.size()-2}) {
 			currentNamespaceName=currentNamespaceName+'::'+tokens.at(i);
-			var namespace=target!Namespace.all.selectOne(i|i.description==currentNamespaceName);
+			var namespace=target!RailsNamespace.all.selectOne(i|i.description==currentNamespaceName);
 			if(namespace==null){
 				('Found namespace '+currentNamespaceName).println();
-				namespace= new target!Namespace();
+				namespace= new target!RailsNamespace();
 				namespace.name =tokens.at(i);
 				namespace.description=currentNamespaceName;
 				namespace.innerElements=new Collection;
