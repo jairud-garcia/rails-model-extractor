@@ -20,6 +20,7 @@ public class SchemaParser {
 	
 	private String projectPath;
 	private Schema schema;
+	private String name;
 	
 	public void parseModels(){
 		new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri("../");
@@ -28,13 +29,16 @@ public class SchemaParser {
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);	
 		
 		File f = new File(projectPath+"/db/schema.rb".replace("/",File.separator));
+		String[] pathComponents=projectPath.split(File.separator);
+		this.name=pathComponents[pathComponents.length-1];
+		
 		Resource resource = resourceSet.getResource(
 			    URI.createURI("file://"+f.getPath()), true);
 		schema = (Schema) resource.getContents().get(0);
 	}
 	
 	public String saveModel(){
-		String filePath="schema.xmi";
+		String filePath=this.name+"_schema.xmi";
 		 Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
          Map<String, Object> m = reg.getExtensionToFactoryMap();
          m.put("schema", new XMIResourceFactoryImpl());

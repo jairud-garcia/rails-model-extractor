@@ -46,7 +46,6 @@ public class ModelParser {
 					    URI.createURI("file://"+file.getPath()), true);
 				RubyClass model = (RubyClass) resource.getContents().get(0);
 				getApplication().getRubyClasses().add(model);					
-				//debug
 				System.out.println("Class: "+model.getName()+ " heredada de "+model.getSuperType());
 			}catch(Exception e){
 				System.err.println("FILE: "+file.getPath()+": /"+e.getMessage());
@@ -55,7 +54,7 @@ public class ModelParser {
 	}
 	
 	public String saveModel(){
-		String filePath="application.xmi";
+		String filePath=this.application.getName()+"_application.xmi";
 		 Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
          Map<String, Object> m = reg.getExtensionToFactoryMap();
          m.put("application", new XMIResourceFactoryImpl());
