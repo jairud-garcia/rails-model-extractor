@@ -38,7 +38,7 @@ public class SchemaParser {
 	}
 	
 	public String saveModel(){
-		String filePath=this.name+"_schema.xmi";
+		String filePath="results/"+this.name+"_schema.xmi";
 		 Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
          Map<String, Object> m = reg.getExtensionToFactoryMap();
          m.put("schema", new XMIResourceFactoryImpl());

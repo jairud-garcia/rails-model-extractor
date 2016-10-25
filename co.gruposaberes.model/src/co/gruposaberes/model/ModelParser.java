@@ -54,7 +54,7 @@ public class ModelParser {
 	}
 	
 	public String saveModel(){
-		String filePath=this.application.getName()+"_application.xmi";
+		String filePath="results/"+this.application.getName()+"_application.xmi";
 		 Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
          Map<String, Object> m = reg.getExtensionToFactoryMap();
          m.put("application", new XMIResourceFactoryImpl());
