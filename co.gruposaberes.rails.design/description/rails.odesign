@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="rails" version="11.0.0.201601261200">
+  <ownedViewpoints name="RailsClassDiagram" modelFileExtension="rails">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="RailsApplication" domainClass="rails.RailsApplication">
+      <defaultLayer name="Default">
+        <edgeMappings name="RailsAssociationEdge" sourceMapping="//@ownedViewpoints[name='RailsClassDiagram']/@ownedRepresentations[name='RailsApplication']/@defaultLayer/@containerMappings[name='RailsClassContainer']" targetMapping="//@ownedViewpoints[name='RailsClassDiagram']/@ownedRepresentations[name='RailsApplication']/@defaultLayer/@containerMappings[name='RailsClassContainer']" targetFinderExpression="[self.target/]" sourceFinderExpression="[self.source/]" domainClass="rails.RailsAssociation" useDomainElement="true">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="[ self.associationType='O2M'/]">
+            <style sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <endLabelStyleDescription showIcon="false" labelExpression="0..n">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <containerMappings name="RailsClassContainer" semanticCandidatesExpression="[basicElements/]" domainClass="rails.RailsClass" childrenPresentation="List">
+          <subNodeMappings name="RailsClassAttibute" semanticCandidatesExpression="feature:eAllContents" domainClass="rails.RailsAttribute">
+            <style xsi:type="style:BundledImageDescription" labelExpression="[self.name + ':' + self.dataType/]" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>
