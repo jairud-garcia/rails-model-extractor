@@ -6,7 +6,6 @@
 
 # eclipse specific git ignore
 *.pydevproject
-.project
 .metadata
 bin/**
 tmp/**
@@ -16,8 +15,8 @@ tmp/**/*
 *.swp
 *~.nib
 local.properties
-.settings/
-.loadpath
+#.settings/
+#.loadpath
 
 # External tool builders
 .externalToolBuilders/
