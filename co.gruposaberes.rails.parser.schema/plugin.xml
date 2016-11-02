@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://www.gruposaberes.co/rails/parser/Schema"
+			class = "co.gruposaberes.rails.parser.schema.SchemaPackage"
+			genModel = "model/generated/Schema.genmodel" />
+	</extension>
+</plugin>

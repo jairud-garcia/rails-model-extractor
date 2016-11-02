@@ -1,0 +1,71 @@
+grammar co.gruposaberes.rails.parser.Schema hidden(BS,SPACE, ML_COMMENT, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate schema "http://www.gruposaberes.co/rails/parser/Schema"
+
+
+Schema:
+	"ActiveRecord::Schema.define"PARENTHESIS_BLOCK DO_WORD
+		schema_members+=SchemaMember*
+	END_WORD;	
+	
+SchemaMember:
+	Table|Index
+;
+
+Table:
+	'create_table' name=STRING (COMMA IgnoredHashKeyValue)* DO_WORD BLOCK_PARAMS
+		attributes+=TableAttributes*
+	=> END_WORD
+;
+
+TableAttributes:
+	't.'datatype=ID name=STRING (COMMA SPACE* IgnoredHashKeyValue)*
+;
+
+IgnoredHashKeyValue:
+	SPACE* (ID':'|(SYMBOL|STRING) SPACE*'=>') SPACE* (SYMBOL|STRING|ARRAY_BLOCK|INT|ID|DECIMAL) SPACE*
+;
+
+Index:
+	ID STRING (COMMA (IgnoredHashKeyValue|ARRAY_BLOCK))*
+;
+	
+terminal COMMA: ',';
+
+terminal SPACE: ' '|'\f';
+
+terminal BRACKET_BLOCK_ALONE: '{' !('{'|'}')*  '}';
+
+terminal ARRAY_BLOCK: '['!(']')*']';
+
+terminal PARENTHESIS_BLOCK: '('!(')')*')';
+
+// terminal PARENTHESIS_BLOCK: '('->')';
+
+terminal DO_WORD: 'do';
+
+terminal END_WORD: 'end';
+
+terminal BLOCK_PARAMS: '|'ID'|';
+
+terminal SYMBOL:':'ID;
+
+terminal ID: ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+
+terminal STRING: 
+    '"' ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
+    "'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
+
+terminal ML_COMMENT	: '=begin' -> '=end';
+
+terminal SL_COMMENT : '#'->'\n';
+
+terminal INT: ('0'..'9')+;
+
+terminal DECIMAL: INT'.'INT;
+
+terminal BS	: ('\t'|'\n');
+
+terminal ANY_OTHER: .;
