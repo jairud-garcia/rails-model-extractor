@@ -6,13 +6,12 @@ pre{
 operation rmodel!Application transformApp(): railsTarget!RailsApplication {
 	var app=new railsTarget!RailsApplication;
 	app.name = self.name;
-	app.railsAssociations=new Collection;
 	app.classes=new Collection;
 	app.namespaces=new Collection;
-	/*var classes=rmodel!RubyClass.all.collect(r|r.getClass(app));
-	var associations=rmodel!RubyClass.all.collect(r|r.getRelations(app));
-	app.railsAssociations.addAll(associations.flatten().select(e|e<>null));
-	app.basicElements.addAll(railsTarget!RailsNamespace.all);*/
+	app.railsAssociations=new Collection;
+	rmodel!RubyClass.all.collect(r|r.getClass(app));
+	rmodel!RubyClass.all.collect(r|r.getRelations(app));
+	app.railsAssociations=railsTarget!RailsAssociation.all();
 	return app;
 }
 
@@ -23,12 +22,12 @@ operation rmodel!RubyClass getRelations(targetApp) : Collection{
 }
 
 operation rmodel!Relationship getOrCreateAssociation(sourceClass,targetClass,foreignKey) : railsTarget!RailsAssociation{
-	var association = railsTarget!RailsAssociation.all.selectOne(e|e.source==sourceClass and e.target==targetClass and e.foreignKey==foreignKey);
+	var association = railsTarget!RailsAssociation.all.selectOne(e|e.source==sourceClass and e.target==targetClass and e.foreignKeyColumnName==foreignKey);
 	if(association==null){
 		association=new railsTarget!RailsAssociation();
 		association.source=sourceClass;
 		association.target=targetClass;
-		association.foreignKey=foreignKey;
+		association.foreignKeyColumnName=foreignKey;
 		("New associaction "+ sourceClass.name + " -> "+ targetClass.name + ' : ' +foreignKey).println();
 	}
 	return association;
@@ -43,33 +42,50 @@ operation rmodel!Relationship getAssociation(klass): railsTarget!RailsAssociatio
 	}
 	var foreign_key=self.getForeignKey(klass);
 	var relation = null;
+	var name = self.name.replace(':','');
 	switch (self.relationType) {
 		case 'belongs_to': 
 			relation=self.getOrCreateAssociation(klass,associationClass,foreign_key);
+			relation.sourceRoleName=name;
+			relation.sourceCardinality=railsTarget!RailsCardinality#one;
 		case 'has_many' :
 			relation=self.getOrCreateAssociation(associationClass,klass,foreign_key);
-			relation.associationType="O2M";
+			relation.targetRoleName=name;
+			relation.targetCardinality=railsTarget!RailsCardinality#many;
+			if(self.isComposition()){
+				relation.associationType=railsTarget!RailsAssociationType#composition;
+			}
 		case 'has_one' : 
 			relation=self.getOrCreateAssociation(associationClass,klass,foreign_key);
-			relation.associationType="O2O";
+			relation.targetRoleName=name;
+			relation.targetCardinality=railsTarget!RailsCardinality#one;
+			if(self.isComposition()){
+				relation.associationType=railsTarget!RailsAssociationType#composition;
+			}
 		case 'has_and_belongs_to_many' :
-			relation= railsTarget!RailsAssociation.all.selectOne(e|e.associationType=="M2M" and (
-				(e.source==klass and e.target==associationClass) or
-				(e.source==associationClass and e.target==klass) 
-			));
+			relation= railsTarget!RailsAssociation.all.selectOne(e|
+				e.targetCardinality==railsTarget!RailsCardinality#many and
+				e.sourceCardinality==railsTarget!RailsCardinality#many and 
+				e.source==associationClass and e.target==klass 
+			);
 			if(relation==null){
 				relation=new railsTarget!RailsAssociation;
 				relation.source=klass;
+				relation.sourceRoleName=name;
+				relation.sourceCardinality=railsTarget!RailsCardinality#many ;
+				
 				relation.target=associationClass;
-				relation.associationType="M2M";
-			}		
+				relation.targetCardinality=railsTarget!RailsCardinality#many ;
+			}else{
+				relation.targetRoleName=name;
+			}
 	}
 	return relation;
 }
 
 operation rmodel!Relationship getForeignKey(klass): String{
 	if(self.options<>null){
-		var class_options=self.options.select(a| a.key==':foreign_key' or a.key='foreign_key' );
+		var class_options=self.options.select(a| a.key.replace(':','')=='foreign_key' );
 		if(class_options.size()>0){
 			return class_options.last.value;
 		}
@@ -83,6 +99,23 @@ operation rmodel!Relationship getForeignKey(klass): String{
 			return klass.name.toLowerCase().replace(':','')+'_id';
 		default :
 			return null;
+	}
+}
+
+operation rmodel!Relationship isComposition(): Boolean{
+	if(self.options<>null){
+		var class_option=self.options.selectOne(a| a.key.replace(':','')=='dependent' );
+		if(class_option<>null){
+			switch (class_option.value.replace(':','')) {
+				case "destroy": return true;
+				case 'delete_all': return true;
+				case 'restrict_with_exception': return true;
+				case 'restrict_with_error': return true;
+				default: return false;
+			}
+		}else{
+			return false;
+		}
 	}
 }
 
@@ -125,27 +158,31 @@ operation rmodel!Relationship getAssociationClassFromOptions(): railsTarget!Rail
 	return currentClass;
 }
 
-operation rmodel!RubyClass getClass(targetApp) : railsTarget!RailsClass{
+operation rmodel!RubyClass getClass(targetApp) {
 	var namespace=self.getNamespace(targetApp);
 	var klass=new railsTarget!RailsClass;
 	klass.name=self.name.split('::').last;
 	klass.fullName=self.name;
-	klass.superClass=self.superType;
-	klass.description = klass.name+" < "+self.superType;
-	klass.innerElements=new Collection;
-	targetApp.basicElements.add(klass);
+	klass.methods=new Collection;
+	klass.attributes=new Collection;
 	if(namespace <> null){
-		namespace.innerElements.add(klass);
+		namespace.classes.add(klass);
+	}else{
+		targetApp.classes.add(klass);
 	}
-	klass.innerElements.addAll(self.getMethods(targetApp));
-	if(klass.superClass=='ActiveRecord::Base'){
-		var attributes =self.getAttributes(klass);
-		if(attributes.size()>0){
-
-			klass.innerElements.addAll(attributes);
-		}
+	klass.methods=self.getMethods();
+	switch (self.superType){
+		case 'ActiveRecord::Base':
+			klass.classType=railsTarget!RailsClassType#activeRecord;
+			var attributes =self.getAttributes(klass);
+			if(attributes.size()>0){
+				klass.attributes=attributes;
+			}
+			break;
+		case 'ActiveResource::Base':
+			klass.classType=railsTarget!RailsClassType#activeResource;
+			break;
 	}
-	return klass;
 }
 
 operation rmodel!RubyClass getAttributes(klass): Collection{
@@ -159,7 +196,28 @@ operation rmodel!RubyClass getAttributes(klass): Collection{
 operation rschema!TableAttributes getAttribute(): railsTarget!RailsAttribute{
 	var attribute=new railsTarget!RailsAttribute();
 	attribute.name = self.name;
-	attribute.dataType = self.datatype;
+	switch (self.datatype) {
+		case "binary": attribute.dataType=railsTarget!RailsDataType#binary;
+		case "boolean": attribute.dataType=railsTarget!RailsDataType#boolean;
+		case "date": attribute.dataType=railsTarget!RailsDataType#date;
+		case "datetime": attribute.dataType=railsTarget!RailsDataType#datetime;
+		case "decimal": attribute.dataType=railsTarget!RailsDataType#decimal;
+		case "float": attribute.dataType=railsTarget!RailsDataType#float;
+		case "integer": attribute.dataType=railsTarget!RailsDataType#integer;
+		case "bigint": attribute.dataType=railsTarget!RailsDataType#bigint;
+		case "primary_key": attribute.dataType=railsTarget!RailsDataType#primary_key;
+		case "references": attribute.dataType=railsTarget!RailsDataType#references;
+		case "string": attribute.dataType=railsTarget!RailsDataType#string;
+		case "text": attribute.dataType=railsTarget!RailsDataType#text;
+		case "time": attribute.dataType=railsTarget!RailsDataType#time;
+		case "timestamp": attribute.dataType=railsTarget!RailsDataType#timestamp;
+		case "hstore": attribute.dataType=railsTarget!RailsDataType#hstore;
+		case "json": attribute.dataType=railsTarget!RailsDataType#json;
+		case "array": attribute.dataType=railsTarget!RailsDataType#array;
+		case "cidr_address": attribute.dataType=railsTarget!RailsDataType#cidr_address;
+		case "ip_address": attribute.dataType=railsTarget!RailsDataType#ip_address;
+		case "mac_address": attribute.dataType=railsTarget!RailsDataType#mac_address;
+	}
 	return attribute;
 }
 
@@ -188,19 +246,17 @@ operation rmodel!RubyClass getConfigTable(): rschema!Table{
 		return rschema!Table.all.selectOne(e|e.name=='table_name');
 	}
 }
-operation rmodel!RubyClass getMethods(targetApp): Collection{
-	var methods = self.classElements.select(e|e.isKindOf(rmodel!RubyMethod) and e.name <> null and e.name <> "").collect(d|d.getMethod());
-	targetApp.basicElements.addAll(methods);
-	return methods;
+operation rmodel!RubyClass getMethods(): Collection{
+	return self.classElements.select(e|e.isKindOf(rmodel!RubyMethod) and e.name <> null and e.name <> "").collect(d|d.getMethod());
 }
 
 operation rmodel!RubyMethod getMethod(): railsTarget!RailsMethod{
 	var method=new railsTarget!RailsMethod;
 	if(self.name.startsWith('self.')){
-		method.methodType='class';
+		method.methodType=railsTarget!RailsMethodType#classMethod;
 		method.name=self.name.substring(5);
 	}else{
-		method.methodType='instance';
+		method.methodType= railsTarget!RailsMethodType#instanceMethod;
 		method.name=self.name;
 	}
 	return method ;
@@ -213,13 +269,18 @@ operation rmodel!RubyClass getNamespace(targetApp) : railsTarget!RailsNamespace{
 	if(tokens.size()>1){
 		for (i in Sequence{0..tokens.size()-2}) {
 			currentNamespaceName=currentNamespaceName+'::'+tokens.at(i);
-			var namespace=railsTarget!RailsNamespace.all.selectOne(i|i.description==currentNamespaceName);
+			var namespace=railsTarget!RailsNamespace.all.selectOne(i|i.fullName==currentNamespaceName);
 			if(namespace==null){
 				('Found namespace '+currentNamespaceName).println();
 				namespace= new railsTarget!RailsNamespace();
 				namespace.name =tokens.at(i);
-				namespace.description=currentNamespaceName;
-				namespace.innerElements=new Collection;
+				namespace.fullName=currentNamespaceName;
+				namespace.classes=new Collection;
+				if(currentNamespace<> null){
+					currentNamespace.namespaces.add(namespace);
+				}else{
+					targetApp.namespaces.add(namespace);
+				}
 			}
 			currentNamespace=namespace;
 		}
