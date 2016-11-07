@@ -178,10 +178,10 @@ operation rmodel!RubyClass getClass(targetApp) {
 			if(attributes.size()>0){
 				klass.attributes=attributes;
 			}
-			break;
 		case 'ActiveResource::Base':
 			klass.classType=railsTarget!RailsClassType#activeResource;
-			break;
+		default:
+			klass.classType=railsTarget!RailsClassType#none;
 	}
 }
 
