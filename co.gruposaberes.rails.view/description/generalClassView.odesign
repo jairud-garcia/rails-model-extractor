@@ -3,7 +3,47 @@
   <ownedViewpoints name="generalClassViewPoint" modelFileExtension="rails">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="generalClassDiagram" showOnStartup="true" domainClass="railsTarget.RailsApplication" enablePopupBars="true">
       <defaultLayer name="Default">
-        <containerMappings name="classContainer" semanticCandidatesExpression="[classes/]" domainClass="railsTarget.RailsClass">
+        <containerMappings name="classContainer" semanticCandidatesExpression="[classes/]" domainClass="railsTarget.RailsClass" childrenPresentation="VerticalStack">
+          <subContainerMappings name="attributesContainer" semanticCandidatesExpression="var:self" domainClass="railsTarget.RailsClass" childrenPresentation="List">
+            <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:eAllContents" domainClass="railsTarget.RailsAttribute">
+              <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:'- '+self.name+' : '+self.dataType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="9" showIcon="false" labelExpression="Attributes" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="methodsContainer" semanticCandidatesExpression="var:self" domainClass="railsTarget.RailsClass" childrenPresentation="List">
+            <subNodeMappings name="methodNode" semanticCandidatesExpression="feature:eAllContents" domainClass="railsTarget.RailsMethod">
+              <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:'+ '+self.name+'()'" labelAlignment="LEFT" labelPosition="node">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+              <conditionnalStyles predicateExpression="aql:self.methodType.toString()='classMethod'">
+                <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:'+ '+self.name+'()'" labelAlignment="LEFT" labelPosition="node">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelFormat>underline</labelFormat>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </conditionnalStyles>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
           <conditionnalStyles predicateExpression="aql:self.classType.toString()='activeResource'">
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" iconPath="/co.gruposaberes.rails.view/images/cloud_rellena20.png" widthComputationExpression="12" backgroundStyle="Liquid">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
