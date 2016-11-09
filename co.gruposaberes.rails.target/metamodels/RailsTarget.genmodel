@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/co.gruposaberes.rails.target/src" modelPluginID="co.gruposaberes.rails.target"
+    modelName="RailsTarget" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>RailsTarget.ecore</foreignModel>
+  <genPackages prefix="RailsTarget" disposableProviderFactory="true" ecorePackage="RailsTarget.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="RailsTarget.ecore#//RailsDataType">
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/binary"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/date"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/datetime"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/decimal"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/float"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/bigint"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/primary_key"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/references"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/text"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/time"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/timestamp"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/hstore"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/json"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/array"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/cidr_address"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/ip_address"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsDataType/mac_address"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="RailsTarget.ecore#//RailsMethodType">
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsMethodType/classMethod"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsMethodType/instanceMethod"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="RailsTarget.ecore#//RailsClassType">
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsClassType/activeRecord"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsClassType/activeResource"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="RailsTarget.ecore#//RailsCardinality">
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsCardinality/one"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsCardinality/many"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="RailsTarget.ecore#//RailsAssociationType">
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsAssociationType/aggregation"/>
+      <genEnumLiterals ecoreEnumLiteral="RailsTarget.ecore#//RailsAssociationType/composition"/>
+    </genEnums>
+    <genClasses ecoreClass="RailsTarget.ecore#//RailsAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsAttribute/dataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsAttribute/name"/>
+    </genClasses>
+    <genClasses ecoreClass="RailsTarget.ecore#//RailsMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsMethod/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsMethod/methodType"/>
+    </genClasses>
+    <genClasses ecoreClass="RailsTarget.ecore#//RailsClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsClass/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsClass/fullName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsClass/classType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RailsTarget.ecore#//RailsClass/methods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RailsTarget.ecore#//RailsClass/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="RailsTarget.ecore#//RailsAssociation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RailsTarget.ecore#//RailsAssociation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RailsTarget.ecore#//RailsAssociation/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsAssociation/foreignKeyColumnName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsAssociation/sourceRoleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsAssociation/targetRoleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsAssociation/sourceCardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsAssociation/targetCardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsAssociation/associationType"/>
+    </genClasses>
+    <genClasses ecoreClass="RailsTarget.ecore#//RailsNamespace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsNamespace/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsNamespace/fullName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RailsTarget.ecore#//RailsNamespace/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="RailsTarget.ecore#//RailsApplication">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RailsTarget.ecore#//RailsApplication/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RailsTarget.ecore#//RailsApplication/railsAssociations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RailsTarget.ecore#//RailsApplication/classes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RailsTarget.ecore#//RailsApplication/namespaces"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
