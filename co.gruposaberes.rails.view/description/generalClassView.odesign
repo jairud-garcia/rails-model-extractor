@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="generalClassView" version="11.0.0.201601261200">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="generalClassView" version="11.0.0.201601261200">
   <ownedViewpoints name="generalClassViewPoint" modelFileExtension="rails">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="generalClassDiagram" showOnStartup="true" domainClass="railsTarget.RailsApplication" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="associationEdge" sourceMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']" targetMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']" targetFinderExpression="aql:self.target" sourceFinderExpression="aql:self.source" domainClass="railsTarget.RailsAssociation" useDomainElement="true">
-          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
             <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -60,9 +60,9 @@
             </style>
           </conditionnalStyles>
         </edgeMappings>
-        <containerMappings name="classContainer" semanticCandidatesExpression="[classes/]" domainClass="railsTarget.RailsClass" childrenPresentation="VerticalStack">
-          <subContainerMappings name="attributesContainer" semanticCandidatesExpression="var:self" domainClass="railsTarget.RailsClass" childrenPresentation="List">
-            <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:eAllContents" domainClass="railsTarget.RailsAttribute">
+        <containerMappings name="classContainer" detailDescriptions="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='changeToReleatedDiagram']" semanticCandidatesExpression="[classes/]" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='doubleClick']" domainClass="railsTarget.RailsClass" childrenPresentation="VerticalStack">
+          <subContainerMappings name="attributesContainer" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='doubleClick']" domainClass="railsTarget.RailsClass" childrenPresentation="List">
+            <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='doubleClick']" domainClass="railsTarget.RailsAttribute">
               <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:'- '+self.name+' : '+self.dataType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -78,8 +78,8 @@
               <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="methodsContainer" semanticCandidatesExpression="var:self" domainClass="railsTarget.RailsClass" childrenPresentation="List">
-            <subNodeMappings name="methodNode" semanticCandidatesExpression="feature:eAllContents" domainClass="railsTarget.RailsMethod">
+          <subContainerMappings name="methodsContainer" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='doubleClick']" domainClass="railsTarget.RailsClass" childrenPresentation="List">
+            <subNodeMappings name="methodNode" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='doubleClick']" domainClass="railsTarget.RailsMethod">
               <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:'+ '+self.name+'()'" labelAlignment="LEFT" labelPosition="node">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -139,6 +139,193 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="changeToReleatedDiagram" label="Clases relacionadas" diagramDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']">
+            <initialOperation/>
+            <containerViewVariable name="containerView"/>
+            <representationNameVariable name="diagramName"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="doubleClick" mappings="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='attributesContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='attributesContainer']/@subNodeMappings[name='attributeNode'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='methodsContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='methodsContainer']/@subNodeMappings[name='methodNode']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="releatedClassDiagram" titleExpression="aql:'Relaciones de '+self.name" domainClass="railsTarget.RailsClass">
+      <layout xsi:type="description_1:CompositeLayout"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="associationReleatedClassEdge" sourceMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='mainClassContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='releatedTargetClassContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='sourceTargetClassContainer']" targetMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='mainClassContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='sourceTargetClassContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='releatedTargetClassContainer']" targetFinderExpression="aql:self.target" sourceFinderExpression="aql:self.source" domainClass="railsTarget.RailsAssociation" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName&lt;> null and self.associationType.toString()='aggregation'">
+            <style sourceArrow="InputArrow" targetArrow="Diamond" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName&lt;> null and self.associationType.toString()='composition'">
+            <style sourceArrow="InputArrow" targetArrow="FillDiamond" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName=null and self.targetRoleName&lt;> null and self.associationType.toString()='composition'">
+            <style targetArrow="FillDiamond" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName=null and self.targetRoleName&lt;> null and self.associationType.toString()='aggregation'">
+            <style targetArrow="Diamond" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName= null ">
+            <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <containerMappings name="mainClassContainer" semanticCandidatesExpression="aql:self" domainClass="railsTarget.RailsClass" childrenPresentation="List">
+          <subNodeMappings name="mainAttributeNode" semanticCandidatesExpression="feature:eAllContents" domainClass="railsTarget.RailsAttribute">
+            <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:'- '+self.name+' : '+self.dataType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="3" labelSize="12" showIcon="false" labelExpression="aql:self.name" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.classType.toString()='activeResource'">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="3" labelSize="12" iconPath="/co.gruposaberes.rails.view/images/cloud_rellena20.png" widthComputationExpression="12" backgroundStyle="Liquid">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.classType.toString()='activeRecord'">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="3" labelSize="14" labelExpression="aql:self.fullName" iconPath="/co.gruposaberes.rails.view/images/database20.png" widthComputationExpression="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <containerMappings name="releatedTargetClassContainer" detailDescriptions="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='relateToReleatedDiagram']" semanticCandidatesExpression="aql:((self.ancestors()-> last().eAllContents()->select(i | i.source=self)).target)->select(i|i != self))" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='releatedDoubleClick']" domainClass="railsTarget.RailsClass" reusedNodeMappings="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='mainClassContainer']/@subNodeMappings[name='mainAttributeNode']" childrenPresentation="List">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.classType.toString()='activeResource'">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" iconPath="/co.gruposaberes.rails.view/images/cloud_rellena20.png" widthComputationExpression="12" backgroundStyle="Liquid">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.classType.toString()='activeRecord'">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name" iconPath="/co.gruposaberes.rails.view/images/database20.png" widthComputationExpression="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <containerMappings name="sourceTargetClassContainer" detailDescriptions="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='relateToReleatedDiagram']" semanticCandidatesExpression="aql:((self.ancestors()-> last().eAllContents()->select(i | i.target=self)).source) -> select(j| j!= self))" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='releatedDoubleClick']" domainClass="railsTarget.RailsClass" reusedNodeMappings="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='mainClassContainer']/@subNodeMappings[name='mainAttributeNode']" childrenPresentation="List">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.classType.toString()='activeResource'">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" iconPath="/co.gruposaberes.rails.view/images/cloud_rellena20.png" widthComputationExpression="12" backgroundStyle="Liquid">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.classType.toString()='activeRecord'">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name" iconPath="/co.gruposaberes.rails.view/images/database20.png" widthComputationExpression="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="relateToReleatedDiagram" label="Clases relacionadas" titleExpression="aql:'Relaciones de '+self.name" diagramDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']">
+            <initialOperation/>
+            <containerViewVariable name="containerView"/>
+            <representationNameVariable name="diagramName"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="releatedDoubleClick" mappings="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='releatedTargetClassContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='sourceTargetClassContainer']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
