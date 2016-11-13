@@ -50,15 +50,25 @@ operation rmodel!Relationship getAssociation(klass): railsTarget!RailsAssociatio
 			relation.sourceCardinality=railsTarget!RailsCardinality#one;
 		case 'has_many' :
 			relation=self.getOrCreateAssociation(associationClass,klass,foreign_key);
-			relation.targetRoleName=name;
+			if(relation.targetRoleName==null){
+				relation.targetRoleName=name;
+			}else{
+				relation.targetRoleName=relation.targetRoleName+','+name;
+			}
 			relation.targetCardinality=railsTarget!RailsCardinality#many;
 			if(self.isComposition()){
 				relation.associationType=railsTarget!RailsAssociationType#composition;
 			}
 		case 'has_one' : 
 			relation=self.getOrCreateAssociation(associationClass,klass,foreign_key);
-			relation.targetRoleName=name;
-			relation.targetCardinality=railsTarget!RailsCardinality#one;
+			if(relation.targetRoleName==null){
+				relation.targetRoleName=name;
+			}else{
+				relation.targetRoleName=relation.targetRoleName+','+name;
+			}
+			if(relation.targetCardinality==null or relation.targetCardinality==railsTarget!RailsCardinality#none){
+				relation.targetCardinality=railsTarget!RailsCardinality#one;			
+			}
 			if(self.isComposition()){
 				relation.associationType=railsTarget!RailsAssociationType#composition;
 			}
@@ -136,6 +146,7 @@ operation rmodel!Relationship getAssociationClass(): railsTarget!RailsClass{
 		for(klass in railsTarget!RailsClass.all){
 			var distance = StringTool.distance(className,klass.name);
 			if(distance<currentScore){
+				("DISTANCE "+klass.name+' / '+className+": "+distance).println();
 				currentScore=distance;
 				currentClass=klass;
 			}
