@@ -3,63 +3,6 @@
   <ownedViewpoints name="generalClassViewPoint" modelFileExtension="rails">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="generalClassDiagram" titleExpression="aql:self.name+' aplication general diagram'" showOnStartup="true" domainClass="railsTarget.RailsApplication" enablePopupBars="true">
       <defaultLayer name="Default">
-        <edgeMappings name="associationEdge" sourceMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']" targetMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']" targetFinderExpression="aql:self.target" sourceFinderExpression="aql:self.source" domainClass="railsTarget.RailsAssociation" useDomainElement="true">
-          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-            <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </beginLabelStyleDescription>
-            <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </endLabelStyleDescription>
-          </style>
-          <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName&lt;> null and self.associationType.toString()='aggregation'">
-            <style targetArrow="Diamond" sizeComputationExpression="2" routingStyle="manhattan">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </beginLabelStyleDescription>
-              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </endLabelStyleDescription>
-            </style>
-          </conditionnalStyles>
-          <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName&lt;> null and self.associationType.toString()='composition'">
-            <style targetArrow="FillDiamond" sizeComputationExpression="2" routingStyle="manhattan">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </beginLabelStyleDescription>
-              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </endLabelStyleDescription>
-            </style>
-          </conditionnalStyles>
-          <conditionnalStyles predicateExpression="aql:self.sourceRoleName=null and self.targetRoleName&lt;> null and self.associationType.toString()='composition'">
-            <style targetArrow="FillDiamond" sizeComputationExpression="2" routingStyle="manhattan">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </beginLabelStyleDescription>
-            </style>
-          </conditionnalStyles>
-          <conditionnalStyles predicateExpression="aql:self.sourceRoleName=null and self.targetRoleName&lt;> null and self.associationType.toString()='aggregation'">
-            <style targetArrow="Diamond" sizeComputationExpression="2" routingStyle="manhattan">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </beginLabelStyleDescription>
-            </style>
-          </conditionnalStyles>
-          <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName= null ">
-            <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
-              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </endLabelStyleDescription>
-            </style>
-          </conditionnalStyles>
-        </edgeMappings>
         <containerMappings name="classContainer" detailDescriptions="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='changeToReleatedDiagram']" semanticCandidatesExpression="[classes/]" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='doubleClick']" domainClass="railsTarget.RailsClass" childrenPresentation="List">
           <subNodeMappings name="mainAttributeNode" semanticCandidatesExpression="feature:eAllContents" domainClass="railsTarget.RailsAttribute">
             <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:'- '+self.name+' : '+self.dataType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
@@ -121,11 +64,8 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
-    </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="releatedClassDiagram" titleExpression="aql:self.name+' class and releated'" domainClass="railsTarget.RailsClass">
-      <layout xsi:type="description_1:CompositeLayout"/>
-      <defaultLayer name="Default">
-        <edgeMappings name="associationReleatedClassEdge" sourceMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='mainClassContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='sourceTargetClassContainer']" targetMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='mainClassContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='sourceTargetClassContainer']" targetFinderExpression="aql:self.target" sourceFinderExpression="aql:self.source" domainClass="railsTarget.RailsAssociation" useDomainElement="true">
+      <additionalLayers name="associationsLayer" label="Associations" activeByDefault="true">
+        <edgeMappings name="associationEdge" sourceMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']" targetMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@containerMappings[name='classContainer']" targetFinderExpression="aql:self.target" sourceFinderExpression="aql:self.source" domainClass="railsTarget.RailsAssociation" useDomainElement="true">
           <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
             <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
@@ -176,12 +116,17 @@
           <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName= null ">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.sourceRoleName">
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
         </edgeMappings>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="releatedClassDiagram" titleExpression="aql:self.name+' class and releated'" domainClass="railsTarget.RailsClass">
+      <layout xsi:type="description_1:CompositeLayout"/>
+      <defaultLayer name="Default">
         <containerMappings name="mainClassContainer" semanticCandidatesExpression="aql:self" domainClass="railsTarget.RailsClass" childrenPresentation="VerticalStack">
           <subContainerMappings name="attributesContainer" semanticCandidatesExpression="var:self" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='doubleClick']" domainClass="railsTarget.RailsClass" childrenPresentation="List">
             <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='generalClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='doubleClick']" domainClass="railsTarget.RailsAttribute">
@@ -297,6 +242,65 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
+      <additionalLayers name="releatedAssociationsLayer" label="Associations" activeByDefault="true">
+        <edgeMappings name="associationReleatedClassEdge" sourceMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='mainClassContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='sourceTargetClassContainer']" targetMapping="//@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='mainClassContainer'] //@ownedViewpoints[name='generalClassViewPoint']/@ownedRepresentations[name='releatedClassDiagram']/@defaultLayer/@containerMappings[name='sourceTargetClassContainer']" targetFinderExpression="aql:self.target" sourceFinderExpression="aql:self.source" domainClass="railsTarget.RailsAssociation" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName&lt;> null and self.associationType.toString()='aggregation'">
+            <style targetArrow="Diamond" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName&lt;> null and self.associationType.toString()='composition'">
+            <style targetArrow="FillDiamond" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName=null and self.targetRoleName&lt;> null and self.associationType.toString()='composition'">
+            <style targetArrow="FillDiamond" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName=null and self.targetRoleName&lt;> null and self.associationType.toString()='aggregation'">
+            <style targetArrow="Diamond" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription showIcon="false" labelExpression="aql:(if self.targetCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.targetRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName= null ">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.sourceRoleName">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+      </additionalLayers>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
