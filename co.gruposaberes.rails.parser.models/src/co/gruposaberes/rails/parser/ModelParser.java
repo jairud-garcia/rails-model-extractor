@@ -10,7 +10,10 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
@@ -34,13 +37,8 @@ public class ModelParser {
 		String[] pathComponents=projectPath.split(File.separator);
 		application.setName(pathComponents[pathComponents.length-1]);
 		
-		File f = new File(projectPath+"/app/models".replace("/",File.separator));
-		File[] matchingFiles = f.listFiles(new FilenameFilter() {
-			public boolean accept(File dir, String name) {
-		        return name.endsWith("rb");
-		    }
-		});
-		for(File file : matchingFiles){
+		
+		for(File file : getFileList(projectPath)){
 			try{
 				Resource resource = resourceSet.getResource(
 					    URI.createURI("file://"+file.getPath()), true);
@@ -51,6 +49,29 @@ public class ModelParser {
 				System.err.println("FILE: "+file.getPath()+": /"+e.getMessage());
 			}
 		}
+	}
+	
+	public List<File> getFileList(String projectPath){
+		File f = new File(projectPath+"/app/models".replace("/",File.separator));
+		List<File> x = null;
+		return getFileListFromDirectory(f);
+	}
+	
+	public List<File> getFileListFromDirectory(File directory){
+		List<File> result = new ArrayList<File>();
+		result.addAll(Arrays.asList(directory.listFiles(new FilenameFilter() {
+			public boolean accept(File dir, String name) {
+		        return name.endsWith("rb");
+		    }
+		})));
+		for(File file :  directory.listFiles()){
+			if(file.isDirectory()){
+				result.addAll(getFileListFromDirectory(file));
+			}
+		}
+		
+		
+		return result;
 	}
 	
 	public String saveModel(){
