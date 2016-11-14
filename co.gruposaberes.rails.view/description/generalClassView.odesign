@@ -176,7 +176,7 @@
           <conditionnalStyles predicateExpression="aql:self.sourceRoleName&lt;>null and self.targetRoleName= null ">
             <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]'+'--' endif)+' '+self.sourceRoleName">
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:(if self.sourceCardinality.toString()='one' then '[0..1]' else '[0..n]' endif)+' '+self.sourceRoleName">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </endLabelStyleDescription>
             </style>
