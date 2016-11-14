@@ -115,7 +115,7 @@ operation rmodel!Relationship getForeignKey(klass): String{
 operation rmodel!Relationship isComposition(): Boolean{
 	if(self.options<>null){
 		var class_option=self.options.selectOne(a| a.key.replace(':','')=='dependent' );
-		if(class_option<>null){
+		if(class_option<>null and class_option.value <> null){
 			switch (class_option.value.replace(':','')) {
 				case "destroy": return true;
 				case 'delete_all': return true;
