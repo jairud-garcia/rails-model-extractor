@@ -102,7 +102,7 @@ operation rmodel!Relationship getForeignKey(klass): String{
 	}
 	switch (self.relationType) {
 		case 'belongs_to': 
-			return singularize(self.name)+'_id';
+			return singularize(self.name.replace(':',''))+'_id';
 		case 'has_many' :
 			return klass.name.toLowerCase().replace(':','')+'_id';
 		case 'has_one' : 
@@ -138,6 +138,7 @@ operation singularize(text): String{
 
 operation rmodel!Relationship getAssociationClass(): railsTarget!RailsClass{
 	var currentClass=self.getAssociationClassFromOptions();
+	var currentDistance=null;
 	if(currentClass==null){
 		var className=singularize(self.name);
 		var StringTool : new Native("co.gruposaberes.rails.eclipse.StringTool");
@@ -146,14 +147,16 @@ operation rmodel!Relationship getAssociationClass(): railsTarget!RailsClass{
 		for(klass in railsTarget!RailsClass.all){
 			var distance = StringTool.distance(className,klass.name);
 			if(distance<currentScore){
-				("DISTANCE "+klass.name+' / '+className+": "+distance).println();
 				currentScore=distance;
 				currentClass=klass;
+				currentDistance=distance;
 			}
 		}
 	}
 	if(currentClass==null){
 		("AssociationClass Not found "+ self.name).println();
+	}else{
+		//("DISTANCE "+currentClass.name+' / '+self.name+": "+currentDistance).println();
 	}
 	return currentClass;
 }
