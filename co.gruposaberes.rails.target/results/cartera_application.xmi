@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="ASCII"?>
+<models:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:models="http://www.gruposaberes.co/rails/parser/Models" name="cartera">
+  <rubyClasses name="AcademicYear" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":billing_year" relationType="belongs_to"/>
+    <classElements xsi:type="models:RubyMethod" name="self.attribute_maps"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+  </rubyClasses>
+  <rubyClasses name="Account" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":movements" relationType="has_many">
+      <options key=":inverse_of" value=":account"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":debit_concepts" relationType="has_many">
+      <options key=":class_name" value="Concept"/>
+      <options key=":foreign_key" value="debit_account_id"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":credit_concepts" relationType="has_many">
+      <options key=":class_name" value="Concept"/>
+      <options key=":foreign_key" value="credit_account_id"/>
+    </classElements>
+  </rubyClasses>
+  <rubyClasses name="AsyncTask" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:RubyMethod" name="self.states"/>
+    <classElements xsi:type="models:RubyMethod" name="self.kinds"/>
+    <classElements xsi:type="models:RubyMethod" name="result_url"/>
+    <classElements xsi:type="models:RubyMethod" name="upload_file"/>
+    <classElements xsi:type="models:RubyMethod" name="get_s3_object"/>
+    <classElements xsi:type="models:RubyMethod" name="set_metrics"/>
+    <classElements xsi:type="models:RubyMethod" name="set_vars"/>
+  </rubyClasses>
+  <rubyClasses name="BillingOperation" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":documents" relationType="has_many">
+      <options key=":inverse_of" value=":billing_operation"/>
+      <options key=":dependent" value=":destroy"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":payment_period" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":students" relationType="has_and_belongs_to_many"/>
+    <classElements xsi:type="models:RubyMethod" name="set_audit_fields"/>
+    <classElements xsi:type="models:RubyMethod" name="generate_documents"/>
+    <classElements xsi:type="models:RubyMethod" name="build_movement_description"/>
+    <classElements xsi:type="models:RubyMethod" name="set_name"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+    <classElements xsi:type="models:RubyMethod" name="billing_to"/>
+    <classElements xsi:type="models:RubyMethod" name="clear_students"/>
+  </rubyClasses>
+  <rubyClasses name="BillingYear" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":academic_years" relationType="has_many">
+      <options key=":dependent" value=":nullify"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":payment_periods" relationType="has_many">
+      <options key=":dependent" value=":destroy"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":concept_years" relationType="has_many">
+      <options key=":dependent" value=":destroy"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":concept_student_values" relationType="has_many">
+      <options key=":dependent" value=":destroy"/>
+    </classElements>
+    <classElements xsi:type="models:RubyMethod" name="self.billing_to_options"/>
+    <classElements xsi:type="models:RubyMethod" name="self.default_year"/>
+    <classElements xsi:type="models:RubyMethod" name="self.default_year_id"/>
+  </rubyClasses>
+  <rubyClasses name="Center" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":parent_center" relationType="belongs_to">
+      <options key=":class_name" value="Center"/>
+      <options key=":foreign_key" value="father_id"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":sub_centers" relationType="has_many">
+      <options key=":class_name" value="Center"/>
+      <options key=":foreign_key" value="father_id"/>
+      <options key=":dependent" value=":destroy"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":concepts" relationType="has_many">
+      <options key=":foreign_key" value="cost_center_id"/>
+      <options key=":inverse_of" value=":cost_center"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":movements" relationType="has_many">
+      <options key=":inverse_of" value=":cost_center"/>
+    </classElements>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+    <classElements xsi:type="models:RubyMethod" name="movements"/>
+    <classElements xsi:type="models:RubyMethod" name="has_movements?"/>
+    <classElements xsi:type="models:RubyMethod" name="validate_movements"/>
+    <classElements xsi:type="models:RubyMethod" name="validate_destroy"/>
+  </rubyClasses>
+  <rubyClasses name="Concept" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":credit_account" relationType="belongs_to">
+      <options key=":class_name" value="Account"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":debit_account" relationType="belongs_to">
+      <options key=":class_name" value="Account"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":cost_center" relationType="belongs_to">
+      <options key=":class_name" value="Center"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":concept_years" relationType="has_many">
+      <options key=":inverse_of" value=":concept"/>
+      <options key=":dependent" value=":destroy"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":concept_student_values" relationType="has_many">
+      <options key=":inverse_of" value=":concept"/>
+      <options key=":dependent" value=":destroy"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":movements" relationType="has_many">
+      <options key=":inverse_of" value=":concept"/>
+      <options key=":dependent" value=":nullify"/>
+    </classElements>
+    <classElements xsi:type="models:RubyMethod" name="self.get_consecutive"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+    <classElements xsi:type="models:RubyMethod" name="get_concept_year"/>
+    <classElements xsi:type="models:RubyMethod" name="need_cost_center?"/>
+    <classElements xsi:type="models:RubyMethod" name="validate_destroy"/>
+  </rubyClasses>
+  <rubyClasses name="ConceptStudentValue" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":student" relationType="belongs_to">
+      <options key=":inverse_of" value=":concept_student_values"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":concept" relationType="belongs_to">
+      <options key=":inverse_of" value=":concept_student_values"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":billing_year" relationType="belongs_to">
+      <options key=":inverse_of" value=":concept_student_values"/>
+    </classElements>
+    <classElements xsi:type="models:RubyMethod" name="self.mass_attribute_update"/>
+    <classElements xsi:type="models:RubyMethod" name="self.find_concept_student_value"/>
+    <classElements xsi:type="models:RubyMethod" name="self.get_concept_student_values_by_periodicity"/>
+    <classElements xsi:type="models:RubyMethod" name="get_default_value"/>
+  </rubyClasses>
+  <rubyClasses name="ConceptValue" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":valuable" relationType="belongs_to">
+      <options key=":polymorphic" value="true"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":concept_year" relationType="belongs_to">
+      <options key=":inverse_of" value=":concept_values"/>
+    </classElements>
+  </rubyClasses>
+  <rubyClasses name="ConceptYear" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":concept" relationType="belongs_to">
+      <options key=":inverse_of" value=":concept_years"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":billing_year" relationType="belongs_to">
+      <options key=":inverse_of" value=":concept_years"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":concept_values" relationType="has_many">
+      <options key=":inverse_of" value=":concept_year"/>
+      <options key=":dependent" value=":destroy"/>
+    </classElements>
+    <classElements xsi:type="models:RubyMethod" name="self.selection_types"/>
+    <classElements xsi:type="models:RubyMethod" name="get_default_value"/>
+  </rubyClasses>
+  <rubyClasses name="DeletedDocumentInfo" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":document" relationType="belongs_to"/>
+    <classElements xsi:type="models:RubyMethod" name="set_user"/>
+  </rubyClasses>
+  <rubyClasses name="Document" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":document_type" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":billing_operation" relationType="belongs_to">
+      <options key=":inverse_of" value=":documents"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":person" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":movements" relationType="has_many">
+      <options key=":inverse_of" value=":document"/>
+      <options key=":dependent" value=":destroy"/>
+      <options key=":order" value="id"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":document_relations" relationType="has_many"/>
+    <classElements xsi:type="models:Relationship" name=":target_document_relations" relationType="has_many">
+      <options key="foreign_key"/>
+    </classElements>
+  </rubyClasses>
+  <rubyClasses name="DocumentPaymentMethod" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":document" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":payment_method" relationType="belongs_to"/>
+  </rubyClasses>
+  <rubyClasses name="DocumentRelation" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":document" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":source_document" relationType="belongs_to">
+      <options key=":class_name" value="Document"/>
+    </classElements>
+  </rubyClasses>
+  <rubyClasses name="DocumentType" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":documents" relationType="has_many"/>
+    <classElements xsi:type="models:RubyMethod" name="self.invoice"/>
+    <classElements xsi:type="models:RubyMethod" name="self.payment_receipt"/>
+    <classElements xsi:type="models:RubyMethod" name="self.find_document_type"/>
+    <classElements xsi:type="models:RubyMethod" name="self.collection_documents"/>
+    <classElements xsi:type="models:RubyMethod" name="self.get_generic_document_types"/>
+    <classElements xsi:type="models:RubyMethod" name="self.get_types"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+  </rubyClasses>
+  <rubyClasses name="Grade" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:RubyMethod" name="self.attribute_maps"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+  </rubyClasses>
+  <rubyClasses name="Hashit">
+    <classElements xsi:type="models:RubyMethod" name="initialize"/>
+  </rubyClasses>
+  <rubyClasses name="InvoicePaidMovement" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":invoice" relationType="belongs_to">
+      <options key=":class_name" value="Document"/>
+      <options key="inverse_of"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":movement" relationType="belongs_to"/>
+    <classElements xsi:type="models:RubyMethod" name="validates_balance"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+    <classElements xsi:type="models:RubyMethod" name="return_movement_balance"/>
+  </rubyClasses>
+  <rubyClasses name="Movement" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":person" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":document" relationType="belongs_to">
+      <options key=":inverse_of" value=":movements"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":concept" relationType="belongs_to">
+      <options key=":inverse_of" value=":movements"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":account" relationType="belongs_to">
+      <options key=":inverse_of" value=":movements"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":cost_center" relationType="belongs_to">
+      <options key=":class_name" value="Center"/>
+      <options key=":foreign_key" value="center_id"/>
+      <options key=":inverse_of" value=":movements"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":invoice_paid_movements" relationType="has_many"/>
+    <classElements xsi:type="models:Relationship" name=":movement_student_info" relationType="has_one"/>
+  </rubyClasses>
+  <rubyClasses name="MovementStudentInfo" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":student" relationType="belongs_to"/>
+    <classElements xsi:type="models:RubyMethod" name="self.build_for_student_movements"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+  </rubyClasses>
+  <rubyClasses name="PaymentMethod" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":account" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":document_payment_methods" relationType="has_many"/>
+    <classElements xsi:type="models:Relationship" name=":documents" relationType="has_many">
+      <options key=":through" value=":document_payment_methods"/>
+    </classElements>
+    <classElements xsi:type="models:RubyMethod" name="self.get_or_create_all"/>
+  </rubyClasses>
+  <rubyClasses name="PaymentPeriod" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":billing_year" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":billing_operations" relationType="has_many">
+      <options key=":inverse_of" value=":payment_period"/>
+      <options key=":dependent" value=":restrict"/>
+    </classElements>
+    <classElements xsi:type="models:RubyMethod" name="validate_dates"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+  </rubyClasses>
+  <rubyClasses name="PercentageAccount" superType="ActiveRecord::Base"/>
+  <rubyClasses name="Person" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":user_token" relationType="has_one">
+      <options key="dependent"/>
+    </classElements>
+    <classElements xsi:type="models:RubyMethod" name="get_user_token"/>
+    <classElements xsi:type="models:RubyMethod" name="self.attribute_maps"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+  </rubyClasses>
+  <rubyClasses name="School" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:RubyMethod" name="active_modules"/>
+  </rubyClasses>
+  <rubyClasses name="Section" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":students" relationType="has_many"/>
+    <classElements xsi:type="models:RubyMethod" name="self.attribute_maps"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+  </rubyClasses>
+  <rubyClasses name="Student" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":concept_student_values" relationType="has_many">
+      <options key=":dependent" value=":destroy"/>
+      <options key=":autosave" value=":true"/>
+      <options key=":inverse_of" value=":student"/>
+    </classElements>
+    <classElements xsi:type="models:Relationship" name=":grade" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":section" relationType="belongs_to"/>
+    <classElements xsi:type="models:Relationship" name=":billing_operations" relationType="has_and_belongs_to_many"/>
+    <classElements xsi:type="models:RubyMethod" name="self.attribute_maps"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+    <classElements xsi:type="models:RubyMethod" name="self.refresh_data"/>
+  </rubyClasses>
+  <rubyClasses name="UserToken" superType="ActiveRecord::Base">
+    <classElements xsi:type="models:Relationship" name=":person" relationType="belongs_to"/>
+    <classElements xsi:type="models:RubyMethod" name="set_token"/>
+  </rubyClasses>
+  <rubyClasses name="InvoicePdf">
+    <classElements xsi:type="models:RubyMethod" name="self.print"/>
+  </rubyClasses>
+  <rubyClasses name="PaymentReceiptPdf">
+    <classElements xsi:type="models:RubyMethod" name="self.print"/>
+  </rubyClasses>
+  <rubyClasses name="AccountBalance">
+    <classElements xsi:type="models:RubyMethod" name="initialize"/>
+    <classElements xsi:type="models:RubyMethod" name="self.to_csv"/>
+    <classElements xsi:type="models:RubyMethod" name="self.create_balance_array"/>
+  </rubyClasses>
+  <rubyClasses name="BillingValueBase">
+    <classElements xsi:type="models:RubyMethod" name="initialize"/>
+    <classElements xsi:type="models:RubyMethod" name="parent="/>
+  </rubyClasses>
+  <rubyClasses name="BillingValueGroup" superType="BillingValueBase">
+    <classElements xsi:type="models:RubyMethod" name="initialize"/>
+    <classElements xsi:type="models:RubyMethod" name="add_child"/>
+    <classElements xsi:type="models:RubyMethod" name="children"/>
+    <classElements xsi:type="models:RubyMethod" name="get_or_create_child"/>
+    <classElements xsi:type="models:RubyMethod" name="get_child_by_id"/>
+    <classElements xsi:type="models:RubyMethod" name="size"/>
+    <classElements xsi:type="models:RubyMethod" name="value"/>
+  </rubyClasses>
+  <rubyClasses name="BillingValueLeaf" superType="BillingValueBase">
+    <classElements xsi:type="models:RubyMethod" name="initialize"/>
+    <classElements xsi:type="models:RubyMethod" name="children"/>
+    <classElements xsi:type="models:RubyMethod" name="size"/>
+  </rubyClasses>
+  <rubyClasses name="AcademicYearResource" superType="ActiveResource::Base">
+    <classElements xsi:type="models:RubyMethod" name="self.all"/>
+  </rubyClasses>
+  <rubyClasses name="CourseResource" superType="ActiveResource::Base">
+    <classElements xsi:type="models:RubyMethod" name="self.all_by_ids"/>
+    <classElements xsi:type="models:RubyMethod" name="self.all"/>
+    <classElements xsi:type="models:RubyMethod" name="to_s"/>
+  </rubyClasses>
+  <rubyClasses name="GradeResource" superType="ActiveResource::Base">
+    <classElements xsi:type="models:RubyMethod" name="self.all"/>
+  </rubyClasses>
+  <rubyClasses name="LoginResource" superType="ActiveResource::Base"/>
+  <rubyClasses name="MessageResource" superType="ActiveResource::Base"/>
+  <rubyClasses name="PersonResource" superType="ActiveResource::Base">
+    <classElements xsi:type="models:RubyMethod" name="self.all"/>
+  </rubyClasses>
+  <rubyClasses name="SchoolResource" superType="ActiveResource::Base">
+    <classElements xsi:type="models:RubyMethod" name="active_modules"/>
+  </rubyClasses>
+  <rubyClasses name="SectionResource" superType="ActiveResource::Base">
+    <classElements xsi:type="models:RubyMethod" name="self.all"/>
+  </rubyClasses>
+  <rubyClasses name="StudentResource" superType="ActiveResource::Base">
+    <classElements xsi:type="models:RubyMethod" name="self.all"/>
+  </rubyClasses>
+</models:Application>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="ASCII"?>
+<rails:RailsApplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rails="http://gruposaberes.co/rails_target" name="cartera">
+  <railsAssociations source="//@classes.0" target="//@classes.4" foreignKeyColumnName="billingyear_id" sourceRoleName="billing_year" targetRoleName="academic_years" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.18" target="//@classes.1" foreignKeyColumnName="account_id" sourceRoleName="account" targetRoleName="movements" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.6" target="//@classes.1" foreignKeyColumnName="debit_account_id" targetRoleName="debit_concepts" targetCardinality="many"/>
+  <railsAssociations source="//@classes.6" target="//@classes.1" foreignKeyColumnName="credit_account_id" targetRoleName="credit_concepts" targetCardinality="many"/>
+  <railsAssociations source="//@classes.11" target="//@classes.3" foreignKeyColumnName="billingoperation_id" sourceRoleName="billing_operation" targetRoleName="documents" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.3" target="//@classes.21" foreignKeyColumnName="paymentperiod_id" sourceRoleName="payment_period" targetRoleName="billing_operations" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.3" target="//@classes.26" sourceRoleName="students" targetRoleName="billing_operations" sourceCardinality="many" targetCardinality="many"/>
+  <railsAssociations source="//@classes.21" target="//@classes.4" foreignKeyColumnName="billingyear_id" sourceRoleName="billing_year" targetRoleName="payment_periods" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.9" target="//@classes.4" foreignKeyColumnName="billingyear_id" sourceRoleName="billing_year" targetRoleName="concept_years" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.7" target="//@classes.4" foreignKeyColumnName="billingyear_id" sourceRoleName="billing_year" targetRoleName="concept_student_values" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.5" target="//@classes.5" foreignKeyColumnName="father_id" sourceRoleName="parent_center" targetRoleName="sub_centers" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.6" target="//@classes.5" foreignKeyColumnName="cost_center_id" targetRoleName="concepts" targetCardinality="many"/>
+  <railsAssociations source="//@classes.18" target="//@classes.5" foreignKeyColumnName="center_id" sourceRoleName="cost_center" targetRoleName="movements" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.6" target="//@classes.1" foreignKeyColumnName="creditaccount_id" sourceRoleName="credit_account" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.6" target="//@classes.1" foreignKeyColumnName="debitaccount_id" sourceRoleName="debit_account" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.6" target="//@classes.5" foreignKeyColumnName="costcenter_id" sourceRoleName="cost_center" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.9" target="//@classes.6" foreignKeyColumnName="concept_id" sourceRoleName="concept" targetRoleName="concept_years" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.7" target="//@classes.6" foreignKeyColumnName="concept_id" sourceRoleName="concept" targetRoleName="concept_student_values" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.18" target="//@classes.6" foreignKeyColumnName="concept_id" sourceRoleName="concept" targetRoleName="movements" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.7" target="//@classes.26" foreignKeyColumnName="student_id" sourceRoleName="student" targetRoleName="concept_student_values" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.8" target="//@classes.15" foreignKeyColumnName="valuable_id" sourceRoleName="valuable" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.8" target="//@classes.9" foreignKeyColumnName="conceptyear_id" sourceRoleName="concept_year" targetRoleName="concept_values" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.10" target="//@classes.11" foreignKeyColumnName="document_id" sourceRoleName="document" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.11" target="//@classes.14" foreignKeyColumnName="documenttype_id" sourceRoleName="document_type" targetRoleName="documents" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.11" target="//@classes.23" foreignKeyColumnName="person_id" sourceRoleName="person" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.18" target="//@classes.11" foreignKeyColumnName="document_id" sourceRoleName="document" targetRoleName="movements" sourceCardinality="one" targetCardinality="many" associationType="composition"/>
+  <railsAssociations source="//@classes.13" target="//@classes.11" foreignKeyColumnName="document_id" sourceRoleName="document" targetRoleName="document_relations" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.13" target="//@classes.11" targetRoleName="target_document_relations" targetCardinality="many"/>
+  <railsAssociations source="//@classes.12" target="//@classes.11" foreignKeyColumnName="document_id" sourceRoleName="document" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.12" target="//@classes.20" foreignKeyColumnName="paymentmethod_id" sourceRoleName="payment_method" targetRoleName="document_payment_methods" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.13" target="//@classes.11" foreignKeyColumnName="sourcedocument_id" sourceRoleName="source_document" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.17" target="//@classes.11" foreignKeyColumnName="invoice_id" sourceRoleName="invoice" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.17" target="//@classes.18" foreignKeyColumnName="movement_id" sourceRoleName="movement" targetRoleName="invoice_paid_movements" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.18" target="//@classes.23" foreignKeyColumnName="person_id" sourceRoleName="person" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.19" target="//@classes.18" foreignKeyColumnName="movement_id" targetRoleName="movement_student_info" targetCardinality="one"/>
+  <railsAssociations source="//@classes.19" target="//@classes.26" foreignKeyColumnName="student_id" sourceRoleName="student" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.20" target="//@classes.1" foreignKeyColumnName="account_id" sourceRoleName="account" sourceCardinality="one"/>
+  <railsAssociations source="//@classes.11" target="//@classes.20" foreignKeyColumnName="paymentmethod_id" targetRoleName="documents" targetCardinality="many"/>
+  <railsAssociations source="//@classes.27" target="//@classes.23" foreignKeyColumnName="person_id" sourceRoleName="person" targetRoleName="user_token" sourceCardinality="one" targetCardinality="one"/>
+  <railsAssociations source="//@classes.26" target="//@classes.25" foreignKeyColumnName="section_id" sourceRoleName="section" targetRoleName="students" sourceCardinality="one" targetCardinality="many"/>
+  <railsAssociations source="//@classes.26" target="//@classes.15" foreignKeyColumnName="grade_id" sourceRoleName="grade" sourceCardinality="one"/>
+  <classes name="AcademicYear" fullName="AcademicYear" classType="activeRecord">
+    <methods name="attribute_maps" methodType="classMethod"/>
+    <methods name="to_s"/>
+    <attributes dataType="integer" name="billing_year_id"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="string" name="name"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+    <attributes dataType="boolean" name="active"/>
+  </classes>
+  <classes name="Account" fullName="Account" classType="activeRecord">
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="boolean" name="nature"/>
+    <attributes dataType="boolean" name="center_req"/>
+    <attributes dataType="boolean" name="third_party_req"/>
+    <attributes dataType="boolean" name="percentage_associated"/>
+    <attributes dataType="string" name="account_number"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+    <attributes dataType="string" name="account_name"/>
+    <attributes dataType="boolean" name="allow_children"/>
+    <attributes dataType="boolean" name="is_standard"/>
+    <attributes dataType="boolean" name="is_leaf"/>
+  </classes>
+  <classes name="AsyncTask" fullName="AsyncTask" classType="activeRecord">
+    <methods name="states" methodType="classMethod"/>
+    <methods name="kinds" methodType="classMethod"/>
+    <methods name="result_url"/>
+    <methods name="upload_file"/>
+    <methods name="get_s3_object"/>
+    <methods name="set_metrics"/>
+    <methods name="set_vars"/>
+    <attributes dataType="string" name="name"/>
+    <attributes dataType="string" name="state"/>
+    <attributes dataType="string" name="kind"/>
+    <attributes dataType="integer" name="timeout"/>
+    <attributes dataType="text" name="parameters"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="integer" name="user_id"/>
+    <attributes dataType="string" name="user_name"/>
+    <attributes dataType="datetime" name="onready"/>
+    <attributes dataType="datetime" name="onprocessing"/>
+    <attributes dataType="string" name="result_storage_key"/>
+    <attributes dataType="text" name="result_message"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="BillingOperation" fullName="BillingOperation" classType="activeRecord">
+    <methods name="set_audit_fields"/>
+    <methods name="generate_documents"/>
+    <methods name="build_movement_description"/>
+    <methods name="set_name"/>
+    <methods name="to_s"/>
+    <methods name="billing_to"/>
+    <methods name="clear_students"/>
+    <attributes dataType="string" name="name"/>
+    <attributes dataType="decimal" name="value"/>
+    <attributes dataType="integer" name="payment_period_id"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+    <attributes dataType="integer" name="created_by"/>
+    <attributes dataType="string" name="created_by_user_name"/>
+  </classes>
+  <classes name="BillingYear" fullName="BillingYear" classType="activeRecord">
+    <methods name="billing_to_options" methodType="classMethod"/>
+    <methods name="default_year" methodType="classMethod"/>
+    <methods name="default_year_id" methodType="classMethod"/>
+    <attributes dataType="string" name="name"/>
+    <attributes dataType="string" name="billing_to"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="Center" fullName="Center" classType="activeRecord">
+    <methods name="to_s"/>
+    <methods name="movements"/>
+    <methods name="has_movements?"/>
+    <methods name="validate_movements"/>
+    <methods name="validate_destroy"/>
+    <attributes dataType="string" name="description"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="string" name="number_center"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+    <attributes dataType="string" name="father_id"/>
+  </classes>
+  <classes name="Concept" fullName="Concept" classType="activeRecord">
+    <methods name="get_consecutive" methodType="classMethod"/>
+    <methods name="to_s"/>
+    <methods name="get_concept_year"/>
+    <methods name="need_cost_center?"/>
+    <methods name="validate_destroy"/>
+    <attributes dataType="integer" name="code_concept"/>
+    <attributes dataType="string" name="description"/>
+    <attributes dataType="boolean" name="imputation"/>
+    <attributes dataType="string" name="periodicity"/>
+    <attributes dataType="integer" name="credit_account_id"/>
+    <attributes dataType="integer" name="debit_account_id"/>
+    <attributes dataType="integer" name="cost_center_id"/>
+    <attributes dataType="boolean" name="deductible"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="ConceptStudentValue" fullName="ConceptStudentValue" classType="activeRecord">
+    <methods name="mass_attribute_update" methodType="classMethod"/>
+    <methods name="find_concept_student_value" methodType="classMethod"/>
+    <methods name="get_concept_student_values_by_periodicity" methodType="classMethod"/>
+    <methods name="get_default_value"/>
+    <attributes dataType="integer" name="billing_year_id"/>
+    <attributes dataType="integer" name="concept_id"/>
+    <attributes dataType="integer" name="student_id"/>
+    <attributes dataType="decimal" name="value"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="ConceptValue" fullName="ConceptValue" classType="activeRecord">
+    <attributes dataType="integer" name="concept_year_id"/>
+    <attributes dataType="decimal" name="value"/>
+    <attributes dataType="integer" name="valuable_id"/>
+    <attributes dataType="string" name="valuable_type"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="ConceptYear" fullName="ConceptYear" classType="activeRecord">
+    <methods name="selection_types" methodType="classMethod"/>
+    <methods name="get_default_value"/>
+    <attributes dataType="integer" name="concept_id"/>
+    <attributes dataType="integer" name="billing_year_id"/>
+    <attributes dataType="string" name="selection_mode"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="DeletedDocumentInfo" fullName="DeletedDocumentInfo" classType="activeRecord">
+    <methods name="set_user"/>
+    <attributes dataType="integer" name="document_id"/>
+    <attributes dataType="integer" name="user_id"/>
+    <attributes dataType="string" name="user_name"/>
+    <attributes dataType="text" name="reason"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="Document" fullName="Document" classType="activeRecord">
+    <attributes dataType="integer" name="document_type_id"/>
+    <attributes dataType="integer" name="consecutive"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+    <attributes dataType="integer" name="person_id"/>
+    <attributes dataType="integer" name="billing_operation_id"/>
+    <attributes dataType="string" name="person_name"/>
+    <attributes dataType="string" name="person_id_card"/>
+    <attributes dataType="decimal" name="value"/>
+    <attributes dataType="date" name="expedition_date"/>
+    <attributes dataType="date" name="due_date"/>
+    <attributes dataType="date" name="limit_date"/>
+    <attributes dataType="boolean" name="is_canceled"/>
+    <attributes dataType="string" name="description"/>
+    <attributes dataType="decimal" name="balance"/>
+    <attributes dataType="integer" name="created_by"/>
+    <attributes dataType="string" name="created_by_user_name"/>
+  </classes>
+  <classes name="DocumentPaymentMethod" fullName="DocumentPaymentMethod" classType="activeRecord">
+    <attributes dataType="integer" name="document_id"/>
+    <attributes dataType="integer" name="payment_method_id"/>
+    <attributes dataType="integer" name="account_id"/>
+    <attributes dataType="string" name="pay_doc_number"/>
+    <attributes dataType="string" name="bank"/>
+    <attributes dataType="decimal" name="value"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="DocumentRelation" fullName="DocumentRelation" classType="activeRecord">
+    <attributes dataType="integer" name="source_document_id"/>
+    <attributes dataType="integer" name="document_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+    <attributes dataType="decimal" name="value"/>
+    <attributes dataType="string" name="relation_type"/>
+  </classes>
+  <classes name="DocumentType" fullName="DocumentType" classType="activeRecord">
+    <methods name="invoice" methodType="classMethod"/>
+    <methods name="payment_receipt" methodType="classMethod"/>
+    <methods name="find_document_type" methodType="classMethod"/>
+    <methods name="collection_documents" methodType="classMethod"/>
+    <methods name="get_generic_document_types" methodType="classMethod"/>
+    <methods name="get_types" methodType="classMethod"/>
+    <methods name="to_s"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="string" name="description"/>
+    <attributes dataType="string" name="abbreviation"/>
+    <attributes dataType="integer" name="maximum_consecutive"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="Grade" fullName="Grade" classType="activeRecord">
+    <methods name="attribute_maps" methodType="classMethod"/>
+    <methods name="to_s"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="integer" name="level"/>
+    <attributes dataType="string" name="name"/>
+    <attributes dataType="integer" name="section_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="Hashit" fullName="Hashit">
+    <methods name="initialize"/>
+  </classes>
+  <classes name="InvoicePaidMovement" fullName="InvoicePaidMovement" classType="activeRecord">
+    <methods name="validates_balance"/>
+    <methods name="to_s"/>
+    <methods name="return_movement_balance"/>
+    <attributes dataType="integer" name="invoice_id"/>
+    <attributes dataType="integer" name="movement_id"/>
+    <attributes dataType="decimal" name="balance"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="Movement" fullName="Movement" classType="activeRecord">
+    <attributes dataType="integer" name="account_id"/>
+    <attributes dataType="boolean" name="imputation"/>
+    <attributes dataType="integer" name="document_id"/>
+    <attributes dataType="string" name="description"/>
+    <attributes dataType="integer" name="center_id"/>
+    <attributes dataType="integer" name="person_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+    <attributes dataType="string" name="concept_name"/>
+    <attributes dataType="integer" name="concept_id"/>
+    <attributes dataType="decimal" name="value"/>
+    <attributes dataType="string" name="person_name"/>
+    <attributes dataType="boolean" name="concept_imputation"/>
+  </classes>
+  <classes name="MovementStudentInfo" fullName="MovementStudentInfo" classType="activeRecord">
+    <methods name="build_for_student_movements" methodType="classMethod"/>
+    <methods name="to_s"/>
+    <attributes dataType="integer" name="movement_id"/>
+    <attributes dataType="integer" name="student_id"/>
+    <attributes dataType="integer" name="grade_id"/>
+    <attributes dataType="integer" name="course_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="PaymentMethod" fullName="PaymentMethod" classType="activeRecord">
+    <methods name="get_or_create_all" methodType="classMethod"/>
+    <attributes dataType="string" name="name"/>
+    <attributes dataType="integer" name="account_id"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="PaymentPeriod" fullName="PaymentPeriod" classType="activeRecord">
+    <methods name="validate_dates"/>
+    <methods name="to_s"/>
+    <attributes dataType="date" name="expedition_date"/>
+    <attributes dataType="date" name="limit_date"/>
+    <attributes dataType="date" name="due_date"/>
+    <attributes dataType="integer" name="billing_year_id"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="PercentageAccount" fullName="PercentageAccount" classType="activeRecord">
+    <attributes dataType="integer" name="account_id"/>
+    <attributes dataType="decimal" name="percentage_value"/>
+    <attributes dataType="date" name="fiscal_period"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="Person" fullName="Person" classType="activeRecord">
+    <methods name="get_user_token"/>
+    <methods name="attribute_maps" methodType="classMethod"/>
+    <methods name="to_s"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="string" name="name"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="School" fullName="School" classType="activeRecord">
+    <methods name="active_modules"/>
+    <attributes dataType="string" name="name"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="Section" fullName="Section" classType="activeRecord">
+    <methods name="attribute_maps" methodType="classMethod"/>
+    <methods name="to_s"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="string" name="name"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="Student" fullName="Student" classType="activeRecord">
+    <methods name="attribute_maps" methodType="classMethod"/>
+    <methods name="to_s"/>
+    <methods name="refresh_data" methodType="classMethod"/>
+    <attributes dataType="integer" name="student_code"/>
+    <attributes dataType="string" name="student_identification"/>
+    <attributes dataType="string" name="student_first_name"/>
+    <attributes dataType="string" name="student_second_name"/>
+    <attributes dataType="string" name="student_first_last_name"/>
+    <attributes dataType="string" name="student_second_last_name"/>
+    <attributes dataType="string" name="student_full_name"/>
+    <attributes dataType="integer" name="guardian_id"/>
+    <attributes dataType="string" name="guardian_identification"/>
+    <attributes dataType="string" name="guardian_first_name"/>
+    <attributes dataType="string" name="guardian_second_name"/>
+    <attributes dataType="string" name="guardian_first_last_name"/>
+    <attributes dataType="string" name="guardian_second_last_name"/>
+    <attributes dataType="string" name="guardian_full_name"/>
+    <attributes dataType="integer" name="course_id"/>
+    <attributes dataType="integer" name="grade_id"/>
+    <attributes dataType="integer" name="section_id"/>
+    <attributes dataType="integer" name="school_id"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+    <attributes dataType="integer" name="guardian_person_id"/>
+    <attributes dataType="string" name="state"/>
+    <attributes dataType="integer" name="person_id"/>
+  </classes>
+  <classes name="UserToken" fullName="UserToken" classType="activeRecord">
+    <methods name="set_token"/>
+    <attributes dataType="integer" name="person_id"/>
+    <attributes dataType="string" name="security_token"/>
+    <attributes dataType="datetime" name="created_at"/>
+    <attributes dataType="datetime" name="updated_at"/>
+  </classes>
+  <classes name="InvoicePdf" fullName="InvoicePdf">
+    <methods name="print" methodType="classMethod"/>
+  </classes>
+  <classes name="PaymentReceiptPdf" fullName="PaymentReceiptPdf">
+    <methods name="print" methodType="classMethod"/>
+  </classes>
+  <classes name="AccountBalance" fullName="AccountBalance">
+    <methods name="initialize"/>
+    <methods name="to_csv" methodType="classMethod"/>
+    <methods name="create_balance_array" methodType="classMethod"/>
+  </classes>
+  <classes name="BillingValueBase" fullName="BillingValueBase">
+    <methods name="initialize"/>
+    <methods name="parent="/>
+  </classes>
+  <classes name="BillingValueGroup" fullName="BillingValueGroup">
+    <methods name="initialize"/>
+    <methods name="add_child"/>
+    <methods name="children"/>
+    <methods name="get_or_create_child"/>
+    <methods name="get_child_by_id"/>
+    <methods name="size"/>
+    <methods name="value"/>
+  </classes>
+  <classes name="BillingValueLeaf" fullName="BillingValueLeaf">
+    <methods name="initialize"/>
+    <methods name="children"/>
+    <methods name="size"/>
+  </classes>
+  <classes name="AcademicYearResource" fullName="AcademicYearResource" classType="activeResource">
+    <methods name="all" methodType="classMethod"/>
+  </classes>
+  <classes name="CourseResource" fullName="CourseResource" classType="activeResource">
+    <methods name="all_by_ids" methodType="classMethod"/>
+    <methods name="all" methodType="classMethod"/>
+    <methods name="to_s"/>
+  </classes>
+  <classes name="GradeResource" fullName="GradeResource" classType="activeResource">
+    <methods name="all" methodType="classMethod"/>
+  </classes>
+  <classes name="LoginResource" fullName="LoginResource" classType="activeResource"/>
+  <classes name="MessageResource" fullName="MessageResource" classType="activeResource"/>
+  <classes name="PersonResource" fullName="PersonResource" classType="activeResource">
+    <methods name="all" methodType="classMethod"/>
+  </classes>
+  <classes name="SchoolResource" fullName="SchoolResource" classType="activeResource">
+    <methods name="active_modules"/>
+  </classes>
+  <classes name="SectionResource" fullName="SectionResource" classType="activeResource">
+    <methods name="all" methodType="classMethod"/>
+  </classes>
+  <classes name="StudentResource" fullName="StudentResource" classType="activeResource">
+    <methods name="all" methodType="classMethod"/>
+  </classes>
+</rails:RailsApplication>
